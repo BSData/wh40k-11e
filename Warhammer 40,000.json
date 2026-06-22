@@ -1929,6 +1929,31 @@
         "name": "Explosives",
         "id": "e33d-891d-33aa-e9bf",
         "hidden": false
+      },
+      {
+        "name": "Disruption",
+        "id": "ecf8-cf72-7d5b-1b5b",
+        "hidden": false
+      },
+      {
+        "name": "Priority Assets",
+        "id": "0936-9767-1cc7-52ae",
+        "hidden": false
+      },
+      {
+        "name": "Purge the Foe",
+        "id": "6fe0-3dbe-f7e0-10bb",
+        "hidden": false
+      },
+      {
+        "name": "Take and Hold",
+        "id": "1cc1-f11a-4e8f-1bcc",
+        "hidden": false
+      },
+      {
+        "name": "Reconnaissance",
+        "id": "b4a7-5083-fe94-4d24",
+        "hidden": false
       }
     ],
     "forceEntries": [
@@ -2841,6 +2866,14 @@
         "id": "48c5-2a0a-1c81-ebac",
         "targetId": "8d9a-d925-56f3-1890",
         "type": "selectionEntry"
+      },
+      {
+        "import": true,
+        "name": "Force Disposition",
+        "hidden": false,
+        "id": "8bc8-6bfe-78bd-2480",
+        "type": "selectionEntry",
+        "targetId": "2f69-9148-45b4-86a8"
       }
     ],
     "sharedSelectionEntries": [
@@ -5590,6 +5623,71 @@
                 "childName": "Armageddon",
                 "includeChildSelections": true,
                 "includeChildForces": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Force Disposition",
+        "hidden": false,
+        "id": "2f69-9148-45b4-86a8",
+        "categoryLinks": [
+          {
+            "name": "Configuration",
+            "hidden": false,
+            "id": "4670-da6d-33d0-55f8",
+            "targetId": "4ac9-fd30-1e3d-b249",
+            "primary": true
+          }
+        ],
+        "entryLinks": [
+          {
+            "import": true,
+            "name": "Force Disposition",
+            "hidden": false,
+            "id": "9c70-af87-0c32-afcf",
+            "type": "selectionEntryGroup",
+            "targetId": "eece-6d68-6710-7a7f"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "e219-1d50-0a55-a5de-min",
+            "includeChildSelections": true,
+            "includeChildForces": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "id": "e219-1d50-0a55-a5de-max",
+            "includeChildSelections": true,
+            "includeChildForces": true
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cac3-71d1-ea4b-795d",
+                "shared": true
               }
             ]
           }
@@ -32285,6 +32383,168 @@
         "id": "9c28-2876-4721-62f5",
         "hidden": false,
         "collapsible": true
+      },
+      {
+        "name": "Force Disposition",
+        "id": "eece-6d68-6710-7a7f",
+        "hidden": false,
+        "selectionEntries": [
+          {
+            "type": "upgrade",
+            "import": true,
+            "name": "Disruption",
+            "hidden": false,
+            "id": "31ed-50f0-6571-c4c1",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "ecf8-cf72-7d5b-1b5b",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Disruption"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "upgrade",
+            "import": true,
+            "name": "Priority Assets",
+            "hidden": false,
+            "id": "081d-bc07-5d4e-ab22",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "0936-9767-1cc7-52ae",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Priority Assets"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "upgrade",
+            "import": true,
+            "name": "Purge the Foe",
+            "hidden": false,
+            "id": "7da4-f0a6-65ec-da48",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "6fe0-3dbe-f7e0-10bb",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Purge the Foe"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "upgrade",
+            "import": true,
+            "name": "Take and Hold",
+            "hidden": false,
+            "id": "a271-bfab-1b97-c55d",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "1cc1-f11a-4e8f-1bcc",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Take and Hold"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "upgrade",
+            "import": true,
+            "name": "Reconnaissance",
+            "hidden": false,
+            "id": "3b81-de3e-f72c-b208",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "b4a7-5083-fe94-4d24",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Reconnaissance"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "ad56-59fe-9aae-55ee-min",
+            "includeChildSelections": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "ad56-59fe-9aae-55ee-max",
+            "includeChildSelections": false
+          }
+        ]
       }
     ],
     "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
