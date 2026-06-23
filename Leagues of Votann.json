@@ -1415,6 +1415,13 @@
             "hidden": false,
             "targetId": "a360-cb11-e139-55df",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "3417-01f4-744e-2b7f",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "selectionEntries": [
@@ -1644,7 +1651,46 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "f372-3bfe-758d-064d",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5a53-ae58-e0d9-0616",
+                    "shared": true,
+                    "childName": "Hearthkyn Warriors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5070-c08d-0fa7-0f9d",
+                    "shared": true,
+                    "childName": "Einhyr Hearthguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -1685,6 +1731,16 @@
             "shared": true,
             "id": "d145-679b-8646-2824",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4115-4088-c972-6b78",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -1782,7 +1838,7 @@
                 "type": "append",
                 "value": "6+",
                 "field": "name",
-                "join": ", "
+                "join": " "
               }
             ],
             "name": "Feel No Pain",
@@ -5240,6 +5296,13 @@
             "hidden": false,
             "targetId": "ef5e-c660-d7fb-5b4b",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "e837-2eec-4fb1-8839",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "selectionEntryGroups": [
@@ -5908,6 +5971,77 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Lethal Hits",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.associations.profiles.Ranged Weapons",
+            "join": ", "
+          },
+          {
+            "type": "append",
+            "value": "Lethal Hits",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.recursive.associations.profiles.Melee Weapons",
+            "join": ", "
+          },
+          {
+            "type": "set",
+            "value": "5+",
+            "field": "55a7-5b54-c60d-11dc",
+            "affects": "self.entries.recursive.associations.profiles.Unit",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "2c9c-869f-d3a9-a264",
+                "childId": "0369-3c56-a9d1-307d",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Rampart crest"
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b06c-86be-5000-a81a",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5a53-ae58-e0d9-0616",
+                    "shared": true,
+                    "childName": "Hearthkyn Warriors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5070-c08d-0fa7-0f9d",
+                    "shared": true,
+                    "childName": "Einhyr Hearthguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -6314,6 +6448,13 @@
             "name": "Einhyr Champion",
             "hidden": false,
             "targetId": "4466-22a5-1999-f933",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "8fce-b70e-cf93-5cc4",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -7004,6 +7145,36 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "c620-52ec-6592-9c6d",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5070-c08d-0fa7-0f9d",
+                    "shared": true,
+                    "childName": "Einhyr Hearthguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -7193,6 +7364,13 @@
             "hidden": false,
             "targetId": "9cfd-1c32-585f-7d5c",
             "primary": true
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "f743-75f0-6157-cbad",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "selectionEntries": [
@@ -8200,6 +8378,36 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "ccd6-665d-964c-5261",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5a53-ae58-e0d9-0616",
+                    "shared": true,
+                    "childName": "Hearthkyn Warriors"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -8436,6 +8644,13 @@
             "name": "Brôkhyr",
             "hidden": false,
             "targetId": "6da3-60ef-f488-dca3",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "a761-66a5-62e5-7745",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -9987,6 +10202,45 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "7fa3-55c3-d5b2-08af",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0b9d-34c5-f0bf-ee60",
+                    "shared": true,
+                    "childName": "Thunderkyn"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5a53-ae58-e0d9-0616",
+                    "shared": true,
+                    "childName": "Hearthkyn Warriors"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -10105,6 +10359,16 @@
             "shared": true,
             "id": "0632-4896-9b27-37d2",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "38fd-525b-2325-3c53",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -12170,6 +12434,16 @@
             "id": "f94c-9885-7faa-91b6",
             "includeChildSelections": true,
             "includeChildForces": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4c39-b1a9-8213-9c76",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -17048,6 +17322,16 @@
             "shared": true,
             "id": "c337-098a-1cc1-204b",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "dca3-9f6c-8c3f-5f8c",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -21073,6 +21357,13 @@
             "id": "f569-deb1-db71-bba8",
             "targetId": "8474-765-16a9-f00d",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "abc5-35cf-ce05-2871",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "profiles": [
@@ -21499,6 +21790,13 @@
             "hidden": false,
             "id": "b883-5884-04cd-4859",
             "targetId": "8474-765-16a9-f00d",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "e1c7-3bea-60dd-8666",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -22145,6 +22443,36 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "425d-b2ae-a928-f323",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e338-1886-59c6-414c",
+                    "shared": true,
+                    "childName": "Ironkin Steeljacks"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -24984,6 +25312,16 @@
             "percentValue": false,
             "includeChildSelections": true,
             "includeChildForces": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4769-6157-6d92-44fc",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "modifierGroups": [
@@ -25949,6 +26287,16 @@
             "shared": true,
             "id": "c068-d40a-ac89-4ec3",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "713b-7616-1015-9fde",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "modifierGroups": [
@@ -27429,6 +27777,13 @@
             "id": "7aac-a2f4-6979-8297",
             "targetId": "f5bd-62d6-fbd0-7a52",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "d89e-5889-2dc2-9171",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -27848,6 +28203,37 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "5758-4d10-96fb-0e51",
+                "childId": "558b-d1e0-fee5-ebac",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Kindred Hero"
+              }
+            ]
           }
         ],
         "constraints": [
@@ -27931,7 +28317,185 @@
         "import": true,
         "name": "Living Ancestor [Crucible]",
         "hidden": false,
-        "id": "0039-5b91-2e96-0e08"
+        "id": "0039-5b91-2e96-0e08",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "c46a-68b1-5cbc-0663",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5a53-ae58-e0d9-0616",
+                            "shared": true,
+                            "childName": "Hearthkyn Warriors"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "0039-5b91-2e96-0e08",
+                        "childId": "83bb-71d4-bf6b-57e7",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Specialisms",
+                        "includeChildSelections": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "0039-5b91-2e96-0e08",
+                        "childId": "05f6-68ba-8b8a-a426",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Cthonian Augmentations",
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "e28c-95f8-3f06-0afa",
+                        "shared": true,
+                        "childName": "Beserks"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "0039-5b91-2e96-0e08",
+                        "childId": "0661-f3b2-fdf9-b19d",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Exoarmour",
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5070-c08d-0fa7-0f9d",
+                        "shared": true,
+                        "childName": "Einhyr Hearthguard"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "0039-5b91-2e96-0e08",
+                        "childId": "724a-f975-95d0-dff2",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Exoframe",
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "0b9d-34c5-f0bf-ee60",
+                        "shared": true,
+                        "childName": "Thunderkyn"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "0039-5b91-2e96-0e08",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Magna-coil Bike",
+                        "includeChildSelections": true,
+                        "childId": "ba0f-7a20-9c08-baab"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "8b60-36d5-35a8-8a69",
+                        "shared": true,
+                        "childName": "Pioneers"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "0039-5b91-2e96-0e08",
+                        "childId": "0492-45d5-e5f8-5972",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Yaegir",
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5b17-69c0-77f9-d2f4",
+                        "shared": true,
+                        "childName": "Yaegirs"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -27968,6 +28532,13 @@
             "hidden": false,
             "id": "74df-bf63-e418-8ff3",
             "targetId": "e2bc-fc0c-1099-3e75",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "3711-a363-b6cf-f815",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -28471,7 +29042,188 @@
         "import": true,
         "name": "Kinhost Commander [Crucible]",
         "hidden": false,
-        "id": "05b6-7622-edbe-7a9a"
+        "id": "05b6-7622-edbe-7a9a",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5ad3-7b93-da06-d4b4",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5a53-ae58-e0d9-0616",
+                            "shared": true,
+                            "childName": "Hearthkyn Warriors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5070-c08d-0fa7-0f9d",
+                            "shared": true,
+                            "childName": "Einhyr Hearthguard"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "05b6-7622-edbe-7a9a",
+                        "childId": "83bb-71d4-bf6b-57e7",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Specialisms"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "05b6-7622-edbe-7a9a",
+                        "childId": "05f6-68ba-8b8a-a426",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Cthonian Augmentations"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "e28c-95f8-3f06-0afa",
+                        "shared": true,
+                        "childName": "Beserks"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "05b6-7622-edbe-7a9a",
+                        "childId": "0661-f3b2-fdf9-b19d",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Exoarmour"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5070-c08d-0fa7-0f9d",
+                        "shared": true,
+                        "childName": "Einhyr Hearthguard"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "05b6-7622-edbe-7a9a",
+                        "childId": "724a-f975-95d0-dff2",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Exoframe"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "0b9d-34c5-f0bf-ee60",
+                        "shared": true,
+                        "childName": "Thunderkyn"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "05b6-7622-edbe-7a9a",
+                        "childId": "ba0f-7a20-9c08-baab",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Magna-coil Bike"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "8b60-36d5-35a8-8a69",
+                        "shared": true,
+                        "childName": "Pioneers"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "05b6-7622-edbe-7a9a",
+                        "childId": "0492-45d5-e5f8-5972",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Yaegir"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5b17-69c0-77f9-d2f4",
+                        "shared": true,
+                        "childName": "Yaegirs"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -28515,6 +29267,13 @@
             "hidden": false,
             "id": "fe4c-8b01-c5fb-0585",
             "targetId": "0f9b-b435-b8bd-466f",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "97bd-2326-d993-48b9",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -29462,6 +30221,13 @@
             "id": "7042-8cda-81a7-f5d1",
             "targetId": "8474-765-16a9-f00d",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "dca8-4755-36b2-7347",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -29480,7 +30246,46 @@
         "import": true,
         "name": "Berehk Stornbröw",
         "hidden": false,
-        "id": "c7ea-1b76-c8c1-4786"
+        "id": "c7ea-1b76-c8c1-4786",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "de11-1604-6a9a-152c",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e28c-95f8-3f06-0afa",
+                    "shared": true,
+                    "childName": "Beserks"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "append",
+            "value": "Sustained Hits 1",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.recursive.associations.profiles.Melee Weapons",
+            "join": ", "
+          }
+        ]
       }
     ],
     "sharedSelectionEntryGroups": [
@@ -46156,7 +46961,8 @@
             "id": "5152-6624-49ea-5177",
             "hidden": false,
             "sortIndex": 3,
-            "collapsible": true
+            "collapsible": true,
+            "defaultSelectionEntryId": "none"
           }
         ],
         "name": "Weapons",
