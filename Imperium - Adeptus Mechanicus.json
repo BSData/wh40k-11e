@@ -3553,25 +3553,54 @@
         ],
         "infoLinks": [
           {
-            "modifiers": [
-              {
-                "type": "append",
-                "value": "5+",
-                "field": "name"
-              }
-            ],
-            "id": "8d21-7717-af43-ce33",
-            "name": "Feel No Pain",
-            "hidden": false,
-            "targetId": "9bf4-280f-bbe2-6fbb",
-            "type": "rule"
-          },
-          {
             "name": "Doctrina Imperatives",
             "id": "021a-ae09-d3af-8518",
             "hidden": false,
             "type": "rule",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "084b-6273-b40e-5e22",
+            "hidden": false,
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "4+",
+                "field": "name",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              }
+            ],
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "type": "rule"
           }
         ],
         "categoryLinks": [
@@ -3932,6 +3961,26 @@
             "shared": true,
             "id": "9505-8625-4492-4269",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "ac5d-a440-02a8-e63d",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "bfc4-496c-6cfd-a2da",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "entryLinks": [
@@ -4258,7 +4307,36 @@
               {
                 "type": "append",
                 "value": "5+",
-                "field": "name"
+                "field": "name",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "4+",
+                "field": "name",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
               }
             ],
             "name": "Feel No Pain",
@@ -4509,6 +4587,26 @@
             "shared": true,
             "id": "0924-26b6-395f-0ef3",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "759a-44b5-f2aa-9e36",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6fe2-f4da-0ddf-6791",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -6660,6 +6758,26 @@
             "shared": true,
             "id": "eeb8-d467-ca1f-527c",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "5f26-d031-10af-c096",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f747-e3a8-8093-b3d2",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -7366,6 +7484,37 @@
             "type": "rule",
             "id": "8a8c-65e2-c178-aaf2",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "504e-d3d4-2fe7-28b3",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              }
+            ]
           }
         ],
         "constraints": [
@@ -7404,6 +7553,26 @@
             "shared": true,
             "id": "ae34-dbfe-47f1-28fa",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3ed3-a684-9d70-7d22",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6e69-0f9e-1cb8-9f62",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -8130,6 +8299,37 @@
             "type": "rule",
             "id": "1cfb-fe6e-c15b-c844",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "66cf-8385-9384-1387",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              }
+            ]
           }
         ],
         "constraints": [
@@ -8168,6 +8368,26 @@
             "shared": true,
             "id": "b537-191a-cc49-a1e8",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "70d5-6fa5-cb14-7665",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1246-982f-c315-900a",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -16738,9 +16958,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following units:\n- ^^**Skitarii Rangers^^**\n- ^^**Skitarii Vanguard^^**",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- ^^**Hastarii Exterminators^^**\n- ^^**Skitarii Fusiliers^^**\n- ^^**Skitarii Rangers^^**\n- ^^**Skitarii Vanguard^^**"
               }
             ],
             "id": "b89e-0cbb-251a-793c",
@@ -17086,7 +17306,7 @@
             "name": "Wargear",
             "id": "fa65-a242-757c-1118",
             "hidden": false,
-            "sortIndex": 4
+            "sortIndex": 5
           }
         ],
         "modifierGroups": [
@@ -17292,6 +17512,56 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "20a1-b1b8-9330-024a",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "57ee-67d5-c57c-bafb",
+                    "shared": true,
+                    "childName": "Hastarii"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb4c-b9a7-a9fd-b2de",
+                    "shared": true,
+                    "childName": "Skitarii Rangers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8c0d-1834-34a2-59aa",
+                    "shared": true,
+                    "childName": "Skitarii Vanguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "sortIndex": 4,
+            "defaultSelectionEntryId": "none"
+          }
         ]
       },
       {
@@ -17376,6 +17646,37 @@
             "type": "rule",
             "id": "4d4b-44a-be85-c96",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "3f91-77d7-c211-9027",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -18710,6 +19011,26 @@
             "shared": true,
             "id": "7e9b-f29b-b107-67b6",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c1b6-ce3c-1d9b-7243",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "628b-ab94-5a0d-040d",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -20369,6 +20690,37 @@
             "type": "rule",
             "id": "f4e4-5bc-bcea-6d16",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "b85c-2e62-8c78-420e",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              }
+            ]
           }
         ],
         "constraints": [
@@ -20407,6 +20759,26 @@
             "shared": true,
             "id": "ecf6-d47e-e2a6-77ad",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8da2-a5f9-9553-b245",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3bf3-30b0-05db-d993",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -22976,9 +23348,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Hastarii Executioners\n■ Hastarii Fusiliers\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard"
               }
             ],
             "id": "4fe6-68c7-06d7-e127",
@@ -23744,7 +24116,7 @@
             "name": "Wargear",
             "id": "03a6-f1ef-5a60-b2c3",
             "hidden": false,
-            "sortIndex": 4
+            "sortIndex": 5
           }
         ],
         "entryLinks": [
@@ -24059,6 +24431,92 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "dd5b-6069-ac00-f9d9",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ef9e-98c6-5b9f-37d8",
+                    "shared": true,
+                    "childName": "Corpuscarii"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "c638-6530-b65b-5d0e",
+                    "shared": true,
+                    "childName": "Fulgurite"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "57ee-67d5-c57c-bafb",
+                    "shared": true,
+                    "childName": "Hastarii"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6fdf-6180-8f3c-a07",
+                    "shared": true,
+                    "childName": "Kataphron"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b94e-c390-0c3b-f9cf",
+                    "shared": true,
+                    "childName": "Servitor Battleclade"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb4c-b9a7-a9fd-b2de",
+                    "shared": true,
+                    "childName": "Skitarii Rangers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8c0d-1834-34a2-59aa",
+                    "shared": true,
+                    "childName": "Skitarii Vanguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none",
+            "sortIndex": 4
+          }
         ]
       },
       {
@@ -24152,9 +24610,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Servitors\n■ Skitarii Rangers\n■ Skitarii Vanguard",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard"
               }
             ],
             "id": "caa6-2932-0474-188f",
@@ -24658,7 +25116,7 @@
             "name": "Wargear",
             "id": "1e00-2d8a-6933-3bb4",
             "hidden": false,
-            "sortIndex": 4
+            "sortIndex": 5
           }
         ],
         "modifierGroups": [
@@ -24863,6 +25321,74 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2817-28e2-d0c3-f028",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ef9e-98c6-5b9f-37d8",
+                    "shared": true,
+                    "childName": "Corpuscarii"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "c638-6530-b65b-5d0e",
+                    "shared": true,
+                    "childName": "Fulgurite"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6fdf-6180-8f3c-a07",
+                    "shared": true,
+                    "childName": "Kataphron"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb4c-b9a7-a9fd-b2de",
+                    "shared": true,
+                    "childName": "Skitarii Rangers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8c0d-1834-34a2-59aa",
+                    "shared": true,
+                    "childName": "Skitarii Vanguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none",
+            "sortIndex": 4
           }
         ]
       },
@@ -25418,7 +25944,7 @@
             "name": "Wargear",
             "id": "62f3-00b6-6909-72f0",
             "hidden": false,
-            "sortIndex": 4
+            "sortIndex": 5
           }
         ],
         "entryLinks": [
@@ -25707,6 +26233,59 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "entries.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "entries.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ]
           }
         ],
         "id": "2d9b-610a-dc4d-15ae",
@@ -25732,6 +26311,92 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "d075-f8c9-0b97-26a2",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ef9e-98c6-5b9f-37d8",
+                    "shared": true,
+                    "childName": "Corpuscarii"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "c638-6530-b65b-5d0e",
+                    "shared": true,
+                    "childName": "Fulgurite"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "57ee-67d5-c57c-bafb",
+                    "shared": true,
+                    "childName": "Hastarii"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6fdf-6180-8f3c-a07",
+                    "shared": true,
+                    "childName": "Kataphron"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b94e-c390-0c3b-f9cf",
+                    "shared": true,
+                    "childName": "Servitor Battleclade"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb4c-b9a7-a9fd-b2de",
+                    "shared": true,
+                    "childName": "Skitarii Rangers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8c0d-1834-34a2-59aa",
+                    "shared": true,
+                    "childName": "Skitarii Vanguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none",
+            "sortIndex": 4
           }
         ]
       },
@@ -25812,9 +26477,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Hastarii Executioners\n■ Hastarii Fusiliers\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard"
               }
             ],
             "id": "637e-1885-2f50-3afc",
@@ -26192,7 +26857,7 @@
             "name": "Wargear",
             "id": "56f0-270c-fcd6-0936",
             "hidden": false,
-            "sortIndex": 4
+            "sortIndex": 5
           }
         ],
         "modifierGroups": [
@@ -26397,6 +27062,114 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "bef7-942a-1a23-59f8",
+            "affects": "profiles.Unit",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "bef7-942a-1a23-59f8",
+            "affects": "self.entries.recursive.associations.profiles.Unit"
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "b119-4c9f-bd9b-06b0",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ef9e-98c6-5b9f-37d8",
+                    "shared": true,
+                    "childName": "Corpuscarii"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "c638-6530-b65b-5d0e",
+                    "shared": true,
+                    "childName": "Fulgurite"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "57ee-67d5-c57c-bafb",
+                    "shared": true,
+                    "childName": "Hastarii"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6fdf-6180-8f3c-a07",
+                    "shared": true,
+                    "childName": "Kataphron"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b94e-c390-0c3b-f9cf",
+                    "shared": true,
+                    "childName": "Servitor Battleclade"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb4c-b9a7-a9fd-b2de",
+                    "shared": true,
+                    "childName": "Skitarii Rangers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8c0d-1834-34a2-59aa",
+                    "shared": true,
+                    "childName": "Skitarii Vanguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none",
+            "sortIndex": 4
           }
         ]
       },
@@ -26862,7 +27635,7 @@
             "name": "Wargear",
             "id": "f1f5-f62e-e47d-9dad",
             "hidden": false,
-            "sortIndex": 4
+            "sortIndex": 5
           }
         ],
         "modifierGroups": [
@@ -27067,6 +27840,38 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "db01-fcfd-f075-dc54",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "fa9a-4fad-2efa-cf9b",
+                    "shared": true,
+                    "childName": "Kastelan Robots"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "sortIndex": 4,
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
@@ -36860,6 +37665,37 @@
             "hidden": false,
             "type": "rule",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "2f2d-570e-6b6d-e08c",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              }
+            ]
           }
         ],
         "profiles": [
@@ -36972,6 +37808,26 @@
             "shared": true,
             "id": "a510-b51b-ad0a-ba51",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "e67a-fed5-af43-4b2e",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "bb1e-f30e-31f6-224a",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -37978,7 +38834,221 @@
         "import": true,
         "name": "Magos [Crucible]",
         "hidden": false,
-        "id": "18e0-96d4-7d85-2b3b"
+        "id": "18e0-96d4-7d85-2b3b",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "7fcc-ac38-e8d6-fcbf",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "ee7d-2703-1adc-32d9",
+                        "shared": true,
+                        "childName": "Specialisms",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "cb4c-b9a7-a9fd-b2de",
+                            "shared": true,
+                            "childName": "Skitarii Rangers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "8c0d-1834-34a2-59aa",
+                            "shared": true,
+                            "childName": "Skitarii Vanguard"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "439d-b5b7-5fcc-a665",
+                            "shared": true,
+                            "childName": "Electro-Priests"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "6fdf-6180-8f3c-a07",
+                            "shared": true,
+                            "childName": "Kataphron"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "eab6-2044-6c59-d5c4",
+                        "shared": true,
+                        "childName": "Cybercanid Mount",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2ca0-ee66-2659-8616",
+                            "shared": true,
+                            "childName": "Serberys Raiders"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2f2d-8608-4615-d4da",
+                            "shared": true,
+                            "childName": "Serberys Sulphurhounds"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "f3ab-6db0-6acc-785b",
+                        "shared": true,
+                        "childName": "Cybernetica Overseer",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "fa9a-4fad-2efa-cf9b",
+                            "shared": true,
+                            "childName": "Kastelan Robots"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3833-d397-9e1b-346c",
+                        "shared": true,
+                        "childName": "Flight Pack",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "f8db-f163-9a12-b79c",
+                            "shared": true,
+                            "childName": "Pteraxii"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "84f6-79ed-c137-74c9",
+                        "shared": true,
+                        "childName": "Stilt Limbs",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "a6e7-8605-af27-3b57",
+                            "shared": true,
+                            "childName": "Sicarian"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none",
+            "sortIndex": 6
+          }
+        ]
       },
       {
         "entryLinks": [
@@ -38551,7 +39621,203 @@
         "import": true,
         "name": "Cohort Commander [Crucible]",
         "hidden": false,
-        "id": "7d17-4620-8dbf-4ef6"
+        "id": "7d17-4620-8dbf-4ef6",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "7e7a-3915-5ba5-2c31",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "ee7d-2703-1adc-32d9",
+                        "shared": true,
+                        "childName": "Specialisms",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "cb4c-b9a7-a9fd-b2de",
+                            "shared": true,
+                            "childName": "Skitarii Rangers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "8c0d-1834-34a2-59aa",
+                            "shared": true,
+                            "childName": "Skitarii Vanguard"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "eab6-2044-6c59-d5c4",
+                        "shared": true,
+                        "childName": "Cybercanid Mount",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2ca0-ee66-2659-8616",
+                            "shared": true,
+                            "childName": "Serberys Raiders"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2f2d-8608-4615-d4da",
+                            "shared": true,
+                            "childName": "Serberys Sulphurhounds"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "f3ab-6db0-6acc-785b",
+                        "shared": true,
+                        "childName": "Cybernetica Overseer",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "fa9a-4fad-2efa-cf9b",
+                            "shared": true,
+                            "childName": "Kastelan Robots"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3833-d397-9e1b-346c",
+                        "shared": true,
+                        "childName": "Flight Pack",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "f8db-f163-9a12-b79c",
+                            "shared": true,
+                            "childName": "Pteraxii"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "84f6-79ed-c137-74c9",
+                        "shared": true,
+                        "childName": "Stilt Limbs",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "a6e7-8605-af27-3b57",
+                            "shared": true,
+                            "childName": "Sicarian"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none",
+            "sortIndex": 6
+          }
+        ]
       },
       {
         "entryLinks": [
@@ -38580,7 +39846,7 @@
             "id": "50fa-20f3-7226-da15",
             "type": "selectionEntryGroup",
             "targetId": "bc06-8a62-da0b-e06a",
-            "sortIndex": 4
+            "sortIndex": 3
           },
           {
             "import": true,
@@ -38589,7 +39855,7 @@
             "id": "3470-1ec2-6379-3165",
             "type": "selectionEntryGroup",
             "targetId": "b565-213a-b6c2-0132",
-            "sortIndex": 5
+            "sortIndex": 4
           }
         ],
         "profiles": [
@@ -39141,7 +40407,48 @@
         "import": true,
         "name": "Ironstrider Alpha [Crucible]",
         "hidden": false,
-        "id": "6b3e-11ad-7a9d-ca5d"
+        "id": "6b3e-11ad-7a9d-ca5d",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "245d-31b3-aa36-9957",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d167-10dc-5abd-d01a",
+                    "shared": true,
+                    "childName": "Ironstrider Ballistarii"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "fe37-1124-2cfd-f11b",
+                    "shared": true,
+                    "childName": "Sydonian"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none",
+            "sortIndex": 5
+          }
+        ]
       },
       {
         "profiles": [
@@ -39817,6 +41124,37 @@
             "type": "rule",
             "id": "9861-b3ea-3e9d-f009",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "6e8d-585b-feaa-e47a",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -40352,6 +41690,26 @@
             "shared": true,
             "id": "ca74-32c1-2453-9f7d",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a605-e0cd-d0a5-c0ad",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "659e-188f-352a-4994",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -40864,6 +42222,37 @@
             "type": "rule",
             "id": "442a-2fe5-f543-2a3e",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "5e57-90f4-a366-71de",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "6424-ed86-9e15-3e14",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Tech-Priest Dominus"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -41419,6 +42808,26 @@
             "shared": true,
             "id": "41f7-2f04-3097-045c",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "d829-93b4-33ca-4914",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "ad11-398d-ca4f-604e",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -51229,7 +52638,41 @@
             "import": true,
             "name": "Galvanic Field",
             "hidden": false,
-            "id": "837b-4a6f-6a12-37e3"
+            "id": "837b-4a6f-6a12-37e3",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "scope": "model",
+                "affects": "self.entries.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "scope": "model",
+                "affects": "self.entries.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "scope": "model",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "scope": "model",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ]
           },
           {
             "profiles": [
@@ -51275,7 +52718,23 @@
             "import": true,
             "name": "Seekers of Divine Arcana",
             "hidden": false,
-            "id": "b007-6d58-46e5-12e6"
+            "id": "b007-6d58-46e5-12e6",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "scope": "parent",
+                "affects": "self.entries.recursive.associations.profiles.Unit"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "scope": "parent",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "name": "Abilties",
