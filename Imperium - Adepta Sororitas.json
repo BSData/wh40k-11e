@@ -695,6 +695,13 @@
             "id": "1597-b60f-ff10-5301",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "e847-f804-48dd-8919",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -782,7 +789,91 @@
         "name": "Aestred Thurga and Agathae Dolan",
         "hidden": false,
         "id": "4b94-c22e-84f9-8d32",
-        "publicationId": "7d85-6d0f-57e0-5dea"
+        "publicationId": "7d85-6d0f-57e0-5dea",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "475f-2a58-273d-fcc1",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9fe5-ee8a-b4c8-646a",
+                    "shared": true,
+                    "childName": "Celestian Insidiants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4038-4f63-856e-fa4c",
+                    "shared": true,
+                    "childName": "Celestian Sacresants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3024-3404-5bd0-713",
+                    "shared": true,
+                    "childName": "Dominion Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cf6-ceb9-5c73-2bb3",
+                    "shared": true,
+                    "childName": "Retributor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e8c6-d8f4-2d01-2e7a",
+                    "shared": true,
+                    "childName": "Sisters Novitiate Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -1855,6 +1946,43 @@
             "shared": true,
             "id": "9751-9d81-b80d-81dc",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "5b16-071d-c1dd-da60",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "d74b-cd01-0e4e-6bac",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a7e2-f800-955f-8897",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "entryLinks": [
@@ -2898,6 +3026,43 @@
             "shared": true,
             "id": "5283-d18a-cde4-9c05",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "f381-d1cd-21e3-1730",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6286-8ef5-a70e-7a0f",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4226-3315-d08d-3a54",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "entryLinks": [
@@ -5592,6 +5757,90 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "348a-dd39-e0ad-e555",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9fe5-ee8a-b4c8-646a",
+                    "shared": true,
+                    "childName": "Celestian Insidiants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4038-4f63-856e-fa4c",
+                    "shared": true,
+                    "childName": "Celestian Sacresants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3024-3404-5bd0-713",
+                    "shared": true,
+                    "childName": "Dominion Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cf6-ceb9-5c73-2bb3",
+                    "shared": true,
+                    "childName": "Retributor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e8c6-d8f4-2d01-2e7a",
+                    "shared": true,
+                    "childName": "Sisters Novitiate Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -7453,6 +7702,43 @@
             "shared": true,
             "id": "070e-f0cd-7753-8f15",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "1d0d-754c-7200-e6fb",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "0f7a-49c7-eced-e5d5",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "37a3-8bea-e26c-63c5",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "entryLinks": [
@@ -8940,6 +9226,91 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "2c38-e358-6cd6-ece2",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9fe5-ee8a-b4c8-646a",
+                    "shared": true,
+                    "childName": "Celestian Insidiants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4038-4f63-856e-fa4c",
+                    "shared": true,
+                    "childName": "Celestian Sacresants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3024-3404-5bd0-713",
+                    "shared": true,
+                    "childName": "Dominion Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cf6-ceb9-5c73-2bb3",
+                    "shared": true,
+                    "childName": "Retributor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e8c6-d8f4-2d01-2e7a",
+                    "shared": true,
+                    "childName": "Sisters Novitiate Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
         ]
       },
       {
@@ -9561,6 +9932,82 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "bd4c-d8aa-2413-ffa3",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9fe5-ee8a-b4c8-646a",
+                    "shared": true,
+                    "childName": "Celestian Insidiants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4038-4f63-856e-fa4c",
+                    "shared": true,
+                    "childName": "Celestian Sacresants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3024-3404-5bd0-713",
+                    "shared": true,
+                    "childName": "Dominion Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cf6-ceb9-5c73-2bb3",
+                    "shared": true,
+                    "childName": "Retributor Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
@@ -10559,6 +11006,43 @@
             "shared": true,
             "id": "6112-7354-cb82-81e8",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "6fca-701e-e79d-3569",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "ce91-373a-6d97-d77f",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "508d-4d26-53eb-6fa5",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "entryLinks": [
@@ -12529,6 +13013,91 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "7bd3-28a7-d70f-89a3",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9fe5-ee8a-b4c8-646a",
+                    "shared": true,
+                    "childName": "Celestian Insidiants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4038-4f63-856e-fa4c",
+                    "shared": true,
+                    "childName": "Celestian Sacresants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3024-3404-5bd0-713",
+                    "shared": true,
+                    "childName": "Dominion Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cf6-ceb9-5c73-2bb3",
+                    "shared": true,
+                    "childName": "Retributor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e8c6-d8f4-2d01-2e7a",
+                    "shared": true,
+                    "childName": "Sisters Novitiate Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
         ]
       },
       {
@@ -13202,6 +13771,82 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "1c29-4cef-34e6-dd81",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9fe5-ee8a-b4c8-646a",
+                    "shared": true,
+                    "childName": "Celestian Insidiants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4038-4f63-856e-fa4c",
+                    "shared": true,
+                    "childName": "Celestian Sacresants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3024-3404-5bd0-713",
+                    "shared": true,
+                    "childName": "Dominion Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cf6-ceb9-5c73-2bb3",
+                    "shared": true,
+                    "childName": "Retributor Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
@@ -14300,6 +14945,13 @@
             "id": "6261-3812-743c-4cb7",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "d730-1d3d-7ab3-3804",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -14651,7 +15303,91 @@
         "name": "Junith Eruita",
         "hidden": false,
         "id": "8f9a-8a8b-2539-547f",
-        "publicationId": "7d85-6d0f-57e0-5dea"
+        "publicationId": "7d85-6d0f-57e0-5dea",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "3d58-e370-90a2-3f17",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9fe5-ee8a-b4c8-646a",
+                    "shared": true,
+                    "childName": "Celestian Insidiants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4038-4f63-856e-fa4c",
+                    "shared": true,
+                    "childName": "Celestian Sacresants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3024-3404-5bd0-713",
+                    "shared": true,
+                    "childName": "Dominion Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cf6-ceb9-5c73-2bb3",
+                    "shared": true,
+                    "childName": "Retributor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e8c6-d8f4-2d01-2e7a",
+                    "shared": true,
+                    "childName": "Sisters Novitiate Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -16689,6 +17425,13 @@
             "id": "a341-51d6-bcce-46e8",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "590b-7b3e-eb8f-6ea4",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -17448,6 +18191,90 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "3d34-69f1-6ddb-acdf",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9fe5-ee8a-b4c8-646a",
+                    "shared": true,
+                    "childName": "Celestian Insidiants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4038-4f63-856e-fa4c",
+                    "shared": true,
+                    "childName": "Celestian Sacresants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3024-3404-5bd0-713",
+                    "shared": true,
+                    "childName": "Dominion Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cf6-ceb9-5c73-2bb3",
+                    "shared": true,
+                    "childName": "Retributor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e8c6-d8f4-2d01-2e7a",
+                    "shared": true,
+                    "childName": "Sisters Novitiate Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -20428,6 +21255,13 @@
             "id": "31f0-a522-5662-7363",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "046f-f4d0-4491-8331",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -21265,7 +22099,91 @@
         "name": "Ministorum Priest",
         "hidden": false,
         "id": "599d-1e2a-eb0e-430e",
-        "publicationId": "7d85-6d0f-57e0-5dea"
+        "publicationId": "7d85-6d0f-57e0-5dea",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5398-807a-4073-ecfd",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9fe5-ee8a-b4c8-646a",
+                    "shared": true,
+                    "childName": "Celestian Insidiants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63f8-3a5d-ef9c-d86e",
+                    "shared": true,
+                    "childName": "Arco-flagellants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3024-3404-5bd0-713",
+                    "shared": true,
+                    "childName": "Dominion Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9d4f-4beb-107d-3175",
+                    "shared": true,
+                    "childName": "Sanctifiers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e8c6-d8f4-2d01-2e7a",
+                    "shared": true,
+                    "childName": "Sisters Novitiate Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -22546,6 +23464,43 @@
             "shared": true,
             "id": "8227-cce7-0df1-508f",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "5932-3949-f88d-b6c6",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a383-52e4-e6fb-3663",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8cbe-3427-9f75-a397",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "entryLinks": [
@@ -22895,6 +23850,13 @@
             "hidden": false,
             "id": "b1a9-ab9b-2274-f814",
             "targetId": "dda2-bb0a-215e-ad9c",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "b1d9-c152-6663-7859",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -23301,7 +24263,46 @@
         "name": "Saint Celestine",
         "hidden": false,
         "id": "21f1-8ed6-52c6-54c7",
-        "publicationId": "7d85-6d0f-57e0-5dea"
+        "publicationId": "7d85-6d0f-57e0-5dea",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "702c-85de-bbbc-ffd7",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "40db-f0a8-b5fd-d21d",
+                    "shared": true,
+                    "childName": "Seraphim Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7561-4439-4420-e104",
+                    "shared": true,
+                    "childName": "Zephyrim Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -24761,6 +25762,43 @@
             "shared": true,
             "id": "3bba-1b1c-73a2-05c8",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "4ad7-596f-d6df-428f",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1a82-b2fa-046d-c378",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "0cbf-de4f-7804-f756",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "entryLinks": [
@@ -25765,6 +26803,43 @@
             "shared": true,
             "id": "29a0-e7f0-6d98-8c38",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "05f1-2faa-075f-0d7d",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "7024-e70c-2dcf-430a",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1c8d-f8a0-0eaa-6143",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "entryLinks": [
@@ -26630,6 +27705,13 @@
             "id": "e007-f564-995a-e3e4",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "9ec7-6763-2a3f-6386",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -27042,7 +28124,46 @@
         "name": "Triumph of Saint Katherine",
         "hidden": false,
         "id": "9f5f-d769-7900-c8a1",
-        "publicationId": "7d85-6d0f-57e0-5dea"
+        "publicationId": "7d85-6d0f-57e0-5dea",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "569f-d5e0-c044-0e64",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2a27-80d9-39c1-4944",
+                    "shared": true,
+                    "childName": "Battle Sisters Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7623-c20e-f284-39d9",
+                    "shared": true,
+                    "childName": "Crusaders"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -27622,6 +28743,43 @@
             "shared": true,
             "id": "6206-2b41-bf0a-23b5",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "3aea-ddc3-f95e-9a24",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "bb0c-4588-9bbc-0e68",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "00f4-7db9-32df-c1f3",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "entryLinks": [
@@ -30247,6 +31405,45 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2cc4-30b7-9b20-ee32",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "40db-f0a8-b5fd-d21d",
+                    "shared": true,
+                    "childName": "Seraphim Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7561-4439-4420-e104",
+                    "shared": true,
+                    "childName": "Zephyrim Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -31097,6 +32294,43 @@
             "shared": true,
             "id": "9eba-a149-33c3-8d05",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "0d85-d9d9-0179-d9f6",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "99cc-80da-4bdb-1f80",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "dcee-899f-e12d-c6e1",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "entryLinks": [
@@ -32087,6 +33321,43 @@
             "shared": true,
             "id": "bb98-b812-79cc-a30c",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "5eb3-0206-75a4-f893",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "aff7-cfc0-2a95-cec8",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4e92-8194-ee24-9a72",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "selectionEntryGroups": [
@@ -33980,6 +35251,43 @@
             "shared": true,
             "id": "3597-a9be-a47d-f2a0",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "0181-65f3-b6d2-0b96",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "228e-3455-c41e-b24c",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6c78-d1dc-37b6-9aa8",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "profiles": [
