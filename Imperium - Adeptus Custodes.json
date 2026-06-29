@@ -30427,7 +30427,95 @@
         "import": true,
         "name": "Guardian of the Throne [Crucible]",
         "hidden": false,
-        "id": "de0b-37e9-b9f5-d3a6"
+        "id": "de0b-37e9-b9f5-d3a6",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "f54d-63f6-330f-7a7d",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "a393-2559-d897-578a",
+                        "shared": true,
+                        "childName": "Specialisms",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "c4f-4c5f-3507-e4bc",
+                            "shared": true,
+                            "childName": "Custodian Guard",
+                            "queryFromSelf": false
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5eaa-f0a-44fa-d1ae",
+                            "shared": true,
+                            "childName": "Custodian Wardens",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5386-42fc-f4d0-7d64",
+                        "shared": true,
+                        "childName": "Allarus Custodians",
+                        "queryFromSelf": false
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "4d7f-9fc0-6ee6-4abc",
+                        "shared": true,
+                        "childName": "Allarus Terminator Armour",
+                        "includeChildSelections": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -30970,7 +31058,58 @@
         "import": true,
         "name": "Null Maiden [Crucible]",
         "hidden": false,
-        "id": "e58d-17d4-71f8-4137"
+        "id": "e58d-17d4-71f8-4137",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "794b-5ab3-a116-fee4",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2b2e-7f16-71e7-7241",
+                    "shared": true,
+                    "childName": "Prosecutors",
+                    "queryFromSelf": false
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "798b-3ac-6731-e3e3",
+                    "shared": true,
+                    "childName": "Vigilators",
+                    "queryFromSelf": false
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e4c0-5321-5d49-dfcb",
+                    "shared": true,
+                    "childName": "Witchseekers",
+                    "queryFromSelf": false
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -31529,7 +31668,38 @@
         "import": true,
         "name": "Kataphraktoi Exemplar [Crucible]",
         "hidden": false,
-        "id": "c11a-f70a-2877-ed27"
+        "id": "c11a-f70a-2877-ed27",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "d237-1312-6585-f1c5",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a3cb-da28-b5f9-d295",
+                    "shared": true,
+                    "childName": "Vertus Praetors",
+                    "queryFromSelf": false
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "type": "upgrade",
