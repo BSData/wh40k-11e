@@ -98,7 +98,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 135
+            "value": 150
           },
           {
             "name": "Crusade Points",
@@ -118,6 +118,31 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
             "value": 0
           }
         ],
@@ -177,6 +202,46 @@
             "type": "set",
             "value": 300,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "f51d-bc51-f301-9dee",
+                        "shared": true,
+                        "childName": "Aberrants"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -950,6 +1015,13 @@
             "id": "f63e-8fea-b26f-7f1",
             "primary": false,
             "name": "Great Devourer"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "4f0e-141c-d2d9-a23f",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
@@ -1711,7 +1783,49 @@
         "import": true,
         "name": "Abominant",
         "hidden": false,
-        "id": "97b1-4873-9fcb-5cb8"
+        "id": "97b1-4873-9fcb-5cb8",
+        "modifiers": [
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "97b1-4873-9fcb-5cb8",
+                        "shared": true,
+                        "childName": "Abominant"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -2953,7 +3067,14 @@
                             "hidden": false,
                             "id": "1a72-a226-6838-a4c5",
                             "type": "selectionEntry",
-                            "targetId": "fef0-fb67-5285-7552"
+                            "targetId": "fef0-fb67-5285-7552",
+                            "costs": [
+                              {
+                                "name": "pts",
+                                "typeId": "51b2-306e-1021-d207",
+                                "value": 10
+                              }
+                            ]
                           }
                         ],
                         "name": "Heavy Mining Laser",
@@ -3048,8 +3169,48 @@
               }
             ],
             "type": "set",
-            "value": 170,
+            "value": 160,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "cf71-a12a-2730-c40b",
+                        "shared": true,
+                        "childName": "Achilles Ridgerunners"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "type": "unit",
@@ -3107,7 +3268,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 70
+            "value": 75
           },
           {
             "name": "Crusade Points",
@@ -3127,6 +3288,31 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
             "value": 0
           }
         ],
@@ -3184,7 +3370,7 @@
               }
             ],
             "type": "set",
-            "value": 140,
+            "value": 150,
             "field": "51b2-306e-1021-d207"
           }
         ],
@@ -4393,6 +4579,13 @@
             "id": "b624-75d0-5d15-b8d8",
             "primary": false,
             "name": "Great Devourer"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "d5b1-ed4f-0eeb-2909",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
@@ -5237,7 +5430,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 85
+            "value": 90
           },
           {
             "name": "Crusade Points",
@@ -5262,6 +5455,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -5329,8 +5532,48 @@
               }
             ],
             "type": "set",
-            "value": 150,
+            "value": 160,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "3a81-2b84-bf4c-4f85",
+                        "shared": true,
+                        "childName": "Atalan Jackals"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -7356,6 +7599,13 @@
             "id": "3eec-2996-6984-23a1",
             "targetId": "7850-cc5a-c191-b80d",
             "primary": false
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "ab34-5193-0072-3647",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "costs": [
@@ -8150,6 +8400,13 @@
             "hidden": false,
             "id": "a546-60cc-6221-ca77",
             "targetId": "7850-cc5a-c191-b80d",
+            "primary": false
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "017f-f2ba-bd7b-7c20",
+            "targetId": "7dcd-7f61-69a7-0294",
             "primary": false
           }
         ],
@@ -9959,7 +10216,49 @@
         "import": true,
         "name": "Goliath Rockgrinder",
         "hidden": false,
-        "id": "5ac1-3adb-212a-5e02"
+        "id": "5ac1-3adb-212a-5e02",
+        "modifiers": [
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5ac1-3adb-212a-5e02",
+                        "shared": true,
+                        "childName": "Goliath Rockgrinder"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -10909,7 +11208,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 70
+            "value": 75
           },
           {
             "name": "Crusade Points",
@@ -10934,6 +11233,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -11001,8 +11310,48 @@
               }
             ],
             "type": "set",
-            "value": 140,
+            "value": 150,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "8a84-a8fd-977e-9118",
+                        "shared": true,
+                        "childName": "Hybrid Metamorphs"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -12135,6 +12484,13 @@
             "id": "9460-80de-a5e8-72b9",
             "primary": false,
             "name": "Mounted"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "5dbe-07d3-2946-2c09",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
@@ -13658,13 +14014,65 @@
             "id": "70c8-cdd1-9aaa-fb81",
             "primary": false,
             "name": "Great Devourer"
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "62ac-4c87-c014-0dfc",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "costs": [
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 45
+            "value": 35
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
+            "value": 0
           }
         ],
         "constraints": [
@@ -14442,6 +14850,13 @@
             "id": "91fb-eed2-962d-a00a",
             "targetId": "7850-cc5a-c191-b80d",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "e652-3667-dc27-0422",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
@@ -15160,7 +15575,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 65
+            "value": 70
           },
           {
             "name": "Crusade Points",
@@ -15180,6 +15595,31 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
             "value": 0
           }
         ],
@@ -17804,6 +18244,13 @@
             "id": "707d-b927-d0ac-77f5",
             "primary": false,
             "name": "Great Devourer"
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "0739-bc60-e606-9997",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "costs": [
@@ -18371,13 +18818,20 @@
             "id": "3716-aa53-4ece-8224",
             "primary": false,
             "name": "Great Devourer"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "d210-a108-d848-6200",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 75
+            "value": 80
           },
           {
             "name": "Crusade Points",
@@ -18397,6 +18851,31 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
             "value": 0
           }
         ],
@@ -19080,6 +19559,13 @@
             "id": "c305-e5f5-995a-0e81",
             "primary": false,
             "name": "Great Devourer"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "3629-7989-0ead-6908",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
@@ -19859,7 +20345,52 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 75
+            "value": 80
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
+            "value": 0
           }
         ],
         "constraints": [
@@ -19918,6 +20449,46 @@
             "type": "set",
             "value": 140,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "965b-496a-3a1b-22a8",
+                        "shared": true,
+                        "childName": "Purestrain Genestealers"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -20541,7 +21112,52 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 65
+            "value": 70
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
+            "value": 0
           }
         ],
         "constraints": [
@@ -21306,7 +21922,52 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 50
+            "value": 65
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
+            "value": 0
           }
         ],
         "constraints": [
@@ -23805,6 +24466,13 @@
             "id": "6a85-6710-e000-33f3",
             "primary": false,
             "name": "Benefictus"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "948f-70d0-ae7f-41d0",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -24000,7 +24668,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 70
+            "value": 75
           },
           {
             "name": "Crusade Points",
@@ -24020,6 +24688,31 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
             "value": 0
           }
         ],
@@ -24561,7 +25254,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 65
+            "value": 70
           },
           {
             "name": "Crusade Points",
@@ -24581,6 +25274,31 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
             "value": 0
           }
         ],
