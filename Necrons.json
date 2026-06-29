@@ -12348,6 +12348,13 @@
             "id": "94cf-34d7-a64f-4a57",
             "primary": false,
             "name": "Orikan the Diviner"
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "a265-b51e-42ba-dad5",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "profiles": [
@@ -12575,7 +12582,46 @@
         "import": true,
         "name": "Orikan the Diviner",
         "hidden": false,
-        "id": "ba86-eaad-5396-fc07"
+        "id": "ba86-eaad-5396-fc07",
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "6caa-fa60-6b71-3726",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -12621,6 +12667,13 @@
             "id": "d7dd-22fc-7e88-36a5",
             "primary": false,
             "name": "Imotekh the Stormlord"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "635a-82d0-b850-7be1",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -12979,7 +13032,56 @@
         "import": true,
         "name": "Imotekh the Stormlord",
         "hidden": false,
-        "id": "49fd-a80d-8cc0-c76b"
+        "id": "49fd-a80d-8cc0-c76b",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "dd67-88dc-d534-5ffe",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals",
+                    "queryFromSelf": false
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "270-5fd8-6b5c-9165",
+                    "shared": true,
+                    "childName": "Lychguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -13025,6 +13127,13 @@
             "id": "5fcb-7c90-5e4b-ab61",
             "primary": false,
             "name": "Anrakyr the Traveller"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "1468-e5ae-d43d-961c",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "profiles": [
@@ -13290,7 +13399,38 @@
         "import": true,
         "name": "Anrakyr the Traveller [Legends]",
         "hidden": false,
-        "id": "43b5-f4f9-f7c6-327a"
+        "id": "43b5-f4f9-f7c6-327a",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "8ccf-ba21-edab-5233",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals",
+                    "queryFromSelf": false
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -13330,6 +13470,13 @@
             "id": "a1fc-f577-8886-479",
             "primary": false,
             "name": "Vargard Obyron"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "2135-f16c-6b1c-2c8a",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "profiles": [
@@ -13584,7 +13731,56 @@
         "import": true,
         "name": "Vargard Obyron [Legends]",
         "hidden": false,
-        "id": "b5c3-317e-df69-53bb"
+        "id": "b5c3-317e-df69-53bb",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "e5cb-8833-efe4-f63e",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals",
+                    "queryFromSelf": false
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "270-5fd8-6b5c-9165",
+                    "shared": true,
+                    "childName": "Lychguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -14062,6 +14258,13 @@
             "id": "a63a-4298-5a9e-58e9",
             "primary": false,
             "name": "Nemesor Zahndrekh"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "470d-b04f-7c1e-8ed2",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -14358,7 +14561,56 @@
         "import": true,
         "name": "Nemesor Zahndrekh [Legends]",
         "hidden": false,
-        "id": "8386-4191-ac3a-aa28"
+        "id": "8386-4191-ac3a-aa28",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "8441-da41-993e-5210",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals",
+                    "queryFromSelf": false
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "270-5fd8-6b5c-9165",
+                    "shared": true,
+                    "childName": "Lychguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -14439,6 +14691,13 @@
             "id": "2dcb-f478-cf9-1130",
             "primary": false,
             "name": "Trazyn the Infinite"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "f8f4-e6f3-6fcc-435f",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -14666,7 +14925,55 @@
         "import": true,
         "name": "Trazyn the Infinite",
         "hidden": false,
-        "id": "c1e6-b88a-2003-174d"
+        "id": "c1e6-b88a-2003-174d",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5b7d-b1ea-77be-70fc",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "270-5fd8-6b5c-9165",
+                    "shared": true,
+                    "childName": "Lychguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -16143,6 +16450,13 @@
             "id": "d18e-1853-80a0-2d73",
             "primary": false,
             "name": "Lokhust Lord"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "fab7-4520-db8e-7210",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -16859,7 +17173,46 @@
         "import": true,
         "name": "Lokhust Lord",
         "hidden": false,
-        "id": "8725-de36-7ef7-45f6"
+        "id": "8725-de36-7ef7-45f6",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "d25c-dbd4-c834-1e9b",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "587d-d85b-8af-f640",
+                    "shared": true,
+                    "childName": "Lokhust Heavy Destroyers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "55de-834b-6ae-ed50",
+                    "shared": true,
+                    "childName": "Lokhust Destroyers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -16899,6 +17252,13 @@
             "id": "a2e7-7eac-e82f-c535",
             "primary": false,
             "name": "Lord"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "84f4-1b53-6bb6-cfdd",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -17602,7 +17962,56 @@
         "import": true,
         "name": "Lord [Legends]",
         "hidden": false,
-        "id": "8005-b0eb-72ab-aed5"
+        "id": "8005-b0eb-72ab-aed5",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "c875-b15d-1ebd-725d",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals",
+                    "queryFromSelf": false
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "270-5fd8-6b5c-9165",
+                    "shared": true,
+                    "childName": "Lychguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -18579,6 +18988,13 @@
             "id": "260e-dcf1-65a-1189",
             "primary": false,
             "name": "Overlord"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "b578-a3c3-1070-429a",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -19429,6 +19845,54 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "e8a2-90c5-f016-5638",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "270-5fd8-6b5c-9165",
+                    "shared": true,
+                    "childName": "Lychguard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -20270,6 +20734,13 @@
             "id": "ae0d-66bb-de59-10b3",
             "primary": false,
             "name": "Psychomancer"
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "2a07-3da4-7b5d-92d8",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -20811,7 +21282,47 @@
         "import": true,
         "name": "Psychomancer",
         "hidden": false,
-        "id": "aea6-b6a1-a924-d31"
+        "id": "aea6-b6a1-a924-d31",
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "3dd0-4d89-e6a3-14df",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "costs": [
@@ -20886,6 +21397,13 @@
             "id": "adb3-a3f9-235e-457d",
             "primary": false,
             "name": "Chronomancer"
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "37d5-57bf-9b15-fb2d",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -21523,6 +22041,46 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "d110-ff55-262b-74b4",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
         ]
       },
       {
@@ -21556,6 +22114,13 @@
             "id": "a606-dc82-2eed-72e0",
             "primary": false,
             "name": "Plasmancer"
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "f8ca-0110-cb25-5375",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -22124,7 +22689,47 @@
         "import": true,
         "name": "Plasmancer",
         "hidden": false,
-        "id": "84bc-87b1-1eec-f574"
+        "id": "84bc-87b1-1eec-f574",
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "7627-2dee-67c1-39ef",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "costs": [
@@ -22891,6 +23496,39 @@
             "shared": true,
             "id": "4109-a5cd-65e7-ebef",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "30ba-e56a-18e9-9838",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8b75-e1f9-0f27-83da",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "e2cc-f7d7-d472-d1f2",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifierGroups": [
@@ -23917,6 +24555,43 @@
             "shared": true,
             "id": "45cd-488d-61dd-9831",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "bf40-e545-4a98-a821",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "2650-5114-80b4-381b",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader",
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "bfcf-2ee1-3215-5dfc",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support",
+            "traverseAssociationGroup": false,
+            "includeChildForces": false
           }
         ],
         "modifierGroups": [
@@ -25931,6 +26606,29 @@
             "shared": true,
             "id": "5feb-f797-bdbe-12d5",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "27c4-e1e2-d5b3-139e",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6cfc-b493-96ba-6cf6",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "modifierGroups": [
@@ -38877,6 +39575,29 @@
             "shared": true,
             "id": "bdf0-7b37-9722-9962",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "49ed-bca1-5461-9876",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a855-7c98-ba6b-50de",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "modifierGroups": [
@@ -39662,6 +40383,29 @@
             "shared": true,
             "id": "cfc8-0833-474a-7b3f",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "1272-c8fd-c98b-090c",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "25e4-1dd1-8170-b6c1",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "modifierGroups": [
@@ -52809,6 +53553,29 @@
             "shared": true,
             "id": "cd99-d95b-f670-5c59",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "3a51-d050-af3e-8ea2",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "7571-0304-9af6-92c6",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "modifierGroups": [
@@ -54074,6 +54841,13 @@
             "id": "1a09-589e-5a47-74bc",
             "targetId": "95df-800c-ee22-4cac",
             "primary": false
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "709a-ec92-bf50-fde0",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "costs": [
@@ -54719,6 +55493,55 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "78b0-eccb-3854-a4cb",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ed42-b203-25cf-a0dd",
+                    "shared": true,
+                    "childName": "Immortals"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2fd7-338d-d680-5237",
+                    "shared": true,
+                    "childName": "Necron Warriors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0878-d523-440d-43e3",
+                    "shared": true,
+                    "childName": "Macrocytes"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
