@@ -2688,7 +2688,7 @@
                 "type": "append",
                 "value": "Ignores Cover",
                 "field": "7f1b-8591-2fcf-d01c",
-                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
                 "scope": "parent",
                 "join": ", "
               }
@@ -8086,7 +8086,25 @@
                 "import": true,
                 "name": "United in Destruction",
                 "hidden": false,
-                "id": "31ff-f473-d945-6395"
+                "id": "31ff-f473-d945-6395",
+                "modifiers": [
+                  {
+                    "type": "append",
+                    "value": "Lethal Hits",
+                    "field": "7f1b-8591-2fcf-d01c",
+                    "scope": "root-entry",
+                    "affects": "entries.group.recursive.profiles.Ranged Weapons",
+                    "join": ", "
+                  },
+                  {
+                    "type": "append",
+                    "value": "Lethal Hits",
+                    "field": "893f-9000-ccf7-648e",
+                    "scope": "root-entry",
+                    "affects": "entries.group.recursive.profiles.Melee Weapons",
+                    "join": ", "
+                  }
+                ]
               }
             ],
             "name": "Shared abilties",
@@ -57114,7 +57132,173 @@
         "import": true,
         "name": "Dynastic Conqueror [Crucible]",
         "hidden": false,
-        "id": "be60-a5ae-6c7c-df47"
+        "id": "be60-a5ae-6c7c-df47",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b678-2bb2-5459-94d9",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "9564-ef99-cd4d-f4a1",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Specialisms"
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ed42-b203-25cf-a0dd",
+                            "shared": true,
+                            "childName": "Immortals"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2fd7-338d-d680-5237",
+                            "shared": true,
+                            "childName": "Necron Warriors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "270-5fd8-6b5c-9165",
+                            "shared": true,
+                            "childName": "Lychguard"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "687d-6f40-369d-f336",
+                        "shared": true,
+                        "childName": "Deathmarks"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "74ea-cfb3-a1c1-98ec",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Dimensional Oubliette"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "388d-6508-7135-c6a9",
+                        "shared": true,
+                        "childName": "Flayed Ones"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "b76f-77dd-bf5d-9c51",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Flayer Curse"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "efd1-9381-2a42-9d2c",
+                        "shared": true,
+                        "childName": "Triarch Praetorians"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "76b0-838b-c236-c258",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Gravity Displacement Pack"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "b504-b280-b7f2-37e",
+                        "shared": true,
+                        "childName": "Ophydian Destroyers"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "6889-e6c6-7649-ffd6",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Ophydian Lord"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -57629,7 +57813,173 @@
         "import": true,
         "name": "Hyperscientist [Crucible]",
         "hidden": false,
-        "id": "e884-dd7a-a1cd-bad8"
+        "id": "e884-dd7a-a1cd-bad8",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "756d-e855-6f3c-dc03",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "9564-ef99-cd4d-f4a1",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Specialisms"
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ed42-b203-25cf-a0dd",
+                            "shared": true,
+                            "childName": "Immortals"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2fd7-338d-d680-5237",
+                            "shared": true,
+                            "childName": "Necron Warriors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "270-5fd8-6b5c-9165",
+                            "shared": true,
+                            "childName": "Lychguard"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "687d-6f40-369d-f336",
+                        "shared": true,
+                        "childName": "Deathmarks"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "74ea-cfb3-a1c1-98ec",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Dimensional Oubliette"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "388d-6508-7135-c6a9",
+                        "shared": true,
+                        "childName": "Flayed Ones"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "b76f-77dd-bf5d-9c51",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Flayer Curse"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "efd1-9381-2a42-9d2c",
+                        "shared": true,
+                        "childName": "Triarch Praetorians"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "76b0-838b-c236-c258",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Gravity Displacement Pack"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "b504-b280-b7f2-37e",
+                        "shared": true,
+                        "childName": "Ophydian Destroyers"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "6889-e6c6-7649-ffd6",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Ophydian Lord"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
