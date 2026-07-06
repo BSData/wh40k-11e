@@ -12200,7 +12200,7 @@
                 "localConditionGroups": [
                   {
                     "type": "atLeast",
-                    "value": 2,
+                    "value": 1,
                     "scope": "parent",
                     "field": "selections",
                     "includeChildSelections": true,
@@ -13591,7 +13591,7 @@
                   {
                     "name": "pts",
                     "typeId": "51b2-306e-1021-d207",
-                    "value": 0
+                    "value": 25
                   },
                   {
                     "name": "Crusade Points",
@@ -13617,11 +13617,6 @@
                     "name": "Blackstone Fragments",
                     "typeId": "ac6b-ced3-9b5e-9a6e",
                     "value": 0
-                  },
-                  {
-                    "name": "Detachment Points",
-                    "typeId": "82ae-1066-5107-6ae0",
-                    "value": 25
                   },
                   {
                     "name": "Enhancements",
@@ -13679,7 +13674,7 @@
                     "value": 1,
                     "field": "d29d-cf75-fc2d-34a4",
                     "scope": "parent",
-                    "affects": "self.entries.forces.recursive.profiles.Unit",
+                    "affects": "self.entries.recursive.profiles.Unit",
                     "join": ", "
                   }
                 ],
@@ -13697,6 +13692,17 @@
                         "$text": "WOLF GUARD TERMINATORS unit only. This unit has +1 T"
                       }
                     ]
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 3,
+                    "field": "selections",
+                    "scope": "roster",
+                    "shared": true,
+                    "id": "f750-1515-6753-311a",
+                    "includeChildSelections": true
                   }
                 ]
               }
@@ -17468,7 +17474,14 @@
                     "hidden": false,
                     "type": "selectionEntry",
                     "id": "de28-9f74-b8ae-3a76",
-                    "targetId": "14d9-290f-100f-881c"
+                    "targetId": "14d9-290f-100f-881c",
+                    "costs": [
+                      {
+                        "name": "pts",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 5
+                      }
+                    ]
                   },
                   {
                     "import": true,
@@ -40937,7 +40950,7 @@
     "name": "Imperium - Adeptus Astartes - Space Wolves",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 1,
+    "revision": 2,
     "battleScribeVersion": 2.03,
     "type": "catalogue",
     "authorName": "Acebaur/Mad Spy"
