@@ -699,29 +699,45 @@
               {
                 "conditionGroups": [
                   {
-                    "conditions": [
+                    "type": "or",
+                    "conditionGroups": [
                       {
-                        "type": "lessThan",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "force",
-                        "childId": "6493-9079-727d-d95f",
-                        "shared": true,
-                        "id": "6544-b57f-1e55-369a",
-                        "includeChildSelections": true
-                      },
-                      {
-                        "type": "lessThan",
-                        "value": 1,
-                        "field": "forces",
-                        "scope": "roster",
-                        "childId": "cac3-71d1-ea4b-795d",
-                        "shared": true,
-                        "id": "52f2-c4b8-8c2f-eb8d",
-                        "includeChildSelections": true
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "force",
+                            "childId": "6493-9079-727d-d95f",
+                            "shared": true,
+                            "id": "6544-b57f-1e55-369a",
+                            "includeChildSelections": true
+                          },
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "forces",
+                            "scope": "roster",
+                            "childId": "cac3-71d1-ea4b-795d",
+                            "shared": true,
+                            "id": "52f2-c4b8-8c2f-eb8d",
+                            "includeChildSelections": true
+                          }
+                        ]
                       }
                     ],
-                    "type": "and"
+                    "conditions": [
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b43e-b010-7d4a-3302",
+                        "shared": true,
+                        "childName": "Destroyer Cult"
+                      }
+                    ]
                   }
                 ],
                 "type": "set",
@@ -33438,7 +33454,7 @@
                 "localConditionGroups": [
                   {
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "scope": "parent",
                     "field": "selections",
                     "includeChildSelections": true,
@@ -60525,7 +60541,7 @@
     "name": "Xenos - Necrons",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 1,
+    "revision": 2,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }
