@@ -2366,74 +2366,6 @@
             ]
           },
           {
-            "type": "add",
-            "value": "You cannot have more than 2 Enhancements in your army.",
-            "field": "error",
-            "conditionGroups": [
-              {
-                "type": "and",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "d62d-db22-4893-4bc0",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "1. Incursion (1000 Point limit)"
-                  },
-                  {
-                    "type": "greaterThan",
-                    "value": 2,
-                    "field": "f759-1bc4-cb3a-f0d2",
-                    "scope": "roster",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childId": "any",
-                    "childName": "any"
-                  }
-                ]
-              }
-            ],
-            "affects": "self.entries.9cfd-1c32-585f-7d5c"
-          },
-          {
-            "type": "add",
-            "value": "You cannot have more than 4 Enhancements in your army.",
-            "field": "error",
-            "conditionGroups": [
-              {
-                "type": "and",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "baf8-997f-e323-a090",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "2. Strike Force (2000 Point limit)"
-                  },
-                  {
-                    "type": "greaterThan",
-                    "value": 4,
-                    "field": "f759-1bc4-cb3a-f0d2",
-                    "scope": "roster",
-                    "childId": "any",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childName": "any"
-                  }
-                ]
-              }
-            ],
-            "affects": "self.entries.9cfd-1c32-585f-7d5c"
-          },
-          {
             "type": "increment",
             "value": 1,
             "field": "a00c-6979-992f-046b",
@@ -2483,6 +2415,23 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 4,
+            "field": "606d-06be-c4b4-f877",
+            "conditions": [
+              {
+                "type": "equalTo",
+                "value": 0,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "id": "bb9d-299a-ed60-2d8a",
@@ -2506,6 +2455,17 @@
             "shared": true,
             "id": "a00c-6979-992f-046b",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 2,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "force",
+            "shared": true,
+            "id": "606d-06be-c4b4-f877",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "message": "You cannot have more than {value} Enhancements in your army.1"
           }
         ]
       },
