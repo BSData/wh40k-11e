@@ -316,7 +316,7 @@
             ],
             "infoLinks": [
               {
-                "name": "Anti-",
+                "name": "Anti",
                 "hidden": false,
                 "type": "rule",
                 "id": "ec57-e2eb-9429-f273",
@@ -509,7 +509,7 @@
             ],
             "infoLinks": [
               {
-                "name": "Anti-",
+                "name": "Anti",
                 "hidden": false,
                 "type": "rule",
                 "id": "d77b-1a96-7c03-be2b",
@@ -2224,15 +2224,6 @@
         "constraints": [
           {
             "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "afc0-c2c8-0b25-2b6f",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
             "value": 6,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
@@ -2256,6 +2247,15 @@
             "scope": "self",
             "shared": true,
             "id": "a4a9-e0c4-8358-88d2",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "2127-2511-039a-3f44",
             "includeChildSelections": true
           }
         ],
@@ -2723,7 +2723,26 @@
         "import": true,
         "name": "Watch Master",
         "hidden": false,
-        "id": "f7c3-45d2-a7ac-d8bc"
+        "id": "f7c3-45d2-a7ac-d8bc",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "2127-2511-039a-3f44",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "costs": [
@@ -3010,7 +3029,7 @@
             ],
             "infoLinks": [
               {
-                "name": "Anti-",
+                "name": "Anti",
                 "hidden": false,
                 "type": "rule",
                 "id": "3894-f085-24eb-4dac",
@@ -3668,7 +3687,7 @@
             "targetId": "be1e-ac8e-1e2c-3528"
           },
           {
-            "name": "Anti-",
+            "name": "Anti",
             "hidden": false,
             "type": "rule",
             "id": "76ad-8883-8b18-1737",
@@ -4646,15 +4665,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "8a32-1aaf-647a-a6fa",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -4677,6 +4687,15 @@
             "scope": "self",
             "shared": true,
             "id": "3704-8467-29f4-7036",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "7447-c5d4-d8d7-5bb7",
             "includeChildSelections": true
           }
         ],
@@ -4890,7 +4909,26 @@
         "import": true,
         "name": "Corvus Blackstar",
         "hidden": false,
-        "id": "d861-972b-54f9-bdfa"
+        "id": "d861-972b-54f9-bdfa",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "7447-c5d4-d8d7-5bb7",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -8100,7 +8138,7 @@
                             ],
                             "infoLinks": [
                               {
-                                "name": "Anti-",
+                                "name": "Anti",
                                 "id": "c049-62fb-2b4d-5279",
                                 "hidden": false,
                                 "type": "rule",
@@ -8893,7 +8931,7 @@
                             ],
                             "infoLinks": [
                               {
-                                "name": "Anti-",
+                                "name": "Anti",
                                 "id": "2503-7255-38ca-8331",
                                 "hidden": false,
                                 "type": "rule",
@@ -9079,18 +9117,26 @@
             "type": "set",
             "value": 350,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "f820-825b-5fe8-5e2c",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "f7cd-dc9b-76cc-2a73",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -9116,6 +9162,15 @@
             "scope": "self",
             "shared": true,
             "id": "3dac-cac9-3020-dd8f",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "f820-825b-5fe8-5e2c",
             "includeChildSelections": true
           }
         ],
@@ -10916,15 +10971,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "c9fd-8983-1434-582f",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -10947,6 +10993,15 @@
             "scope": "self",
             "shared": true,
             "id": "3e3f-88fe-30b9-f0c4",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "d91c-6ddc-3900-268d",
             "includeChildSelections": true
           }
         ],
@@ -11618,7 +11673,26 @@
         "import": true,
         "name": "Fortis Kill Team",
         "hidden": false,
-        "id": "a077-e1c9-f8f0-d38"
+        "id": "a077-e1c9-f8f0-d38",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "d91c-6ddc-3900-268d",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "costs": [
@@ -13338,15 +13412,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "7407-7680-0322-45dc",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -13369,6 +13434,15 @@
             "scope": "self",
             "shared": true,
             "id": "1ad0-370e-0e23-10d0",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "9904-217e-53f7-e784",
             "includeChildSelections": true
           }
         ],
@@ -13598,7 +13672,26 @@
         "import": true,
         "name": "Indomitor Kill Team",
         "hidden": false,
-        "id": "6cb-912c-c43-210b"
+        "id": "6cb-912c-c43-210b",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "9904-217e-53f7-e784",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "costs": [
@@ -16095,15 +16188,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "d7e7-f1ca-cac3-3486",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -16126,6 +16210,15 @@
             "scope": "self",
             "shared": true,
             "id": "5f29-03d2-20f2-19b5",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "7b05-1ed9-3a4a-bf5a",
             "includeChildSelections": true
           }
         ],
@@ -16339,7 +16432,26 @@
         "import": true,
         "name": "Spectrus Kill Team",
         "hidden": false,
-        "id": "2544-5189-7806-30f3"
+        "id": "2544-5189-7806-30f3",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "7b05-1ed9-3a4a-bf5a",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "profiles": [
@@ -16469,7 +16581,7 @@
             "targetId": "be1e-ac8e-1e2c-3528"
           },
           {
-            "name": "Anti-",
+            "name": "Anti",
             "hidden": false,
             "id": "a4ec-49fb-cd5d-19ea",
             "type": "rule",
@@ -18460,18 +18572,26 @@
             "type": "set",
             "value": 190,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 4,
+            "field": "539e-e937-0adf-84ab",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "constraints": [
-          {
-            "type": "max",
-            "value": 6,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "e96e-434a-2c80-9ee6",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -18497,6 +18617,15 @@
             "scope": "self",
             "shared": true,
             "id": "c8de-3f0c-d0d3-4aeb",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 6,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "539e-e937-0adf-84ab",
             "includeChildSelections": true
           }
         ],
@@ -19005,7 +19134,7 @@
             "targetId": "be1e-ac8e-1e2c-3528"
           },
           {
-            "name": "Anti-",
+            "name": "Anti",
             "id": "79c3-a86e-40c8-c752",
             "hidden": false,
             "type": "rule",
@@ -20107,15 +20236,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "4043-6781-55cd-37e7",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -20138,6 +20258,15 @@
             "scope": "self",
             "shared": true,
             "id": "c6c5-eda3-56f1-b29b",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "48dd-5028-2cdd-2ab1",
             "includeChildSelections": true
           }
         ],
@@ -20351,7 +20480,26 @@
         "import": true,
         "name": "Talonstrike Kill Team",
         "hidden": false,
-        "id": "c679-f252-32b1-ebcc"
+        "id": "c679-f252-32b1-ebcc",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "48dd-5028-2cdd-2ab1",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "constraints": [
@@ -21136,19 +21284,26 @@
             "type": "set",
             "value": 200,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 4,
+            "field": "8b79-ff4b-7f5e-d856",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "constraints": [
-          {
-            "type": "max",
-            "value": 6,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "c047-e9da-89b6-914c",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -21174,6 +21329,15 @@
             "scope": "self",
             "shared": true,
             "id": "a834-6d94-e9d5-669d",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 6,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "8b79-ff4b-7f5e-d856",
             "includeChildSelections": true
           }
         ],
@@ -23525,7 +23689,7 @@
     "name": "Imperium - Adeptus Astartes - Deathwatch",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 65,
+    "revision": 1,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }

@@ -1970,6 +1970,107 @@
         "id": "751c-b78a-45fa-cc5f",
         "hidden": true,
         "comment": "Used for Enhancement / Crusade Relic upgrades"
+      },
+      {
+        "name": "Allies: Imperial Agents",
+        "id": "742f-5727-1bc9-6da5",
+        "hidden": false,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "childId": "e08b-2448-5606-fefb",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Show Agents of the Imperium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Allies: Titanicus Traitoris",
+        "id": "24fa-8caf-cd68-31fb",
+        "hidden": false,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "childId": "f26b-79db-80e0-3a3b",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Show Titans"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Allies: Chaos Knights",
+        "id": "8dd6-af11-abd3-55f1",
+        "hidden": false,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "childId": "aeb4-96de-7401-eaa3",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Show Chaos Knights"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Allies: Unaligned Forces",
+        "id": "07d9-ab1c-cf28-0939",
+        "hidden": false,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "childId": "2973-ea51-7f8d-5403",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Show Unaligned Forces"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Allies: Legiones Daemonica",
+        "id": "e1ea-71b9-f0ef-d788",
+        "hidden": false
       }
     ],
     "forceEntries": [
@@ -2129,13 +2230,39 @@
             "hidden": false,
             "id": "3761-5a4e-79e0-3c18",
             "targetId": "eef1-be80-500a-edfc"
+          },
+          {
+            "name": "Allies: Imperial Agents",
+            "hidden": false,
+            "id": "1fad-7176-9fd5-de0b",
+            "targetId": "742f-5727-1bc9-6da5"
+          },
+          {
+            "name": "Allies: Legiones Daemonica",
+            "hidden": false,
+            "id": "9cf7-d024-063a-f77d",
+            "targetId": "e1ea-71b9-f0ef-d788"
+          },
+          {
+            "name": "Allies: Chaos Knights",
+            "hidden": false,
+            "id": "748a-f332-43fb-8218",
+            "targetId": "8dd6-af11-abd3-55f1"
+          },
+          {
+            "name": "Allies: Titanicus Traitoris",
+            "hidden": false,
+            "id": "722c-1b43-cac8-8d7a",
+            "targetId": "24fa-8caf-cd68-31fb"
+          },
+          {
+            "name": "Allies: Unaligned Forces",
+            "hidden": false,
+            "id": "ea72-49d5-9b60-d6cf",
+            "targetId": "07d9-ab1c-cf28-0939"
           }
         ],
         "modifiers": [
-          {
-            "type": "set",
-            "field": "readme"
-          },
           {
             "type": "set",
             "value": 3,
@@ -2235,74 +2362,6 @@
             ]
           },
           {
-            "type": "add",
-            "value": "You cannot have more than 2 Enhancements in your army.",
-            "field": "error",
-            "conditionGroups": [
-              {
-                "type": "and",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "d62d-db22-4893-4bc0",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "1. Incursion (1000 Point limit)"
-                  },
-                  {
-                    "type": "greaterThan",
-                    "value": 2,
-                    "field": "f759-1bc4-cb3a-f0d2",
-                    "scope": "roster",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childId": "any",
-                    "childName": "any"
-                  }
-                ]
-              }
-            ],
-            "affects": "self.entries.9cfd-1c32-585f-7d5c"
-          },
-          {
-            "type": "add",
-            "value": "You cannot have more than 4 Enhancements in your army.",
-            "field": "error",
-            "conditionGroups": [
-              {
-                "type": "and",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "baf8-997f-e323-a090",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "2. Strike Force (2000 Point limit)"
-                  },
-                  {
-                    "type": "greaterThan",
-                    "value": 4,
-                    "field": "f759-1bc4-cb3a-f0d2",
-                    "scope": "roster",
-                    "childId": "any",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childName": "any"
-                  }
-                ]
-              }
-            ],
-            "affects": "self.entries.9cfd-1c32-585f-7d5c"
-          },
-          {
             "type": "increment",
             "value": 1,
             "field": "a00c-6979-992f-046b",
@@ -2352,6 +2411,23 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 4,
+            "field": "606d-06be-c4b4-f877",
+            "conditions": [
+              {
+                "type": "equalTo",
+                "value": 0,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "id": "bb9d-299a-ed60-2d8a",
@@ -2375,8 +2451,20 @@
             "shared": true,
             "id": "a00c-6979-992f-046b",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 2,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "force",
+            "shared": true,
+            "id": "606d-06be-c4b4-f877",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "message": "You cannot have more than {value} Enhancements in your army.1"
           }
-        ]
+        ],
+        "readme": "This is the first release of the Warhammer 40,000 11th Edition dataset.\n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\nThis release **does not** include the new Leader/Support assignment functionality. Currently, you will need to continue using the subscription version.\n\nThe Yellowscribe Export should be working in this version. If not, please report as a New Recruit issue, not a data issue.\n\nThe Data Author team thank you for your patience and thank the New Recruit team for their support."
       },
       {
         "categoryLinks": [
@@ -2802,7 +2890,7 @@
               }
             ],
             "type": "set",
-            "value": "**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game.**",
+            "value": "This is the first release of the Warhammer 40,000 11th Edition dataset.\n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\nThis release **does not** yet include the new Leader/Support assignment functionality. Currently, you will need to continue using the subscription version.\n\nThe Yellowscribe Export should be working in this version. If not, please report as a New Recruit issue, not a data issue.\n\nThe Data Author team thank you for your patience and thank the New Recruit team for their support.\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game.**",
             "field": "readme"
           },
           {
@@ -2819,7 +2907,7 @@
               }
             ],
             "type": "set",
-            "value": "**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game. You can add the Crusade Army for your faction from the *Forces* unit section or the *Add Force* menu option.**",
+            "value": "This is the first release of the Warhammer 40,000 11th Edition dataset.\n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\nThis release **does not** yet include the new Leader/Support assignment functionality. Currently, you will need to continue using the subscription version.\n\nThe Yellowscribe Export should be working in this version. If not, please report as a New Recruit issue, not a data issue.\n\nThe Data Author team thank you for your patience and thank the New Recruit team for their support.\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game. You can add the Crusade Army for your faction from the *Forces* unit section or the *Add Force* menu option.**",
             "field": "readme"
           }
         ],
@@ -2838,7 +2926,8 @@
         "name": "Crusade Force",
         "id": "cac3-71d1-ea4b-795d",
         "hidden": false,
-        "exportable": false
+        "exportable": false,
+        "readme": ""
       }
     ],
     "entryLinks": [
@@ -5708,6 +5797,166 @@
             ]
           }
         ]
+      },
+      {
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "d78d-32a7-5796-202e"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "59c9-4073-7db2-dff6"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 0,
+            "field": "d78d-32a7-5796-202e"
+          },
+          {
+            "type": "set",
+            "value": "Chaos Knights are visible",
+            "field": "name"
+          }
+        ],
+        "type": "upgrade",
+        "import": true,
+        "name": "Show Chaos Knights",
+        "hidden": false,
+        "id": "aeb4-96de-7401-eaa3"
+      },
+      {
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "c893-4b45-ab7a-e563"
+          }
+        ],
+        "modifiers": [
+          {
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "childId": "f26b-79db-80e0-3a3b",
+                "shared": true
+              }
+            ],
+            "type": "set",
+            "value": "Titans are visible",
+            "field": "name"
+          },
+          {
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "1d6e-2579-8e7f-1ed4",
+                "shared": true,
+                "includeChildSelections": true
+              }
+            ],
+            "type": "set",
+            "value": true,
+            "field": "hidden"
+          },
+          {
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "1d6e-2579-8e7f-1ed4",
+                "shared": true,
+                "includeChildSelections": true
+              }
+            ],
+            "type": "set",
+            "value": 0,
+            "field": "defaultAmount"
+          }
+        ],
+        "type": "upgrade",
+        "import": true,
+        "name": "Show Titans",
+        "hidden": false,
+        "id": "f26b-79db-80e0-3a3b",
+        "defaultAmount": 1
+      },
+      {
+        "categoryLinks": [
+          {
+            "targetId": "4ac9-fd30-1e3d-b249",
+            "id": "6921-ba6b-1cae-2ea",
+            "primary": true,
+            "name": "Configuration"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "d870-9b1b-0-8a6e"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "a73a-e088-a97c-439f"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 0,
+            "field": "d870-9b1b-0-8a6e"
+          },
+          {
+            "type": "set",
+            "value": "Imperial Agents are visible",
+            "field": "name",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "childId": "e08b-2448-5606-fefb",
+                "shared": true,
+                "childName": "Show Imperial Agents"
+              }
+            ]
+          }
+        ],
+        "type": "upgrade",
+        "import": true,
+        "name": "Show Imperial Agents",
+        "hidden": false,
+        "id": "e08b-2448-5606-fefb"
       }
     ],
     "sharedRules": [
@@ -32566,8 +32815,9 @@
     "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
     "id": "sys-352e-adc2-7639-d610",
     "name": "Warhammer 40,000 11th Edition",
-    "revision": 118,
+    "revision": 1,
     "battleScribeVersion": 2.03,
-    "type": "gameSystem"
+    "type": "gameSystem",
+    "readme": ""
   }
 }

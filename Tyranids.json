@@ -758,17 +758,6 @@
       {
         "constraints": [
           {
-            "field": "selections",
-            "scope": "roster",
-            "value": 3,
-            "percentValue": false,
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": true,
-            "id": "d829-64e7-666a-a5dd",
-            "type": "max"
-          },
-          {
             "type": "max",
             "value": 6,
             "field": "75bb-ded1-c86d-bdf0",
@@ -793,6 +782,15 @@
             "scope": "self",
             "shared": true,
             "id": "9d1f-e720-9516-da2e",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "a831-34e8-528f-5042",
             "includeChildSelections": true
           }
         ],
@@ -1578,7 +1576,26 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "a831-34e8-528f-5042",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "constraints": [
@@ -2111,17 +2128,6 @@
       {
         "constraints": [
           {
-            "field": "selections",
-            "scope": "roster",
-            "value": 3,
-            "percentValue": false,
-            "shared": true,
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "id": "382-80da-29d9-e165",
-            "type": "max"
-          },
-          {
             "type": "max",
             "value": 6,
             "field": "75bb-ded1-c86d-bdf0",
@@ -2146,6 +2152,15 @@
             "scope": "self",
             "shared": true,
             "id": "459a-e6bd-33c8-d8fd",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "a2fc-8113-ddf9-b112",
             "includeChildSelections": true
           }
         ],
@@ -2613,7 +2628,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "382-80da-29d9-e165"
+                "field": "a2fc-8113-ddf9-b112"
               }
             ],
             "type": "and"
@@ -2754,7 +2769,26 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "a2fc-8113-ddf9-b112",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "constraints": [
@@ -3282,19 +3316,41 @@
             "type": "set",
             "value": 120,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "cfb9-71c7-2784-89e8",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "1. Incursion (1000 Point limit)"
+                  },
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "40be-d448-295c-f3f3",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -3320,6 +3376,15 @@
             "scope": "self",
             "shared": true,
             "id": "5f2c-c566-5e94-89a2",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "cfb9-71c7-2784-89e8",
             "includeChildSelections": true
           }
         ],
@@ -3593,17 +3658,68 @@
               {
                 "type": "set-primary",
                 "value": "e338-111e-d0c6-b687",
-                "field": "category"
+                "field": "category",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
               },
               {
                 "type": "set",
                 "value": 6,
-                "field": "40be-d448-295c-f3f3"
+                "field": "cfb9-71c7-2784-89e8",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "7416-b7cc-fdbf-5bf0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "type": "add",
                 "value": "e3d4-6430-ea62-8d6d",
-                "field": "category"
+                "field": "category",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
               },
               {
                 "type": "append",
@@ -3611,29 +3727,73 @@
                 "field": "annotation",
                 "scope": "root-entry",
                 "affects": "self.entries.recursive.profiles.Unit",
-                "join": ", "
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
               },
               {
                 "type": "set",
                 "value": "5+",
                 "field": "55a7-5b54-c60d-11dc",
                 "scope": "root-entry",
-                "affects": "self.entries.recursive.profiles.Unit"
+                "affects": "self.entries.recursive.profiles.Unit",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
+              },
+              {
+                "type": "set",
+                "value": 4,
+                "field": "cfb9-71c7-2784-89e8",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "7416-b7cc-fdbf-5bf0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true
+                      }
+                    ]
+                  }
+                ]
               }
             ],
-            "type": "and",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "force",
-                "childId": "7416-b7cc-fdbf-5bf0",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true
-              }
-            ]
+            "type": "and"
           },
           {
             "comment": "Boarding Actions modifiers",
@@ -3666,7 +3826,7 @@
                 ],
                 "type": "set",
                 "value": 2,
-                "field": "40be-d448-295c-f3f3"
+                "field": "cfb9-71c7-2784-89e8"
               },
               {
                 "conditionGroups": [
@@ -4538,19 +4698,41 @@
             "type": "set",
             "value": 150,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "8025-480c-1bb5-0f80",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "1. Incursion (1000 Point limit)"
+                  },
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "40be-d448-295c-f3f3",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -4576,6 +4758,15 @@
             "scope": "self",
             "shared": true,
             "id": "8a47-7ab2-ee2f-9722",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "8025-480c-1bb5-0f80",
             "includeChildSelections": true
           }
         ],
@@ -4849,17 +5040,68 @@
               {
                 "type": "set-primary",
                 "value": "e338-111e-d0c6-b687",
-                "field": "category"
+                "field": "category",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
               },
               {
                 "type": "set",
                 "value": 6,
-                "field": "40be-d448-295c-f3f3"
+                "field": "8025-480c-1bb5-0f80",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "7416-b7cc-fdbf-5bf0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "type": "add",
                 "value": "e3d4-6430-ea62-8d6d",
-                "field": "category"
+                "field": "category",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
               },
               {
                 "type": "append",
@@ -4867,29 +5109,73 @@
                 "field": "annotation",
                 "scope": "root-entry",
                 "affects": "self.entries.recursive.profiles.Unit",
-                "join": ", "
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
               },
               {
                 "type": "set",
                 "value": "5+",
                 "field": "55a7-5b54-c60d-11dc",
                 "scope": "root-entry",
-                "affects": "self.entries.recursive.profiles.Unit"
+                "affects": "self.entries.recursive.profiles.Unit",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "7416-b7cc-fdbf-5bf0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
+              },
+              {
+                "type": "set",
+                "value": 4,
+                "field": "8025-480c-1bb5-0f80",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "7416-b7cc-fdbf-5bf0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true
+                      }
+                    ]
+                  }
+                ]
               }
             ],
-            "type": "and",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "force",
-                "childId": "7416-b7cc-fdbf-5bf0",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true
-              }
-            ]
+            "type": "and"
           },
           {
             "comment": "Boarding Actions modifiers",
@@ -4922,7 +5208,7 @@
                 ],
                 "type": "set",
                 "value": 2,
-                "field": "40be-d448-295c-f3f3"
+                "field": "8025-480c-1bb5-0f80"
               },
               {
                 "conditionGroups": [
@@ -5333,17 +5619,6 @@
       {
         "constraints": [
           {
-            "field": "selections",
-            "scope": "roster",
-            "value": 6,
-            "percentValue": false,
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": true,
-            "id": "b666-1f95-8d37-b195",
-            "type": "max"
-          },
-          {
             "type": "max",
             "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
@@ -5368,6 +5643,15 @@
             "scope": "self",
             "shared": true,
             "id": "6e8f-f659-4924-6eec",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 6,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "563f-3f23-8751-81ec",
             "includeChildSelections": true
           }
         ],
@@ -5473,6 +5757,23 @@
             "type": "set",
             "value": 110,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 4,
+            "field": "563f-3f23-8751-81ec",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -6897,7 +7198,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "b666-1f95-8d37-b195"
+                "field": "563f-3f23-8751-81ec"
               },
               {
                 "conditionGroups": [
@@ -6927,7 +7228,7 @@
                 ],
                 "type": "set",
                 "value": 3,
-                "field": "b666-1f95-8d37-b195"
+                "field": "563f-3f23-8751-81ec"
               }
             ],
             "type": "and"
@@ -6997,17 +7298,6 @@
       {
         "constraints": [
           {
-            "field": "selections",
-            "scope": "roster",
-            "value": 6,
-            "percentValue": false,
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "id": "02aa-eefd-b9e7-cf60",
-            "type": "max"
-          },
-          {
             "type": "max",
             "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
@@ -7032,6 +7322,15 @@
             "scope": "self",
             "shared": true,
             "id": "e4a8-a886-438c-ad25",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 6,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "528e-789e-c3bd-ebbb",
             "includeChildSelections": true
           }
         ],
@@ -7154,6 +7453,23 @@
             "type": "set",
             "value": 120,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 4,
+            "field": "528e-789e-c3bd-ebbb",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -7390,7 +7706,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "02aa-eefd-b9e7-cf60"
+                "field": "528e-789e-c3bd-ebbb"
               },
               {
                 "conditionGroups": [
@@ -7420,7 +7736,7 @@
                 ],
                 "type": "set",
                 "value": 2,
-                "field": "02aa-eefd-b9e7-cf60"
+                "field": "528e-789e-c3bd-ebbb"
               },
               {
                 "conditionGroups": [
@@ -7450,7 +7766,7 @@
                 ],
                 "type": "set",
                 "value": 3,
-                "field": "02aa-eefd-b9e7-cf60"
+                "field": "528e-789e-c3bd-ebbb"
               },
               {
                 "conditionGroups": [
@@ -7818,17 +8134,6 @@
       {
         "constraints": [
           {
-            "field": "selections",
-            "scope": "roster",
-            "value": 3,
-            "percentValue": false,
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "id": "9339-36fa-3263-a43a",
-            "type": "max"
-          },
-          {
             "type": "max",
             "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
@@ -7853,6 +8158,15 @@
             "scope": "self",
             "shared": true,
             "id": "256e-2a6b-db6f-ca3a",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "9ef3-3d52-2c3c-b5a7",
             "includeChildSelections": true
           }
         ],
@@ -8435,21 +8749,29 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "9ef3-3d52-2c3c-b5a7",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "constraints": [
-          {
-            "field": "selections",
-            "scope": "roster",
-            "value": 3,
-            "percentValue": false,
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": true,
-            "id": "ed0d-bfdc-6e59-9be3",
-            "type": "max"
-          },
           {
             "type": "max",
             "value": 3,
@@ -8475,6 +8797,15 @@
             "scope": "self",
             "shared": true,
             "id": "a9a4-a42b-872d-b890",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "9c9e-31d9-8f73-c78f",
             "includeChildSelections": true
           }
         ],
@@ -8540,6 +8871,23 @@
             "type": "set",
             "value": 160,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "9c9e-31d9-8f73-c78f",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "costs": [
@@ -9141,17 +9489,6 @@
       {
         "constraints": [
           {
-            "field": "selections",
-            "scope": "roster",
-            "value": 3,
-            "percentValue": false,
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": true,
-            "id": "a6db-c649-c89a-f8e2",
-            "type": "max"
-          },
-          {
             "type": "max",
             "value": 6,
             "field": "75bb-ded1-c86d-bdf0",
@@ -9176,6 +9513,15 @@
             "scope": "self",
             "shared": true,
             "id": "4725-347f-bbf6-f5cf",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "832a-d42e-2582-7ece",
             "includeChildSelections": true
           }
         ],
@@ -9792,7 +10138,26 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "832a-d42e-2582-7ece",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "costs": [
@@ -9976,16 +10341,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "40be-d448-295c-f3f3",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -10008,6 +10363,15 @@
             "scope": "self",
             "shared": true,
             "id": "3e59-9343-eb34-f5ad",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "7261-2829-4ebf-3952",
             "includeChildSelections": true
           }
         ],
@@ -10456,6 +10820,23 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "7261-2829-4ebf-3952",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ]
       },
@@ -10496,16 +10877,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "c218-9b4a-f0a2-b276",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -10528,6 +10899,15 @@
             "scope": "self",
             "shared": true,
             "id": "e96c-fa2e-8ad1-0c92",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "5959-eb5c-029a-6462",
             "includeChildSelections": true
           }
         ],
@@ -10682,6 +11062,23 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "5959-eb5c-029a-6462",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
               }
             ]
           }
@@ -11241,16 +11638,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "fe97-15ec-5168-a3a7",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -11273,6 +11660,15 @@
             "scope": "self",
             "shared": true,
             "id": "11d7-35a0-1e62-46fc",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "d947-399c-1931-c765",
             "includeChildSelections": true
           }
         ],
@@ -11858,20 +12254,28 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "d947-399c-1931-c765",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ]
       },
       {
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "b75f-90ad-6498-d41e",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -11897,6 +12301,15 @@
             "scope": "self",
             "shared": true,
             "id": "8112-b002-1301-fc73",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "253f-90c6-8088-9a69",
             "includeChildSelections": true
           }
         ],
@@ -11958,6 +12371,23 @@
             "type": "set",
             "value": 110,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "253f-90c6-8088-9a69",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -12492,6 +12922,23 @@
             "type": "set",
             "value": 90,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "618f-2e64-0d7e-a23e",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "profiles": [
@@ -12511,16 +12958,6 @@
           }
         ],
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "40be-d448-295c-f3f3",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -12546,6 +12983,15 @@
             "scope": "self",
             "shared": true,
             "id": "63a3-9b26-b65a-af00",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "618f-2e64-0d7e-a23e",
             "includeChildSelections": true
           }
         ],
@@ -12822,7 +13268,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "40be-d448-295c-f3f3"
+                "field": "618f-2e64-0d7e-a23e"
               },
               {
                 "conditionGroups": [
@@ -12852,7 +13298,7 @@
                 ],
                 "type": "set",
                 "value": 3,
-                "field": "40be-d448-295c-f3f3"
+                "field": "618f-2e64-0d7e-a23e"
               }
             ],
             "type": "and"
@@ -13262,16 +13708,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "f9bb-4f4b-931c-681e",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -13294,6 +13730,15 @@
             "scope": "self",
             "shared": true,
             "id": "f2ba-ee86-b6b2-5d6e",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "479b-8f2b-14ec-6e28",
             "includeChildSelections": true
           }
         ],
@@ -13364,6 +13809,23 @@
             "type": "set",
             "value": 200,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "479b-8f2b-14ec-6e28",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "profiles": [
@@ -14142,6 +14604,23 @@
             "type": "set",
             "value": 110,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "d33e-7c67-6f1b-322b",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "costs": [
@@ -14156,11 +14635,10 @@
             "type": "max",
             "value": 3,
             "field": "selections",
-            "scope": "roster",
+            "scope": "force",
             "shared": true,
-            "id": "bc1f-2c8-e59b-780c",
-            "includeChildSelections": true,
-            "includeChildForces": true
+            "id": "d33e-7c67-6f1b-322b",
+            "includeChildSelections": true
           }
         ],
         "modifierGroups": [
@@ -14341,16 +14819,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "40be-d448-295c-f3f3",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -14373,6 +14841,15 @@
             "scope": "self",
             "shared": true,
             "id": "d5a6-a03b-9020-496b",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "b2d0-7f92-2730-df98",
             "includeChildSelections": true
           }
         ],
@@ -14841,6 +15318,23 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "b2d0-7f92-2730-df98",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ]
       },
@@ -14875,16 +15369,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "2d33-51f-6394-737",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -14907,6 +15391,15 @@
             "scope": "self",
             "shared": true,
             "id": "6096-c5b2-6d21-c2de",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "13af-7212-097e-1ea5",
             "includeChildSelections": true
           }
         ],
@@ -15541,21 +16034,28 @@
                 "childName": "model"
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "13af-7212-097e-1ea5",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ]
       },
       {
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "fced-3884-5051-1bc7",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -15581,6 +16081,15 @@
             "scope": "self",
             "shared": true,
             "id": "bd71-8002-bb2e-2fb5",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "a928-89d0-60de-6e30",
             "includeChildSelections": true
           }
         ],
@@ -16754,7 +17263,26 @@
         "import": true,
         "name": "Carnifexes",
         "hidden": false,
-        "id": "9efd-5564-f0f5-21ea"
+        "id": "9efd-5564-f0f5-21ea",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "a928-89d0-60de-6e30",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "profiles": [
@@ -16920,16 +17448,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "bb78-5408-f7fd-ce27",
-            "includeChildForces": true,
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -16952,6 +17470,15 @@
             "scope": "self",
             "shared": true,
             "id": "7e2c-443c-934d-da3a",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "d0b4-5b8d-662f-1d3b",
             "includeChildSelections": true
           }
         ],
@@ -17561,21 +18088,28 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "d0b4-5b8d-662f-1d3b",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ]
       },
       {
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "ad18-ee01-c945-cbc5",
-            "includeChildForces": true,
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -17601,6 +18135,15 @@
             "scope": "self",
             "shared": true,
             "id": "a0a4-5c04-2ef0-279c",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "8f2d-2cd8-0a21-9988",
             "includeChildSelections": true
           }
         ],
@@ -17657,6 +18200,23 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "8f2d-2cd8-0a21-9988",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
               }
             ]
           }
@@ -18449,15 +19009,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "ec89-1c33-366e-76f6",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -18480,6 +19031,15 @@
             "scope": "self",
             "shared": true,
             "id": "5fbc-ea16-a2c4-b9a6",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "37d7-c167-9241-35a9",
             "includeChildSelections": true
           }
         ],
@@ -19119,6 +19679,23 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "37d7-c167-9241-35a9",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ]
       },
@@ -19171,16 +19748,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "1c54-bbd2-39b3-904e",
-            "includeChildForces": true,
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -19203,6 +19770,15 @@
             "scope": "self",
             "shared": true,
             "id": "5000-c283-8713-7535",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "db4b-22ff-8ac4-5719",
             "includeChildSelections": true
           }
         ],
@@ -19976,7 +20552,26 @@
         "import": true,
         "name": "Hive Crone",
         "hidden": false,
-        "id": "93aa-dd13-de9d-402b"
+        "id": "93aa-dd13-de9d-402b",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "db4b-22ff-8ac4-5719",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "entryLinks": [
@@ -19991,16 +20586,6 @@
           }
         ],
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "9129-ab99-be36-5f8c",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -20026,6 +20611,15 @@
             "scope": "self",
             "shared": true,
             "id": "efc4-53d1-a09a-d7b8",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "534c-2f47-fa7a-2ac6",
             "includeChildSelections": true
           }
         ],
@@ -20714,7 +21308,26 @@
         "import": true,
         "name": "Harpy",
         "hidden": false,
-        "id": "c679-b06a-750b-e7f7"
+        "id": "c679-b06a-750b-e7f7",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "534c-2f47-fa7a-2ac6",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "profiles": [
@@ -20774,16 +21387,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "6a7c-9a10-f2cf-1705",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -20806,6 +21409,15 @@
             "scope": "self",
             "shared": true,
             "id": "cc4f-da2a-84ff-d50c",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "b0a0-4fa7-8fbe-6c8b",
             "includeChildSelections": true
           }
         ],
@@ -21347,20 +21959,29 @@
         "import": true,
         "name": "Sporocyst",
         "hidden": false,
-        "id": "2cdd-3bf1-55e0-7641"
+        "id": "2cdd-3bf1-55e0-7641",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "b0a0-4fa7-8fbe-6c8b",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "5a6e-2317-553a-369a",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
           {
             "type": "max",
             "value": 3,
@@ -21386,6 +22007,15 @@
             "scope": "self",
             "shared": true,
             "id": "5e6f-9b82-a161-09fc",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "6ebb-d590-987f-7615",
             "includeChildSelections": true
           }
         ],
@@ -21946,7 +22576,26 @@
         "import": true,
         "name": "Psychophage",
         "hidden": false,
-        "id": "b6ac-f091-a018-dab2"
+        "id": "b6ac-f091-a018-dab2",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "6ebb-d590-987f-7615",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -21979,16 +22628,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "dd7c-6071-e4bd-169f",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -22011,6 +22650,15 @@
             "scope": "self",
             "shared": true,
             "id": "03b3-a901-601e-52a7",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "1a6d-a258-74ed-f858",
             "includeChildSelections": true
           }
         ],
@@ -22328,6 +22976,23 @@
             "type": "set",
             "value": 110,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "1a6d-a258-74ed-f858",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -22767,15 +23432,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "force",
-            "shared": true,
-            "id": "834-1e91-12b0-e83b",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -22799,6 +23455,15 @@
             "shared": true,
             "id": "860e-7903-32df-4ade",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "fa83-d698-c3bc-c833",
+            "includeChildSelections": true
           }
         ],
         "modifiers": [
@@ -22819,6 +23484,23 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "fa83-d698-c3bc-c833",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -23364,15 +24046,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "force",
-            "shared": true,
-            "id": "e8fd-fae0-7f6c-1a1a",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -23396,6 +24069,15 @@
             "shared": true,
             "id": "996b-21b7-543c-5304",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "8adb-5c07-048a-be8f",
+            "includeChildSelections": true
           }
         ],
         "modifiers": [
@@ -23416,6 +24098,23 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "8adb-5c07-048a-be8f",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -24062,9 +24761,9 @@
             "type": "max",
             "value": 3,
             "field": "selections",
-            "scope": "roster",
+            "scope": "force",
             "shared": true,
-            "id": "9f25-cfa0-63a3-e99e",
+            "id": "4f7e-0a15-8c66-4ba6",
             "includeChildSelections": true
           }
         ],
@@ -24520,6 +25219,23 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "4f7e-0a15-8c66-4ba6",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ]
       },
@@ -24750,9 +25466,9 @@
             "type": "max",
             "value": 3,
             "field": "selections",
-            "scope": "roster",
+            "scope": "force",
             "shared": true,
-            "id": "f99d-e136-1785-22b7",
+            "id": "ee50-bfee-bf7c-8477",
             "includeChildSelections": true
           }
         ],
@@ -25404,6 +26120,23 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "ee50-bfee-bf7c-8477",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ]
       },
@@ -25662,15 +26395,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "force",
-            "shared": true,
-            "id": "a080-e499-e8d4-1b8",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -25693,6 +26417,15 @@
             "scope": "self",
             "shared": true,
             "id": "05ab-8fba-82f7-ad00",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "7eaa-2f2c-2716-4a55",
             "includeChildSelections": true
           }
         ],
@@ -25751,6 +26484,23 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "7eaa-2f2c-2716-4a55",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
               }
             ]
           }
@@ -26229,15 +26979,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "force",
-            "shared": true,
-            "id": "9144-36fa-6d3b-b9e6",
-            "includeChildSelections": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -26261,6 +27002,15 @@
             "shared": true,
             "id": "2a74-3f8a-6f70-3cdd",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "5459-f1f7-88a6-ed16",
+            "includeChildSelections": true
           }
         ],
         "modifiers": [
@@ -26281,6 +27031,23 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "5459-f1f7-88a6-ed16",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "costs": [
@@ -27060,7 +27827,7 @@
             "field": "selections",
             "scope": "force",
             "shared": true,
-            "id": "9171-830-2223-a88e",
+            "id": "b52d-a725-7bb0-812a",
             "includeChildSelections": true
           }
         ],
@@ -27091,6 +27858,23 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "b52d-a725-7bb0-812a",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "modifierGroups": [
@@ -27348,18 +28132,26 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "52de-1184-276f-3aa3",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "force",
-            "shared": true,
-            "id": "837e-5373-2cef-66fd",
-            "includeChildSelections": true
-          },
           {
             "type": "max",
             "value": 6,
@@ -27385,6 +28177,15 @@
             "scope": "self",
             "shared": true,
             "id": "c211-a6a0-c37f-3b34",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "52de-1184-276f-3aa3",
             "includeChildSelections": true
           }
         ],
@@ -27733,15 +28534,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "6f2e-72b0-b6b1-a2a7",
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -27764,6 +28556,15 @@
             "scope": "self",
             "shared": true,
             "id": "5db8-a840-42ff-9437",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "a168-e982-0c03-01e3",
             "includeChildSelections": true
           }
         ],
@@ -28460,6 +29261,23 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "a168-e982-0c03-01e3",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ]
       },
@@ -28664,15 +29482,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "2448-b69d-8827-6c61",
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -28695,6 +29504,15 @@
             "scope": "self",
             "shared": true,
             "id": "5d77-cce6-7cfe-e1c4",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "bffa-5632-06ec-389b",
             "includeChildSelections": true
           }
         ],
@@ -29458,6 +30276,23 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "bffa-5632-06ec-389b",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
               }
             ]
           }
@@ -30278,17 +31113,6 @@
         "constraints": [
           {
             "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "e6ea-68d7-9d41-3f3b",
-            "percentValue": false,
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
             "value": 6,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
@@ -30312,6 +31136,15 @@
             "scope": "self",
             "shared": true,
             "id": "5a9c-455f-7afb-9ece",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "4f68-965c-4886-1431",
             "includeChildSelections": true
           }
         ],
@@ -31157,21 +31990,29 @@
         "name": "Hive Tyrant",
         "hidden": false,
         "id": "3e96-8098-3401-77af",
-        "collective": false
+        "collective": false,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "4f68-965c-4886-1431",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "constraints": [
-          {
-            "field": "selections",
-            "scope": "roster",
-            "value": 3,
-            "percentValue": false,
-            "shared": true,
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "id": "9d91-a22c-4a61-9daa",
-            "type": "max"
-          },
           {
             "type": "max",
             "value": 6,
@@ -31197,6 +32038,15 @@
             "scope": "self",
             "shared": true,
             "id": "a684-3517-2892-40db",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "4e67-f80e-f65a-6657",
             "includeChildSelections": true
           }
         ],
@@ -32017,7 +32867,26 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "4e67-f80e-f65a-6657",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "infoLinks": [
@@ -32670,7 +33539,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "b984-7317-81cc-20f",
     "name": "Xenos - Tyranids",
-    "revision": 124,
+    "revision": 1,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
