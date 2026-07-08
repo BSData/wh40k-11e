@@ -687,7 +687,121 @@
       {
         "id": "fa45-57e-930e-602b",
         "name": "Faction: Astra Militarum",
-        "hidden": false
+        "hidden": false,
+        "constraints": [
+          {
+            "type": "max",
+            "value": -1,
+            "field": "51b2-306e-1021-d207",
+            "scope": "roster",
+            "shared": true,
+            "id": "4d8f-6e09-606e-788e",
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "negative": false
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 500,
+            "field": "4d8f-6e09-606e-788e",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "primary-catalogue",
+                    "childId": "3bdf-a114-5035-c6ac",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  },
+                  {
+                    "type": "greaterThan",
+                    "value": 0,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
+              }
+            ],
+            "id": "4ff4-f313-206c-fcb0"
+          },
+          {
+            "type": "set",
+            "value": 1000,
+            "field": "4d8f-6e09-606e-788e",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "greaterThan",
+                    "value": 0,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "baf8-997f-e323-a090",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "primary-catalogue",
+                    "childId": "3bdf-a114-5035-c6ac",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
+              }
+            ],
+            "id": "934b-e7e4-b560-2d8c"
+          },
+          {
+            "type": "set",
+            "value": 1500,
+            "field": "4d8f-6e09-606e-788e",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "greaterThan",
+                    "value": 0,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "4204-82d0-908c-a62a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "primary-catalogue",
+                    "childId": "3bdf-a114-5035-c6ac",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  }
+                ]
+              }
+            ],
+            "id": "d1e5-86a2-d34b-13b3"
+          }
+        ]
       },
       {
         "modifiers": [
@@ -1497,120 +1611,6 @@
         "id": "af4c-b971-a31c-669c"
       },
       {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "primary-catalogue",
-                    "childId": "3bdf-a114-5035-c6ac",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "greaterThan",
-                    "value": 0,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "d62d-db22-4893-4bc0",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": 500,
-            "field": "4d8f-6e09-606e-788e",
-            "id": "4ff4-f313-206c-fcb0"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "greaterThan",
-                    "value": 0,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "baf8-997f-e323-a090",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "primary-catalogue",
-                    "childId": "3bdf-a114-5035-c6ac",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": 1000,
-            "field": "4d8f-6e09-606e-788e",
-            "id": "934b-e7e4-b560-2d8c"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "greaterThan",
-                    "value": 0,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "4204-82d0-908c-a62a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "primary-catalogue",
-                    "childId": "3bdf-a114-5035-c6ac",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": 1500,
-            "field": "4d8f-6e09-606e-788e",
-            "id": "d1e5-86a2-d34b-13b3"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "max",
-            "value": -1,
-            "field": "51b2-306e-1021-d207",
-            "scope": "roster",
-            "shared": true,
-            "id": "4d8f-6e09-606e-788e",
-            "includeChildSelections": true,
-            "includeChildForces": true,
-            "negative": false
-          }
-        ],
         "name": "Allied Units",
         "hidden": false,
         "id": "887b-ab87-92a2-20f5"
@@ -2100,6 +2100,11 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Allies: Astra Militarum",
+        "id": "8247-35f6-ec2a-7caa",
+        "hidden": false
       }
     ],
     "forceEntries": [
@@ -2255,6 +2260,12 @@
             "targetId": "887b-ab87-92a2-20f5"
           },
           {
+            "name": "Allies: Astra Militarum",
+            "hidden": false,
+            "id": "58e9-03a9-8da7-f45b",
+            "targetId": "8247-35f6-ec2a-7caa"
+          },
+          {
             "name": "Allies: Chaos Knights",
             "hidden": false,
             "id": "748a-f332-43fb-8218",
@@ -2265,6 +2276,12 @@
             "hidden": false,
             "id": "1fad-7176-9fd5-de0b",
             "targetId": "742f-5727-1bc9-6da5"
+          },
+          {
+            "name": "Allies: Imperial Knights",
+            "hidden": false,
+            "id": "3cd2-4515-973d-0e93",
+            "targetId": "5e03-9044-273d-e818"
           },
           {
             "name": "Allies: Legiones Daemonica",
@@ -2880,39 +2897,51 @@
             "targetId": "887b-ab87-92a2-20f5"
           },
           {
+            "name": "Allies: Astra Militarum",
+            "hidden": false,
+            "id": "ba9f-9f8a-b77f-14e6",
+            "targetId": "8247-35f6-ec2a-7caa"
+          },
+          {
             "name": "Allies: Chaos Knights",
             "hidden": false,
-            "id": "7afd-a43c-c9cf-daaa",
+            "id": "5037-1e14-c070-cfcd",
             "targetId": "8dd6-af11-abd3-55f1"
           },
           {
             "name": "Allies: Imperial Agents",
             "hidden": false,
-            "id": "a117-22b7-753a-9ece",
+            "id": "9817-f3fe-d2ba-a4b4",
             "targetId": "742f-5727-1bc9-6da5"
+          },
+          {
+            "name": "Allies: Imperial Knights",
+            "hidden": false,
+            "id": "cb49-46dc-6303-c205",
+            "targetId": "5e03-9044-273d-e818"
           },
           {
             "name": "Allies: Legiones Daemonica",
             "hidden": false,
-            "id": "4bb6-e338-64ae-408a",
+            "id": "9293-f76b-8512-9b2e",
             "targetId": "e1ea-71b9-f0ef-d788"
           },
           {
             "name": "Allies: Titanicus Traitoris",
             "hidden": false,
-            "id": "0f05-f390-e451-54fb",
+            "id": "3ec3-1293-b44c-f03d",
             "targetId": "24fa-8caf-cd68-31fb"
           },
           {
             "name": "Allies: Unaligned Forces",
             "hidden": false,
-            "id": "7ee8-33d6-cf70-67dc",
+            "id": "6830-ae83-9843-426d",
             "targetId": "07d9-ab1c-cf28-0939"
           },
           {
             "name": "Reference",
             "hidden": false,
-            "id": "9044-5fc4-41ab-11df",
+            "id": "14de-c9cb-628a-6881",
             "targetId": "eef1-be80-500a-edfc"
           }
         ],
