@@ -3729,12 +3729,6 @@
             "name": "Vehicle"
           },
           {
-            "targetId": "63f1-e6e8-f6f6-a4f0",
-            "id": "2ef1-6a5b-bb79-4f6b",
-            "primary": false,
-            "name": "Aircraft"
-          },
-          {
             "targetId": "aff3-d6a3-2a95-9dc",
             "id": "801a-7444-3e40-1eee",
             "primary": false,
@@ -3764,6 +3758,13 @@
             "hidden": false,
             "id": "0d0a-eaea-4097-0493",
             "targetId": "d39c-9989-db7f-d815",
+            "primary": false
+          },
+          {
+            "name": "Frame",
+            "hidden": false,
+            "id": "bc0d-dfea-0b83-d5fc",
+            "targetId": "b927-8eeb-7cc3-8dec",
             "primary": false
           }
         ],
@@ -3815,34 +3816,34 @@
           {
             "characteristics": [
               {
-                "$text": "20+\"",
                 "name": "M",
-                "typeId": "e703-ecb6-5ce7-aec1"
+                "typeId": "e703-ecb6-5ce7-aec1",
+                "$text": "14\""
               },
               {
-                "$text": "10",
                 "name": "T",
-                "typeId": "d29d-cf75-fc2d-34a4"
+                "typeId": "d29d-cf75-fc2d-34a4",
+                "$text": "10"
               },
               {
-                "$text": "3+",
                 "name": "Sv",
-                "typeId": "450-a17e-9d5e-29da"
+                "typeId": "450-a17e-9d5e-29da",
+                "$text": "3+"
               },
               {
-                "$text": "14",
                 "name": "W",
-                "typeId": "750a-a2ec-90d3-21fe"
+                "typeId": "750a-a2ec-90d3-21fe",
+                "$text": "14"
               },
               {
-                "$text": "6+",
                 "name": "LD",
-                "typeId": "58d2-b879-49c7-43bc"
+                "typeId": "58d2-b879-49c7-43bc",
+                "$text": "6+"
               },
               {
-                "$text": "0",
                 "name": "OC",
-                "typeId": "bef7-942a-1a23-59f8"
+                "typeId": "bef7-942a-1a23-59f8",
+                "$text": "0"
               },
               {
                 "name": "InSv",
@@ -4599,7 +4600,17 @@
                     "hidden": false,
                     "id": "6124-f53a-ce5e-c410",
                     "publicationId": "4115-3627-e608-39f6",
-                    "page": 19
+                    "page": 19,
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Ignores Cover",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                        "scope": "parent",
+                        "join": ", "
+                      }
+                    ]
                   },
                   {
                     "profiles": [
@@ -4630,22 +4641,21 @@
                         "id": "6552-f6e5-5c4-129c"
                       }
                     ],
-                    "categoryLinks": [
-                      {
-                        "name": "Smoke",
-                        "hidden": false,
-                        "id": "5218-1e0d-f1d5-8318",
-                        "targetId": "6df-937-16bc-8c1a",
-                        "primary": false
-                      }
-                    ],
                     "type": "upgrade",
                     "import": true,
                     "name": "Infernum halo-launcher",
                     "hidden": false,
                     "id": "6faf-e154-4c67-f607",
                     "publicationId": "4115-3627-e608-39f6",
-                    "page": 19
+                    "page": 19,
+                    "modifiers": [
+                      {
+                        "type": "add",
+                        "value": "6df-937-16bc-8c1a",
+                        "field": "category",
+                        "scope": "parent"
+                      }
+                    ]
                   }
                 ],
                 "name": "Wargear Options",
@@ -7427,7 +7437,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 190
+            "value": 180
           },
           {
             "name": "Crusade Points",
@@ -7450,8 +7460,28 @@
             "value": 0
           },
           {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
             "name": "Honour Points",
             "typeId": "8135-9a2f-6627-09e2",
+            "value": 0
+          },
+          {
+            "name": "Relic Fragments",
+            "typeId": "0ece-6541-4662-ece2",
             "value": 0
           }
         ],
@@ -8008,7 +8038,59 @@
                             "import": true,
                             "name": "Thunder Hammer",
                             "hidden": false,
-                            "id": "7361-e230-fa4d-4ac4"
+                            "id": "7361-e230-fa4d-4ac4",
+                            "costs": [
+                              {
+                                "name": "pts",
+                                "typeId": "51b2-306e-1021-d207",
+                                "value": 5
+                              },
+                              {
+                                "name": "Crusade Points",
+                                "typeId": "b03b-c239-15a5-da55",
+                                "value": 0
+                              },
+                              {
+                                "name": "Crusade: Battle Honours",
+                                "typeId": "75bb-ded1-c86d-bdf0",
+                                "value": 0
+                              },
+                              {
+                                "name": "Crusade: Experience",
+                                "typeId": "a623-fe74-1d33-cddf",
+                                "value": 0
+                              },
+                              {
+                                "name": "Crusade: Weapon Modifications",
+                                "typeId": "716d-91b7-d55a-1022",
+                                "value": 0
+                              },
+                              {
+                                "name": "Blackstone Fragments",
+                                "typeId": "ac6b-ced3-9b5e-9a6e",
+                                "value": 0
+                              },
+                              {
+                                "name": "Detachment Points",
+                                "typeId": "82ae-1066-5107-6ae0",
+                                "value": 0
+                              },
+                              {
+                                "name": "Enhancements",
+                                "typeId": "f759-1bc4-cb3a-f0d2",
+                                "value": 0
+                              },
+                              {
+                                "name": "Honour Points",
+                                "typeId": "8135-9a2f-6627-09e2",
+                                "value": 0
+                              },
+                              {
+                                "name": "Relic Fragments",
+                                "typeId": "0ece-6541-4662-ece2",
+                                "value": 0
+                              }
+                            ]
                           },
                           {
                             "profiles": [
@@ -8801,7 +8883,59 @@
                             "import": true,
                             "name": "Thunder Hammer",
                             "hidden": false,
-                            "id": "ff14-7e0a-4b32-6fc1"
+                            "id": "ff14-7e0a-4b32-6fc1",
+                            "costs": [
+                              {
+                                "name": "pts",
+                                "typeId": "51b2-306e-1021-d207",
+                                "value": 5
+                              },
+                              {
+                                "name": "Crusade Points",
+                                "typeId": "b03b-c239-15a5-da55",
+                                "value": 0
+                              },
+                              {
+                                "name": "Crusade: Battle Honours",
+                                "typeId": "75bb-ded1-c86d-bdf0",
+                                "value": 0
+                              },
+                              {
+                                "name": "Crusade: Experience",
+                                "typeId": "a623-fe74-1d33-cddf",
+                                "value": 0
+                              },
+                              {
+                                "name": "Crusade: Weapon Modifications",
+                                "typeId": "716d-91b7-d55a-1022",
+                                "value": 0
+                              },
+                              {
+                                "name": "Blackstone Fragments",
+                                "typeId": "ac6b-ced3-9b5e-9a6e",
+                                "value": 0
+                              },
+                              {
+                                "name": "Detachment Points",
+                                "typeId": "82ae-1066-5107-6ae0",
+                                "value": 0
+                              },
+                              {
+                                "name": "Enhancements",
+                                "typeId": "f759-1bc4-cb3a-f0d2",
+                                "value": 0
+                              },
+                              {
+                                "name": "Honour Points",
+                                "typeId": "8135-9a2f-6627-09e2",
+                                "value": 0
+                              },
+                              {
+                                "name": "Relic Fragments",
+                                "typeId": "0ece-6541-4662-ece2",
+                                "value": 0
+                              }
+                            ]
                           },
                           {
                             "profiles": [
@@ -9115,7 +9249,7 @@
               }
             ],
             "type": "set",
-            "value": 350,
+            "value": 330,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -9456,7 +9590,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 180
+            "value": 195
           },
           {
             "name": "Crusade Points",
@@ -9481,6 +9615,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -11691,6 +11835,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 15,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "a077-e1c9-f8f0-d38",
+                        "shared": true,
+                        "childName": "Fortis Kill Team"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -11699,7 +11883,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 265
+            "value": 275
           },
           {
             "name": "Crusade Points",
@@ -11724,6 +11908,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -13690,6 +13884,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 15,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "6cb-912c-c43-210b",
+                        "shared": true,
+                        "childName": "Indomitor Kill Team"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -13698,7 +13932,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 180
+            "value": 170
           },
           {
             "name": "Crusade Points",
@@ -13723,6 +13957,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -16448,6 +16692,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "2544-5189-7806-30f3",
+                        "shared": true,
+                        "childName": "Spectrus Kill Team"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -19486,7 +19770,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 275
+            "value": 265
           },
           {
             "name": "Crusade Points",
@@ -19511,6 +19795,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -20498,6 +20792,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 15,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "c679-f252-32b1-ebcc",
+                        "shared": true,
+                        "childName": "Talonstrike Kill Team"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -21282,7 +21616,7 @@
               }
             ],
             "type": "set",
-            "value": 200,
+            "value": 190,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -23689,7 +24023,7 @@
     "name": "Imperium - Adeptus Astartes - Deathwatch",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 1,
+    "revision": 4,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }

@@ -708,29 +708,45 @@
               {
                 "conditionGroups": [
                   {
-                    "conditions": [
+                    "type": "or",
+                    "conditionGroups": [
                       {
-                        "type": "lessThan",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "force",
-                        "childId": "6493-9079-727d-d95f",
-                        "shared": true,
-                        "id": "6544-b57f-1e55-369a",
-                        "includeChildSelections": true
-                      },
-                      {
-                        "type": "lessThan",
-                        "value": 1,
-                        "field": "forces",
-                        "scope": "roster",
-                        "childId": "cac3-71d1-ea4b-795d",
-                        "shared": true,
-                        "id": "52f2-c4b8-8c2f-eb8d",
-                        "includeChildSelections": true
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "force",
+                            "childId": "6493-9079-727d-d95f",
+                            "shared": true,
+                            "id": "6544-b57f-1e55-369a",
+                            "includeChildSelections": true
+                          },
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "forces",
+                            "scope": "roster",
+                            "childId": "cac3-71d1-ea4b-795d",
+                            "shared": true,
+                            "id": "52f2-c4b8-8c2f-eb8d",
+                            "includeChildSelections": true
+                          }
+                        ]
                       }
                     ],
-                    "type": "and"
+                    "conditions": [
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b43e-b010-7d4a-3302",
+                        "shared": true,
+                        "childName": "Destroyer Cult"
+                      }
+                    ]
                   }
                 ],
                 "type": "set",
@@ -31120,7 +31136,7 @@
               {
                 "name": "pts",
                 "typeId": "51b2-306e-1021-d207",
-                "value": 55
+                "value": 45
               },
               {
                 "name": "Crusade Points",
@@ -31145,6 +31161,16 @@
               {
                 "name": "Blackstone Fragments",
                 "typeId": "ac6b-ced3-9b5e-9a6e",
+                "value": 0
+              },
+              {
+                "name": "Detachment Points",
+                "typeId": "82ae-1066-5107-6ae0",
+                "value": 0
+              },
+              {
+                "name": "Enhancements",
+                "typeId": "f759-1bc4-cb3a-f0d2",
                 "value": 0
               }
             ],
@@ -32892,7 +32918,7 @@
                         "typeId": "9b8f-694b-e5e-b573"
                       }
                     ],
-                    "name": "Relatavistic Tether",
+                    "name": "Reletavistic Tether",
                     "typeId": "9cc3-6d83-4dd3-9b64",
                     "typeName": "Abilities",
                     "hidden": false,
@@ -32967,7 +32993,7 @@
                 ],
                 "type": "upgrade",
                 "import": true,
-                "name": "Relatavistic Tether",
+                "name": "Reletavistic Tether",
                 "hidden": true,
                 "id": "4b7a-0ee7-9cf0-8434"
               }
@@ -34632,7 +34658,7 @@
                 "localConditionGroups": [
                   {
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "scope": "parent",
                     "field": "selections",
                     "includeChildSelections": true,
@@ -62141,7 +62167,8 @@
           }
         ],
         "id": "cd5c-98c0-9fd1-7cc6",
-        "name": "C'tan Powers"
+        "name": "C'tan Powers",
+        "sortIndex": 17
       },
       {
         "characteristicTypes": [
@@ -62152,7 +62179,8 @@
         ],
         "name": "Triarch Abilities",
         "hidden": false,
-        "id": "b289-e7b4-432c-e2dd"
+        "id": "b289-e7b4-432c-e2dd",
+        "sortIndex": 16
       }
     ],
     "catalogueLinks": [
@@ -62387,7 +62415,7 @@
     "name": "Xenos - Necrons",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 1,
+    "revision": 4,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }

@@ -5911,7 +5911,16 @@
                 "name": "Plasma storm battery",
                 "hidden": false,
                 "id": "88a9-a163-855e-7301",
-                "page": 35
+                "page": 35,
+                "categoryLinks": [
+                  {
+                    "name": "Plasma",
+                    "hidden": false,
+                    "id": "6597-9d13-4447-58c4",
+                    "targetId": "cb29-f4bb-ff15-6b11",
+                    "primary": false
+                  }
+                ]
               }
             ],
             "selectionEntryGroups": [
@@ -6114,7 +6123,7 @@
             "name": "Wargear",
             "id": "dcbf-7b5c-9de0-5ea2",
             "hidden": false,
-            "sortIndex": 2
+            "sortIndex": 4
           }
         ],
         "constraints": [
@@ -6289,7 +6298,17 @@
                   }
                 ]
               }
-            ]
+            ],
+            "sortIndex": 3
+          },
+          {
+            "import": true,
+            "name": "Dark Age Arsenal Enhancements",
+            "hidden": false,
+            "id": "0a90-92ac-3cb1-d655",
+            "type": "selectionEntryGroup",
+            "targetId": "6b5c-3ea7-387e-a92a",
+            "sortIndex": 2
           }
         ],
         "modifierGroups": [
@@ -7711,14 +7730,6 @@
                   {
                     "constraints": [
                       {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "36b6-ddf8-72ce-c5"
-                      },
-                      {
                         "type": "max",
                         "value": 1,
                         "field": "selections",
@@ -7869,7 +7880,202 @@
                 "name": "Ravenwing Huntmaster",
                 "hidden": false,
                 "id": "4c15-1de7-973d-4c5",
-                "page": 31
+                "page": 31,
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon 1",
+                    "id": "6f40-0c47-3368-3608",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "eabb-5d87-2187-c882",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "5420-573f-b9a3-45f5",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Plasma talon",
+                        "hidden": false,
+                        "id": "d6dc-15c4-98ef-7995",
+                        "constraints": [
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "5d99-3ab0-19f9-5eaf"
+                          }
+                        ],
+                        "profiles": [
+                          {
+                            "name": "➤ Plasma talon - Standard",
+                            "typeId": "f77d-b953-8fa4-b762",
+                            "typeName": "Ranged Weapons",
+                            "hidden": false,
+                            "id": "7995-69db-9e2d-e5dd",
+                            "characteristics": [
+                              {
+                                "$text": "18\"",
+                                "name": "Range",
+                                "typeId": "9896-9419-16a1-92fc"
+                              },
+                              {
+                                "$text": "2",
+                                "name": "A",
+                                "typeId": "3bb-c35f-f54-fb08"
+                              },
+                              {
+                                "$text": "3+",
+                                "name": "BS",
+                                "typeId": "94d-8a98-cf90-183e"
+                              },
+                              {
+                                "$text": "7",
+                                "name": "S",
+                                "typeId": "2229-f494-25db-c5d3"
+                              },
+                              {
+                                "$text": "-2",
+                                "name": "AP",
+                                "typeId": "9ead-8a10-520-de15"
+                              },
+                              {
+                                "$text": "1",
+                                "name": "D",
+                                "typeId": "a354-c1c8-a745-f9e3"
+                              },
+                              {
+                                "$text": "Rapid Fire 1",
+                                "name": "Keywords",
+                                "typeId": "7f1b-8591-2fcf-d01c"
+                              }
+                            ],
+                            "page": 31
+                          },
+                          {
+                            "name": "➤ Plasma talon - Supercharged",
+                            "typeId": "f77d-b953-8fa4-b762",
+                            "typeName": "Ranged Weapons",
+                            "hidden": false,
+                            "id": "b09e-a6a8-c405-bc65",
+                            "characteristics": [
+                              {
+                                "$text": "18\"",
+                                "name": "Range",
+                                "typeId": "9896-9419-16a1-92fc"
+                              },
+                              {
+                                "$text": "2",
+                                "name": "A",
+                                "typeId": "3bb-c35f-f54-fb08"
+                              },
+                              {
+                                "$text": "3+",
+                                "name": "BS",
+                                "typeId": "94d-8a98-cf90-183e"
+                              },
+                              {
+                                "$text": "8",
+                                "name": "S",
+                                "typeId": "2229-f494-25db-c5d3"
+                              },
+                              {
+                                "$text": "-3",
+                                "name": "AP",
+                                "typeId": "9ead-8a10-520-de15"
+                              },
+                              {
+                                "$text": "2",
+                                "name": "D",
+                                "typeId": "a354-c1c8-a745-f9e3"
+                              },
+                              {
+                                "$text": "Hazardous, Rapid Fire 1",
+                                "name": "Keywords",
+                                "typeId": "7f1b-8591-2fcf-d01c"
+                              }
+                            ],
+                            "page": 31
+                          }
+                        ],
+                        "infoLinks": [
+                          {
+                            "name": "Hazardous",
+                            "id": "8b22-ef29-bce5-3b8e",
+                            "hidden": false,
+                            "type": "rule",
+                            "targetId": "8367-374c-f87-c627"
+                          },
+                          {
+                            "name": "Rapid Fire",
+                            "id": "03d7-70d9-87cf-45ed",
+                            "hidden": false,
+                            "type": "rule",
+                            "targetId": "c5c8-8b58-b8b6-7786"
+                          }
+                        ],
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Weapon Modifications",
+                            "hidden": false,
+                            "id": "ff5e-d9dc-ec8a-0639",
+                            "type": "selectionEntryGroup",
+                            "targetId": "f9da-852a-d7f0-92e9"
+                          }
+                        ],
+                        "page": 31,
+                        "collective": true
+                      }
+                    ],
+                    "defaultSelectionEntryId": "d6dc-15c4-98ef-7995",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Astartes grenade launcher",
+                        "hidden": false,
+                        "id": "4ef3-2e51-1877-7e7b",
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "1660-46a0-619f-349d"
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "7a17-d9e3-ddc0-0d9f"
+                          }
+                        ],
+                        "type": "selectionEntry",
+                        "targetId": "ca2b-3d9a-e739-cb21"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -8530,7 +8736,40 @@
                     "hidden": false,
                     "id": "8f34-65b8-6d76-37c3",
                     "type": "selectionEntry",
-                    "targetId": "ca2b-3d9a-e739-cb21"
+                    "targetId": "ca2b-3d9a-e739-cb21",
+                    "modifiers": [
+                      {
+                        "type": "add",
+                        "value": "Max 1 {this} per 5 models",
+                        "field": "error",
+                        "conditionGroups": [
+                          {
+                            "type": "and",
+                            "conditions": [
+                              {
+                                "type": "lessThan",
+                                "value": 6,
+                                "field": "selections",
+                                "scope": "unit",
+                                "childId": "e6a5-db4c-35be-c30",
+                                "shared": true,
+                                "childName": "Ravenwing Black Knights"
+                              },
+                              {
+                                "type": "greaterThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "e6a5-db4c-35be-c30",
+                                "childId": "ca2b-3d9a-e739-cb21",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "childName": "Astartes grenade launcher"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ],
                 "type": "model",
@@ -8564,7 +8803,7 @@
             "name": "Ravenwing Black Knights",
             "hidden": false,
             "id": "e6a5-db4c-35be-c30",
-            "sortIndex": 2
+            "sortIndex": 3
           }
         ],
         "modifiers": [
@@ -8698,6 +8937,15 @@
             "type": "selectionEntryGroup",
             "targetId": "9a99-f13c-a667-e698",
             "sortIndex": 1
+          },
+          {
+            "import": true,
+            "name": "Dark Age Arsenal Enhancements",
+            "hidden": false,
+            "id": "1434-b102-fe2b-eecc",
+            "type": "selectionEntryGroup",
+            "targetId": "6b5c-3ea7-387e-a92a",
+            "sortIndex": 2
           }
         ],
         "modifierGroups": [
@@ -9527,7 +9775,7 @@
             "id": "b342-4005-baec-3598",
             "publicationId": "3931-1b04-c00e-afad",
             "page": 29,
-            "sortIndex": 2
+            "sortIndex": 3
           },
           {
             "profiles": [
@@ -9990,7 +10238,7 @@
             "id": "d445-3ac1-64d5-fd4a",
             "publicationId": "3931-1b04-c00e-afad",
             "page": 29,
-            "sortIndex": 3
+            "sortIndex": 4
           },
           {
             "profiles": [
@@ -10690,7 +10938,7 @@
             "id": "f227-6107-836d-3fee",
             "publicationId": "3931-1b04-c00e-afad",
             "page": 29,
-            "sortIndex": 4
+            "sortIndex": 5
           }
         ],
         "constraints": [
@@ -10740,6 +10988,15 @@
             "type": "selectionEntryGroup",
             "targetId": "9a99-f13c-a667-e698",
             "sortIndex": 1
+          },
+          {
+            "import": true,
+            "name": "Dark Age Arsenal Enhancements",
+            "hidden": false,
+            "id": "aae0-c118-5c8b-f3d7",
+            "type": "selectionEntryGroup",
+            "targetId": "6b5c-3ea7-387e-a92a",
+            "sortIndex": 2
           }
         ],
         "modifierGroups": [
@@ -12191,7 +12448,7 @@
             "name": "Watcher in the Dark",
             "hidden": false,
             "id": "5638-9134-2d96-888",
-            "sortIndex": 2
+            "sortIndex": 3
           }
         ],
         "selectionEntryGroups": [
@@ -13318,7 +13575,7 @@
             "hidden": false,
             "id": "e082-9cb8-ce5e-826d",
             "defaultSelectionEntryId": "3396-82fa-d409-6b73",
-            "sortIndex": 3
+            "sortIndex": 4
           }
         ],
         "infoLinks": [
@@ -13384,6 +13641,15 @@
             "type": "selectionEntryGroup",
             "targetId": "9a99-f13c-a667-e698",
             "sortIndex": 1
+          },
+          {
+            "import": true,
+            "name": "Dark Age Arsenal Enhancements",
+            "hidden": false,
+            "id": "86cf-86d1-dac6-e75a",
+            "type": "selectionEntryGroup",
+            "targetId": "6b5c-3ea7-387e-a92a",
+            "sortIndex": 2
           }
         ],
         "modifierGroups": [
@@ -18916,7 +19182,7 @@
             "hidden": false,
             "id": "bfe0-e0c8-773b-e03b",
             "defaultSelectionEntryId": "3897-8ee2-1345-3319",
-            "sortIndex": 3
+            "sortIndex": 4
           }
         ],
         "infoLinks": [
@@ -19022,7 +19288,7 @@
             "name": "Watcher in the Dark",
             "hidden": false,
             "id": "dcdd-cda8-1160-dfda",
-            "sortIndex": 2
+            "sortIndex": 3
           }
         ],
         "profiles": [
@@ -19088,6 +19354,15 @@
             "type": "selectionEntryGroup",
             "targetId": "9a99-f13c-a667-e698",
             "sortIndex": 1
+          },
+          {
+            "import": true,
+            "name": "Dark Age Arsenal Enhancements",
+            "hidden": false,
+            "id": "8113-4fcd-1749-61ae",
+            "type": "selectionEntryGroup",
+            "targetId": "6b5c-3ea7-387e-a92a",
+            "sortIndex": 2
           }
         ],
         "modifierGroups": [
@@ -19456,7 +19731,8 @@
         ],
         "name": "Primarch of the First Legion",
         "hidden": false,
-        "id": "a400-f511-a59-fca7"
+        "id": "a400-f511-a59-fca7",
+        "sortIndex": 11
       }
     ],
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
@@ -19465,9 +19741,9 @@
     "name": "Imperium - Adeptus Astartes - Dark Angels",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 1,
+    "revision": 3,
     "battleScribeVersion": 2.03,
-    "authorName": "Simon Porter",
+    "authorName": "Acebaur",
     "type": "catalogue"
   }
 }
