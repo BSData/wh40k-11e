@@ -9050,6 +9050,13 @@
             "id": "b764-2e2a-7b4b-8d0c",
             "targetId": "740a-892c-8958-defa",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "b0f8-db16-a7b9-ef46",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "profiles": [
@@ -9334,7 +9341,55 @@
         "name": "Typhus",
         "hidden": false,
         "id": "e6a4-7055-fd23-5123",
-        "publicationId": "6bb4-8611-986f-58fa"
+        "publicationId": "6bb4-8611-986f-58fa",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "3925-bcd1-7e68-b629",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9f2e-3944-438a-b83e",
+                    "shared": true,
+                    "childName": "Deathshroud Terminators"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9a0a-c155-5cd5-8ba3",
+                    "shared": true,
+                    "childName": "Blightlord Terminators"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2373-df61-e37e-7376",
+                    "shared": true,
+                    "childName": "Poxwalkers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -9773,6 +9828,13 @@
             "id": "c6cb-70af-fb37-1d1",
             "primary": false,
             "name": "Chaos Lord"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "7efa-c76a-016a-9fb0",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
@@ -9884,6 +9946,13 @@
                         "hidden": false,
                         "id": "5e99-a17a-be3a-4ef7",
                         "targetId": "ccdd-3987-11ed-90cd",
+                        "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "2c82-b2fd-291b-cd77",
+                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -10268,6 +10337,13 @@
                         "hidden": false,
                         "id": "cbbc-c29e-c502-57a0",
                         "targetId": "eeda-8544-a2f3-3fab",
+                        "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "6e82-1074-e834-a20f",
+                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -10733,7 +10809,37 @@
         "import": true,
         "name": "Death Guard Chaos Lord [Legends]",
         "hidden": false,
-        "id": "cfc1-1741-530c-3335"
+        "id": "cfc1-1741-530c-3335",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "1feb-a9a4-f641-f828",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8448-53ec-fbc3-467c",
+                    "shared": true,
+                    "childName": "Plague Marines"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -11103,6 +11209,13 @@
             "id": "6cdf-e7e8-0604-e298",
             "targetId": "ccdd-3987-11ed-90cd",
             "primary": false
+          },
+          {
+            "name": "Non-LH",
+            "hidden": false,
+            "id": "daa5-4d79-05e1-4271",
+            "targetId": "72ae-e03e-2e85-df95",
+            "primary": false
           }
         ],
         "type": "upgrade",
@@ -11470,6 +11583,13 @@
                         "id": "901d-ac6d-a690-52a2",
                         "targetId": "eeda-8544-a2f3-3fab",
                         "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "7ffd-51ce-612a-98b5",
+                        "targetId": "72ae-e03e-2e85-df95",
+                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -11761,6 +11881,13 @@
             "id": "0cea-47ed-a9f1-089f",
             "targetId": "740a-892c-8958-defa",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "12a2-3a4d-f05d-7a63",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
@@ -12028,7 +12155,46 @@
         "import": true,
         "name": "Death Guard Chaos Lord in Terminator Armour [Legends]",
         "hidden": false,
-        "id": "bacc-4f1-649-a051"
+        "id": "bacc-4f1-649-a051",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "3d45-d4a6-b50c-0d7d",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9f2e-3944-438a-b83e",
+                    "shared": true,
+                    "childName": "Deathshroud Terminators"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9a0a-c155-5cd5-8ba3",
+                    "shared": true,
+                    "childName": "Blightlord Terminators"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -12100,6 +12266,13 @@
             "hidden": false,
             "id": "148f-39b6-bbfc-1aaf",
             "targetId": "740a-892c-8958-defa",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "86b2-0ebf-6243-1088",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -12752,6 +12925,45 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "70c0-d5e1-cf6f-2883",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9f2e-3944-438a-b83e",
+                    "shared": true,
+                    "childName": "Deathshroud Terminators"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9a0a-c155-5cd5-8ba3",
+                    "shared": true,
+                    "childName": "Blightlord Terminators"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -12803,6 +13015,13 @@
             "hidden": false,
             "id": "d20d-05ec-9ebd-c5f7",
             "targetId": "740a-892c-8958-defa",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "e840-c9c6-6c44-5544",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -13382,6 +13601,62 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Sustained Hits 1, Lance",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.group.profiles.Melee Weapons",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "join": ", "
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "6e7f-517b-6056-38ab",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9f2e-3944-438a-b83e",
+                    "shared": true,
+                    "childName": "Deathshroud Terminators"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9a0a-c155-5cd5-8ba3",
+                    "shared": true,
+                    "childName": "Blightlord Terminators"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -13672,6 +13947,13 @@
                     "id": "a05e-73ff-ee0f-1542",
                     "targetId": "4546-4a0c-b3be-e84c",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "3e56-fe19-4f22-e60b",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "type": "upgrade",
@@ -13916,6 +14198,13 @@
                         "id": "3cd5-bb92-6f70-e0b6",
                         "targetId": "4546-4a0c-b3be-e84c",
                         "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "b740-cfea-b6ea-2acd",
+                        "targetId": "72ae-e03e-2e85-df95",
+                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -13995,7 +14284,16 @@
                     "import": true,
                     "name": "Chainfist",
                     "hidden": false,
-                    "id": "cd28-da45-ef6d-a95c"
+                    "id": "cd28-da45-ef6d-a95c",
+                    "categoryLinks": [
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "3438-7b66-78c1-beed",
+                        "targetId": "72ae-e03e-2e85-df95",
+                        "primary": false
+                      }
+                    ]
                   },
                   {
                     "profiles": [
@@ -14204,6 +14502,13 @@
             "hidden": false,
             "id": "8af4-e716-b738-01a1",
             "targetId": "740a-892c-8958-defa",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "de37-bc92-3b64-575e",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -14473,7 +14778,46 @@
         "name": "Death Guard Sorcerer in Terminator Armour [Legends]",
         "hidden": false,
         "id": "93ac-1b31-4238-d60e",
-        "publicationId": "6bb4-8611-986f-58fa"
+        "publicationId": "6bb4-8611-986f-58fa",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b56b-d03e-ca0d-468f",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9f2e-3944-438a-b83e",
+                    "shared": true,
+                    "childName": "Deathshroud Terminators"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9a0a-c155-5cd5-8ba3",
+                    "shared": true,
+                    "childName": "Blightlord Terminators"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -14627,6 +14971,13 @@
             "id": "6ea7-b8bc-acf1-d5f5",
             "primary": false,
             "name": "Malignant Plaguecaster"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "d96a-2a34-e43f-376a",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -15146,6 +15497,13 @@
                     "id": "35ca-fa40-59bf-82d8",
                     "targetId": "4986-bf86-beb4-13ac",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "deca-1b28-62ad-b544",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "selectionEntryGroups": [
@@ -15390,6 +15748,45 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "99fe-b4b2-70f5-a72c",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8448-53ec-fbc3-467c",
+                    "shared": true,
+                    "childName": "Plague Marines"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2373-df61-e37e-7376",
+                    "shared": true,
+                    "childName": "Poxwalkers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -15532,6 +15929,72 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "7d52-af78-d77f-b4f3",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "917-dc6c-ae70-a45b",
+                    "shared": true,
+                    "childName": "Foul Blightspawn"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "82ec-2c74-d449-2afb",
+                    "shared": true,
+                    "childName": "Tallyman"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "b631-a560-7efd-9c94",
+                    "shared": true,
+                    "childName": "Plague Surgeon"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "483a-2919-74ca-338e",
+                    "shared": true,
+                    "childName": "Death Guard Icon Bearer"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "a376-7f02-1fc8-6be0",
+                    "shared": true,
+                    "childName": "Biologus Putrifier"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "4184-cab9-b99a-d510",
+                    "shared": true,
+                    "childName": "Noxious Blightbringer"
+                  }
+                ]
               }
             ]
           }
@@ -17270,6 +17733,17 @@
             "shared": true,
             "id": "d731-a770-4198-566e",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "7d52-af78-d77f-b4f3",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -17627,6 +18101,13 @@
             "hidden": false,
             "id": "e0da-124f-a9e2-58ee",
             "targetId": "eeda-8544-a2f3-3fab",
+            "primary": false
+          },
+          {
+            "name": "Non-LH",
+            "hidden": false,
+            "id": "8746-8191-c114-98c2",
+            "targetId": "72ae-e03e-2e85-df95",
             "primary": false
           }
         ],
@@ -19689,6 +20170,27 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "1550-d234-a9a5-0b4b",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "4184-cab9-b99a-d510",
+                    "shared": true,
+                    "childName": "Noxious Blightbringer"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "profiles": [
@@ -19791,6 +20293,55 @@
             "shared": true,
             "id": "e07c-d154-7b9d-ddfa",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c557-c9a0-f8be-fa95",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "75bb-ded1-c86d-bdf0",
+            "scope": "self",
+            "shared": true,
+            "id": "2fd8-3cf4-2891-821a",
+            "includeChildSelections": false
+          },
+          {
+            "type": "max",
+            "value": 0,
+            "field": "716d-91b7-d55a-1022",
+            "scope": "self",
+            "shared": true,
+            "id": "1dad-3754-094e-3a10",
+            "includeChildSelections": true
+          },
+          {
+            "type": "min",
+            "value": 0,
+            "field": "716d-91b7-d55a-1022",
+            "scope": "self",
+            "shared": true,
+            "id": "2c38-93b2-282d-9997",
+            "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1550-d234-a9a5-0b4b",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "modifierGroups": [
@@ -19872,7 +20423,7 @@
                 ],
                 "type": "increment",
                 "value": 2,
-                "field": "8c00-ced7-ce79-e9d6"
+                "field": "1dad-3754-094e-3a10"
               },
               {
                 "repeats": [
@@ -19889,7 +20440,7 @@
                 ],
                 "type": "increment",
                 "value": 2,
-                "field": "ed47-ba80-ddda-dcfd"
+                "field": "2c38-93b2-282d-9997"
               }
             ],
             "comment": "Crusade modifiers",
@@ -19982,6 +20533,13 @@
             "id": "2980-ec93-ed42-e599",
             "primary": false,
             "name": "Noxious Blightbringer"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "2dc9-9f0a-422c-12a5",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "constraints": [
@@ -20528,6 +21086,62 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "e703-ecb6-5ce7-aec1",
+            "affects": "self.entries.group.recursive.profiles.Unit",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2c23-0d99-7fdf-de5a",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8448-53ec-fbc3-467c",
+                    "shared": true,
+                    "childName": "Plague Marines"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2373-df61-e37e-7376",
+                    "shared": true,
+                    "childName": "Poxwalkers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -20574,6 +21188,13 @@
             "id": "5b74-1e42-d351-233a",
             "primary": false,
             "name": "Foul Blightspawn"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "63d3-3bcb-395f-74a6",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "constraints": [
@@ -20883,6 +21504,13 @@
                     "id": "d6b3-353e-55fb-5133",
                     "targetId": "ccdd-3987-11ed-90cd",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "890b-513e-c638-6f18",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "type": "upgrade",
@@ -21018,6 +21646,13 @@
                     "hidden": false,
                     "id": "d018-e663-d45a-17fd",
                     "targetId": "e993-e086-6de1-12af",
+                    "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "ed83-ec27-e647-5766",
+                    "targetId": "72ae-e03e-2e85-df95",
                     "primary": false
                   }
                 ],
@@ -21237,6 +21872,16 @@
               }
             ]
           }
+        ],
+        "associationLinks": [
+          {
+            "import": true,
+            "name": "Leading",
+            "hidden": false,
+            "id": "1b16-8da2-6304-a988",
+            "type": "association",
+            "targetId": "a443-f6fa-302a-ea36"
+          }
         ]
       },
       {
@@ -21282,6 +21927,13 @@
             "id": "d215-3ecd-2f8c-c679",
             "primary": false,
             "name": "Biologus Putrifier"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "742a-51d2-ed3c-a4c2",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "constraints": [
@@ -21749,6 +22401,13 @@
                     "id": "4f1f-85da-82cb-a9b5",
                     "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "987b-fee2-f51d-32be",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "type": "upgrade",
@@ -22057,6 +22716,36 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.72ae-e03e-2e85-df95.group.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.72ae-e03e-2e85-df95.group.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "type": "model",
@@ -22082,6 +22771,16 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associationLinks": [
+          {
+            "import": true,
+            "name": "Leading",
+            "hidden": false,
+            "id": "83cb-ce2b-8d5c-f412",
+            "type": "association",
+            "targetId": "a443-f6fa-302a-ea36"
           }
         ]
       },
@@ -22122,6 +22821,13 @@
             "id": "5a90-20b8-3d13-ffeb",
             "primary": false,
             "name": "Tallyman"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "f916-2757-7543-8e1b",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "constraints": [
@@ -22432,6 +23138,13 @@
                     "id": "9ffa-96fe-b572-d54a",
                     "targetId": "ccdd-3987-11ed-90cd",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "6832-3a1e-cf24-2a55",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "type": "upgrade",
@@ -22706,6 +23419,16 @@
               }
             ]
           }
+        ],
+        "associationLinks": [
+          {
+            "import": true,
+            "name": "Leading",
+            "hidden": false,
+            "id": "eb2a-6bd9-8833-8339",
+            "type": "association",
+            "targetId": "a443-f6fa-302a-ea36"
+          }
         ]
       },
       {
@@ -22745,6 +23468,13 @@
             "id": "90e2-35c7-9cdb-aaa6",
             "primary": false,
             "name": "Plague Surgeon"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "1e18-66c5-cb1e-10e0",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "constraints": [
@@ -23312,6 +24042,16 @@
               }
             ]
           }
+        ],
+        "associationLinks": [
+          {
+            "import": true,
+            "name": "Leading",
+            "hidden": false,
+            "id": "8e5e-4a65-e7a3-c5fc",
+            "type": "association",
+            "targetId": "a443-f6fa-302a-ea36"
+          }
         ]
       },
       {
@@ -23738,6 +24478,17 @@
             "shared": true,
             "id": "106e-1a4b-b9de-e160",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "b04e-9809-f9e1-b48b",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "entryLinks": [
@@ -27482,6 +28233,17 @@
             "shared": true,
             "id": "bb17-9f04-c503-0f6d",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "cb40-eacd-cbd1-d116",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "selectionEntries": [
@@ -36310,6 +37072,16 @@
               }
             ]
           }
+        ],
+        "associationLinks": [
+          {
+            "import": true,
+            "name": "Leading",
+            "hidden": false,
+            "id": "add5-f7b0-f1ee-8474",
+            "type": "association",
+            "targetId": "a443-f6fa-302a-ea36"
+          }
         ]
       },
       {
@@ -36689,6 +37461,13 @@
             "id": "5c9-2766-e31f-7360",
             "primary": false,
             "name": "Palanquin of Nurgle"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "5a3d-cb64-d8e7-52ea",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "profiles": [
@@ -41147,6 +41926,13 @@
             "id": "c31-91b2-680c-4c25",
             "primary": false,
             "name": "Palanquin of Nurgle"
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "67fa-a57e-86b4-5191",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -41469,6 +42255,13 @@
                         "id": "42e9-3209-55c9-1076",
                         "targetId": "eeda-8544-a2f3-3fab",
                         "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "b5bd-9c31-8e28-71a3",
+                        "targetId": "72ae-e03e-2e85-df95",
+                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -41556,6 +42349,13 @@
                         "hidden": false,
                         "id": "c1bc-8206-437c-361d",
                         "targetId": "ccdd-3987-11ed-90cd",
+                        "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "efec-1823-2b6e-7310",
+                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -41654,6 +42454,13 @@
                         "id": "0810-8649-06b1-fe99",
                         "targetId": "eeda-8544-a2f3-3fab",
                         "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "4f25-8e56-0db0-390b",
+                        "targetId": "72ae-e03e-2e85-df95",
+                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -41741,6 +42548,13 @@
                         "hidden": false,
                         "id": "0061-843d-59d0-4c14",
                         "targetId": "ccdd-3987-11ed-90cd",
+                        "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "6de8-c1b0-1251-bbae",
+                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -41890,6 +42704,13 @@
                         "id": "26ea-55c7-858d-0b6c",
                         "targetId": "eeda-8544-a2f3-3fab",
                         "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "70ec-c3f8-cf16-3453",
+                        "targetId": "72ae-e03e-2e85-df95",
+                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -41977,6 +42798,13 @@
                         "hidden": false,
                         "id": "3195-1da6-5e95-0714",
                         "targetId": "ccdd-3987-11ed-90cd",
+                        "primary": false
+                      },
+                      {
+                        "name": "Non-LH",
+                        "hidden": false,
+                        "id": "b095-f36e-e7ca-9899",
+                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -42305,6 +43133,13 @@
                     "id": "5764-d6c1-c9ba-28f8",
                     "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "d348-0c91-e0d0-2fc9",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "selectionEntryGroups": [
@@ -42426,6 +43261,13 @@
                     "hidden": false,
                     "id": "0361-7bf9-6f73-e88c",
                     "targetId": "ccdd-3987-11ed-90cd",
+                    "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "ed9c-076d-2002-03fa",
+                    "targetId": "72ae-e03e-2e85-df95",
                     "primary": false
                   }
                 ],
@@ -43318,6 +44160,13 @@
             "id": "15d9-bab3-ace8-30ed",
             "targetId": "eeda-8544-a2f3-3fab",
             "primary": false
+          },
+          {
+            "name": "Non-LH",
+            "hidden": false,
+            "id": "b260-79b1-82aa-c508",
+            "targetId": "72ae-e03e-2e85-df95",
+            "primary": false
           }
         ],
         "type": "upgrade",
@@ -43637,6 +44486,13 @@
             "hidden": false,
             "id": "3eba-f8fe-8639-fdd0",
             "targetId": "ceb4-54e4-02d8-e84f",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "8b49-6e86-4a3b-18b5",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -44073,6 +44929,36 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "9e13-04f4-3410-8b8f",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8448-53ec-fbc3-467c",
+                    "shared": true,
+                    "childName": "Plague Marines"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -49358,6 +50244,13 @@
             "id": "e11a-d6a3-45c5-fb4d",
             "targetId": "279c-74e6-126f-d6c7",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "033f-e8d8-47e2-8da2",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
@@ -49910,6 +50803,13 @@
             "id": "9561-1caa-92cd-bb59",
             "targetId": "aa38-3136-de71-70f3",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "cb10-51d8-2103-c705",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "costs": [
@@ -50410,7 +51310,108 @@
         "import": true,
         "name": "Plague Lord [Crucible]",
         "hidden": false,
-        "id": "89d8-7e90-be47-59b6"
+        "id": "89d8-7e90-be47-59b6",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "fccd-7f93-69ca-4a94",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2373-df61-e37e-7376",
+                            "shared": true,
+                            "childName": "Poxwalkers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "8448-53ec-fbc3-467c",
+                            "shared": true,
+                            "childName": "Plague Marines"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "e196-184a-65e9-05c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "9a0a-c155-5cd5-8ba3",
+                            "shared": true,
+                            "childName": "Blightlord Terminators"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "9f2e-3944-438a-b83e",
+                            "shared": true,
+                            "childName": "Deathshroud Terminators"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "e196-184a-65e9-05c8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -50493,6 +51494,13 @@
             "hidden": false,
             "id": "90a8-9c78-16d7-c87b",
             "targetId": "617d-0ae8-b618-658b",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "8faf-3913-1bb1-2c0d",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -61649,7 +62657,16 @@
                 "import": true,
                 "name": "Combi-weapon",
                 "hidden": false,
-                "id": "cbcc-0d0f-a5f5-d57c"
+                "id": "cbcc-0d0f-a5f5-d57c",
+                "categoryLinks": [
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "5609-6ebc-a144-9976",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
+                  }
+                ]
               },
               {
                 "profiles": [
@@ -61816,6 +62833,13 @@
                     "id": "01cc-5e71-b756-0f4c",
                     "targetId": "4986-bf86-beb4-13ac",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "9eac-2b0b-dd53-be10",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "infoLinks": [
@@ -61936,6 +62960,13 @@
                     "id": "13ed-9d56-207a-8f01",
                     "targetId": "e993-e086-6de1-12af",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "710d-d446-eb2e-9001",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "selectionEntryGroups": [
@@ -62047,6 +63078,13 @@
                     "id": "dcaf-8049-457f-c127",
                     "targetId": "e993-e086-6de1-12af",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "049d-d29e-219b-9a06",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "selectionEntryGroups": [
@@ -62157,6 +63195,13 @@
                     "hidden": false,
                     "id": "bf5c-2ea3-f620-3080",
                     "targetId": "e993-e086-6de1-12af",
+                    "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "f627-4246-4f64-f5ba",
+                    "targetId": "72ae-e03e-2e85-df95",
                     "primary": false
                   }
                 ],
@@ -62371,6 +63416,13 @@
                     "id": "2100-6297-9dc5-3571",
                     "targetId": "982b-de77-dd2d-d9bd",
                     "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "56da-d0a9-acee-be80",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
                   }
                 ],
                 "selectionEntryGroups": [
@@ -62560,7 +63612,16 @@
                 "import": true,
                 "name": "Plasma gun",
                 "hidden": false,
-                "id": "d198-b3a8-0335-643d"
+                "id": "d198-b3a8-0335-643d",
+                "categoryLinks": [
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "2b43-2d0f-f34b-6f73",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
+                  }
+                ]
               },
               {
                 "modifiers": [
@@ -62673,7 +63734,16 @@
                 "import": true,
                 "name": "Reaper autocannon",
                 "hidden": false,
-                "id": "bb63-0e95-fa4b-6e76"
+                "id": "bb63-0e95-fa4b-6e76",
+                "categoryLinks": [
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "0d73-0269-850d-8586",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
+                  }
+                ]
               },
               {
                 "profiles": [
@@ -62758,6 +63828,13 @@
                     "hidden": false,
                     "id": "163a-9d40-493f-dbb6",
                     "targetId": "e993-e086-6de1-12af",
+                    "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "3d39-a048-409f-0117",
+                    "targetId": "72ae-e03e-2e85-df95",
                     "primary": false
                   }
                 ],
@@ -63084,7 +64161,16 @@
                 "import": true,
                 "name": "Plasma pistol",
                 "hidden": false,
-                "id": "7d3f-317d-c609-399e"
+                "id": "7d3f-317d-c609-399e",
+                "categoryLinks": [
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "95aa-f0a0-0906-2256",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -63197,7 +64283,16 @@
                 "import": true,
                 "name": "Injector pistol",
                 "hidden": false,
-                "id": "6f99-e0de-5c38-251f"
+                "id": "6f99-e0de-5c38-251f",
+                "categoryLinks": [
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "8261-025e-c8fb-975e",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
+                  }
+                ]
               },
               {
                 "profiles": [
@@ -63282,6 +64377,13 @@
                     "hidden": false,
                     "id": "9ec7-5478-7d46-dd7e",
                     "targetId": "e993-e086-6de1-12af",
+                    "primary": false
+                  },
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "2dbd-0c3c-51b6-0c53",
+                    "targetId": "72ae-e03e-2e85-df95",
                     "primary": false
                   }
                 ],
@@ -63651,7 +64753,16 @@
                 "import": true,
                 "name": "Close combat weapon",
                 "hidden": false,
-                "id": "fb17-6b51-a1f8-1ed7"
+                "id": "fb17-6b51-a1f8-1ed7",
+                "categoryLinks": [
+                  {
+                    "name": "Non-LH",
+                    "hidden": false,
+                    "id": "ee77-45ad-7b9d-51be",
+                    "targetId": "72ae-e03e-2e85-df95",
+                    "primary": false
+                  }
+                ]
               },
               {
                 "modifiers": [
@@ -65228,6 +66339,16 @@
             "includeChildSelections": true
           }
         ]
+      },
+      {
+        "name": "Non-LH",
+        "id": "72ae-e03e-2e85-df95",
+        "hidden": true
+      },
+      {
+        "name": "no",
+        "id": "08aa-acc3-be10-b58a",
+        "hidden": false
       }
     ],
     "sharedProfiles": [
@@ -65350,11 +66471,42 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "5108-f98-63c2-53cb",
     "name": "Chaos - Death Guard",
-    "revision": 3,
+    "revision": 4,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "type": "catalogue"
+    "type": "catalogue",
+    "sharedAssociations": [
+      {
+        "min": 0,
+        "max": 1,
+        "scope": "force",
+        "childId": "unit",
+        "name": "Leading",
+        "id": "a443-f6fa-302a-ea36",
+        "label": "",
+        "conditionGroups": [
+          {
+            "type": "or",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "8448-53ec-fbc3-467c",
+                "shared": true,
+                "childName": "Plague Marines"
+              }
+            ]
+          }
+        ],
+        "includeChildSelections": true,
+        "childName": "unit",
+        "action": "group",
+        "comment": "\"Lieutenants\""
+      }
+    ]
   }
 }
