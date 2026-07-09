@@ -176,6 +176,13 @@
             "id": "7a62-9118-803b-cf39",
             "targetId": "7173-b746-135a-9179",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "613b-013a-c89d-75d9",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "selectionEntries": [
@@ -431,7 +438,37 @@
         "name": "Lucius the Eternal",
         "hidden": false,
         "id": "e390-b58b-db9-816",
-        "collective": false
+        "collective": false,
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "60d7-47a7-eb25-cfbb",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1f5d-db57-16e1-8111",
+                    "shared": true,
+                    "childName": "Flawless Blades"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -1180,6 +1217,13 @@
             "id": "c276-a905-e071-69fd",
             "targetId": "6264-8211-3a47-31d6",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "49b4-faba-b2c7-bf08",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "profiles": [
@@ -1298,6 +1342,63 @@
             "hidden": false,
             "type": "rule",
             "targetId": "1674-23e6-eacf-9624"
+          },
+          {
+            "name": "Infiltrators",
+            "id": "98af-103d-7a74-3a04",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "c05d-f4c3-f091-4938",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "any"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Scouts",
+            "id": "d083-b02b-9ec6-ad38",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "ada6-bac1-ffe0-d6f7",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "any"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "6\"",
+                "field": "name"
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -2262,6 +2363,36 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ],
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ]
           }
         ],
         "type": "model",
@@ -2326,6 +2457,45 @@
                 ]
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "0bc9-3684-c034-f2af",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ff6d-0152-7e0e-7e88",
+                    "shared": true,
+                    "childName": "Infractors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b950-835c-0fb7-9b47",
+                    "shared": true,
+                    "childName": "Tormentors"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -3498,6 +3668,13 @@
             "id": "8ebd-a45b-0232-b5f5",
             "targetId": "5c22-0807-79af-03da",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "240f-a702-c9f3-06f5",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "constraints": [
@@ -3793,6 +3970,29 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ],
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
+                "join": ", "
+              }
+            ]
           }
         ],
         "type": "model",
@@ -3817,6 +4017,45 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "459f-d1e9-14d5-5068",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d6e0-f0b0-5df4-71de",
+                    "shared": true,
+                    "childName": "Noise Marines"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "bca0-5ff4-61e3-e53b",
+                    "shared": true,
+                    "childName": "Terminator Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -3876,6 +4115,13 @@
             "hidden": false,
             "id": "5a74-6943-b824-561b",
             "targetId": "51c1-ec72-3088-dc2b",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "53df-1389-4c93-731d",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -4708,6 +4954,54 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "e356-f49c-df73-fd3d",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ff6d-0152-7e0e-7e88",
+                    "shared": true,
+                    "childName": "Infractors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b950-835c-0fb7-9b47",
+                    "shared": true,
+                    "childName": "Tormentors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d6e0-f0b0-5df4-71de",
+                    "shared": true,
+                    "childName": "Noise Marines"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -6229,6 +6523,17 @@
             "shared": true,
             "id": "6986-9c75-6761-4272",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "d272-44a6-f93a-ecd6",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "selectionEntries": [
@@ -8049,6 +8354,17 @@
             "shared": true,
             "id": "ff9d-013a-bb33-329a",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "bd32-d894-61d1-60d9",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "costs": [
@@ -8361,6 +8677,17 @@
             "shared": true,
             "id": "4244-cfbc-93d6-0428",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "b2af-3f16-fa30-8ec1",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -10548,6 +10875,17 @@
             "shared": true,
             "id": "8cbe-b684-7e9c-b71d",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "2bf3-5b1f-f115-96fe",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "selectionEntries": [
@@ -13421,6 +13759,17 @@
             "shared": true,
             "id": "d22c-07b6-5852-e552",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "18dd-5b2e-063a-1cc6",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -22867,6 +23216,13 @@
             "id": "fbaf-a8be-9a72-a88e",
             "targetId": "e2bc-fc0c-1099-3e75",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "0606-e39e-c585-7c76",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -23384,7 +23740,108 @@
         "import": true,
         "name": "Excruciator [Crucible]",
         "hidden": false,
-        "id": "eeac-c9b8-3904-11a5"
+        "id": "eeac-c9b8-3904-11a5",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "afcf-6bfd-55f4-a9b1",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ff6d-0152-7e0e-7e88",
+                            "shared": true,
+                            "childName": "Infractors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b950-835c-0fb7-9b47",
+                            "shared": true,
+                            "childName": "Tormentors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "d6e0-f0b0-5df4-71de",
+                            "shared": true,
+                            "childName": "Noise Marines"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3340-d05f-17cc-e2cf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "bca0-5ff4-61e3-e53b",
+                            "shared": true,
+                            "childName": "Terminator Squad"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3340-d05f-17cc-e2cf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -23442,6 +23899,13 @@
             "hidden": false,
             "id": "7871-6dc1-01d1-59fd",
             "targetId": "8307-eccc-e329-248a",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "c34c-6058-25d5-7801",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -23960,7 +24424,108 @@
         "import": true,
         "name": "Champion of Excess [Crucible]",
         "hidden": false,
-        "id": "cc4d-41d6-dfea-414f"
+        "id": "cc4d-41d6-dfea-414f",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2972-3bf3-b9c2-32b6",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ff6d-0152-7e0e-7e88",
+                            "shared": true,
+                            "childName": "Infractors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b950-835c-0fb7-9b47",
+                            "shared": true,
+                            "childName": "Tormentors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "d6e0-f0b0-5df4-71de",
+                            "shared": true,
+                            "childName": "Noise Marines"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3340-d05f-17cc-e2cf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "bca0-5ff4-61e3-e53b",
+                            "shared": true,
+                            "childName": "Terminator Squad"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3340-d05f-17cc-e2cf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -24018,6 +24583,13 @@
             "hidden": false,
             "id": "daad-203a-d072-5d38",
             "targetId": "599a-0ed1-d2aa-f016",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "05fe-e0b2-a42a-6f65",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -24541,7 +25113,108 @@
         "import": true,
         "name": "Flawless Champion [Crucible]",
         "hidden": false,
-        "id": "2334-eccf-6ea5-562e"
+        "id": "2334-eccf-6ea5-562e",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "665c-57ce-d304-e2e5",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ff6d-0152-7e0e-7e88",
+                            "shared": true,
+                            "childName": "Infractors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b950-835c-0fb7-9b47",
+                            "shared": true,
+                            "childName": "Tormentors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "d6e0-f0b0-5df4-71de",
+                            "shared": true,
+                            "childName": "Noise Marines"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3340-d05f-17cc-e2cf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "bca0-5ff4-61e3-e53b",
+                            "shared": true,
+                            "childName": "Terminator Squad"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3340-d05f-17cc-e2cf",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
