@@ -33338,8 +33338,8 @@
           {
             "name": "Kill Team",
             "hidden": false,
-            "id": "8f0e-d42f-11ea-7b81",
-            "targetId": "a523-2f75-c927-f911",
+            "id": "b047-7bb6-b633-aa63",
+            "targetId": "81b0-a893-4fb7-c298",
             "primary": false
           }
         ],
@@ -41973,13 +41973,6 @@
             "primary": false
           },
           {
-            "name": "Kill Team",
-            "hidden": false,
-            "id": "3d5e-68e4-0ec6-9188",
-            "targetId": "a523-2f75-c927-f911",
-            "primary": false
-          },
-          {
             "name": "Kill Team Cassius",
             "hidden": false,
             "id": "0985-8095-6162-c236",
@@ -41998,6 +41991,13 @@
             "hidden": false,
             "id": "a38c-d848-864e-b4e4",
             "targetId": "ab1c-1334-d1cc-08df",
+            "primary": false
+          },
+          {
+            "name": "Kill Team",
+            "hidden": false,
+            "id": "53ef-0e8d-1454-bba8",
+            "targetId": "81b0-a893-4fb7-c298",
             "primary": false
           }
         ],
@@ -44314,8 +44314,8 @@
           {
             "name": "Kill Team",
             "hidden": false,
-            "id": "cfdc-790f-6248-14ff",
-            "targetId": "a523-2f75-c927-f911",
+            "id": "65fe-ec50-5f11-74aa",
+            "targetId": "81b0-a893-4fb7-c298",
             "primary": false
           }
         ],
@@ -48039,8 +48039,8 @@
           {
             "name": "Kill Team",
             "hidden": false,
-            "id": "9f59-d4b0-3989-59d2",
-            "targetId": "a523-2f75-c927-f911",
+            "id": "20c1-c972-d15a-4a30",
+            "targetId": "81b0-a893-4fb7-c298",
             "primary": false
           }
         ],
@@ -61254,81 +61254,9 @@
                     "value": 1,
                     "field": "selections",
                     "scope": "self",
-                    "childId": "6596-ebf9-88dc-59dc",
-                    "shared": true,
-                    "childName": "Aquila Kill Team"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "1782-942b-39dd-7e10",
-                    "shared": true,
-                    "childName": "Exaction Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "b934-842e-c724-dc77",
-                    "shared": true,
-                    "childName": "Grey Knights Terminator Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
                     "childId": "c79c-d8d4-53a1-b7c4",
                     "shared": true,
                     "childName": "Imperial Navy Breachers"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "d328-29e2-67d0-2185",
-                    "shared": true,
-                    "childName": "Inquisitorial Agents"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "9d4f-4beb-107d-3175",
-                    "shared": true,
-                    "childName": "Sanctifiers"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "f710-a22a-34f3-26c0",
-                    "shared": true,
-                    "childName": "Sisters of Battle Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "7abb-71bd-bc2c-408e",
-                    "shared": true,
-                    "childName": "Subductor Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "1d89-841c-d40a-4263",
-                    "shared": true,
-                    "childName": "Vigilant Squad"
                   }
                 ],
                 "conditionGroups": [
@@ -61336,31 +61264,200 @@
                     "type": "and",
                     "conditions": [
                       {
-                        "type": "instanceOf",
+                        "type": "atLeast",
                         "value": 1,
                         "field": "selections",
-                        "scope": "self",
-                        "childId": "aff3-d6a3-2a95-9dc",
+                        "scope": "90e0-c5a9-17c5-fba4",
+                        "childId": "d49f-4923-e9b1-e8a9",
                         "shared": true,
-                        "childName": "Imperium"
+                        "childName": "Ordo Hereticus",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "f710-a22a-34f3-26c0",
+                            "shared": true,
+                            "childName": "Sisters of Battle Squad"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "b5a7-00a2-fbd6-6373",
+                        "shared": true,
+                        "childName": "Ordo Malleus",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b934-842e-c724-dc77",
+                            "shared": true,
+                            "childName": "Grey Knights Terminator Squad"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "6a10-1787-191d-4605",
+                        "shared": true,
+                        "childName": "Ordo Xenos",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "66b6-7717-a858-40a4",
+                            "shared": true,
+                            "childName": "Deathwatch Kill Team"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "5ae4-3424-2b4b-2550",
+                        "shared": true,
+                        "childName": "Rogue Trader",
+                        "includeChildSelections": true
                       },
                       {
                         "type": "instanceOf",
                         "value": 1,
                         "field": "selections",
                         "scope": "self",
-                        "childId": "e338-111e-d0c6-b687",
+                        "childId": "d75b-79c6-fe15-a72a",
                         "shared": true,
-                        "childName": "Battleline"
-                      },
+                        "childName": "Voidsmen-at-Arms"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
                       {
-                        "type": "instanceOf",
-                        "value": 1,
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "1782-942b-39dd-7e10",
+                            "shared": true,
+                            "childName": "Exaction Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "d328-29e2-67d0-2185",
+                            "shared": true,
+                            "childName": "Inquisitorial Agents"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "7abb-71bd-bc2c-408e",
+                            "shared": true,
+                            "childName": "Subductor Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "1d89-841c-d40a-4263",
+                            "shared": true,
+                            "childName": "Vigilant Squad"
+                          }
+                        ],
+                        "conditionGroups": [
+                          {
+                            "type": "and",
+                            "conditions": [
+                              {
+                                "type": "instanceOf",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "self",
+                                "childId": "aff3-d6a3-2a95-9dc",
+                                "shared": true,
+                                "childName": "Imperium"
+                              },
+                              {
+                                "type": "instanceOf",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "self",
+                                "childId": "e338-111e-d0c6-b687",
+                                "shared": true,
+                                "childName": "Battleline"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "equalTo",
+                        "value": 0,
                         "field": "selections",
-                        "scope": "self",
-                        "childId": "cf47-a0d7-7207-29dc",
+                        "scope": "parent",
+                        "childId": "5ae4-3424-2b4b-2550",
                         "shared": true,
-                        "childName": "Infantry"
+                        "childName": "Rogue Trader",
+                        "includeChildSelections": true
                       }
                     ]
                   }
@@ -62003,11 +62100,12 @@
                         "type": "lessThan",
                         "value": 1,
                         "field": "selections",
-                        "scope": "parent",
+                        "scope": "9a75-f3a2-bff5-9f08",
                         "childId": "3cf4-5fcb-5a5f-ab76",
                         "shared": true,
                         "includeChildSelections": true,
-                        "childName": "The Long Vigil"
+                        "childName": "The Long Vigil",
+                        "queryFromSelf": true
                       },
                       {
                         "type": "instanceOf",
@@ -62027,18 +62125,19 @@
                         "type": "atLeast",
                         "value": 1,
                         "field": "selections",
-                        "scope": "parent",
+                        "scope": "9a75-f3a2-bff5-9f08",
                         "childId": "3cf4-5fcb-5a5f-ab76",
                         "shared": true,
                         "includeChildSelections": true,
-                        "childName": "The Long Vigil"
+                        "childName": "The Long Vigil",
+                        "queryFromSelf": true
                       },
                       {
                         "type": "instanceOf",
                         "value": 1,
                         "field": "selections",
                         "scope": "self",
-                        "childId": "a523-2f75-c927-f911",
+                        "childId": "81b0-a893-4fb7-c298",
                         "shared": true,
                         "childName": "Kill Team"
                       }
@@ -64500,11 +64599,6 @@
       {
         "name": "Indomitor Kill Team",
         "id": "2546-062b-7236-7fa3",
-        "hidden": false
-      },
-      {
-        "name": "Kill Team",
-        "id": "a523-2f75-c927-f911",
         "hidden": false
       },
       {
