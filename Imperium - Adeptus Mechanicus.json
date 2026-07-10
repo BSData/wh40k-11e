@@ -278,6 +278,25 @@
                 "typeId": "9b8f-694b-e5e-b573",
                 "$text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is analysed:\n- While a unit is analysed, that unit has +3\" detection range."
               }
+            ],
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "02e5-7fe0-d054-0209",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Cohort Acquisitus"
+                  }
+                ]
+              }
             ]
           }
         ],

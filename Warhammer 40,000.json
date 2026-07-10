@@ -1611,11 +1611,6 @@
         "id": "af4c-b971-a31c-669c"
       },
       {
-        "name": "Allied Units",
-        "hidden": false,
-        "id": "887b-ab87-92a2-20f5"
-      },
-      {
         "name": "Acastus",
         "hidden": false,
         "id": "f76f-29c1-de9-74c2"
@@ -2110,6 +2105,35 @@
         "name": "Kill Team",
         "hidden": false,
         "id": "81b0-a893-4fb7-c298"
+	  },
+	  {
+        "name": "Allies: Heretic Astartes",
+        "id": "92e6-f82e-0a48-2276",
+        "hidden": false
+      },
+      {
+        "name": "Allies: Adeptus Titanicus",
+        "id": "9988-6b5e-660e-d973",
+        "hidden": false,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "childId": "f26b-79db-80e0-3a3b",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Show Titans"
+              }
+            ]
+          }
+        ]
       }
     ],
     "forceEntries": [
@@ -2259,12 +2283,6 @@
             "primary": false
           },
           {
-            "name": "Allied Units",
-            "hidden": false,
-            "id": "8d39-1cfc-6e44-2dae",
-            "targetId": "887b-ab87-92a2-20f5"
-          },
-          {
             "name": "Allies: Astra Militarum",
             "hidden": false,
             "id": "58e9-03a9-8da7-f45b",
@@ -2275,6 +2293,12 @@
             "hidden": false,
             "id": "748a-f332-43fb-8218",
             "targetId": "8dd6-af11-abd3-55f1"
+          },
+          {
+            "name": "Allies: Heretic Astartes",
+            "hidden": false,
+            "id": "5691-7287-9ec8-7e8d",
+            "targetId": "92e6-f82e-0a48-2276"
           },
           {
             "name": "Allies: Imperial Agents",
@@ -2311,6 +2335,12 @@
             "hidden": false,
             "id": "3761-5a4e-79e0-3c18",
             "targetId": "eef1-be80-500a-edfc"
+          },
+          {
+            "name": "Allies: Adeptus Titanicus",
+            "hidden": false,
+            "id": "d30c-1ea7-4805-b4be",
+            "targetId": "9988-6b5e-660e-d973"
           }
         ],
         "modifiers": [
@@ -2515,7 +2545,7 @@
             "message": "You cannot have more than {value} Enhancements in your army.1"
           }
         ],
-        "readme": "This is the first release of the Warhammer 40,000 11th Edition dataset.\n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\nThis release **does not** include the new Leader/Support assignment functionality. Currently, you will need to continue using the subscription version.\n\nThe Yellowscribe Export should be working in this version. If not, please report as a New Recruit issue, not a data issue.\n\nThe Data Author team thank you for your patience and thank the New Recruit team for their support."
+        "readme": "**DO NOT REPORT ANY LEADER ISSUES AT PRESENT; THEY WILL NOT BE FIXED IN THE CURRENT FUNCTIONALITY** Especially if you're not going to read the reporting options and send them to us instead of the NR developers.\n\nPlease report any other issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\n\n**LARGER GAMES NOW GW REMOVED ONSLAUGHT**\nIf the \"Override Points Limit\" functionality (in Battle Size) is not working for you and you see a points limit (xxx/yyy pts) in the bar where the name of your list appears, you will need to recreate that list as the NR devs have not yet worked out a way to retroactively remove that limit once set. Override Points Limit will then work as expected.\n\n\n"
       },
       {
         "categoryLinks": [
@@ -2608,12 +2638,6 @@
             "hidden": false,
             "id": "d932-86b9-29ec-c799",
             "targetId": "cc77-a53-fca8-f48e"
-          },
-          {
-            "name": "Allied Units",
-            "hidden": false,
-            "id": "ea52-2956-b106-5ec2",
-            "targetId": "887b-ab87-92a2-20f5"
           },
           {
             "name": "Reference",
@@ -2896,12 +2920,6 @@
             "targetId": "5b15-724e-2eeb-8cb7"
           },
           {
-            "name": "Allied Units",
-            "hidden": false,
-            "id": "8d77-c7df-e1a3-0680",
-            "targetId": "887b-ab87-92a2-20f5"
-          },
-          {
             "name": "Allies: Astra Militarum",
             "hidden": false,
             "id": "ba9f-9f8a-b77f-14e6",
@@ -2912,6 +2930,12 @@
             "hidden": false,
             "id": "5037-1e14-c070-cfcd",
             "targetId": "8dd6-af11-abd3-55f1"
+          },
+          {
+            "name": "Allies: Heretic Astartes",
+            "hidden": false,
+            "id": "9b49-7348-a883-2d9c",
+            "targetId": "92e6-f82e-0a48-2276"
           },
           {
             "name": "Allies: Imperial Agents",
@@ -2948,6 +2972,12 @@
             "hidden": false,
             "id": "14de-c9cb-628a-6881",
             "targetId": "eef1-be80-500a-edfc"
+          },
+          {
+            "name": "Allies: Adeptus Titanicus",
+            "hidden": false,
+            "id": "0b08-32da-55ba-d541",
+            "targetId": "9988-6b5e-660e-d973"
           }
         ],
         "modifiers": [
@@ -2983,7 +3013,7 @@
               }
             ],
             "type": "set",
-            "value": "This is the first release of the Warhammer 40,000 11th Edition dataset.\n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\nThis release **does not** yet include the new Leader/Support assignment functionality. Currently, you will need to continue using the subscription version.\n\nThe Yellowscribe Export should be working in this version. If not, please report as a New Recruit issue, not a data issue.\n\nThe Data Author team thank you for your patience and thank the New Recruit team for their support.\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game.**",
+            "value": "**DO NOT REPORT ANY LEADER ISSUES AT PRESENT; THEY WILL NOT BE FIXED IN THE CURRENT FUNCTIONALITY** Especially if you're not going to read the reporting options and send them to us instead of the NR developers.\n\nPlease report any other issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\n**LARGER GAMES NOW GW REMOVED ONSLAUGHT**\nIf the \"Override Points Limit\" functionality (in Battle Size) is not working for you and you see a points limit (xxx/yyy pts) in the bar where the name of your list appears, you will need to recreate that list as the NR devs have not yet worked out a way to retroactively remove that limit once set. Override Points Limit will then work as expected.\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game.**",
             "field": "readme"
           },
           {
@@ -3000,7 +3030,7 @@
               }
             ],
             "type": "set",
-            "value": "This is the first release of the Warhammer 40,000 11th Edition dataset.\n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\nThis release **does not** yet include the new Leader/Support assignment functionality. Currently, you will need to continue using the subscription version.\n\nThe Yellowscribe Export should be working in this version. If not, please report as a New Recruit issue, not a data issue.\n\nThe Data Author team thank you for your patience and thank the New Recruit team for their support.\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game. You can add the Crusade Army for your faction from the *Forces* unit section or the *Add Force* menu option.**",
+            "value": "**DO NOT REPORT ANY LEADER ISSUES AT PRESENT; THEY WILL NOT BE FIXED IN THE CURRENT FUNCTIONALITY** Especially if you're not going to read the reporting options and send them to us instead of the NR developers.\n\n\nPlease report any other issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\n\n**LARGER GAMES NOW GW REMOVED ONSLAUGHT**\nIf the \"Override Points Limit\" functionality (in Battle Size) is not working for you and you see a points limit (xxx/yyy pts) in the bar where the name of your list appears, you will need to recreate that list as the NR devs have not yet worked out a way to retroactively remove that limit once set. Override Points Limit will then work as expected.\n\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game. You can add the Crusade Army for your faction from the *Forces* unit section or the *Add Force* menu option.**",
             "field": "readme"
           }
         ],
@@ -32936,7 +32966,7 @@
     "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
     "id": "sys-352e-adc2-7639-d610",
     "name": "Warhammer 40,000 11th Edition",
-    "revision": 3,
+    "revision": 4,
     "battleScribeVersion": 2.03,
     "type": "gameSystem",
     "readme": ""

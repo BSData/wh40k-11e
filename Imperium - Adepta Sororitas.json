@@ -4202,22 +4202,39 @@
                     ],
                     "modifiers": [
                       {
-                        "conditions": [
+                        "type": "add",
+                        "value": "You must take a hallowed chainsword with this option",
+                        "field": "error",
+                        "conditionGroups": [
                           {
-                            "type": "equalTo",
-                            "value": 0,
-                            "field": "selections",
-                            "scope": "c338-14f9-4ee-f223",
-                            "childId": "990b-63f3-ceb5-aa67",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": true,
-                            "includeChildForces": false
+                            "type": "and",
+                            "conditions": [
+                              {
+                                "type": "equalTo",
+                                "value": 0,
+                                "field": "selections",
+                                "scope": "c338-14f9-4ee-f223",
+                                "childId": "990b-63f3-ceb5-aa67",
+                                "shared": true,
+                                "percentValue": false,
+                                "includeChildSelections": true,
+                                "includeChildForces": false
+                              },
+                              {
+                                "type": "greaterThan",
+                                "value": 0,
+                                "field": "selections",
+                                "scope": "c338-14f9-4ee-f223",
+                                "childId": "9133-972c-c52d-e603",
+                                "shared": true,
+                                "percentValue": false,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "childName": "Null Rod"
+                              }
+                            ]
                           }
-                        ],
-                        "type": "set",
-                        "value": true,
-                        "field": "hidden"
+                        ]
                       }
                     ],
                     "type": "upgrade",
@@ -4312,22 +4329,39 @@
                     ],
                     "modifiers": [
                       {
-                        "conditions": [
+                        "type": "add",
+                        "value": "You must take a hallowed chainsword with this option",
+                        "field": "error",
+                        "conditionGroups": [
                           {
-                            "type": "equalTo",
-                            "value": 0,
-                            "field": "selections",
-                            "scope": "c338-14f9-4ee-f223",
-                            "childId": "990b-63f3-ceb5-aa67",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": true,
-                            "includeChildForces": false
+                            "type": "and",
+                            "conditions": [
+                              {
+                                "type": "equalTo",
+                                "value": 0,
+                                "field": "selections",
+                                "scope": "c338-14f9-4ee-f223",
+                                "childId": "990b-63f3-ceb5-aa67",
+                                "shared": true,
+                                "percentValue": false,
+                                "includeChildSelections": true,
+                                "includeChildForces": false
+                              },
+                              {
+                                "type": "greaterThan",
+                                "value": 0,
+                                "field": "selections",
+                                "scope": "c338-14f9-4ee-f223",
+                                "childId": "d2a8-bd20-4ac1-4275",
+                                "shared": true,
+                                "percentValue": false,
+                                "includeChildSelections": true,
+                                "includeChildForces": false,
+                                "childName": "Brazier of Holy Fire"
+                              }
+                            ]
                           }
-                        ],
-                        "type": "set",
-                        "value": true,
-                        "field": "hidden"
+                        ]
                       }
                     ],
                     "selectionEntryGroups": [
@@ -4382,38 +4416,57 @@
                   {
                     "modifiers": [
                       {
+                        "type": "add",
+                        "value": "You must take a plasma pistol and power sword with this option",
+                        "field": "error",
                         "conditionGroups": [
                           {
+                            "type": "and",
                             "conditions": [
                               {
-                                "type": "equalTo",
+                                "type": "greaterThan",
                                 "value": 0,
                                 "field": "selections",
                                 "scope": "c338-14f9-4ee-f223",
-                                "childId": "3e95-d35a-5189-9021",
+                                "childId": "7ae2-9d06-52cb-a61a",
                                 "shared": true,
                                 "percentValue": false,
                                 "includeChildSelections": true,
-                                "includeChildForces": false
-                              },
-                              {
-                                "type": "equalTo",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "c338-14f9-4ee-f223",
-                                "childId": "4ef1-dc81-763b-3ac3",
-                                "shared": true,
-                                "percentValue": false,
-                                "includeChildSelections": true,
-                                "includeChildForces": false
+                                "includeChildForces": false,
+                                "childName": "Rod of Office"
                               }
                             ],
-                            "type": "or"
+                            "conditionGroups": [
+                              {
+                                "type": "or",
+                                "conditions": [
+                                  {
+                                    "type": "equalTo",
+                                    "value": 0,
+                                    "field": "selections",
+                                    "scope": "c338-14f9-4ee-f223",
+                                    "childId": "3e95-d35a-5189-9021",
+                                    "shared": true,
+                                    "percentValue": false,
+                                    "includeChildSelections": true,
+                                    "includeChildForces": false
+                                  },
+                                  {
+                                    "type": "equalTo",
+                                    "value": 0,
+                                    "field": "selections",
+                                    "scope": "c338-14f9-4ee-f223",
+                                    "childId": "4ef1-dc81-763b-3ac3",
+                                    "shared": true,
+                                    "percentValue": false,
+                                    "includeChildSelections": true,
+                                    "includeChildForces": false
+                                  }
+                                ]
+                              }
+                            ]
                           }
-                        ],
-                        "type": "set",
-                        "value": true,
-                        "field": "hidden"
+                        ]
                       }
                     ],
                     "constraints": [
@@ -4781,7 +4834,19 @@
                     "import": true,
                     "name": "Hallowed Chainsword",
                     "hidden": false,
-                    "id": "990b-63f3-ceb5-aa67"
+                    "id": "990b-63f3-ceb5-aa67",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 0,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9556-26bf-2f87-d3cf",
+                        "includeChildSelections": false,
+                        "automatic": true
+                      }
+                    ]
                   }
                 ],
                 "name": "Melee Weapon",
