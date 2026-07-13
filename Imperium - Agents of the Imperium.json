@@ -7850,6 +7850,22 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 5,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "notInstanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "b00-cd86-4b4c-97ba",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "entryLinks": [
