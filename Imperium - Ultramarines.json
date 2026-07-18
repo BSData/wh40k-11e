@@ -6533,9 +6533,9 @@
           {
             "characteristics": [
               {
-                "$text": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model’s unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\"."
               }
             ],
             "name": "Knight Champion of Macragge",
@@ -7244,7 +7244,7 @@
                       {
                         "name": "pts",
                         "typeId": "51b2-306e-1021-d207",
-                        "value": 10
+                        "value": 0
                       },
                       {
                         "name": "Crusade Points",
@@ -7298,7 +7298,54 @@
                 "import": true,
                 "name": "Chapter Champion",
                 "hidden": false,
-                "id": "886e-13d0-2945-290c"
+                "id": "886e-13d0-2945-290c",
+                "costs": [
+                  {
+                    "name": "pts",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  },
+                  {
+                    "name": "Crusade Points",
+                    "typeId": "b03b-c239-15a5-da55",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Battle Honours",
+                    "typeId": "75bb-ded1-c86d-bdf0",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Experience",
+                    "typeId": "a623-fe74-1d33-cddf",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Weapon Modifications",
+                    "typeId": "716d-91b7-d55a-1022",
+                    "value": 0
+                  },
+                  {
+                    "name": "Blackstone Fragments",
+                    "typeId": "ac6b-ced3-9b5e-9a6e",
+                    "value": 0
+                  },
+                  {
+                    "name": "Detachment Points",
+                    "typeId": "82ae-1066-5107-6ae0",
+                    "value": 0
+                  },
+                  {
+                    "name": "Honour Points",
+                    "typeId": "8135-9a2f-6627-09e2",
+                    "value": 0
+                  },
+                  {
+                    "name": "Relic Fragments",
+                    "typeId": "0ece-6541-4662-ece2",
+                    "value": 0
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -7412,7 +7459,7 @@
                       {
                         "name": "pts",
                         "typeId": "51b2-306e-1021-d207",
-                        "value": 10
+                        "value": 0
                       },
                       {
                         "name": "Crusade Points",
@@ -7466,7 +7513,59 @@
                 "import": true,
                 "name": "Chapter Ancient",
                 "hidden": false,
-                "id": "d1a6-0766-1549-28fa"
+                "id": "d1a6-0766-1549-28fa",
+                "costs": [
+                  {
+                    "name": "pts",
+                    "typeId": "51b2-306e-1021-d207",
+                    "value": 10
+                  },
+                  {
+                    "name": "Crusade Points",
+                    "typeId": "b03b-c239-15a5-da55",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Battle Honours",
+                    "typeId": "75bb-ded1-c86d-bdf0",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Experience",
+                    "typeId": "a623-fe74-1d33-cddf",
+                    "value": 0
+                  },
+                  {
+                    "name": "Crusade: Weapon Modifications",
+                    "typeId": "716d-91b7-d55a-1022",
+                    "value": 0
+                  },
+                  {
+                    "name": "Blackstone Fragments",
+                    "typeId": "ac6b-ced3-9b5e-9a6e",
+                    "value": 0
+                  },
+                  {
+                    "name": "Detachment Points",
+                    "typeId": "82ae-1066-5107-6ae0",
+                    "value": 0
+                  },
+                  {
+                    "name": "Enhancements",
+                    "typeId": "f759-1bc4-cb3a-f0d2",
+                    "value": 0
+                  },
+                  {
+                    "name": "Honour Points",
+                    "typeId": "8135-9a2f-6627-09e2",
+                    "value": 0
+                  },
+                  {
+                    "name": "Relic Fragments",
+                    "typeId": "0ece-6541-4662-ece2",
+                    "value": 0
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -7768,6 +7867,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 20,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "9b89-f132-4fef-8e51",
+                        "shared": true,
+                        "childName": "Victrix Honour Guard"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
