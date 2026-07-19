@@ -11394,6 +11394,13 @@
                     "id": "55d1-5fad-fcaf-0b62",
                     "targetId": "1cc1-f11a-4e8f-1bcc",
                     "primary": false
+                  },
+                  {
+                    "name": "Dynasty",
+                    "hidden": false,
+                    "id": "e717-a756-d749-2afd",
+                    "targetId": "d887-58b7-5a1c-5ef0",
+                    "primary": false
                   }
                 ]
               },
@@ -11685,6 +11692,13 @@
                     "hidden": false,
                     "id": "2ffc-6e79-6a74-018d",
                     "targetId": "b4a7-5083-fe94-4d24",
+                    "primary": false
+                  },
+                  {
+                    "name": "Hypercrypt",
+                    "hidden": false,
+                    "id": "4acd-3a16-3b85-d57c",
+                    "targetId": "822d-f1bf-4a26-6d70",
                     "primary": false
                   }
                 ]
@@ -12029,7 +12043,7 @@
                     "name": "Hypermotility Protocols",
                     "id": "f76c-6a78-a77d-1988",
                     "hidden": false,
-                    "description": "- Friendly IMMORTALS/NECRON WARRIORS units’ ranged attacks have [ASSAULT]. \n- When a friendly IMMORTALS/NECRON WARRIORS unit is selected to make an advance move, that move does not prevent that unit from being eligible to start an action. \n\n\nThis detachment has the DYNASTY tag and cannot be taken with another DYNASTY detachment."
+                    "description": "- Friendly IMMORTALS/NECRON WARRIORS units’ ranged attacks have [ASSAULT]. \n- When a friendly IMMORTALS/NECRON WARRIORS unit is selected to make an advance move, that move does not prevent that unit from being eligible to start an action. \n\nThis detachment has the DYNASTY tag and cannot be taken with another DYNASTY detachment."
                   }
                 ],
                 "categoryLinks": [
@@ -23354,7 +23368,27 @@
                             "typeId": "f77d-b953-8fa4-b762",
                             "typeName": "Ranged Weapons",
                             "hidden": false,
-                            "id": "1037-e515-220f-7274"
+                            "id": "1037-e515-220f-7274",
+                            "modifiers": [
+                              {
+                                "type": "append",
+                                "value": "Assault",
+                                "field": "7f1b-8591-2fcf-d01c",
+                                "join": ", ",
+                                "conditions": [
+                                  {
+                                    "type": "atLeast",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "force",
+                                    "childId": "ec2e-3289-5a4a-d5a6",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Hand of the Dynasty"
+                                  }
+                                ]
+                              }
+                            ]
                           }
                         ],
                         "infoLinks": [
@@ -23364,6 +23398,32 @@
                             "type": "rule",
                             "id": "b4fc-4018-5fab-9b1a",
                             "targetId": "d1d1-611e-5191-1095"
+                          },
+                          {
+                            "name": "Assault",
+                            "id": "1bfc-10a7-579d-7e9e",
+                            "hidden": false,
+                            "type": "rule",
+                            "targetId": "fc8a-8c24-bae9-cc1c",
+                            "modifiers": [
+                              {
+                                "type": "set",
+                                "value": true,
+                                "field": "hidden",
+                                "conditions": [
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "force",
+                                    "childId": "ec2e-3289-5a4a-d5a6",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Hand of the Dynasty"
+                                  }
+                                ]
+                              }
+                            ]
                           }
                         ],
                         "constraints": [
@@ -60518,7 +60578,7 @@
     "name": "Xenos - Necrons",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 5,
+    "revision": 7,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }
