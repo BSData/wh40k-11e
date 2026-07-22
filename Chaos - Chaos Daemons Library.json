@@ -17131,9 +17131,9 @@
           {
             "characteristics": [
               {
-                "$text": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP (this is not cumulative with any other rules that would increase the CP cost of that Stratagem).",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP."
               }
             ],
             "id": "9d33-996b-cbcb-61c5",
@@ -20419,9 +20419,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, each time an attack is made against that unit, subtract 1 form the Hit roll.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "- This unit has Stealth. \n- Melee attacks that target this unit have ‑1 to hit rolls."
               }
             ],
             "id": "4f3e-74ec-5c46-1fea",
@@ -20483,28 +20483,10 @@
           },
           {
             "name": "Stealth",
-            "id": "6725-bb04-896f-054b",
+            "id": "9281-ac75-d812-6093",
             "hidden": false,
             "type": "rule",
-            "targetId": "bec5-4288-34a6-ccfa",
-            "modifiers": [
-              {
-                "type": "set",
-                "value": true,
-                "field": "hidden",
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "5063-25bd-d22e-665b",
-                    "shared": true,
-                    "includeChildSelections": true
-                  }
-                ]
-              }
-            ]
+            "targetId": "bec5-4288-34a6-ccfa"
           }
         ],
         "categoryLinks": [
@@ -26236,13 +26218,6 @@
             "hidden": false,
             "id": "a48c-d39f-a607-ff8c",
             "targetId": "4df3-beae-010c-9087",
-            "primary": false
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "78fe-fe91-c5ca-09e1",
-            "targetId": "b927-8eeb-7cc3-8dec",
             "primary": false
           }
         ],
@@ -59363,9 +59338,9 @@
               {
                 "characteristics": [
                   {
-                    "$text": "^^**Legiones Daemonica Tzeentch Monster**^^ model only. In your Shooting phase, the bearer can use this Enhancement. If it does, until the end of the phase, you can select one other friendly visible **^^Legiones Daemonica Tzeentch**^^ unit within 9\" of the bearer. If you do, when selecting targets for ranged weapons equipped by the bearer, you can measure range and determine visibility from one model of your choice in the selected unit instead. \n***Designer’s Note:** When determining if a unit with the Lone Operative ability can be selected as the target, the range is determined from the model of your choice in the selected unit.*",
                     "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
+                    "typeId": "9b8f-694b-e5e-b573",
+                    "$text": "^^**Legiones Daemonica Tzeentch Monster**^^ model only. In your Shooting phase, when this unit is selected to shoot, while an enemy unit is visible to a friendly LEGIONES DAEMONICA TZEENTCH unit, that enemy unit has +9\" detection range until this unit has shot."
                   }
                 ],
                 "name": "Infernal Puppeteer",
@@ -69747,7 +69722,7 @@
     ],
     "sharedRules": [
       {
-        "description": "If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: \n■ Your deployment zone is always within your army’s Shadow of Chaos.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\n\nDAEMONIC MANIFESTATION\nWhile a LEGIONES DAEMONICA unit from your army is within your army’s Shadow of Chaos, each time that unit takes a Battle-shock test, add 1 to that test and, if that test is passed, one model in that unit regains up to D3 lost wounds (if that unit is a BATTLELINE unit and that test is passed, up to D3 destroyed models can be returned to that unit instead).\n\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6\" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.",
+        "description": "If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: \n■ Your deployment zone is always within your army’s Shadow of Chaos.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos.\n\nDAEMONIC MANIFESTATION\nWhile a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead).\n\nDAEMONIC TERROR\nWhile an enemy unit is within your army’s Shadow of Chaos and/or it is within 6\" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds.",
         "modifiers": [
           {
             "conditions": [
