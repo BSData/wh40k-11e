@@ -8647,9 +8647,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "- This unit has **Stealth**.\n- Melee attacks that target this unit have -1 to **hit rolls**."
               }
             ],
             "name": "Sanctuary (Psychic)",
@@ -8726,6 +8726,13 @@
             "hidden": false,
             "type": "rule",
             "targetId": "6a5e-1316-2d87-93c5"
+          },
+          {
+            "name": "Stealth",
+            "id": "3531-1378-5bec-f02e",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "bec5-4288-34a6-ccfa"
           }
         ],
         "selectionEntries": [
@@ -12592,13 +12599,6 @@
             "id": "22cf-6b26-3e8d-3c98",
             "primary": false,
             "name": "Imperium"
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "01c1-ad4b-fa34-f431",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "profiles": [
@@ -13339,13 +13339,6 @@
             "id": "3bd9-2688-11f9-27ff",
             "primary": false,
             "name": "Imperium"
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "5578-67fc-2b23-d073",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "profiles": [
@@ -14438,13 +14431,6 @@
             "id": "df4d-9039-f6aa-bdd3",
             "primary": false,
             "name": "Imperium"
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "86f6-6c52-f44a-0acc",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "profiles": [
@@ -23877,13 +23863,6 @@
             "id": "e973-f71f-d183-3600",
             "primary": false,
             "name": "Imperium"
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "3e49-3c52-3ef9-003d",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "profiles": [
@@ -34175,9 +34154,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "^^**Grey Knights^^** model only. Once per battle, in your opponent's Shooting phase, when the bearer's unit is selected as the target of a ranged attack, you can remove the bearer's unit from the battlefield and then set it back up again anywhere on the battlefield that is more than 9\" horizontally away from all enemy units. If the bearer's unit is no longer an eligible target, your opponent can then select new targets for any attacks that had targeted the bearer's unit.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "^^**Grey Knights^^** model only. Once per battle, in your opponent's Shooting phase, when the bearer's unit is selected as the target of a ranged attack, you can remove the bearer's unit from the battlefield and then set it back up again anywhere on the battlefield that is more than 8\" horizontally away from all enemy units. If the bearer's unit is no longer an eligible target, your opponent can then select new targets for any attacks that had targeted the bearer's unit."
                       }
                     ],
                     "name": "Sigil of Exigence",
@@ -35375,9 +35354,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "^^**Grey Knights^^** model only. Each time the bearer's unit is set up in your Reinforcements step, the bearer can use this Enhancement. If it does, the bearer's unit can make a Normal Move of up to D6\", and until the end of the turn, the bearer's unit is not eligible to declare a Charge.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "**GREY KNIGHTS** model only. When this unit ends an **ingress move**, you can use this ability. If you do:\n- This unit can make a **normal move** of up to D6\".\n- Until the end of the turn, this unit is <ins>not</ins> **eligible to declare a charge**."
                       }
                     ],
                     "name": "One Foot in the Future",
@@ -37501,7 +37480,7 @@
           {
             "rules": [
               {
-                "description": "In your Shooting phase, when a friendly **INTERCEPTOR SQUAD** unit has shot, if that unit did not make an **ingress move** this turn, you can use this ability. If you do:\n- That unit <ins>cannot</ins> use its **Personal Teleporters** ability.\n- That unit can make a **surge move** of up to D6+1\".",
+                "description": "In your Shooting phase, when a friendly **INTERCEPTOR SQUAD** unit has shot, you can use this ability. If you do:\n- That unit <ins>cannot</ins> use its **Personal Teleporters** ability.\n- That unit can make a **surge move** of up to D6+1\".",
                 "name": "Echojump",
                 "id": "c1ea-9cd3-5556-e2a3",
                 "hidden": false
@@ -47040,7 +47019,7 @@
     ],
     "sharedRules": [
       {
-        "description": "If your Army Faction is **^^Grey Knights^^**, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows:\n\nIncursion - Up to 2 units\nStrike Force - Up to 3 units\nOnslaught - Up to 4 units\n\nOnce you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
+        "description": "If your Army Faction is **^^Grey Knights^^**, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows:\n\nIncursion - Up to 2 units\nStrike Force - Up to 3 units\nOnslaught - Up to 4 units\n\n- Place those units in **strategic reserves**.\n- Those units can make an **ingress move** in your next Movement phase (including in your first turn)",
         "name": "Gate of Infinity",
         "id": "6a5e-1316-2d87-93c5",
         "hidden": false
