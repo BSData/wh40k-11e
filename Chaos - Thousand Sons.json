@@ -7539,10 +7539,10 @@
                 ],
                 "categoryLinks": [
                   {
-                    "name": "Disruption",
+                    "name": "Priority Assets",
                     "hidden": false,
-                    "id": "1131-9ced-2417-c203",
-                    "targetId": "ecf8-cf72-7d5b-1b5b",
+                    "id": "56c7-738a-eaa6-d1b1",
+                    "targetId": "0936-9767-1cc7-52ae",
                     "primary": false
                   }
                 ]
@@ -7683,10 +7683,10 @@
                 ],
                 "categoryLinks": [
                   {
-                    "name": "Priority Assets",
+                    "name": "Disruption",
                     "hidden": false,
-                    "id": "b0fe-e348-df42-2255",
-                    "targetId": "0936-9767-1cc7-52ae",
+                    "id": "e608-4bd2-fad9-930b",
+                    "targetId": "ecf8-cf72-7d5b-1b5b",
                     "primary": false
                   }
                 ]
@@ -10065,7 +10065,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 130
+            "value": 140
           },
           {
             "name": "Crusade Points",
@@ -10085,6 +10085,21 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -11120,7 +11135,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 130
+            "value": 140
           },
           {
             "name": "Crusade Points",
@@ -11145,6 +11160,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -11807,7 +11832,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 90
+            "value": 80
           },
           {
             "name": "Crusade Points",
@@ -11827,6 +11852,21 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -12046,6 +12086,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "8d9b-b949-2557-dcc4",
+                        "shared": true,
+                        "childName": "Chaos Rhino"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -16319,6 +16399,41 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
+            "value": 5
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -24296,7 +24411,7 @@
               }
             ],
             "type": "set",
-            "value": 370,
+            "value": 385,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -26885,6 +27000,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "af1e-9a3d-785c-47f8",
+                        "shared": true,
+                        "childName": "Sorcerer"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -29897,7 +30052,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 45
+            "value": 50
           },
           {
             "name": "Crusade Points",
@@ -29922,6 +30077,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -30312,7 +30477,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 60
+            "value": 65
           },
           {
             "name": "Crusade Points",
@@ -30337,6 +30502,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -37217,7 +37392,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 80
+            "value": 85
           },
           {
             "name": "Crusade Points",
@@ -37243,6 +37418,16 @@
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
             "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
           }
         ],
         "modifiers": [
@@ -37259,7 +37444,7 @@
               }
             ],
             "type": "set",
-            "value": 160,
+            "value": 175,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -37276,6 +37461,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 15,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "fe4b-b3a4-69b7-3088",
+                        "shared": true,
+                        "childName": "Sekhetar Robots"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -39255,7 +39480,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 295
+            "value": 305
           },
           {
             "name": "Crusade Points",
@@ -39280,6 +39505,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -39961,7 +40196,7 @@
           },
           {
             "type": "increment",
-            "value": 15,
+            "value": 20,
             "field": "51b2-306e-1021-d207",
             "conditionGroups": [
               {
@@ -40004,7 +40239,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 300
+            "value": 320
           },
           {
             "name": "Crusade Points",
@@ -45833,7 +46068,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 290
+            "value": 300
           },
           {
             "name": "Crusade Points",
@@ -46103,7 +46338,7 @@
           },
           {
             "type": "increment",
-            "value": 30,
+            "value": 40,
             "field": "51b2-306e-1021-d207",
             "conditionGroups": [
               {
@@ -46317,7 +46552,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 10
+            "value": 15
           },
           {
             "name": "Crusade Points",
@@ -46423,7 +46658,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 10
+            "value": 15
           },
           {
             "name": "Crusade Points",
@@ -60851,7 +61086,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "1069-10ff-3ba9-873b",
     "name": "Chaos - Thousand Sons",
-    "revision": 6,
+    "revision": 7,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
