@@ -8321,13 +8321,6 @@
             "id": "7ed2-5a36-b211-9e52",
             "primary": false,
             "name": "Speed Freeks"
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "92ad-5d9a-6673-69b7",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "profiles": [
@@ -9005,11 +8998,9 @@
           {
             "characteristics": [
               {
-                "$text": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
                 "name": "Description",
-                "id": "bffc-9e1c-64e2-e09",
-                "hidden": false,
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While an enemy unit (excluding **MONSTER/VEHICLE** units) is within 6\" of this unit, when that enemy unit is **selected to shoot**, that unit’s targets have the **benefit of cover** until that unit has shot."
               }
             ],
             "name": "Billowing Fumes (Aura)",
@@ -9785,7 +9776,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "In your Movement phase, if this unit is unengaged, you can use this ability. If you do:\n- Place this unit in strategic reserves.\n- This unit has Deep Strike until the end of the phase."
+                "$text": "In your Movement phase, if this unit is unengaged, you can use this ability. If you do:\n- Place this unit in strategic reserves.\n- This unit has **Deep Strike**.\n- This unit must make an **ingress move** this phase (including in your first turn)."
               }
             ],
             "modifiers": [
@@ -10829,20 +10820,6 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "ab60-c8c9-453a-2345"
-          },
-          {
-            "characteristics": [
-              {
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573",
-                "$text": "If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one (but only if one of those is a **WARBOSS** unit). If you do, and this unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths."
-              }
-            ],
-            "name": "Bodyguard",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "4e0-4f2f-eacc-24a0"
           }
         ],
         "categoryLinks": [
@@ -11046,7 +11023,7 @@
                 ],
                 "type": "model",
                 "import": true,
-                "name": "Boy w/ Slugga and choppa",
+                "name": "Boy",
                 "hidden": false,
                 "id": "7629-a9f5-e881-6ff9"
               },
@@ -11089,6 +11066,10 @@
                     "targetId": "b2ed-fcb0-cba1-63c4"
                   },
                   {
+                    "import": true,
+                    "name": "Choppa",
+                    "hidden": false,
+                    "id": "5b8a-30da-6084-4f80",
                     "constraints": [
                       {
                         "type": "min",
@@ -11096,7 +11077,7 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "7e78-59ba-c550-adec"
+                        "id": "41a5-7d4e-fc0a-d1e6"
                       },
                       {
                         "type": "max",
@@ -11104,15 +11085,37 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "8c3e-8b44-223f-fffb"
+                        "id": "66c8-9d6a-2fb2-0996"
                       }
                     ],
-                    "import": true,
-                    "name": "Close combat weapon",
-                    "hidden": false,
-                    "id": "b2bf-e111-2c1e-75ea",
                     "type": "selectionEntry",
-                    "targetId": "0534-7359-3392-9d1b"
+                    "targetId": "e542-78f9-46d8-6c33"
+                  },
+                  {
+                    "import": true,
+                    "name": "Slugga",
+                    "hidden": false,
+                    "id": "919d-b39d-9881-693e",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "60ad-2db2-89f8-9711"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "f24f-4a0e-f633-cbd0"
+                      }
+                    ],
+                    "type": "selectionEntry",
+                    "targetId": "e71d-1472-87d-b4fa"
                   }
                 ],
                 "profiles": [
@@ -11201,7 +11204,7 @@
                 ],
                 "type": "model",
                 "import": true,
-                "name": "Boy w/ Shoota and close combat weapon",
+                "name": "Boy w/ Shoota",
                 "hidden": false,
                 "id": "f6f5-592e-de09-7238"
               }
@@ -11341,7 +11344,7 @@
                     ],
                     "type": "model",
                     "import": true,
-                    "name": "Boy w/ Big shoota and close combat weapon",
+                    "name": "Boy w/ Big shoota",
                     "hidden": false,
                     "id": "6fc2-677d-fc5e-9329"
                   },
@@ -11459,7 +11462,7 @@
                     ],
                     "type": "model",
                     "import": true,
-                    "name": "Boy w/ Rokkit launcha and close combat weapon",
+                    "name": "Boy w/ Rokkit launcha",
                     "hidden": false,
                     "id": "ca6b-d75f-c372-64ab"
                   }
@@ -11679,53 +11682,18 @@
                             "id": "d2a1-2ce7-d467-a117",
                             "type": "selectionEntry",
                             "targetId": "752e-cd9b-4721-f0b0"
-                          },
-                          {
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "d767-ee7d-f8a-9fc4"
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "f9fe-19d8-8791-a69"
-                              }
-                            ],
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Weapon Modifications",
-                                "hidden": false,
-                                "id": "4f9e-a516-b099-88d4",
-                                "type": "selectionEntryGroup",
-                                "targetId": "f9da-852a-d7f0-92e9"
-                              }
-                            ],
-                            "import": true,
-                            "name": "Big choppa",
-                            "hidden": false,
-                            "id": "31a6-5d49-a9e0-e638",
-                            "type": "selectionEntry",
-                            "targetId": "29e9-cd9b-66bd-fe60"
                           }
                         ],
                         "type": "upgrade",
                         "import": true,
                         "name": "Big choppa and slugga",
                         "hidden": false,
-                        "id": "9d77-2604-83bf-8c51"
-                      },
-                      {
-                        "entryLinks": [
+                        "id": "9d77-2604-83bf-8c51",
+                        "selectionEntryGroups": [
                           {
+                            "name": "Big Choppa",
+                            "id": "4ea5-ad50-bc69-f33f",
+                            "hidden": false,
                             "constraints": [
                               {
                                 "type": "min",
@@ -11733,7 +11701,8 @@
                                 "field": "selections",
                                 "scope": "parent",
                                 "shared": true,
-                                "id": "2050-d9a2-93b4-2173"
+                                "id": "934e-1893-ef43-6653",
+                                "includeChildSelections": false
                               },
                               {
                                 "type": "max",
@@ -11741,68 +11710,261 @@
                                 "field": "selections",
                                 "scope": "parent",
                                 "shared": true,
-                                "id": "77b8-de2d-464c-a659"
+                                "id": "99d0-b542-5a77-bbbc",
+                                "includeChildSelections": false
                               }
                             ],
                             "entryLinks": [
                               {
                                 "import": true,
-                                "name": "Weapon Modifications",
+                                "name": "Big choppa",
                                 "hidden": false,
-                                "id": "9d90-fc31-7ddf-ac3a",
-                                "type": "selectionEntryGroup",
-                                "targetId": "f9da-852a-d7f0-92e9"
-                              }
-                            ],
-                            "import": true,
-                            "name": "Slugga",
-                            "hidden": false,
-                            "id": "9706-14c0-bb4b-f329",
-                            "type": "selectionEntry",
-                            "targetId": "752e-cd9b-4721-f0b0"
-                          },
-                          {
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "6a57-2f3a-fb21-261d"
+                                "id": "31a6-5d49-a9e0-e638",
+                                "entryLinks": [
+                                  {
+                                    "import": true,
+                                    "name": "Weapon Modifications",
+                                    "hidden": false,
+                                    "id": "4f9e-a516-b099-88d4",
+                                    "type": "selectionEntryGroup",
+                                    "targetId": "f9da-852a-d7f0-92e9"
+                                  }
+                                ],
+                                "type": "selectionEntry",
+                                "targetId": "29e9-cd9b-66bd-fe60"
                               },
                               {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "a7b3-4cc2-3230-99e6"
-                              }
-                            ],
-                            "entryLinks": [
-                              {
                                 "import": true,
-                                "name": "Weapon Modifications",
+                                "name": "Power klaw",
                                 "hidden": false,
-                                "id": "969b-e0a1-4426-7774",
-                                "type": "selectionEntryGroup",
-                                "targetId": "f9da-852a-d7f0-92e9"
+                                "id": "9b52-64e9-2117-677",
+                                "entryLinks": [
+                                  {
+                                    "import": true,
+                                    "name": "Weapon Modifications",
+                                    "hidden": false,
+                                    "id": "969b-e0a1-4426-7774",
+                                    "type": "selectionEntryGroup",
+                                    "targetId": "f9da-852a-d7f0-92e9"
+                                  }
+                                ],
+                                "type": "selectionEntry",
+                                "targetId": "ee65-6385-44ba-3758"
                               }
                             ],
-                            "import": true,
-                            "name": "Power klaw",
-                            "hidden": false,
-                            "id": "9b52-64e9-2117-677",
-                            "type": "selectionEntry",
-                            "targetId": "ee65-6385-44ba-3758"
+                            "defaultSelectionEntryId": "31a6-5d49-a9e0-e638",
+                            "selectionEntries": [
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Big choppa and kustom shoota",
+                                "hidden": false,
+                                "id": "db29-8e55-1475-795e",
+                                "entryLinks": [
+                                  {
+                                    "import": true,
+                                    "name": "Big choppa",
+                                    "hidden": false,
+                                    "id": "a174-4788-a2c6-9b4e",
+                                    "constraints": [
+                                      {
+                                        "type": "min",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "af2c-312a-aace-ea0e",
+                                        "includeChildSelections": false
+                                      },
+                                      {
+                                        "type": "max",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "46a6-1e04-c090-7bfd",
+                                        "includeChildSelections": false
+                                      }
+                                    ],
+                                    "entryLinks": [
+                                      {
+                                        "import": true,
+                                        "name": "Weapon Modifications",
+                                        "hidden": false,
+                                        "id": "4c44-4229-e7b7-eec6",
+                                        "type": "selectionEntryGroup",
+                                        "targetId": "f9da-852a-d7f0-92e9"
+                                      }
+                                    ],
+                                    "type": "selectionEntry",
+                                    "targetId": "29e9-cd9b-66bd-fe60"
+                                  },
+                                  {
+                                    "import": true,
+                                    "name": "Kustom shoota",
+                                    "hidden": false,
+                                    "id": "fdf3-b784-db0c-3b1e",
+                                    "constraints": [
+                                      {
+                                        "type": "min",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "1acd-1788-2951-4b0c",
+                                        "includeChildSelections": false
+                                      },
+                                      {
+                                        "type": "max",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "212a-7887-ae9b-3efb",
+                                        "includeChildSelections": false
+                                      }
+                                    ],
+                                    "entryLinks": [
+                                      {
+                                        "import": true,
+                                        "name": "Weapon Modifications",
+                                        "hidden": false,
+                                        "id": "8f0e-c3c5-7321-b1bd",
+                                        "type": "selectionEntryGroup",
+                                        "targetId": "f9da-852a-d7f0-92e9"
+                                      }
+                                    ],
+                                    "type": "selectionEntry",
+                                    "targetId": "8bba-d0bf-1102-2131"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "upgrade",
+                                "import": true,
+                                "name": "Big choppa, kombi-rokkit and kombi-shoota",
+                                "hidden": false,
+                                "id": "851e-6cd2-a75b-3387",
+                                "entryLinks": [
+                                  {
+                                    "import": true,
+                                    "name": "Big choppa",
+                                    "hidden": false,
+                                    "id": "e35d-d725-bd54-07bb",
+                                    "constraints": [
+                                      {
+                                        "type": "min",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "c9dd-3c8c-f2d9-b8bc",
+                                        "includeChildSelections": false
+                                      },
+                                      {
+                                        "type": "max",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "2894-70be-99b1-a341",
+                                        "includeChildSelections": false
+                                      }
+                                    ],
+                                    "entryLinks": [
+                                      {
+                                        "import": true,
+                                        "name": "Weapon Modifications",
+                                        "hidden": false,
+                                        "id": "df27-5933-1d50-d205",
+                                        "type": "selectionEntryGroup",
+                                        "targetId": "f9da-852a-d7f0-92e9"
+                                      }
+                                    ],
+                                    "type": "selectionEntry",
+                                    "targetId": "29e9-cd9b-66bd-fe60"
+                                  },
+                                  {
+                                    "import": true,
+                                    "name": "Kombi-shoota",
+                                    "hidden": false,
+                                    "id": "d586-7806-0060-4660",
+                                    "targetId": "3be9-053f-6354-b606",
+                                    "type": "selectionEntry",
+                                    "entryLinks": [
+                                      {
+                                        "import": true,
+                                        "name": "Weapon Modifications",
+                                        "hidden": false,
+                                        "id": "0af1-3ce8-a8fa-e75c",
+                                        "type": "selectionEntryGroup",
+                                        "targetId": "f9da-852a-d7f0-92e9"
+                                      }
+                                    ],
+                                    "constraints": [
+                                      {
+                                        "type": "min",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "fae3-c1a6-fe9d-0401",
+                                        "includeChildSelections": false
+                                      },
+                                      {
+                                        "type": "max",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "0052-9262-cc14-3a10",
+                                        "includeChildSelections": false
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "import": true,
+                                    "name": "Kombi-rokkit",
+                                    "hidden": false,
+                                    "id": "6fac-8215-b15d-cb97",
+                                    "targetId": "32ab-c37c-b71f-8415",
+                                    "type": "selectionEntry",
+                                    "entryLinks": [
+                                      {
+                                        "import": true,
+                                        "name": "Weapon Modifications",
+                                        "hidden": false,
+                                        "id": "c385-da5d-b472-cdb7",
+                                        "type": "selectionEntryGroup",
+                                        "targetId": "f9da-852a-d7f0-92e9"
+                                      }
+                                    ],
+                                    "constraints": [
+                                      {
+                                        "type": "min",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "08d1-be7d-2922-9070",
+                                        "includeChildSelections": false
+                                      },
+                                      {
+                                        "type": "max",
+                                        "value": 1,
+                                        "field": "selections",
+                                        "scope": "parent",
+                                        "shared": true,
+                                        "id": "6e40-4cda-ea1f-17b2",
+                                        "includeChildSelections": false
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
                           }
-                        ],
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Power klaw and slugga",
-                        "hidden": false,
-                        "id": "abc-822a-8a4a-2c44"
+                        ]
                       },
                       {
                         "entryLinks": [
@@ -13567,13 +13729,6 @@
             "id": "ecf0-4e96-f76a-248",
             "primary": false,
             "name": "Speed Freeks"
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "f490-8fb5-833f-5abb",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "infoLinks": [
@@ -14201,13 +14356,6 @@
             "id": "bc1a-d63b-426c-30d6",
             "primary": false,
             "name": "Speed Freeks"
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "b9a9-916b-f8f4-2a15",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "profiles": [
@@ -18784,7 +18932,7 @@
                   {
                     "name": "Description",
                     "typeId": "9b8f-694b-e5e-b573",
-                    "$text": "You cannot re-roll invulnerable saving throws made for this model."
+                    "$text": "While a friendly Makari model is on the battlefield, you cannot re‑roll **save rolls** for this unit."
                   }
                 ],
                 "name": "Invulnerable Save (2+*)",
@@ -20280,14 +20428,6 @@
                   {
                     "constraints": [
                       {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "2342-7a44-dfab-546f"
-                      },
-                      {
                         "type": "max",
                         "value": 1,
                         "field": "selections",
@@ -20306,7 +20446,7 @@
                 ],
                 "type": "upgrade",
                 "import": true,
-                "name": "1 Runtherd and 10 Gretchin",
+                "name": "0-1 Runtherd and 10 Gretchin",
                 "hidden": false,
                 "id": "d682-30b9-55d8-8445",
                 "selectionEntries": [
@@ -20389,14 +20529,6 @@
                   {
                     "constraints": [
                       {
-                        "type": "min",
-                        "value": 2,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "fe08-7290-2294-6acb"
-                      },
-                      {
                         "type": "max",
                         "value": 2,
                         "field": "selections",
@@ -20439,7 +20571,7 @@
                 ],
                 "type": "upgrade",
                 "import": true,
-                "name": "2 Runtherds and 20 Gretchin",
+                "name": "0-2 Runtherds and 20 Gretchin",
                 "hidden": false,
                 "id": "299b-56b8-c175-8691",
                 "selectionEntries": [
@@ -21152,13 +21284,6 @@
             "id": "f679-b001-563c-8a16",
             "targetId": "9693-cf84-fe69-37a9",
             "primary": true
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "f013-d0b2-15c4-7ccc",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "profiles": [
@@ -22815,13 +22940,6 @@
             "id": "6517-9dbf-d3e0-1992",
             "targetId": "9693-cf84-fe69-37a9",
             "primary": true
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "951e-b427-d3eb-f223",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "infoLinks": [
@@ -38986,11 +39104,9 @@
           {
             "characteristics": [
               {
-                "$text": "Each time this model is selected to Advance, you can remove it from the battlefield and set it up again anywhere on the battlefield that is more than 9\" horizontally away from all enemy models instead of making an Advance move (this model is still considered to have Advanced this turn).",
                 "name": "Description",
-                "id": "6bfd-63c-6f38-84cb",
-                "hidden": false,
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "In your Movement phase, when this unit is selected to make an **advance move**, you can use this ability. If you do:\n- That move has no **maximum distance**.\n- This unit can move through all types of model (including enemy models and **MONSTER/VEHICLE** models).\n- After moving, your unit must be more than 8\" horizontally from all enemy units."
               }
             ],
             "name": "Shokk Tunnel",
@@ -45505,152 +45621,6 @@
         ],
         "selectionEntryGroups": [
           {
-            "entryLinks": [
-              {
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "604f-3247-be31-7495"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1fbe-fdb4-af3a-ba80"
-                  }
-                ],
-                "entryLinks": [
-                  {
-                    "import": true,
-                    "name": "Weapon Upgrades",
-                    "hidden": false,
-                    "id": "b348-8878-9f16-e4fe",
-                    "targetId": "0197-b272-85e4-92bc",
-                    "type": "selectionEntryGroup"
-                  }
-                ],
-                "import": true,
-                "name": "Kombi-weapon",
-                "hidden": false,
-                "id": "183b-3f43-10fc-ca2d",
-                "type": "selectionEntry",
-                "targetId": "ac6f-9310-e9ac-678"
-              }
-            ],
-            "selectionEntries": [
-              {
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "7a2e-83bd-1375-74b3"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "ef90-5739-74f-664e"
-                  }
-                ],
-                "profiles": [
-                  {
-                    "characteristics": [
-                      {
-                        "$text": "12\"",
-                        "name": "Range",
-                        "typeId": "9896-9419-16a1-92fc"
-                      },
-                      {
-                        "$text": "2",
-                        "name": "A",
-                        "typeId": "3bb-c35f-f54-fb08"
-                      },
-                      {
-                        "$text": "5+",
-                        "name": "BS",
-                        "typeId": "94d-8a98-cf90-183e"
-                      },
-                      {
-                        "$text": "4",
-                        "name": "S",
-                        "typeId": "2229-f494-25db-c5d3"
-                      },
-                      {
-                        "$text": "0",
-                        "name": "AP",
-                        "typeId": "9ead-8a10-520-de15"
-                      },
-                      {
-                        "$text": "1",
-                        "name": "D",
-                        "typeId": "a354-c1c8-a745-f9e3"
-                      },
-                      {
-                        "$text": "Pistol, Twin-linked",
-                        "name": "Keywords",
-                        "typeId": "7f1b-8591-2fcf-d01c"
-                      }
-                    ],
-                    "name": "Twin slugga",
-                    "typeId": "f77d-b953-8fa4-b762",
-                    "typeName": "Ranged Weapons",
-                    "hidden": false,
-                    "id": "5bde-8a1f-83e6-6450"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Pistol",
-                    "id": "f036-f7f2-6b1b-d9f8",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "8bf7-8812-923d-29e4"
-                  },
-                  {
-                    "name": "Twin-linked",
-                    "id": "4fb7-dcc3-a154-9f8b",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "cf93-ad4d-2f08-a79d"
-                  }
-                ],
-                "categoryLinks": [
-                  {
-                    "name": "Ranged Weapon",
-                    "hidden": false,
-                    "id": "7313-7013-ca8a-c68b",
-                    "targetId": "eeda-8544-a2f3-3fab",
-                    "primary": false
-                  }
-                ],
-                "entryLinks": [
-                  {
-                    "import": true,
-                    "name": "Weapon Upgrades",
-                    "hidden": false,
-                    "id": "7c82-9a41-0cdf-1b59",
-                    "targetId": "0197-b272-85e4-92bc",
-                    "type": "selectionEntryGroup"
-                  }
-                ],
-                "type": "upgrade",
-                "import": true,
-                "name": "Twin slugga",
-                "hidden": false,
-                "id": "f8a0-f279-3ee8-2eda"
-              }
-            ],
             "selectionEntryGroups": [
               {
                 "entryLinks": [
@@ -45687,66 +45657,386 @@
                 "hidden": false
               },
               {
-                "constraints": [
+                "name": "Kombi-weapon, Twin Sluggas and Big Choppa",
+                "id": "0c40-cb4b-9830-ea3d",
+                "hidden": false,
+                "selectionEntries": [
                   {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "87b5-5163-1101-892c"
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Kombi-weapon, twin sluggas and big choppa",
+                    "hidden": false,
+                    "id": "7726-19c2-4233-cb85",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Kombi-weapon",
+                        "hidden": false,
+                        "id": "183b-3f43-10fc-ca2d",
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "604f-3247-be31-7495"
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "1fbe-fdb4-af3a-ba80"
+                          }
+                        ],
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Weapon Upgrades",
+                            "hidden": false,
+                            "id": "b348-8878-9f16-e4fe",
+                            "targetId": "0197-b272-85e4-92bc",
+                            "type": "selectionEntryGroup"
+                          }
+                        ],
+                        "type": "selectionEntry",
+                        "targetId": "ac6f-9310-e9ac-678"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Twin sluggas",
+                        "hidden": false,
+                        "id": "f8a0-f279-3ee8-2eda",
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "7a2e-83bd-1375-74b3"
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "ef90-5739-74f-664e"
+                          }
+                        ],
+                        "profiles": [
+                          {
+                            "name": "Twin sluggas",
+                            "typeId": "f77d-b953-8fa4-b762",
+                            "typeName": "Ranged Weapons",
+                            "hidden": false,
+                            "id": "5bde-8a1f-83e6-6450",
+                            "characteristics": [
+                              {
+                                "$text": "12\"",
+                                "name": "Range",
+                                "typeId": "9896-9419-16a1-92fc"
+                              },
+                              {
+                                "$text": "2",
+                                "name": "A",
+                                "typeId": "3bb-c35f-f54-fb08"
+                              },
+                              {
+                                "$text": "5+",
+                                "name": "BS",
+                                "typeId": "94d-8a98-cf90-183e"
+                              },
+                              {
+                                "$text": "4",
+                                "name": "S",
+                                "typeId": "2229-f494-25db-c5d3"
+                              },
+                              {
+                                "$text": "0",
+                                "name": "AP",
+                                "typeId": "9ead-8a10-520-de15"
+                              },
+                              {
+                                "$text": "1",
+                                "name": "D",
+                                "typeId": "a354-c1c8-a745-f9e3"
+                              },
+                              {
+                                "$text": "Pistol, Twin-linked",
+                                "name": "Keywords",
+                                "typeId": "7f1b-8591-2fcf-d01c"
+                              }
+                            ]
+                          }
+                        ],
+                        "infoLinks": [
+                          {
+                            "name": "Pistol",
+                            "id": "f036-f7f2-6b1b-d9f8",
+                            "hidden": false,
+                            "type": "rule",
+                            "targetId": "8bf7-8812-923d-29e4"
+                          },
+                          {
+                            "name": "Twin-linked",
+                            "id": "4fb7-dcc3-a154-9f8b",
+                            "hidden": false,
+                            "type": "rule",
+                            "targetId": "cf93-ad4d-2f08-a79d"
+                          }
+                        ],
+                        "categoryLinks": [
+                          {
+                            "name": "Ranged Weapon",
+                            "hidden": false,
+                            "id": "7313-7013-ca8a-c68b",
+                            "targetId": "eeda-8544-a2f3-3fab",
+                            "primary": false
+                          }
+                        ],
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Weapon Upgrades",
+                            "hidden": false,
+                            "id": "7c82-9a41-0cdf-1b59",
+                            "targetId": "0197-b272-85e4-92bc",
+                            "type": "selectionEntryGroup"
+                          }
+                        ]
+                      }
+                    ],
+                    "selectionEntryGroups": [
+                      {
+                        "name": "Big Choppa",
+                        "id": "5eb8-cd57-5dee-4eec",
+                        "hidden": false,
+                        "constraints": [
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "87b5-5163-1101-892c"
+                          },
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "49cb-656-6300-35b2"
+                          }
+                        ],
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Big choppa",
+                            "hidden": false,
+                            "id": "446d-ce2c-1afc-c5fb",
+                            "entryLinks": [
+                              {
+                                "import": true,
+                                "name": "Weapon Upgrades",
+                                "hidden": false,
+                                "id": "0137-ad38-4689-83d8",
+                                "targetId": "0197-b272-85e4-92bc",
+                                "type": "selectionEntryGroup"
+                              }
+                            ],
+                            "type": "selectionEntry",
+                            "targetId": "614f-3d6b-88aa-9e15"
+                          },
+                          {
+                            "import": true,
+                            "name": "Power klaw",
+                            "hidden": false,
+                            "id": "9b81-c90b-705a-6af2",
+                            "entryLinks": [
+                              {
+                                "import": true,
+                                "name": "Weapon Upgrades",
+                                "hidden": false,
+                                "id": "b913-c545-8a66-c4b8",
+                                "targetId": "0197-b272-85e4-92bc",
+                                "type": "selectionEntryGroup"
+                              }
+                            ],
+                            "type": "selectionEntry",
+                            "targetId": "edac-a910-975a-d4fd"
+                          }
+                        ],
+                        "defaultSelectionEntryId": "446d-ce2c-1afc-c5fb"
+                      }
+                    ]
                   },
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Kustom choppa and kustom shoota",
+                    "hidden": false,
+                    "id": "c825-ea7b-7a14-aea2",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Kustom shoota",
+                        "hidden": false,
+                        "id": "30aa-7eed-2a62-12a1",
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "2ba7-1566-d8a3-871f"
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "3546-de74-6f7e-9e8d"
+                          }
+                        ],
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Weapon Upgrades",
+                            "hidden": false,
+                            "id": "268a-2868-9fe8-ce0c",
+                            "targetId": "0197-b272-85e4-92bc",
+                            "type": "selectionEntryGroup"
+                          }
+                        ],
+                        "type": "selectionEntry",
+                        "targetId": "8bba-d0bf-1102-2131"
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Kustom choppa",
+                        "hidden": false,
+                        "id": "d034-cadd-41e5-dc21",
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Weapon Upgrades",
+                            "hidden": false,
+                            "id": "5e19-8ded-55eb-2847",
+                            "targetId": "0197-b272-85e4-92bc",
+                            "type": "selectionEntryGroup"
+                          }
+                        ],
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "6715-6ca0-2b78-4243"
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "fb57-3605-f127-dafa"
+                          }
+                        ],
+                        "profiles": [
+                          {
+                            "name": "Kustom choppa",
+                            "typeId": "8a40-4aaa-c780-9046",
+                            "typeName": "Melee Weapons",
+                            "hidden": false,
+                            "id": "a4d3-879f-834f-c350",
+                            "characteristics": [
+                              {
+                                "name": "Range",
+                                "typeId": "914c-b413-91e3-a132",
+                                "$text": "Melee"
+                              },
+                              {
+                                "name": "A",
+                                "typeId": "2337-daa1-6682-b110",
+                                "$text": "6"
+                              },
+                              {
+                                "name": "WS",
+                                "typeId": "95d1-95f-45b4-11d6",
+                                "$text": "2+"
+                              },
+                              {
+                                "name": "S",
+                                "typeId": "ab33-d393-96ce-ccba",
+                                "$text": "8"
+                              },
+                              {
+                                "name": "AP",
+                                "typeId": "41a0-1301-112a-e2f2",
+                                "$text": "-2"
+                              },
+                              {
+                                "name": "D",
+                                "typeId": "3254-9fe6-d824-513e",
+                                "$text": "2"
+                              },
+                              {
+                                "name": "Keywords",
+                                "typeId": "893f-9000-ccf7-648e",
+                                "$text": "Cleave 1"
+                              }
+                            ]
+                          }
+                        ],
+                        "infoLinks": [
+                          {
+                            "name": "Cleave",
+                            "id": "31df-fb46-f3df-13f0",
+                            "hidden": false,
+                            "type": "rule",
+                            "targetId": "bf16-5d16-4725-f912"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "constraints": [
                   {
                     "type": "min",
                     "value": 1,
                     "field": "selections",
                     "scope": "parent",
                     "shared": true,
-                    "id": "49cb-656-6300-35b2"
-                  }
-                ],
-                "entryLinks": [
-                  {
-                    "entryLinks": [
-                      {
-                        "import": true,
-                        "name": "Weapon Upgrades",
-                        "hidden": false,
-                        "id": "0137-ad38-4689-83d8",
-                        "targetId": "0197-b272-85e4-92bc",
-                        "type": "selectionEntryGroup"
-                      }
-                    ],
-                    "import": true,
-                    "name": "Big choppa",
-                    "hidden": false,
-                    "id": "446d-ce2c-1afc-c5fb",
-                    "type": "selectionEntry",
-                    "targetId": "614f-3d6b-88aa-9e15"
+                    "id": "1832-c866-b6a1-8ad6",
+                    "includeChildSelections": false
                   },
                   {
-                    "entryLinks": [
-                      {
-                        "import": true,
-                        "name": "Weapon Upgrades",
-                        "hidden": false,
-                        "id": "b913-c545-8a66-c4b8",
-                        "targetId": "0197-b272-85e4-92bc",
-                        "type": "selectionEntryGroup"
-                      }
-                    ],
-                    "import": true,
-                    "name": "Power klaw",
-                    "hidden": false,
-                    "id": "9b81-c90b-705a-6af2",
-                    "type": "selectionEntry",
-                    "targetId": "edac-a910-975a-d4fd"
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "fa99-ddf6-fd97-cbeb",
+                    "includeChildSelections": false
                   }
                 ],
-                "name": "Big Choppa",
-                "id": "5eb8-cd57-5dee-4eec",
-                "hidden": false,
-                "defaultSelectionEntryId": "446d-ce2c-1afc-c5fb"
+                "defaultSelectionEntryId": "7726-19c2-4233-cb85"
               }
             ],
             "name": "Wargear",
@@ -82757,9 +83047,9 @@
           {
             "characteristics": [
               {
-                "$text": "In your Command phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
                 "name": "Description",
-                "typeId": "5b8c-0fc0-bf7b-a96f"
+                "typeId": "5b8c-0fc0-bf7b-a96f",
+                "$text": "In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit can make an **ingress move** in your next Movement phase (including in your first turn)."
               }
             ],
             "name": "Shokk Attack Engine",
@@ -86532,96 +86822,13 @@
                         "name": "Kombi-shoota and kombi-rokkit",
                         "hidden": false,
                         "id": "594e-bd71-0dd1-4134",
-                        "selectionEntries": [
+                        "entryLinks": [
                           {
-                            "type": "upgrade",
-                            "import": true,
-                            "name": "Kombi-rokkit",
-                            "hidden": false,
-                            "id": "32ab-c37c-b71f-8415",
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Weapon Modifications",
-                                "hidden": false,
-                                "id": "3559-cefc-5f32-7fea",
-                                "type": "selectionEntryGroup",
-                                "targetId": "f9da-852a-d7f0-92e9"
-                              }
-                            ],
-                            "profiles": [
-                              {
-                                "name": "Kombi-rokkit",
-                                "typeId": "f77d-b953-8fa4-b762",
-                                "typeName": "Ranged Weapons",
-                                "hidden": false,
-                                "id": "05d6-1076-cae8-0f4c",
-                                "characteristics": [
-                                  {
-                                    "name": "Range",
-                                    "typeId": "9896-9419-16a1-92fc",
-                                    "$text": "24\""
-                                  },
-                                  {
-                                    "name": "A",
-                                    "typeId": "3bb-c35f-f54-fb08",
-                                    "$text": "1"
-                                  },
-                                  {
-                                    "name": "BS",
-                                    "typeId": "94d-8a98-cf90-183e",
-                                    "$text": "5+"
-                                  },
-                                  {
-                                    "name": "S",
-                                    "typeId": "2229-f494-25db-c5d3",
-                                    "$text": "10"
-                                  },
-                                  {
-                                    "name": "AP",
-                                    "typeId": "9ead-8a10-520-de15",
-                                    "$text": "-2"
-                                  },
-                                  {
-                                    "name": "D",
-                                    "typeId": "a354-c1c8-a745-f9e3",
-                                    "$text": "3"
-                                  },
-                                  {
-                                    "name": "Keywords",
-                                    "typeId": "7f1b-8591-2fcf-d01c",
-                                    "$text": ""
-                                  }
-                                ]
-                              }
-                            ],
-                            "constraints": [
-                              {
-                                "type": "min",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "6230-2749-d0b5-eb8c",
-                                "includeChildSelections": false
-                              },
-                              {
-                                "type": "max",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "shared": true,
-                                "id": "39e5-e347-4ad4-b641",
-                                "includeChildSelections": false
-                              }
-                            ]
-                          },
-                          {
-                            "type": "upgrade",
-                            "import": true,
+                            "targetId": "3be9-053f-6354-b606",
+                            "id": "32bf-2818-2343-7bd0",
+                            "type": "selectionEntry",
                             "name": "Kombi-shoota",
                             "hidden": false,
-                            "id": "3be9-053f-6354-b606",
                             "entryLinks": [
                               {
                                 "import": true,
@@ -86630,52 +86837,6 @@
                                 "id": "5559-a6a5-a0de-1d67",
                                 "type": "selectionEntryGroup",
                                 "targetId": "f9da-852a-d7f0-92e9"
-                              }
-                            ],
-                            "profiles": [
-                              {
-                                "name": "Kombi-shoota",
-                                "typeId": "f77d-b953-8fa4-b762",
-                                "typeName": "Ranged Weapons",
-                                "hidden": false,
-                                "id": "8e4e-c95a-aeab-fec4",
-                                "characteristics": [
-                                  {
-                                    "name": "Range",
-                                    "typeId": "9896-9419-16a1-92fc",
-                                    "$text": "24\""
-                                  },
-                                  {
-                                    "name": "A",
-                                    "typeId": "3bb-c35f-f54-fb08",
-                                    "$text": "2"
-                                  },
-                                  {
-                                    "name": "BS",
-                                    "typeId": "94d-8a98-cf90-183e",
-                                    "$text": "5+"
-                                  },
-                                  {
-                                    "name": "S",
-                                    "typeId": "2229-f494-25db-c5d3",
-                                    "$text": "4"
-                                  },
-                                  {
-                                    "name": "AP",
-                                    "typeId": "9ead-8a10-520-de15",
-                                    "$text": "0"
-                                  },
-                                  {
-                                    "name": "D",
-                                    "typeId": "a354-c1c8-a745-f9e3",
-                                    "$text": "1"
-                                  },
-                                  {
-                                    "name": "Keywords",
-                                    "typeId": "7f1b-8591-2fcf-d01c",
-                                    "$text": ""
-                                  }
-                                ]
                               }
                             ],
                             "constraints": [
@@ -86695,6 +86856,43 @@
                                 "scope": "parent",
                                 "shared": true,
                                 "id": "d70b-843d-b662-5318",
+                                "includeChildSelections": false
+                              }
+                            ]
+                          },
+                          {
+                            "targetId": "32ab-c37c-b71f-8415",
+                            "id": "7e4a-b0e6-a8a8-0398",
+                            "type": "selectionEntry",
+                            "name": "Kombi-rokkit",
+                            "hidden": false,
+                            "entryLinks": [
+                              {
+                                "import": true,
+                                "name": "Weapon Modifications",
+                                "hidden": false,
+                                "id": "3559-cefc-5f32-7fea",
+                                "type": "selectionEntryGroup",
+                                "targetId": "f9da-852a-d7f0-92e9"
+                              }
+                            ],
+                            "constraints": [
+                              {
+                                "type": "min",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "6230-2749-d0b5-eb8c",
+                                "includeChildSelections": false
+                              },
+                              {
+                                "type": "max",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "shared": true,
+                                "id": "39e5-e347-4ad4-b641",
                                 "includeChildSelections": false
                               }
                             ]
@@ -88157,6 +88355,112 @@
         "id": "8df-71e4-ccf5-99e8",
         "collective": true,
         "comment": "S2"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Kombi-rokkit",
+        "hidden": false,
+        "id": "32ab-c37c-b71f-8415",
+        "profiles": [
+          {
+            "name": "Kombi-rokkit",
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "hidden": false,
+            "id": "05d6-1076-cae8-0f4c",
+            "characteristics": [
+              {
+                "name": "Range",
+                "typeId": "9896-9419-16a1-92fc",
+                "$text": "24\""
+              },
+              {
+                "name": "A",
+                "typeId": "3bb-c35f-f54-fb08",
+                "$text": "1"
+              },
+              {
+                "name": "BS",
+                "typeId": "94d-8a98-cf90-183e",
+                "$text": "5+"
+              },
+              {
+                "name": "S",
+                "typeId": "2229-f494-25db-c5d3",
+                "$text": "10"
+              },
+              {
+                "name": "AP",
+                "typeId": "9ead-8a10-520-de15",
+                "$text": "-2"
+              },
+              {
+                "name": "D",
+                "typeId": "a354-c1c8-a745-f9e3",
+                "$text": "3"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "7f1b-8591-2fcf-d01c",
+                "$text": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Kombi-shoota",
+        "hidden": false,
+        "id": "3be9-053f-6354-b606",
+        "profiles": [
+          {
+            "name": "Kombi-shoota",
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "hidden": false,
+            "id": "8e4e-c95a-aeab-fec4",
+            "characteristics": [
+              {
+                "name": "Range",
+                "typeId": "9896-9419-16a1-92fc",
+                "$text": "24\""
+              },
+              {
+                "name": "A",
+                "typeId": "3bb-c35f-f54-fb08",
+                "$text": "2"
+              },
+              {
+                "name": "BS",
+                "typeId": "94d-8a98-cf90-183e",
+                "$text": "5+"
+              },
+              {
+                "name": "S",
+                "typeId": "2229-f494-25db-c5d3",
+                "$text": "4"
+              },
+              {
+                "name": "AP",
+                "typeId": "9ead-8a10-520-de15",
+                "$text": "0"
+              },
+              {
+                "name": "D",
+                "typeId": "a354-c1c8-a745-f9e3",
+                "$text": "1"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "7f1b-8591-2fcf-d01c",
+                "$text": ""
+              }
+            ]
+          }
+        ]
       }
     ],
     "rules": [
