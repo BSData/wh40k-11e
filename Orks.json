@@ -7674,7 +7674,7 @@
                 "localConditionGroups": [
                   {
                     "type": "atLeast",
-                    "value": 2,
+                    "value": 1,
                     "scope": "parent",
                     "field": "selections",
                     "includeChildSelections": true,
@@ -12140,7 +12140,7 @@
               }
             ],
             "type": "set",
-            "value": 150,
+            "value": 160,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -12157,6 +12157,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "e3b1-1240-2476-cd86",
+                        "shared": true,
+                        "childName": "Boyz"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -20542,7 +20582,14 @@
                     "hidden": false,
                     "id": "2b4e-7b5a-9196-abd9",
                     "type": "selectionEntry",
-                    "targetId": "552d-6c0d-80e8-ac32"
+                    "targetId": "552d-6c0d-80e8-ac32",
+                    "costs": [
+                      {
+                        "name": "pts",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 5
+                      }
+                    ]
                   }
                 ],
                 "modifierGroups": [
@@ -31029,7 +31076,42 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 45
+            "value": 55
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
           }
         ],
         "modifierGroups": [
@@ -36900,7 +36982,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 60
+            "value": 70
           },
           {
             "name": "Crusade Points",
@@ -37754,7 +37836,42 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 80
+            "value": 90
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
           }
         ],
         "modifierGroups": [
@@ -44015,7 +44132,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 65
+            "value": 55
           },
           {
             "name": "Crusade Points",
@@ -44290,6 +44407,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1291-7ba8-2c5a-4a92",
+                        "shared": true,
+                        "childName": "Trukk"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -46049,7 +46206,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 75
+            "value": 85
           },
           {
             "name": "Crusade Points",
@@ -46069,6 +46226,21 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -85203,7 +85375,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 100
+            "value": 115
           },
           {
             "name": "Crusade Points",
@@ -85242,46 +85414,6 @@
           }
         ],
         "modifiers": [
-          {
-            "type": "increment",
-            "value": 10,
-            "field": "51b2-306e-1021-d207",
-            "conditionGroups": [
-              {
-                "type": "and",
-                "localConditionGroups": [
-                  {
-                    "type": "atLeast",
-                    "value": 2,
-                    "scope": "parent",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "repeats": 1,
-                    "conditions": [
-                      {
-                        "type": "before",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "self",
-                        "childId": "any",
-                        "shared": true
-                      },
-                      {
-                        "type": "instanceOf",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "self",
-                        "childId": "78a7-cf35-aa8d-c420",
-                        "shared": true,
-                        "childName": "Big Mek Dakkarig"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
           {
             "type": "set",
             "value": 2,
@@ -87086,7 +87218,7 @@
               }
             ],
             "type": "set",
-            "value": 150,
+            "value": 160,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -87110,6 +87242,46 @@
             "type": "add",
             "value": "Not Valid for Matched Play",
             "field": "warning"
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "0bd3-2d5e-ce24-f6d5",
+                        "shared": true,
+                        "childName": "Boyz (Armageddon)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -95631,10 +95803,10 @@
             ],
             "categoryLinks": [
               {
-                "name": "Purge the Foe",
+                "name": "Priority Assets",
                 "hidden": false,
-                "id": "8187-f01e-8ebf-b21c",
-                "targetId": "6fe0-3dbe-f7e0-10bb",
+                "id": "697e-d26e-7591-f4e6",
+                "targetId": "0936-9767-1cc7-52ae",
                 "primary": false
               }
             ]
@@ -95716,7 +95888,7 @@
               {
                 "name": "Detachment Points",
                 "typeId": "82ae-1066-5107-6ae0",
-                "value": 2
+                "value": 3
               },
               {
                 "name": "Enhancements",
@@ -96011,10 +96183,10 @@
             ],
             "categoryLinks": [
               {
-                "name": "Disruption",
+                "name": "Reconnaissance",
                 "hidden": false,
-                "id": "f3d1-d6b2-ec96-ad44",
-                "targetId": "ecf8-cf72-7d5b-1b5b",
+                "id": "9fe4-215b-c2b3-b650",
+                "targetId": "b4a7-5083-fe94-4d24",
                 "primary": false
               }
             ]
@@ -96122,10 +96294,10 @@
             ],
             "categoryLinks": [
               {
-                "name": "Purge the Foe",
+                "name": "Disruption",
                 "hidden": false,
-                "id": "e4bb-2028-1190-f4d5",
-                "targetId": "6fe0-3dbe-f7e0-10bb",
+                "id": "3a87-255b-870c-cbcb",
+                "targetId": "ecf8-cf72-7d5b-1b5b",
                 "primary": false
               }
             ]
