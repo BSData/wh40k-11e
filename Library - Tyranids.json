@@ -8316,7 +8316,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 90
+            "value": 80
           },
           {
             "name": "Crusade Points",
@@ -8922,6 +8922,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "fada-677a-f6a4-cd12",
+                        "shared": true,
+                        "childName": "Tyrannocyte"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -8930,7 +8970,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 60
+            "value": 55
           },
           {
             "name": "Crusade Points",
@@ -8982,7 +9022,7 @@
               }
             ],
             "type": "set",
-            "value": 120,
+            "value": 105,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -16109,7 +16149,7 @@
                       }
                     ],
                     "id": "bb92-1121-d089-3082",
-                    "name": "Psychostatic Disruption",
+                    "name": "Psychostatic Disruption (Aura)",
                     "hidden": false,
                     "typeId": "9cc3-6d83-4dd3-9b64",
                     "typeName": "Abilities"
@@ -16158,7 +16198,7 @@
                   }
                 ],
                 "id": "6fe4-d5e5-26c-449a",
-                "name": "Psychostatic Disruption",
+                "name": "Psychostatic Disruption (Aura)",
                 "hidden": false,
                 "collective": false,
                 "import": true,
@@ -17216,7 +17256,7 @@
                   {
                     "name": "pts",
                     "typeId": "51b2-306e-1021-d207",
-                    "value": 20
+                    "value": 30
                   },
                   {
                     "name": "Crusade Points",
