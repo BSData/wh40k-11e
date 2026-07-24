@@ -98,7 +98,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 150
+            "value": 140
           },
           {
             "name": "Crusade Points",
@@ -199,7 +199,7 @@
               }
             ],
             "type": "set",
-            "value": 300,
+            "value": 280,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -3417,7 +3417,7 @@
               }
             ],
             "type": "set",
-            "value": 150,
+            "value": 140,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -5600,10 +5600,62 @@
         ],
         "modifiers": [
           {
+            "type": "set",
+            "value": 2,
+            "field": "23e8-ecd2-0720-e793",
             "conditions": [
               {
-                "type": "greaterThan",
-                "value": 5,
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 160,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "greaterThan",
+                    "value": 5,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false
+                  },
+                  {
+                    "type": "lessThan",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 150,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 10,
                 "field": "selections",
                 "scope": "self",
                 "childId": "model",
@@ -5611,10 +5663,7 @@
                 "includeChildSelections": true,
                 "includeChildForces": false
               }
-            ],
-            "type": "set",
-            "value": 160,
-            "field": "51b2-306e-1021-d207"
+            ]
           },
           {
             "type": "increment",
@@ -5653,23 +5702,6 @@
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "type": "set",
-            "value": 2,
-            "field": "23e8-ecd2-0720-e793",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d62d-db22-4893-4bc0",
-                "shared": true,
-                "includeChildSelections": true,
-                "childName": "1. Incursion (1000 Point limit)"
               }
             ]
           }
@@ -10460,7 +10492,52 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 85
+            "value": 75
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
+            "value": 0
           }
         ],
         "constraints": [
@@ -11336,6 +11413,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1d1-f0d2-b810-12fe",
+                        "shared": true,
+                        "childName": "Goliath Truck"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -11477,7 +11594,7 @@
               }
             ],
             "type": "set",
-            "value": 150,
+            "value": 140,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -15932,7 +16049,7 @@
               }
             ],
             "type": "set",
-            "value": 145,
+            "value": 135,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -20653,7 +20770,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 80
+            "value": 75
           },
           {
             "name": "Crusade Points",
@@ -22222,6 +22339,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "4565-bd65-9e8b-284d",
+                        "shared": true,
+                        "childName": "Reductus Saboteur"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
