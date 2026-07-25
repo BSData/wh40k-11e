@@ -29301,6 +29301,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 15,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "d490-6c4d-e83b-b183",
+                        "shared": true,
+                        "childName": "Great Unclean One"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "modifierGroups": [
@@ -58239,35 +58279,6 @@
                     "type": "or",
                     "conditionGroups": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Tzeentch"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
-                      },
-                      {
                         "type": "and",
                         "conditions": [
                           {
@@ -58293,6 +58304,20 @@
                             "childName": "Tzeentch"
                           }
                         ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -58495,35 +58520,6 @@
                     "type": "or",
                     "conditionGroups": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
-                      },
-                      {
                         "type": "and",
                         "conditions": [
                           {
@@ -58549,6 +58545,20 @@
                             "childName": "Nurgle"
                           }
                         ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -58671,34 +58681,6 @@
                     "type": "or",
                     "conditionGroups": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
-                      },
-                      {
                         "type": "and",
                         "conditions": [
                           {
@@ -58722,6 +58704,20 @@
                             "includeChildForces": false
                           }
                         ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -70236,7 +70232,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "b45c-af22-788a-dfd6",
     "name": "Chaos - Daemons Library",
-    "revision": 5,
+    "revision": 7,
     "battleScribeVersion": 2.03,
     "library": true,
     "gameSystemId": "sys-352e-adc2-7639-d610",
