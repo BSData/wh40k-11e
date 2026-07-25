@@ -15321,12 +15321,12 @@
           {
             "characteristics": [
               {
-                "$text": "Each time this unit is selected to shoot, it can use this ability. If it does, until the end of the phase, add 2 to the Attacks characteristic of bolt rifles equipped by models in this unit and you can only select one enemy unit as the target of all of this unit's attacks",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "In your Shooting phase, when this unit is selected to shoot, select up to one visible enemy unit. While making those attacks, this unit’s Bolt Rifle attacks that targeted that enemy unit have +2 A"
               }
             ],
-            "name": "Target Elimination",
+            "name": "Hail of Bolts",
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
             "hidden": false,
@@ -28146,9 +28146,9 @@
           {
             "characteristics": [
               {
-                "$text": "At the start of the Fight phase, you can select one of the following abilities to apply to models in this unit until the end of the phase:\n\n■ Swords of the Imperium: Each time a model in this unit makes a melee attack, re-roll a Hit roll of 1.\n■ Shields of the Imperium: Each time an invulnerable saving throw is made for a model in this unit, re-roll a saving throw of 1.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "(Once per turn, per unit): In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n\n\n▪ This unit’s melee attacks have +1 to hit rolls.\n▪ Or: Attacks that target this unit have ‑1 to hit rolls."
               }
             ],
             "name": "Bladeguard",
@@ -29323,94 +29323,12 @@
               {
                 "constraints": [
                   {
-                    "type": "min",
-                    "value": 4,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "84ea-f94a-3737-d3a7"
-                  },
-                  {
                     "type": "max",
                     "value": 9,
                     "field": "selections",
                     "scope": "parent",
                     "shared": true,
                     "id": "1f4-2e60-49fb-3"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "Melee",
-                            "name": "Range",
-                            "typeId": "914c-b413-91e3-a132"
-                          },
-                          {
-                            "$text": "4",
-                            "name": "A",
-                            "typeId": "2337-daa1-6682-b110"
-                          },
-                          {
-                            "$text": "3+",
-                            "name": "WS",
-                            "typeId": "95d1-95f-45b4-11d6"
-                          },
-                          {
-                            "$text": "5",
-                            "name": "S",
-                            "typeId": "ab33-d393-96ce-ccba"
-                          },
-                          {
-                            "$text": "-1",
-                            "name": "AP",
-                            "typeId": "41a0-1301-112a-e2f2"
-                          },
-                          {
-                            "$text": "1",
-                            "name": "D",
-                            "typeId": "3254-9fe6-d824-513e"
-                          },
-                          {
-                            "$text": "-",
-                            "name": "Keywords",
-                            "typeId": "893f-9000-ccf7-648e"
-                          }
-                        ],
-                        "name": "Vanguard Veteran Weapon",
-                        "typeId": "8a40-4aaa-c780-9046",
-                        "typeName": "Melee Weapons",
-                        "hidden": false,
-                        "id": "ca66-54e3-a097-55b0"
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "a516-284-62ac-8257"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "9343-e602-e906-688b"
-                      }
-                    ],
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Vanguard Veteran Weapon",
-                    "hidden": false,
-                    "id": "4fab-9370-8ba1-b1bc",
-                    "collective": true
                   }
                 ],
                 "selectionEntryGroups": [
@@ -29556,7 +29474,28 @@
                 "import": true,
                 "name": "Vanguard Veterans with Jump Packs",
                 "hidden": false,
-                "id": "5ca1-8654-298a-b29f"
+                "id": "5ca1-8654-298a-b29f",
+                "entryLinks": [
+                  {
+                    "import": true,
+                    "name": "Vanguard Veteran Weapon",
+                    "hidden": false,
+                    "id": "dd15-db0a-747d-d3a3",
+                    "type": "selectionEntry",
+                    "targetId": "d466-dd6c-f7bd-6fea",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "0fbb-dbdd-a4fc-b2a4",
+                        "includeChildSelections": false
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -29578,24 +29517,6 @@
                   }
                 ],
                 "entryLinks": [
-                  {
-                    "entryLinks": [
-                      {
-                        "import": true,
-                        "name": "Weapon Modifications",
-                        "hidden": false,
-                        "id": "56d4-bf98-0ff9-ed04",
-                        "type": "selectionEntryGroup",
-                        "targetId": "f9da-852a-d7f0-92e9"
-                      }
-                    ],
-                    "import": true,
-                    "name": "Vanguard Veteran Weapon",
-                    "hidden": false,
-                    "type": "selectionEntry",
-                    "id": "5eaa-19f1-e3b2-8652",
-                    "targetId": "4fab-9370-8ba1-b1bc"
-                  },
                   {
                     "import": true,
                     "name": "Terminator Honours upgrade",
@@ -29629,7 +29550,27 @@
                         "import": true,
                         "name": "Storm Shield",
                         "hidden": false,
-                        "id": "29e1-5f2e-8d3a-8c4"
+                        "id": "29e1-5f2e-8d3a-8c4",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": true,
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "9e9c-bf4d-2d40-be82",
+                                "childId": "2847-71d9-2b3e-67d7",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "childName": "Master-crafted Power Weapon"
+                              }
+                            ]
+                          }
+                        ]
                       }
                     ],
                     "constraints": [
@@ -29667,7 +29608,27 @@
                         "hidden": false,
                         "type": "selectionEntry",
                         "id": "3920-2e53-55d7-7b50",
-                        "targetId": "18b0-8c2-173f-5"
+                        "targetId": "18b0-8c2-173f-5",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": true,
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "9e9c-bf4d-2d40-be82",
+                                "childId": "2847-71d9-2b3e-67d7",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "childName": "Master-crafted Power Weapon"
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "entryLinks": [
@@ -29703,7 +29664,27 @@
                         "hidden": false,
                         "type": "selectionEntry",
                         "id": "d98-bf8b-7aed-fd6a",
-                        "targetId": "d8bf-e17f-d6fa-b7e8"
+                        "targetId": "d8bf-e17f-d6fa-b7e8",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": true,
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "9e9c-bf4d-2d40-be82",
+                                "childId": "2847-71d9-2b3e-67d7",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "childName": "Master-crafted Power Weapon"
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "entryLinks": [
@@ -29721,7 +29702,27 @@
                         "hidden": false,
                         "type": "selectionEntry",
                         "id": "e2d-9908-69c-497a",
-                        "targetId": "9dc6-6ad8-818e-db2e"
+                        "targetId": "9dc6-6ad8-818e-db2e",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": true,
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "9e9c-bf4d-2d40-be82",
+                                "childId": "2847-71d9-2b3e-67d7",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "childName": "Master-crafted Power Weapon"
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "entryLinks": [
@@ -29739,13 +29740,145 @@
                         "hidden": false,
                         "id": "1adf-6ccb-75ab-a0f5",
                         "type": "selectionEntry",
-                        "targetId": "5c5f-bb5a-eb8a-5460"
+                        "targetId": "5c5f-bb5a-eb8a-5460",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": true,
+                            "field": "hidden",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "9e9c-bf4d-2d40-be82",
+                                "childId": "2847-71d9-2b3e-67d7",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "childName": "Master-crafted Power Weapon"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "import": true,
+                        "name": "Heavy Bolt Pistol",
+                        "hidden": false,
+                        "id": "19ba-d90e-427b-25dc",
+                        "type": "selectionEntry",
+                        "targetId": "3b8f-1cb7-3c6e-4455",
+                        "constraints": [
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "7ba2-0ec6-402b-3dee"
+                          }
+                        ],
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": 0,
+                            "field": "7ba2-0ec6-402b-3dee",
+                            "conditions": [
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "parent",
+                                "childId": "2847-71d9-2b3e-67d7",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "childName": "Master-crafted Power Weapon"
+                              }
+                            ]
+                          }
+                        ]
                       }
                     ],
                     "name": "Pistol Option",
                     "hidden": false,
                     "id": "6f57-8789-8362-12e6",
                     "defaultSelectionEntryId": "3920-2e53-55d7-7b50"
+                  },
+                  {
+                    "name": "Melee Weapon",
+                    "id": "5f19-8441-54ab-662e",
+                    "hidden": false,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "3374-f7e0-d365-1a67",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "330f-3b74-62f9-222a",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "defaultSelectionEntryId": "500d-0a3d-5f98-e883",
+                    "entryLinks": [
+                      {
+                        "import": true,
+                        "name": "Master-crafted Power Weapon",
+                        "hidden": false,
+                        "id": "2847-71d9-2b3e-67d7",
+                        "type": "selectionEntry",
+                        "targetId": "6854-cb18-b20b-42f4",
+                        "constraints": [
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "f147-05eb-d520-8a51",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": 0,
+                            "field": "f147-05eb-d520-8a51",
+                            "conditions": [
+                              {
+                                "type": "atLeast",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "9e9c-bf4d-2d40-be82",
+                                "childId": "d466-dd6c-f7bd-6fea",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "includeChildForces": true,
+                                "childName": "Vanguard Veteran Weapon"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "import": true,
+                        "name": "Vanguard Veteran Weapon",
+                        "hidden": false,
+                        "id": "500d-0a3d-5f98-e883",
+                        "type": "selectionEntry",
+                        "targetId": "d466-dd6c-f7bd-6fea"
+                      }
+                    ]
                   }
                 ],
                 "profiles": [
@@ -29799,6 +29932,324 @@
                 "name": "Vanguard Veteran Sergeant with Jump Pack",
                 "hidden": false,
                 "id": "20d9-b1de-d9db-72ef"
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Vanguard Veteran w/Master-crafted Power Weapon",
+                "hidden": false,
+                "id": "6b2e-a790-5023-32df",
+                "profiles": [
+                  {
+                    "name": "Vanguard Veterans with Jump Packs",
+                    "typeId": "c547-1836-d8a-ff4f",
+                    "typeName": "Unit",
+                    "hidden": false,
+                    "id": "3c1e-5909-efd8-21ae",
+                    "characteristics": [
+                      {
+                        "$text": "12\"",
+                        "name": "M",
+                        "typeId": "e703-ecb6-5ce7-aec1"
+                      },
+                      {
+                        "$text": "4",
+                        "name": "T",
+                        "typeId": "d29d-cf75-fc2d-34a4"
+                      },
+                      {
+                        "$text": "3+",
+                        "name": "Sv",
+                        "typeId": "450-a17e-9d5e-29da"
+                      },
+                      {
+                        "$text": "2",
+                        "name": "W",
+                        "typeId": "750a-a2ec-90d3-21fe"
+                      },
+                      {
+                        "$text": "6+",
+                        "name": "LD",
+                        "typeId": "58d2-b879-49c7-43bc"
+                      },
+                      {
+                        "$text": "1",
+                        "name": "OC",
+                        "typeId": "bef7-942a-1a23-59f8"
+                      },
+                      {
+                        "name": "InSv",
+                        "typeId": "55a7-5b54-c60d-11dc",
+                        "$text": ""
+                      }
+                    ]
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "208d-a055-540b-1e62",
+                    "includeChildSelections": false
+                  }
+                ],
+                "entryLinks": [
+                  {
+                    "import": true,
+                    "name": "Master-crafted Power Weapon",
+                    "hidden": false,
+                    "id": "4dc3-9621-a7e1-decf",
+                    "type": "selectionEntry",
+                    "targetId": "6854-cb18-b20b-42f4",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "b9ed-0d02-31c2-3a9f",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "abf6-9972-b008-2ac1",
+                        "includeChildSelections": false
+                      }
+                    ]
+                  },
+                  {
+                    "import": true,
+                    "name": "Heavy Bolt Pistol",
+                    "hidden": false,
+                    "id": "4fac-92b5-4669-7321",
+                    "type": "selectionEntry",
+                    "targetId": "83a1-feb8-d495-aa28",
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a198-8e9a-a750-b4eb",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "bee0-6510-7c88-edfe",
+                        "includeChildSelections": false
+                      }
+                    ]
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "set",
+                    "value": 0,
+                    "field": "208d-a055-540b-1e62",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "9e9c-bf4d-2d40-be82",
+                        "childId": "d466-dd6c-f7bd-6fea",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Vanguard Veteran Weapon"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Vanguard Veteran w/Plasma Pistol & Master-crafter Power Weapon",
+                "hidden": false,
+                "id": "2949-3e7a-e4a5-199b",
+                "profiles": [
+                  {
+                    "name": "Vanguard Veterans with Jump Packs",
+                    "typeId": "c547-1836-d8a-ff4f",
+                    "typeName": "Unit",
+                    "hidden": false,
+                    "id": "69c2-058f-58e1-0dce",
+                    "characteristics": [
+                      {
+                        "$text": "12\"",
+                        "name": "M",
+                        "typeId": "e703-ecb6-5ce7-aec1"
+                      },
+                      {
+                        "$text": "4",
+                        "name": "T",
+                        "typeId": "d29d-cf75-fc2d-34a4"
+                      },
+                      {
+                        "$text": "3+",
+                        "name": "Sv",
+                        "typeId": "450-a17e-9d5e-29da"
+                      },
+                      {
+                        "$text": "2",
+                        "name": "W",
+                        "typeId": "750a-a2ec-90d3-21fe"
+                      },
+                      {
+                        "$text": "6+",
+                        "name": "LD",
+                        "typeId": "58d2-b879-49c7-43bc"
+                      },
+                      {
+                        "$text": "1",
+                        "name": "OC",
+                        "typeId": "bef7-942a-1a23-59f8"
+                      },
+                      {
+                        "name": "InSv",
+                        "typeId": "55a7-5b54-c60d-11dc",
+                        "$text": ""
+                      }
+                    ]
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "20b7-a5a2-3de4-987c",
+                    "includeChildSelections": false
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "increment",
+                    "value": 1,
+                    "field": "20b7-a5a2-3de4-987c",
+                    "conditionGroups": [
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 10,
+                            "field": "selections",
+                            "scope": "parent",
+                            "childId": "8a7f-b578-d274-9769",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "childName": "Vanguard Veterans with Jump Packs"
+                          },
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "9e9c-bf4d-2d40-be82",
+                            "childId": "d466-dd6c-f7bd-6fea",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "includeChildForces": true,
+                            "childName": "Vanguard Veteran Weapon"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "set",
+                    "value": 0,
+                    "field": "20b7-a5a2-3de4-987c",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "9e9c-bf4d-2d40-be82",
+                        "childId": "d466-dd6c-f7bd-6fea",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Vanguard Veteran Weapon"
+                      }
+                    ]
+                  }
+                ],
+                "entryLinks": [
+                  {
+                    "import": true,
+                    "name": "Master-crafted Power Weapon",
+                    "hidden": false,
+                    "id": "a3c7-2b66-b2d4-b832",
+                    "type": "selectionEntry",
+                    "targetId": "6854-cb18-b20b-42f4",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "c350-0395-8424-9d45",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2ec5-9547-4933-6bba",
+                        "includeChildSelections": false
+                      }
+                    ]
+                  },
+                  {
+                    "import": true,
+                    "name": "Plasma pistol",
+                    "hidden": false,
+                    "id": "0af0-28d4-1e94-9b48",
+                    "type": "selectionEntry",
+                    "targetId": "25c2-104f-fa0c-809e",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "8948-cd7a-729b-e58f",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "2c0c-2d02-dfd6-c6e9",
+                        "includeChildSelections": false
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -29822,7 +30273,8 @@
             "name": "Vanguard Veterans with Jump Packs",
             "hidden": false,
             "id": "8a7f-b578-d274-9769",
-            "sortIndex": 2
+            "sortIndex": 2,
+            "defaultSelectionEntryId": "5ca1-8654-298a-b29f"
           }
         ],
         "infoLinks": [
@@ -30493,7 +30945,7 @@
                     "hidden": false,
                     "type": "selectionEntry",
                     "id": "6dc9-3494-9724-c104",
-                    "targetId": "4fab-9370-8ba1-b1bc"
+                    "targetId": "d466-dd6c-f7bd-6fea"
                   },
                   {
                     "import": true,
@@ -50312,6 +50764,12 @@
             "id": "50d5-37dd-3666-666b",
             "primary": false,
             "name": "Faction: Adeptus Astartes"
+          },
+          {
+            "targetId": "b927-8eeb-7cc3-8dec",
+            "id": "0918-e80e-6e34-8256",
+            "primary": false,
+            "name": "Frame"
           }
         ],
         "costs": [
@@ -57699,6 +58157,12 @@
             "id": "8ef6-2a80-73a9-2256",
             "primary": false,
             "name": "Storm Speeder Hailstrike"
+          },
+          {
+            "targetId": "b927-8eeb-7cc3-8dec",
+            "id": "fff8-72f5-c404-4c68",
+            "primary": false,
+            "name": "Frame"
           }
         ],
         "profiles": [
@@ -58385,6 +58849,12 @@
             "id": "dac4-c1ba-e917-1053",
             "primary": false,
             "name": "Faction: Adeptus Astartes"
+          },
+          {
+            "targetId": "b927-8eeb-7cc3-8dec",
+            "id": "3a4d-1386-60cb-2430",
+            "primary": false,
+            "name": "Frame"
           }
         ],
         "profiles": [
@@ -59405,6 +59875,12 @@
             "id": "d385-ae29-e082-b645",
             "primary": false,
             "name": "Faction: Adeptus Astartes"
+          },
+          {
+            "targetId": "b927-8eeb-7cc3-8dec",
+            "id": "ba3c-0420-1e91-c90c",
+            "primary": false,
+            "name": "Frame"
           }
         ],
         "modifiers": [
@@ -82877,6 +83353,12 @@
             "id": "8edc-dfa4-9f39-ce19",
             "primary": true,
             "name": "Dedicated Transport"
+          },
+          {
+            "targetId": "b927-8eeb-7cc3-8dec",
+            "id": "043a-a4ac-7bac-0eb7",
+            "primary": false,
+            "name": "Frame"
           }
         ],
         "constraints": [
@@ -86305,6 +86787,12 @@
             "id": "d20f-7ab9-173e-14f9",
             "primary": false,
             "name": "Faction: Adeptus Astartes"
+          },
+          {
+            "targetId": "b927-8eeb-7cc3-8dec",
+            "id": "5896-abe8-a53c-572c",
+            "primary": false,
+            "name": "Frame"
           }
         ],
         "constraints": [
@@ -95616,6 +96104,25 @@
                     "id": "0224-bfd2-568d-0f47",
                     "type": "selectionEntry",
                     "targetId": "18b0-8c2-173f-5"
+                  },
+                  {
+                    "import": true,
+                    "name": "Absolvor bolt pistol",
+                    "hidden": false,
+                    "id": "70ef-c78f-3a10-a6f7",
+                    "type": "selectionEntry",
+                    "targetId": "a490-361-c9c4-afeb",
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "64ba-4147-8fa4-d95c",
+                        "includeChildSelections": false
+                      }
+                    ]
                   }
                 ],
                 "name": "Weapon",
@@ -105062,7 +105569,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSOR SQUAD\n■ BLADEGUARD VETERAN SQUAD\n■ COMPANY HEROES, CRUSADER SQUAD\n■ DEATHWATCH VETERANS\n■ DECIMUS KILL TEAM\n■ FORTIS KILL TEAM\n■ HELLBLASTER SQUAD\n■ INFERNUS SQUAD\n■ INNER CIRCLE COMPANIONS\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n■ SWORD BRETHREN SQUAD\n■ TACTICAL SQUAD\n■ VICTRIX HONOUR GUARD\n\n* This model cannot be attached to a Bladeguard Veteran Squad unless it is equipped with a relic shield, and cannot be attached to a Hellblaster Squad unless it is equipped with a plasma pistol."
+                "$text": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSOR SQUAD\n■ BLADEGUARD VETERAN SQUAD\n■ COMPANY HEROES, CRUSADER SQUAD\n■ DEATHWATCH VETERANS\n■ DECIMUS KILL TEAM\n■ FORTIS KILL TEAM\n■ HELLBLASTER SQUAD\n■ INFERNUS SQUAD\n■ INNER CIRCLE COMPANIONS\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n■ SWORD BRETHREN SQUAD\n■ TACTICAL SQUAD\n■ VICTRIX HONOUR GUARD\n"
               }
             ],
             "name": "Leader",
@@ -107094,12 +107601,6 @@
             "id": "f5a1-6e93-de56-d28b",
             "primary": false,
             "name": "Fly"
-          },
-          {
-            "targetId": "63f1-e6e8-f6f6-a4f0",
-            "id": "da1c-1264-1ad3-fdf5",
-            "primary": false,
-            "name": "Aircraft"
           },
           {
             "targetId": "75e8-57c4-40e3-1817",
@@ -127561,20 +128062,6 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "cb97-8ee0-1cbf-e38f"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "You must attach one Captain or Chapter Master model to this unit. If this is not possible, this unit does not take part in the battle and counts as having been destroyed.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Company Heroes",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "8a9-4b06-b80-76df"
           }
         ],
         "infoLinks": [
@@ -139597,6 +140084,70 @@
             ]
           }
         ]
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Vanguard Veteran Weapon",
+        "hidden": false,
+        "id": "d466-dd6c-f7bd-6fea",
+        "profiles": [
+          {
+            "name": "Vanguard Veteran Weapon",
+            "typeId": "8a40-4aaa-c780-9046",
+            "typeName": "Melee Weapons",
+            "hidden": false,
+            "id": "6ec9-8e25-4423-7b48",
+            "characteristics": [
+              {
+                "$text": "Melee",
+                "name": "Range",
+                "typeId": "914c-b413-91e3-a132"
+              },
+              {
+                "$text": "4",
+                "name": "A",
+                "typeId": "2337-daa1-6682-b110"
+              },
+              {
+                "$text": "3+",
+                "name": "WS",
+                "typeId": "95d1-95f-45b4-11d6"
+              },
+              {
+                "$text": "5",
+                "name": "S",
+                "typeId": "ab33-d393-96ce-ccba"
+              },
+              {
+                "$text": "-1",
+                "name": "AP",
+                "typeId": "41a0-1301-112a-e2f2"
+              },
+              {
+                "$text": "1",
+                "name": "D",
+                "typeId": "3254-9fe6-d824-513e"
+              },
+              {
+                "$text": "-",
+                "name": "Keywords",
+                "typeId": "893f-9000-ccf7-648e"
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "1e8d-e4cf-64cc-1e90"
+          }
+        ],
+        "collective": true
       }
     ],
     "sharedProfiles": [
@@ -142472,10 +143023,10 @@
             ],
             "categoryLinks": [
               {
-                "targetId": "ecf8-cf72-7d5b-1b5b",
-                "id": "115e-aed8-ae0c-ee78",
+                "targetId": "6fe0-3dbe-f7e0-10bb",
+                "id": "d3e3-460e-57ec-77d7",
                 "primary": false,
-                "name": "Disruption"
+                "name": "Purge the Foe"
               }
             ]
           },
@@ -144067,10 +144618,10 @@
             ],
             "categoryLinks": [
               {
-                "targetId": "6fe0-3dbe-f7e0-10bb",
-                "id": "9ff4-bc85-8253-e3e0",
+                "targetId": "ecf8-cf72-7d5b-1b5b",
+                "id": "250f-a6a6-6f93-d790",
                 "primary": false,
-                "name": "Purge the Foe"
+                "name": "Disruption"
               }
             ],
             "constraints": [
@@ -153677,7 +154228,7 @@
                       {
                         "name": "Description",
                         "typeId": "9b8f-694b-e5e-b573",
-                        "$text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have:\n\n\n▪ [ANTI‑MONSTER/VEHICLE 5+].\n▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1]."
+                        "$text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have:\n\n\n▪ [LETHAL HITS].\n▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1]."
                       }
                     ],
                     "name": "Fusillade",
@@ -153820,7 +154371,7 @@
                       {
                         "name": "Description",
                         "typeId": "9b8f-694b-e5e-b573",
-                        "$text": "ADEPTUS ASTARTES PSYKER model only. \n\n\n▪ At the end of your opponent’s Fight phase, you can place this unit into strategic reserves.\n▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike."
+                        "$text": "ADEPTUS ASTARTES PSYKER model only.\n▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike.\n▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do:\n     ▫ Place this unit in strategic reserves.\n     ▫ This unit can make an ingress move in your next Movement phase (including in your first turn)"
                       }
                     ]
                   }
