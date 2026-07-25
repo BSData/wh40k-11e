@@ -1436,7 +1436,15 @@
             "name": "Master-crafted plasma cannon",
             "hidden": false,
             "id": "bfbe-ac79-2a43-5d81",
-            "page": 11
+            "page": 11,
+            "categoryLinks": [
+              {
+                "targetId": "cb29-f4bb-ff15-6b11",
+                "id": "e267-a16e-fbc5-7a84",
+                "primary": false,
+                "name": "Plasma"
+              }
+            ]
           },
           {
             "profiles": [
@@ -3069,7 +3077,26 @@
                 "typeName": "Ranged Weapons",
                 "hidden": false,
                 "id": "708a-4618-fdfd-8775",
-                "page": 41
+                "page": 41,
+                "modifiers": [
+                  {
+                    "type": "increment",
+                    "value": 1,
+                    "field": "2229-f494-25db-c5d3",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "6357-b8d4-0b19-41a8",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Dark Age Arsenal"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "infoLinks": [
@@ -7769,145 +7796,6 @@
                         "includeChildSelections": false
                       }
                     ],
-                    "selectionEntries": [
-                      {
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Plasma talon",
-                        "hidden": false,
-                        "id": "d6dc-15c4-98ef-7995",
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "5d99-3ab0-19f9-5eaf"
-                          }
-                        ],
-                        "profiles": [
-                          {
-                            "name": "➤ Plasma talon - Standard",
-                            "typeId": "f77d-b953-8fa4-b762",
-                            "typeName": "Ranged Weapons",
-                            "hidden": false,
-                            "id": "7995-69db-9e2d-e5dd",
-                            "characteristics": [
-                              {
-                                "$text": "18\"",
-                                "name": "Range",
-                                "typeId": "9896-9419-16a1-92fc"
-                              },
-                              {
-                                "$text": "2",
-                                "name": "A",
-                                "typeId": "3bb-c35f-f54-fb08"
-                              },
-                              {
-                                "$text": "3+",
-                                "name": "BS",
-                                "typeId": "94d-8a98-cf90-183e"
-                              },
-                              {
-                                "$text": "7",
-                                "name": "S",
-                                "typeId": "2229-f494-25db-c5d3"
-                              },
-                              {
-                                "$text": "-2",
-                                "name": "AP",
-                                "typeId": "9ead-8a10-520-de15"
-                              },
-                              {
-                                "$text": "1",
-                                "name": "D",
-                                "typeId": "a354-c1c8-a745-f9e3"
-                              },
-                              {
-                                "$text": "Rapid Fire 1",
-                                "name": "Keywords",
-                                "typeId": "7f1b-8591-2fcf-d01c"
-                              }
-                            ],
-                            "page": 31
-                          },
-                          {
-                            "name": "➤ Plasma talon - Supercharged",
-                            "typeId": "f77d-b953-8fa4-b762",
-                            "typeName": "Ranged Weapons",
-                            "hidden": false,
-                            "id": "b09e-a6a8-c405-bc65",
-                            "characteristics": [
-                              {
-                                "$text": "18\"",
-                                "name": "Range",
-                                "typeId": "9896-9419-16a1-92fc"
-                              },
-                              {
-                                "$text": "2",
-                                "name": "A",
-                                "typeId": "3bb-c35f-f54-fb08"
-                              },
-                              {
-                                "$text": "3+",
-                                "name": "BS",
-                                "typeId": "94d-8a98-cf90-183e"
-                              },
-                              {
-                                "$text": "8",
-                                "name": "S",
-                                "typeId": "2229-f494-25db-c5d3"
-                              },
-                              {
-                                "$text": "-3",
-                                "name": "AP",
-                                "typeId": "9ead-8a10-520-de15"
-                              },
-                              {
-                                "$text": "2",
-                                "name": "D",
-                                "typeId": "a354-c1c8-a745-f9e3"
-                              },
-                              {
-                                "$text": "Hazardous, Rapid Fire 1",
-                                "name": "Keywords",
-                                "typeId": "7f1b-8591-2fcf-d01c"
-                              }
-                            ],
-                            "page": 31
-                          }
-                        ],
-                        "infoLinks": [
-                          {
-                            "name": "Hazardous",
-                            "id": "8b22-ef29-bce5-3b8e",
-                            "hidden": false,
-                            "type": "rule",
-                            "targetId": "8367-374c-f87-c627"
-                          },
-                          {
-                            "name": "Rapid Fire",
-                            "id": "03d7-70d9-87cf-45ed",
-                            "hidden": false,
-                            "type": "rule",
-                            "targetId": "c5c8-8b58-b8b6-7786"
-                          }
-                        ],
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Weapon Modifications",
-                            "hidden": false,
-                            "id": "ff5e-d9dc-ec8a-0639",
-                            "type": "selectionEntryGroup",
-                            "targetId": "f9da-852a-d7f0-92e9"
-                          }
-                        ],
-                        "page": 31,
-                        "collective": true
-                      }
-                    ],
                     "defaultSelectionEntryId": "d6dc-15c4-98ef-7995",
                     "entryLinks": [
                       {
@@ -7928,6 +7816,35 @@
                         ],
                         "type": "selectionEntry",
                         "targetId": "ca2b-3d9a-e739-cb21"
+                      },
+                      {
+                        "import": true,
+                        "name": "Plasma Talon",
+                        "hidden": false,
+                        "id": "daae-f8f7-8b6e-bcfc",
+                        "type": "selectionEntry",
+                        "targetId": "7d6a-2f26-fc2e-ca69",
+                        "constraints": [
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "34b9-2d4f-8402-b5cd",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Weapon Modifications",
+                            "hidden": false,
+                            "id": "ff5e-d9dc-ec8a-0639",
+                            "type": "selectionEntryGroup",
+                            "targetId": "f9da-852a-d7f0-92e9"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -8000,149 +7917,6 @@
                   }
                 ],
                 "selectionEntries": [
-                  {
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "36b6-ddf8-72ce-c5"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "f1c0-a6ac-d002-5584"
-                      }
-                    ],
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "18\"",
-                            "name": "Range",
-                            "typeId": "9896-9419-16a1-92fc"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "A",
-                            "typeId": "3bb-c35f-f54-fb08"
-                          },
-                          {
-                            "$text": "3+",
-                            "name": "BS",
-                            "typeId": "94d-8a98-cf90-183e"
-                          },
-                          {
-                            "$text": "7",
-                            "name": "S",
-                            "typeId": "2229-f494-25db-c5d3"
-                          },
-                          {
-                            "$text": "-2",
-                            "name": "AP",
-                            "typeId": "9ead-8a10-520-de15"
-                          },
-                          {
-                            "$text": "1",
-                            "name": "D",
-                            "typeId": "a354-c1c8-a745-f9e3"
-                          },
-                          {
-                            "$text": "Rapid Fire 1",
-                            "name": "Keywords",
-                            "typeId": "7f1b-8591-2fcf-d01c"
-                          }
-                        ],
-                        "name": "➤ Plasma talon - Standard",
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "hidden": false,
-                        "id": "5b8e-4321-9c5c-32db",
-                        "page": 31
-                      },
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "18\"",
-                            "name": "Range",
-                            "typeId": "9896-9419-16a1-92fc"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "A",
-                            "typeId": "3bb-c35f-f54-fb08"
-                          },
-                          {
-                            "$text": "3+",
-                            "name": "BS",
-                            "typeId": "94d-8a98-cf90-183e"
-                          },
-                          {
-                            "$text": "8",
-                            "name": "S",
-                            "typeId": "2229-f494-25db-c5d3"
-                          },
-                          {
-                            "$text": "-3",
-                            "name": "AP",
-                            "typeId": "9ead-8a10-520-de15"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "D",
-                            "typeId": "a354-c1c8-a745-f9e3"
-                          },
-                          {
-                            "$text": "Hazardous, Rapid Fire 1",
-                            "name": "Keywords",
-                            "typeId": "7f1b-8591-2fcf-d01c"
-                          }
-                        ],
-                        "name": "➤ Plasma talon - Supercharged",
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "hidden": false,
-                        "id": "f294-f08f-abd5-c4f4",
-                        "page": 31
-                      }
-                    ],
-                    "infoLinks": [
-                      {
-                        "name": "Hazardous",
-                        "hidden": false,
-                        "type": "rule",
-                        "id": "7c79-4520-bf10-fd1c",
-                        "targetId": "8367-374c-f87-c627"
-                      },
-                      {
-                        "name": "Rapid Fire",
-                        "hidden": false,
-                        "type": "rule",
-                        "id": "de40-c8d-4e91-2a1f",
-                        "targetId": "c5c8-8b58-b8b6-7786"
-                      }
-                    ],
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plasma talon",
-                    "hidden": false,
-                    "id": "89ed-d59b-4611-564d",
-                    "page": 31,
-                    "collective": true,
-                    "categoryLinks": [
-                      {
-                        "targetId": "cb29-f4bb-ff15-6b11",
-                        "id": "a6e1-fc20-1778-bc43",
-                        "primary": false,
-                        "name": "Plasma"
-                      }
-                    ]
-                  },
                   {
                     "constraints": [
                       {
@@ -8330,7 +8104,37 @@
                 "import": true,
                 "name": "Ravenwing Black Knight",
                 "hidden": false,
-                "id": "b25b-5cf6-a398-dd27"
+                "id": "b25b-5cf6-a398-dd27",
+                "entryLinks": [
+                  {
+                    "import": true,
+                    "name": "Plasma Talon",
+                    "hidden": false,
+                    "id": "1705-591f-04fa-4d2d",
+                    "type": "selectionEntry",
+                    "targetId": "7d6a-2f26-fc2e-ca69",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6c1f-fd27-7518-470e-min",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6c1f-fd27-7518-470e-max",
+                        "includeChildSelections": false
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -9458,163 +9262,6 @@
             ],
             "selectionEntryGroups": [
               {
-                "selectionEntries": [
-                  {
-                    "constraints": [
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "f1c0-a6ac-d002-5584"
-                      }
-                    ],
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "18\"",
-                            "name": "Range",
-                            "hidden": false,
-                            "id": "243b-93a0-5d58-369",
-                            "typeId": "9896-9419-16a1-92fc"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "A",
-                            "hidden": false,
-                            "id": "e9db-6d54-8bdd-be4f",
-                            "typeId": "3bb-c35f-f54-fb08"
-                          },
-                          {
-                            "$text": "3+",
-                            "name": "BS",
-                            "hidden": false,
-                            "id": "dbb7-2516-c5b9-3c81",
-                            "typeId": "94d-8a98-cf90-183e"
-                          },
-                          {
-                            "$text": "7",
-                            "name": "S",
-                            "hidden": false,
-                            "id": "2a9c-b668-38db-bc50",
-                            "typeId": "2229-f494-25db-c5d3"
-                          },
-                          {
-                            "$text": "-2",
-                            "name": "AP",
-                            "hidden": false,
-                            "id": "e642-ee28-50fc-dd77",
-                            "typeId": "9ead-8a10-520-de15"
-                          },
-                          {
-                            "$text": "1",
-                            "name": "D",
-                            "hidden": false,
-                            "id": "8dc0-6228-e0d7-998b",
-                            "typeId": "a354-c1c8-a745-f9e3"
-                          },
-                          {
-                            "$text": "Rapid Fire 1",
-                            "name": "Keywords",
-                            "hidden": false,
-                            "id": "7e43-f9e4-9f00-6deb",
-                            "typeId": "7f1b-8591-2fcf-d01c"
-                          }
-                        ],
-                        "name": "➤ Plasma talon - Standard",
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "hidden": false,
-                        "id": "a184-f7f6-8a19-e8d3",
-                        "page": 31
-                      },
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "18\"",
-                            "name": "Range",
-                            "hidden": false,
-                            "id": "4ea2-f887-7d2c-1df4",
-                            "typeId": "9896-9419-16a1-92fc"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "A",
-                            "hidden": false,
-                            "id": "c37a-349b-9df3-c366",
-                            "typeId": "3bb-c35f-f54-fb08"
-                          },
-                          {
-                            "$text": "3+",
-                            "name": "BS",
-                            "hidden": false,
-                            "id": "81cf-1fa2-a222-e6ac",
-                            "typeId": "94d-8a98-cf90-183e"
-                          },
-                          {
-                            "$text": "8",
-                            "name": "S",
-                            "hidden": false,
-                            "id": "b776-95d9-8c1c-e207",
-                            "typeId": "2229-f494-25db-c5d3"
-                          },
-                          {
-                            "$text": "-3",
-                            "name": "AP",
-                            "hidden": false,
-                            "id": "f054-3eab-aeec-1acb",
-                            "typeId": "9ead-8a10-520-de15"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "D",
-                            "hidden": false,
-                            "id": "41a5-f0e4-84a9-2d23",
-                            "typeId": "a354-c1c8-a745-f9e3"
-                          },
-                          {
-                            "$text": "Hazardous, Rapid Fire 1",
-                            "name": "Keywords",
-                            "hidden": false,
-                            "id": "4692-a543-bca5-d7ea",
-                            "typeId": "7f1b-8591-2fcf-d01c"
-                          }
-                        ],
-                        "name": "➤ Plasma talon - Supercharged",
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "hidden": false,
-                        "id": "f907-5556-9f43-dce2",
-                        "page": 31
-                      }
-                    ],
-                    "infoLinks": [
-                      {
-                        "name": "Hazardous",
-                        "hidden": false,
-                        "id": "3d36-8bc7-d204-ba8d",
-                        "type": "rule",
-                        "targetId": "8367-374c-f87-c627"
-                      },
-                      {
-                        "name": "Rapid Fire",
-                        "hidden": false,
-                        "id": "13e7-8de2-4b2f-f6c5",
-                        "type": "rule",
-                        "targetId": "c5c8-8b58-b8b6-7786"
-                      }
-                    ],
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plasma talon",
-                    "hidden": false,
-                    "id": "5808-cc1b-5f33-c7a7",
-                    "page": 31,
-                    "collective": true
-                  }
-                ],
                 "constraints": [
                   {
                     "type": "min",
@@ -9654,6 +9301,25 @@
                     "id": "c363-3ae4-67b6-abf6",
                     "type": "selectionEntry",
                     "targetId": "ca2b-3d9a-e739-cb21"
+                  },
+                  {
+                    "import": true,
+                    "name": "Plasma Talon",
+                    "hidden": false,
+                    "id": "d208-29d5-5f5f-917d",
+                    "type": "selectionEntry",
+                    "targetId": "7d6a-2f26-fc2e-ca69",
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "9f75-301e-d74a-078c",
+                        "includeChildSelections": false
+                      }
+                    ]
                   }
                 ],
                 "name": "Plasma Talon Replacement",
@@ -9921,163 +9587,6 @@
             ],
             "selectionEntryGroups": [
               {
-                "selectionEntries": [
-                  {
-                    "constraints": [
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "b0cd-cb1d-8eb3-9b61"
-                      }
-                    ],
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "18\"",
-                            "name": "Range",
-                            "hidden": false,
-                            "id": "bc2e-de5b-8d43-194c",
-                            "typeId": "9896-9419-16a1-92fc"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "A",
-                            "hidden": false,
-                            "id": "85a5-6e1-bdec-4b67",
-                            "typeId": "3bb-c35f-f54-fb08"
-                          },
-                          {
-                            "$text": "3+",
-                            "name": "BS",
-                            "hidden": false,
-                            "id": "2302-f1a-34d9-7e8a",
-                            "typeId": "94d-8a98-cf90-183e"
-                          },
-                          {
-                            "$text": "7",
-                            "name": "S",
-                            "hidden": false,
-                            "id": "706f-7f76-be42-a20d",
-                            "typeId": "2229-f494-25db-c5d3"
-                          },
-                          {
-                            "$text": "-2",
-                            "name": "AP",
-                            "hidden": false,
-                            "id": "527d-b152-7c06-b6f0",
-                            "typeId": "9ead-8a10-520-de15"
-                          },
-                          {
-                            "$text": "1",
-                            "name": "D",
-                            "hidden": false,
-                            "id": "f5f4-d051-1700-1950",
-                            "typeId": "a354-c1c8-a745-f9e3"
-                          },
-                          {
-                            "$text": "Rapid Fire 1",
-                            "name": "Keywords",
-                            "hidden": false,
-                            "id": "a7d9-6f83-b73b-919b",
-                            "typeId": "7f1b-8591-2fcf-d01c"
-                          }
-                        ],
-                        "name": "➤ Plasma talon - Standard",
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "hidden": false,
-                        "id": "bb05-5686-b444-cf6e",
-                        "page": 31
-                      },
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "18\"",
-                            "name": "Range",
-                            "hidden": false,
-                            "id": "d645-4c9d-5e12-672",
-                            "typeId": "9896-9419-16a1-92fc"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "A",
-                            "hidden": false,
-                            "id": "8e0c-ef37-87b2-6a29",
-                            "typeId": "3bb-c35f-f54-fb08"
-                          },
-                          {
-                            "$text": "3+",
-                            "name": "BS",
-                            "hidden": false,
-                            "id": "39d2-f7d0-2fd5-43c8",
-                            "typeId": "94d-8a98-cf90-183e"
-                          },
-                          {
-                            "$text": "8",
-                            "name": "S",
-                            "hidden": false,
-                            "id": "dd2f-3a3c-b1d6-dab9",
-                            "typeId": "2229-f494-25db-c5d3"
-                          },
-                          {
-                            "$text": "-3",
-                            "name": "AP",
-                            "hidden": false,
-                            "id": "d919-71f9-54a-5fb7",
-                            "typeId": "9ead-8a10-520-de15"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "D",
-                            "hidden": false,
-                            "id": "da40-f4ae-8543-fb8d",
-                            "typeId": "a354-c1c8-a745-f9e3"
-                          },
-                          {
-                            "$text": "Hazardous, Rapid Fire 1",
-                            "name": "Keywords",
-                            "hidden": false,
-                            "id": "d5c1-1862-d033-9000",
-                            "typeId": "7f1b-8591-2fcf-d01c"
-                          }
-                        ],
-                        "name": "➤ Plasma talon - Supercharged",
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "hidden": false,
-                        "id": "fe3a-98be-7394-70f6",
-                        "page": 31
-                      }
-                    ],
-                    "infoLinks": [
-                      {
-                        "name": "Hazardous",
-                        "hidden": false,
-                        "id": "9252-63c1-20d-df4",
-                        "type": "rule",
-                        "targetId": "8367-374c-f87-c627"
-                      },
-                      {
-                        "name": "Rapid Fire",
-                        "hidden": false,
-                        "id": "f25d-6b0-8a69-c04e",
-                        "type": "rule",
-                        "targetId": "c5c8-8b58-b8b6-7786"
-                      }
-                    ],
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Plasma talon",
-                    "hidden": false,
-                    "id": "c839-8a8a-5a0b-a5c4",
-                    "page": 31,
-                    "collective": true
-                  }
-                ],
                 "constraints": [
                   {
                     "type": "min",
@@ -10117,6 +9626,25 @@
                     "id": "c14f-bbb4-8a0a-e88f",
                     "type": "selectionEntry",
                     "targetId": "ca2b-3d9a-e739-cb21"
+                  },
+                  {
+                    "import": true,
+                    "name": "Plasma Talon",
+                    "hidden": false,
+                    "id": "d865-b3ae-72eb-73e3",
+                    "type": "selectionEntry",
+                    "targetId": "7d6a-2f26-fc2e-ca69",
+                    "constraints": [
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "6a7f-87d3-c1f1-1f96",
+                        "includeChildSelections": false
+                      }
+                    ]
                   }
                 ],
                 "name": "Plasma Talon Replacement",
@@ -10514,208 +10042,6 @@
                 ],
                 "selectionEntryGroups": [
                   {
-                    "selectionEntries": [
-                      {
-                        "constraints": [
-                          {
-                            "type": "max",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "shared": true,
-                            "id": "f701-21eb-162a-7371"
-                          }
-                        ],
-                        "profiles": [
-                          {
-                            "characteristics": [
-                              {
-                                "$text": "18\"",
-                                "name": "Range",
-                                "hidden": false,
-                                "id": "e9e6-85f9-f62b-81f7",
-                                "typeId": "9896-9419-16a1-92fc"
-                              },
-                              {
-                                "$text": "2",
-                                "name": "A",
-                                "hidden": false,
-                                "id": "47a6-c028-1d07-8ece",
-                                "typeId": "3bb-c35f-f54-fb08"
-                              },
-                              {
-                                "$text": "3+",
-                                "name": "BS",
-                                "hidden": false,
-                                "id": "ef50-a2ad-78ef-119a",
-                                "typeId": "94d-8a98-cf90-183e"
-                              },
-                              {
-                                "$text": "7",
-                                "name": "S",
-                                "hidden": false,
-                                "id": "f35-f475-f0d6-f2bc",
-                                "typeId": "2229-f494-25db-c5d3"
-                              },
-                              {
-                                "$text": "-2",
-                                "name": "AP",
-                                "hidden": false,
-                                "id": "1740-16d0-59f-ed6d",
-                                "typeId": "9ead-8a10-520-de15"
-                              },
-                              {
-                                "$text": "1",
-                                "name": "D",
-                                "hidden": false,
-                                "id": "2b7-d8d2-7cc8-99ff",
-                                "typeId": "a354-c1c8-a745-f9e3"
-                              },
-                              {
-                                "$text": "Rapid Fire 1",
-                                "name": "Keywords",
-                                "hidden": false,
-                                "id": "204f-893a-6aa4-9ca5",
-                                "typeId": "7f1b-8591-2fcf-d01c"
-                              }
-                            ],
-                            "name": "➤ Plasma talon - Standard",
-                            "typeId": "f77d-b953-8fa4-b762",
-                            "typeName": "Ranged Weapons",
-                            "hidden": false,
-                            "id": "6f4d-5a20-65af-b70a",
-                            "page": 31
-                          },
-                          {
-                            "characteristics": [
-                              {
-                                "$text": "18\"",
-                                "name": "Range",
-                                "hidden": false,
-                                "id": "17ee-99e5-6335-cb8f",
-                                "typeId": "9896-9419-16a1-92fc"
-                              },
-                              {
-                                "$text": "2",
-                                "name": "A",
-                                "hidden": false,
-                                "id": "6b85-c464-87ad-f1d6",
-                                "typeId": "3bb-c35f-f54-fb08"
-                              },
-                              {
-                                "$text": "3+",
-                                "name": "BS",
-                                "hidden": false,
-                                "id": "24c2-3922-6f7b-4264",
-                                "typeId": "94d-8a98-cf90-183e"
-                              },
-                              {
-                                "$text": "8",
-                                "name": "S",
-                                "hidden": false,
-                                "id": "4b79-7b3f-3b61-13ef",
-                                "typeId": "2229-f494-25db-c5d3"
-                              },
-                              {
-                                "$text": "-3",
-                                "name": "AP",
-                                "hidden": false,
-                                "id": "75b8-8471-8a53-4a47",
-                                "typeId": "9ead-8a10-520-de15"
-                              },
-                              {
-                                "$text": "2",
-                                "name": "D",
-                                "hidden": false,
-                                "id": "6a08-5eb2-f5dc-29e3",
-                                "typeId": "a354-c1c8-a745-f9e3"
-                              },
-                              {
-                                "$text": "Hazardous, Rapid Fire 1",
-                                "name": "Keywords",
-                                "hidden": false,
-                                "id": "bbe3-ed44-cee7-d4bf",
-                                "typeId": "7f1b-8591-2fcf-d01c"
-                              }
-                            ],
-                            "name": "➤ Plasma talon - Supercharged",
-                            "typeId": "f77d-b953-8fa4-b762",
-                            "typeName": "Ranged Weapons",
-                            "hidden": false,
-                            "id": "3dd7-4652-c235-e1dc",
-                            "page": 31
-                          }
-                        ],
-                        "infoLinks": [
-                          {
-                            "name": "Hazardous",
-                            "id": "98e6-6746-de0f-ce4b",
-                            "hidden": false,
-                            "type": "rule",
-                            "targetId": "8367-374c-f87-c627"
-                          },
-                          {
-                            "name": "Rapid Fire",
-                            "id": "3689-97d7-c6c3-fd3d",
-                            "hidden": false,
-                            "type": "rule",
-                            "targetId": "c5c8-8b58-b8b6-7786"
-                          }
-                        ],
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Archeotech Armament upgrade",
-                            "hidden": false,
-                            "id": "fe84-ae14-8819-b6bc",
-                            "type": "selectionEntry",
-                            "targetId": "4485-e8e3-43a0-6c02"
-                          }
-                        ],
-                        "selectionEntryGroups": [
-                          {
-                            "entryLinks": [
-                              {
-                                "import": true,
-                                "name": "Weapon Modifications",
-                                "hidden": false,
-                                "id": "a1b8-7302-6836-a7fb",
-                                "type": "selectionEntryGroup",
-                                "targetId": "f9da-852a-d7f0-92e9"
-                              },
-                              {
-                                "import": true,
-                                "name": "Crusade Relic Upgrades",
-                                "hidden": false,
-                                "id": "d0e4-bf69-42b0-ac05",
-                                "type": "selectionEntryGroup",
-                                "targetId": "b678-4a99-210e-931f"
-                              }
-                            ],
-                            "name": "Weapon Upgrades",
-                            "id": "dd93-0f06-c2ac-e86a",
-                            "hidden": false,
-                            "flatten": true
-                          }
-                        ],
-                        "categoryLinks": [
-                          {
-                            "name": "Ranged Weapon",
-                            "hidden": false,
-                            "id": "1289-4c63-384e-2570",
-                            "targetId": "eeda-8544-a2f3-3fab",
-                            "primary": false
-                          }
-                        ],
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Plasma talon",
-                        "hidden": false,
-                        "id": "1abc-7ec8-e6ef-6069",
-                        "page": 31,
-                        "collective": true
-                      }
-                    ],
                     "constraints": [
                       {
                         "type": "min",
@@ -10791,6 +10117,25 @@
                         "id": "e907-e029-9d32-8d15",
                         "type": "selectionEntry",
                         "targetId": "ca2b-3d9a-e739-cb21"
+                      },
+                      {
+                        "import": true,
+                        "name": "Plasma Talon",
+                        "hidden": false,
+                        "id": "ef7c-6497-d952-88a9",
+                        "type": "selectionEntry",
+                        "targetId": "7d6a-2f26-fc2e-ca69",
+                        "constraints": [
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "4993-5171-a525-23f3",
+                            "includeChildSelections": false
+                          }
+                        ]
                       }
                     ],
                     "name": "Plasma Talon",
@@ -19459,6 +18804,129 @@
         "name": "Deathwing Command Squad [Legends]",
         "hidden": false,
         "id": "48fb-ebd6-dd17-729b"
+      },
+      {
+        "type": "upgrade",
+        "import": true,
+        "name": "Plasma Talon",
+        "hidden": false,
+        "id": "7d6a-2f26-fc2e-ca69",
+        "profiles": [
+          {
+            "name": "➤ Plasma talon - Standard",
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "hidden": false,
+            "id": "6e76-0a8b-e1a2-580c",
+            "characteristics": [
+              {
+                "$text": "18\"",
+                "name": "Range",
+                "typeId": "9896-9419-16a1-92fc"
+              },
+              {
+                "$text": "2",
+                "name": "A",
+                "typeId": "3bb-c35f-f54-fb08"
+              },
+              {
+                "$text": "3+",
+                "name": "BS",
+                "typeId": "94d-8a98-cf90-183e"
+              },
+              {
+                "$text": "7",
+                "name": "S",
+                "typeId": "2229-f494-25db-c5d3"
+              },
+              {
+                "$text": "-2",
+                "name": "AP",
+                "typeId": "9ead-8a10-520-de15"
+              },
+              {
+                "$text": "1",
+                "name": "D",
+                "typeId": "a354-c1c8-a745-f9e3"
+              },
+              {
+                "$text": "Rapid Fire 1",
+                "name": "Keywords",
+                "typeId": "7f1b-8591-2fcf-d01c"
+              }
+            ],
+            "page": 31
+          },
+          {
+            "name": "➤ Plasma talon - Supercharged",
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "hidden": false,
+            "id": "085b-b1cb-bd8f-992b",
+            "characteristics": [
+              {
+                "$text": "18\"",
+                "name": "Range",
+                "typeId": "9896-9419-16a1-92fc"
+              },
+              {
+                "$text": "2",
+                "name": "A",
+                "typeId": "3bb-c35f-f54-fb08"
+              },
+              {
+                "$text": "3+",
+                "name": "BS",
+                "typeId": "94d-8a98-cf90-183e"
+              },
+              {
+                "$text": "8",
+                "name": "S",
+                "typeId": "2229-f494-25db-c5d3"
+              },
+              {
+                "$text": "-3",
+                "name": "AP",
+                "typeId": "9ead-8a10-520-de15"
+              },
+              {
+                "$text": "2",
+                "name": "D",
+                "typeId": "a354-c1c8-a745-f9e3"
+              },
+              {
+                "$text": "Hazardous, Rapid Fire 1",
+                "name": "Keywords",
+                "typeId": "7f1b-8591-2fcf-d01c"
+              }
+            ],
+            "page": 31
+          }
+        ],
+        "categoryLinks": [
+          {
+            "targetId": "cb29-f4bb-ff15-6b11",
+            "id": "8982-f210-8c19-a256",
+            "primary": false,
+            "name": "Plasma"
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Hazardous",
+            "id": "5788-3c31-9f1a-4a66",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "8367-374c-f87-c627"
+          },
+          {
+            "name": "Rapid Fire",
+            "id": "6d15-b856-ef5d-67bf",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "c5c8-8b58-b8b6-7786"
+          }
+        ]
       }
     ],
     "entryLinks": [
