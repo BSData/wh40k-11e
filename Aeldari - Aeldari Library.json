@@ -169719,32 +169719,6 @@
         ]
       }
     ],
-    "sharedRules": [
-      {
-        "description": "If your Army Faction is **^^Asuryani^^**, at the start of the battle round, you receive a number of Battle Focus tokens based on the battle size, as shown below:\n\n■ Incursion - 2\n■ Strike Force - 4\n■ Onslaught - 6\n\nEach time one of the triggers shown in the Agile Manoeuvres section of your codex occurs, you can spend one Battle focus token to enable the relevant eligible unit to perform that Agile Manoeuvre. A unit is eligible to perform an Agile Manoeuvre if it has this ability and has not already performed an Agile Manoeuvre in the same phase. Unless otherwise stated, you cannot trigger the same Agile Manoeuvre more than once per phase. At the end of the battle round, all unspent Battle Focus tokens are lost.",
-        "id": "c324-e193-e23c-7d2e",
-        "name": "Battle Focus",
-        "hidden": false
-      },
-      {
-        "description": "All **^^Drukhari^^** units have a Pain ability, tagged with the word 'Pain'. Pain abilities only apply to a unit while it is Empowered. If your Army Faction is **^^Drukhari^^**, you can Empower units from your army with Pain abilities by spending Pain tokens (see below).\n\n**GAINING PAIN TOKENS**\n\nIf your Army Faction is **^^Drukhari^^**, you gain Pain tokens as follows:\n■ 1 Pain token at the start of your Command phase.\n■ 1 Pain token each time an enemy unit is destroyed.\n■ 1 Pain token each time an enemy unit fails a Battle-shock test.\n\nEach time you gain a Pain token, keep it to one side – this is your Pain token pool. Each time you spend a Pain token, reduce your Pain token pool by the same amount.\n\n**EMPOWERED THROUGH PAIN**\n\nEach Pain ability will state when you can spend Pain tokens to Empower that unit. When you do, until the end of the phase, that unit is Empowered and all Pain abilities it has take effect. While an Attached unit is Empowered, the Pain abilities of all Leader and Bodyguard units in that unit take effect - you do not need to spend additional Pain tokens to activate each of those Pain abilities.",
-        "name": "Power from Pain",
-        "hidden": false,
-        "id": "5e02-2ddc-f55-e6dd"
-      },
-      {
-        "description": "When mustering you army, you can include Harlequins units in your army, even though they do not have the Asuryani Faction keyword. Unless otherwise stated, you cannot select Harlequins or Ynnari as your Army Faction.",
-        "name": "Disparate Paths",
-        "id": "10d8-3547-47ae-baab",
-        "hidden": false
-      },
-      {
-        "description": "If your Army Faction is **DRUKHARI**, you can include **HARLEQUINS** and **ANHRATHE** units in your army, even though they do not have the **DRUKHARI** Faction keyword. The combined points value of **HARLEQUINS** and/or **ANHRATHE** units you can include in your army depends on the battle size, as follows:\n- Incursion: Up to 250 pts\n- Strike Force: Up to 500 pts\n- Onslaught: Up to 750 pts\nNo **HARLEQUINS** or **ANHRATHE** models included in your army in this way can be your WARLORD, and they cannot be given Enhancements.",
-        "name": "Corsairs and Travelling Players",
-        "id": "8344-0055-bb1f-4783",
-        "hidden": false
-      }
-    ],
     "catalogueLinks": [
       {
         "type": "catalogue",
@@ -171060,6 +171034,104 @@
     "library": true,
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "type": "catalogue"
+    "type": "catalogue",
+    "rules": [
+      {
+        "description": "All **^^Drukhari^^** units have a Pain ability, tagged with the word 'Pain'. Pain abilities only apply to a unit while it is Empowered. If your Army Faction is **^^Drukhari^^**, you can Empower units from your army with Pain abilities by spending Pain tokens (see below).\n\n**GAINING PAIN TOKENS**\n\nIf your Army Faction is **^^Drukhari^^**, you gain Pain tokens as follows:\n■ 1 Pain token at the start of your Command phase.\n■ 1 Pain token each time an enemy unit is destroyed.\n■ 1 Pain token each time an enemy unit fails a Battle-shock test.\n\nEach time you gain a Pain token, keep it to one side – this is your Pain token pool. Each time you spend a Pain token, reduce your Pain token pool by the same amount.\n\n**EMPOWERED THROUGH PAIN**\n\nEach Pain ability will state when you can spend Pain tokens to Empower that unit. When you do, until the end of the phase, that unit is Empowered and all Pain abilities it has take effect. While an Attached unit is Empowered, the Pain abilities of all Leader and Bodyguard units in that unit take effect - you do not need to spend additional Pain tokens to activate each of those Pain abilities.",
+        "name": "Power from Pain",
+        "hidden": false,
+        "id": "5e02-2ddc-f55-e6dd",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "notInstanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "38de-521f-1ce0-44a0",
+                "shared": true,
+                "childName": "Xenos - Drukhari"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "If your Army Faction is **^^Asuryani^^**, at the start of the battle round, you receive a number of Battle Focus tokens based on the battle size, as shown below:\n\n■ Incursion - 2\n■ Strike Force - 4\n■ Onslaught - 6\n\nEach time one of the triggers shown in the Agile Manoeuvres section of your codex occurs, you can spend one Battle focus token to enable the relevant eligible unit to perform that Agile Manoeuvre. A unit is eligible to perform an Agile Manoeuvre if it has this ability and has not already performed an Agile Manoeuvre in the same phase. Unless otherwise stated, you cannot trigger the same Agile Manoeuvre more than once per phase. At the end of the battle round, all unspent Battle Focus tokens are lost.",
+        "id": "c324-e193-e23c-7d2e",
+        "name": "Battle Focus",
+        "hidden": false,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "notInstanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "34a5-8c7e-f468-82d1",
+                "shared": true,
+                "childName": "Xenos - Aeldari"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "If your Army Faction is **DRUKHARI**, you can include **HARLEQUINS** and **ANHRATHE** units in your army, even though they do not have the **DRUKHARI** Faction keyword. The combined points value of **HARLEQUINS** and/or **ANHRATHE** units you can include in your army depends on the battle size, as follows:\n- Incursion: Up to 250 pts\n- Strike Force: Up to 500 pts\n- Onslaught: Up to 750 pts\nNo **HARLEQUINS** or **ANHRATHE** models included in your army in this way can be your WARLORD, and they cannot be given Enhancements.",
+        "name": "Corsairs and Travelling Players",
+        "id": "8344-0055-bb1f-4783",
+        "hidden": false,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "notInstanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "38de-521f-1ce0-44a0",
+                "shared": true,
+                "childName": "Xenos - Drukhari"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "When mustering you army, you can include Harlequins units in your army, even though they do not have the Asuryani Faction keyword. Unless otherwise stated, you cannot select Harlequins or Ynnari as your Army Faction.",
+        "name": "Disparate Paths",
+        "id": "10d8-3547-47ae-baab",
+        "hidden": false,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "notInstanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "34a5-8c7e-f468-82d1",
+                "shared": true,
+                "childName": "Xenos - Aeldari"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }
