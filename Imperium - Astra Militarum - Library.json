@@ -23708,16 +23708,6 @@
           {
             "type": "max",
             "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "acd1-da30-2656-832a",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
-            "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
             "shared": true,
@@ -23741,6 +23731,15 @@
             "shared": true,
             "id": "b1aa-ebc3-8bf0-51cf",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "98bb-27e2-c19e-e151",
+            "includeChildSelections": true
           }
         ],
         "modifiers": [
@@ -23758,6 +23757,23 @@
             "type": "set-primary",
             "value": "8247-35f6-ec2a-7caa",
             "field": "category"
+          },
+          {
+            "type": "set",
+            "value": 2,
+            "field": "98bb-27e2-c19e-e151",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
           }
         ],
         "infoLinks": [
