@@ -16948,7 +16948,40 @@
         "import": true,
         "name": "Plasma pistol",
         "hidden": false,
-        "id": "25c2-104f-fa0c-809e"
+        "id": "25c2-104f-fa0c-809e",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "Max 1 {this} per 5 models",
+            "field": "error",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "unit",
+                    "childId": "8a7f-b578-d274-9769",
+                    "shared": true,
+                    "childName": "Vanguard Veterans with Jump Packs"
+                  },
+                  {
+                    "type": "greaterThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "9e9c-bf4d-2d40-be82",
+                    "childId": "25c2-104f-fa0c-809e",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Plasma pistol"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "profiles": [
@@ -29315,6 +29348,39 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "All models must replace their Vanguard Veteran Weapon and Bolt pistol",
+            "field": "warning",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "9e9c-bf4d-2d40-be82",
+                    "childId": "6854-cb18-b20b-42f4",
+                    "shared": true,
+                    "childName": "Master-crafted Power Weapon",
+                    "includeChildSelections": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "9e9c-bf4d-2d40-be82",
+                    "childId": "d466-dd6c-f7bd-6fea",
+                    "shared": true,
+                    "childName": "Vanguard Veteran Weapon",
+                    "includeChildSelections": true
+                  }
+                ]
+              }
+            ],
+            "affects": "self.entries"
           }
         ],
         "selectionEntryGroups": [
