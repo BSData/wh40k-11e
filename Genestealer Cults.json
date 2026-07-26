@@ -98,7 +98,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 150
+            "value": 140
           },
           {
             "name": "Crusade Points",
@@ -199,7 +199,7 @@
               }
             ],
             "type": "set",
-            "value": 300,
+            "value": 280,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -3417,7 +3417,7 @@
               }
             ],
             "type": "set",
-            "value": 150,
+            "value": 140,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -5600,10 +5600,62 @@
         ],
         "modifiers": [
           {
+            "type": "set",
+            "value": 2,
+            "field": "23e8-ecd2-0720-e793",
             "conditions": [
               {
-                "type": "greaterThan",
-                "value": 5,
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 160,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "greaterThan",
+                    "value": 5,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false
+                  },
+                  {
+                    "type": "lessThan",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": 150,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 10,
                 "field": "selections",
                 "scope": "self",
                 "childId": "model",
@@ -5611,10 +5663,7 @@
                 "includeChildSelections": true,
                 "includeChildForces": false
               }
-            ],
-            "type": "set",
-            "value": 160,
-            "field": "51b2-306e-1021-d207"
+            ]
           },
           {
             "type": "increment",
@@ -5653,23 +5702,6 @@
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "type": "set",
-            "value": 2,
-            "field": "23e8-ecd2-0720-e793",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "d62d-db22-4893-4bc0",
-                "shared": true,
-                "includeChildSelections": true,
-                "childName": "1. Incursion (1000 Point limit)"
               }
             ]
           }
@@ -10460,7 +10492,52 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 85
+            "value": 75
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Logistics Points",
+            "typeId": "04b1-67f7-48cb-4f1f",
+            "value": 0
+          },
+          {
+            "name": "Commendation Points",
+            "typeId": "e969-59de-fdb7-7c4e",
+            "value": 0
           }
         ],
         "constraints": [
@@ -11336,6 +11413,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1d1-f0d2-b810-12fe",
+                        "shared": true,
+                        "childName": "Goliath Truck"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -11477,7 +11594,7 @@
               }
             ],
             "type": "set",
-            "value": 150,
+            "value": 140,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -15932,7 +16049,7 @@
               }
             ],
             "type": "set",
-            "value": 145,
+            "value": 135,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -20653,7 +20770,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 80
+            "value": 75
           },
           {
             "name": "Crusade Points",
@@ -22222,6 +22339,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "4565-bd65-9e8b-284d",
+                        "shared": true,
+                        "childName": "Reductus Saboteur"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -35360,6 +35517,48 @@
         "type": "selectionEntry",
         "id": "2023-f77b-89b1-b6a2",
         "targetId": "4946-40d2-ee8b-a71c"
+      },
+      {
+        "modifiers": [
+          {
+            "conditionGroups": [
+              {
+                "conditions": [
+                  {
+                    "type": "notInstanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true
+                  },
+                  {
+                    "type": "equalTo",
+                    "value": 0,
+                    "field": "selections",
+                    "scope": "roster",
+                    "childId": "0a59-1d64-257c-04fb",
+                    "shared": true,
+                    "includeChildForces": true,
+                    "includeChildSelections": true
+                  }
+                ],
+                "type": "and"
+              }
+            ],
+            "type": "set",
+            "value": true,
+            "field": "hidden"
+          }
+        ],
+        "import": true,
+        "name": "Valkyrie",
+        "hidden": false,
+        "type": "selectionEntry",
+        "id": "e436-7775-f313-80ac",
+        "targetId": "9665-3160-8a04-d2bc"
       }
     ],
     "catalogueLinks": [
@@ -45129,7 +45328,7 @@
     ],
     "sharedRules": [
       {
-        "description": "If your Army Faction is **GENESTEALER CULTS**, you start the battle with a number of Resurgence points, depending on the battle size, as shown below.\n\n- Incursion: 6 Resurgence points\n- Strike Force: 10 Resurgence points\n- Onslaught: 14 Resurgence points\n\nEach time a unit from your army is destroyed, if every model in that unit has this ability you can spend the relevant number of Resurgence points shown below based on that unit's Starting Strength.\n\n**---Aberrants---**\n5 models = 4 Resurgence Points\n10 models = 8 Resurgence Points\n\n**---Acolyte Hybrids with Autopistols, Acolyte Hybrids with Hand Flamers, Hybrid Metamorphs---**\n5 models = 2 Resurgence Points\n10 models = 4 Resurgence Points\n\n**---Atalan Jackals---**\n5 models = 2 Resurgence Points\n10 models = 6 Resurgence Points\n\n**---Neophyte Hybrids---**\n10 models = 3 Resurgence Points\n20 models = 6 Resurgence Points\n\n**---Purestrain Genestealers---**\n5 models = 2 Resurgence Points\n10 models = 6 Resurgence Points\n\nIf you do:\n- Add a new unit to your army identical to your destroyed unit, in Cult Ambush, at its Starting Strength, with all of its wounds remaining and any **[ONE SHOT]** weapons those models are equipped with considered as not having been shot.\n- Place one Cult Ambush marker (see below) anywhere on the battlefield that is more than 9\" horizontally away from all enemy units (if this is not possible, no marker is placed).\n\n**UNITS IN CULT AMBUSH**\nCult Ambush is a type of Strategic Reserves. Units in Cult Ambush cannot be targeted with the Rapid Ingress Stratagem, but can be set up on the battlefield using a Cult Ambush marker as described below, or by following the rules for Strategic Reserves in a subsequent turn. Units in Cult Ambush are not automically destroyed at the end of the third battle round.\n\n**CULT AMBUSH MARKERS**\nUse a circular 32mm diameter marker for Cult Ambush markers. If an enemy model (excluding **AIRCRAFT**) ends any kind of move within 8\" of a Cult Ambush marker you placed, that Cult Ambush marker is removed from the battlefield. At the end of your opponent’s next Movement phase, for each of your Cult Ambush markers still on the battlefield, you can select one unit from your army that is in Cult Ambush to make an **ingress move**. For that **ingress move**, set that unit up with at least one model in that unit in base contact with that Cult Ambush marker and all other models placed wholly within 3\" of that Cult Ambush marker (that Cult Ambush marker is then removed from the battlefield). Units in Cult Ambush can make an **ingress move** in the first battle round using this rule.",
+        "description": "If your Army Faction is **GENESTEALER CULTS**, you start the battle with a number of Resurgence points, depending on the battle size, as shown below.\n\n- Incursion: 6 Resurgence points\n- Strike Force: 10 Resurgence points\n- Onslaught: 14 Resurgence points\n\nEach time a unit from your army is destroyed, if every model (excluding\n**CHARACTER** models) in that unit has this ability you can spend the relevant number of Resurgence points shown below based on that unit's Starting Strength (not including attached **CHARACTER** models).\n\n**---Aberrants---**\n5 models = 4 Resurgence Points\n10 models = 8 Resurgence Points\n\n**---Acolyte Hybrids with Autopistols, Acolyte Hybrids with Hand Flamers, Hybrid Metamorphs---**\n5 models = 2 Resurgence Points\n10 models = 4 Resurgence Points\n\n**---Atalan Jackals---**\n5 models = 2 Resurgence Points\n10 models = 6 Resurgence Points\n\n**---Neophyte Hybrids---**\n10 models = 3 Resurgence Points\n20 models = 6 Resurgence Points\n\n**---Purestrain Genestealers---**\n5 models = 2 Resurgence Points\n10 models = 6 Resurgence Points\n\nIf you do:\n- Add a new unit to your army identical to your destroyed unit (excluding **CHARACTER** models), in Cult Ambush, at its Starting Strength, with all of its wounds remaining and any **[ONE SHOT]** weapons those models are equipped with considered as not having been shot.\n- Place one Cult Ambush marker (see below) anywhere on the battlefield that is more than 8\" horizontally away from all enemy units (if this is not possible, no marker is placed).\n\n**UNITS IN CULT AMBUSH**\nCult Ambush is a type of Strategic Reserves. Units in Cult Ambush cannot be targeted with the Rapid Ingress Stratagem, but can be set up on the battlefield using a Cult Ambush marker as described below, or by following the rules for Strategic Reserves in a subsequent turn. Units in Cult Ambush are not automically destroyed at the end of the third battle round.\n\n**CULT AMBUSH MARKERS**\nUse a circular 32mm diameter marker for Cult Ambush markers. If an enemy model (excluding **AIRCRAFT**) ends any kind of move within 8\" of a Cult Ambush marker you placed, that Cult Ambush marker is removed from the battlefield. At the end of your opponent’s next Movement phase, for each of your Cult Ambush markers still on the battlefield, you can select one unit from your army that is in Cult Ambush to make an **ingress move**. For that **ingress move**, set that unit up with at least one model in that unit in base contact with that Cult Ambush marker and all other models placed wholly within 3\" of that Cult Ambush marker (that Cult Ambush marker is then removed from the battlefield). Units in Cult Ambush can make an **ingress move** in the first battle round using this rule.",
         "modifiers": [
           {
             "conditions": [

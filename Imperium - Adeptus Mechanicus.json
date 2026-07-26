@@ -2988,6 +2988,13 @@
             "id": "fee-c1a7-f4d4-c70d",
             "primary": false,
             "name": "Cult Mechanicus"
+          },
+          {
+            "name": "Mobile",
+            "hidden": false,
+            "id": "8da4-7c31-317d-7c24",
+            "targetId": "355c-0ee6-3cde-6c71",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -4795,6 +4802,32 @@
             "type": "rule",
             "id": "fc3e-fe79-b9fe-20b9",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Stealth",
+            "id": "bdb2-074a-8615-7757",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "bec5-4288-34a6-ccfa",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "48bd-eeae-171d-a10a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Skitarii Hunter Cohort"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -4878,7 +4911,7 @@
                   {
                     "name": "pts",
                     "typeId": "51b2-306e-1021-d207",
-                    "value": 80
+                    "value": 0
                   },
                   {
                     "name": "Crusade Points",
@@ -5079,7 +5112,7 @@
                   {
                     "name": "pts",
                     "typeId": "51b2-306e-1021-d207",
-                    "value": 90
+                    "value": 0
                   },
                   {
                     "name": "Crusade Points",
@@ -5259,6 +5292,48 @@
                             "targetId": "982b-de77-dd2d-d9bd",
                             "primary": false
                           }
+                        ],
+                        "costs": [
+                          {
+                            "name": "pts",
+                            "typeId": "51b2-306e-1021-d207",
+                            "value": 10
+                          },
+                          {
+                            "name": "Crusade Points",
+                            "typeId": "b03b-c239-15a5-da55",
+                            "value": 0
+                          },
+                          {
+                            "name": "Crusade: Battle Honours",
+                            "typeId": "75bb-ded1-c86d-bdf0",
+                            "value": 0
+                          },
+                          {
+                            "name": "Crusade: Experience",
+                            "typeId": "a623-fe74-1d33-cddf",
+                            "value": 0
+                          },
+                          {
+                            "name": "Crusade: Weapon Modifications",
+                            "typeId": "716d-91b7-d55a-1022",
+                            "value": 0
+                          },
+                          {
+                            "name": "Blackstone Fragments",
+                            "typeId": "ac6b-ced3-9b5e-9a6e",
+                            "value": 0
+                          },
+                          {
+                            "name": "Detachment Points",
+                            "typeId": "82ae-1066-5107-6ae0",
+                            "value": 0
+                          },
+                          {
+                            "name": "Enhancements",
+                            "typeId": "f759-1bc4-cb3a-f0d2",
+                            "value": 0
+                          }
                         ]
                       }
                     ],
@@ -5298,6 +5373,41 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
+            "value": 80
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -5608,6 +5718,40 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 80,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 2,
+                "field": "selections",
+                "scope": "unit-self",
+                "childId": "model",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "model"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 90,
+            "field": "51b2-306e-1021-d207",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 3,
+                "field": "selections",
+                "scope": "unit-self",
+                "childId": "model",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "model"
+              }
+            ]
           }
         ]
       },
@@ -5707,9 +5851,9 @@
           {
             "characteristics": [
               {
-                "$text": "Each time a ranged attack is allocated to a ^^**Kastelan Robot^^** model in this unit, on an unmodified saving throw of 6, the attacking unit suffers 1 mortal wound after it has finished making its attacks.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: \n- On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot."
               }
             ],
             "id": "e6fd-24cc-9af1-16b6",
@@ -6927,7 +7071,7 @@
             ],
             "type": "set",
             "field": "51b2-306e-1021-d207",
-            "value": 320
+            "value": 310
           },
           {
             "type": "set",
@@ -7671,7 +7815,7 @@
             ],
             "type": "set",
             "field": "51b2-306e-1021-d207",
-            "value": 210
+            "value": 200
           },
           {
             "type": "set",
@@ -11870,7 +12014,7 @@
             ],
             "type": "set",
             "field": "51b2-306e-1021-d207",
-            "value": 120
+            "value": 110
           },
           {
             "type": "set",
@@ -11971,6 +12115,32 @@
             "type": "rule",
             "id": "7f60-ae03-a8f7-8be1",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Stealth",
+            "id": "7789-e916-d1ef-8726",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "bec5-4288-34a6-ccfa",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "48bd-eeae-171d-a10a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Skitarii Hunter Cohort"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -13177,7 +13347,7 @@
             ],
             "type": "set",
             "field": "51b2-306e-1021-d207",
-            "value": 110
+            "value": 100
           },
           {
             "type": "set",
@@ -14163,6 +14333,32 @@
             "type": "rule",
             "id": "10d5-c035-1dbf-146b",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Stealth",
+            "id": "807c-fc91-7635-fe8c",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "bec5-4288-34a6-ccfa",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "48bd-eeae-171d-a10a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Skitarii Hunter Cohort"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "constraints": [
@@ -16826,6 +17022,32 @@
             "type": "rule",
             "id": "10d8-e42a-8b37-76fc",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Stealth",
+            "id": "14a8-b8ec-2053-5a17",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "bec5-4288-34a6-ccfa",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "48bd-eeae-171d-a10a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Skitarii Hunter Cohort"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -17410,6 +17632,32 @@
             "type": "rule",
             "id": "4d4b-44a-be85-c96",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Stealth",
+            "id": "aae1-d479-ba9b-4211",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "bec5-4288-34a6-ccfa",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "48bd-eeae-171d-a10a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Skitarii Hunter Cohort"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -20358,7 +20606,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 90
+            "value": 85
           },
           {
             "name": "Crusade Points",
@@ -20403,6 +20651,32 @@
             "type": "rule",
             "id": "f4e4-5bc-bcea-6d16",
             "targetId": "7a21-a958-e47d-5c0d"
+          },
+          {
+            "name": "Stealth",
+            "id": "29d0-03ea-5d68-2922",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "bec5-4288-34a6-ccfa",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "48bd-eeae-171d-a10a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Skitarii Hunter Cohort"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "constraints": [
@@ -21780,7 +22054,42 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 85
+            "value": 75
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
           }
         ],
         "infoLinks": [
@@ -22131,6 +22440,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "2b9c-3982-701d-f8fd",
+                        "shared": true,
+                        "childName": "Skorpius Dunerider"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -26507,6 +26856,20 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities"
+          },
+          {
+            "name": "Data-severed",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "85bc-7ca2-871d-7437",
+            "characteristics": [
+              {
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "If there are no KASTELAN ROBOT models in this unit: \n- This unit loses VEHICLE. \n- This unit has INFANTRY."
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -39292,20 +39655,6 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "This model can move through terrain features, but cannot end a move within a wall, a floor, etc. This model can be set up or end a move on any floor level of **^^Ruins^^**, but if that level is not the ground floor, it can only do so if its base does not overhang the floor at that level.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "id": "0072-1d19-367d-60bd",
-            "name": "Cybernetic Augmentation",
-            "hidden": false,
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities"
           }
         ],
         "infoLinks": [
@@ -39409,6 +39758,13 @@
             "hidden": false,
             "id": "c522-8f40-9cfc-3037",
             "targetId": "ec91-e6d9-6cba-6018",
+            "primary": false
+          },
+          {
+            "name": "Mobile",
+            "hidden": false,
+            "id": "3c22-9f17-7250-0876",
+            "targetId": "355c-0ee6-3cde-6c71",
             "primary": false
           }
         ],
@@ -40312,7 +40668,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 115
+            "value": 105
           },
           {
             "name": "Crusade Points",
@@ -54251,7 +54607,7 @@
           {
             "rules": [
               {
-                "description": "BOMBARDMENT\nAt the start of the first battle round, for each enemy unit within your opponent’s deployment zone, your opponent must decide whether that unit will take cover or stand firm. You then roll one D6 for each of those enemy units and apply the relevant result below:\n■ Unit Standing Firm: On a 3+, that unit suffers D3 mortal wounds.\n■ Unit Taking Cover: Until the end of the battle round, that unit is Battle-shocked and, on a 5+, that unit suffers D3 mortal wounds.\n-\nFALLOUT\nAt the start of your Command phase during the second, third, fourth and fifth battle rounds, roll one D6 for each enemy unit within your opponent’s deployment zone. On a 3+, that unit suffers 1 mortal wound and must take a Battle-shock test.",
+                "description": "BOMBARDMENT\nAt the start of the first battle round, for each enemy unit within your opponent’s deployment zone, your opponent must decide whether that unit will take cover or stand firm. You then roll one D6 for each of those enemy units and apply the relevant result below:\n- Unit Standing Firm: On a 3+, that unit suffers D3 mortal wounds.\n- Unit Taking Cover: That unit is battle-shocked. On a 5+, that unit suffers D3 mortal wounds.\n\nFALLOUT\nAt the start of your Command phase during the second, third, fourth and fifth battle rounds, roll one D6 for each enemy unit within your opponent’s deployment zone. On a 3+, that unit suffers 1 mortal wound and must take a Battle-shock test.",
                 "name": "Rad-bombardment",
                 "hidden": false,
                 "id": "4981-c675-821-f9f1"
@@ -54328,7 +54684,7 @@
           {
             "rules": [
               {
-                "description": "**^^Skitarii Infantry^^**, **^^Skitarii Mounted^^** and **^^Ironstrider Ballistarii^^** units from your army have the Stealth ability, and each time a ranged attack targets a **^^Sicarian^^** unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.",
+                "description": "Friendly SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units have Stealth.",
                 "name": "Skitarii Hunter Cohort",
                 "hidden": false,
                 "id": "66a8-d10b-deee-fe42"
@@ -55107,7 +55463,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "77b9-2f66-3f9b-5cf3",
     "name": "Imperium - Adeptus Mechanicus",
-    "revision": 5,
+    "revision": 6,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",

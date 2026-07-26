@@ -211,6 +211,12 @@
             "id": "9cab-97d2-c57a-ce3",
             "primary": false,
             "name": "Faction: Black Templars"
+          },
+          {
+            "targetId": "1fb1-3603-a4bd-485",
+            "id": "2f9c-2cbe-8788-4401",
+            "primary": false,
+            "name": "Chaplain"
           }
         ],
         "profiles": [
@@ -748,7 +754,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 110
+            "value": 100
           },
           {
             "name": "Crusade Points",
@@ -771,8 +777,28 @@
             "value": 0
           },
           {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
             "name": "Honour Points",
             "typeId": "8135-9a2f-6627-09e2",
+            "value": 0
+          },
+          {
+            "name": "Relic Fragments",
+            "typeId": "0ece-6541-4662-ece2",
             "value": 0
           }
         ],
@@ -805,7 +831,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 120
+            "value": 110
           },
           {
             "name": "Crusade Points",
@@ -828,8 +854,28 @@
             "value": 0
           },
           {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
             "name": "Honour Points",
             "typeId": "8135-9a2f-6627-09e2",
+            "value": 0
+          },
+          {
+            "name": "Relic Fragments",
+            "typeId": "0ece-6541-4662-ece2",
             "value": 0
           }
         ],
@@ -4695,7 +4741,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 100
+            "value": 90
           },
           {
             "name": "Crusade Points",
@@ -4720,6 +4766,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -10026,7 +10082,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 85
+            "value": 75
           },
           {
             "name": "Crusade Points",
@@ -10049,8 +10105,28 @@
             "value": 0
           },
           {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
             "name": "Honour Points",
             "typeId": "8135-9a2f-6627-09e2",
+            "value": 0
+          },
+          {
+            "name": "Relic Fragments",
+            "typeId": "0ece-6541-4662-ece2",
             "value": 0
           }
         ],
@@ -10892,6 +10968,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 4,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "fa27-4bc1-72c9-894f",
+                        "shared": true,
+                        "childName": "Impulsor"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -11811,7 +11927,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 245
+            "value": 255
           },
           {
             "name": "Crusade Points",
@@ -12458,7 +12574,59 @@
                     "import": true,
                     "name": "Heavy Laser Destroyer",
                     "hidden": false,
-                    "id": "5212-e8d7-efe3-491b"
+                    "id": "5212-e8d7-efe3-491b",
+                    "costs": [
+                      {
+                        "name": "pts",
+                        "typeId": "51b2-306e-1021-d207",
+                        "value": 10
+                      },
+                      {
+                        "name": "Crusade Points",
+                        "typeId": "b03b-c239-15a5-da55",
+                        "value": 0
+                      },
+                      {
+                        "name": "Crusade: Battle Honours",
+                        "typeId": "75bb-ded1-c86d-bdf0",
+                        "value": 0
+                      },
+                      {
+                        "name": "Crusade: Experience",
+                        "typeId": "a623-fe74-1d33-cddf",
+                        "value": 0
+                      },
+                      {
+                        "name": "Crusade: Weapon Modifications",
+                        "typeId": "716d-91b7-d55a-1022",
+                        "value": 0
+                      },
+                      {
+                        "name": "Blackstone Fragments",
+                        "typeId": "ac6b-ced3-9b5e-9a6e",
+                        "value": 0
+                      },
+                      {
+                        "name": "Detachment Points",
+                        "typeId": "82ae-1066-5107-6ae0",
+                        "value": 0
+                      },
+                      {
+                        "name": "Enhancements",
+                        "typeId": "f759-1bc4-cb3a-f0d2",
+                        "value": 0
+                      },
+                      {
+                        "name": "Honour Points",
+                        "typeId": "8135-9a2f-6627-09e2",
+                        "value": 0
+                      },
+                      {
+                        "name": "Relic Fragments",
+                        "typeId": "0ece-6541-4662-ece2",
+                        "value": 0
+                      }
+                    ]
                   }
                 ],
                 "name": "Turret Weapon",
@@ -14331,7 +14499,7 @@
                 "localConditionGroups": [
                   {
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "scope": "parent",
                     "field": "selections",
                     "includeChildSelections": true,
@@ -14668,7 +14836,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 60
+            "value": 50
           },
           {
             "name": "Crusade Points",
@@ -14693,6 +14861,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -15731,7 +15909,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 45
+            "value": 40
           },
           {
             "name": "Crusade Points",
@@ -19896,7 +20074,7 @@
     ],
     "categoryEntries": [
       {
-        "name": "Chaplain Grimaldus",
+        "name": "Grimaldus",
         "hidden": false,
         "id": "a4ce-23d9-7110-8609"
       },
