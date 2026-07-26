@@ -7130,7 +7130,7 @@
               {
                 "rules": [
                   {
-                    "description": "If you control an objective marker at the end of your Command phase and a ^^**Death Guard**^^ unit from your army (excluding Battle-shocked units) is within range of that objective marker, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Nurgle's Gift ability as if it were a ^^**Death Guard**^^ unit from your army.",
+                    "description": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted.",
                     "name": "Worldblight",
                     "id": "7fd0-7e69-2e30-8a86",
                     "hidden": false
@@ -7644,10 +7644,10 @@
                     "primary": false
                   },
                   {
-                    "name": "Purge the Foe",
+                    "name": "Reconnaissance",
                     "hidden": false,
-                    "id": "632b-1fbe-265f-b037",
-                    "targetId": "6fe0-3dbe-f7e0-10bb",
+                    "id": "683e-d325-ed0d-1594",
+                    "targetId": "b4a7-5083-fe94-4d24",
                     "primary": false
                   }
                 ]
@@ -15913,7 +15913,7 @@
             ],
             "type": "set",
             "field": "51b2-306e-1021-d207",
-            "value": 190
+            "value": 180
           },
           {
             "type": "set",
@@ -24097,7 +24097,7 @@
               }
             ],
             "type": "set",
-            "value": 320,
+            "value": 305,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -35561,7 +35561,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 85
+            "value": 75
           },
           {
             "name": "Crusade Points",
@@ -35581,6 +35581,21 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -35803,6 +35818,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "b899-92e2-693a-975f",
+                        "shared": true,
+                        "childName": "Chaos Rhino"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -35811,7 +35866,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 400
+            "value": 390
           },
           {
             "name": "Crusade Points",
@@ -36024,9 +36079,9 @@
           {
             "characteristics": [
               {
-                "$text": "Just after an enemy unit ends a Normal, Advance or Fall Back move within 9\" of a friendly ^^**Death Guard**^^ unit that is within 6\" of this model, if that ^^**Death Guard**^^ unit is not within Engagement Range of one or more enemy unit, it can make a Normal move of up to 5\".",
                 "name": "Effect",
-                "typeId": "298e-f7c1-1edd-76f1"
+                "typeId": "298e-f7c1-1edd-76f1",
+                "$text": "Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly ^^**Death Guard**^^ unit that is within 6\" of this model, if that ^^**Death Guard**^^ unit is not within Engagement Range of one or more enemy unit, it can make a Normal move of up to 5\"."
               }
             ],
             "name": "Diseased Influence",
@@ -36052,9 +36107,9 @@
           {
             "characteristics": [
               {
-                "$text": "In your opponent's Shooting phase, when a friendly ^^**Death Guard**^^ unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that ^^**Death Guard**^^ unit can shoot as if it were your Shooting phase, but when resolving those attacks, it can only target that enemy unit (and only if it is an eligible target).",
                 "name": "Effect",
-                "typeId": "298e-f7c1-1edd-76f1"
+                "typeId": "298e-f7c1-1edd-76f1",
+                "$text": "In your opponent's Shooting phase, when a friendly ^^**Death Guard**^^ unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that ^^**Death Guard**^^ unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target)."
               }
             ],
             "name": "Inflamed Reprisal",
@@ -53367,7 +53422,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 290
+            "value": 300
           },
           {
             "name": "Crusade Points",
@@ -53637,7 +53692,7 @@
           },
           {
             "type": "increment",
-            "value": 30,
+            "value": 40,
             "field": "51b2-306e-1021-d207",
             "conditionGroups": [
               {
@@ -53850,7 +53905,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 10
+            "value": 15
           },
           {
             "name": "Crusade Points",
@@ -53989,7 +54044,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 10
+            "value": 15
           },
           {
             "name": "Crusade Points",
@@ -66645,7 +66700,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "5108-f98-63c2-53cb",
     "name": "Chaos - Death Guard",
-    "revision": 5,
+    "revision": 6,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",

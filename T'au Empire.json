@@ -1320,7 +1320,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 80
+            "value": 70
           },
           {
             "name": "Crusade Points",
@@ -17057,7 +17057,7 @@
                       {
                         "name": "pts",
                         "typeId": "51b2-306e-1021-d207",
-                        "value": 10
+                        "value": 15
                       },
                       {
                         "name": "Crusade Points",
@@ -17632,7 +17632,7 @@
           },
           {
             "type": "increment",
-            "value": 10,
+            "value": 15,
             "field": "51b2-306e-1021-d207",
             "conditionGroups": [
               {
@@ -20178,7 +20178,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 80
+            "value": 85
           },
           {
             "name": "Crusade Points",
@@ -20529,6 +20529,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 15,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "2598-d700-9952-e439",
+                        "shared": true,
+                        "childName": "Pathfinder Team"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -24849,7 +24889,7 @@
               }
             ],
             "type": "set",
-            "value": 240,
+            "value": 255,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -25606,7 +25646,7 @@
                       {
                         "name": "pts",
                         "typeId": "51b2-306e-1021-d207",
-                        "value": 20
+                        "value": 25
                       },
                       {
                         "name": "Crusade Points",
@@ -25889,7 +25929,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 180
+            "value": 190
           },
           {
             "name": "Crusade Points",
@@ -27065,7 +27105,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 140
+            "value": 150
           },
           {
             "name": "Crusade Points",
@@ -28844,7 +28884,52 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 85
+            "value": 75
+          },
+          {
+            "name": "Crusade Points",
+            "typeId": "b03b-c239-15a5-da55",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Battle Honours",
+            "typeId": "75bb-ded1-c86d-bdf0",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Experience",
+            "typeId": "a623-fe74-1d33-cddf",
+            "value": 0
+          },
+          {
+            "name": "Crusade: Weapon Modifications",
+            "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Diplomatic Power",
+            "typeId": "4d7c-04b6-8a79-837f",
+            "value": 0
+          },
+          {
+            "name": "Military Power",
+            "typeId": "1cbe-d9c9-86a8-2d41",
+            "value": 0
           }
         ],
         "modifierGroups": [
@@ -29076,6 +29161,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "14f3-9aa6-21af-7fe3",
+                        "shared": true,
+                        "childName": "Devilfish"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "type": "model",
@@ -29121,13 +29246,6 @@
             "hidden": false,
             "id": "3f1b-9beb-1e24-4fcc",
             "targetId": "4814-7b6d-aea6-4228",
-            "primary": false
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "415a-ab39-3f0b-2973",
-            "targetId": "b927-8eeb-7cc3-8dec",
             "primary": false
           }
         ],
@@ -30480,13 +30598,6 @@
             "hidden": false,
             "id": "db25-b49f-2b53-9059",
             "targetId": "4814-7b6d-aea6-4228",
-            "primary": false
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "40d3-6011-5459-3be2",
-            "targetId": "b927-8eeb-7cc3-8dec",
             "primary": false
           }
         ],
@@ -32855,7 +32966,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 360
+            "value": 375
           },
           {
             "name": "Crusade Points",
@@ -32880,6 +32991,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -41402,13 +41523,6 @@
             "id": "0416-e292-aa04-e2d4",
             "targetId": "4814-7b6d-aea6-4228",
             "primary": false
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "6153-5d5c-e151-0227",
-            "targetId": "b927-8eeb-7cc3-8dec",
-            "primary": false
           }
         ],
         "profiles": [
@@ -42246,7 +42360,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 325
+            "value": 375
           },
           {
             "name": "Crusade Points",
@@ -42266,6 +42380,21 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           },
           {
@@ -42740,13 +42869,6 @@
             "hidden": false,
             "id": "d29c-a7f9-6341-9469",
             "targetId": "4814-7b6d-aea6-4228",
-            "primary": false
-          },
-          {
-            "name": "Frame",
-            "hidden": false,
-            "id": "a806-63da-1b8b-7d87",
-            "targetId": "b927-8eeb-7cc3-8dec",
             "primary": false
           }
         ],
@@ -65311,7 +65433,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 205
+            "value": 220
           },
           {
             "name": "Crusade Points",
@@ -67141,7 +67263,7 @@
                       {
                         "name": "Description",
                         "typeId": "9b8f-694b-e5e-b573",
-                        "$text": "**^^T’au Empire^^** model only. In the Resolve Pre-battle Abilities step, you can select up to two friendly **T’AU EMPIRE** units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability."
+                        "$text": "In the Resolve Pre-battle Abilities step, you can select up to two friendly **T’AU EMPIRE** units within 6\" of this model that do not have the **Scouts** ability. Until the end of the battle, all models in the selected units have the **Scouts 6\"** ability."
                       }
                     ],
                     "name": "Strike Swiftly",
@@ -67183,15 +67305,6 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Scouts",
-                    "hidden": false,
-                    "id": "d7de-9d0b-b4be-24e5",
-                    "type": "rule",
-                    "targetId": "ada6-bac1-ffe0-d6f7"
                   }
                 ],
                 "costs": [
@@ -70992,10 +71105,10 @@
             ],
             "categoryLinks": [
               {
-                "name": "Priority Assets",
+                "name": "Reconnaissance",
                 "hidden": false,
-                "id": "9776-0889-cc22-947d",
-                "targetId": "0936-9767-1cc7-52ae",
+                "id": "3202-e64a-f1cb-eef5",
+                "targetId": "b4a7-5083-fe94-4d24",
                 "primary": false
               }
             ]
@@ -71060,10 +71173,10 @@
             ],
             "categoryLinks": [
               {
-                "name": "Purge the Foe",
+                "name": "Priority Assets",
                 "hidden": false,
-                "id": "56bd-5358-5801-aade",
-                "targetId": "6fe0-3dbe-f7e0-10bb",
+                "id": "fe4c-46c4-d3a8-5028",
+                "targetId": "0936-9767-1cc7-52ae",
                 "primary": false
               }
             ],
@@ -71123,7 +71236,7 @@
           {
             "rules": [
               {
-                "description": "Each time a **^^T'au Empire Battlesuit^^** model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 9\", improve the Armour Penetration characteristic of that attack by 1 as well.",
+                "description": "Each time a **T’AU EMPIRE BATTLESUIT** model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
                 "name": "Bonded Heroes",
                 "id": "400b-c724-6710-76b1",
                 "hidden": false
@@ -71196,7 +71309,7 @@
               {
                 "name": "Detachment Points",
                 "typeId": "82ae-1066-5107-6ae0",
-                "value": 2
+                "value": 3
               },
               {
                 "name": "Enhancements",

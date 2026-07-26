@@ -8316,7 +8316,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 90
+            "value": 80
           },
           {
             "name": "Crusade Points",
@@ -8432,9 +8432,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 9\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 8\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it."
               }
             ],
             "name": "Aerial Seeding",
@@ -8922,6 +8922,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 3,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "fada-677a-f6a4-cd12",
+                        "shared": true,
+                        "childName": "Tyrannocyte"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -8930,7 +8970,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 60
+            "value": 55
           },
           {
             "name": "Crusade Points",
@@ -8982,7 +9022,7 @@
               }
             ],
             "type": "set",
-            "value": 120,
+            "value": 105,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -13342,39 +13382,39 @@
           {
             "characteristics": [
               {
-                "$text": "48\"",
                 "name": "Range",
-                "typeId": "9896-9419-16a1-92fc"
+                "typeId": "9896-9419-16a1-92fc",
+                "$text": "48\""
               },
               {
-                "$text": "2",
                 "name": "A",
-                "typeId": "3bb-c35f-f54-fb08"
+                "typeId": "3bb-c35f-f54-fb08",
+                "$text": "2"
               },
               {
-                "$text": "3+",
                 "name": "BS",
-                "typeId": "94d-8a98-cf90-183e"
+                "typeId": "94d-8a98-cf90-183e",
+                "$text": "3+"
               },
               {
-                "$text": "18",
                 "name": "S",
-                "typeId": "2229-f494-25db-c5d3"
+                "typeId": "2229-f494-25db-c5d3",
+                "$text": "18"
               },
               {
-                "$text": "-4",
                 "name": "AP",
-                "typeId": "9ead-8a10-520-de15"
+                "typeId": "9ead-8a10-520-de15",
+                "$text": "-1"
               },
               {
-                "$text": "D6+6",
                 "name": "D",
-                "typeId": "a354-c1c8-a745-f9e3"
+                "typeId": "a354-c1c8-a745-f9e3",
+                "$text": "D6+6"
               },
               {
-                "$text": "Heavy",
                 "name": "Keywords",
-                "typeId": "7f1b-8591-2fcf-d01c"
+                "typeId": "7f1b-8591-2fcf-d01c",
+                "$text": "Heavy"
               }
             ],
             "name": "Rupture cannon",
@@ -13981,23 +14021,16 @@
             "id": "8a97-6239-6b44-f696",
             "targetId": "9e1e-ad1d-e864-7164",
             "primary": false
+          },
+          {
+            "name": "Mobile",
+            "hidden": false,
+            "id": "e65a-eebe-3ebc-9242",
+            "targetId": "355c-0ee6-3cde-6c71",
+            "primary": false
           }
         ],
         "profiles": [
-          {
-            "characteristics": [
-              {
-                "$text": "This model can move through terrain features, but cannot end a move within a wall, a floor, etc. This model can be set up or end a move on any floor level of **^^Ruins^^**, but if that level is not the ground floor, it can only do so if its base does not overhang the floor at that level.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Serpentine Fiend",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "903f-bed3-fca0-4cf7"
-          },
           {
             "characteristics": [
               {
@@ -16116,7 +16149,7 @@
                       }
                     ],
                     "id": "bb92-1121-d089-3082",
-                    "name": "Psychostatic Disruption",
+                    "name": "Psychostatic Disruption (Aura)",
                     "hidden": false,
                     "typeId": "9cc3-6d83-4dd3-9b64",
                     "typeName": "Abilities"
@@ -16165,7 +16198,7 @@
                   }
                 ],
                 "id": "6fe4-d5e5-26c-449a",
-                "name": "Psychostatic Disruption",
+                "name": "Psychostatic Disruption (Aura)",
                 "hidden": false,
                 "collective": false,
                 "import": true,
@@ -17223,7 +17256,7 @@
                   {
                     "name": "pts",
                     "typeId": "51b2-306e-1021-d207",
-                    "value": 20
+                    "value": 30
                   },
                   {
                     "name": "Crusade Points",
@@ -17569,9 +17602,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "**^^Vanguard Invader^^** only. The bearer has the Stealth ability and each time a ranged attack targets the bearer's unit, models in that unit have the Benefit of Cover against that attack.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "**VANGUARD INVADER** model only. This unit has **Stealth**."
                       }
                     ],
                     "id": "816c-af4d-ac5e-d3f7",
@@ -29158,10 +29191,10 @@
             ],
             "categoryLinks": [
               {
-                "name": "Purge the Foe",
+                "name": "Disruption",
                 "hidden": false,
-                "id": "7038-6a1f-c253-11e3",
-                "targetId": "6fe0-3dbe-f7e0-10bb",
+                "id": "daa2-8eba-027f-9970",
+                "targetId": "ecf8-cf72-7d5b-1b5b",
                 "primary": false
               }
             ]
@@ -29309,10 +29342,10 @@
                 "primary": false
               },
               {
-                "name": "Disruption",
+                "name": "Reconnaissance",
                 "hidden": false,
-                "id": "d757-e501-8da3-387d",
-                "targetId": "ecf8-cf72-7d5b-1b5b",
+                "id": "5217-b131-3185-5529",
+                "targetId": "b4a7-5083-fe94-4d24",
                 "primary": false
               }
             ],
