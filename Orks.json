@@ -95526,6 +95526,13 @@
                 "id": "5c54-74f5-b394-91b5",
                 "targetId": "1cc1-f11a-4e8f-1bcc",
                 "primary": false
+              },
+              {
+                "name": "3DP Detachment",
+                "hidden": false,
+                "id": "3d23-11df-afb4-6e2c",
+                "targetId": "7d80-2de5-816e-9d2b",
+                "primary": false
               }
             ],
             "costs": [
@@ -95927,6 +95934,13 @@
                 "hidden": false,
                 "id": "68cd-a746-cf67-2cf2",
                 "targetId": "1cc1-f11a-4e8f-1bcc",
+                "primary": false
+              },
+              {
+                "name": "3DP Detachment",
+                "hidden": false,
+                "id": "88d6-34b4-0b94-b2fd",
+                "targetId": "7d80-2de5-816e-9d2b",
                 "primary": false
               }
             ]
@@ -96999,12 +97013,55 @@
             "scope": "parent",
             "shared": true,
             "id": "9958-acc3-9db5-b7ca"
+          },
+          {
+            "type": "max",
+            "value": -1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "002f-e0f8-28e2-2502",
+            "includeChildSelections": false
           }
         ],
         "name": "Detachment",
         "id": "8b85-ad3b-752f-6502",
         "hidden": false,
-        "defaultSelectionEntryId": "none"
+        "defaultSelectionEntryId": "none",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 1,
+            "field": "002f-e0f8-28e2-2502",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "1. Incursion (1000 Point limit)"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "7d80-2de5-816e-9d2b",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "3DP Detachment"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "selectionEntryGroups": [
