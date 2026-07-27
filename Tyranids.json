@@ -12634,6 +12634,39 @@
             "shared": true,
             "id": "253f-90c6-8088-9a69",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "6dba-2dc7-a224-7875",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "877d-afd1-aa74-b6f1",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "0f00-09b7-4897-a1d0",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "costs": [
@@ -28637,6 +28670,13 @@
             "id": "c34d-9566-6924-ff48",
             "targetId": "1556-9b56-fba6-4370",
             "primary": false
+          },
+          {
+            "name": "Malanthrope",
+            "hidden": false,
+            "id": "9635-7652-2afa-40a3",
+            "targetId": "a634-9edf-3a8-b3f1",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -29076,7 +29116,37 @@
         "import": true,
         "name": "Malanthrope [Legends]",
         "hidden": false,
-        "id": "c17f-f55f-a3cb-530b"
+        "id": "c17f-f55f-a3cb-530b",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "84d2-2d28-5523-7dc9",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "c84f-d7e4-d853-88f3",
+                    "shared": true,
+                    "childName": "Venomthropes"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
