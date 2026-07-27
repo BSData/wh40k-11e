@@ -182,6 +182,39 @@
             "shared": true,
             "id": "c53a-2ac5-c542-4bcd",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "2848-aed5-28fd-25ff",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a6a4-4a60-2890-8784",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "5089-29cb-f107-eaa2",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -1206,6 +1239,20 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "c0d7-d922-8f79-8fca"
+          },
+          {
+            "name": "Leader",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "f802-ed9a-9cb0-7aef",
+            "characteristics": [
+              {
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following unit:\n- **ABERRANTS**"
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -1240,38 +1287,13 @@
             "type": "rule",
             "id": "b407-f36d-489-458f",
             "targetId": "9bf4-280f-bbe2-6fbb"
-          }
-        ],
-        "infoGroups": [
+          },
           {
-            "infoLinks": [
-              {
-                "name": "Leader",
-                "hidden": false,
-                "type": "rule",
-                "id": "6e42-61fa-e755-1d3e",
-                "targetId": "b4dd-3e1f-41cb-218f"
-              }
-            ],
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "This model can be attached to the following unit:\n- ABERRANTS",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Leader",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "f802-ed9a-9cb0-7aef"
-              }
-            ],
             "name": "Leader",
+            "id": "6e42-61fa-e755-1d3e",
             "hidden": false,
-            "id": "1004-5cb-95b9-a3d8"
+            "type": "rule",
+            "targetId": "b4dd-3e1f-41cb-218f"
           }
         ],
         "entryLinks": [
@@ -1856,6 +1878,36 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "1dd2-cbe4-efec-3b24",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e919-694c-97ac-c174",
+                    "shared": true,
+                    "childName": "Aberrants"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -3400,6 +3452,39 @@
             "shared": true,
             "id": "cfa1-c63a-c317-132d",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "2191-cffc-4921-d1ac",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "aabc-b8e3-9169-159a",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "5eff-e9fa-b3ee-7a16",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -5473,6 +5558,63 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5cee-7693-1209-2634",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a9ae-c8a3-b089-2a27",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Autopistols"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "944c-247a-211b-316a",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Hand Flamers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ffe-1e2a-b828-b7af",
+                    "shared": true,
+                    "childName": "Neophyte Hybrids"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -5596,6 +5738,39 @@
             "shared": true,
             "id": "23e8-ecd2-0720-e793",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "daa5-9a16-03ea-f231",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "0b16-5b75-5870-259c",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1d48-8125-a55b-e1a2",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -7901,9 +8076,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is leading a unit, melee weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
               }
             ],
             "name": "Twisted Science",
@@ -8331,6 +8506,36 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Twisted Science",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Twisted Science attached unit modifiers"
           }
         ],
         "selectionEntryGroups": [
@@ -8514,6 +8719,73 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "55e0-6ec5-5d99-de06",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e919-694c-97ac-c174",
+                    "shared": true,
+                    "childName": "Aberrants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a9ae-c8a3-b089-2a27",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Autopistols"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "944c-247a-211b-316a",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Hand Flamers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ffe-1e2a-b828-b7af",
+                    "shared": true,
+                    "childName": "Neophyte Hybrids"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
@@ -9268,6 +9540,64 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "16c2-e14e-d597-207d",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a9ae-c8a3-b089-2a27",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Autopistols"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "944c-247a-211b-316a",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Hand Flamers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ffe-1e2a-b828-b7af",
+                    "shared": true,
+                    "childName": "Neophyte Hybrids"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
@@ -11577,6 +11907,39 @@
             "shared": true,
             "id": "b677-0f66-0a92-d3dd",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "a63f-3dd6-c86b-0edb",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3b50-48a5-6b19-fe47",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "7d9a-7fb7-bfd6-8eb9",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -13491,6 +13854,36 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "6458-243d-6d62-e2a6",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5c5f-d483-11e3-3f12",
+                    "shared": true,
+                    "childName": "Atalan Jackals"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -14539,9 +14932,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, models in that unit have the Fights First ability",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is leading a unit, models in that unit have the **Fights First** ability"
               }
             ],
             "name": "Sudden Assault",
@@ -15163,6 +15556,64 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "f50d-3470-797c-fec0",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a9ae-c8a3-b089-2a27",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Autopistols"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "944c-247a-211b-316a",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Hand Flamers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ffe-1e2a-b828-b7af",
+                    "shared": true,
+                    "childName": "Neophyte Hybrids"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
@@ -15903,6 +16354,63 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "4d04-c476-9a95-e831",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a9ae-c8a3-b089-2a27",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Autopistols"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "944c-247a-211b-316a",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Hand Flamers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ffe-1e2a-b828-b7af",
+                    "shared": true,
+                    "childName": "Neophyte Hybrids"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -16032,6 +16540,39 @@
             "shared": true,
             "id": "287f-30a9-80a5-c3c8",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "9579-fcb1-5aae-4e29",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "49c1-b14b-444c-ca7f",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f877-1b61-816b-3c3c",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -19186,6 +19727,64 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "cf85-8693-fc1a-320e",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a9ae-c8a3-b089-2a27",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Autopistols"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "944c-247a-211b-316a",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Hand Flamers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ffe-1e2a-b828-b7af",
+                    "shared": true,
+                    "childName": "Neophyte Hybrids"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
         ]
       },
       {
@@ -19339,6 +19938,13 @@
             "type": "rule",
             "id": "45aa-b29-115c-5733",
             "targetId": "c05d-f4c3-f091-4938"
+          },
+          {
+            "name": "Leader",
+            "id": "93d3-721a-a9e7-5b13",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "b4dd-3e1f-41cb-218f"
           }
         ],
         "entryLinks": [
@@ -19382,45 +19988,13 @@
             "sortIndex": 1
           }
         ],
-        "infoGroups": [
-          {
-            "infoLinks": [
-              {
-                "name": "Leader",
-                "hidden": false,
-                "type": "rule",
-                "id": "93d3-721a-a9e7-5b13",
-                "targetId": "b4dd-3e1f-41cb-218f"
-              }
-            ],
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "This model can be attached to the following units:\n- PURESTRAIN GENESTEALERS",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Leader",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "4930-970b-9e3d-863"
-              }
-            ],
-            "name": "Leader",
-            "hidden": false,
-            "id": "1db7-b77e-1e26-348f"
-          }
-        ],
         "profiles": [
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is leading a unit, melee weapons equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability."
               }
             ],
             "name": "Might From Beyond",
@@ -19514,6 +20088,20 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "228c-28c8-6317-1332"
+          },
+          {
+            "name": "Leader",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "4930-970b-9e3d-863",
+            "characteristics": [
+              {
+                "$text": "This model can be attached to the following units:\n- PURESTRAIN GENESTEALERS",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "modifierGroups": [
@@ -19811,6 +20399,36 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Might From Beyond",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Devastating Wounds",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Bio-horror Disruption attached unit modifiers"
           }
         ],
         "selectionEntryGroups": [
@@ -19933,7 +20551,37 @@
         "import": true,
         "name": "Patriarch",
         "hidden": false,
-        "id": "2a91-a18e-bd08-fa66"
+        "id": "2a91-a18e-bd08-fa66",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "903f-f95e-d53c-87b1",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6d9c-2e39-be0b-aee9",
+                    "shared": true,
+                    "childName": "Purestrain Genestealers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -20737,6 +21385,63 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "ec3f-2865-466e-bd0d",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a9ae-c8a3-b089-2a27",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Autopistols"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "944c-247a-211b-316a",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Hand Flamers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ffe-1e2a-b828-b7af",
+                    "shared": true,
+                    "childName": "Neophyte Hybrids"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -20854,6 +21559,39 @@
             "shared": true,
             "id": "e441-70d2-6c87-2423",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "ab09-1392-e4d4-6ae7",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c478-435c-6cf9-63d3",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8395-41b8-d725-ecf2",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -25112,9 +25850,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [LETHAL HITS] ability.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is leading a unit, ranged weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
               }
             ],
             "name": "Bio-horror Disruption (Psychic)",
@@ -25623,6 +26361,36 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Bio-horror Disruption",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Bio-horror Disruption attached unit modifiers"
           }
         ],
         "selectionEntryGroups": [
@@ -25732,6 +26500,63 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "65d0-61b5-5cfd-714b",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a9ae-c8a3-b089-2a27",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Autopistols"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "944c-247a-211b-316a",
+                    "shared": true,
+                    "childName": "Acolyte Hybrids with Hand Flamers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ffe-1e2a-b828-b7af",
+                    "shared": true,
+                    "childName": "Neophyte Hybrids"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -25874,6 +26699,39 @@
             "shared": true,
             "id": "f2e9-df26-28d6-9e8a",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "c8bd-19df-04b0-893c",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c296-841c-20a7-bdc2",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f7ba-2c59-87a7-9455",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
