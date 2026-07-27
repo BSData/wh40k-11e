@@ -20168,21 +20168,21 @@
           {
             "constraints": [
               {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "9d64-9c4f-5486-ef76",
-                "includeChildSelections": false
-              },
-              {
                 "type": "min",
                 "value": 1,
                 "field": "selections",
                 "scope": "parent",
                 "shared": true,
                 "id": "6bb7-7e2e-1173-c71f",
+                "includeChildSelections": false
+              },
+              {
+                "type": "max",
+                "value": -1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "d424-5271-766b-c98e",
                 "includeChildSelections": false
               }
             ],
@@ -20521,7 +20521,41 @@
             "name": "Detachment",
             "id": "bd35-3b86-9066-a78e",
             "hidden": false,
-            "defaultSelectionEntryId": "none"
+            "defaultSelectionEntryId": "none",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": 1,
+                "field": "d424-5271-766b-c98e",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "7d80-2de5-816e-9d2b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "3DP Detachment"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -80820,7 +80854,7 @@
     "name": "Imperium - Agents of the Imperium",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 5,
+    "revision": 6,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }

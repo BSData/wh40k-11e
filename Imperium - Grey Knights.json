@@ -36880,6 +36880,13 @@
                 "id": "edcf-fa85-92be-384f",
                 "targetId": "1cc1-f11a-4e8f-1bcc",
                 "primary": false
+              },
+              {
+                "name": "3DP Detachment",
+                "hidden": false,
+                "id": "5885-2501-4a2b-8196",
+                "targetId": "7d80-2de5-816e-9d2b",
+                "primary": false
               }
             ],
             "constraints": [
@@ -37730,7 +37737,61 @@
         "name": "Detachments",
         "hidden": false,
         "id": "f7f3-a061-3f69-1432",
-        "defaultSelectionEntryId": "none"
+        "defaultSelectionEntryId": "none",
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "9c8b-ecd2-0893-9b98",
+            "includeChildSelections": false
+          },
+          {
+            "type": "max",
+            "value": -1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "1cc5-f836-580e-e92d",
+            "includeChildSelections": false
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 1,
+            "field": "1cc5-f836-580e-e92d",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "1. Incursion (1000 Point limit)"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "7d80-2de5-816e-9d2b",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "3DP Detachment"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "entryLinks": [

@@ -483,6 +483,15 @@
                 "includeChildForces": false,
                 "id": "2146-a293-fdcf-f271",
                 "type": "min"
+              },
+              {
+                "type": "max",
+                "value": -1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "450b-efa8-4560-b3e1",
+                "includeChildSelections": false
               }
             ],
             "selectionEntries": [
@@ -554,6 +563,13 @@
                     "hidden": false,
                     "id": "03c4-26b7-b517-fb96",
                     "targetId": "0936-9767-1cc7-52ae",
+                    "primary": false
+                  },
+                  {
+                    "name": "3DP Detachment",
+                    "hidden": false,
+                    "id": "d1e4-db69-d4d0-334c",
+                    "targetId": "7d80-2de5-816e-9d2b",
                     "primary": false
                   }
                 ]
@@ -1219,7 +1235,41 @@
             "hidden": false,
             "collective": false,
             "import": true,
-            "defaultSelectionEntryId": "none"
+            "defaultSelectionEntryId": "none",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": 1,
+                "field": "450b-efa8-4560-b3e1",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "7d80-2de5-816e-9d2b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "3DP Detachment"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "costs": [
@@ -1249,7 +1299,7 @@
           }
         ],
         "id": "5914-3326-fac9-bf29",
-        "name": "Detachment Choice",
+        "name": "Detachment",
         "hidden": false,
         "collective": false,
         "import": true,

@@ -13382,77 +13382,6 @@
           {
             "characteristics": [
               {
-                "name": "Range",
-                "typeId": "9896-9419-16a1-92fc",
-                "$text": "48\""
-              },
-              {
-                "name": "A",
-                "typeId": "3bb-c35f-f54-fb08",
-                "$text": "2"
-              },
-              {
-                "name": "BS",
-                "typeId": "94d-8a98-cf90-183e",
-                "$text": "3+"
-              },
-              {
-                "name": "S",
-                "typeId": "2229-f494-25db-c5d3",
-                "$text": "18"
-              },
-              {
-                "name": "AP",
-                "typeId": "9ead-8a10-520-de15",
-                "$text": "-1"
-              },
-              {
-                "name": "D",
-                "typeId": "a354-c1c8-a745-f9e3",
-                "$text": "D6+6"
-              },
-              {
-                "name": "Keywords",
-                "typeId": "7f1b-8591-2fcf-d01c",
-                "$text": "Heavy"
-              }
-            ],
-            "name": "Rupture cannon",
-            "typeId": "f77d-b953-8fa4-b762",
-            "typeName": "Ranged Weapons",
-            "hidden": false,
-            "id": "3040-2e2-ec95-592d"
-          }
-        ],
-        "infoLinks": [
-          {
-            "name": "Heavy",
-            "id": "bd3d-eeda-9f0d-7a42",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "1202-10a8-78e9-4c67"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Ranged Weapon",
-            "hidden": false,
-            "id": "2b02-4e89-b8e7-1edc",
-            "targetId": "eeda-8544-a2f3-3fab",
-            "primary": false
-          }
-        ],
-        "type": "upgrade",
-        "import": true,
-        "name": "Rupture cannon",
-        "hidden": false,
-        "id": "e4bc-cc82-fb71-3b6d"
-      },
-      {
-        "profiles": [
-          {
-            "characteristics": [
-              {
                 "$text": "24\"",
                 "name": "Range",
                 "typeId": "9896-9419-16a1-92fc"
@@ -23684,6 +23613,15 @@
             "includeChildForces": false,
             "id": "9771-9344-412d-6850",
             "type": "min"
+          },
+          {
+            "type": "max",
+            "value": -1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "c3de-e394-1973-5632",
+            "includeChildSelections": false
           }
         ],
         "selectionEntries": [
@@ -23802,6 +23740,13 @@
                 "hidden": false,
                 "id": "7386-4f13-cdc4-e68b",
                 "targetId": "1cc1-f11a-4e8f-1bcc",
+                "primary": false
+              },
+              {
+                "name": "3DP Detachment",
+                "hidden": false,
+                "id": "6f71-7835-798f-65d1",
+                "targetId": "7d80-2de5-816e-9d2b",
                 "primary": false
               }
             ]
@@ -24480,6 +24425,13 @@
                 "id": "df4a-ea20-d5af-e051",
                 "targetId": "ecf8-cf72-7d5b-1b5b",
                 "primary": false
+              },
+              {
+                "name": "3DP Detachment",
+                "hidden": false,
+                "id": "3b1f-590e-b7ac-b987",
+                "targetId": "7d80-2de5-816e-9d2b",
+                "primary": false
               }
             ]
           },
@@ -24951,7 +24903,41 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "defaultSelectionEntryId": "none"
+        "defaultSelectionEntryId": "none",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 1,
+            "field": "c3de-e394-1973-5632",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "1. Incursion (1000 Point limit)"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "7d80-2de5-816e-9d2b",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "3DP Detachment"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "selectionEntries": [
@@ -28460,6 +28446,13 @@
                 "id": "c609-e141-5e79-3476",
                 "targetId": "1cc1-f11a-4e8f-1bcc",
                 "primary": false
+              },
+              {
+                "name": "3DP Detachment",
+                "hidden": false,
+                "id": "c0f3-6db9-7c0b-884b",
+                "targetId": "7d80-2de5-816e-9d2b",
+                "primary": false
               }
             ]
           },
@@ -29413,6 +29406,15 @@
             "shared": true,
             "id": "0fc5-7bb0-0193-6f30-min",
             "includeChildSelections": false
+          },
+          {
+            "type": "max",
+            "value": -1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "c466-ed10-bc51-5b0d",
+            "includeChildSelections": false
           }
         ],
         "comment": "Genestealer Cults",
@@ -29441,7 +29443,41 @@
         "name": "Detachment",
         "hidden": false,
         "id": "7170-c243-d89f-6644",
-        "defaultSelectionEntryId": "none"
+        "defaultSelectionEntryId": "none",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 1,
+            "field": "c466-ed10-bc51-5b0d",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "1. Incursion (1000 Point limit)"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "7d80-2de5-816e-9d2b",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "3DP Detachment"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "comment": "Crucible content",

@@ -140749,7 +140749,61 @@
         "name": "Detachments",
         "hidden": false,
         "id": "7466-16bc-8db6-814",
-        "defaultSelectionEntryId": "none"
+        "defaultSelectionEntryId": "none",
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "4374-206b-aea4-2b2b",
+            "includeChildSelections": false
+          },
+          {
+            "type": "max",
+            "value": -1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "43c8-b074-4b25-6185",
+            "includeChildSelections": false
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 1,
+            "field": "43c8-b074-4b25-6185",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "d62d-db22-4893-4bc0",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "1. Incursion (1000 Point limit)"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "7d80-2de5-816e-9d2b",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "3DP Detachment"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "selectionEntries": [
