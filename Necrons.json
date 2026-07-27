@@ -11321,6 +11321,15 @@
                 "scope": "parent",
                 "shared": true,
                 "id": "5807-8909-f15b-dd04"
+              },
+              {
+                "type": "max",
+                "value": -1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "79ed-7b95-6a3e-0678",
+                "includeChildSelections": false
               }
             ],
             "selectionEntries": [
@@ -11400,6 +11409,13 @@
                     "hidden": false,
                     "id": "e717-a756-d749-2afd",
                     "targetId": "d887-58b7-5a1c-5ef0",
+                    "primary": false
+                  },
+                  {
+                    "name": "3DP Detachment",
+                    "hidden": false,
+                    "id": "d4df-d380-03de-a99e",
+                    "targetId": "7d80-2de5-816e-9d2b",
                     "primary": false
                   }
                 ]
@@ -11546,6 +11562,13 @@
                     "hidden": false,
                     "id": "876b-26ba-0667-875b",
                     "targetId": "1cc1-f11a-4e8f-1bcc",
+                    "primary": false
+                  },
+                  {
+                    "name": "3DP Detachment",
+                    "hidden": false,
+                    "id": "1a32-3827-4a0f-16f0",
+                    "targetId": "7d80-2de5-816e-9d2b",
                     "primary": false
                   }
                 ]
@@ -11772,6 +11795,13 @@
                     "hidden": false,
                     "id": "294b-d918-3f90-672d",
                     "targetId": "0936-9767-1cc7-52ae",
+                    "primary": false
+                  },
+                  {
+                    "name": "3DP Detachment",
+                    "hidden": false,
+                    "id": "7692-3da4-4816-fbbb",
+                    "targetId": "7d80-2de5-816e-9d2b",
                     "primary": false
                   }
                 ]
@@ -12229,7 +12259,41 @@
             "name": "Detachment",
             "hidden": false,
             "id": "aa9c-b6d6-f78-12ac",
-            "defaultSelectionEntryId": "none"
+            "defaultSelectionEntryId": "none",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": 1,
+                "field": "79ed-7b95-6a3e-0678",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "7d80-2de5-816e-9d2b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "3DP Detachment"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [

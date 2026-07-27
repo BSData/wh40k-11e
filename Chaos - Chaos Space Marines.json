@@ -10057,6 +10057,15 @@
                 "includeChildForces": false,
                 "id": "3db9-1a73-cb6f-f20a",
                 "type": "min"
+              },
+              {
+                "type": "max",
+                "value": -1,
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "id": "5e0e-d074-38ef-e985",
+                "includeChildSelections": false
               }
             ],
             "selectionEntries": [
@@ -10201,6 +10210,13 @@
                     "hidden": false,
                     "id": "a242-c821-d851-8828",
                     "targetId": "0936-9767-1cc7-52ae",
+                    "primary": false
+                  },
+                  {
+                    "name": "3DP Detachment",
+                    "hidden": false,
+                    "id": "41a1-45a6-3a98-07fe",
+                    "targetId": "7d80-2de5-816e-9d2b",
                     "primary": false
                   }
                 ]
@@ -10417,6 +10433,13 @@
                     "hidden": false,
                     "id": "4827-afde-cccb-9867",
                     "targetId": "b4a7-5083-fe94-4d24",
+                    "primary": false
+                  },
+                  {
+                    "name": "3DP Detachment",
+                    "hidden": false,
+                    "id": "fcb1-c59a-3ccf-1543",
+                    "targetId": "7d80-2de5-816e-9d2b",
                     "primary": false
                   }
                 ]
@@ -10778,6 +10801,13 @@
                     "id": "4b24-de1e-0865-90d2",
                     "targetId": "6fe0-3dbe-f7e0-10bb",
                     "primary": false
+                  },
+                  {
+                    "name": "3DP Detachment",
+                    "hidden": false,
+                    "id": "7e62-b7a6-6451-27b0",
+                    "targetId": "7d80-2de5-816e-9d2b",
+                    "primary": false
                   }
                 ]
               },
@@ -11000,6 +11030,13 @@
                     "hidden": false,
                     "id": "1861-6588-228b-7a8c",
                     "targetId": "ecf8-cf72-7d5b-1b5b",
+                    "primary": false
+                  },
+                  {
+                    "name": "3DP Detachment",
+                    "hidden": false,
+                    "id": "17d6-fd07-5d42-8471",
+                    "targetId": "7d80-2de5-816e-9d2b",
                     "primary": false
                   }
                 ]
@@ -11444,7 +11481,41 @@
             "hidden": false,
             "collective": false,
             "import": true,
-            "defaultSelectionEntryId": "none"
+            "defaultSelectionEntryId": "none",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": 1,
+                "field": "5e0e-d074-38ef-e985",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "7d80-2de5-816e-9d2b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "3DP Detachment"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "costs": [
