@@ -2129,6 +2129,23 @@
             ]
           }
         ]
+      },
+      {
+        "name": "3DP Detachment",
+        "id": "7d80-2de5-816e-9d2b",
+        "hidden": true,
+        "comment": "Used for logic in Incursion games to track 3DP detachments",
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "7592-999b-7ccd-a597",
+            "includeChildSelections": true
+          }
+        ]
       }
     ],
     "forceEntries": [
@@ -2343,16 +2360,48 @@
             "type": "set",
             "value": 3,
             "field": "95c5-effd-74f1-c8f4",
-            "conditions": [
+            "conditionGroups": [
               {
-                "type": "equalTo",
-                "value": 1,
-                "field": "selections",
-                "scope": "force",
-                "childId": "baf8-997f-e323-a090",
-                "shared": true,
-                "includeChildSelections": true,
-                "childName": "2. Strike Force (2000 Point limit)"
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "equalTo",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "baf8-997f-e323-a090",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "2. Strike Force (2000 Point limit)"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "equalTo",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "d62d-db22-4893-4bc0",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "1. Incursion (1000 Point limit)"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "7d80-2de5-816e-9d2b",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "3DP Detachment"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
