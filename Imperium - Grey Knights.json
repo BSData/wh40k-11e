@@ -31830,7 +31830,171 @@
         "import": true,
         "name": "Champion of Titan [Crucible]",
         "hidden": false,
-        "id": "9782-7a59-9b65-21e4"
+        "id": "9782-7a59-9b65-21e4",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "f31a-ac00-a675-7d5b",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "8084-5bdd-7c6-bae4",
+                            "shared": true,
+                            "childName": "Purgation Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "103f-a8cd-8c1f-24df",
+                            "shared": true,
+                            "childName": "Strike Squad"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "c83e-6b21-a962-d551",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "childName": "Personal Teleporter"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "2105-ce64-2a08-74bd",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "780f-46d9-4e57-4a51",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "childName": "Order of Purifiers"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "67f8-444-b8b7-ad0",
+                        "shared": true,
+                        "childName": "Purifier Squad"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "c83e-6b21-a962-d551",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "childName": "Personal Teleporter"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "b7d3-6b00-c657-ebd7",
+                        "shared": true,
+                        "childName": "Interceptor Squad"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "2105-ce64-2a08-74bd",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "childName": "Terminator Armour"
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "cddf-ac1-4a0d-8e48",
+                            "shared": true,
+                            "childName": "Brotherhood Terminator Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "9020-9fb5-8ef8-5ad4",
+                            "shared": true,
+                            "childName": "Paladin Squad"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
