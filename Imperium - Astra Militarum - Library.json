@@ -241,6 +241,39 @@
             "shared": true,
             "id": "4ad6-3e80-6d4e-876e",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "664d-40d2-dee1-729d",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "7c4e-0046-1a3f-0d60",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "e98c-2a34-9cb7-c4c3",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "categoryLinks": [
@@ -41091,6 +41124,39 @@
             "shared": true,
             "id": "1131-d72b-067a-cf0f",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "ea9e-dd8d-b68e-6ba6",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c4d7-f1ed-cd6b-79b8",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f26f-5d2c-81d4-5a44",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -122968,7 +123034,121 @@
         "import": true,
         "name": "Front-line Commander [Crucible]",
         "hidden": false,
-        "id": "4fc5-184d-b305-3551"
+        "id": "4fc5-184d-b305-3551",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "249a-bdc8-9c41-4ac6",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "fa45-57e-930e-602b",
+                        "shared": true,
+                        "childName": "Faction: Astra Militarum"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "e338-111e-d0c6-b687",
+                        "shared": true,
+                        "childName": "Battleline"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "54f6-3fe9-3fd2-d237",
+                        "shared": true,
+                        "childName": "Noble Steed",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "1eba-3dba-477b-9283",
+                            "shared": true,
+                            "childName": "Attilan Rough Riders"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4a58-462c-a1ac-238b",
+                            "shared": true,
+                            "childName": "Death Riders"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -124000,7 +124180,46 @@
         "import": true,
         "name": "Augmented Bone 'Ead [Crucible]",
         "hidden": false,
-        "id": "7280-8daf-312a-b01d"
+        "id": "7280-8daf-312a-b01d",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "ad83-2825-e593-6339",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "c34d-50b5-f24d-f2f7",
+                    "shared": true,
+                    "childName": "Bullgryn Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "dbea-f421-4e4b-c605",
+                    "shared": true,
+                    "childName": "Ogryn Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "infoLinks": [
@@ -124603,6 +124822,26 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Mobile Firebase",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Assault",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              }
+            ],
+            "comment": "Mobile Firebase attached unit modifiers"
           }
         ],
         "modifiers": [
@@ -124644,7 +124883,46 @@
         "import": true,
         "name": "Sentinel Commander [Crucible]",
         "hidden": false,
-        "id": "a040-9715-5d3a-52af"
+        "id": "a040-9715-5d3a-52af",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2c4b-769f-83cd-369a",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d104-cf4f-e68f-b9f9",
+                    "shared": true,
+                    "childName": "Armoured Sentinels"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4045-1d5f-18fb-99bf",
+                    "shared": true,
+                    "childName": "Scout Sentinels"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "modifiers": [
