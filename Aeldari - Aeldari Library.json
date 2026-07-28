@@ -34486,6 +34486,39 @@
             "shared": true,
             "id": "4db2-7cdd-b0ed-69f0",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "0b74-ae47-cb79-6a9f",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c5ff-1db6-c0f9-05c1",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "242f-6519-6e14-efc3",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -138913,7 +138946,275 @@
         "import": true,
         "name": "Craftworld Warleader [Crucible]",
         "hidden": false,
-        "id": "8e2c-2234-8595-f191"
+        "id": "8e2c-2234-8595-f191",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "7dda-daed-60aa-f230",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "1880-69f1-aa1e-f33c",
+                            "shared": true,
+                            "childName": "Guardian Defenders"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "af39-ea5c-4f23-311d",
+                            "shared": true,
+                            "childName": "Storm Guardians"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "7d34-c046-e08f-13e1",
+                            "shared": true,
+                            "childName": "Warlock Conclave"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "cf44-ddd9-8e4a-c8eb",
+                        "shared": true,
+                        "childName": "Cameleoline Cloak",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "00bb-b794-f177-dabd",
+                        "shared": true,
+                        "childName": "Corsair Raider",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "e12e-294b-018f-c121",
+                        "shared": true,
+                        "childName": "Wayleaper's Heavy Aspect Armour",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "45c7-600f-d867-b1a",
+                        "shared": true,
+                        "childName": "Rangers"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "cf44-ddd9-8e4a-c8eb",
+                        "shared": true,
+                        "childName": "Cameleoline Cloak",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "00bb-b794-f177-dabd",
+                        "shared": true,
+                        "childName": "Corsair Raider",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "98f7-4a8a-dbd3-4a81",
+                            "shared": true,
+                            "childName": "Corsair Voidreavers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ce44-615a-a40e-d092",
+                            "shared": true,
+                            "childName": "Corsair Voidscarred"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "9dba-c6a8-864b-36ea",
+                        "shared": true,
+                        "childName": "Heavy Aspect Armour",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "6139-391b-2c62-e245",
+                            "shared": true,
+                            "childName": "Dark Reapers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5032-ad18-c8c7-295f",
+                            "shared": true,
+                            "childName": "Dire Avengers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "f0a5-7dcc-4eb1-b722",
+                            "shared": true,
+                            "childName": "Fire Dragons"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "a272-87e8-eb5a-e1ff",
+                            "shared": true,
+                            "childName": "Howling Banshees"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "edd3-7762-a3f5-679f",
+                            "shared": true,
+                            "childName": "Striking Scorpions"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "e12e-294b-018f-c121",
+                        "shared": true,
+                        "childName": "Wayleaper's Heavy Aspect Armour",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ff91-76f9-8d6a-c11a",
+                            "shared": true,
+                            "childName": "Swooping Hawks"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "432f-4202-c91c-9f06",
+                            "shared": true,
+                            "childName": "Warp Spiders"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -139447,7 +139748,64 @@
         "import": true,
         "name": "Skyrunner [Crucible]",
         "hidden": false,
-        "id": "915f-4ee6-3358-31ca"
+        "id": "915f-4ee6-3358-31ca",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "16ee-7ec6-d79c-5669",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e32d-476-6618-3181",
+                    "shared": true,
+                    "childName": "Windriders"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "31dd-3b0b-d4d8-de49",
+                        "shared": true,
+                        "childName": "Shining Spears"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "7535-5b09-8df8-05c7",
+                        "shared": true,
+                        "childName": "Skyrunner's Heavy Aspect armour",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
