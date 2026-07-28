@@ -1796,7 +1796,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b0c9-6224-3c6e-375b",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5032-ad18-c8c7-295f",
+                    "shared": true,
+                    "childName": "Dire Avengers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -4228,11 +4258,129 @@
             "type": "rule"
           },
           {
+            "name": "Fights First",
+            "hidden": false,
+            "type": "rule",
+            "id": "82f3-2733-7f5e-6ed6",
+            "targetId": "24-c886-e8ba-5a89",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "root-entry",
+                    "childId": "7fcb-9262-474a-7cec",
+                    "shared": true,
+                    "childName": "Howling Banshees",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "name": "Leader",
             "hidden": false,
             "type": "rule",
-            "id": "3bd7-964d-296f-3b54",
+            "id": "1c26-6dc0-91bb-0d57",
             "targetId": "b4dd-3e1f-41cb-218f"
+          },
+          {
+            "name": "Infiltrators",
+            "hidden": false,
+            "type": "rule",
+            "id": "d59e-d275-1e8a-2b28",
+            "targetId": "c05d-f4c3-f091-4938",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "root-entry",
+                    "childId": "c90f-a8e5-6afa-eb91",
+                    "shared": true,
+                    "childName": "Striking Scorpions",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Stealth",
+            "hidden": false,
+            "type": "rule",
+            "id": "1e2c-5ec5-71ff-b6a1",
+            "targetId": "bec5-4288-34a6-ccfa",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "root-entry",
+                    "childId": "c90f-a8e5-6afa-eb91",
+                    "shared": true,
+                    "childName": "Striking Scorpions",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Scouts",
+            "hidden": false,
+            "type": "rule",
+            "id": "dc4f-2817-0b74-5793",
+            "targetId": "ada6-bac1-ffe0-d6f7",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "root-entry",
+                    "childId": "c90f-a8e5-6afa-eb91",
+                    "shared": true,
+                    "childName": "Striking Scorpions",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "includeChildSelections": false
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "7\"",
+                "field": "name",
+                "join": " "
+              }
+            ]
           }
         ],
         "modifierGroups": [
@@ -4421,7 +4569,91 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b099-18a2-10cc-b92d",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6139-391b-2c62-e245",
+                    "shared": true,
+                    "childName": "Dark Reapers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5032-ad18-c8c7-295f",
+                    "shared": true,
+                    "childName": "Dire Avengers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f0a5-7dcc-4eb1-b722",
+                    "shared": true,
+                    "childName": "Fire Dragons"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1880-69f1-aa1e-f33c",
+                    "shared": true,
+                    "childName": "Guardian Defenders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a272-87e8-eb5a-e1ff",
+                    "shared": true,
+                    "childName": "Howling Banshees"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "af39-ea5c-4f23-311d",
+                    "shared": true,
+                    "childName": "Storm Guardians"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "edd3-7762-a3f5-679f",
+                    "shared": true,
+                    "childName": "Striking Scorpions"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -16734,6 +16966,39 @@
             "shared": true,
             "id": "3734-a76b-08f4-7518",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "758d-fb72-6224-0868",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3b65-5374-388e-9d9e",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "44fa-b0bb-a87d-441a",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
