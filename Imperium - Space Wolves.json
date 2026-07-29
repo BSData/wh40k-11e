@@ -37767,7 +37767,44 @@
             ],
             "name": "Weapon Option",
             "id": "98c6-b4c7-a1dd-24d5",
-            "hidden": false
+            "hidden": false,
+            "modifiers": [
+              {
+                "type": "add",
+                "value": "All models must select the same weapon",
+                "field": "error",
+                "affects": "self.entries",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "d0b3-238e-1b14-0a1e",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "childName": "Paired Master-crafted Power Weapons"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "ad9f-15da-bc66-3629",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "childName": "Master-crafted Power Weapon"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
