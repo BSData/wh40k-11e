@@ -39445,7 +39445,91 @@
                 "field": "51b2-306e-1021-d207"
               }
             ],
-            "type": "and"
+            "type": "and",
+            "comment": "Weapon point increments"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "b007-6d58-46e5-12e6",
+                    "shared": true,
+                    "childName": "Seekers of Divine Arcana",
+                    "includeChildSelections": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Seekers of Divine Arcana"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "837b-4a6f-6a12-37e3",
+                    "shared": true,
+                    "childName": "Galvanic Field",
+                    "includeChildSelections": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Galvanic Field"
           }
         ],
         "costs": [
@@ -39521,7 +39605,208 @@
         "import": true,
         "name": "Magos [Crucible]",
         "hidden": false,
-        "id": "18e0-96d4-7d85-2b3b"
+        "id": "18e0-96d4-7d85-2b3b",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "1695-f8b9-07c5-b43e",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "eab6-2044-6c59-d5c4",
+                        "shared": true,
+                        "childName": "Cybercanid Mount",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2ca0-ee66-2659-8616",
+                            "shared": true,
+                            "childName": "Serberys Raiders",
+                            "queryFromSelf": false
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2f2d-8608-4615-d4da",
+                            "shared": true,
+                            "childName": "Serberys Sulphurhounds",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "f3ab-6db0-6acc-785b",
+                        "shared": true,
+                        "childName": "Cybernetica Overseer",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "fa9a-4fad-2efa-cf9b",
+                            "shared": true,
+                            "childName": "Kastelan Robots",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3833-d397-9e1b-346c",
+                        "shared": true,
+                        "childName": "Flight Pack",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "f8db-f163-9a12-b79c",
+                            "shared": true,
+                            "childName": "Pteraxii",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "84f6-79ed-c137-74c9",
+                        "shared": true,
+                        "childName": "Stilt Limbs",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "a6e7-8605-af27-3b57",
+                            "shared": true,
+                            "childName": "Sicarian",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "bdec-fa84-45c0-24dc",
+                            "shared": true,
+                            "childName": "Rangers",
+                            "queryFromSelf": false
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "44d2-dd77-4da9-7f22",
+                            "shared": true,
+                            "childName": "Vanguard",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "ee7d-2703-1adc-32d9",
+                        "shared": true,
+                        "childName": "Specialisms",
+                        "includeChildSelections": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "entryLinks": [
@@ -40004,7 +40289,91 @@
                 "field": "51b2-306e-1021-d207"
               }
             ],
-            "type": "and"
+            "type": "and",
+            "comment": "Weapon points increments"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "837b-4a6f-6a12-37e3",
+                    "shared": true,
+                    "childName": "Galvanic Field",
+                    "includeChildSelections": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Galvanic Field"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "group.recursive.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "b007-6d58-46e5-12e6",
+                    "shared": true,
+                    "childName": "Seekers of Divine Arcana",
+                    "includeChildSelections": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Seekers of Divine Arcana"
           }
         ],
         "costs": [
@@ -40094,7 +40463,208 @@
         "import": true,
         "name": "Cohort Commander [Crucible]",
         "hidden": false,
-        "id": "7d17-4620-8dbf-4ef6"
+        "id": "7d17-4620-8dbf-4ef6",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "bad3-d39b-30df-b917",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "eab6-2044-6c59-d5c4",
+                        "shared": true,
+                        "childName": "Cybercanid Mount",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2ca0-ee66-2659-8616",
+                            "shared": true,
+                            "childName": "Serberys Raiders",
+                            "queryFromSelf": false
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2f2d-8608-4615-d4da",
+                            "shared": true,
+                            "childName": "Serberys Sulphurhounds",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "f3ab-6db0-6acc-785b",
+                        "shared": true,
+                        "childName": "Cybernetica Overseer",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "fa9a-4fad-2efa-cf9b",
+                            "shared": true,
+                            "childName": "Kastelan Robots",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "3833-d397-9e1b-346c",
+                        "shared": true,
+                        "childName": "Flight Pack",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "f8db-f163-9a12-b79c",
+                            "shared": true,
+                            "childName": "Pteraxii",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "84f6-79ed-c137-74c9",
+                        "shared": true,
+                        "childName": "Stilt Limbs",
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "a6e7-8605-af27-3b57",
+                            "shared": true,
+                            "childName": "Sicarian",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "bdec-fa84-45c0-24dc",
+                            "shared": true,
+                            "childName": "Rangers",
+                            "queryFromSelf": false
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "44d2-dd77-4da9-7f22",
+                            "shared": true,
+                            "childName": "Vanguard",
+                            "queryFromSelf": false
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "ee7d-2703-1adc-32d9",
+                        "shared": true,
+                        "childName": "Specialisms",
+                        "includeChildSelections": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "entryLinks": [
@@ -40578,7 +41148,91 @@
                 "field": "51b2-306e-1021-d207"
               }
             ],
-            "type": "and"
+            "type": "and",
+            "comment": "Weapon point increments"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "837b-4a6f-6a12-37e3",
+                    "shared": true,
+                    "childName": "Galvanic Field",
+                    "includeChildSelections": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Galvanic Field"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "group.recursive.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "b007-6d58-46e5-12e6",
+                    "shared": true,
+                    "childName": "Seekers of Divine Arcana",
+                    "includeChildSelections": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Seekers of Divine Arcana"
           }
         ],
         "costs": [
@@ -40684,7 +41338,48 @@
         "import": true,
         "name": "Ironstrider Alpha [Crucible]",
         "hidden": false,
-        "id": "6b3e-11ad-7a9d-ca5d"
+        "id": "6b3e-11ad-7a9d-ca5d",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b14a-01b7-b2fa-5a05",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d167-10dc-5abd-d01a",
+                    "shared": true,
+                    "childName": "Ironstrider Ballistarii",
+                    "queryFromSelf": false
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "fe37-1124-2cfd-f11b",
+                    "shared": true,
+                    "childName": "Sydonian",
+                    "queryFromSelf": false
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
