@@ -37519,7 +37519,129 @@
                 "field": "51b2-306e-1021-d207"
               }
             ],
-            "type": "and"
+            "type": "and",
+            "comment": "Weapon points increment"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "comment": "Fury of the Righteous",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "9f4b-eb8b-5ad3-fd89",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Fury of the Righteous"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "4+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "comment": "Shield of the Righteous",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "eae4-7e3a-969e-4d89",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Shield of the Righteous"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "comment": "Unflinching Determination",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "306f-1d76-18c9-77cc",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Unflinching Determination"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "modifiers": [
@@ -37563,7 +37685,179 @@
         "import": true,
         "name": "Militant Commander [Crucible]",
         "hidden": false,
-        "id": "8f3c-d887-6e18-02e8"
+        "id": "8f3c-d887-6e18-02e8",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "e09c-e102-700a-9832",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2a27-80d9-39c1-4944",
+                            "shared": true,
+                            "childName": "Battle Sisters Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4038-4f63-856e-fa4c",
+                            "shared": true,
+                            "childName": "Celestian Sacresants"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "3024-3404-5bd0-713",
+                            "shared": true,
+                            "childName": "Dominion Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "cf6-ceb9-5c73-2bb3",
+                            "shared": true,
+                            "childName": "Retributor Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "e8c6-d8f4-2d01-2e7a",
+                            "shared": true,
+                            "childName": "Sisters Novitiate Squad"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "childId": "9521-6dff-a805-f0b8",
+                            "shared": true,
+                            "childName": "Specialisms",
+                            "includeChildSelections": true
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "childId": "2cf2-9dfc-09ee-0a34",
+                            "shared": true,
+                            "childName": "Cherub",
+                            "includeChildSelections": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "8d7c-5e-e1f6-27e9",
+                            "shared": true,
+                            "childName": "Repentia Squad"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "42c2-9a04-6a05-2984",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Absolver of Sin"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "40db-f0a8-b5fd-d21d",
+                            "shared": true,
+                            "childName": "Seraphim Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "7561-4439-4420-e104",
+                            "shared": true,
+                            "childName": "Zephyrim Squad"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "ddfb-1ba5-aa2b-cba2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Jump Pack"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -38108,7 +38402,129 @@
                 "field": "51b2-306e-1021-d207"
               }
             ],
-            "type": "and"
+            "type": "and",
+            "comment": "Weapon points increment"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "comment": "Fury of the Righteous",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "9f4b-eb8b-5ad3-fd89",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Fury of the Righteous"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "4+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "comment": "Shield of the Righteous",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "eae4-7e3a-969e-4d89",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Shield of the Righteous"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "comment": "Unflinching Determination",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "306f-1d76-18c9-77cc",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Unflinching Determination"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "modifiers": [
@@ -38152,7 +38568,179 @@
         "import": true,
         "name": "Inspiring Devotee [Crucible]",
         "hidden": false,
-        "id": "622e-1e15-13f1-601a"
+        "id": "622e-1e15-13f1-601a",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "f0be-2939-5ab6-2aaa",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2a27-80d9-39c1-4944",
+                            "shared": true,
+                            "childName": "Battle Sisters Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4038-4f63-856e-fa4c",
+                            "shared": true,
+                            "childName": "Celestian Sacresants"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "3024-3404-5bd0-713",
+                            "shared": true,
+                            "childName": "Dominion Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "cf6-ceb9-5c73-2bb3",
+                            "shared": true,
+                            "childName": "Retributor Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "e8c6-d8f4-2d01-2e7a",
+                            "shared": true,
+                            "childName": "Sisters Novitiate Squad"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "childId": "9521-6dff-a805-f0b8",
+                            "shared": true,
+                            "childName": "Specialisms",
+                            "includeChildSelections": true
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "childId": "2cf2-9dfc-09ee-0a34",
+                            "shared": true,
+                            "childName": "Cherub",
+                            "includeChildSelections": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "8d7c-5e-e1f6-27e9",
+                            "shared": true,
+                            "childName": "Repentia Squad"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "42c2-9a04-6a05-2984",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Absolver of Sin"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "40db-f0a8-b5fd-d21d",
+                            "shared": true,
+                            "childName": "Seraphim Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "7561-4439-4420-e104",
+                            "shared": true,
+                            "childName": "Zephyrim Squad"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "ddfb-1ba5-aa2b-cba2",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Jump Pack"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -38728,6 +39316,127 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "comment": "Fury of the Righteous",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "9f4b-eb8b-5ad3-fd89",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Fury of the Righteous"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "4+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "comment": "Shield of the Righteous",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "eae4-7e3a-969e-4d89",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Shield of the Righteous"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "comment": "Unflinching Determination",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "childId": "306f-1d76-18c9-77cc",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Unflinching Determination"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "modifiers": [
@@ -38771,7 +39480,103 @@
         "import": true,
         "name": "Reliquant Knight [Crucible]",
         "hidden": false,
-        "id": "1b8d-2b8b-084a-feba"
+        "id": "1b8d-2b8b-084a-feba",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "48a6-fbf4-631e-8975",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "a68f-bc56-3728-5533",
+                            "shared": true,
+                            "childName": "Paragon Warsuits"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "childId": "9521-6dff-a805-f0b8",
+                            "shared": true,
+                            "childName": "Specialisms",
+                            "includeChildSelections": true
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "childId": "2cf2-9dfc-09ee-0a34",
+                            "shared": true,
+                            "childName": "Cherub",
+                            "includeChildSelections": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "cc6-3f2a-8a-ca72",
+                            "shared": true,
+                            "childName": "Mortifiers"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "42c2-9a04-6a05-2984",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Absolver of Sin"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
