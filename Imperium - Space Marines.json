@@ -114112,34 +114112,34 @@
           {
             "characteristics": [
               {
-                "$text": "20+\"",
                 "name": "M",
-                "typeId": "e703-ecb6-5ce7-aec1"
+                "typeId": "e703-ecb6-5ce7-aec1",
+                "$text": "14\""
               },
               {
-                "$text": "10",
                 "name": "T",
-                "typeId": "d29d-cf75-fc2d-34a4"
+                "typeId": "d29d-cf75-fc2d-34a4",
+                "$text": "10"
               },
               {
-                "$text": "3+",
                 "name": "Sv",
-                "typeId": "450-a17e-9d5e-29da"
+                "typeId": "450-a17e-9d5e-29da",
+                "$text": "3+"
               },
               {
-                "$text": "18",
                 "name": "W",
-                "typeId": "750a-a2ec-90d3-21fe"
+                "typeId": "750a-a2ec-90d3-21fe",
+                "$text": "18"
               },
               {
-                "$text": "6+",
                 "name": "LD",
-                "typeId": "58d2-b879-49c7-43bc"
+                "typeId": "58d2-b879-49c7-43bc",
+                "$text": "6+"
               },
               {
-                "$text": "0",
                 "name": "OC",
-                "typeId": "bef7-942a-1a23-59f8"
+                "typeId": "bef7-942a-1a23-59f8",
+                "$text": "0"
               },
               {
                 "name": "InSv",
@@ -139860,46 +139860,6 @@
         ],
         "modifiers": [
           {
-            "type": "increment",
-            "value": 10,
-            "field": "51b2-306e-1021-d207",
-            "conditionGroups": [
-              {
-                "type": "and",
-                "localConditionGroups": [
-                  {
-                    "type": "atLeast",
-                    "value": 2,
-                    "scope": "parent",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "repeats": 1,
-                    "conditions": [
-                      {
-                        "type": "before",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "self",
-                        "childId": "any",
-                        "shared": true
-                      },
-                      {
-                        "type": "instanceOf",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "self",
-                        "childId": "2e1f-9342-f5e8-37ab",
-                        "shared": true,
-                        "childName": "Land Speeder"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "type": "set",
             "value": 2,
             "field": "11b1-404d-a5fd-f5b2",
@@ -140739,18 +140699,17 @@
             ],
             "categoryLinks": [
               {
-                "name": "Priority Assets",
-                "hidden": false,
-                "id": "baf9-a9de-0cad-c202",
-                "targetId": "0936-9767-1cc7-52ae",
-                "primary": false
-              },
-              {
                 "name": "3DP Detachment",
                 "hidden": false,
                 "id": "4619-586e-92da-9752",
                 "targetId": "7d80-2de5-816e-9d2b",
                 "primary": false
+              },
+              {
+                "targetId": "6fe0-3dbe-f7e0-10bb",
+                "id": "0e03-f662-9864-15db",
+                "primary": false,
+                "name": "Purge the Foe"
               }
             ]
           },
@@ -145494,10 +145453,10 @@
             ],
             "categoryLinks": [
               {
-                "targetId": "6fe0-3dbe-f7e0-10bb",
-                "id": "0223-ce36-8464-b29d",
+                "targetId": "1cc1-f11a-4e8f-1bcc",
+                "id": "8576-c830-3ede-24ab",
                 "primary": false,
-                "name": "Purge the Foe"
+                "name": "Take and Hold"
               }
             ],
             "rules": [
@@ -168468,7 +168427,7 @@
                     "scope": "force",
                     "shared": true,
                     "id": "a508-409a-a3d0-2462",
-                    "includeChildSelections": false
+                    "includeChildSelections": true
                   }
                 ],
                 "modifiers": [
@@ -168627,7 +168586,7 @@
                     "scope": "force",
                     "shared": true,
                     "id": "256e-ef74-5486-ea56",
-                    "includeChildSelections": false
+                    "includeChildSelections": true
                   }
                 ],
                 "modifiers": [
@@ -168646,6 +168605,41 @@
                         "childName": "Fly",
                         "includeChildSelections": true,
                         "includeChildForces": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "forces",
+                        "scope": "roster",
+                        "childId": "cac3-71d1-ea4b-795d",
+                        "shared": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "6619-187e-e309-3313",
+                        "shared": true,
+                        "id": "58c5-b868-ff3a-5311",
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Vengeful Hosts"
                       }
                     ]
                   }

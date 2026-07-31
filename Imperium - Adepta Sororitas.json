@@ -29401,7 +29401,7 @@
               {
                 "name": "Sv",
                 "typeId": "450-a17e-9d5e-29da",
-                "$text": "2"
+                "$text": "2+"
               },
               {
                 "name": "W",
@@ -30129,24 +30129,6 @@
           {
             "entryLinks": [
               {
-                "entryLinks": [
-                  {
-                    "import": true,
-                    "name": "Weapon Modifications",
-                    "hidden": false,
-                    "id": "101c-3dab-1937-a608",
-                    "type": "selectionEntryGroup",
-                    "targetId": "f9da-852a-d7f0-92e9"
-                  }
-                ],
-                "import": true,
-                "name": "Armoured tracks",
-                "hidden": false,
-                "id": "d6f3-b5d0-b9ef-ac6f",
-                "type": "selectionEntry",
-                "targetId": "c16b-804f-46cb-2256"
-              },
-              {
                 "constraints": [
                   {
                     "type": "min",
@@ -30189,7 +30171,7 @@
                     "value": 1,
                     "field": "selections",
                     "scope": "parent",
-                    "shared": true,
+                    "shared": false,
                     "id": "5716-a3-15dd-fcb3"
                   },
                   {
@@ -30419,16 +30401,6 @@
               {
                 "entryLinks": [
                   {
-                    "constraints": [
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "1298-e6b7-d145-3ce4"
-                      }
-                    ],
                     "entryLinks": [
                       {
                         "import": true,
@@ -30511,16 +30483,6 @@
                         "id": "214c-3b92-3367-a74e"
                       }
                     ],
-                    "constraints": [
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "33e5-2b62-f48e-48c5"
-                      }
-                    ],
                     "entryLinks": [
                       {
                         "import": true,
@@ -30549,7 +30511,18 @@
                 ],
                 "name": "May be equipped with",
                 "id": "34d7-c320-5bbd-bd58",
-                "hidden": false
+                "hidden": false,
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "9832-9e4c-75ea-c5c6",
+                    "includeChildSelections": false
+                  }
+                ]
               }
             ],
             "name": "Wargear",
@@ -54423,7 +54396,7 @@
     "name": "Imperium - Adepta Sororitas",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 8,
+    "revision": 10,
     "battleScribeVersion": 2.03,
     "authorName": "",
     "type": "catalogue",

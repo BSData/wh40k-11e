@@ -12303,7 +12303,7 @@
           },
           {
             "type": "increment",
-            "value": 10,
+            "value": 15,
             "field": "51b2-306e-1021-d207",
             "conditionGroups": [
               {
@@ -37767,7 +37767,44 @@
             ],
             "name": "Weapon Option",
             "id": "98c6-b4c7-a1dd-24d5",
-            "hidden": false
+            "hidden": false,
+            "modifiers": [
+              {
+                "type": "add",
+                "value": "All models must select the same weapon",
+                "field": "error",
+                "affects": "self.entries",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "d0b3-238e-1b14-0a1e",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "childName": "Paired Master-crafted Power Weapons"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "ad9f-15da-bc66-3629",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "childName": "Master-crafted Power Weapon"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -39263,46 +39300,6 @@
             "type": "set",
             "value": 180,
             "field": "51b2-306e-1021-d207"
-          },
-          {
-            "type": "increment",
-            "value": 10,
-            "field": "51b2-306e-1021-d207",
-            "conditionGroups": [
-              {
-                "type": "and",
-                "localConditionGroups": [
-                  {
-                    "type": "atLeast",
-                    "value": 2,
-                    "scope": "parent",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "repeats": 1,
-                    "conditions": [
-                      {
-                        "type": "before",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "self",
-                        "childId": "any",
-                        "shared": true
-                      },
-                      {
-                        "type": "instanceOf",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "self",
-                        "childId": "ee6b-3815-3a1a-6458",
-                        "shared": true,
-                        "childName": "Wolf Scouts"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
           }
         ],
         "type": "unit",
