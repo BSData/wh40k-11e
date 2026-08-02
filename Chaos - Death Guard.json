@@ -17225,16 +17225,32 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden",
-                "conditions": [
+                "conditionGroups": [
                   {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "df4a-2ead-43d5-ea61",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "Flyblown Host"
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "forces",
+                        "scope": "roster",
+                        "childId": "cac3-71d1-ea4b-795d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "df4a-2ead-43d5-ea61",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "childName": "Flyblown Host"
+                      }
+                    ]
                   }
                 ]
               }
@@ -65427,7 +65443,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "5108-f98-63c2-53cb",
     "name": "Chaos - Death Guard",
-    "revision": 6,
+    "revision": 7,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
