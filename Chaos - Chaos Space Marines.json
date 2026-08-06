@@ -12711,9 +12711,9 @@
           {
             "characteristics": [
               {
-                "$text": "Once per battle round, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model’s unit, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\".",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "Once per battle round, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\"."
               }
             ],
             "id": "b66a-e8bd-9361-1c41",
@@ -111921,6 +111921,74 @@
                 "value": "7561-4a21-64f6-a3dc",
                 "field": "category",
                 "scope": "parent"
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "group.recursive.7561-4a21-64f6-a3dc.profiles.Unit",
+                "scope": "parent",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "544c-7152-ce3a-a85c",
+                        "shared": true,
+                        "childName": "Chaos Lord"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "63ac-6730-c741-856d",
+                        "shared": true,
+                        "childName": "Lord Discordant"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "740a-892c-8958-defa",
+                        "shared": true,
+                        "childName": "Terminator"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "afa8-767e-2c48-81ca",
+                        "shared": true,
+                        "childName": "Master of Possession"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "bad7-e136-b36d-721d",
+                        "shared": true,
+                        "childName": "Dark Apostle"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "4f09-0141-6c70-6c5a",
+                        "shared": true,
+                        "childName": "Daemon Prince"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "profiles": [
@@ -124774,7 +124842,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "c8da-e875-58f7-f6d6",
     "name": "Chaos - Chaos Space Marines",
-    "revision": 5,
+    "revision": 6,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
