@@ -9997,13 +9997,6 @@
                         "id": "5e99-a17a-be3a-4ef7",
                         "targetId": "ccdd-3987-11ed-90cd",
                         "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "2c82-b2fd-291b-cd77",
-                        "targetId": "72ae-e03e-2e85-df95",
-                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -10387,13 +10380,6 @@
                         "hidden": false,
                         "id": "cbbc-c29e-c502-57a0",
                         "targetId": "eeda-8544-a2f3-3fab",
-                        "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "6e82-1074-e834-a20f",
-                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -11259,13 +11245,6 @@
             "id": "6cdf-e7e8-0604-e298",
             "targetId": "ccdd-3987-11ed-90cd",
             "primary": false
-          },
-          {
-            "name": "Non-LH",
-            "hidden": false,
-            "id": "daa5-4d79-05e1-4271",
-            "targetId": "72ae-e03e-2e85-df95",
-            "primary": false
           }
         ],
         "type": "upgrade",
@@ -11632,13 +11611,6 @@
                         "hidden": false,
                         "id": "901d-ac6d-a690-52a2",
                         "targetId": "eeda-8544-a2f3-3fab",
-                        "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "7ffd-51ce-612a-98b5",
-                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -13626,6 +13598,37 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              },
+              {
+                "type": "append",
+                "value": "Lance",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lance"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "type": "model",
@@ -13651,23 +13654,6 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
-          },
-          {
-            "type": "append",
-            "value": "Sustained Hits 1, Lance",
-            "field": "893f-9000-ccf7-648e",
-            "affects": "self.entries.group.recursive.group.profiles.Melee Weapons",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "any",
-                "shared": true
-              }
-            ],
-            "join": ", "
           }
         ],
         "associations": [
@@ -13997,13 +13983,6 @@
                     "id": "a05e-73ff-ee0f-1542",
                     "targetId": "4546-4a0c-b3be-e84c",
                     "primary": false
-                  },
-                  {
-                    "name": "Non-LH",
-                    "hidden": false,
-                    "id": "3e56-fe19-4f22-e60b",
-                    "targetId": "72ae-e03e-2e85-df95",
-                    "primary": false
                   }
                 ],
                 "type": "upgrade",
@@ -14248,13 +14227,6 @@
                         "id": "3cd5-bb92-6f70-e0b6",
                         "targetId": "4546-4a0c-b3be-e84c",
                         "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "b740-cfea-b6ea-2acd",
-                        "targetId": "72ae-e03e-2e85-df95",
-                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -14334,16 +14306,7 @@
                     "import": true,
                     "name": "Chainfist",
                     "hidden": false,
-                    "id": "cd28-da45-ef6d-a95c",
-                    "categoryLinks": [
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "3438-7b66-78c1-beed",
-                        "targetId": "72ae-e03e-2e85-df95",
-                        "primary": false
-                      }
-                    ]
+                    "id": "cd28-da45-ef6d-a95c"
                   },
                   {
                     "profiles": [
@@ -15546,13 +15509,6 @@
                     "hidden": false,
                     "id": "35ca-fa40-59bf-82d8",
                     "targetId": "4986-bf86-beb4-13ac",
-                    "primary": false
-                  },
-                  {
-                    "name": "Non-LH",
-                    "hidden": false,
-                    "id": "deca-1b28-62ad-b544",
-                    "targetId": "72ae-e03e-2e85-df95",
                     "primary": false
                   }
                 ],
@@ -18167,13 +18123,6 @@
             "hidden": false,
             "id": "e0da-124f-a9e2-58ee",
             "targetId": "eeda-8544-a2f3-3fab",
-            "primary": false
-          },
-          {
-            "name": "Non-LH",
-            "hidden": false,
-            "id": "8746-8191-c114-98c2",
-            "targetId": "72ae-e03e-2e85-df95",
             "primary": false
           }
         ],
@@ -21570,13 +21519,6 @@
                     "id": "d6b3-353e-55fb-5133",
                     "targetId": "ccdd-3987-11ed-90cd",
                     "primary": false
-                  },
-                  {
-                    "name": "Non-LH",
-                    "hidden": false,
-                    "id": "890b-513e-c638-6f18",
-                    "targetId": "72ae-e03e-2e85-df95",
-                    "primary": false
                   }
                 ],
                 "type": "upgrade",
@@ -21712,13 +21654,6 @@
                     "hidden": false,
                     "id": "d018-e663-d45a-17fd",
                     "targetId": "e993-e086-6de1-12af",
-                    "primary": false
-                  },
-                  {
-                    "name": "Non-LH",
-                    "hidden": false,
-                    "id": "ed83-ec27-e647-5766",
-                    "targetId": "72ae-e03e-2e85-df95",
                     "primary": false
                   }
                 ],
@@ -22467,13 +22402,6 @@
                     "id": "4f1f-85da-82cb-a9b5",
                     "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
-                  },
-                  {
-                    "name": "Non-LH",
-                    "hidden": false,
-                    "id": "987b-fee2-f51d-32be",
-                    "targetId": "72ae-e03e-2e85-df95",
-                    "primary": false
                   }
                 ],
                 "type": "upgrade",
@@ -22790,15 +22718,17 @@
                 "type": "append",
                 "value": "Lethal Hits",
                 "field": "7f1b-8591-2fcf-d01c",
-                "affects": "self.entries.group.recursive.72ae-e03e-2e85-df95.group.profiles.Ranged Weapons",
-                "join": ", "
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits"
               },
               {
                 "type": "append",
                 "value": "Lethal Hits",
                 "field": "893f-9000-ccf7-648e",
-                "affects": "self.entries.group.recursive.72ae-e03e-2e85-df95.group.profiles.Melee Weapons",
-                "join": ", "
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits"
               }
             ],
             "conditions": [
@@ -22811,7 +22741,8 @@
                 "shared": true,
                 "includeChildSelections": false
               }
-            ]
+            ],
+            "comment": "Foul Infusion"
           }
         ],
         "type": "model",
@@ -23203,13 +23134,6 @@
                     "hidden": false,
                     "id": "9ffa-96fe-b572-d54a",
                     "targetId": "ccdd-3987-11ed-90cd",
-                    "primary": false
-                  },
-                  {
-                    "name": "Non-LH",
-                    "hidden": false,
-                    "id": "6832-3a1e-cf24-2a55",
-                    "targetId": "72ae-e03e-2e85-df95",
                     "primary": false
                   }
                 ],
@@ -37192,6 +37116,23 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "bef7-942a-1a23-59f8",
+            "affects": "self.entries.group.recursive.profiles.Unit",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "associationLinks": [
@@ -42376,13 +42317,6 @@
                         "id": "42e9-3209-55c9-1076",
                         "targetId": "eeda-8544-a2f3-3fab",
                         "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "b5bd-9c31-8e28-71a3",
-                        "targetId": "72ae-e03e-2e85-df95",
-                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -42470,13 +42404,6 @@
                         "hidden": false,
                         "id": "c1bc-8206-437c-361d",
                         "targetId": "ccdd-3987-11ed-90cd",
-                        "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "efec-1823-2b6e-7310",
-                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -42575,13 +42502,6 @@
                         "id": "0810-8649-06b1-fe99",
                         "targetId": "eeda-8544-a2f3-3fab",
                         "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "4f25-8e56-0db0-390b",
-                        "targetId": "72ae-e03e-2e85-df95",
-                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -42669,13 +42589,6 @@
                         "hidden": false,
                         "id": "0061-843d-59d0-4c14",
                         "targetId": "ccdd-3987-11ed-90cd",
-                        "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "6de8-c1b0-1251-bbae",
-                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -42825,13 +42738,6 @@
                         "id": "26ea-55c7-858d-0b6c",
                         "targetId": "eeda-8544-a2f3-3fab",
                         "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "70ec-c3f8-cf16-3453",
-                        "targetId": "72ae-e03e-2e85-df95",
-                        "primary": false
                       }
                     ],
                     "type": "upgrade",
@@ -42919,13 +42825,6 @@
                         "hidden": false,
                         "id": "3195-1da6-5e95-0714",
                         "targetId": "ccdd-3987-11ed-90cd",
-                        "primary": false
-                      },
-                      {
-                        "name": "Non-LH",
-                        "hidden": false,
-                        "id": "b095-f36e-e7ca-9899",
-                        "targetId": "72ae-e03e-2e85-df95",
                         "primary": false
                       }
                     ],
@@ -43254,13 +43153,6 @@
                     "id": "5764-d6c1-c9ba-28f8",
                     "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
-                  },
-                  {
-                    "name": "Non-LH",
-                    "hidden": false,
-                    "id": "d348-0c91-e0d0-2fc9",
-                    "targetId": "72ae-e03e-2e85-df95",
-                    "primary": false
                   }
                 ],
                 "selectionEntryGroups": [
@@ -43382,13 +43274,6 @@
                     "hidden": false,
                     "id": "0361-7bf9-6f73-e88c",
                     "targetId": "ccdd-3987-11ed-90cd",
-                    "primary": false
-                  },
-                  {
-                    "name": "Non-LH",
-                    "hidden": false,
-                    "id": "ed9c-076d-2002-03fa",
-                    "targetId": "72ae-e03e-2e85-df95",
                     "primary": false
                   }
                 ],
@@ -43608,6 +43493,39 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Sustained Hits1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ],
+            "comment": "Gift of Poxes"
           }
         ],
         "type": "model",
@@ -44281,13 +44199,6 @@
             "hidden": false,
             "id": "15d9-bab3-ace8-30ed",
             "targetId": "eeda-8544-a2f3-3fab",
-            "primary": false
-          },
-          {
-            "name": "Non-LH",
-            "hidden": false,
-            "id": "b260-79b1-82aa-c508",
-            "targetId": "72ae-e03e-2e85-df95",
             "primary": false
           }
         ],
@@ -62956,10 +62867,10 @@
                 "id": "cbcc-0d0f-a5f5-d57c",
                 "categoryLinks": [
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "5609-6ebc-a144-9976",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "33be-9779-8ac5-bc3b",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ]
@@ -63131,10 +63042,10 @@
                     "primary": false
                   },
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "9eac-2b0b-dd53-be10",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "2bde-f938-2b53-0143",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ],
@@ -63258,10 +63169,10 @@
                     "primary": false
                   },
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "710d-d446-eb2e-9001",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "9cef-9ec7-61d4-01df",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ],
@@ -63376,10 +63287,10 @@
                     "primary": false
                   },
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "049d-d29e-219b-9a06",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "4120-fac1-d8f3-3206",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ],
@@ -63494,10 +63405,10 @@
                     "primary": false
                   },
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "f627-4246-4f64-f5ba",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "7b8b-72f8-406f-488a",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ],
@@ -63712,13 +63623,6 @@
                     "id": "2100-6297-9dc5-3571",
                     "targetId": "982b-de77-dd2d-d9bd",
                     "primary": false
-                  },
-                  {
-                    "name": "Non-LH",
-                    "hidden": false,
-                    "id": "56da-d0a9-acee-be80",
-                    "targetId": "72ae-e03e-2e85-df95",
-                    "primary": false
                   }
                 ],
                 "selectionEntryGroups": [
@@ -63911,10 +63815,10 @@
                 "id": "d198-b3a8-0335-643d",
                 "categoryLinks": [
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "2b43-2d0f-f34b-6f73",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "d893-e732-93e3-3276",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ]
@@ -64033,10 +63937,10 @@
                 "id": "bb63-0e95-fa4b-6e76",
                 "categoryLinks": [
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "0d73-0269-850d-8586",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "e353-8aef-75d3-5983",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ]
@@ -64127,10 +64031,10 @@
                     "primary": false
                   },
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "3d39-a048-409f-0117",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "ef91-ac4c-ce76-0487",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ],
@@ -64460,10 +64364,10 @@
                 "id": "7d3f-317d-c609-399e",
                 "categoryLinks": [
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "95aa-f0a0-0906-2256",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "1422-e3a0-9a1d-dd65",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ]
@@ -64582,10 +64486,10 @@
                 "id": "6f99-e0de-5c38-251f",
                 "categoryLinks": [
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "8261-025e-c8fb-975e",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "0e2f-042a-268d-4ff6",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ]
@@ -64676,10 +64580,10 @@
                     "primary": false
                   },
                   {
-                    "name": "Non-LH",
+                    "name": "Ranged Weapon",
                     "hidden": false,
-                    "id": "2dbd-0c3c-51b6-0c53",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "6b34-1bb4-8e76-4538",
+                    "targetId": "eeda-8544-a2f3-3fab",
                     "primary": false
                   }
                 ],
@@ -65052,10 +64956,10 @@
                 "id": "fb17-6b51-a1f8-1ed7",
                 "categoryLinks": [
                   {
-                    "name": "Non-LH",
+                    "name": "Melee Weapon",
                     "hidden": false,
-                    "id": "ee77-45ad-7b9d-51be",
-                    "targetId": "72ae-e03e-2e85-df95",
+                    "id": "7c9f-ffba-874f-5704",
+                    "targetId": "ccdd-3987-11ed-90cd",
                     "primary": false
                   }
                 ]
@@ -66630,11 +66534,6 @@
             "includeChildSelections": true
           }
         ]
-      },
-      {
-        "name": "Non-LH",
-        "id": "72ae-e03e-2e85-df95",
-        "hidden": true
       }
     ],
     "sharedProfiles": [
