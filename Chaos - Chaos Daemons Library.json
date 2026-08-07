@@ -57720,18 +57720,56 @@
                             "childId": "9cfd-1c32-585f-7d5c",
                             "shared": true,
                             "childName": "Character"
-                          },
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "3a39-0b56-25e0-eff8",
-                            "childId": "4f7e-5125-3ce4-4cf8",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Specialisms"
                           }
-                        ]
+                        ],
+                        "conditionGroups": [
+                          {
+                            "type": "and",
+                            "conditions": [
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "3a39-0b56-25e0-eff8",
+                                "childId": "5d0b-4ab7-a50f-9885",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "queryFromSelf": true
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "3a39-0b56-25e0-eff8",
+                                "childId": "a2a7-5990-5c1c-4f20",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "queryFromSelf": true
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "3a39-0b56-25e0-eff8",
+                                "childId": "7fdf-e77f-9407-5722",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "queryFromSelf": true
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "3a39-0b56-25e0-eff8",
+                                "childId": "1776-73f5-0a7f-f36c",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "queryFromSelf": true
+                              }
+                            ]
+                          }
+                        ],
+                        "comment": "Base Leader"
                       },
                       {
                         "type": "and",
@@ -57744,7 +57782,8 @@
                             "childId": "5d0b-4ab7-a50f-9885",
                             "shared": true,
                             "includeChildSelections": true,
-                            "childName": "Juggernaught of Khorne"
+                            "childName": "Juggernaught of Khorne",
+                            "queryFromSelf": true
                           },
                           {
                             "type": "instanceOf",
@@ -57755,7 +57794,112 @@
                             "shared": true,
                             "childName": "Bloodcrushers"
                           }
-                        ]
+                        ],
+                        "comment": "Juggernaught of Khorne"
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "3a39-0b56-25e0-eff8",
+                            "childId": "511b-3cd3-edf3-c622",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Giggling Balemite",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "bc6c-c76a-8bae-e5c7",
+                            "shared": true,
+                            "childName": "Nurglings"
+                          }
+                        ],
+                        "comment": "Giggling Balemite"
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "3a39-0b56-25e0-eff8",
+                            "childId": "2128-65e1-ff33-27c7",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Rotfly",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "c5b5-db18-df79-7927",
+                            "shared": true,
+                            "childName": "Plague Drones"
+                          }
+                        ],
+                        "comment": "Rotfly"
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "3a39-0b56-25e0-eff8",
+                            "childId": "7fdf-e77f-9407-5722",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Steed of Slaanesh",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "46c8-ca2f-9529-3686",
+                            "shared": true,
+                            "childName": "Seekers"
+                          }
+                        ],
+                        "comment": "Steed of Slaanesh"
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "3a39-0b56-25e0-eff8",
+                            "childId": "1776-73f5-0a7f-f36c",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Disc of Tzeentch",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2353-e1a0-43bc-35d0",
+                            "shared": true,
+                            "childName": "Screamers"
+                          }
+                        ],
+                        "comment": "Disc of Tzeentch"
                       }
                     ]
                   }
