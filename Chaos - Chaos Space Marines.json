@@ -29487,13 +29487,7 @@
             "type": "set",
             "value": "5+",
             "field": "55a7-5b54-c60d-11dc",
-            "affects": "self.entries.recursive.associations.profiles.Unit"
-          },
-          {
-            "type": "set",
-            "value": "5+",
-            "field": "55a7-5b54-c60d-11dc",
-            "affects": "self.entries.recursive.profiles.Unit",
+            "affects": "self.entries.group.recursive.profiles.Unit",
             "conditions": [
               {
                 "type": "atLeast",
@@ -29502,7 +29496,7 @@
                 "scope": "self",
                 "childId": "any",
                 "shared": true,
-                "includeChildSelections": true
+                "includeChildSelections": false
               }
             ]
           }
@@ -93636,8 +93630,20 @@
             "type": "append",
             "value": "Assault",
             "field": "7f1b-8591-2fcf-d01c",
-            "affects": "entries.recursive.associations.profiles.Ranged Weapons",
-            "join": ", "
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Assault",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "constraints": [
