@@ -4806,6 +4806,24 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "append",
+            "value": "Devastating Wounds",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "skipIfPresent": "Devastating Wounds",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -7653,7 +7671,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "6f58-4323-fce1-8660",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f51c-62f0-adbd-94c3",
+                    "shared": true,
+                    "childName": "Flesh Hounds"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -20047,6 +20095,24 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Lethal Hits",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "skipIfPresent": "Lethal Hits",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -22027,6 +22093,24 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "append",
+            "value": "Sustained Hits 1",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "skipIfPresent": "Sustained Hits",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ]
           }
@@ -25852,6 +25936,24 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "append",
+            "value": "Assault",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "skipIfPresent": "Assault",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ]
           }
@@ -30501,7 +30603,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5ffd-3d04-857a-20d7",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4494-6619-15d9-4a6f",
+                    "shared": true,
+                    "childName": "Plaguebearers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -30828,6 +30960,24 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "append",
+            "value": "Sustained Hits 1",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "skipIfPresent": "Sustained Hits",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ]
           }
@@ -32081,6 +32231,24 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "e703-ecb6-5ce7-aec1",
+            "affects": "self.entries.group.recursive.profiles.Unit",
+            "skipIfPresent": "Devastating Wounds",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ]
           }
@@ -42237,6 +42405,25 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Sustained Hits 1",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ],
+            "join": ", ",
+            "skipIfPresent": "Sustained Hits"
           }
         ],
         "selectionEntryGroups": [
@@ -55121,6 +55308,23 @@
             "type": "set-primary",
             "value": "e1ea-71b9-f0ef-d788",
             "field": "category"
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "41a0-1301-112a-e2f2",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -58217,6 +58421,138 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "e703-ecb6-5ce7-aec1",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "skipIfPresent": "Lance",
+                "join": ", ",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "736e-8d31-9f86-88b3",
+                        "childId": "a6c3-c518-f0bc-544a",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Jolly Gutpipes"
+                      }
+                    ]
+                  }
+                ],
+                "comment": "Jolly Gutpipes"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "skipIfPresent": "Sustained Hits",
+                "join": ", ",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "736e-8d31-9f86-88b3",
+                            "childId": "6181-0d6d-4a9a-cedd",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Keep Counting!"
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "736e-8d31-9f86-88b3",
+                            "childId": "09e8-93a9-d01a-9a40",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Sadistic Savagery"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "comment": "Keep Counting!"
+              },
+              {
+                "type": "append",
+                "value": "Assault",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Assault",
+                "join": ", ",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "736e-8d31-9f86-88b3",
+                            "childId": "49ad-8138-9951-17be",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Blazing Warpfire"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "comment": "Keep Counting!"
+              }
+            ],
+            "comment": "Ability modifiers"
           }
         ],
         "categoryLinks": [
@@ -58456,6 +58792,24 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "append",
+            "value": "Lance",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "skipIfPresent": "Lance",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ]
           }
