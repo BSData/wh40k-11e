@@ -57927,82 +57927,158 @@
                         "id": "8057-ea4a-ea8c-ad3f"
                       }
                     ],
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "Melee",
-                            "name": "Range",
-                            "typeId": "914c-b413-91e3-a132"
-                          },
-                          {
-                            "$text": "3",
-                            "name": "A",
-                            "typeId": "2337-daa1-6682-b110"
-                          },
-                          {
-                            "$text": "4+",
-                            "name": "WS",
-                            "typeId": "95d1-95f-45b4-11d6"
-                          },
-                          {
-                            "$text": "7",
-                            "name": "S",
-                            "typeId": "ab33-d393-96ce-ccba"
-                          },
-                          {
-                            "$text": "-2",
-                            "name": "AP",
-                            "typeId": "41a0-1301-112a-e2f2"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "D",
-                            "typeId": "3254-9fe6-d824-513e"
-                          },
-                          {
-                            "$text": "-",
-                            "name": "Keywords",
-                            "typeId": "893f-9000-ccf7-648e"
-                          }
-                        ],
-                        "name": "Ghostaxe",
-                        "typeId": "8a40-4aaa-c780-9046",
-                        "typeName": "Melee Weapons",
-                        "hidden": false,
-                        "id": "f598-e016-e2db-e725"
-                      },
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "The bearer has a 4+ invulnerable save.",
-                            "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
-                          }
-                        ],
-                        "name": "Forceshield",
-                        "typeId": "9cc3-6d83-4dd3-9b64",
-                        "typeName": "Abilities",
-                        "hidden": false,
-                        "id": "2e7d-c58b-febe-4e0e"
-                      }
-                    ],
-                    "entryLinks": [
-                      {
-                        "import": true,
-                        "name": "Weapon Modifications",
-                        "hidden": false,
-                        "id": "483c-05a9-f519-6f4e",
-                        "type": "selectionEntryGroup",
-                        "targetId": "f9da-852a-d7f0-92e9"
-                      }
-                    ],
                     "type": "upgrade",
                     "import": true,
                     "name": "Ghostaxe and Forceshield",
                     "hidden": false,
                     "id": "8b0e-6ad0-b02b-da43",
-                    "collective": true
+                    "collective": true,
+                    "selectionEntries": [
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Forceshield",
+                        "hidden": false,
+                        "id": "f1e6-b77b-b28a-f9f6",
+                        "profiles": [
+                          {
+                            "name": "Forceshield",
+                            "typeId": "9cc3-6d83-4dd3-9b64",
+                            "typeName": "Abilities",
+                            "hidden": false,
+                            "id": "2e7d-c58b-febe-4e0e",
+                            "characteristics": [
+                              {
+                                "$text": "The bearer has a 4+ invulnerable save.",
+                                "name": "Description",
+                                "typeId": "9b8f-694b-e5e-b573"
+                              }
+                            ]
+                          }
+                        ],
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "608c-7a26-dc1f-948f",
+                            "includeChildSelections": false
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "d221-1082-1a03-c720",
+                            "includeChildSelections": false
+                          }
+                        ],
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "4+",
+                            "field": "55a7-5b54-c60d-11dc",
+                            "affects": "self.entries.recursive.profiles.Unit",
+                            "join": ", ",
+                            "scope": "unit"
+                          },
+                          {
+                            "type": "append",
+                            "value": "Forceshield",
+                            "field": "annotation",
+                            "affects": "self.entries.recursive.profiles.Unit",
+                            "join": ", ",
+                            "scope": "unit"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "upgrade",
+                        "import": true,
+                        "name": "Ghostaxe",
+                        "hidden": false,
+                        "id": "426b-b231-8a8b-56ab",
+                        "entryLinks": [
+                          {
+                            "import": true,
+                            "name": "Weapon Modifications",
+                            "hidden": false,
+                            "id": "483c-05a9-f519-6f4e",
+                            "type": "selectionEntryGroup",
+                            "targetId": "f9da-852a-d7f0-92e9"
+                          }
+                        ],
+                        "profiles": [
+                          {
+                            "name": "Ghostaxe",
+                            "typeId": "8a40-4aaa-c780-9046",
+                            "typeName": "Melee Weapons",
+                            "hidden": false,
+                            "id": "f598-e016-e2db-e725",
+                            "characteristics": [
+                              {
+                                "$text": "Melee",
+                                "name": "Range",
+                                "typeId": "914c-b413-91e3-a132"
+                              },
+                              {
+                                "$text": "3",
+                                "name": "A",
+                                "typeId": "2337-daa1-6682-b110"
+                              },
+                              {
+                                "$text": "4+",
+                                "name": "WS",
+                                "typeId": "95d1-95f-45b4-11d6"
+                              },
+                              {
+                                "$text": "7",
+                                "name": "S",
+                                "typeId": "ab33-d393-96ce-ccba"
+                              },
+                              {
+                                "$text": "-2",
+                                "name": "AP",
+                                "typeId": "41a0-1301-112a-e2f2"
+                              },
+                              {
+                                "$text": "2",
+                                "name": "D",
+                                "typeId": "3254-9fe6-d824-513e"
+                              },
+                              {
+                                "$text": "-",
+                                "name": "Keywords",
+                                "typeId": "893f-9000-ccf7-648e"
+                              }
+                            ]
+                          }
+                        ],
+                        "constraints": [
+                          {
+                            "type": "min",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "12e9-972d-3fc6-eb14",
+                            "includeChildSelections": false
+                          },
+                          {
+                            "type": "max",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "parent",
+                            "shared": true,
+                            "id": "fc4f-13fa-ed19-f41b",
+                            "includeChildSelections": false
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ],
                 "constraints": [
