@@ -101,6 +101,12 @@
             "id": "5e2c-d136-51e8-cf0c",
             "primary": false,
             "name": "Astorath"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "1bf5-b212-1482-9f18",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "profiles": [
@@ -397,7 +403,37 @@
         "import": true,
         "name": "Astorath",
         "hidden": false,
-        "id": "f943-72c8-581c-e6f2"
+        "id": "f943-72c8-581c-e6f2",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5815-f68e-9375-2de5",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "bd17-5cbb-7db8-e23a",
+                    "shared": true,
+                    "childName": "Death Company Marines with Jump Packs"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -3283,6 +3319,12 @@
             "id": "dc1e-edb6-29a-c9ce",
             "primary": false,
             "name": "Commander Dante"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "c024-cc59-5c61-9360",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "profiles": [
@@ -3676,7 +3718,55 @@
         "import": true,
         "name": "Commander Dante",
         "hidden": false,
-        "id": "7323-ebf-9afe-7e7a"
+        "id": "7323-ebf-9afe-7e7a",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "10b4-7b4c-7395-5b2f",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6c92-4e9d-b5e5-1287",
+                    "shared": true,
+                    "childName": "Assault Intercessors with Jump Packs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d30a-a7c5-389a-e78",
+                    "shared": true,
+                    "childName": "Sanguinary Guard"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "17c0-599-955a-bdab",
+                    "shared": true,
+                    "childName": "Vanguard Veteran Squad with Jump Packs"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -5452,6 +5542,39 @@
             "shared": true,
             "id": "63f9-e4f8-5838-2399",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "9808-e719-a868-b2c4",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "9260-42cf-2967-1e6b",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f157-24cc-635d-3e5a",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "entryLinks": [
@@ -7711,6 +7834,39 @@
             "shared": true,
             "id": "7018-a68b-9c84-ff46",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "6451-f698-9798-e4b1",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "28eb-aed7-b9c4-2f54",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "57a5-b51d-3680-ced2",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "entryLinks": [
@@ -9737,6 +9893,12 @@
             "id": "26c6-9ca3-e011-47b",
             "primary": false,
             "name": "Jump Pack"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "85e2-c17a-5848-5787",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "entryLinks": [
@@ -10090,7 +10252,37 @@
         "import": true,
         "name": "Lemartes",
         "hidden": false,
-        "id": "cbc2-18c9-45b6-6327"
+        "id": "cbc2-18c9-45b6-6327",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "da7d-20c5-f38d-a2fd",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "bd17-5cbb-7db8-e23a",
+                    "shared": true,
+                    "childName": "Death Company Marines with Jump Packs"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -11132,6 +11324,39 @@
             "shared": true,
             "id": "2227-ead8-0a7e-1527",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "6204-c6c3-6ca2-aee8",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f3d0-e89e-09c2-6586",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "089b-cfe6-83ac-f4d3",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "profiles": [
@@ -12587,6 +12812,109 @@
                         "childName": "Sanguinary Priest"
                       }
                     ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "29ca-e388-df85-0878",
+            "includeChildSelections": true,
+            "childName": "unit",
+            "label": "Supported by",
+            "defaultSelectionEntryId": "none",
+            "action": "group",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "shared": true,
+                    "childName": "Assault Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "930d-2875-125b-a65e",
+                    "shared": true,
+                    "childName": "Bladeguard Veteran Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f014-c078-e513-cc1b",
+                    "shared": true,
+                    "childName": "Desolation Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "802a-a287-ac94-38a0",
+                    "shared": true,
+                    "childName": "Devastator Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "34d3-f5b3-ca63-4597",
+                    "shared": true,
+                    "childName": "Hellblaster Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5fe6-20de-df8d-8e92",
+                    "shared": true,
+                    "childName": "Infernus Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7b57-816b-44b2-65ec",
+                    "shared": true,
+                    "childName": "Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "shared": true,
+                    "childName": "Sternguard Veteran Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2740-ec68-77ee-2830",
+                    "shared": true,
+                    "childName": "Tactical Squad"
                   }
                 ]
               }
@@ -15124,6 +15452,12 @@
             "id": "c103-7d78-fdc4-8a58",
             "primary": false,
             "name": "Tacticus"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "c74e-5aad-50e3-1933",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "constraints": [
@@ -15437,6 +15771,81 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "a30e-4db4-d95f-7ee7",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "shared": true,
+                    "childName": "Assault Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5956-471c-16ba-af95",
+                    "shared": true,
+                    "childName": "Company Heroes"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5fe6-20de-df8d-8e92",
+                    "shared": true,
+                    "childName": "Infernus Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7b57-816b-44b2-65ec",
+                    "shared": true,
+                    "childName": "Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "shared": true,
+                    "childName": "Sternguard Veteran Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2740-ec68-77ee-2830",
+                    "shared": true,
+                    "childName": "Tactical Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -15813,6 +16222,12 @@
             "id": "2504-5575-1540-a7bf",
             "primary": false,
             "name": "Death Company"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "0a94-1e24-a187-ff4e",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "constraints": [
@@ -16110,6 +16525,45 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "ce2a-1523-f462-8d03",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "caed-a62d-2318-dda1",
+                    "shared": true,
+                    "childName": "Death Company Marines"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "3055-9a0b-b062-5f31",
+                    "shared": true,
+                    "childName": "Death Company Marines with Bolt Rifles"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -16529,6 +16983,12 @@
             "id": "1954-e02e-774e-2eab",
             "primary": false,
             "name": "Death Company"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "5533-3424-df0c-8284",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "entryLinks": [
@@ -16761,6 +17221,36 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b48e-b068-6e62-0308",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "bd17-5cbb-7db8-e23a",
+                    "shared": true,
+                    "childName": "Death Company Marines with Jump Packs"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -17732,6 +18222,39 @@
             "shared": true,
             "id": "1cc5-356b-1997-53cd",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "ad04-275b-6579-9ba2",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8a4e-68e8-1d53-f733",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "0f23-6094-09be-3f2a",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -18943,6 +19466,39 @@
             "shared": true,
             "id": "b0fb-f0cd-4f21-e51d",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "79be-3429-ace4-07a4",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8ff7-9e0a-3647-8d17",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "586f-65ec-982d-9feb",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "entryLinks": [
@@ -20903,21 +21459,6 @@
         "id": "d7bd-dd9-4492-cf9a"
       },
       {
-        "name": "Death Company Intercessors",
-        "hidden": false,
-        "id": "18d-e753-9859-b059"
-      },
-      {
-        "name": "Death Company Marines",
-        "hidden": false,
-        "id": "caed-a62d-2318-dda1"
-      },
-      {
-        "name": "Death Company Marines with Jump Packs",
-        "hidden": false,
-        "id": "bd17-5cbb-7db8-e23a"
-      },
-      {
         "name": "Furioso Dreadnought",
         "hidden": false,
         "id": "2ee1-97ca-5a76-906a"
@@ -20938,19 +21479,9 @@
         "id": "68e9-6942-27d7-bb11"
       },
       {
-        "name": "Sanguinary Guard",
-        "hidden": false,
-        "id": "d30a-a7c5-389a-e78"
-      },
-      {
         "name": "The Sanguinor",
         "hidden": false,
         "id": "8f39-9585-fc72-ba71"
-      },
-      {
-        "name": "Death Company Marines with Bolt Rifles",
-        "id": "3055-9a0b-b062-5f31",
-        "hidden": false
       },
       {
         "name": "Pistol replacement",

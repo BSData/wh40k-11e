@@ -79,6 +79,12 @@
             "id": "b0ae-251b-e86-d514",
             "primary": false,
             "name": "Darnath Lysander"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "6fc7-01a6-0c20-18cc",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "profiles": [
@@ -354,7 +360,46 @@
         "import": true,
         "name": "Darnath Lysander",
         "hidden": false,
-        "id": "eecd-6976-6410-1e42"
+        "id": "eecd-6976-6410-1e42",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "bba6-eb5e-25f4-c1a7",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4e0-4cf8-e8b5-726",
+                    "shared": true,
+                    "childName": "Terminator Assault Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6179-3533-ba6-9593",
+                    "shared": true,
+                    "childName": "Terminator Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "infoLinks": [
@@ -479,6 +524,12 @@
             "id": "27e-dc36-f978-9521",
             "primary": false,
             "name": "Faction: Imperial Fists"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "8137-cc71-5e6b-d2c5",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "profiles": [
@@ -788,7 +839,55 @@
         "import": true,
         "name": "Tor Garadon",
         "hidden": false,
-        "id": "5936-83d6-4e30-915c"
+        "id": "5936-83d6-4e30-915c",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "6f1d-7ac2-eb30-22b6",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7fa1-af93-1edd-1865",
+                    "shared": true,
+                    "childName": "Aggressor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "68e3-e195-e8f-f56c",
+                    "shared": true,
+                    "childName": "Eradicator Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "bc4b-906d-3e8b-fc45",
+                    "shared": true,
+                    "childName": "Heavy Intercessor Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -897,6 +996,12 @@
             "id": "f1cf-c7c6-d6fa-adb3",
             "primary": false,
             "name": "Pedro Kantor"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "f6f3-455e-e3c9-20d5",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "constraints": [
@@ -1267,7 +1372,64 @@
         "import": true,
         "name": "Pedro Kantor",
         "hidden": false,
-        "id": "59e3-5a97-f36d-5b94"
+        "id": "59e3-5a97-f36d-5b94",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "7d0e-bb25-4388-fde9",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "930d-2875-125b-a65e",
+                    "shared": true,
+                    "childName": "Bladeguard Veteran Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5956-471c-16ba-af95",
+                    "shared": true,
+                    "childName": "Company Heroes"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "shared": true,
+                    "childName": "Sternguard Veteran Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2740-ec68-77ee-2830",
+                    "shared": true,
+                    "childName": "Tactical Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       }
     ],
     "categoryEntries": [

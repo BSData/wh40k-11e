@@ -125,6 +125,12 @@
             "id": "ae3-86ad-587d-d402",
             "primary": false,
             "name": "Iron Father Ferrios"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "7e5c-5643-be9e-1811",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "infoLinks": [
@@ -569,7 +575,55 @@
         "import": true,
         "name": "Iron Father Feirros",
         "hidden": false,
-        "id": "6c9d-4ec3-69dd-90b2"
+        "id": "6c9d-4ec3-69dd-90b2",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "0858-784b-f33f-4ee8",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7fa1-af93-1edd-1865",
+                    "shared": true,
+                    "childName": "Aggressor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "68e3-e195-e8f-f56c",
+                    "shared": true,
+                    "childName": "Eradicator Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "bc4b-906d-3e8b-fc45",
+                    "shared": true,
+                    "childName": "Heavy Intercessor Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -841,6 +895,12 @@
             "id": "4cea-e02f-54f2-5373",
             "primary": false,
             "name": "Caanok Var"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "dc3f-9090-9a76-9bc9",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "selectionEntries": [
@@ -992,7 +1052,46 @@
         "import": true,
         "name": "Caanok Var",
         "hidden": false,
-        "id": "efbb-2823-7b70-5a7a"
+        "id": "efbb-2823-7b70-5a7a",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "dea1-5029-c37d-aecc",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4e0-4cf8-e8b5-726",
+                    "shared": true,
+                    "childName": "Terminator Assault Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6179-3533-ba6-9593",
+                    "shared": true,
+                    "childName": "Terminator Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       }
     ],
     "categoryEntries": [
