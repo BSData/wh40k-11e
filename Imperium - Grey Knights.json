@@ -7156,26 +7156,51 @@
                 "type": "append",
                 "value": "Champion of the Order of Purifiers",
                 "field": "annotation",
-                "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.associations.profiles.Ranged Weapons",
+                "affects": "self.entries.group.recursive.5734-ebde-ab2c-8796.associations.profiles.Ranged Weapons",
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "3bb-c35f-f54-fb08",
+                "affects": "self.entries.group.recursive.5734-ebde-ab2c-8796.associations.profiles.Ranged Weapons",
+                "join": ", ",
+                "position": -1,
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Champion of the Order of Purifiers",
+                "field": "annotation",
+                "affects": "self.entries.recursive.ba75-d1eb-5347-28b3.profiles.Ranged Weapons",
                 "join": ", "
               },
               {
                 "type": "increment",
                 "value": 1,
                 "field": "3bb-c35f-f54-fb08",
-                "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.associations.profiles.Ranged Weapons",
+                "affects": "self.entries.recursive.ba75-d1eb-5347-28b3.profiles.Ranged Weapons",
                 "join": ", ",
                 "position": -1
-              }
-            ],
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "any",
-                "shared": true
               }
             ],
             "comment": "Champion of the Order of Purifiers attached unit modifiers"
