@@ -47002,7 +47002,7 @@
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ],
-            "name": "Cegorach’s Favour:",
+            "name": "Cegorach’s Favour",
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
             "hidden": false,
@@ -56406,6 +56406,41 @@
             "hidden": false,
             "targetId": "b68a-5ded-65ac-98c",
             "type": "rule"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "69b3-9e5d-35f3-f29d",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "6+",
+                "field": "name",
+                "join": " "
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "2d49-5254-0279-9760",
+                    "shared": true,
+                    "childName": "Bonesinger",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ],
+            "comment": "Bonesinger attached unit ability"
           }
         ],
         "profiles": [
@@ -58709,7 +58744,44 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "unit"
+        "type": "unit",
+        "infoLinks": [
+          {
+            "name": "Feel No Pain",
+            "id": "4d46-4c24-c5ed-cb80",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "6+",
+                "field": "name",
+                "join": " "
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "2d49-5254-0279-9760",
+                    "shared": true,
+                    "childName": "Bonesinger",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ],
+            "comment": "Bonesinger attached unit ability"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -60403,7 +60475,44 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "unit"
+        "type": "unit",
+        "infoLinks": [
+          {
+            "name": "Feel No Pain",
+            "id": "cba2-42a9-3730-84b0",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "6+",
+                "field": "name",
+                "join": " "
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "2d49-5254-0279-9760",
+                    "shared": true,
+                    "childName": "Bonesinger",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ],
+            "comment": "Bonesinger attached unit ability"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -100143,9 +100252,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, ^^Wraith Construct^^ models in that unit have the Feel No Pain 6+ ability.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is leading a unit, **^^Wraith Construct^^** models in that unit have the Feel No Pain 6+ ability."
               }
             ],
             "name": "Way of the Shaper (Psychic)",
@@ -100157,9 +100266,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is within 3\" of one or more friendly ^^Wraith Construct^^ or ^^Asuryani Vehicle^^ units, unless it is leading a unit, this model has the Lone Operative ability.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is within 3\" of one or more friendly **^^Wraith Construct^^** or **^^Asuryani Vehicle^^** units, unless it is leading a unit, this model has the Lone Operative ability."
               }
             ],
             "name": "Bonesinger",
@@ -143967,7 +144076,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "At the end of your Fight phase, if this unit is not **battle‑shocked**, you can use this ability. If you do, roll one D6:\n- On a 1, this unit is **battle‑shocked**.\n- Select one **visible** enemy **MONSTER/VEHICLE** unit (excluding **TITANIC** units) within 18\" of this unit. That enemy unit is **ensnared** until the start of your next turn:\n-- While a unit is **ensnared**, that unit has ‑2\" **M** and cannot be **pinned**."
+                "$text": "At the end of your Fight phase, if this unit is not **battle‑shocked**, you can use this ability. If you do, roll one D6:\n- On a 1, this unit is **battle‑shocked**.\n- Select one **visible** enemy **MONSTER/VEHICLE** unit (excluding **TITANIC** units) within 18\" of this unit. That enemy unit is **ensnared** until the start of your next turn:\n    - While a unit is **ensnared**, that unit has ‑2\" **M** and cannot be **pinned**."
               }
             ],
             "id": "5a54-0c4a-942f-7ab9",
@@ -145807,7 +145916,18 @@
                 "value": "Blade of the Clans",
                 "field": "annotation",
                 "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
-                "join": ", "
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "skipIfPresent": "Blade of the Clans"
               },
               {
                 "type": "append",
@@ -145815,17 +145935,33 @@
                 "field": "893f-9000-ccf7-648e",
                 "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
                 "join": ", ",
-                "skipIfPresent": "Sustained Hits 1"
-              }
-            ],
-            "conditions": [
+                "skipIfPresent": "Sustained Hits 1",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
               {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "any",
-                "shared": true
+                "type": "append",
+                "value": "Blade of the Clans",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Blade of the Clans"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
               }
             ],
             "comment": "Blade of the Clans attached unit modifiers"
