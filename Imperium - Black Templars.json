@@ -217,6 +217,12 @@
             "id": "2f9c-2cbe-8788-4401",
             "primary": false,
             "name": "Chaplain"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "ca33-1d04-d6ef-7e94",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "profiles": [
@@ -824,7 +830,73 @@
         "import": true,
         "name": "Chaplain Grimaldus",
         "hidden": false,
-        "id": "8165-e372-4fd6-3274"
+        "id": "8165-e372-4fd6-3274",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "8294-8475-24dd-33d8",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "shared": true,
+                    "childName": "Assault Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9e2c-48af-8c2b-ea68",
+                    "shared": true,
+                    "childName": "Crusader Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5fe6-20de-df8d-8e92",
+                    "shared": true,
+                    "childName": "Infernus Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7b57-816b-44b2-65ec",
+                    "shared": true,
+                    "childName": "Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f790-2929-6951-c241",
+                    "shared": true,
+                    "childName": "Sword Brethren Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -939,6 +1011,12 @@
             "id": "c323-d6bc-f189-e226",
             "primary": false,
             "name": "Chapter Master"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "c35c-2593-c89d-1f8a",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "constraints": [
@@ -1298,7 +1376,64 @@
         "import": true,
         "name": "High Marshal Helbrecht",
         "hidden": false,
-        "id": "da8a-de9f-1fe7-2513"
+        "id": "da8a-de9f-1fe7-2513",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "8800-9606-a527-a562",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "shared": true,
+                    "childName": "Assault Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9e2c-48af-8c2b-ea68",
+                    "shared": true,
+                    "childName": "Crusader Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7b57-816b-44b2-65ec",
+                    "shared": true,
+                    "childName": "Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f790-2929-6951-c241",
+                    "shared": true,
+                    "childName": "Sword Brethren Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -2760,6 +2895,39 @@
             "shared": true,
             "id": "eb8b-fa75-13c0-bc92",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "41c0-897e-a62c-c7e2",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a348-d208-cc39-8405",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "27e1-94c9-e187-7220",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "entryLinks": [
@@ -3119,10 +3287,10 @@
             "name": "Faction: Black Templars"
           },
           {
-            "targetId": "698d-99fc-408b-91ec",
-            "id": "eada-4170-3400-4f5d",
+            "targetId": "f790-2929-6951-c241",
+            "id": "d1fa-1e6c-acfa-022d",
             "primary": false,
-            "name": "Primaris Sword Brethren"
+            "name": "Sword Brethren Squad"
           }
         ],
         "costs": [
@@ -4367,6 +4535,39 @@
             "shared": true,
             "id": "e69c-c1f1-9c64-cb4d",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "bc3e-58e2-3ad2-d324",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4552-0da8-ff5d-8387",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6d53-5038-57f8-7238",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -4837,6 +5038,12 @@
             "id": "999-a190-698c-c1f4",
             "primary": false,
             "name": "Faction: Black Templars"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "31ca-b074-e2a5-59e2",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "infoLinks": [
@@ -5312,7 +5519,73 @@
         "import": true,
         "name": "Emperor's Champion",
         "hidden": false,
-        "id": "ca2f-f408-c1bd-b87f"
+        "id": "ca2f-f408-c1bd-b87f",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2635-6d86-ed8f-ebbc",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "shared": true,
+                    "childName": "Assault Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9e2c-48af-8c2b-ea68",
+                    "shared": true,
+                    "childName": "Crusader Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7b57-816b-44b2-65ec",
+                    "shared": true,
+                    "childName": "Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f790-2929-6951-c241",
+                    "shared": true,
+                    "childName": "Sword Brethren Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "shared": true,
+                    "childName": "Sternguard Veteran Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -13084,6 +13357,12 @@
             "id": "b76b-346f-6b24-cd48",
             "primary": false,
             "name": "Castellan"
+          },
+          {
+            "targetId": "7dcd-7f61-69a7-0294",
+            "id": "51da-6dd4-da94-d9af",
+            "primary": false,
+            "name": "Support"
           }
         ],
         "constraints": [
@@ -13732,6 +14011,82 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "0a76-727d-e534-d15b",
+            "includeChildSelections": true,
+            "childName": "unit",
+            "label": "Supported by",
+            "defaultSelectionEntryId": "none",
+            "action": "group",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "shared": true,
+                    "childName": "Assault Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9e2c-48af-8c2b-ea68",
+                    "shared": true,
+                    "childName": "Crusader Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7b57-816b-44b2-65ec",
+                    "shared": true,
+                    "childName": "Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f790-2929-6951-c241",
+                    "shared": true,
+                    "childName": "Sword Brethren Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "shared": true,
+                    "childName": "Sternguard Veteran Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5fe6-20de-df8d-8e92",
+                    "shared": true,
+                    "childName": "Infernus Squad"
+                  }
+                ]
+              }
+            ]
+          }
         ]
       },
       {
@@ -14215,6 +14570,12 @@
             "id": "30f-2548-af18-c29f",
             "primary": false,
             "name": "Captain"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "8bae-de69-00d3-90be",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "costs": [
@@ -14529,6 +14890,72 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b4f3-502d-579d-1e86",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "shared": true,
+                    "childName": "Assault Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9e2c-48af-8c2b-ea68",
+                    "shared": true,
+                    "childName": "Crusader Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7b57-816b-44b2-65ec",
+                    "shared": true,
+                    "childName": "Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f790-2929-6951-c241",
+                    "shared": true,
+                    "childName": "Sword Brethren Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "shared": true,
+                    "childName": "Sternguard Veteran Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -14830,6 +15257,12 @@
             "id": "b1c6-0301-3f7c-0ff7",
             "primary": false,
             "name": "Execrator"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "fbb6-2546-4206-7080",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "costs": [
@@ -15430,6 +15863,45 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "81d4-96e9-7c09-a668",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9e2c-48af-8c2b-ea68",
+                    "shared": true,
+                    "childName": "Crusader Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f790-2929-6951-c241",
+                    "shared": true,
+                    "childName": "Sword Brethren Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -16011,6 +16483,12 @@
             "id": "4b12-0ad1-fa22-9515",
             "primary": false,
             "name": "Crusade Ancient"
+          },
+          {
+            "targetId": "7dcd-7f61-69a7-0294",
+            "id": "f645-1d02-d40b-f903",
+            "primary": false,
+            "name": "Support"
           }
         ],
         "entryLinks": [
@@ -16076,6 +16554,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "1a36-1b06-0d7d-e54e",
+            "includeChildSelections": true,
+            "childName": "unit",
+            "label": "Supported by",
+            "defaultSelectionEntryId": "none",
+            "action": "group",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9e2c-48af-8c2b-ea68",
+                    "shared": true,
+                    "childName": "Crusader Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f790-2929-6951-c241",
+                    "shared": true,
+                    "childName": "Sword Brethren Squad"
+                  }
+                ]
               }
             ]
           }
@@ -16876,6 +17394,39 @@
             "shared": true,
             "id": "c129-de61-d3ca-0d16",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "d2eb-28e0-fdec-8b0b",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "d2c9-caa6-b8df-7c7d",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3a61-11b2-6a39-7c00",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "costs": [
@@ -18145,6 +18696,39 @@
             "shared": true,
             "id": "8624-a4e1-d0f5-4e45",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "8f73-8577-2ad2-d848",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "9a69-d9d9-b3c3-6eed",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "9c8b-0012-d6bd-b2e3",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "categoryLinks": [
@@ -20082,11 +20666,6 @@
         "name": "High Marshal Helbrecht",
         "hidden": false,
         "id": "4ac7-7ebd-3206-7f22"
-      },
-      {
-        "name": "Primaris Sword Brethren",
-        "hidden": false,
-        "id": "698d-99fc-408b-91ec"
       },
       {
         "name": "Castellan",

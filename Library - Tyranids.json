@@ -811,9 +811,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is leading a unit, weapons equipped by models in that unit have the **[SUSTAINED HITS 1]** ability."
               }
             ],
             "id": "a4ec-5941-e494-6ed0",
@@ -1360,6 +1360,50 @@
                 "includeChildSelections": true
               }
             ]
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Alpha Warrior",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Alpha Warrior",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Alpha Warrior attached unit modifiers"
           }
         ],
         "selectionEntryGroups": [
@@ -1499,6 +1543,54 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "d2a9-2587-f926-7842",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9c11-60f5-4859-9099",
+                    "shared": true,
+                    "childName": "Gargoyles"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "fb3c-c529-4e6c-2251",
+                    "shared": true,
+                    "childName": "Tyranid Warriors with Melee Bio-weapons"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5c1a-a178-5951-d42",
+                    "shared": true,
+                    "childName": "Tyranid Warriors with Ranged Bio-weapons"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -3260,6 +3352,50 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Alpha Invader",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Alpha Invader",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Alpha Invader attached unit modifiers"
           }
         ],
         "selectionEntryGroups": [
@@ -3648,6 +3784,36 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "eed9-dcf3-684b-5fce",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1785-c8af-b343-a1a6",
+                    "shared": true,
+                    "childName": "Raveners"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -6760,6 +6926,39 @@
             "shared": true,
             "id": "a831-2f1c-c166-f711",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "8aa6-9d1e-2c15-9b2d",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "54b2-3bec-0a2f-6013",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "fc58-ebd2-03ba-e212",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifierGroups": [
@@ -11587,6 +11786,50 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Alpha Warrior",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Alpha Warrior",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Alpha Warrior attached unit modifiers"
           }
         ],
         "modifiers": [
@@ -11613,7 +11856,259 @@
         "import": true,
         "name": "Node Organism [Crucible]",
         "hidden": false,
-        "id": "527c-d3c6-c620-c7c6"
+        "id": "527c-d3c6-c620-c7c6",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "d48e-f97b-5525-d340",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "0afb-d2ae-1373-773e",
+                        "shared": true,
+                        "childName": "Burrowing Claws",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "cd5f-2767-b928-cdf0",
+                        "shared": true,
+                        "childName": "Floating Horror",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "63e5-9165-2168-c429",
+                        "shared": true,
+                        "childName": "Vanguard-beast",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "359d-3b24-680d-68f1",
+                        "shared": true,
+                        "childName": "Winged Biomorph",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "fb3c-c529-4e6c-2251",
+                            "shared": true,
+                            "childName": "Tyranid Warriors with Melee Bio-weapons"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5c1a-a178-5951-d42",
+                            "shared": true,
+                            "childName": "Tyranid Warriors with Ranged Bio-weapons"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "0afb-d2ae-1373-773e",
+                        "shared": true,
+                        "childName": "Burrowing Claws",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1785-c8af-b343-a1a6",
+                        "shared": true,
+                        "childName": "Raveners"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "cd5f-2767-b928-cdf0",
+                        "shared": true,
+                        "childName": "Floating Horror",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "c84f-d7e4-d853-88f3",
+                            "shared": true,
+                            "childName": "Venomthropes"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "7214-3728-6fad-2681",
+                            "shared": true,
+                            "childName": "Zoanthropes"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "edaf-5977-b898-4f9f",
+                        "shared": true,
+                        "childName": "Leader-beast",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "50be-2da9-b98b-2a55",
+                        "shared": true,
+                        "childName": "Neurogaunts"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "63e5-9165-2168-c429",
+                        "shared": true,
+                        "childName": "Vanguard-beast",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2b2c-c30e-6d51-a4cc",
+                            "shared": true,
+                            "childName": "Hormagaunts"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "cdd2-3183-20ad-6126",
+                            "shared": true,
+                            "childName": "Von Ryan's Leapers"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "359d-3b24-680d-68f1",
+                        "shared": true,
+                        "childName": "Winged Biomorph",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "9c11-60f5-4859-9099",
+                        "shared": true,
+                        "childName": "Gargoyles"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "infoLinks": [
@@ -12312,7 +12807,155 @@
         "import": true,
         "name": "Prime Organism [Crucible]",
         "hidden": false,
-        "id": "6f46-0c77-acd0-3f5d"
+        "id": "6f46-0c77-acd0-3f5d",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "30e6-b6c5-6b5c-4e5c",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "0afb-d2ae-1373-773e",
+                        "shared": true,
+                        "childName": "Burrowing Claws",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "359d-3b24-680d-68f1",
+                        "shared": true,
+                        "childName": "Winged Biomorph",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2070-d263-505a-48cc",
+                            "shared": true,
+                            "childName": "Carnifexes"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "9655-9e08-b63f-c29e",
+                            "shared": true,
+                            "childName": "Tyrant Guard"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "0afb-d2ae-1373-773e",
+                        "shared": true,
+                        "childName": "Burrowing Claws",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1785-c8af-b343-a1a6",
+                        "shared": true,
+                        "childName": "Raveners"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "edaf-5977-b898-4f9f",
+                        "shared": true,
+                        "childName": "Leader-beast",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "50be-2da9-b98b-2a55",
+                        "shared": true,
+                        "childName": "Neurogaunts"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "359d-3b24-680d-68f1",
+                        "shared": true,
+                        "childName": "Winged Biomorph",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "9c11-60f5-4859-9099",
+                        "shared": true,
+                        "childName": "Gargoyles"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "infoLinks": [
@@ -35248,6 +35891,46 @@
         "name": "Norn Emissary",
         "hidden": false,
         "id": "50ee-d05c-da9c-eda2"
+      },
+      {
+        "id": "5c1a-a178-5951-d42",
+        "name": "Tyranid Warriors with Ranged Bio-weapons",
+        "hidden": false
+      },
+      {
+        "id": "fb3c-c529-4e6c-2251",
+        "name": "Tyranid Warriors with Melee Bio-weapons",
+        "hidden": false
+      },
+      {
+        "name": "Venomthropes",
+        "hidden": false,
+        "id": "c84f-d7e4-d853-88f3"
+      },
+      {
+        "name": "Zoanthropes",
+        "hidden": false,
+        "id": "7214-3728-6fad-2681"
+      },
+      {
+        "name": "Neurogaunts",
+        "hidden": false,
+        "id": "50be-2da9-b98b-2a55"
+      },
+      {
+        "id": "2b2c-c30e-6d51-a4cc",
+        "name": "Hormagaunts",
+        "hidden": false
+      },
+      {
+        "name": "Carnifexes",
+        "hidden": false,
+        "id": "2070-d263-505a-48cc"
+      },
+      {
+        "id": "9655-9e08-b63f-c29e",
+        "name": "Tyrant Guard",
+        "hidden": false
       }
     ],
     "library": true,

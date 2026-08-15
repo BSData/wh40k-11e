@@ -241,6 +241,39 @@
             "shared": true,
             "id": "4ad6-3e80-6d4e-876e",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "664d-40d2-dee1-729d",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "7c4e-0046-1a3f-0d60",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "e98c-2a34-9cb7-c4c3",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "categoryLinks": [
@@ -1354,6 +1387,39 @@
             "shared": true,
             "id": "7a2c-2b6f-749d-6e80",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "2645-8a7d-45a3-1b8b",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "e8b3-e18b-26d7-4e90",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "ca67-a25d-0881-2bfa",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "profiles": [
@@ -6697,38 +6763,6 @@
             "includeChildSelections": true
           }
         ],
-        "infoGroups": [
-          {
-            "infoLinks": [
-              {
-                "name": "Leader",
-                "hidden": false,
-                "type": "rule",
-                "id": "4241-9dc7-3a96-c30d",
-                "targetId": "b4dd-3e1f-41cb-218f"
-              }
-            ],
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "This model can be attached to the following units: **^^Cadian Shock Troops^^**, **^^Kasrkin^^**",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Leader",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "e668-97a7-2df8-6db3"
-              }
-            ],
-            "name": "Leader",
-            "hidden": false,
-            "id": "3ecb-e77e-1419-7f1b"
-          }
-        ],
         "profiles": [
           {
             "characteristics": [
@@ -6815,6 +6849,20 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "cd15-5c13-fa1e-b2eb"
+          },
+          {
+            "name": "Leader",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "e668-97a7-2df8-6db3",
+            "characteristics": [
+              {
+                "$text": "This model can be attached to the following units: **^^Cadian Shock Troops^^**, **^^Kasrkin^^**",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -7196,6 +7244,13 @@
             "type": "rule",
             "id": "8199-93f9-224-6c86",
             "targetId": "53c9-34f6-2443-a95e"
+          },
+          {
+            "name": "Leader",
+            "id": "4241-9dc7-3a96-c30d",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "b4dd-3e1f-41cb-218f"
           }
         ],
         "modifierGroups": [
@@ -7423,7 +7478,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "acd1-da30-2656-832a"
+                "field": "8477-e271-13b6-05a3"
               },
               {
                 "conditionGroups": [
@@ -7549,13 +7604,82 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Senior Officer",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Senior Officer attached unit modifiers"
           }
         ],
         "type": "model",
         "import": true,
         "name": "Cadian Castellan",
         "hidden": false,
-        "id": "2b49-4d03-aaf5-3532"
+        "id": "2b49-4d03-aaf5-3532",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "e194-68e0-7a51-2c7b",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -7785,6 +7909,20 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "4248-cf6f-79c7-aba6"
+          },
+          {
+            "name": "Leader",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "e41a-d75f-98b5-d6a1",
+            "characteristics": [
+              {
+                "$text": "This model can be attached to the following unit: **^^Cadian Shock Troops^^**",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -7794,38 +7932,13 @@
             "type": "rule",
             "id": "b153-93f7-5c22-b7c3",
             "targetId": "53c9-34f6-2443-a95e"
-          }
-        ],
-        "infoGroups": [
+          },
           {
-            "infoLinks": [
-              {
-                "name": "Leader",
-                "hidden": false,
-                "type": "rule",
-                "id": "af70-2fb2-b486-87e0",
-                "targetId": "b4dd-3e1f-41cb-218f"
-              }
-            ],
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "This model can be attached to the following unit: **^^Cadian Shock Troops^^**",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Leader",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "e41a-d75f-98b5-d6a1"
-              }
-            ],
             "name": "Leader",
+            "id": "af70-2fb2-b486-87e0",
             "hidden": false,
-            "id": "9d4-110d-8a3f-8579"
+            "type": "rule",
+            "targetId": "b4dd-3e1f-41cb-218f"
           }
         ],
         "entryLinks": [
@@ -8064,7 +8177,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "acd1-da30-2656-832a"
+                "field": "f157-12f7-b496-b99e"
               },
               {
                 "conditionGroups": [
@@ -9379,7 +9492,37 @@
         "import": true,
         "name": "Cadian Command Squad",
         "hidden": false,
-        "id": "4d28-f2a7-67c1-eb2e"
+        "id": "4d28-f2a7-67c1-eb2e",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "52e3-c685-b523-0c88",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "modifiers": [
@@ -9577,6 +9720,39 @@
             "shared": true,
             "id": "dde5-d6bf-bb4a-9092",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "a4ab-0ac0-beba-32d2",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8ca5-fa96-0dc6-2c4c",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "320f-45ee-6d7d-6a78",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "selectionEntryGroups": [
@@ -10416,6 +10592,39 @@
             "shared": true,
             "id": "42b0-e3e9-85ef-8f34",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "fe58-7dc3-c655-06af",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6935-c08b-5c43-abfb",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f30f-52c3-d060-1f9d",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -11597,7 +11806,7 @@
                 ],
                 "type": "set",
                 "value": 3,
-                "field": "acd1-da30-2656-832a"
+                "field": "42b0-e3e9-85ef-8f34"
               },
               {
                 "conditionGroups": [
@@ -13374,7 +13583,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "acd1-da30-2656-832a"
+                "field": "a5e6-2859-09fa-8540"
               },
               {
                 "conditionGroups": [
@@ -13571,7 +13780,148 @@
         "import": true,
         "name": "Commissar",
         "hidden": false,
-        "id": "a979-5b21-dc69-b949"
+        "id": "a979-5b21-dc69-b949",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2d78-48fa-7793-d291",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e14-aebc-74ba-3c82",
+                    "shared": true,
+                    "childName": "Death Korps Grenadier Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "f5d4-b4fb-2a44-9165",
+                            "shared": true,
+                            "childName": "Exemplar of Duty",
+                            "queryFromSelf": true,
+                            "includeChildSelections": true
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4d65-dad2-8df9-10fa",
+                            "shared": true,
+                            "childName": "Abhuman Detail",
+                            "queryFromSelf": true,
+                            "includeChildSelections": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "dbea-f421-4e4b-c605",
+                            "shared": true,
+                            "childName": "Ogryn Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "c34d-50b5-f24d-f2f7",
+                            "shared": true,
+                            "childName": "Bullgryn Squad"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -13763,6 +14113,39 @@
             "shared": true,
             "id": "3b0d-01fc-5401-7ec2",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "2025-4254-2362-4fe4",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "bb69-115f-ec35-a958",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6382-f6b9-bcce-7042",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "selectionEntryGroups": [
@@ -24865,13 +25248,73 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Cold Steel and Courage",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Cold Steel and Courage attached unit modifiers"
           }
         ],
         "type": "model",
         "import": true,
         "name": "‘Iron Hand’ Straken [Legends]",
         "hidden": false,
-        "id": "913f-3cb6-fb80-7f6a"
+        "id": "913f-3cb6-fb80-7f6a",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "632b-92bc-f978-8f81",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -25000,6 +25443,39 @@
             "shared": true,
             "id": "a6a5-b9c1-53cc-f708",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "a4f1-4d81-43d4-64f2",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "42e9-baa5-8736-8104",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6eaa-da69-2636-de54",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -26563,7 +27039,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "acd1-da30-2656-832a"
+                "field": "a6a5-b9c1-53cc-f708"
               },
               {
                 "conditionGroups": [
@@ -31177,7 +31653,100 @@
         "import": true,
         "name": "Lord Solar Leontus",
         "hidden": false,
-        "id": "a9d-55c1-3d24-fa25"
+        "id": "a9d-55c1-3d24-fa25",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "c20e-7205-7472-0c07",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1eba-3dba-477b-9283",
+                    "shared": true,
+                    "childName": "Attilan Rough Riders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e14-aebc-74ba-3c82",
+                    "shared": true,
+                    "childName": "Death Korps Grenadier Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4a58-462c-a1ac-238b",
+                    "shared": true,
+                    "childName": "Death Riders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -33479,7 +34048,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "acd1-da30-2656-832a"
+                "field": "3347-8298-3a6d-4341"
               }
             ],
             "type": "and"
@@ -33489,7 +34058,37 @@
         "import": true,
         "name": "Militarum Tempestus Command Squad",
         "hidden": false,
-        "id": "497-36ad-8ecb-f7c7"
+        "id": "497-36ad-8ecb-f7c7",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "38f1-ceca-d2ee-fef2",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -37082,7 +37681,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "acd1-da30-2656-832a"
+                "field": "323d-6b3e-fbd8-e3cc"
               },
               {
                 "conditionGroups": [
@@ -37645,6 +38244,90 @@
             "hidden": false,
             "type": "rule",
             "targetId": "9bf4-280f-bbe2-6fbb"
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "e456-2c32-ecd3-2bc4",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e14-aebc-74ba-3c82",
+                    "shared": true,
+                    "childName": "Death Korps Grenadier Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -39268,7 +39951,73 @@
         "import": true,
         "name": "Tech-Priest Enginseer",
         "hidden": false,
-        "id": "f556-a33d-dc90-d6fc"
+        "id": "f556-a33d-dc90-d6fc",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b502-97d5-4fff-b45d",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -40381,6 +41130,39 @@
             "shared": true,
             "id": "1131-d72b-067a-cf0f",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "ea9e-dd8d-b68e-6ba6",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c4d7-f1ed-cd6b-79b8",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f26f-5d2c-81d4-5a44",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -41813,7 +42595,37 @@
         "import": true,
         "name": "Sergeant Harker [Legends]",
         "hidden": false,
-        "id": "a8d5-81f9-96a0-fd12"
+        "id": "a8d5-81f9-96a0-fd12",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "8fb6-a637-10c7-85be",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -48522,6 +49334,39 @@
             "id": "88ba-54e3-3c8d-6d8f",
             "includeChildSelections": true,
             "includeChildForces": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "5f26-f179-ff52-102d",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4ebc-ecf4-9c12-8fe9",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "d190-e20e-7687-8443",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -50615,7 +51460,46 @@
         "import": true,
         "name": "Ursula Creed",
         "hidden": false,
-        "id": "b6b2-9971-ec0c-349e"
+        "id": "b6b2-9971-ec0c-349e",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "9e1e-1612-5338-7607",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -58151,6 +59035,39 @@
             "shared": true,
             "id": "1bf0-79b0-acfa-5e34",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "a10a-2f4b-2492-db3d",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4f83-8601-214c-6404",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "5baa-b269-6e7f-11df",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "entryLinks": [
@@ -83136,6 +84053,39 @@
             "shared": true,
             "id": "26d0-0af1-be27-b9d6",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "d505-ff52-b1f5-db5a",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "2ffc-ae32-751b-b36a",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "bb57-6081-860c-4136",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "profiles": [
@@ -87137,6 +88087,54 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "23d8-34f4-7de0-e87e",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e14-aebc-74ba-3c82",
+                    "shared": true,
+                    "childName": "Death Korps Grenadier Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -94031,7 +95029,37 @@
         "import": true,
         "name": "Death Rider Commissar [Legends]",
         "hidden": false,
-        "id": "d58c-e97f-5062-d9e1"
+        "id": "d58c-e97f-5062-d9e1",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2f4c-268f-2b7c-7cd5",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4a58-462c-a1ac-238b",
+                    "shared": true,
+                    "childName": "Death Riders"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -105220,6 +106248,39 @@
             "shared": true,
             "id": "b877-08d3-cd4f-92fd",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "9dce-820e-7b2f-bebd",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1856-5433-1845-7d7e",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6601-cb7a-40a2-27ee",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "profiles": [
@@ -107135,7 +108196,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "fe52-8371-5cc4-bbcc"
+                "field": "872c-3150-1097-72d7"
               },
               {
                 "conditionGroups": [
@@ -108527,7 +109588,55 @@
         "import": true,
         "name": "Krieg Command Squad",
         "hidden": false,
-        "id": "fbcd-274b-0196-b4f6"
+        "id": "fbcd-274b-0196-b4f6",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "1221-aff0-b594-43f4",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e14-aebc-74ba-3c82",
+                    "shared": true,
+                    "childName": "Death Korps Grenadier Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -109064,7 +110173,37 @@
         "import": true,
         "name": "Lord Marshal Dreir",
         "hidden": false,
-        "id": "9033-d07c-3e1c-f6f0"
+        "id": "9033-d07c-3e1c-f6f0",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "0cb2-81fe-4965-2463",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4a58-462c-a1ac-238b",
+                    "shared": true,
+                    "childName": "Death Riders"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -109281,6 +110420,34 @@
             "typeName": "Orders",
             "hidden": false,
             "id": "5722-8d6d-ae28-d30d"
+          },
+          {
+            "name": "Gung-ho Command",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "6469-512c-4055-9783",
+            "characteristics": [
+              {
+                "$text": "While this unit contains an **^^Officer^^**, ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Leader",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "96c4-f9cf-70f7-1325",
+            "characteristics": [
+              {
+                "$text": "This model can be attached to the following unit: **^^Catachan Jungle Fighters^^**",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -109305,68 +110472,20 @@
             "hidden": false,
             "type": "rule",
             "targetId": "ada6-bac1-ffe0-d6f7"
-          }
-        ],
-        "infoGroups": [
-          {
-            "infoLinks": [
-              {
-                "name": "Leader",
-                "hidden": false,
-                "type": "rule",
-                "id": "46ce-45db-aa39-e2ed",
-                "targetId": "b4dd-3e1f-41cb-218f"
-              }
-            ],
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "This model can be attached to the following unit: **^^Catachan Jungle Fighters^^**",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Leader",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "96c4-f9cf-70f7-1325"
-              }
-            ],
-            "name": "Leader",
-            "hidden": false,
-            "id": "de19-2098-3e4f-5bb1"
           },
           {
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "While this unit contains an **^^Officer^^**, ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Gung-ho Command",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "6469-512c-4055-9783"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Assault",
-                "id": "47b7-f46c-1f91-8d55",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "fc8a-8c24-bae9-cc1c"
-              }
-            ],
-            "name": "Gung-ho Command",
-            "id": "9143-c61b-2faf-1666",
-            "hidden": false
+            "name": "Assault",
+            "id": "47b7-f46c-1f91-8d55",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "fc8a-8c24-bae9-cc1c"
+          },
+          {
+            "name": "Leader",
+            "id": "46ce-45db-aa39-e2ed",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "b4dd-3e1f-41cb-218f"
           }
         ],
         "selectionEntryGroups": [
@@ -111267,7 +112386,7 @@
                 ],
                 "type": "set",
                 "value": 1,
-                "field": "8f66-9131-b63b-bc38"
+                "field": "8ef3-0043-bd6f-b400"
               },
               {
                 "conditionGroups": [
@@ -111399,7 +112518,37 @@
         "import": true,
         "name": "Catachan Command Squad",
         "hidden": false,
-        "id": "7d22-9fb6-a7e0-c21b"
+        "id": "7d22-9fb6-a7e0-c21b",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "1d87-43f1-3999-4c4c",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -113370,13 +114519,127 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "War Hymns",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "War Hymns attached unit modifiers"
           }
         ],
         "type": "model",
         "import": true,
         "name": "Ministorum Priest",
         "hidden": false,
-        "id": "ba72-7b05-33c9-a1c0"
+        "id": "ba72-7b05-33c9-a1c0",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "c94e-4181-0635-e46f",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e14-aebc-74ba-3c82",
+                    "shared": true,
+                    "childName": "Death Korps Grenadier Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -113691,6 +114954,39 @@
             "shared": true,
             "id": "9c87-34c3-8dba-97c3",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "b43f-31ae-6500-9708",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8f08-5c7d-3d50-7e01",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6aa9-be48-eed5-153a",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -119298,13 +120594,80 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Well-stocked Supplies",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", "
+              },
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "58d2-b879-49c7-43bc",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", "
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Well-stocked Supplies attached unit modifiers"
           }
         ],
         "type": "model",
         "import": true,
         "name": "Provisionally Prepared [Legends]",
         "hidden": false,
-        "id": "f4d1-cea9-f487-4501"
+        "id": "f4d1-cea9-f487-4501",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "c95e-3900-c02e-831d",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2810-9f9e-082d-8df5",
+                    "shared": true,
+                    "childName": "Ratlings"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -120395,13 +121758,63 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lesk’s Heroes",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", "
+              },
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "58d2-b879-49c7-43bc",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", "
+              }
+            ],
+            "comment": "Lesk’s Heroes attached unit modifiers"
           }
         ],
         "type": "unit",
         "import": true,
         "name": "Hell's Last [Legends]",
         "hidden": false,
-        "id": "2408-cf76-fe11-c6da"
+        "id": "2408-cf76-fe11-c6da",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "7cb3-c2de-dada-4e5c",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -121627,7 +123040,121 @@
         "import": true,
         "name": "Front-line Commander [Crucible]",
         "hidden": false,
-        "id": "4fc5-184d-b305-3551"
+        "id": "4fc5-184d-b305-3551",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "249a-bdc8-9c41-4ac6",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "fa45-57e-930e-602b",
+                        "shared": true,
+                        "childName": "Faction: Astra Militarum"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "e338-111e-d0c6-b687",
+                        "shared": true,
+                        "childName": "Battleline"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "54f6-3fe9-3fd2-d237",
+                        "shared": true,
+                        "childName": "Noble Steed",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "1eba-3dba-477b-9283",
+                            "shared": true,
+                            "childName": "Attilan Rough Riders"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4a58-462c-a1ac-238b",
+                            "shared": true,
+                            "childName": "Death Riders"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -122659,7 +124186,46 @@
         "import": true,
         "name": "Augmented Bone 'Ead [Crucible]",
         "hidden": false,
-        "id": "7280-8daf-312a-b01d"
+        "id": "7280-8daf-312a-b01d",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "ad83-2825-e593-6339",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "c34d-50b5-f24d-f2f7",
+                    "shared": true,
+                    "childName": "Bullgryn Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "dbea-f421-4e4b-c605",
+                    "shared": true,
+                    "childName": "Ogryn Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "infoLinks": [
@@ -123262,6 +124828,26 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Mobile Firebase",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Assault",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              }
+            ],
+            "comment": "Mobile Firebase attached unit modifiers"
           }
         ],
         "modifiers": [
@@ -123303,7 +124889,46 @@
         "import": true,
         "name": "Sentinel Commander [Crucible]",
         "hidden": false,
-        "id": "a040-9715-5d3a-52af"
+        "id": "a040-9715-5d3a-52af",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2c4b-769f-83cd-369a",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "d104-cf4f-e68f-b9f9",
+                    "shared": true,
+                    "childName": "Armoured Sentinels"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4045-1d5f-18fb-99bf",
+                    "shared": true,
+                    "childName": "Scout Sentinels"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "modifiers": [
@@ -124106,7 +125731,91 @@
         "import": true,
         "name": "Commissar Yarrick",
         "hidden": false,
-        "id": "3962-1fa9-7088-aedd"
+        "id": "3962-1fa9-7088-aedd",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "c467-a821-8df2-d843",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e14-aebc-74ba-3c82",
+                    "shared": true,
+                    "childName": "Death Korps Grenadier Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -124861,7 +126570,91 @@
         "import": true,
         "name": "Commissar Graves",
         "hidden": false,
-        "id": "50b8-1f13-9807-0069"
+        "id": "50b8-1f13-9807-0069",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5fd5-1065-eea1-e2de",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e14-aebc-74ba-3c82",
+                    "shared": true,
+                    "childName": "Death Korps Grenadier Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "categoryLinks": [

@@ -22,23 +22,8 @@
         "hidden": false
       },
       {
-        "id": "5c1a-a178-5951-d42",
-        "name": "Tyranid Warriors with Ranged Bio-weapons",
-        "hidden": false
-      },
-      {
-        "id": "fb3c-c529-4e6c-2251",
-        "name": "Tyranid Warriors with Melee Bio-weapons",
-        "hidden": false
-      },
-      {
         "id": "b054-c3e8-d71d-1a7e",
         "name": "Termagants",
-        "hidden": false
-      },
-      {
-        "id": "2b2c-c30e-6d51-a4cc",
-        "name": "Hormagaunts",
         "hidden": false
       },
       {
@@ -67,21 +52,6 @@
         "id": "aee4-5cb5-329b-bb3e"
       },
       {
-        "name": "Venomthropes",
-        "hidden": false,
-        "id": "c84f-d7e4-d853-88f3"
-      },
-      {
-        "name": "Neurogaunts",
-        "hidden": false,
-        "id": "50be-2da9-b98b-2a55"
-      },
-      {
-        "name": "Zoanthropes",
-        "hidden": false,
-        "id": "7214-3728-6fad-2681"
-      },
-      {
         "name": "Mucolid Spores",
         "hidden": false,
         "id": "fda1-7891-2955-69e0"
@@ -100,11 +70,6 @@
         "name": "Biovore",
         "hidden": false,
         "id": "cf46-6271-340e-cf05"
-      },
-      {
-        "name": "Carnifexes",
-        "hidden": false,
-        "id": "2070-d263-505a-48cc"
       },
       {
         "name": "Screamer-killer",
@@ -1695,9 +1660,9 @@
           {
             "characteristics": [
               {
-                "$text": "While a friendly TYRANIDS unit is within 9\" of this model, that unit is within your army’s Synapse Range.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s Synapse Range."
               }
             ],
             "id": "b3b4-4208-4997-9506",
@@ -2131,7 +2096,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "e28c-fc90-ea51-a43a",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9655-9e08-b63f-c29e",
+                    "shared": true,
+                    "childName": "Tyrant Guard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -2220,9 +2215,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is leading a unit, weapons equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability."
               }
             ],
             "id": "a5e1-ca7f-aaef-7fda",
@@ -2640,6 +2635,36 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Vicious Insight",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Devastating Wounds",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Vicious Insight attached unit modifiers"
           }
         ],
         "selectionEntryGroups": [
@@ -2795,6 +2820,36 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "4fd6-fbb5-a090-1aa8",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "64ce-d746-b778-34d8",
+                    "shared": true,
+                    "childName": "Genestealers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -3212,7 +3267,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "ace0-f11a-b3d5-25c8",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2070-d263-505a-48cc",
+                    "shared": true,
+                    "childName": "Carnifexes"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -3394,6 +3479,39 @@
             "shared": true,
             "id": "cfb9-71c7-2784-89e8",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "ccc1-c12a-34c0-5780",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6f62-da2d-1976-0700",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "01b5-bc81-0e4b-5897",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -4776,6 +4894,39 @@
             "shared": true,
             "id": "8025-480c-1bb5-0f80",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "babd-ffdd-a6ee-c8e8",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "146d-103f-5fbb-35e5",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3f08-f106-7a51-5a33",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -5661,6 +5812,39 @@
             "shared": true,
             "id": "563f-3f23-8751-81ec",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "3641-548e-5e5e-b706",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "5566-2ae7-620d-2be2",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3ecc-962d-1217-a13a",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "profiles": [
@@ -7340,6 +7524,39 @@
             "shared": true,
             "id": "528e-789e-c3bd-ebbb",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "2288-2986-2d4a-b165",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "fa6b-ccaf-1433-7600",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "0f34-47f1-e941-4615",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "profiles": [
@@ -8815,6 +9032,39 @@
             "shared": true,
             "id": "9c9e-31d9-8f73-c78f",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "f92b-e016-5e90-0e52",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a22f-f1b5-456b-499e",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8899-001a-846d-b025",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "profiles": [
@@ -10164,6 +10414,54 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "181b-f164-25e8-1773",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "50be-2da9-b98b-2a55",
+                    "shared": true,
+                    "childName": "Neurogaunts"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9655-9e08-b63f-c29e",
+                    "shared": true,
+                    "childName": "Tyrant Guard"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7214-3728-6fad-2681",
+                    "shared": true,
+                    "childName": "Zoanthropes"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -12319,6 +12617,39 @@
             "shared": true,
             "id": "253f-90c6-8088-9a69",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "6dba-2dc7-a224-7875",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "877d-afd1-aa74-b6f1",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "0f00-09b7-4897-a1d0",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "costs": [
@@ -13001,6 +13332,39 @@
             "shared": true,
             "id": "618f-2e64-0d7e-a23e",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "6c17-f6fa-bb44-04d5",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "636e-830e-78b7-5936",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1cf2-441f-68fc-02b8",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -13748,6 +14112,39 @@
             "shared": true,
             "id": "479b-8f2b-14ec-6e28",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "df36-f456-e6a8-d48c",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "cdc9-779d-006a-88c2",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "0c12-3dd7-1f93-bf2f",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "categoryLinks": [
@@ -16134,6 +16531,39 @@
             "shared": true,
             "id": "a928-89d0-60de-6e30",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "d1fe-7004-c91f-8eac",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6002-3eb8-54ed-1381",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "5284-c068-d5e9-b29a",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "selectionEntries": [
@@ -26571,6 +27001,39 @@
             "shared": true,
             "id": "7eaa-2f2c-2716-4a55",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "1e6b-388d-aaf0-d9a1",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1b18-2d6c-e243-cc44",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "24dc-11fb-b9a4-51a1",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifiers": [
@@ -28190,6 +28653,13 @@
             "id": "c34d-9566-6924-ff48",
             "targetId": "1556-9b56-fba6-4370",
             "primary": false
+          },
+          {
+            "name": "Malanthrope",
+            "hidden": false,
+            "id": "9635-7652-2afa-40a3",
+            "targetId": "a634-9edf-3a8-b3f1",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -28629,7 +29099,37 @@
         "import": true,
         "name": "Malanthrope [Legends]",
         "hidden": false,
-        "id": "c17f-f55f-a3cb-530b"
+        "id": "c17f-f55f-a3cb-530b",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "84d2-2d28-5523-7dc9",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "c84f-d7e4-d853-88f3",
+                    "shared": true,
+                    "childName": "Venomthropes"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -32127,6 +32627,36 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Onslaught",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Assault, Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Onslaught attached unit modifiers"
           }
         ],
         "type": "model",
@@ -32152,6 +32682,36 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2bc0-bb5c-8117-8758",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9655-9e08-b63f-c29e",
+                    "shared": true,
+                    "childName": "Tyrant Guard"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -32666,6 +33226,50 @@
                 "includeChildForces": true
               }
             ]
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Alpha Warrior",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Alpha Warrior",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Alpha Warrior attached unit modifiers"
           }
         ],
         "selectionEntryGroups": [
@@ -33029,6 +33633,63 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "3289-f0d7-5ec4-43bf",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2b2c-c30e-6d51-a4cc",
+                    "shared": true,
+                    "childName": "Hormagaunts"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b054-c3e8-d71d-1a7e",
+                    "shared": true,
+                    "childName": "Termagants"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "fb3c-c529-4e6c-2251",
+                    "shared": true,
+                    "childName": "Tyranid Warriors with Melee Bio-weapons"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5c1a-a178-5951-d42",
+                    "shared": true,
+                    "childName": "Tyranid Warriors with Ranged Bio-weapons"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },

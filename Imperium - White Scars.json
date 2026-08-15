@@ -101,6 +101,12 @@
             "id": "2ef1-b613-5bc9-c6ab",
             "primary": false,
             "name": "Tacticus"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "7b4d-d3ad-ab7d-bbb0",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "infoLinks": [
@@ -434,7 +440,82 @@
         "import": true,
         "name": "Kor'sarro Khan",
         "hidden": false,
-        "id": "63f3-6aeb-c9ed-abfc"
+        "id": "63f3-6aeb-c9ed-abfc",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "e274-c986-48ab-20d0",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "shared": true,
+                    "childName": "Assault Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "930d-2875-125b-a65e",
+                    "shared": true,
+                    "childName": "Bladeguard Veteran Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "5956-471c-16ba-af95",
+                    "shared": true,
+                    "childName": "Company Heroes"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7b57-816b-44b2-65ec",
+                    "shared": true,
+                    "childName": "Intercessor Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "shared": true,
+                    "childName": "Sternguard Veteran Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2740-ec68-77ee-2830",
+                    "shared": true,
+                    "childName": "Tactical Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -657,6 +738,12 @@
             "id": "6d62-4480-e164-9558",
             "primary": false,
             "name": "Suboden Khan"
+          },
+          {
+            "targetId": "1556-9b56-fba6-4370",
+            "id": "4917-1011-5577-0d72",
+            "primary": false,
+            "name": "Leader"
           }
         ],
         "selectionEntryGroups": [
@@ -986,7 +1073,37 @@
         "import": true,
         "name": "Suboden Khan",
         "hidden": false,
-        "id": "d72d-b930-9849-924e"
+        "id": "d72d-b930-9849-924e",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "59eb-3c0c-5f80-5579",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1402-5be-5df3-cd51",
+                    "shared": true,
+                    "childName": "Outrider Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       }
     ],
     "entryLinks": [

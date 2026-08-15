@@ -4806,6 +4806,24 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "append",
+            "value": "Devastating Wounds",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "skipIfPresent": "Devastating Wounds",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -4831,7 +4849,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5802-38af-fc82-a4d4",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "93a4-ba1c-a3b5-2685",
+                    "shared": true,
+                    "childName": "Bloodletters"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -5391,7 +5439,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "d9d1-2b15-332c-0e09",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "93a4-ba1c-a3b5-2685",
+                    "shared": true,
+                    "childName": "Bloodletters"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -6021,7 +6099,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "9f45-3323-f0d4-ca6a",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "eb84-815a-86e2-afd1",
+                    "shared": true,
+                    "childName": "Bloodcrushers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -7563,7 +7671,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "6f58-4323-fce1-8660",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "f51c-62f0-adbd-94c3",
+                    "shared": true,
+                    "childName": "Flesh Hounds"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -7604,6 +7742,14 @@
             "shared": true,
             "id": "9774-deb4-21bf-6d3f",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c734-5460-c1ad-7fd0"
           }
         ],
         "profiles": [
@@ -8538,6 +8684,14 @@
             "shared": true,
             "id": "acf1-cc05-7f18-582e",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f297-acb2-09fe-1236"
           }
         ],
         "profiles": [
@@ -14872,6 +15026,18 @@
                     "type": "set",
                     "field": "52d1-e6ce-959a-42fa",
                     "value": 1
+                  },
+                  {
+                    "type": "add",
+                    "value": "4bd-5ee0-f179-2fc5",
+                    "field": "category",
+                    "scope": "root-entry"
+                  },
+                  {
+                    "type": "add",
+                    "value": "2308-7f1a-2beb-1e16",
+                    "field": "category",
+                    "scope": "root-entry"
                   }
                 ],
                 "constraints": [
@@ -14885,21 +15051,6 @@
                     "includeChildForces": false,
                     "id": "52d1-e6ce-959a-42fa",
                     "type": "min"
-                  }
-                ],
-                "categoryLinks": [
-                  {
-                    "id": "cb2f-9a49-6013-c53c",
-                    "name": "Khorne",
-                    "hidden": false,
-                    "targetId": "4bd-5ee0-f179-2fc5",
-                    "primary": false
-                  },
-                  {
-                    "targetId": "2308-7f1a-2beb-1e16",
-                    "id": "1867-7402-964a-27b2",
-                    "primary": false,
-                    "name": "Khorne non-Battleline"
                   }
                 ],
                 "costs": [
@@ -14935,6 +15086,18 @@
                     "type": "set",
                     "field": "9cb9-bd0-7284-cece",
                     "value": 1
+                  },
+                  {
+                    "type": "add",
+                    "value": "ed0d-8e2a-225c-2340",
+                    "field": "category",
+                    "scope": "root-entry"
+                  },
+                  {
+                    "type": "add",
+                    "value": "8e3c-5782-5118-b4b8",
+                    "field": "category",
+                    "scope": "root-entry"
                   }
                 ],
                 "constraints": [
@@ -14948,21 +15111,6 @@
                     "includeChildForces": false,
                     "id": "9cb9-bd0-7284-cece",
                     "type": "min"
-                  }
-                ],
-                "categoryLinks": [
-                  {
-                    "id": "c951-459d-531a-dd66",
-                    "name": "Nurgle",
-                    "hidden": false,
-                    "targetId": "ed0d-8e2a-225c-2340",
-                    "primary": false
-                  },
-                  {
-                    "targetId": "8e3c-5782-5118-b4b8",
-                    "id": "23b5-d748-6da8-afa6",
-                    "primary": false,
-                    "name": "Nurgle non-Battleline"
                   }
                 ],
                 "costs": [
@@ -14998,6 +15146,18 @@
                     "type": "set",
                     "field": "3f00-1abf-519a-462a",
                     "value": 1
+                  },
+                  {
+                    "type": "add",
+                    "value": "b2a9-ede5-7a83-4da8",
+                    "field": "category",
+                    "scope": "root-entry"
+                  },
+                  {
+                    "type": "add",
+                    "value": "8aa7-4f0e-f4ab-83a3",
+                    "field": "category",
+                    "scope": "root-entry"
                   }
                 ],
                 "constraints": [
@@ -15011,21 +15171,6 @@
                     "includeChildForces": false,
                     "id": "3f00-1abf-519a-462a",
                     "type": "min"
-                  }
-                ],
-                "categoryLinks": [
-                  {
-                    "id": "c42b-6346-2473-d5a0",
-                    "name": "Slaanesh",
-                    "hidden": false,
-                    "targetId": "b2a9-ede5-7a83-4da8",
-                    "primary": false
-                  },
-                  {
-                    "targetId": "8aa7-4f0e-f4ab-83a3",
-                    "id": "4b43-4439-c14e-2883",
-                    "primary": false,
-                    "name": "Slaanesh non-Battleline"
                   }
                 ],
                 "costs": [
@@ -15070,6 +15215,18 @@
                     "type": "set",
                     "field": "3ff6-8e13-dc2-c622",
                     "value": 1
+                  },
+                  {
+                    "type": "add",
+                    "value": "b188-114f-6ba5-79a1",
+                    "field": "category",
+                    "scope": "root-entry"
+                  },
+                  {
+                    "type": "add",
+                    "value": "6627-b134-a52f-c3db",
+                    "field": "category",
+                    "scope": "root-entry"
                   }
                 ],
                 "constraints": [
@@ -15083,21 +15240,6 @@
                     "includeChildForces": false,
                     "id": "3ff6-8e13-dc2-c622",
                     "type": "min"
-                  }
-                ],
-                "categoryLinks": [
-                  {
-                    "id": "3a3b-b7c9-2c64-3e93",
-                    "name": "Tzeentch",
-                    "hidden": false,
-                    "targetId": "b188-114f-6ba5-79a1",
-                    "primary": false
-                  },
-                  {
-                    "targetId": "6627-b134-a52f-c3db",
-                    "id": "c456-5703-defc-b4",
-                    "primary": false,
-                    "name": "Tzeentch non-Battleline"
                   }
                 ],
                 "costs": [
@@ -19953,6 +20095,24 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Lethal Hits",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "skipIfPresent": "Lethal Hits",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -20364,7 +20524,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "1a65-27ac-6ab6-1d72",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "2353-e1a0-43bc-35d0",
+                    "shared": true,
+                    "childName": "Screamers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -21015,7 +21205,46 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "c2aa-8b8c-e58f-6c54",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "dccc-c115-75ce-2805",
+                    "shared": true,
+                    "childName": "Blue Horrors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e6fe-b5bd-d1b6-cff0",
+                    "shared": true,
+                    "childName": "Pink Horrors"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -21866,6 +22095,24 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Sustained Hits 1",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "skipIfPresent": "Sustained Hits",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -22132,7 +22379,46 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "c69c-5c93-ac88-7da6",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "dccc-c115-75ce-2805",
+                    "shared": true,
+                    "childName": "Blue Horrors"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e6fe-b5bd-d1b6-cff0",
+                    "shared": true,
+                    "childName": "Pink Horrors"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -22348,6 +22634,14 @@
             "shared": true,
             "id": "7768-6a2d-90d5-2b21",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1b05-0c24-ca30-b1fe"
           }
         ],
         "profiles": [
@@ -23237,6 +23531,14 @@
             "shared": true,
             "id": "6691-a12c-19f9-1a77",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "63c6-de93-d6ec-038f"
           }
         ],
         "profiles": [
@@ -24389,6 +24691,14 @@
             "shared": true,
             "id": "17f1-5269-8d5f-1895",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c760-8ce7-f69b-9ea1"
           }
         ],
         "profiles": [
@@ -25628,6 +25938,24 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Assault",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "skipIfPresent": "Assault",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "constraints": [
@@ -26021,7 +26349,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "4b6e-edc1-1174-068d",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4163-af15-1960-5596",
+                    "shared": true,
+                    "childName": "Flamers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "modifiers": [
@@ -26134,6 +26492,14 @@
             "shared": true,
             "id": "9b28-b18a-a2ec-dab0",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "37ee-20e2-0df5-8811"
           }
         ],
         "profiles": [
@@ -26870,13 +27236,6 @@
             "primary": false
           },
           {
-            "id": "adea-b1fb-685-4c3a",
-            "name": "Mounted",
-            "hidden": false,
-            "targetId": "14a0-40c9-2748-ae6e",
-            "primary": true
-          },
-          {
             "id": "22fb-ea02-4ad1-9af4",
             "name": "Chaos",
             "hidden": false,
@@ -26888,13 +27247,6 @@
             "name": "Daemon",
             "hidden": false,
             "targetId": "9c0e-7e25-4580-e439",
-            "primary": false
-          },
-          {
-            "id": "b6-9bfb-bab5-b896",
-            "name": "Tzeentch",
-            "hidden": false,
-            "targetId": "b188-114f-6ba5-79a1",
             "primary": false
           },
           {
@@ -26922,6 +27274,20 @@
             "id": "8cf1-34ef-8222-93a3",
             "targetId": "4df3-beae-010c-9087",
             "primary": false
+          },
+          {
+            "name": "Tzeentch",
+            "hidden": false,
+            "id": "c210-f7ee-7935-a5c2",
+            "targetId": "b188-114f-6ba5-79a1",
+            "primary": false
+          },
+          {
+            "name": "Mounted",
+            "hidden": false,
+            "id": "a3ca-b463-9f76-a883",
+            "targetId": "14a0-40c9-2748-ae6e",
+            "primary": true
           }
         ],
         "entryLinks": [
@@ -30237,7 +30603,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5ffd-3d04-857a-20d7",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4494-6619-15d9-4a6f",
+                    "shared": true,
+                    "childName": "Plaguebearers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -30564,6 +30960,24 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "append",
+            "value": "Sustained Hits 1",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "skipIfPresent": "Sustained Hits",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ]
           }
@@ -31034,7 +31448,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "a9ea-b5ef-0ad6-c813",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4494-6619-15d9-4a6f",
+                    "shared": true,
+                    "childName": "Plaguebearers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -31430,7 +31874,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "0f57-8837-b154-6f59",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4494-6619-15d9-4a6f",
+                    "shared": true,
+                    "childName": "Plaguebearers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -31759,6 +32233,24 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "e703-ecb6-5ce7-aec1",
+            "affects": "self.entries.group.recursive.profiles.Unit",
+            "skipIfPresent": "Devastating Wounds",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -32084,7 +32576,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "1394-17b2-bdb3-a679",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4494-6619-15d9-4a6f",
+                    "shared": true,
+                    "childName": "Plaguebearers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -32590,7 +33112,55 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5aa6-3e16-b4e5-7566",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1992-1150-1cf0-9968",
+                    "shared": true,
+                    "childName": "Pox Riders"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4708-6634-c709-219a",
+                    "shared": true,
+                    "childName": "Beasts of Nurgle"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b3ce-e371-5841-1ced",
+                    "shared": true,
+                    "childName": "Plague Toads"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -32631,6 +33201,14 @@
             "shared": true,
             "id": "c2ff-0f90-dbbb-879e",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4db4-c46c-a8fa-56f0"
           }
         ],
         "profiles": [
@@ -34150,6 +34728,14 @@
             "shared": true,
             "id": "fd3d-a0fb-2903-a704",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "e3f2-308d-0ef8-b8a3"
           }
         ],
         "profiles": [
@@ -39373,7 +39959,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b561-5b4c-2641-e3f3",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e70c-8ee7-836c-caa2",
+                    "shared": true,
+                    "childName": "Daemonettes"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -40519,7 +41135,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "f53e-d0a7-6e29-711e",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e70c-8ee7-836c-caa2",
+                    "shared": true,
+                    "childName": "Daemonettes"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -41350,7 +41996,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "20fa-ea2a-883f-e463",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e70c-8ee7-836c-caa2",
+                    "shared": true,
+                    "childName": "Daemonettes"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -41729,6 +42405,25 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Sustained Hits 1",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ],
+            "join": ", ",
+            "skipIfPresent": "Sustained Hits"
           }
         ],
         "selectionEntryGroups": [
@@ -42405,7 +43100,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "b1d8-251f-f080-2119",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "fdd4-5656-b46b-191",
+                    "shared": true,
+                    "childName": "Hellflayer"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -43080,7 +43805,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "84b7-da88-dcab-e837",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e70c-8ee7-836c-caa2",
+                    "shared": true,
+                    "childName": "Daemonettes"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -43742,6 +44497,14 @@
             "shared": true,
             "id": "7b28-345e-2bf2-7847",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6678-4247-e218-901d"
           }
         ],
         "modifierGroups": [
@@ -44729,6 +45492,14 @@
             "shared": true,
             "id": "4f12-bf5d-6b75-a8a0",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c039-e59a-cf6f-2ed8"
           }
         ],
         "profiles": [
@@ -45765,6 +46536,14 @@
             "shared": true,
             "id": "b5d7-5b82-c510-3964",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a4b6-0c74-2755-1efd"
           }
         ],
         "profiles": [
@@ -51070,6 +51849,14 @@
             "shared": true,
             "id": "54c9-9ef3-d3d2-470c",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6941-799b-8a97-6250"
           }
         ],
         "modifierGroups": [
@@ -51748,6 +52535,14 @@
             "shared": true,
             "id": "b6a4-a0c6-3ee5-f90d",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4b4e-7bf9-c405-1e88"
           }
         ],
         "modifierGroups": [
@@ -54513,6 +55308,23 @@
             "type": "set-primary",
             "value": "e1ea-71b9-f0ef-d788",
             "field": "category"
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "41a0-1301-112a-e2f2",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -54981,7 +55793,37 @@
         "import": true,
         "name": "Herald of Slaanesh on Steed of Slaanesh [Legends]",
         "hidden": false,
-        "id": "b48f-f9b4-b47d-d181"
+        "id": "b48f-f9b4-b47d-d181",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "6c37-d539-bd2c-5006",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "46c8-ca2f-9529-3686",
+                    "shared": true,
+                    "childName": "Seekers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -56758,9 +57600,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following unit: ^^**Infantry Daemon**^^ units (excluding ^^**Possessed**^^ units) which share one of the following keywords with this model ^^**Khorne, Nurgle, Slaanesh, Tzeentch**^^",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units: ^^**Infantry Daemon**^^ units (excluding ^^**Possessed**^^ units) which share one of the following keywords with this model ^^**Khorne, Nurgle, Slaanesh, Tzeentch**^^"
               }
             ],
             "modifiers": [
@@ -56926,7 +57768,353 @@
         "import": true,
         "name": "Daemonic Herald [Crucible]",
         "hidden": false,
-        "id": "3a39-0b56-25e0-eff8"
+        "id": "3a39-0b56-25e0-eff8",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "243a-1fc6-e2a4-c495",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditionGroups": [
+                  {
+                    "type": "or",
+                    "conditionGroups": [
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b188-114f-6ba5-79a1",
+                            "shared": true,
+                            "childName": "Tzeentch"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b188-114f-6ba5-79a1",
+                            "shared": true,
+                            "childName": "Tzeentch",
+                            "queryFromSelf": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4bd-5ee0-f179-2fc5",
+                            "shared": true,
+                            "childName": "Khorne"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4bd-5ee0-f179-2fc5",
+                            "shared": true,
+                            "childName": "Khorne",
+                            "queryFromSelf": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ed0d-8e2a-225c-2340",
+                            "shared": true,
+                            "childName": "Nurgle"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ed0d-8e2a-225c-2340",
+                            "shared": true,
+                            "childName": "Nurgle",
+                            "queryFromSelf": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b2a9-ede5-7a83-4da8",
+                            "shared": true,
+                            "childName": "Slaanesh"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b2a9-ede5-7a83-4da8",
+                            "shared": true,
+                            "childName": "Slaanesh",
+                            "queryFromSelf": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "or",
+                    "conditionGroups": [
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "9c0e-7e25-4580-e439",
+                            "shared": true,
+                            "childName": "Daemon"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "cf47-a0d7-7207-29dc",
+                            "shared": true,
+                            "childName": "Infantry"
+                          },
+                          {
+                            "type": "notInstanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "3d1c-7f16-1489-fac3",
+                            "shared": true,
+                            "childName": "Possessed"
+                          },
+                          {
+                            "type": "notInstanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "9cfd-1c32-585f-7d5c",
+                            "shared": true,
+                            "childName": "Character"
+                          }
+                        ],
+                        "conditionGroups": [
+                          {
+                            "type": "and",
+                            "conditions": [
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "3a39-0b56-25e0-eff8",
+                                "childId": "5d0b-4ab7-a50f-9885",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "queryFromSelf": true
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "3a39-0b56-25e0-eff8",
+                                "childId": "a2a7-5990-5c1c-4f20",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "queryFromSelf": true
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "3a39-0b56-25e0-eff8",
+                                "childId": "7fdf-e77f-9407-5722",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "queryFromSelf": true
+                              },
+                              {
+                                "type": "lessThan",
+                                "value": 1,
+                                "field": "selections",
+                                "scope": "3a39-0b56-25e0-eff8",
+                                "childId": "1776-73f5-0a7f-f36c",
+                                "shared": true,
+                                "includeChildSelections": true,
+                                "queryFromSelf": true
+                              }
+                            ]
+                          }
+                        ],
+                        "comment": "Base Leader"
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "3a39-0b56-25e0-eff8",
+                            "childId": "5d0b-4ab7-a50f-9885",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Juggernaught of Khorne",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "eb84-815a-86e2-afd1",
+                            "shared": true,
+                            "childName": "Bloodcrushers"
+                          }
+                        ],
+                        "comment": "Juggernaught of Khorne"
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "3a39-0b56-25e0-eff8",
+                            "childId": "511b-3cd3-edf3-c622",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Giggling Balemite",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "bc6c-c76a-8bae-e5c7",
+                            "shared": true,
+                            "childName": "Nurglings"
+                          }
+                        ],
+                        "comment": "Giggling Balemite"
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "3a39-0b56-25e0-eff8",
+                            "childId": "2128-65e1-ff33-27c7",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Rotfly",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "c5b5-db18-df79-7927",
+                            "shared": true,
+                            "childName": "Plague Drones"
+                          }
+                        ],
+                        "comment": "Rotfly"
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "3a39-0b56-25e0-eff8",
+                            "childId": "7fdf-e77f-9407-5722",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Steed of Slaanesh",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "46c8-ca2f-9529-3686",
+                            "shared": true,
+                            "childName": "Seekers"
+                          }
+                        ],
+                        "comment": "Steed of Slaanesh"
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "3a39-0b56-25e0-eff8",
+                            "childId": "1776-73f5-0a7f-f36c",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Disc of Tzeentch",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2353-e1a0-43bc-35d0",
+                            "shared": true,
+                            "childName": "Screamers"
+                          }
+                        ],
+                        "comment": "Disc of Tzeentch"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -57233,6 +58421,138 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "e703-ecb6-5ce7-aec1",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "skipIfPresent": "Lance",
+                "join": ", ",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "736e-8d31-9f86-88b3",
+                        "childId": "a6c3-c518-f0bc-544a",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Jolly Gutpipes"
+                      }
+                    ]
+                  }
+                ],
+                "comment": "Jolly Gutpipes"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "skipIfPresent": "Sustained Hits",
+                "join": ", ",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "736e-8d31-9f86-88b3",
+                            "childId": "6181-0d6d-4a9a-cedd",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Keep Counting!"
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "736e-8d31-9f86-88b3",
+                            "childId": "09e8-93a9-d01a-9a40",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Sadistic Savagery"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "comment": "Keep Counting!"
+              },
+              {
+                "type": "append",
+                "value": "Assault",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Assault",
+                "join": ", ",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "736e-8d31-9f86-88b3",
+                            "childId": "49ad-8138-9951-17be",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Blazing Warpfire"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "comment": "Keep Counting!"
+              }
+            ],
+            "comment": "Ability modifiers"
           }
         ],
         "categoryLinks": [
@@ -57474,13 +58794,182 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Lance",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "skipIfPresent": "Lance",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "type": "model",
         "import": true,
         "name": "Daemonic Charioteer [Crucible]",
         "hidden": false,
-        "id": "8597-d6dd-511e-80ae"
+        "id": "8597-d6dd-511e-80ae",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "model-or-unit",
+            "name": "Leading",
+            "id": "9443-3d2c-9e80-ad18",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "14a0-40c9-2748-ae6e",
+                    "shared": true,
+                    "childName": "Mounted"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9c0e-7e25-4580-e439",
+                    "shared": true,
+                    "childName": "Daemon"
+                  },
+                  {
+                    "type": "notInstanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9cfd-1c32-585f-7d5c",
+                    "shared": true,
+                    "childName": "Character"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "or",
+                    "conditionGroups": [
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b188-114f-6ba5-79a1",
+                            "shared": true,
+                            "childName": "Tzeentch"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b188-114f-6ba5-79a1",
+                            "shared": true,
+                            "childName": "Tzeentch",
+                            "queryFromSelf": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4bd-5ee0-f179-2fc5",
+                            "shared": true,
+                            "childName": "Khorne"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4bd-5ee0-f179-2fc5",
+                            "shared": true,
+                            "childName": "Khorne",
+                            "queryFromSelf": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ed0d-8e2a-225c-2340",
+                            "shared": true,
+                            "childName": "Nurgle"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ed0d-8e2a-225c-2340",
+                            "shared": true,
+                            "childName": "Nurgle",
+                            "queryFromSelf": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b2a9-ede5-7a83-4da8",
+                            "shared": true,
+                            "childName": "Slaanesh"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b2a9-ede5-7a83-4da8",
+                            "shared": true,
+                            "childName": "Slaanesh",
+                            "queryFromSelf": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "model-or-unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -58059,33 +59548,6 @@
                 "conditionGroups": [
                   {
                     "type": "or",
-                    "conditionGroups": [
-                      {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "includeChildSelections": true
-                          }
-                        ]
-                      }
-                    ],
                     "conditions": [
                       {
                         "type": "notInstanceOf",
@@ -58095,6 +59557,17 @@
                         "childId": "9cfd-1c32-585f-7d5c",
                         "shared": true,
                         "childName": "Character"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "4bd-5ee0-f179-2fc5",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       }
                     ]
                   }
@@ -58325,7 +59798,7 @@
             "collective": false,
             "import": true,
             "type": "upgrade",
-            "sortIndex": 5
+            "sortIndex": 7
           },
           {
             "modifiers": [
@@ -58369,35 +59842,6 @@
                 "conditionGroups": [
                   {
                     "type": "or",
-                    "conditionGroups": [
-                      {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Tzeentch"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Tzeentch"
-                          }
-                        ]
-                      }
-                    ],
                     "conditions": [
                       {
                         "type": "notInstanceOf",
@@ -58410,6 +59854,18 @@
                         "includeChildSelections": false,
                         "includeChildForces": false,
                         "childName": "Character"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b188-114f-6ba5-79a1",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Tzeentch"
                       }
                     ]
                   }
@@ -58566,7 +60022,7 @@
             "collective": false,
             "import": true,
             "type": "upgrade",
-            "sortIndex": 8
+            "sortIndex": 10
           },
           {
             "modifiers": [
@@ -58610,35 +60066,6 @@
                 "conditionGroups": [
                   {
                     "type": "or",
-                    "conditionGroups": [
-                      {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          }
-                        ]
-                      }
-                    ],
                     "conditions": [
                       {
                         "type": "notInstanceOf",
@@ -58651,6 +60078,18 @@
                         "includeChildSelections": false,
                         "includeChildForces": false,
                         "childName": "Character"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "ed0d-8e2a-225c-2340",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Nurgle"
                       }
                     ]
                   }
@@ -58763,7 +60202,7 @@
             "collective": false,
             "import": true,
             "type": "upgrade",
-            "sortIndex": 7
+            "sortIndex": 9
           },
           {
             "modifiers": [
@@ -58771,33 +60210,6 @@
                 "conditionGroups": [
                   {
                     "type": "or",
-                    "conditionGroups": [
-                      {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "includeChildSelections": true
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          }
-                        ]
-                      }
-                    ],
                     "conditions": [
                       {
                         "type": "notInstanceOf",
@@ -58810,6 +60222,17 @@
                         "includeChildSelections": false,
                         "includeChildForces": false,
                         "childName": "Character"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b2a9-ede5-7a83-4da8",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       }
                     ]
                   }
@@ -58943,7 +60366,7 @@
             "collective": false,
             "import": true,
             "type": "upgrade",
-            "sortIndex": 6
+            "sortIndex": 8
           },
           {
             "costs": [
@@ -59064,60 +60487,30 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b2a9-ede5-7a83-4da8",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "includeChildSelections": true
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -59131,7 +60524,7 @@
             "name": "False Majesty (Aura)",
             "hidden": false,
             "id": "68bd-b1b0-cc80-eaa0",
-            "sortIndex": 11
+            "sortIndex": 13
           },
           {
             "costs": [
@@ -59252,60 +60645,30 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b2a9-ede5-7a83-4da8",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "includeChildSelections": true
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -59319,7 +60682,7 @@
             "name": "Dreaming Crown (Aura)",
             "hidden": false,
             "id": "c918-c2ed-eb33-e512",
-            "sortIndex": 10
+            "sortIndex": 12
           },
           {
             "costs": [
@@ -59456,63 +60819,31 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Tzeentch"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b188-114f-6ba5-79a1",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Tzeentch"
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Tzeentch"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Tzeentch"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -59526,7 +60857,7 @@
             "name": "Infernal Puppeteer",
             "hidden": false,
             "id": "806e-b30b-3bcd-71c3",
-            "sortIndex": 19
+            "sortIndex": 22
           },
           {
             "costs": [
@@ -59663,60 +60994,30 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b2a9-ede5-7a83-4da8",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "includeChildSelections": true
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -59730,7 +61031,7 @@
             "name": "Soul Glutton",
             "hidden": false,
             "id": "2ed9-45a3-0611-6a2d",
-            "sortIndex": 12
+            "sortIndex": 14
           },
           {
             "costs": [
@@ -59867,60 +61168,30 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b2a9-ede5-7a83-4da8",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "includeChildSelections": true
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b2a9-ede5-7a83-4da8",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -59934,7 +61205,7 @@
             "name": "Avatar of Perfection",
             "hidden": false,
             "id": "4f8a-c385-a04c-222d",
-            "sortIndex": 9
+            "sortIndex": 11
           },
           {
             "costs": [
@@ -60019,60 +61290,30 @@
               {
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "includeChildSelections": true
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "4bd-5ee0-f179-2fc5",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       },
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -60258,63 +61499,31 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Tzeentch"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b188-114f-6ba5-79a1",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Tzeentch"
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Tzeentch"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Tzeentch"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -60328,7 +61537,7 @@
             "name": "Inescapable Eye",
             "hidden": false,
             "id": "5c15-6ac1-0115-9df8",
-            "sortIndex": 18
+            "sortIndex": 21
           },
           {
             "costs": [
@@ -60449,63 +61658,31 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Tzeentch"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "b188-114f-6ba5-79a1",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Tzeentch"
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Tzeentch"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Tzeentch"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -60519,7 +61696,7 @@
             "name": "Improbable Shield (Aura)",
             "hidden": false,
             "id": "d6e9-169c-3b2a-ee09",
-            "sortIndex": 17
+            "sortIndex": 20
           },
           {
             "costs": [
@@ -60686,33 +61863,6 @@
                             "childName": "Character"
                           }
                         ]
-                      },
-                      {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Tzeentch"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "b188-114f-6ba5-79a1",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Tzeentch"
-                          }
-                        ]
                       }
                     ]
                   }
@@ -60802,7 +61952,7 @@
             "name": "Neverblade",
             "hidden": false,
             "id": "b4ce-a5bf-52e7-884c",
-            "sortIndex": 20
+            "sortIndex": 23
           },
           {
             "costs": [
@@ -60923,60 +62073,30 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "includeChildSelections": true
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "4bd-5ee0-f179-2fc5",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       },
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -61074,60 +62194,30 @@
               {
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "4bd-5ee0-f179-2fc5",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "includeChildSelections": true
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -61313,60 +62403,30 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "includeChildSelections": true
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "4bd-5ee0-f179-2fc5",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false
                       },
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "4bd-5ee0-f179-2fc5",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -61500,63 +62560,31 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "ed0d-8e2a-225c-2340",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Nurgle"
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -61570,7 +62598,7 @@
             "name": "Maggot Maws",
             "hidden": false,
             "id": "12f2-8867-2b0f-a619",
-            "sortIndex": 16
+            "sortIndex": 19
           },
           {
             "costs": [
@@ -61707,63 +62735,31 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "ed0d-8e2a-225c-2340",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Nurgle"
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -61777,7 +62773,7 @@
             "name": "Font of Spores (Aura)",
             "hidden": false,
             "id": "3014-b3f7-7236-9ef5",
-            "sortIndex": 15
+            "sortIndex": 18
           },
           {
             "costs": [
@@ -61898,63 +62894,31 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "ed0d-8e2a-225c-2340",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Nurgle"
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -61968,7 +62932,7 @@
             "name": "Cankerblight (Aura)",
             "hidden": false,
             "id": "0f1b-f380-fa24-beb0",
-            "sortIndex": 13
+            "sortIndex": 16
           },
           {
             "costs": [
@@ -62105,63 +63069,31 @@
                 "field": "hidden",
                 "conditionGroups": [
                   {
-                    "type": "and",
-                    "conditionGroups": [
+                    "type": "or",
+                    "conditions": [
                       {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "9cfd-1c32-585f-7d5c",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Character"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "ed0d-8e2a-225c-2340",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Nurgle"
                       },
                       {
-                        "type": "and",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "parent",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Nurgle"
-                          },
-                          {
-                            "type": "notInstanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "ancestor",
-                            "childId": "ed0d-8e2a-225c-2340",
-                            "shared": true,
-                            "percentValue": false,
-                            "includeChildSelections": false,
-                            "includeChildForces": false,
-                            "childName": "Nurgle"
-                          }
-                        ]
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "9cfd-1c32-585f-7d5c",
+                        "shared": true,
+                        "percentValue": false,
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "childName": "Character"
                       }
                     ]
                   }
@@ -62175,7 +63107,7 @@
             "name": "Droning Shroud (Aura)",
             "hidden": false,
             "id": "33a0-657f-619d-5961",
-            "sortIndex": 14
+            "sortIndex": 17
           },
           {
             "profiles": [
@@ -62321,7 +63253,7 @@
             "name": "Leaping Shadows",
             "hidden": false,
             "id": "15b1-1f0f-9bf6-9f0a",
-            "sortIndex": 22
+            "sortIndex": 25
           },
           {
             "comment": "Shadow Legion",
@@ -62451,7 +63383,7 @@
             "name": "Mantle of Gloom (Aura)",
             "hidden": false,
             "id": "0af0-fe8c-ad36-60c5",
-            "sortIndex": 24
+            "sortIndex": 27
           },
           {
             "comment": "Shadow Legion",
@@ -62581,7 +63513,7 @@
             "name": "Fade to Darkness",
             "hidden": false,
             "id": "0b93-011a-c681-722c",
-            "sortIndex": 21
+            "sortIndex": 24
           },
           {
             "profiles": [
@@ -62711,7 +63643,7 @@
             "name": "Malice Made Manifest",
             "hidden": false,
             "id": "8978-7278-1e4a-40a4",
-            "sortIndex": 23
+            "sortIndex": 26
           },
           {
             "type": "upgrade",
@@ -62890,7 +63822,9 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "Cavalcade of Chaos",
+            "sortIndex": 6
           },
           {
             "type": "upgrade",
@@ -63083,7 +64017,9 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "Lords of the Warp",
+            "sortIndex": 15
           },
           {
             "type": "upgrade",
@@ -63269,7 +64205,9 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "Cavalcade of Chaos",
+            "sortIndex": 5
           }
         ],
         "id": "621d-b661-7461-4620",
@@ -64160,7 +65098,8 @@
               {
                 "type": "add",
                 "value": "4bd-5ee0-f179-2fc5",
-                "field": "category"
+                "field": "category",
+                "scope": "root-entry"
               },
               {
                 "type": "increment",
@@ -64184,19 +65123,10 @@
                 "affects": "profiles.Unit"
               },
               {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "primary-catalogue",
-                    "childId": "d265-877b-e03d-30ca",
-                    "shared": true
-                  }
-                ],
                 "type": "add",
                 "value": "2914-64bb-affb-3709",
-                "field": "category"
+                "field": "category",
+                "scope": "parent"
               },
               {
                 "conditions": [
@@ -64382,12 +65312,14 @@
               {
                 "type": "add",
                 "value": "b2a9-ede5-7a83-4da8",
-                "field": "category"
+                "field": "category",
+                "scope": "root-entry"
               },
               {
                 "type": "add",
                 "value": "be29-ad24-823c-5911",
-                "field": "category"
+                "field": "category",
+                "scope": "root-entry"
               },
               {
                 "conditions": [
@@ -64541,12 +65473,14 @@
               {
                 "type": "add",
                 "value": "ed0d-8e2a-225c-2340",
-                "field": "category"
+                "field": "category",
+                "scope": "root-entry"
               },
               {
                 "type": "add",
                 "value": "2a46-adb6-60fd-63a0",
-                "field": "category"
+                "field": "category",
+                "scope": "root-entry"
               },
               {
                 "conditions": [
@@ -64702,12 +65636,14 @@
               {
                 "type": "add",
                 "value": "b188-114f-6ba5-79a1",
-                "field": "category"
+                "field": "category",
+                "scope": "root-entry"
               },
               {
                 "type": "add",
                 "value": "750a-594b-46e5-6f10",
-                "field": "category"
+                "field": "category",
+                "scope": "root-entry"
               },
               {
                 "conditions": [
