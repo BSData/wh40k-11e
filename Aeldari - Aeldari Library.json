@@ -1106,6 +1106,26 @@
         "name": "Exodite",
         "id": "2842-111f-c6e4-c5d4",
         "hidden": false
+      },
+      {
+        "name": "Clanblade",
+        "id": "8ac6-fc76-e200-5e27",
+        "hidden": false
+      },
+      {
+        "name": "Dragon Knights",
+        "id": "7e9f-a8a5-aff4-8308",
+        "hidden": false
+      },
+      {
+        "name": "Leystalker",
+        "id": "fa37-45b2-1e66-4218",
+        "hidden": false
+      },
+      {
+        "name": "Stonesinger",
+        "id": "8e48-52a2-7a37-a3fc",
+        "hidden": false
       }
     ],
     "sharedSelectionEntries": [
@@ -141899,6 +141919,13 @@
             "id": "3ce3-b98a-9e1b-5242",
             "targetId": "355c-0ee6-3cde-6c71",
             "primary": false
+          },
+          {
+            "name": "Dragon Knights",
+            "hidden": false,
+            "id": "8dad-ec17-11a6-34ec",
+            "targetId": "7e9f-a8a5-aff4-8308",
+            "primary": false
           }
         ],
         "selectionEntryGroups": [
@@ -142373,6 +142400,39 @@
             "shared": true,
             "id": "a3ae-f66f-5368-ccff",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "ffcb-302b-44d8-7284",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "71c3-216d-0a63-963b",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c926-b24f-5ec1-f8e5",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -142937,6 +142997,13 @@
             "hidden": false,
             "id": "5b14-8fa0-7edc-a524",
             "targetId": "355c-0ee6-3cde-6c71",
+            "primary": false
+          },
+          {
+            "name": "Leystalker",
+            "hidden": false,
+            "id": "3339-73db-3081-f94c",
+            "targetId": "fa37-45b2-1e66-4218",
             "primary": false
           }
         ],
@@ -143871,6 +143938,13 @@
             "id": "f3dd-78d4-95f1-b00a",
             "targetId": "7dcd-7f61-69a7-0294",
             "primary": false
+          },
+          {
+            "name": "Stonesinger",
+            "hidden": false,
+            "id": "0474-a615-8beb-8ada",
+            "targetId": "8e48-52a2-7a37-a3fc",
+            "primary": false
           }
         ],
         "selectionEntryGroups": [
@@ -144758,7 +144832,38 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "9b8d-c824-42a2-c77a",
+            "label": "Supported by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7e9f-a8a5-aff4-8308",
+                    "shared": true,
+                    "childName": "Dragon Knights"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "profiles": [
@@ -144825,7 +144930,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "This unit’s melee attacks have\n**[SUSTAINED HITS 1]**."
+                "$text": "This unit’s melee attacks have **[SUSTAINED HITS 1]**."
               }
             ],
             "id": "02ad-2024-117e-8235",
@@ -144896,6 +145001,13 @@
             "hidden": false,
             "id": "64a6-8a86-22fc-a48a",
             "targetId": "1556-9b56-fba6-4370",
+            "primary": false
+          },
+          {
+            "name": "Clanblade",
+            "hidden": false,
+            "id": "9639-7e21-b017-eed2",
+            "targetId": "8ac6-fc76-e200-5e27",
             "primary": false
           }
         ],
@@ -145578,6 +145690,37 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Blade of the Clans",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Blade of the Clans attached unit modifiers"
           }
         ],
         "id": "cd29-5c1d-1a53-0537",
@@ -145586,7 +145729,38 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "56f0-ef8d-4ad2-2465",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7e9f-a8a5-aff4-8308",
+                    "shared": true,
+                    "childName": "Dragon Knights",
+                    "queryFromSelf": false
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       }
     ],
     "sharedSelectionEntryGroups": [
