@@ -3692,19 +3692,6 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
-              },
-              {
-                "type": "add",
-                "value": "b43e-b010-7d4a-3302",
-                "field": "category",
-                "scope": "parent"
-              },
-              {
-                "type": "increment",
-                "value": 3,
-                "field": "e703-ecb6-5ce7-aec1",
-                "scope": "parent",
-                "affects": "self.entries.profiles.Unit"
               }
             ],
             "profiles": [
@@ -3713,7 +3700,7 @@
                   {
                     "name": "Description",
                     "typeId": "9b8f-694b-e5e-b573",
-                    "$text": " The bearer has the DESTROYER CULT keyword. Add 3\" to the Move characteristic of the bearer."
+                    "$text": "The bearer has the **DESTROYER CULT** keyword. Add 3\" to the Move characteristic of the bearer."
                   }
                 ],
                 "name": "Murdermind",
@@ -3740,7 +3727,35 @@
             "name": "Murdermind",
             "hidden": false,
             "id": "ccef-1913-7d41-e982",
-            "sortIndex": 20
+            "sortIndex": 20,
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "type": "add",
+                    "value": "b43e-b010-7d4a-3302",
+                    "field": "category",
+                    "scope": "model"
+                  },
+                  {
+                    "type": "append",
+                    "value": "Murdermind",
+                    "field": "annotation",
+                    "scope": "model",
+                    "affects": "self.entries.profiles.Unit",
+                    "join": ", "
+                  },
+                  {
+                    "type": "increment",
+                    "value": 3,
+                    "field": "e703-ecb6-5ce7-aec1",
+                    "scope": "model",
+                    "affects": "self.entries.profiles.Unit"
+                  }
+                ]
+              }
+            ]
           },
           {
             "costs": [
@@ -16601,7 +16616,7 @@
               }
             ],
             "join": ", "
-		  },
+          },
           {
             "type": "increment",
             "value": 10,
@@ -21069,6 +21084,67 @@
                     "shared": true,
                     "childName": "Wraiths"
                   }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ccef-1913-7d41-e982",
+                        "shared": true,
+                        "childName": "Murdermind",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "97f2-7658-2cd-8f4b",
+                            "shared": true,
+                            "childName": "Skorpekh Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "55de-834b-6ae-ed50",
+                            "shared": true,
+                            "childName": "Lokhust Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b504-b280-b7f2-37e",
+                            "shared": true,
+                            "childName": "Ophydian Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "587d-d85b-8af-f640",
+                            "shared": true,
+                            "childName": "Lokhust Heavy Destroyers"
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 ]
               }
             ],
@@ -21696,6 +21772,67 @@
                     "childId": "2fd7-338d-d680-5237",
                     "shared": true,
                     "childName": "Necron Warriors"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ccef-1913-7d41-e982",
+                        "shared": true,
+                        "childName": "Murdermind",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "97f2-7658-2cd-8f4b",
+                            "shared": true,
+                            "childName": "Skorpekh Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "55de-834b-6ae-ed50",
+                            "shared": true,
+                            "childName": "Lokhust Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b504-b280-b7f2-37e",
+                            "shared": true,
+                            "childName": "Ophydian Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "587d-d85b-8af-f640",
+                            "shared": true,
+                            "childName": "Lokhust Heavy Destroyers"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -22463,6 +22600,67 @@
                     "shared": true,
                     "childName": "Necron Warriors"
                   }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ccef-1913-7d41-e982",
+                        "shared": true,
+                        "childName": "Murdermind",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "97f2-7658-2cd-8f4b",
+                            "shared": true,
+                            "childName": "Skorpekh Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "55de-834b-6ae-ed50",
+                            "shared": true,
+                            "childName": "Lokhust Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b504-b280-b7f2-37e",
+                            "shared": true,
+                            "childName": "Ophydian Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "587d-d85b-8af-f640",
+                            "shared": true,
+                            "childName": "Lokhust Heavy Destroyers"
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 ]
               }
             ],
@@ -23110,6 +23308,67 @@
                     "childId": "2fd7-338d-d680-5237",
                     "shared": true,
                     "childName": "Necron Warriors"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ccef-1913-7d41-e982",
+                        "shared": true,
+                        "childName": "Murdermind",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "97f2-7658-2cd-8f4b",
+                            "shared": true,
+                            "childName": "Skorpekh Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "55de-834b-6ae-ed50",
+                            "shared": true,
+                            "childName": "Lokhust Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b504-b280-b7f2-37e",
+                            "shared": true,
+                            "childName": "Ophydian Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "587d-d85b-8af-f640",
+                            "shared": true,
+                            "childName": "Lokhust Heavy Destroyers"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -29562,6 +29821,39 @@
             "shared": true,
             "id": "714f-ac2c-e359-a228",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "e20d-6b59-ba5c-c551",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "be32-119e-ad32-0dad",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1ad4-ef1a-67bd-650d",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifierGroups": [
@@ -34965,6 +35257,39 @@
             "shared": true,
             "id": "b026-3bb7-43e9-7e71",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "d897-615d-6e0d-7400",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c602-1de3-0d2b-1ba8",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3f27-b365-d341-1a42",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifierGroups": [
@@ -40176,6 +40501,16 @@
             "id": "a855-7c98-ba6b-50de",
             "childId": "1556-9b56-fba6-4370",
             "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1a6c-2ee3-4162-0f94",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifierGroups": [
@@ -40984,6 +41319,16 @@
             "id": "25e4-1dd1-8170-b6c1",
             "childId": "1556-9b56-fba6-4370",
             "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "831a-e236-06e7-e2a3",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifierGroups": [
@@ -56240,6 +56585,67 @@
                     "childId": "0878-d523-440d-43e3",
                     "shared": true,
                     "childName": "Macrocytes"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ccef-1913-7d41-e982",
+                        "shared": true,
+                        "childName": "Murdermind",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "97f2-7658-2cd-8f4b",
+                            "shared": true,
+                            "childName": "Skorpekh Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "55de-834b-6ae-ed50",
+                            "shared": true,
+                            "childName": "Lokhust Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b504-b280-b7f2-37e",
+                            "shared": true,
+                            "childName": "Ophydian Destroyers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "587d-d85b-8af-f640",
+                            "shared": true,
+                            "childName": "Lokhust Heavy Destroyers"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
