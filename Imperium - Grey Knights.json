@@ -5389,21 +5389,36 @@
                         "id": "1060-a780-b862-b87b"
                       }
                     ],
-                    "modifiers": [
-                      {
-                        "type": "increment",
-                        "value": 1,
-                        "field": "bef7-942a-1a23-59f8",
-                        "affects": "self.entries.profiles.Unit",
-                        "scope": "root-entry"
-                      }
-                    ],
                     "type": "upgrade",
                     "import": true,
                     "name": "Ancient's Banner",
                     "hidden": false,
                     "id": "55ab-530-9b32-a5d0",
-                    "collective": true
+                    "collective": true,
+                    "modifierGroups": [
+                      {
+                        "type": "and",
+                        "modifiers": [
+                          {
+                            "type": "append",
+                            "value": "Ancient's Banner",
+                            "field": "annotation",
+                            "affects": "self.entries.group.recursive.profiles.Unit",
+                            "join": ", ",
+                            "scope": "root-entry"
+                          },
+                          {
+                            "type": "increment",
+                            "value": 1,
+                            "field": "bef7-942a-1a23-59f8",
+                            "affects": "self.entries.group.recursive.profiles.Unit",
+                            "join": ", ",
+                            "scope": "root-entry"
+                          }
+                        ],
+                        "comment": "Ancient Banner modifiers"
+                      }
+                    ]
                   }
                 ],
                 "selectionEntryGroups": [
@@ -6024,7 +6039,23 @@
                 "import": true,
                 "name": "Justicar",
                 "hidden": false,
-                "id": "9151-d4f-9296-22cd"
+                "id": "9151-d4f-9296-22cd",
+                "infoLinks": [
+                  {
+                    "name": "Terminator",
+                    "id": "eb62-5762-228e-3d7b",
+                    "hidden": false,
+                    "targetId": "28af-6e37-2f1f-93d2",
+                    "type": "profile",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": "Justicar",
+                        "field": "name"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -6050,23 +6081,7 @@
             "name": "Justicar",
             "id": "fc87-528d-3a1c-8438",
             "hidden": false,
-            "sortIndex": 3,
-            "infoLinks": [
-              {
-                "name": "Terminator",
-                "id": "eb62-5762-228e-3d7b",
-                "hidden": false,
-                "targetId": "28af-6e37-2f1f-93d2",
-                "type": "profile",
-                "modifiers": [
-                  {
-                    "type": "set",
-                    "value": "Justicar",
-                    "field": "name"
-                  }
-                ]
-              }
-            ]
+            "sortIndex": 3
           }
         ],
         "constraints": [
@@ -19173,13 +19188,28 @@
                     "hidden": false,
                     "id": "9812-9e40-480b-5b78",
                     "collective": true,
-                    "modifiers": [
+                    "modifierGroups": [
                       {
-                        "type": "increment",
-                        "value": 1,
-                        "field": "bef7-942a-1a23-59f8",
-                        "affects": "self.entries.profiles.Unit",
-                        "scope": "root-entry"
+                        "type": "and",
+                        "modifiers": [
+                          {
+                            "type": "append",
+                            "value": "Ancient's Banner",
+                            "field": "annotation",
+                            "affects": "self.entries.group.recursive.profiles.Unit",
+                            "join": ", ",
+                            "scope": "root-entry"
+                          },
+                          {
+                            "type": "increment",
+                            "value": 1,
+                            "field": "bef7-942a-1a23-59f8",
+                            "affects": "self.entries.group.recursive.profiles.Unit",
+                            "join": ", ",
+                            "scope": "root-entry"
+                          }
+                        ],
+                        "comment": "Ancient Banner modifiers"
                       }
                     ]
                   }
