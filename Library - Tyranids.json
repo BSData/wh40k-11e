@@ -3361,7 +3361,18 @@
                 "value": "Alpha Invader",
                 "field": "annotation",
                 "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
-                "join": ", "
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "skipIfPresent": "Alpha Invader"
               },
               {
                 "type": "append",
@@ -3369,20 +3380,83 @@
                 "field": "7f1b-8591-2fcf-d01c",
                 "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
                 "join": ", ",
-                "skipIfPresent": "Sustained Hits 1"
+                "skipIfPresent": "Sustained Hits 1",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
               },
               {
                 "type": "append",
                 "value": "Alpha Invader",
                 "field": "annotation",
                 "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
-                "join": ", "
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "skipIfPresent": "Alpha Invader"
               },
               {
                 "type": "append",
                 "value": "Sustained Hits 1",
                 "field": "893f-9000-ccf7-648e",
                 "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Alpha Invader",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Alpha Invader"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              },
+              {
+                "type": "append",
+                "value": "Alpha Invader",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Alpha Invader"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
                 "join": ", ",
                 "skipIfPresent": "Sustained Hits 1"
               }

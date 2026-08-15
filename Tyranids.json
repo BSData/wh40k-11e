@@ -26849,39 +26849,39 @@
                           {
                             "characteristics": [
                               {
-                                "$text": "Melee",
                                 "name": "Range",
-                                "typeId": "914c-b413-91e3-a132"
+                                "typeId": "914c-b413-91e3-a132",
+                                "$text": "Melee"
                               },
                               {
-                                "$text": "4",
                                 "name": "A",
-                                "typeId": "2337-daa1-6682-b110"
+                                "typeId": "2337-daa1-6682-b110",
+                                "$text": "4"
                               },
                               {
-                                "$text": "2+",
                                 "name": "WS",
-                                "typeId": "95d1-95f-45b4-11d6"
+                                "typeId": "95d1-95f-45b4-11d6",
+                                "$text": "2+"
                               },
                               {
-                                "$text": "4",
                                 "name": "S",
-                                "typeId": "ab33-d393-96ce-ccba"
+                                "typeId": "ab33-d393-96ce-ccba",
+                                "$text": "4"
                               },
                               {
-                                "$text": "-2",
                                 "name": "AP",
-                                "typeId": "41a0-1301-112a-e2f2"
+                                "typeId": "41a0-1301-112a-e2f2",
+                                "$text": "-2"
                               },
                               {
-                                "$text": "1",
                                 "name": "D",
-                                "typeId": "3254-9fe6-d824-513e"
+                                "typeId": "3254-9fe6-d824-513e",
+                                "$text": "1"
                               },
                               {
-                                "$text": "-",
                                 "name": "Keywords",
-                                "typeId": "893f-9000-ccf7-648e"
+                                "typeId": "893f-9000-ccf7-648e",
+                                "$text": ""
                               }
                             ],
                             "name": "Genestealers claws and talons",
@@ -33236,28 +33236,104 @@
                 "value": "Alpha Warrior",
                 "field": "annotation",
                 "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
-                "join": ", "
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "skipIfPresent": "Alpha Warrior"
               },
               {
                 "type": "append",
                 "value": "Sustained Hits 1",
                 "field": "7f1b-8591-2fcf-d01c",
                 "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
-                "join": ", "
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "skipIfPresent": "Sustained Hits 1"
               },
               {
                 "type": "append",
                 "value": "Alpha Warrior",
                 "field": "annotation",
                 "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
-                "join": ", "
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "skipIfPresent": "Alpha Warrior"
               },
               {
                 "type": "append",
                 "value": "Sustained Hits 1",
                 "field": "893f-9000-ccf7-648e",
                 "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
-                "join": ", "
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "skipIfPresent": "Sustained Hits 1"
+              },
+              {
+                "type": "append",
+                "value": "Alpha Warrior",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Alpha Warrior"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              },
+              {
+                "type": "append",
+                "value": "Alpha Warrior",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Alpha Warrior"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
               }
             ],
             "comment": "Alpha Warrior attached unit modifiers"
