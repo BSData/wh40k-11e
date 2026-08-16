@@ -1349,6 +1349,13 @@
             "id": "3184-d4ba-b3c7-1bd8",
             "primary": false,
             "name": "Regiment"
+          },
+          {
+            "name": "Attilan Rough Riders",
+            "hidden": false,
+            "id": "22be-11d0-9dca-b3c6",
+            "targetId": "1eba-3dba-477b-9283",
+            "primary": false
           }
         ],
         "constraints": [
@@ -7634,6 +7641,74 @@
               }
             ],
             "comment": "Senior Officer attached unit modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra"
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "7f9a-6c3e-8a89-14dd",
+                "shared": true,
+                "childName": "Star of Terra",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Star of Terra Crusade Relic modifiers"
           }
         ],
         "type": "model",
@@ -8303,6 +8378,142 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Regimental Standard",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Standard",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Regimental Standard",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Standard"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "92e4-774c-a0a-a822",
+                "shared": true,
+                "childName": "Regimental standard",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Regimental Standard modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra"
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "7f9a-6c3e-8a89-14dd",
+                "shared": true,
+                "childName": "Star of Terra",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Star of Terra Crusade Relic modifiers"
           }
         ],
         "selectionEntryGroups": [
@@ -13794,6 +14005,74 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra"
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "7f9a-6c3e-8a89-14dd",
+                "shared": true,
+                "childName": "Star of Terra",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Star of Terra Crusade Relic modifiers"
           }
         ],
         "type": "model",
@@ -34082,6 +34361,214 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Regimental Standard",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Standard",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Regimental Standard",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Standard"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "92e4-774c-a0a-a822",
+                "shared": true,
+                "childName": "Regimental standard",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Regimental Standard modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Tempestor Prime",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Tempestor Prime",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              },
+              {
+                "type": "append",
+                "value": "Tempestor Prime",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Tempestor Prime"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "scope": "root-entry",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "1999-fec0-869b-8e2",
+                "shared": true,
+                "childName": "Tempestor Prime",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Tempestor Prime modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra"
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "7f9a-6c3e-8a89-14dd",
+                "shared": true,
+                "childName": "Star of Terra",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Star of Terra Crusade Relic modifiers"
           }
         ],
         "type": "unit",
@@ -37463,9 +37950,9 @@
             "id": "90b9-635e-d3e3-7701",
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
               }
             ]
           }
@@ -39349,9 +39836,9 @@
           {
             "characteristics": [
               {
-                "$text": "If a friendly **^^Astra Militarum Vehicle^^** model is destroyed within 12\" of this model, until the end of the battle, this model’s Enginseer axe has an Attacks characteristic of 6",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "If a friendly **^^Astra Militarum Vehicle^^** model is destroyed within 12\" of this model, until the end of the battle, this model’s Enginseer axe has an Attacks characteristic of 6."
               }
             ],
             "name": "Vengeance for the Omnissiah",
@@ -39377,9 +39864,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is within 3\" of one or more friendly **^^Astra Militarum Vehicle^^** units, this model has the Lone Operative ability",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is within 3\" of one or more friendly **^^Astra Militarum Vehicle^^** units, this model has the Lone Operative ability."
               }
             ],
             "name": "Enginseer",
@@ -55963,28 +56450,6 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "ad3a-c003-5055-d0e7"
-          }
-        ],
-        "modifierGroups": [
-          {
-            "modifiers": [
-              {
-                "type": "append",
-                "value": "Regimental Standard",
-                "field": "annotation",
-                "affects": "self.entries.recursive.profiles.Unit",
-                "scope": "root-entry",
-                "join": ", "
-              },
-              {
-                "type": "increment",
-                "value": 1,
-                "field": "bef7-942a-1a23-59f8",
-                "affects": "self.entries.recursive.profiles.Unit",
-                "scope": "root-entry"
-              }
-            ],
-            "type": "and"
           }
         ],
         "type": "upgrade",
@@ -87267,9 +87732,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this unit contains a Quartermaster Revenant model, improve the Weapon Skill characteristic of this unit's Medical scalpels by 1",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this unit contains a Quartermaster Revenant model, improve the Weapon Skill characteristic of this unit's Medical scalpels by 1."
               }
             ],
             "name": "Mindlock",
@@ -108360,6 +108825,142 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Regimental Standard",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Standard",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Regimental Standard",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Standard"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "92e4-774c-a0a-a822",
+                "shared": true,
+                "childName": "Regimental standard",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Regimental Standard modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra"
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "7f9a-6c3e-8a89-14dd",
+                "shared": true,
+                "childName": "Star of Terra",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Star of Terra Crusade Relic modifiers"
           }
         ],
         "selectionEntryGroups": [
@@ -112550,6 +113151,146 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Regimental Standard",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Standard",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Regimental Standard",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Standard"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "92e4-774c-a0a-a822",
+                "shared": true,
+                "childName": "Regimental standard",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Regimental Standard modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Gung-ho Command",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Gung-ho Command",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Assault",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "join": ", ",
+                "skipIfPresent": "Assault"
+              },
+              {
+                "type": "append",
+                "value": "Gung-ho Command",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Gung-ho Command"
+              },
+              {
+                "type": "append",
+                "value": "Assault",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "scope": "root-entry",
+                "join": ", ",
+                "skipIfPresent": "Assault"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "2d9e-f95e-8a1d-81ac",
+                "shared": true,
+                "childName": "Catachan Commander",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Gung-ho Command modifiers"
           }
         ],
         "type": "unit",
@@ -121816,6 +122557,74 @@
               }
             ],
             "comment": "Lesk’s Heroes attached unit modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Regimental Banner",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Banner",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Regimental Banner",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Regimental Banner"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "7d19-b4f6-f220-83ca",
+                "shared": true,
+                "childName": "Regimental banner",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Regimental Banner modifiers"
           }
         ],
         "type": "unit",
@@ -123037,6 +123846,218 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Martial Zealot",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Martial Zealot",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              },
+              {
+                "type": "append",
+                "value": "Martial Zealot",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Martial Zealot"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "scope": "root-entry",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "38a8-a43f-5641-fded",
+                "shared": true,
+                "childName": "Martial Zealot",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Martial Zealot ability modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Fire Coordinator",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Fire Coordinator",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              },
+              {
+                "type": "append",
+                "value": "Fire Coordinator",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Fire Coordinator"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "scope": "root-entry",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "b566-91ae-0d78-df34",
+                "shared": true,
+                "childName": "Fire Coordinator",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Fire Coordinator ability modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Star of Terra",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Star of Terra"
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "scope": "root-entry"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "7f9a-6c3e-8a89-14dd",
+                "shared": true,
+                "childName": "Star of Terra",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Star of Terra Crusade Relic modifiers"
           }
         ],
         "modifiers": [
@@ -124183,6 +125204,150 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Martial Zealot",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Martial Zealot",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              },
+              {
+                "type": "append",
+                "value": "Martial Zealot",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Martial Zealot"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "scope": "root-entry",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "38a8-a43f-5641-fded",
+                "shared": true,
+                "childName": "Martial Zealot",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Martial Zealot ability modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Fire Coordinator",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Fire Coordinator",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                "scope": "root-entry",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              },
+              {
+                "type": "append",
+                "value": "Fire Coordinator",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Fire Coordinator"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "scope": "root-entry",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "b566-91ae-0d78-df34",
+                "shared": true,
+                "childName": "Fire Coordinator",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Fire Coordinator ability modifiers"
           }
         ],
         "modifiers": [
@@ -127198,7 +128363,91 @@
         "import": true,
         "name": "Commissar Graves on Foot",
         "hidden": false,
-        "id": "d624-2be1-87a3-41ca"
+        "id": "d624-2be1-87a3-41ca",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "dd5b-8caa-633a-be0e",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "e14-aebc-74ba-3c82",
+                    "shared": true,
+                    "childName": "Death Korps Grenadier Squad"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "0241-8284-3771-b9fa",
+                    "shared": true,
+                    "childName": "Krieg Combat Engineers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
