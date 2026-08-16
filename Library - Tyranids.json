@@ -2467,6 +2467,52 @@
             "type": "rule",
             "id": "fc71-c6e4-15d4-88da",
             "targetId": "7cb5-dd6b-dd87-ad3b"
+          },
+          {
+            "name": "Stealth",
+            "id": "c99c-e74c-2bab-10bf",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "bec5-4288-34a6-ccfa",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditionGroups": [
+                  {
+                    "type": "or",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "2b0d-6060-7697-47a0",
+                        "shared": true,
+                        "childName": "Chameleonic",
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true,
+                        "childName": "any",
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": false,
+                        "includeChildSelections": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "comment": "Chameleonic attached unit ability"
           }
         ],
         "entryLinks": [
@@ -6888,6 +6934,52 @@
             "type": "rule",
             "id": "c5a3-8e54-e6ed-cf26",
             "targetId": "86aa-437f-260b-5cad"
+          },
+          {
+            "name": "Stealth",
+            "id": "b464-e8de-a0ca-f72e",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "bec5-4288-34a6-ccfa",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditionGroups": [
+                  {
+                    "type": "or",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "2b0d-6060-7697-47a0",
+                        "shared": true,
+                        "childName": "Chameleonic",
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true,
+                        "childName": "any",
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": false,
+                        "includeChildSelections": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "comment": "Chameleonic attached unit ability"
           }
         ],
         "categoryLinks": [
@@ -11507,6 +11599,13 @@
             "id": "849c-1254-664a-d187",
             "targetId": "9bdf-31c1-4763-4074",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "539e-da99-d114-e9d3",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -12501,6 +12600,13 @@
             "hidden": false,
             "id": "8874-0236-5457-76aa",
             "targetId": "9d02-d413-f447-d005",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "f5cd-46a9-1b3a-4822",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -17643,7 +17749,29 @@
                 "hidden": false,
                 "collective": false,
                 "import": true,
-                "type": "upgrade"
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Relentless Hunger",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "skipIfPresent": "Relentless Hunger",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 2,
+                        "field": "e703-ecb6-5ce7-aec1",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "modifiers": [
