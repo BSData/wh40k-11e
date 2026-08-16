@@ -13741,6 +13741,63 @@
             "type": "rule",
             "id": "aa8e-c767-232e-b639",
             "targetId": "a511-d9ca-17d0-42c5"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "686c-458a-3199-204e",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "4+",
+                "field": "name"
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "8386-4191-ac3a-aa28",
+                    "shared": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "childName": "Nemesor Zahndrekh [Legends]"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fights First",
+            "id": "a3a1-b3e0-e6a4-ba14",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "24-c886-e8ba-5a89",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true,
+                    "childName": "any"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -14441,6 +14498,64 @@
             "type": "rule",
             "id": "acb2-522-438b-b18c",
             "targetId": "a511-d9ca-17d0-42c5"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "23bf-8184-6e67-4c2b",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "4+",
+                "field": "name"
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "b5c3-317e-df69-53bb",
+                    "shared": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "Vargard Obyron [Legends]"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fights First",
+            "id": "a767-6b68-aa48-d44f",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "24-c886-e8ba-5a89",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "b5c3-317e-df69-53bb",
+                    "shared": true,
+                    "childName": "Vargard Obyron [Legends]",
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "profiles": [
@@ -23512,8 +23627,34 @@
                     "value": 1,
                     "field": "associations",
                     "scope": "self",
-                    "childId": "any",
-                    "shared": true
+                    "childId": "9947-f17d-e63c-45b9",
+                    "shared": true,
+                    "childName": "Technomancer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fights First",
+            "id": "fb20-2807-a2ba-ac7b",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "24-c886-e8ba-5a89",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "b5c3-317e-df69-53bb",
+                    "shared": true,
+                    "childName": "Vargard Obyron [Legends]"
                   }
                 ]
               }
@@ -24134,6 +24275,36 @@
               }
             ],
             "scope": "unit"
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "8b75-e1f9-0f27-83da",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "b5c3-317e-df69-53bb",
+                    "shared": true,
+                    "childName": "Vargard Obyron [Legends]"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "8386-4191-ac3a-aa28",
+                    "shared": true,
+                    "childName": "Nemesor Zahndrekh [Legends]"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -24574,8 +24745,34 @@
                     "value": 1,
                     "field": "associations",
                     "scope": "self",
-                    "childId": "any",
-                    "shared": true
+                    "childId": "9947-f17d-e63c-45b9",
+                    "shared": true,
+                    "childName": "Technomancer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fights First",
+            "id": "6d01-d3c6-c24b-d056",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "24-c886-e8ba-5a89",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "b5c3-317e-df69-53bb",
+                    "shared": true,
+                    "childName": "Vargard Obyron [Legends]"
                   }
                 ]
               }
@@ -24629,6 +24826,36 @@
             "type": "add",
             "value": "All models must be equipped identically",
             "field": "error"
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "2650-5114-80b4-381b",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "b5c3-317e-df69-53bb",
+                    "shared": true,
+                    "childName": "Vargard Obyron [Legends]"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "8386-4191-ac3a-aa28",
+                    "shared": true,
+                    "childName": "Nemesor Zahndrekh [Legends]"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -26858,17 +27085,12 @@
             "targetId": "a511-d9ca-17d0-42c5"
           },
           {
-            "name": "Feel No Pain",
-            "id": "3005-2a55-57fe-8db4",
+            "name": "Fights First",
+            "id": "a3bd-5fa4-3172-fd1b",
             "hidden": false,
             "type": "rule",
-            "targetId": "9bf4-280f-bbe2-6fbb",
+            "targetId": "24-c886-e8ba-5a89",
             "modifiers": [
-              {
-                "type": "append",
-                "value": "5+",
-                "field": "name"
-              },
               {
                 "type": "set",
                 "value": true,
@@ -26879,8 +27101,9 @@
                     "value": 1,
                     "field": "associations",
                     "scope": "self",
-                    "childId": "any",
-                    "shared": true
+                    "childId": "b5c3-317e-df69-53bb",
+                    "shared": true,
+                    "childName": "Vargard Obyron [Legends]"
                   }
                 ]
               }
@@ -26904,6 +27127,36 @@
             "type": "set",
             "value": 160,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "6cfc-b493-96ba-6cf6",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "b5c3-317e-df69-53bb",
+                    "shared": true,
+                    "childName": "Vargard Obyron [Legends]"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "8386-4191-ac3a-aa28",
+                    "shared": true,
+                    "childName": "Nemesor Zahndrekh [Legends]"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -29477,6 +29730,36 @@
             "type": "rule",
             "id": "217-34d4-3fe8-c121",
             "targetId": "a511-d9ca-17d0-42c5"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "2937-ec23-faf5-67dd",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "9947-f17d-e63c-45b9",
+                    "shared": true,
+                    "childName": "Technomancer"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "profiles": [
@@ -34931,6 +35214,36 @@
             "type": "rule",
             "id": "79b6-4004-1655-d9a3",
             "targetId": "7cb5-dd6b-dd87-ad3b"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "3f11-959f-3536-678a",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "9947-f17d-e63c-45b9",
+                    "shared": true,
+                    "childName": "Technomancer"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "modifiers": [
@@ -37563,6 +37876,36 @@
             "type": "rule",
             "id": "e1f5-7704-408c-b9f4",
             "targetId": "a511-d9ca-17d0-42c5"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "47af-d1f1-8a42-dbdb",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "9947-f17d-e63c-45b9",
+                    "shared": true,
+                    "childName": "Technomancer"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "profiles": [
@@ -40217,6 +40560,36 @@
             "type": "rule",
             "id": "7958-fc7c-21b6-bdb4",
             "targetId": "a511-d9ca-17d0-42c5"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "68c4-ebef-71fe-52ae",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "9947-f17d-e63c-45b9",
+                    "shared": true,
+                    "childName": "Technomancer"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -40757,6 +41130,36 @@
             "type": "rule",
             "id": "46e5-12b5-b5f2-2273",
             "targetId": "a511-d9ca-17d0-42c5"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "a3d7-6191-2a3b-b9e5",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "5+",
+                "field": "name"
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "9947-f17d-e63c-45b9",
+                    "shared": true,
+                    "childName": "Technomancer"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "profiles": [
@@ -62794,7 +63197,7 @@
     "name": "Xenos - Necrons",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 9,
+    "revision": 10,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }
