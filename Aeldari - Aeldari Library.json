@@ -7674,6 +7674,38 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "d838-3858-0473-03a8",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "f6ad-58ab-74f5-80ea",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "The Visarch"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "3f2a-908a-c066-e36b",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "Yvraine"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "profiles": [
@@ -9638,6 +9670,38 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "aadc-628f-ed91-6f89",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "f6ad-58ab-74f5-80ea",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "The Visarch"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "3f2a-908a-c066-e36b",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "Yvraine"
+                  }
+                ]
               }
             ]
           }
@@ -25133,29 +25197,59 @@
             "field": "dfc1-3bf1-489f-4ffb",
             "conditionGroups": [
               {
-                "type": "and",
-                "conditions": [
+                "type": "or",
+                "conditionGroups": [
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "associations",
-                    "scope": "self",
-                    "childId": "7989-9352-554c-b202",
-                    "shared": true,
-                    "childName": "Eldrad Ultran",
-                    "includeChildForces": false,
-                    "traverseAssociationGroup": true
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "7989-9352-554c-b202",
+                        "shared": true,
+                        "childName": "Eldrad Ultran",
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "7d34-c046-e08f-13e1",
+                        "shared": true,
+                        "childName": "Warlock Conclave",
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      }
+                    ]
                   },
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "associations",
-                    "scope": "self",
-                    "childId": "7d34-c046-e08f-13e1",
-                    "shared": true,
-                    "childName": "Warlock Conclave",
-                    "includeChildForces": false,
-                    "traverseAssociationGroup": true
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "f6ad-58ab-74f5-80ea",
+                        "shared": true,
+                        "traverseAssociationGroup": true,
+                        "childName": "The Visarch"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "3f2a-908a-c066-e36b",
+                        "shared": true,
+                        "traverseAssociationGroup": true,
+                        "childName": "Yvraine"
+                      }
+                    ]
                   }
                 ]
               }
@@ -39424,29 +39518,59 @@
             "field": "06e8-e926-5134-231a",
             "conditionGroups": [
               {
-                "type": "and",
-                "conditions": [
+                "type": "or",
+                "conditionGroups": [
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "associations",
-                    "scope": "self",
-                    "childId": "7989-9352-554c-b202",
-                    "shared": true,
-                    "childName": "Eldrad Ultran",
-                    "includeChildForces": false,
-                    "traverseAssociationGroup": true
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "7989-9352-554c-b202",
+                        "shared": true,
+                        "childName": "Eldrad Ultran",
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "7d34-c046-e08f-13e1",
+                        "shared": true,
+                        "childName": "Warlock Conclave",
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      }
+                    ]
                   },
                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "associations",
-                    "scope": "self",
-                    "childId": "7d34-c046-e08f-13e1",
-                    "shared": true,
-                    "childName": "Warlock Conclave",
-                    "includeChildForces": false,
-                    "traverseAssociationGroup": true
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "f6ad-58ab-74f5-80ea",
+                        "shared": true,
+                        "traverseAssociationGroup": true,
+                        "childName": "The Visarch"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "3f2a-908a-c066-e36b",
+                        "shared": true,
+                        "traverseAssociationGroup": true,
+                        "childName": "Yvraine"
+                      }
+                    ]
                   }
                 ]
               }
@@ -58990,6 +59114,41 @@
             "hidden": false,
             "type": "rule",
             "targetId": "10d8-3547-47ae-baab"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "9d70-1fc5-7b3e-647b",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "4+",
+                "field": "name",
+                "join": " "
+              },
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "f6ad-58ab-74f5-80ea",
+                    "shared": true,
+                    "childName": "The Visarch",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ],
+            "comment": "The Visarch attached unit ability"
           }
         ],
         "entryLinks": [
@@ -102926,6 +103085,38 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "2290-99e3-1a9d-6fdd",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "f6ad-58ab-74f5-80ea",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "The Visarch"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "3f2a-908a-c066-e36b",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "Yvraine"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "selectionEntries": [
@@ -121104,6 +121295,38 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "d390-9030-02ff-8696",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "f6ad-58ab-74f5-80ea",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "The Visarch"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "3f2a-908a-c066-e36b",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "Yvraine"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -122097,6 +122320,38 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "bd04-8b8c-4327-178f",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "f6ad-58ab-74f5-80ea",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "The Visarch"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "3f2a-908a-c066-e36b",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "Yvraine"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -122418,6 +122673,38 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "8764-a4d7-022d-bc5d",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "f6ad-58ab-74f5-80ea",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "The Visarch"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "3f2a-908a-c066-e36b",
+                    "shared": true,
+                    "traverseAssociationGroup": true,
+                    "childName": "Yvraine"
+                  }
+                ]
               }
             ]
           }
