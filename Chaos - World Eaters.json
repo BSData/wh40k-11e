@@ -8931,7 +8931,37 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "544b-cd46-9e1f-9b74",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "802c-f8e1-e339-84b3",
+                    "shared": true,
+                    "childName": "Berzerkers"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -9499,7 +9529,55 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "eb9f-80a7-a02b-0221",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "802c-f8e1-e339-84b3",
+                    "shared": true,
+                    "childName": "Berzerkers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "aa38-6b43-3c3e-3ed9",
+                    "shared": true,
+                    "childName": "Eightbound"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b8d9-6a4b-fd6b-e82d",
+                    "shared": true,
+                    "childName": "Exalted Eightbound"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -11887,6 +11965,103 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": "10\"",
+            "field": "e703-ecb6-5ce7-aec1",
+            "affects": "self.entries.recursive.associations.profiles.Unit"
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "23bd-029e-19a4-c473",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "802c-f8e1-e339-84b3",
+                    "shared": true,
+                    "childName": "Berzerkers"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "aa38-6b43-3c3e-3ed9",
+                    "shared": true,
+                    "childName": "Eightbound"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b8d9-6a4b-fd6b-e82d",
+                    "shared": true,
+                    "childName": "Exalted Eightbound"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "6d28-ca9d-79a5-063a",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Disciple of Khorne",
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "96e9-29f3-c825-9efd",
+                            "shared": true,
+                            "childName": "Bloodcrushers"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5e7d-6fd6-38e3-69e0",
+                            "shared": true,
+                            "childName": "Flesh Hounds"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -12621,6 +12796,79 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "ad11-c28d-9de2-f834",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "802c-f8e1-e339-84b3",
+                    "shared": true,
+                    "childName": "Berzerkers"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "3109-eff5-24d5-cf3d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Butcher Lord",
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "f05b-e25f-cda0-4669",
+                            "shared": true,
+                            "childName": "Jakhals"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ae66-6f22-4ba5-8ef4",
+                            "shared": true,
+                            "childName": "Goremongers"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
         ]
       },
       {
@@ -12699,6 +12947,17 @@
             "shared": true,
             "id": "a80c-0a3c-c7d3-8368",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1719-1ff8-63ed-3acb",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -12724,6 +12983,32 @@
             "type": "rule",
             "id": "12dc-66a0-158e-dcee",
             "targetId": "e68b-b42f-6f7c-4670"
+          },
+          {
+            "name": "Deep Strike",
+            "id": "9898-f7f4-02a9-bdb8",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "7cb5-dd6b-dd87-ad3b",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "59a2-5bf7-970b-4720",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Lord Invocatus"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -16830,6 +17115,17 @@
             "shared": true,
             "id": "1660-3276-6e8f-1011",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "aad5-32fb-e80b-b55f",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -18753,6 +19049,17 @@
             "shared": true,
             "id": "b5a4-7521-89dd-19e3",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "d348-09b7-da20-3df6",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -18844,6 +19151,32 @@
             "hidden": false,
             "type": "profile",
             "targetId": "045c-4246-0d69-78c8"
+          },
+          {
+            "name": "Deep Strike",
+            "id": "11f3-cce9-641f-8fb9",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "7cb5-dd6b-dd87-ad3b",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "59a2-5bf7-970b-4720",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Lord Invocatus"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -19534,6 +19867,17 @@
             "shared": true,
             "id": "b5c1-fde8-987f-30e3",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "1959-b4cb-bc87-7d32",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -34956,6 +35300,17 @@
             "shared": true,
             "id": "3a7a-f67d-8532-179f",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a6d2-71e4-5662-3ea0",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "infoLinks": [
@@ -35625,6 +35980,61 @@
             "hidden": false,
             "type": "rule",
             "targetId": "e68b-b42f-6f7c-4670"
+          },
+          {
+            "name": "Deep Strike",
+            "id": "9e4f-353b-6139-6020",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "7cb5-dd6b-dd87-ad3b",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "3d1c-7f16-1489-fac3",
+                    "shared": true,
+                    "childName": "Possessed"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Scouts",
+            "id": "957b-d56f-c0fd-ae5b",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "ada6-bac1-ffe0-d6f7",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "3d1c-7f16-1489-fac3",
+                    "shared": true,
+                    "childName": "Possessed"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "6\"",
+                "field": "name"
+              }
+            ]
           }
         ],
         "costs": [
@@ -35985,6 +36395,88 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "4e70-b32e-d8c6-b5fe",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "aa38-6b43-3c3e-3ed9",
+                    "shared": true,
+                    "childName": "Eightbound"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b8d9-6a4b-fd6b-e82d",
+                    "shared": true,
+                    "childName": "Exalted Eightbound"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "3109-eff5-24d5-cf3d",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Butcher Lord",
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "f05b-e25f-cda0-4669",
+                            "shared": true,
+                            "childName": "Jakhals"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ae66-6f22-4ba5-8ef4",
+                            "shared": true,
+                            "childName": "Goremongers"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
           }
         ]
       },
@@ -38411,6 +38903,17 @@
             "percentValue": false,
             "includeChildSelections": true,
             "includeChildForces": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "9bdc-2fbd-b9ff-76b2",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -38937,6 +39440,17 @@
             "percentValue": false,
             "includeChildSelections": true,
             "includeChildForces": false
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3e2b-542e-ba4c-9020",
+            "includeChildSelections": false,
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           }
         ],
         "profiles": [
@@ -40105,7 +40619,119 @@
         "import": true,
         "name": "Butcherlord [Crucible]",
         "hidden": false,
-        "id": "85e5-721a-d505-3881"
+        "id": "85e5-721a-d505-3881",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5b9e-9b5b-ec45-0497",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1a38-2103-19f1-5366",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Daemonheart",
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "aa38-6b43-3c3e-3ed9",
+                            "shared": true,
+                            "childName": "Eightbound"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b8d9-6a4b-fd6b-e82d",
+                            "shared": true,
+                            "childName": "Exalted Eightbound"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "802c-f8e1-e339-84b3",
+                        "shared": true,
+                        "childName": "Berzerkers"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "b373-664b-2910-7f25",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Specialisms",
+                        "queryFromSelf": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "bed2-a2a1-caf3-d9d7",
+                        "shared": true,
+                        "childName": "Terminator Squad"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "3413-768e-5f91-2672",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Terminator Armour",
+                        "queryFromSelf": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -40779,7 +41405,94 @@
         "import": true,
         "name": "Eight-blessed Lord [Crucible]",
         "hidden": false,
-        "id": "71ad-8562-f833-5872"
+        "id": "71ad-8562-f833-5872",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "e4d4-3ec3-f0e9-45a2",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1a38-2103-19f1-5366",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Daemonheart",
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "aa38-6b43-3c3e-3ed9",
+                            "shared": true,
+                            "childName": "Eightbound"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "b8d9-6a4b-fd6b-e82d",
+                            "shared": true,
+                            "childName": "Exalted Eightbound"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "802c-f8e1-e339-84b3",
+                        "shared": true,
+                        "childName": "Berzerkers"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "b373-664b-2910-7f25",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Specialisms",
+                        "queryFromSelf": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -41352,7 +42065,85 @@
         "import": true,
         "name": "Bloodcult Champion [Crucible]",
         "hidden": false,
-        "id": "544e-3db3-4878-3db3"
+        "id": "544e-3db3-4878-3db3",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "5c68-7da9-deb2-d663",
+            "label": "",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ab8c-5d36-2267-13ed",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Augmetic Legs",
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "ae66-6f22-4ba5-8ef4",
+                            "shared": true,
+                            "childName": "Goremongers"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "f05b-e25f-cda0-4669",
+                        "shared": true,
+                        "childName": "Jakhals"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ab8c-5d36-2267-13ed",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Augmetic Legs",
+                        "queryFromSelf": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -52853,7 +53644,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "df9a-59b2-f464-59ad",
     "name": "Chaos - World Eaters",
-    "revision": 6,
+    "revision": 7,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
