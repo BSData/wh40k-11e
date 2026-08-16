@@ -536,9 +536,9 @@
               {
                 "characteristics": [
                   {
-                    "$text": "While this unit is leading a unit and contains and Agathae Dolan model, each time that unit destroys an enemy unit, you gain 1 Miracle dice. When that Agathae Dolan model is destroyed, you gain D3 Miracle dice.",
                     "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
+                    "typeId": "9b8f-694b-e5e-b573",
+                    "$text": "While this unit is leading a unit and contains an Agathae Dolan model, each time that unit destroys an enemy unit, you gain 1 Miracle dice. When that Agathae Dolan model is destroyed, you gain D3 Miracle dice."
                   }
                 ],
                 "name": "Recount the Deeds of the Saints",
@@ -4209,6 +4209,13 @@
             "id": "4d49-d597-08ff-fb77",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "e76c-2dae-19be-89fe",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "selectionEntryGroups": [
@@ -5957,6 +5964,33 @@
                     "shared": true,
                     "childName": "Sisters Novitiate Squad"
                   }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "8d7c-5e-e1f6-27e9",
+                        "shared": true,
+                        "childName": "Repentia Squad"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ad43-4753-3b84-776a",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "childName": "Catechism of Divine Penitence"
+                      }
+                    ]
+                  }
                 ]
               }
             ],
@@ -7619,7 +7653,7 @@
                     "value": 1,
                     "field": "bef7-942a-1a23-59f8",
                     "scope": "parent",
-                    "affects": "self.entries.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   }
                 ],
                 "costs": [
@@ -8629,7 +8663,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "You can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do: \n- That use is ‑1 **CP**. \n- That use does not prevent any uses of that **stratagem** on other units this phase.'"
+                "$text": "You can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do: \n- That use is ‑1 **CP**. \n- That use does not prevent any uses of that **stratagem** on other units this phase."
               }
             ],
             "name": "Mysterious Saviours",
@@ -8779,6 +8813,13 @@
             "hidden": false,
             "id": "fe83-9346-bed2-41b7",
             "targetId": "06f3-c7f0-3763-211c",
+            "primary": false
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "884b-d7f5-8215-9e3d",
+            "targetId": "7dcd-7f61-69a7-0294",
             "primary": false
           }
         ],
@@ -9487,6 +9528,13 @@
             "id": "b889-cd19-10a5-43a4",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "f580-b9e5-96e6-b0f7",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -10053,6 +10101,23 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "bef7-942a-1a23-59f8",
+            "affects": "self.entries.group.recursive.profiles.Unit",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
               }
             ]
           }
@@ -12562,6 +12627,13 @@
             "id": "c981-5fa4-b49a-b200",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "1fab-a6f2-8f6f-4082",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -13939,6 +14011,33 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "2+",
+                "field": "450-a17e-9d5e-29da",
+                "affects": "self.entries.group.recursive.profiles.Unit"
+              },
+              {
+                "type": "set",
+                "value": "4+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "type": "model",
@@ -17582,7 +17681,37 @@
         "name": "Morvenn Vahl",
         "hidden": false,
         "id": "7188-4d20-8216-c68a",
-        "publicationId": "7d85-6d0f-57e0-5dea"
+        "publicationId": "7d85-6d0f-57e0-5dea",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "1687-b76c-bf27-f06e",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a68f-bc56-3728-5533",
+                    "shared": true,
+                    "childName": "Paragon Warsuits"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -18478,6 +18607,33 @@
                     "childId": "e8c6-d8f4-2d01-2e7a",
                     "shared": true,
                     "childName": "Sisters Novitiate Squad"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "8d7c-5e-e1f6-27e9",
+                        "shared": true,
+                        "childName": "Repentia Squad"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ad43-4753-3b84-776a",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "childName": "Catechism of Divine Penitence"
+                      }
+                    ]
                   }
                 ]
               }
@@ -22385,6 +22541,33 @@
                     "childId": "e8c6-d8f4-2d01-2e7a",
                     "shared": true,
                     "childName": "Sisters Novitiate Squad"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "8d7c-5e-e1f6-27e9",
+                        "shared": true,
+                        "childName": "Repentia Squad"
+                      },
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "ad43-4753-3b84-776a",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "childName": "Catechism of Divine Penitence"
+                      }
+                    ]
                   }
                 ]
               }
@@ -30965,6 +31148,13 @@
             "id": "cb9f-4928-de4d-56e1",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "f897-3939-301f-7c62",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "selectionEntryGroups": [
@@ -37120,6 +37310,13 @@
             "id": "af96-8585-91ef-2a8c",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "02be-c98e-14cf-5c3c",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "profiles": [
@@ -38003,6 +38200,13 @@
             "id": "2bd7-d721-06c8-400f",
             "targetId": "06f3-c7f0-3763-211c",
             "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "e376-0934-d1c8-0bfa",
+            "targetId": "1556-9b56-fba6-4370",
+            "primary": false
           }
         ],
         "profiles": [
@@ -38809,7 +39013,7 @@
             "id": "aa85-f329-ba9a-bae5",
             "type": "selectionEntryGroup",
             "targetId": "9521-6dff-a805-f0b8",
-            "sortIndex": 3
+            "sortIndex": 4
           },
           {
             "import": true,
@@ -38818,7 +39022,7 @@
             "id": "26dc-a294-0480-fdf7",
             "type": "selectionEntryGroup",
             "targetId": "083e-6f45-4cf1-473c",
-            "sortIndex": 4
+            "sortIndex": 5
           },
           {
             "import": true,
@@ -38827,7 +39031,7 @@
             "id": "f237-584f-2fcd-10a3",
             "type": "selectionEntryGroup",
             "targetId": "acdc-9c11-8d38-1fd8",
-            "sortIndex": 5
+            "sortIndex": 6
           }
         ],
         "categoryLinks": [
@@ -38899,6 +39103,13 @@
             "hidden": false,
             "id": "77bc-5feb-1ea9-1454",
             "targetId": "06f3-c7f0-3763-211c",
+            "primary": false
+          },
+          {
+            "name": "Leader",
+            "hidden": false,
+            "id": "65a4-d862-07ee-7ddc",
+            "targetId": "1556-9b56-fba6-4370",
             "primary": false
           }
         ],
@@ -39582,7 +39793,8 @@
             ],
             "includeChildSelections": true,
             "childName": "unit",
-            "action": "group"
+            "action": "group",
+            "sortIndex": 3
           }
         ]
       },
@@ -44381,7 +44593,7 @@
                         "type": "notInstanceOf",
                         "value": 1,
                         "field": "selections",
-                        "scope": "parent",
+                        "scope": "ancestor",
                         "childId": "cc88-9467-86ac-4ca2",
                         "shared": true
                       }
@@ -44883,7 +45095,7 @@
                 "value": 1,
                 "field": "e703-ecb6-5ce7-aec1",
                 "scope": "parent",
-                "affects": "self.entries.profiles.Unit"
+                "affects": "self.entries.group.recursive.profiles.Unit"
               }
             ],
             "costs": [
@@ -55209,7 +55421,7 @@
     "name": "Imperium - Adepta Sororitas",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 11,
+    "revision": 12,
     "battleScribeVersion": 2.03,
     "authorName": "",
     "type": "catalogue",
