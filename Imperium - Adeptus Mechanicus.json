@@ -27597,7 +27597,7 @@
             "type": "increment",
             "value": 1,
             "field": "bef7-942a-1a23-59f8",
-            "affects": "group.profiles.Unit",
+            "affects": "self.entries.group.recursive.profiles.Unit",
             "conditions": [
               {
                 "type": "atLeast",
@@ -27837,22 +27837,81 @@
               {
                 "type": "append",
                 "value": "5+",
-                "field": "name"
+                "field": "name",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "24e2-b690-37b5-de9e",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Lords of the Forge"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "fa9a-4fad-2efa-cf9b",
+                        "shared": true,
+                        "includeChildSelections": false,
+                        "childName": "Kastelan Robots"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "type": "set",
                 "value": true,
                 "field": "hidden",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "fa9a-4fad-2efa-cf9b",
+                        "shared": true,
+                        "includeChildSelections": false,
+                        "childName": "Kastelan Robots"
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "24e2-b690-37b5-de9e",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "Lords of the Forge"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "4+",
+                "field": "name",
                 "conditions": [
                   {
-                    "type": "lessThan",
+                    "type": "atLeast",
                     "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "24e2-b690-37b5-de9e",
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "fa9a-4fad-2efa-cf9b",
                     "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "Lords of the Forge"
+                    "includeChildSelections": false,
+                    "childName": "Kastelan Robots"
                   }
                 ]
               }
@@ -35096,7 +35155,7 @@
             "type": "and"
           }
         ],
-        "type": "unit",
+        "type": "model",
         "import": true,
         "name": "Sydonian Skatros",
         "hidden": false,
@@ -47768,6 +47827,13 @@
                     ]
                   }
                 ]
+              },
+              {
+                "type": "add",
+                "value": "355c-0ee6-3cde-6c71",
+                "field": "category",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "profiles": [
@@ -57319,7 +57385,7 @@
           {
             "type": "upgrade",
             "import": true,
-            "name": "Luminen Autochoir",
+            "name": "Luminen Auto-choir",
             "hidden": false,
             "id": "65e6-9ab1-6a2c-5410",
             "constraints": [
@@ -57475,7 +57541,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "77b9-2f66-3f9b-5cf3",
     "name": "Imperium - Adeptus Mechanicus",
-    "revision": 8,
+    "revision": 9,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
@@ -57527,7 +57593,7 @@
         "id": "f181-707a-dc52-9800"
       },
       {
-        "name": "**Baffling Data Screed**",
+        "name": "Baffling Data Screed",
         "typeId": "9cc3-6d83-4dd3-9b64",
         "typeName": "Abilities",
         "hidden": false,
