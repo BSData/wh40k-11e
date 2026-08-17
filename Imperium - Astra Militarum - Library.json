@@ -138475,7 +138475,30 @@
                 "import": true,
                 "name": "Regimental Banner",
                 "hidden": false,
-                "id": "9d7c-79d0-2008-dd87"
+                "id": "9d7c-79d0-2008-dd87",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Regimental Banner",
+                        "field": "annotation",
+                        "affects": "profiles.Unit",
+                        "scope": "model",
+                        "join": ", "
+                      },
+                      {
+                        "type": "increment",
+                        "value": 3,
+                        "field": "bef7-942a-1a23-59f8",
+                        "affects": "profiles.Unit",
+                        "scope": "model",
+                        "join": ", "
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "constraints": [
