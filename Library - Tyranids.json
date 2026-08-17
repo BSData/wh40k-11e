@@ -16011,7 +16011,30 @@
                 "hidden": false,
                 "collective": false,
                 "import": true,
-                "type": "upgrade"
+                "type": "upgrade",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Parasitic Biomorphology",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "scope": "root-entry",
+                        "join": ", ",
+                        "skipIfPresent": "Parasitic Biomorphology"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 1,
+                        "field": "ab33-d393-96ce-ccba",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "scope": "root-entry"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "modifiers": [
