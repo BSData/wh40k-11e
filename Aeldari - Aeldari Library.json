@@ -150696,15 +150696,6 @@
                 "id": "4fd6-b128-8f09-4748"
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Ignores Cover",
-                "id": "ce2b-d5de-a63f-b9c3",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "4640-43e7-30b-215a"
-              }
-            ],
             "modifierGroups": [
               {
                 "modifiers": [
@@ -150714,15 +150705,17 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "skipIfPresent": "Soulseeing"
                   },
                   {
                     "type": "append",
-                    "value": "Ignore Cover",
+                    "value": "Ignores Cover",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Ignores Cover"
                   }
                 ],
                 "type": "and"
@@ -150828,15 +150821,6 @@
                 "id": "be93-1a4e-29a9-298f"
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Sustained Hits",
-                "id": "4a41-acce-9b59-7235",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "1897-c22c-9597-12b1"
-              }
-            ],
             "modifierGroups": [
               {
                 "modifiers": [
@@ -150846,15 +150830,17 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                    "skipIfPresent": "Psy-prism"
                   },
                   {
                     "type": "append",
                     "value": "Sustained Hits 2",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Sustained Hits 2"
                   },
                   {
                     "type": "append",
@@ -150862,15 +150848,17 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons"
+                    "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                    "skipIfPresent": "Psy-prism"
                   },
                   {
                     "type": "append",
                     "value": "Sustained Hits 2",
                     "field": "893f-9000-ccf7-648e",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Sustained Hits 2"
                   }
                 ],
                 "type": "and"
@@ -151526,14 +151514,14 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "type": "increment",
                     "value": 1,
                     "field": "bef7-942a-1a23-59f8",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Unit",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
                     "join": ", "
                   }
                 ],
@@ -151658,15 +151646,17 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "skipIfPresent": "Seasoned Protectors"
                   },
                   {
                     "type": "append",
                     "value": "Heavy",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Heavy"
                   }
                 ],
                 "type": "and"
@@ -152188,14 +152178,15 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "skipIfPresent": "Farstrike"
                   },
                   {
                     "type": "increment",
                     "value": 6,
                     "field": "9896-9419-16a1-92fc",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                     "join": ", "
                   },
                   {
@@ -152203,7 +152194,7 @@
                     "value": 3,
                     "field": "9896-9419-16a1-92fc",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.064a-0470-60eb-e3ef.profiles.Ranged Weapons",
+                    "affects": "self.entries.group.recursive.064a-0470-60eb-e3ef.profiles.Ranged Weapons",
                     "join": ", "
                   }
                 ],
@@ -164993,15 +164984,6 @@
                     "id": "1128-558d-f576-111e"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Anti",
-                    "id": "c97a-4134-88a8-2d09",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "4111-82e3-9444-e942"
-                  }
-                ],
                 "modifierGroups": [
                   {
                     "modifiers": [
@@ -165011,15 +164993,25 @@
                         "field": "annotation",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons"
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons"
                       },
                       {
                         "type": "append",
-                        "value": "Anti-Monster 3+, Anti-Vehicle 3+",
+                        "value": "Anti-Monster 3+",
                         "field": "7f1b-8591-2fcf-d01c",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
-                        "join": ", "
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Monster 3+"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Anti-Vehicle 3+",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Vehicle 3+"
                       },
                       {
                         "type": "append",
@@ -165027,15 +165019,25 @@
                         "field": "annotation",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons"
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons"
                       },
                       {
                         "type": "append",
-                        "value": "Anti-Monster 3+, Anti-Vehicle 3+",
-                        "field": "7f1b-8591-2fcf-d01c",
+                        "value": "Anti-Monster 3+",
+                        "field": "893f-9000-ccf7-648e",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
-                        "join": ", "
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Monster 3+"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Anti-Vehicle 3+",
+                        "field": "893f-9000-ccf7-648e",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Vehicle 3+"
                       }
                     ],
                     "type": "and"
@@ -165148,15 +165150,6 @@
                     "id": "ab0d-df71-97e0-38b7"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Precision",
-                    "id": "7d21-3d2b-7d63-4710",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9143-31ae-e0a6-6007"
-                  }
-                ],
                 "modifierGroups": [
                   {
                     "modifiers": [
@@ -165166,15 +165159,17 @@
                         "field": "annotation",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "skipIfPresent": "Dead-eye Shots"
                       },
                       {
                         "type": "append",
                         "value": "Precision",
                         "field": "7f1b-8591-2fcf-d01c",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                        "join": ", "
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Precision"
                       }
                     ],
                     "type": "and"
