@@ -27237,41 +27237,19 @@
               {
                 "modifiers": [
                   {
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "model-or-unit",
-                        "childId": "362d-56a3-eb1a-4075",
-                        "shared": true,
-                        "includeChildSelections": true
-                      }
-                    ],
                     "type": "append",
                     "value": "Strength Born of Hunger",
                     "field": "annotation",
                     "join": ", ",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons"
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons"
                   },
                   {
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "model-or-unit",
-                        "childId": "362d-56a3-eb1a-4075",
-                        "shared": true,
-                        "includeChildSelections": true
-                      }
-                    ],
                     "type": "increment",
                     "value": 1,
                     "field": "ab33-d393-96ce-ccba",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons"
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons"
                   }
                 ],
                 "type": "and"
@@ -28149,14 +28127,15 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "skipIfPresent": "Armoured Biomorph"
                   },
                   {
                     "type": "increment",
                     "value": 1,
                     "field": "d29d-cf75-fc2d-34a4",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   }
                 ],
                 "type": "and"
