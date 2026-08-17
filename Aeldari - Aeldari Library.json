@@ -1874,7 +1874,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "This model can be attached to the following unit:\n- **^^Corsair Cloud Dancer Band^^**\n\n- **^^Windriders^^**\n"
+                "$text": "This model can be attached to the following unit:\n- **^^Corsair Cloud Dancer Band^^**\n- **^^Windriders^^**\n"
               }
             ],
             "id": "9d25-456f-edfb-bf27",
@@ -7769,7 +7769,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "The Visarch attached unit ability"
           }
         ],
         "categoryLinks": [
@@ -9767,7 +9768,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "The Visarch attached unit ability"
           }
         ],
         "categoryLinks": [
@@ -25358,7 +25360,43 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "The Visarch attached unit ability"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "d77a-72e7-e159-5881",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b4a8-8ce4-a1f3-b8ce",
+                    "shared": true,
+                    "childName": "Runes of Warding",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "4+*",
+                "field": "name",
+                "join": " / "
+              }
+            ],
+            "comment": "Runes of Warding Enhancement attached unit ability"
           }
         ],
         "entryLinks": [
@@ -32435,6 +32473,69 @@
             "hidden": false,
             "type": "rule",
             "targetId": "10d8-3547-47ae-baab"
+          },
+          {
+            "name": "Infiltrators",
+            "id": "42fc-8551-9baf-1b15",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "c05d-f4c3-f091-4938",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "29c8-5ca8-471c-8018",
+                        "shared": true,
+                        "childName": "Mistweave",
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": false
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5d21-7924-d79b-3be1",
+                            "shared": true,
+                            "childName": "Mistweave",
+                            "includeChildSelections": true,
+                            "traverseAssociationGroup": false
+                          },
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "associations",
+                            "scope": "self",
+                            "childId": "any",
+                            "shared": true,
+                            "childName": "any",
+                            "includeChildSelections": false,
+                            "traverseAssociationGroup": false
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "comment": "Mistweave Enhancement attached unit ability"
           }
         ],
         "selectionEntryGroups": [
@@ -33139,48 +33240,6 @@
               {
                 "conditions": [
                   {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "be59-ec7d-2f02-b6ec",
-                    "shared": true,
-                    "includeChildForces": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildForces": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "5ad5-9b0d-a70e-b9ec",
-                    "shared": true,
-                    "includeChildForces": true,
-                    "includeChildSelections": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": 1,
-            "field": "25f8-be58-e72e-6e57"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
                     "type": "atLeast",
                     "value": 1,
                     "field": "selections",
@@ -33220,16 +33279,6 @@
           }
         ],
         "constraints": [
-          {
-            "type": "max",
-            "value": 3,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "25f8-be58-e72e-6e57",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
           {
             "type": "max",
             "value": 6,
@@ -39679,7 +39728,43 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "The Visarch attached unit ability"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "c6f2-1a56-49fc-cf30",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b4a8-8ce4-a1f3-b8ce",
+                    "shared": true,
+                    "childName": "Runes of Warding",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "4+*",
+                "field": "name",
+                "join": " / "
+              }
+            ],
+            "comment": "Runes of Warding Enhancement attached unit ability"
           }
         ],
         "entryLinks": [
@@ -46927,6 +47012,132 @@
             "hidden": false,
             "type": "profile",
             "targetId": "b783-5813-dfe0-aca5"
+          },
+          {
+            "name": "Infiltrators",
+            "id": "0fa8-ad52-46b8-777f",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "c05d-f4c3-f091-4938",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "29c8-5ca8-471c-8018",
+                        "shared": true,
+                        "childName": "Mistweave",
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5d21-7924-d79b-3be1",
+                        "shared": true,
+                        "childName": "Mistweave",
+                        "includeChildSelections": true,
+                        "traverseAssociationGroup": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "comment": "Mistweave Enhancement attached unit ability"
+          },
+          {
+            "name": "Fights First",
+            "id": "364a-59e4-37b6-030d",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "24-c886-e8ba-5a89",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6c34-6504-f458-2792",
+                    "shared": true,
+                    "childName": "Shadowfall Masks",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Shadowfall Masks Enhancement attached unit ability"
+          },
+          {
+            "name": "Scouts",
+            "id": "d2f7-624c-a1f8-0636",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "ada6-bac1-ffe0-d6f7",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "8d5c-ff96-e34e-a4f1",
+                        "shared": true,
+                        "childName": "Prelude Performer",
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1927-5104-198f-4b11",
+                        "shared": true,
+                        "childName": "Key of Ghosts",
+                        "includeChildSelections": true,
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "6\"",
+                "field": "name",
+                "join": " "
+              }
+            ],
+            "comment": "Prelude Performer / Key of Ghosts Enhancement attached unit ability"
           }
         ],
         "entryLinks": [
@@ -50381,6 +50592,41 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "d75d-c75c-de8e-d0df",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b4a8-8ce4-a1f3-b8ce",
+                    "shared": true,
+                    "childName": "Runes of Warding",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "4+*",
+                "field": "name",
+                "join": " / "
+              }
+            ],
+            "comment": "Runes of Warding Enhancement attached unit ability"
           }
         ],
         "selectionEntryGroups": [
@@ -55026,6 +55272,76 @@
             "hidden": false,
             "targetId": "c324-e193-e23c-7d2e",
             "type": "rule"
+          },
+          {
+            "name": "Scouts",
+            "id": "4e6e-aea6-dd1e-964a",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "ada6-bac1-ffe0-d6f7",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb45-ba0f-165f-45dc",
+                    "shared": true,
+                    "childName": "Firstdrawn Blade",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "9\"",
+                "field": "name",
+                "join": " "
+              }
+            ],
+            "comment": "Firstdrawn Blade Enhancement attached unit ability"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "1ecf-5637-0172-e824",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b4a8-8ce4-a1f3-b8ce",
+                    "shared": true,
+                    "childName": "Runes of Warding",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "4+*",
+                "field": "name",
+                "join": " / "
+              }
+            ],
+            "comment": "Runes of Warding Enhancement attached unit ability"
           }
         ],
         "entryLinks": [
@@ -56533,7 +56849,7 @@
           },
           {
             "name": "Feel No Pain",
-            "id": "69b3-9e5d-35f3-f29d",
+            "id": "0c86-1860-0527-2f3a",
             "hidden": false,
             "type": "rule",
             "targetId": "9bf4-280f-bbe2-6fbb",
@@ -56562,9 +56878,29 @@
                     "includeChildSelections": false
                   }
                 ]
+              },
+              {
+                "type": "append",
+                "value": "4+*",
+                "field": "name",
+                "join": " / ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b4a8-8ce4-a1f3-b8ce",
+                    "shared": true,
+                    "childName": "Runes of Warding",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
               }
             ],
-            "comment": "Bonesinger attached unit ability"
+            "comment": "Bonesinger / Runes of Warding Enhancement attached unit ability"
           }
         ],
         "profiles": [
@@ -58872,7 +59208,7 @@
         "infoLinks": [
           {
             "name": "Feel No Pain",
-            "id": "4d46-4c24-c5ed-cb80",
+            "id": "c566-daf5-fbfa-40bc",
             "hidden": false,
             "type": "rule",
             "targetId": "9bf4-280f-bbe2-6fbb",
@@ -58901,9 +59237,29 @@
                     "includeChildSelections": false
                   }
                 ]
+              },
+              {
+                "type": "append",
+                "value": "4+*",
+                "field": "name",
+                "join": " / ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b4a8-8ce4-a1f3-b8ce",
+                    "shared": true,
+                    "childName": "Runes of Warding",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
               }
             ],
-            "comment": "Bonesinger attached unit ability"
+            "comment": "Bonesinger / Runes of Warding Enhancement attached unit ability"
           }
         ]
       },
@@ -60667,9 +61023,29 @@
                     "includeChildSelections": false
                   }
                 ]
+              },
+              {
+                "type": "append",
+                "value": "4+*",
+                "field": "name",
+                "join": " / ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b4a8-8ce4-a1f3-b8ce",
+                    "shared": true,
+                    "childName": "Runes of Warding",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
               }
             ],
-            "comment": "Bonesinger attached unit ability"
+            "comment": "Bonesinger / Runes of Warding Enhancement attached unit ability"
           }
         ]
       },
@@ -102110,7 +102486,40 @@
               {
                 "type": "append",
                 "value": "7\"",
-                "field": "name"
+                "field": "name",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb45-ba0f-165f-45dc",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "Firstdrawn Blade"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "9\"",
+                "field": "name",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb45-ba0f-165f-45dc",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "Firstdrawn Blade"
+                  }
+                ]
               }
             ],
             "name": "Scouts",
@@ -105642,7 +106051,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "The Visarch attached unit ability"
           }
         ]
       },
@@ -112726,6 +113136,76 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
+          },
+          {
+            "name": "Scouts",
+            "id": "00d2-525c-6be3-3ab0",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "ada6-bac1-ffe0-d6f7",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb45-ba0f-165f-45dc",
+                    "shared": true,
+                    "childName": "Firstdrawn Blade",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "9\"",
+                "field": "name",
+                "join": " "
+              }
+            ],
+            "comment": "Firstdrawn Blade Enhancement attached unit ability"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "630a-49c4-6734-759e",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b4a8-8ce4-a1f3-b8ce",
+                    "shared": true,
+                    "childName": "Runes of Warding",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "4+*",
+                "field": "name",
+                "join": " / "
+              }
+            ],
+            "comment": "Runes of Warding Enhancement attached unit ability"
           }
         ],
         "entryLinks": [
@@ -121172,7 +121652,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "The Visarch attached unit ability"
           }
         ],
         "constraints": [
@@ -122197,7 +122678,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "The Visarch attached unit ability"
           }
         ],
         "constraints": [
@@ -123294,7 +123776,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "comment": "The Visarch attached unit ability"
           }
         ],
         "constraints": [
@@ -141004,6 +141487,40 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "8e35-fff0-f369-e0db"
+          },
+          {
+            "name": "Leader",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "92cf-f173-ca19-a613",
+            "characteristics": [
+              {
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- **^^Windriders**^^\n"
+              }
+            ],
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "- **^^Shining Spears^^**",
+                "field": "9b8f-694b-e5e-b573",
+                "join": "\n\n",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "7535-5b09-8df8-05c7",
+                    "shared": true,
+                    "childName": "Skyrunner's Heavy Aspect armour",
+                    "includeChildSelections": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "modifiers": [
@@ -142946,6 +143463,76 @@
             "hidden": false,
             "targetId": "c324-e193-e23c-7d2e",
             "type": "rule"
+          },
+          {
+            "name": "Scouts",
+            "id": "b459-9e7d-c6e8-11b4",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "ada6-bac1-ffe0-d6f7",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cb45-ba0f-165f-45dc",
+                    "shared": true,
+                    "childName": "Firstdrawn Blade",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "9\"",
+                "field": "name",
+                "join": " "
+              }
+            ],
+            "comment": "Firstdrawn Blade Enhancement attached unit ability"
+          },
+          {
+            "name": "Feel No Pain",
+            "id": "8a3c-d143-1b51-f4d2",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "9bf4-280f-bbe2-6fbb",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b4a8-8ce4-a1f3-b8ce",
+                    "shared": true,
+                    "childName": "Runes of Warding",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "4+*",
+                "field": "name",
+                "join": " / "
+              }
+            ],
+            "comment": "Runes of Warding Enhancement attached unit ability"
           }
         ],
         "entryLinks": [
@@ -156941,9 +157528,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "Asuryani Psyker model only. Models in the bearer's unit have the Feel No Pain 4+ ability against mortal wounds, Psychic Attacks and Critical Wounds caused by attacks with the [Devastating Wounds] ability.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "**^^Asuryani Psyker^^** model only. Models in the bearer's unit have the Feel No Pain 4+ ability against mortal wounds, Psychic Attacks and Critical Wounds caused by attacks with the **[DEVASTATING WOUNDS]** ability."
                       }
                     ],
                     "name": "Runes of Warding",
@@ -157010,7 +157597,24 @@
                 "import": true,
                 "name": "Runes of Warding",
                 "hidden": false,
-                "id": "b4a8-8ce4-a1f3-b8ce"
+                "id": "b4a8-8ce4-a1f3-b8ce",
+                "infoLinks": [
+                  {
+                    "name": "Feel No Pain",
+                    "id": "f30c-81eb-d12e-4fe9",
+                    "hidden": false,
+                    "type": "rule",
+                    "targetId": "9bf4-280f-bbe2-6fbb",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "4+*",
+                        "field": "name",
+                        "join": " "
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -158602,9 +159206,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "Asuryani Mounted model only. Models in the bearer's unit have the Scouts 9\" ability.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "**^^Asuryani Mounted^^** model only. Models in the bearer's unit have the Scouts 9\" ability."
                       }
                     ],
                     "name": "Firstdrawn Blade",
@@ -158701,7 +159305,24 @@
                 "import": true,
                 "name": "Firstdrawn Blade",
                 "hidden": false,
-                "id": "cb45-ba0f-165f-45dc"
+                "id": "cb45-ba0f-165f-45dc",
+                "infoLinks": [
+                  {
+                    "name": "Scouts",
+                    "id": "da1f-3cdd-eb02-abe7",
+                    "hidden": false,
+                    "type": "rule",
+                    "targetId": "ada6-bac1-ffe0-d6f7",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "9\"",
+                        "field": "name",
+                        "join": " "
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -160726,7 +161347,24 @@
                 "import": true,
                 "name": "Key of Ghosts",
                 "hidden": false,
-                "id": "1927-5104-198f-4b11"
+                "id": "1927-5104-198f-4b11",
+                "infoLinks": [
+                  {
+                    "name": "Scouts",
+                    "id": "5c74-dbc8-28f2-a241",
+                    "hidden": false,
+                    "type": "rule",
+                    "targetId": "ada6-bac1-ffe0-d6f7",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "6\"",
+                        "field": "name",
+                        "join": " "
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "costs": [
@@ -161249,7 +161887,32 @@
                 "import": true,
                 "name": "Alacritous Assault",
                 "hidden": false,
-                "id": "90c1-42b5-5052-5bbd"
+                "id": "90c1-42b5-5052-5bbd",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Alacritous Assault",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "scope": "root-entry",
+                        "join": ", ",
+                        "skipIfPresent": "Alacritous Assault"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Lance",
+                        "field": "893f-9000-ccf7-648e",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "scope": "root-entry",
+                        "join": ", ",
+                        "skipIfPresent": "Lance"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "profiles": [
@@ -161325,7 +161988,38 @@
                 "import": true,
                 "name": "Exotic Munitions",
                 "hidden": false,
-                "id": "7e77-9e44-2644-3df6"
+                "id": "7e77-9e44-2644-3df6",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Exotic Munitions",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Exotic Munitions"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Anti-Monster 5+",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Monster 5+"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Anti-Vehicle 5+",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Vehicle 5+"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "profiles": [
@@ -161656,7 +162350,16 @@
                 "import": true,
                 "name": "Webway Pathstone",
                 "hidden": false,
-                "id": "64d3-4806-a9ae-eb4e"
+                "id": "64d3-4806-a9ae-eb4e",
+                "infoLinks": [
+                  {
+                    "name": "Deep Strike",
+                    "id": "a0af-c3aa-2e5a-13fe",
+                    "hidden": false,
+                    "type": "rule",
+                    "targetId": "7cb5-dd6b-dd87-ad3b"
+                  }
+                ]
               },
               {
                 "costs": [
@@ -161842,7 +162545,28 @@
                 "import": true,
                 "name": "Voidstone",
                 "hidden": false,
-                "id": "9b12-2696-ec8c-7730"
+                "id": "9b12-2696-ec8c-7730",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Voidstone",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Voidstone"
+                      },
+                      {
+                        "type": "set",
+                        "value": "5+",
+                        "field": "55a7-5b54-c60d-11dc",
+                        "affects": "self.entries.group.recursive.profiles.Unit"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "name": "Corsair Coterie Enhancements",
@@ -173643,20 +174367,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "b1ba-1839-0606-2dce"
-              },
-              {
-                "characteristics": [
-                  {
-                    "$text": "This model can be attached to the following units:\n■ Windriders\n■ Shining Spears",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Leader",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "92cf-f173-ca19-a613"
               }
             ],
             "modifiers": [
