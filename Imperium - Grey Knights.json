@@ -22636,23 +22636,16 @@
             "id": "14a7-11dc-c2ab-0849",
             "targetId": "d564-3284-bf44-b873",
             "primary": false
+          },
+          {
+            "name": "Support",
+            "hidden": false,
+            "id": "d773-1ec0-bd95-4fe6",
+            "targetId": "7dcd-7f61-69a7-0294",
+            "primary": false
           }
         ],
         "profiles": [
-          {
-            "characteristics": [
-              {
-                "$text": "This unit has a 6+ Invulnerable Save",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Invulnerable Save (6+)",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "290c-4f4a-2c2d-a095"
-          },
           {
             "characteristics": [
               {
@@ -22680,6 +22673,20 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "fd84-6d4e-4e0c-af7a"
+          },
+          {
+            "name": "Retinue",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "ae16-1ed-ea16-9713",
+            "characteristics": [
+              {
+                "$text": "While a **^^Brotherhood Techmarine^^** model is leading this unit, models in this unit have the Deep Strike and Teleport Assault abilities",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -23637,38 +23644,54 @@
               }
             ],
             "type": "and"
-          }
-        ],
-        "infoGroups": [
+          },
           {
-            "profiles": [
+            "type": "and",
+            "comment": "Mindlock attached unit modifiers",
+            "conditions": [
               {
-                "characteristics": [
-                  {
-                    "$text": "While a **^^Brotherhood Techmarine^^** model is leading this unit, models in this unit have the Deep Strike and Teleport Assault abilities",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Retinue",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "ae16-1ed-ea16-9713"
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ],
-            "infoLinks": [
+            "modifiers": [
               {
-                "name": "Deep Strike",
-                "id": "3561-38b7-dd05-5e1d",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "7cb5-dd6b-dd87-ad3b"
+                "type": "append",
+                "value": "Mindlock",
+                "field": "annotation",
+                "join": ", ",
+                "skipIfPresent": "Mindlock",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+              },
+              {
+                "type": "append",
+                "value": "Mindlock",
+                "field": "annotation",
+                "join": ", ",
+                "skipIfPresent": "Mindlock",
+                "affects": "self.entries.recursive.profiles.Melee Weapons"
+              },
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "95d1-95f-45b4-11d6",
+                "join": ", ",
+                "skipIfPresent": "Mindlock",
+                "affects": "self.entries.recursive.profiles.Melee Weapons"
+              },
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "94d-8a98-cf90-183e",
+                "join": ", ",
+                "skipIfPresent": "Mindlock",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons"
               }
-            ],
-            "name": "Retinue",
-            "id": "0a7f-6881-d460-ea26",
-            "hidden": false
+            ]
           }
         ],
         "modifiers": [
@@ -23711,7 +23734,104 @@
         "import": true,
         "name": "Servitors [Legends]",
         "hidden": false,
-        "id": "35ed-7890-6c56-18b7"
+        "id": "35ed-7890-6c56-18b7",
+        "infoLinks": [
+          {
+            "name": "Deep Strike",
+            "id": "3561-38b7-dd05-5e1d",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "7cb5-dd6b-dd87-ad3b",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Retinue",
+            "id": "d176-19d7-14bb-7e26",
+            "label": "Retinue",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "8084-5bdd-7c6-bae4",
+                            "shared": true,
+                            "childName": "Purgation Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "67f8-444-b8b7-ad0",
+                            "shared": true,
+                            "childName": "Purifier Squad"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "103f-a8cd-8c1f-24df",
+                            "shared": true,
+                            "childName": "Strike Squad"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "c352-657f-d2cc-adcf",
+                        "shared": true,
+                        "childName": "Brotherhood Techmarine",
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "modifiers": [

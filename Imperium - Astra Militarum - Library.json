@@ -7835,6 +7835,16 @@
             "shared": true,
             "id": "f157-12f7-b496-b99e",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c9e1-29ec-15de-d21f",
+            "childId": "16ea-4f5b-d2d1-4d7d",
+            "childName": "Loyal Protector"
           }
         ],
         "modifiers": [
@@ -8705,7 +8715,38 @@
                 "import": true,
                 "name": "Cadian Commander",
                 "hidden": false,
-                "id": "e830-b3b0-1c4f-cc0d"
+                "id": "e830-b3b0-1c4f-cc0d",
+                "infoLinks": [
+                  {
+                    "name": "Feel No Pain 4+",
+                    "id": "6d44-1865-9460-8b4e",
+                    "hidden": false,
+                    "type": "rule",
+                    "targetId": "eed0-ef83-b6cf-dddf",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": true,
+                        "field": "hidden",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "associations",
+                            "scope": "root-entry",
+                            "shared": true,
+                            "childName": "Loyal Protector",
+                            "includeChildForces": false,
+                            "traverseAssociationGroup": true,
+                            "includeChildSelections": false,
+                            "childId": "16ea-4f5b-d2d1-4d7d"
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "Ogryn Bodyguard attached unit ability"
+                  }
+                ]
               }
             ],
             "name": "Cadian Commander",
@@ -32713,6 +32754,16 @@
             "shared": true,
             "id": "3347-8298-3a6d-4341",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3e8d-cce7-40d3-84d0",
+            "childId": "16ea-4f5b-d2d1-4d7d",
+            "childName": "Loyal Protector"
           }
         ],
         "selectionEntryGroups": [
@@ -33751,7 +33802,38 @@
                 "import": true,
                 "name": "Tempestor Prime",
                 "hidden": false,
-                "id": "1999-fec0-869b-8e2"
+                "id": "1999-fec0-869b-8e2",
+                "infoLinks": [
+                  {
+                    "name": "Feel No Pain 4+",
+                    "id": "70b0-7e0c-546c-0506",
+                    "hidden": false,
+                    "type": "rule",
+                    "targetId": "eed0-ef83-b6cf-dddf",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": true,
+                        "field": "hidden",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "associations",
+                            "scope": "root-entry",
+                            "childId": "16ea-4f5b-d2d1-4d7d",
+                            "shared": true,
+                            "childName": "Loyal Protector",
+                            "includeChildForces": false,
+                            "traverseAssociationGroup": true,
+                            "includeChildSelections": false
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "Ogryn Bodyguard attached unit ability"
+                  }
+                ]
               }
             ],
             "name": "Tempestor Prime",
@@ -35575,7 +35657,38 @@
         "import": true,
         "name": "Nork Deddog",
         "hidden": false,
-        "id": "bcda-f4bb-e726-9bfe"
+        "id": "bcda-f4bb-e726-9bfe",
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Loyal Protector",
+            "id": "d9d0-25b4-b3d9-f29b",
+            "label": "Loyally Protecting",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4100-95dc-a489-ffbc",
+                    "shared": true,
+                    "childName": "Command Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -36554,7 +36667,38 @@
         "import": true,
         "name": "Ogryn Bodyguard",
         "hidden": false,
-        "id": "a7c2-1534-93b0-c0eb"
+        "id": "a7c2-1534-93b0-c0eb",
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Loyal Protector",
+            "id": "e4aa-3aa0-b06f-5e66",
+            "label": "Loyally Protecting",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "4100-95dc-a489-ffbc",
+                    "shared": true,
+                    "childName": "Command Squad"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "costs": [
@@ -107971,6 +108115,16 @@
             "shared": true,
             "id": "872c-3150-1097-72d7",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3d41-0768-9228-8113",
+            "childId": "16ea-4f5b-d2d1-4d7d",
+            "childName": "Loyal Protector"
           }
         ],
         "modifiers": [
@@ -108928,7 +109082,38 @@
                 "import": true,
                 "name": "Lord Commissar",
                 "hidden": false,
-                "id": "bdfc-7111-a16e-0aa7"
+                "id": "bdfc-7111-a16e-0aa7",
+                "infoLinks": [
+                  {
+                    "name": "Feel No Pain 4+",
+                    "id": "fbd3-74f7-b0a0-2faf",
+                    "hidden": false,
+                    "type": "rule",
+                    "targetId": "eed0-ef83-b6cf-dddf",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": true,
+                        "field": "hidden",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "associations",
+                            "scope": "root-entry",
+                            "childId": "16ea-4f5b-d2d1-4d7d",
+                            "shared": true,
+                            "childName": "Loyal Protector",
+                            "includeChildForces": false,
+                            "traverseAssociationGroup": true,
+                            "includeChildSelections": false
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "Ogryn Bodyguard attached unit ability"
+                  }
+                ]
               }
             ],
             "name": "Lord Commissar",
@@ -110510,6 +110695,16 @@
             "shared": true,
             "id": "8ef3-0043-bd6f-b400",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "cee9-1b4c-63cc-9399",
+            "childId": "16ea-4f5b-d2d1-4d7d",
+            "childName": "Loyal Protector"
           }
         ],
         "modifiers": [
@@ -112298,7 +112493,38 @@
                 "import": true,
                 "name": "Catachan Commander",
                 "hidden": false,
-                "id": "2d9e-f95e-8a1d-81ac"
+                "id": "2d9e-f95e-8a1d-81ac",
+                "infoLinks": [
+                  {
+                    "name": "Feel No Pain 4+",
+                    "id": "b4d3-7021-467a-d403",
+                    "hidden": false,
+                    "type": "rule",
+                    "targetId": "eed0-ef83-b6cf-dddf",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": true,
+                        "field": "hidden",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "associations",
+                            "scope": "root-entry",
+                            "childId": "16ea-4f5b-d2d1-4d7d",
+                            "shared": true,
+                            "childName": "Loyal Protector",
+                            "includeChildForces": false,
+                            "traverseAssociationGroup": true,
+                            "includeChildSelections": false
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "Ogryn Bodyguard attached unit ability"
+                  }
+                ]
               }
             ],
             "name": "Catachan Commander",
@@ -120993,6 +121219,16 @@
             "id": "a4a4-9a7f-1893-226a",
             "includeChildSelections": false,
             "includeChildForces": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "4d6b-d5e2-b82d-d7dc",
+            "childId": "16ea-4f5b-d2d1-4d7d",
+            "childName": "Loyal Protector"
           }
         ],
         "modifiers": [
@@ -121278,7 +121514,38 @@
                 "import": true,
                 "name": "Minka Lesk",
                 "hidden": false,
-                "id": "0cae-25c3-a7b0-8a03"
+                "id": "0cae-25c3-a7b0-8a03",
+                "infoLinks": [
+                  {
+                    "name": "Feel No Pain 4+",
+                    "id": "f1d5-6485-0cef-f4dd",
+                    "hidden": false,
+                    "type": "rule",
+                    "targetId": "eed0-ef83-b6cf-dddf",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": true,
+                        "field": "hidden",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "associations",
+                            "scope": "root-entry",
+                            "childId": "16ea-4f5b-d2d1-4d7d",
+                            "shared": true,
+                            "childName": "Loyal Protector",
+                            "includeChildForces": false,
+                            "traverseAssociationGroup": true,
+                            "includeChildSelections": false
+                          }
+                        ]
+                      }
+                    ],
+                    "comment": "Ogryn Bodyguard attached unit ability"
+                  }
+                ]
               }
             ],
             "name": "Minka Lesk",

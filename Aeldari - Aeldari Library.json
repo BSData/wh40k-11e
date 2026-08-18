@@ -20614,9 +20614,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following units:\n■ Warlock Skyrunners\n■ Windriders",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- **^^Warlock Skyrunners^^**\n- **^^Windriders^^**"
               }
             ],
             "name": "Leader",
@@ -25209,33 +25209,6 @@
                         "value": 1,
                         "field": "associations",
                         "scope": "self",
-                        "childId": "7989-9352-554c-b202",
-                        "shared": true,
-                        "childName": "Eldrad Ultran",
-                        "includeChildForces": false,
-                        "traverseAssociationGroup": true
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "associations",
-                        "scope": "self",
-                        "childId": "7d34-c046-e08f-13e1",
-                        "shared": true,
-                        "childName": "Warlock Conclave",
-                        "includeChildForces": false,
-                        "traverseAssociationGroup": true
-                      }
-                    ]
-                  },
-                  {
-                    "type": "and",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "associations",
-                        "scope": "self",
                         "childId": "f6ad-58ab-74f5-80ea",
                         "shared": true,
                         "traverseAssociationGroup": true,
@@ -25252,6 +25225,19 @@
                         "childName": "Yvraine"
                       }
                     ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "7d34-c046-e08f-13e1",
+                    "shared": true,
+                    "childName": "Warlock Conclave",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
                   }
                 ]
               }
@@ -25316,7 +25302,10 @@
             "shared": true,
             "id": "dfc1-3bf1-489f-4ffb",
             "childId": "1556-9b56-fba6-4370",
-            "childName": "Leader"
+            "childName": "Leader",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "traverseAssociationGroup": false
           },
           {
             "type": "max",
@@ -25327,6 +25316,26 @@
             "id": "6127-9154-0291-0fc2",
             "childId": "7dcd-7f61-69a7-0294",
             "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "5420-8316-282b-103e",
+            "childId": "b9d4-b41a-28ae-aa30",
+            "childName": "Support Weapon"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "aac5-9f74-89c7-9b57",
+            "childId": "7d34-c046-e08f-13e1",
+            "childName": "Warlock Conclave"
           }
         ],
         "infoLinks": [
@@ -39577,33 +39586,6 @@
                         "value": 1,
                         "field": "associations",
                         "scope": "self",
-                        "childId": "7989-9352-554c-b202",
-                        "shared": true,
-                        "childName": "Eldrad Ultran",
-                        "includeChildForces": false,
-                        "traverseAssociationGroup": true
-                      },
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "associations",
-                        "scope": "self",
-                        "childId": "7d34-c046-e08f-13e1",
-                        "shared": true,
-                        "childName": "Warlock Conclave",
-                        "includeChildForces": false,
-                        "traverseAssociationGroup": true
-                      }
-                    ]
-                  },
-                  {
-                    "type": "and",
-                    "conditions": [
-                      {
-                        "type": "atLeast",
-                        "value": 1,
-                        "field": "associations",
-                        "scope": "self",
                         "childId": "f6ad-58ab-74f5-80ea",
                         "shared": true,
                         "traverseAssociationGroup": true,
@@ -39620,6 +39602,19 @@
                         "childName": "Yvraine"
                       }
                     ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "7d34-c046-e08f-13e1",
+                    "shared": true,
+                    "childName": "Warlock Conclave",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
                   }
                 ]
               }
@@ -39684,7 +39679,10 @@
             "shared": true,
             "id": "06e8-e926-5134-231a",
             "childId": "1556-9b56-fba6-4370",
-            "childName": "Leader"
+            "childName": "Leader",
+            "traverseAssociationGroup": false,
+            "includeChildSelections": false,
+            "includeChildForces": false
           },
           {
             "type": "max",
@@ -39695,6 +39693,26 @@
             "id": "c702-22ca-dc53-cdd0",
             "childId": "7dcd-7f61-69a7-0294",
             "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "57d4-e4ec-0dea-0d2b",
+            "childId": "7d34-c046-e08f-13e1",
+            "childName": "Warlock Conclave"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "52d8-e6fa-804a-7bf6",
+            "childId": "b9d4-b41a-28ae-aa30",
+            "childName": "Support Weapon"
           }
         ],
         "infoLinks": [
@@ -42127,7 +42145,38 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "model"
+        "type": "model",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Support Weapon",
+            "id": "8070-a69a-6e33-f1db",
+            "label": "Support Weapon",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1880-69f1-aa1e-f33c",
+                    "shared": true,
+                    "childName": "Guardian Defenders"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "modifiers": [
@@ -50815,6 +50864,17 @@
                     "targetId": "a5a4-3686-1626-973d",
                     "type": "profile"
                   }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 4,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "97d7-3d1f-fe22-aae0",
+                    "includeChildSelections": false
+                  }
                 ]
               },
               {
@@ -51023,6 +51083,17 @@
                     "type": "profile",
                     "name": "Warlock",
                     "hidden": false
+                  }
+                ],
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 4,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "3f1f-2eb3-4ea4-8942",
+                    "includeChildSelections": false
                   }
                 ]
               }
@@ -51258,24 +51329,46 @@
             "conditionGroups": [
               {
                 "type": "or",
-                "conditions": [
+                "conditionGroups": [
                   {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "1880-69f1-aa1e-f33c",
-                    "shared": true,
-                    "childName": "Guardian Defenders"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "af39-ea5c-4f23-311d",
-                    "shared": true,
-                    "childName": "Storm Guardians"
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "1880-69f1-aa1e-f33c",
+                            "shared": true,
+                            "childName": "Guardian Defenders"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "af39-ea5c-4f23-311d",
+                            "shared": true,
+                            "childName": "Storm Guardians"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "851f-4e16-2f8d-17ae",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Farseer"
+                      }
+                    ]
                   }
                 ]
               }
@@ -55192,6 +55285,22 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "4eb1-4026-e53d-3394",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "5f58-cbe9-8f98-1dca",
+                "shared": true,
+                "childName": "Warlock Skyrunners"
+              }
+            ]
           }
         ],
         "constraints": [
@@ -55263,6 +55372,16 @@
             "id": "ffe5-9aad-46ab-497e",
             "childId": "7dcd-7f61-69a7-0294",
             "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "5aa0-8f14-a6d4-3449",
+            "childId": "5f58-cbe9-8f98-1dca",
+            "childName": "Warlock Skyrunners"
           }
         ],
         "infoLinks": [
@@ -113568,15 +113687,30 @@
             "conditionGroups": [
               {
                 "type": "or",
-                "conditions": [
+                "conditionGroups": [
                   {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "e32d-476-6618-3181",
-                    "shared": true,
-                    "childName": "Windriders"
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "4fdc-b86b-a0d7-8698",
+                        "shared": true,
+                        "childName": "Farseer Skyrunner",
+                        "queryFromSelf": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "e32d-476-6618-3181",
+                        "shared": true,
+                        "childName": "Windriders"
+                      }
+                    ]
                   }
                 ]
               }
@@ -116626,7 +116760,38 @@
         "name": "Shadow Weaver Platform",
         "hidden": false,
         "id": "2c93-f32d-64ea-b829",
-        "collective": false
+        "collective": false,
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Support Weapon",
+            "id": "9cc2-1d71-741e-1fbe",
+            "label": "Support Weapon",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1880-69f1-aa1e-f33c",
+                    "shared": true,
+                    "childName": "Guardian Defenders"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -117202,7 +117367,38 @@
         "name": "Vibro Cannon Platform",
         "hidden": false,
         "id": "5df4-e13a-f6f4-b672",
-        "collective": false
+        "collective": false,
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Support Weapon",
+            "id": "bb8e-b513-5063-5d5c",
+            "label": "Support Weapon",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1880-69f1-aa1e-f33c",
+                    "shared": true,
+                    "childName": "Guardian Defenders"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "profiles": [
@@ -179515,9 +179711,9 @@
       {
         "characteristics": [
           {
-            "$text": "At the start of the Declare Battle Formations step, this model can join one Guardian Defenders unit from your army (a unit cannot have more than one Support Weapon model joined to it). This model then counts as part of that Guardians unit for the rest of the battle, and that unit's Starting Strength is increased accordingly.\n\n\nThis model, and any unit it is joined to, cannot embark within a Transport.",
             "name": "Description",
-            "typeId": "9b8f-694b-e5e-b573"
+            "typeId": "9b8f-694b-e5e-b573",
+            "$text": "At the start of the Declare Battle Formations step, this model can join one Guardian Defenders unit from your army (a unit cannot have more than one Support Weapon model joined to it). This model then counts as part of that Guardians unit for the rest of the battle, and that unit's Starting Strength is increased accordingly.\n\nThis model, and any unit it is joined to, cannot embark within a Transport."
           }
         ],
         "name": "Support Artillery",
