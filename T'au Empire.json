@@ -873,13 +873,14 @@
                 "value": "Superior Craftmanship",
                 "field": "annotation",
                 "join": ", ",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Superior Craftmanship"
               },
               {
                 "type": "increment",
                 "value": 6,
                 "field": "9896-9419-16a1-92fc",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               }
             ],
             "conditions": [
@@ -1494,13 +1495,14 @@
                 "value": "Superior Craftmanship",
                 "field": "annotation",
                 "join": ", ",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Superior Craftmanship"
               },
               {
                 "type": "increment",
                 "value": 6,
                 "field": "9896-9419-16a1-92fc",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               }
             ],
             "conditions": [
@@ -2632,13 +2634,14 @@
                 "value": "Superior Craftmanship",
                 "field": "annotation",
                 "join": ", ",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Superior Craftmanship"
               },
               {
                 "type": "increment",
                 "value": 6,
                 "field": "9896-9419-16a1-92fc",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               }
             ],
             "conditions": [
@@ -3714,13 +3717,14 @@
                 "value": "Superior Craftmanship",
                 "field": "annotation",
                 "join": ", ",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Superior Craftmanship"
               },
               {
                 "type": "increment",
                 "value": 6,
                 "field": "9896-9419-16a1-92fc",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               }
             ],
             "conditions": [
@@ -4834,13 +4838,14 @@
                 "value": "Superior Craftmanship",
                 "field": "annotation",
                 "join": ", ",
-                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Superior Craftmanship"
               },
               {
                 "type": "increment",
                 "value": 6,
                 "field": "9896-9419-16a1-92fc",
-                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               }
             ],
             "conditions": [
@@ -49351,16 +49356,46 @@
             "modifiers": [
               {
                 "type": "append",
+                "value": "Eclipse Field Generator",
+                "field": "annotation",
+                "affects": "entries.group.recursive.profiles.Unit",
+                "join": ", "
+              },
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "entries.group.recursive.profiles.Unit"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Eclipse Field Generator attached unit modifiers"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
                 "value": "Superior Craftmanship",
                 "field": "annotation",
                 "join": ", ",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Superior Craftmanship"
               },
               {
                 "type": "increment",
                 "value": 6,
                 "field": "9896-9419-16a1-92fc",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               }
             ],
             "conditions": [
@@ -49376,35 +49411,6 @@
               }
             ],
             "comment": "Experimental Prototype Cadre detachment"
-          },
-          {
-            "type": "and",
-            "modifiers": [
-              {
-                "type": "append",
-                "value": "Eclipse Field Generator",
-                "field": "annotation",
-                "affects": "entries.group.recursive.group.profiles.Unit",
-                "join": ", "
-              },
-              {
-                "type": "set",
-                "value": "5+",
-                "field": "55a7-5b54-c60d-11dc",
-                "affects": "entries.group.recursive.group.profiles.Unit"
-              }
-            ],
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "any",
-                "shared": true
-              }
-            ],
-            "comment": "Eclipse Field Generator attached unit modifiers"
           }
         ],
         "type": "model",
@@ -63673,6 +63679,38 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Superior Craftmanship",
+                "field": "annotation",
+                "join": ", ",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Superior Craftmanship"
+              },
+              {
+                "type": "increment",
+                "value": 6,
+                "field": "9896-9419-16a1-92fc",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "greaterThan",
+                "value": 0,
+                "field": "selections",
+                "scope": "force",
+                "childId": "1520-c344-f4fe-b414",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true
+              }
+            ],
+            "comment": "Experimental Prototype Cadre detachment"
           }
         ],
         "modifiers": [
@@ -65587,13 +65625,14 @@
                 "value": "Superior Craftmanship",
                 "field": "annotation",
                 "join": ", ",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Superior Craftmanship"
               },
               {
                 "type": "increment",
                 "value": 6,
                 "field": "9896-9419-16a1-92fc",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               }
             ],
             "conditions": [
