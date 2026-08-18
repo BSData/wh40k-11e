@@ -62151,6 +62151,42 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Towering Arrogance",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Towering Arrogance"
+              },
+              {
+                "type": "increment",
+                "value": "1",
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.profiles.Unit"
+              },
+              {
+                "type": "decrement",
+                "value": "1",
+                "field": "58d2-b879-49c7-43bc",
+                "affects": "self.entries.group.recursive.profiles.Unit"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "comment": "Towering Arrogance Enhancement upgrade attached unit modifiers"
           }
         ],
         "id": "5c1c-fa4a-3234-c711",
@@ -81160,7 +81196,8 @@
                 "value": "Sustained Hits 1",
                 "field": "893f-9000-ccf7-648e",
                 "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
-                "join": ", "
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
               }
             ],
             "conditions": [
@@ -120286,7 +120323,8 @@
                 "value": "Sustained Hits 1",
                 "field": "893f-9000-ccf7-648e",
                 "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
-                "join": ", "
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits 1"
               }
             ],
             "conditions": [
@@ -138962,9 +139000,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following units:\n■ Wyches",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- **^^Wyches^^**"
               }
             ],
             "modifiers": [
@@ -139365,6 +139403,55 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Storm of Blades",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", ",
+                "scope": "root-entry",
+                "skipIfPresent": "Storm of Blades"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", ",
+                "scope": "root-entry",
+                "skipIfPresent": "Sustained Hits 1"
+              }
+            ],
+            "comment": "Storm of Blades attached unit modifiers",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ddcc-be57-11a9-f85f",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Storm of Blades"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "constraints": [
@@ -139714,9 +139801,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following units:\n■ Wracks",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- **^^Wracks^^**"
               }
             ],
             "modifiers": [
@@ -140200,6 +140287,55 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Storm of Blades",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", ",
+                "scope": "root-entry",
+                "skipIfPresent": "Storm of Blades"
+              },
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                "join": ", ",
+                "scope": "root-entry",
+                "skipIfPresent": "Sustained Hits 1"
+              }
+            ],
+            "comment": "Storm of Blades attached unit modifiers",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childId": "ddcc-be57-11a9-f85f",
+                    "childName": "Storm of Blades"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "constraints": [
@@ -140607,9 +140743,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following units:\n■ Guardian Defenders\n■ Storm Guardian\n■ Warlock Conclave",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- **^^Guardian Defenders^^**\n- **^^Storm Guardian^^**\n- **^^Warlock Conclave^^**"
               }
             ],
             "modifiers": [
@@ -157129,15 +157265,6 @@
                     "type": "max",
                     "value": 1,
                     "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "a489-53d8-564a-2caf",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
                     "scope": "roster",
                     "shared": true,
                     "id": "b078-8643-a1d5-a11a",
@@ -157175,6 +157302,20 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
+                  },
+                  {
+                    "type": "add",
+                    "value": "c05d-f4c3-f091-4938",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
+                  },
+                  {
+                    "type": "add",
+                    "value": "bec5-4288-34a6-ccfa",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "type": "upgrade",
@@ -160023,14 +160164,6 @@
                     "type": "max",
                     "value": 1,
                     "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "6019-6d46-2ea1-1aea"
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
                     "scope": "roster",
                     "shared": true,
                     "id": "23bc-8718-366d-d00c",
@@ -160083,7 +160216,41 @@
                 "import": true,
                 "name": "Master Artisan",
                 "hidden": false,
-                "id": "8650-1a6c-82ee-1243"
+                "id": "8650-1a6c-82ee-1243",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Master Artisan",
+                        "field": "annotation",
+                        "join": ", ",
+                        "skipIfPresent": "Master Artisan",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 1,
+                        "field": "750a-a2ec-90d3-21fe",
+                        "join": ", ",
+                        "skipIfPresent": "Master Artisan",
+                        "affects": "self.entries.recursive.profiles.Unit",
+                        "scope": "model-self"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 1,
+                        "field": "d29d-cf75-fc2d-34a4",
+                        "join": ", ",
+                        "skipIfPresent": "Master Artisan",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "profiles": [
@@ -160635,15 +160802,6 @@
                   }
                 ],
                 "constraints": [
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "f01a-603a-4f3d-2b6d",
-                    "includeChildSelections": false
-                  },
                   {
                     "type": "max",
                     "value": 1,
@@ -163448,15 +163606,6 @@
                     "type": "max",
                     "value": 1,
                     "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "231c-c5b4-e55e-8d06",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
                     "scope": "roster",
                     "shared": true,
                     "id": "7838-2314-a7d3-dcee",
@@ -163519,7 +163668,7 @@
                         "value": "Towering Arrogance",
                         "field": "annotation",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", "
                       },
                       {
@@ -163527,14 +163676,14 @@
                         "value": "1",
                         "field": "bef7-942a-1a23-59f8",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "affects": "self.entries.group.recursive.profiles.Unit"
                       },
                       {
                         "type": "decrement",
                         "value": "1",
                         "field": "58d2-b879-49c7-43bc",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "affects": "self.entries.group.recursive.profiles.Unit"
                       }
                     ]
                   }
@@ -163650,33 +163799,37 @@
                         "type": "append",
                         "value": "Contempt For Rivals",
                         "field": "annotation",
-                        "scope": "model",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                        "join": ", "
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Contempt For Rivals"
                       },
                       {
                         "type": "append",
                         "value": "Contempt For Rivals",
                         "field": "annotation",
-                        "scope": "model",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons",
-                        "join": ", "
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Contempt For Rivals"
                       },
                       {
                         "type": "append",
                         "value": "Precision",
                         "field": "7f1b-8591-2fcf-d01c",
-                        "scope": "model",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                        "join": ", "
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Precision"
                       },
                       {
                         "type": "append",
                         "value": "Precision",
                         "field": "893f-9000-ccf7-648e",
-                        "scope": "model",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons",
-                        "join": ", "
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Precision"
                       }
                     ]
                   }
