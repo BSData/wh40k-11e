@@ -62176,17 +62176,32 @@
                 "affects": "self.entries.group.recursive.profiles.Unit"
               }
             ],
-            "conditions": [
+            "comment": "Towering Arrogance Enhancement upgrade attached unit modifiers",
+            "conditionGroups": [
               {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "any",
-                "shared": true
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childId": "f775-311c-a54a-308a",
+                    "childName": "Towering Arrogance"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
               }
-            ],
-            "comment": "Towering Arrogance Enhancement upgrade attached unit modifiers"
+            ]
           }
         ],
         "id": "5c1c-fa4a-3234-c711",
@@ -67669,6 +67684,33 @@
                     "childId": "c868-e8d0-ad92-688a",
                     "shared": true,
                     "childName": "Wracks"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "758e-5883-8496-6f43",
+                        "shared": true,
+                        "childName": "Incubi Shrine controlled",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1878-4fff-e0c3-da26",
+                        "shared": true,
+                        "childName": "Incubi"
+                      }
+                    ]
                   }
                 ]
               }
@@ -81387,6 +81429,33 @@
                     "childId": "d357-8df3-b183-f757",
                     "shared": true,
                     "childName": "Wyches"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "758e-5883-8496-6f43",
+                        "shared": true,
+                        "childName": "Incubi Shrine controlled",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1878-4fff-e0c3-da26",
+                        "shared": true,
+                        "childName": "Incubi"
+                      }
+                    ]
                   }
                 ]
               }
@@ -139726,6 +139795,31 @@
                         ]
                       }
                     ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "758e-5883-8496-6f43",
+                        "shared": true,
+                        "childName": "Incubi Shrine controlled",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1878-4fff-e0c3-da26",
+                        "shared": true,
+                        "childName": "Incubi"
+                      }
+                    ]
                   }
                 ]
               }
@@ -140468,6 +140562,31 @@
                             "childName": "Scourges with Shardcarbines"
                           }
                         ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "758e-5883-8496-6f43",
+                        "shared": true,
+                        "childName": "Incubi Shrine controlled",
+                        "queryFromSelf": true,
+                        "includeChildSelections": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1878-4fff-e0c3-da26",
+                        "shared": true,
+                        "childName": "Incubi"
                       }
                     ]
                   }
@@ -166368,20 +166487,64 @@
                     "id": "dfef-85ce-8cc7-a6c6"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Lethal Hits",
-                    "id": "691d-66b9-294e-6c4a",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "d1d1-611e-5191-1095"
-                  }
-                ],
                 "type": "upgrade",
                 "import": true,
                 "name": "Toxin Distillery controlled",
                 "hidden": false,
-                "id": "2dca-af65-edb9-bb60"
+                "id": "2dca-af65-edb9-bb60",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Toxin Distillery",
+                        "field": "annotation",
+                        "join": ", ",
+                        "skipIfPresent": "Toxin Distillery",
+                        "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Toxin Distillery",
+                        "field": "annotation",
+                        "join": ", ",
+                        "skipIfPresent": "Toxin Distillery",
+                        "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Lethal Hits",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "join": ", ",
+                        "skipIfPresent": "Lethal Hits",
+                        "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Lethal Hits",
+                        "field": "893f-9000-ccf7-648e",
+                        "join": ", ",
+                        "skipIfPresent": "Lethal Hits",
+                        "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
+                        "scope": "root-entry"
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "root-entry",
+                        "childId": "any",
+                        "shared": true
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -166479,20 +166642,31 @@
                     "id": "5d17-ba74-ee7f-058c"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Feel No Pain",
-                    "id": "64d2-de76-a8e8-a183",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
-                  }
-                ],
                 "type": "upgrade",
                 "import": true,
                 "name": "Incubi Shrine controlled",
                 "hidden": false,
-                "id": "758e-5883-8496-6f43"
+                "id": "758e-5883-8496-6f43",
+                "modifiers": [
+                  {
+                    "type": "add",
+                    "value": "5e10-6d62-2624-80a8",
+                    "field": "add-info",
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "root-entry",
+                        "childId": "6c05-f06f-9b9f-890d",
+                        "shared": true,
+                        "childName": "Archon"
+                      }
+                    ],
+                    "affects": "group",
+                    "scope": "root-entry"
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -169399,7 +169573,55 @@
                 "import": true,
                 "name": "Delirium Cowl",
                 "hidden": false,
-                "id": "1858-f36a-7e02-d4a9"
+                "id": "1858-f36a-7e02-d4a9",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": "2+* / 4+",
+                        "field": "55a7-5b54-c60d-11dc",
+                        "affects": "profiles.Unit",
+                        "scope": "model-self",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "ancestor",
+                            "childId": "6c05-f06f-9b9f-890d",
+                            "shared": true,
+                            "childName": "Archon"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "append",
+                        "value": "Delirium Cowl",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "join": ", ",
+                        "skipIfPresent": "Delirium Cowl"
+                      },
+                      {
+                        "type": "set",
+                        "value": "5+",
+                        "field": "55a7-5b54-c60d-11dc",
+                        "affects": "entries.recursive.associations.profiles.Unit",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "set",
+                        "value": "4+",
+                        "field": "55a7-5b54-c60d-11dc",
+                        "affects": "self.entries.recursive.9cfd-1c32-585f-7d5c.profiles.Unit",
+                        "scope": "root-entry"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "name": "Legendary Relics",
@@ -169628,6 +169850,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "faec-8b1b-5a21-0087",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "costs": [
@@ -169655,15 +169884,6 @@
                     "name": "Military Power",
                     "typeId": "1cbe-d9c9-86a8-2d41",
                     "value": 0
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Feel No Pain",
-                    "id": "6364-a7c1-4af8-1389",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
                   }
                 ],
                 "type": "upgrade",
