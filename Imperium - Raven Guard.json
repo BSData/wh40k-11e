@@ -513,7 +513,55 @@
         "import": true,
         "name": "Kayvaan Shrike",
         "hidden": false,
-        "id": "339f-9776-243d-69a6"
+        "id": "339f-9776-243d-69a6",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "ea9f-2d81-2bfe-9a93",
+            "label": "Led by",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6c92-4e9d-b5e5-1287",
+                    "shared": true,
+                    "childName": "Assault Intercessors with Jump Packs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "21e8-92f1-9d9a-8c49",
+                    "shared": true,
+                    "childName": "Assault Squad with Jump Packs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "17c0-599-955a-bdab",
+                    "shared": true,
+                    "childName": "Vanguard Veteran Squad with Jump Packs"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "profiles": [
@@ -964,7 +1012,7 @@
     "name": "Imperium - Adeptus Astartes - Raven Guard",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 1,
+    "revision": 2,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }
