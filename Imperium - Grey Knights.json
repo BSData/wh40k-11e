@@ -39096,6 +39096,13 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
+                  },
+                  {
+                    "type": "add",
+                    "value": "bec5-4288-34a6-ccfa",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "profiles": [
@@ -39126,15 +39133,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "6681-17d2-f435-b2b9"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Stealth",
-                    "id": "e9ea-1d66-e846-b039",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
                   }
                 ],
                 "type": "upgrade",
@@ -39269,20 +39267,36 @@
                     "id": "2de5-7c9e-3971-0415"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Lance",
-                    "id": "0e5e-9db9-2d7a-8683",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "2ebc-abdf-8129-6c57"
-                  }
-                ],
                 "type": "upgrade",
                 "import": true,
                 "name": "Fires of Purgation (Psychic)",
                 "hidden": false,
-                "id": "095e-eae0-9931-236b"
+                "id": "095e-eae0-9931-236b",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Fires of Purgation",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Fires of Purgation",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Lance",
+                        "field": "893f-9000-ccf7-648e",
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Lance",
+                        "scope": "root-entry"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "costs": [
@@ -39368,6 +39382,11 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
+                  },
+                  {
+                    "type": "add",
+                    "value": "faec-8b1b-5a21-0087",
+                    "field": "add-info"
                   }
                 ],
                 "profiles": [
@@ -39398,15 +39417,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "fc90-e3e6-3c61-58b3"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Feel No Pain",
-                    "id": "42c5-633f-43a7-f4bd",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
                   }
                 ],
                 "type": "upgrade",
@@ -39531,20 +39541,45 @@
                     "id": "f128-4f4b-7982-4c18"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Ignores Cover",
-                    "id": "514f-9cfc-4a05-fee4",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "4640-43e7-30b-215a"
-                  }
-                ],
                 "type": "upgrade",
                 "import": true,
                 "name": "Astral Aim (Psychic)",
                 "hidden": false,
-                "id": "ed02-85b5-8a4d-2e94"
+                "id": "ed02-85b5-8a4d-2e94",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Astral Aim",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Astral Aim",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 6,
+                        "field": "9896-9419-16a1-92fc",
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Astral Aim",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Ignores Cover",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Ignores Cover",
+                        "scope": "root-entry"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "costs": [
@@ -39804,20 +39839,54 @@
                     "id": "89f6-3128-f081-1060"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Sustained Hits",
-                    "id": "1387-e51d-711d-02de",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "1897-c22c-9597-12b1"
-                  }
-                ],
                 "type": "upgrade",
                 "import": true,
                 "name": "Channelled Fury (Psychic)",
                 "hidden": false,
-                "id": "036c-cd55-d756-079c"
+                "id": "036c-cd55-d756-079c",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Channelled Fury",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Channelled Fury",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Sustained Hits 1",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Sustained Hits 1",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Channelled Fury",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Channelled Fury",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Sustained Hits 1",
+                        "field": "893f-9000-ccf7-648e",
+                        "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Sustained Hits 1",
+                        "scope": "root-entry"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -39940,15 +40009,17 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "skipIfPresent": "Strike Specialists"
                   },
                   {
                     "type": "append",
                     "value": "Assault",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Assault"
                   }
                 ],
                 "type": "and"
@@ -40287,14 +40358,15 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "skipIfPresent": "Force Acuity"
                   },
                   {
                     "type": "decrement",
                     "value": 1,
                     "field": "41a0-1301-112a-e2f2",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
                     "join": ", "
                   }
                 ],
@@ -47413,15 +47485,11 @@
                         "childName": "Interceptor Squad"
                       }
                     ]
-                  }
-                ],
-                "infoLinks": [
+                  },
                   {
-                    "name": "Stealth",
-                    "id": "a227-41a6-2fd2-5fce",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
+                    "type": "add",
+                    "value": "bec5-4288-34a6-ccfa",
+                    "field": "add-info"
                   }
                 ]
               }
