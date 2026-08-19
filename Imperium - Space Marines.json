@@ -860,7 +860,7 @@
       },
       {
         "import": true,
-        "name": "Ancient in Terminator Armor",
+        "name": "Ancient in Terminator Armour",
         "hidden": false,
         "type": "selectionEntry",
         "id": "13b9-6251-7254-4b83",
@@ -130684,16 +130684,6 @@
         "constraints": [
           {
             "type": "max",
-            "value": 0,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "1852-2e76-ee7b-15aa",
-            "includeChildSelections": true,
-            "includeChildForces": true
-          },
-          {
-            "type": "max",
             "value": 3,
             "field": "75bb-ded1-c86d-bdf0",
             "scope": "self",
@@ -130751,6 +130741,15 @@
             "id": "58eb-d0be-5315-f97a",
             "childId": "7dcd-7f61-69a7-0294",
             "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "shared": true,
+            "id": "55d4-3355-4a5b-4f5b",
+            "includeChildSelections": true
           }
         ],
         "categoryLinks": [
@@ -131971,7 +131970,26 @@
         "import": true,
         "name": "Company Heroes",
         "hidden": false,
-        "id": "2f2e-d99b-b235-163a"
+        "id": "2f2e-d99b-b235-163a",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": 2,
+            "field": "55d4-3355-4a5b-4f5b",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "d62d-db22-4893-4bc0",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          }
+        ]
       },
       {
         "profiles": [
@@ -202574,7 +202592,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "e0af-67df-9d63-8fb7",
     "name": "Imperium - Adeptus Astartes - Space Marines",
-    "revision": 6,
+    "revision": 7,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
