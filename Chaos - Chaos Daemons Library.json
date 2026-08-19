@@ -20076,8 +20076,8 @@
           {
             "type": "append",
             "value": "Lethal Hits",
-            "field": "7f1b-8591-2fcf-d01c",
-            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
             "skipIfPresent": "Lethal Hits",
             "join": ", ",
             "conditions": [
@@ -20916,6 +20916,12 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "bec5-4288-34a6-ccfa",
+            "field": "add-info",
+            "affects": "group"
           }
         ],
         "selectionEntryGroups": [
@@ -30931,24 +30937,6 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
-          },
-          {
-            "type": "append",
-            "value": "Sustained Hits 1",
-            "field": "893f-9000-ccf7-648e",
-            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
-            "skipIfPresent": "Sustained Hits",
-            "join": ", ",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "associations",
-                "scope": "self",
-                "childId": "any",
-                "shared": true
-              }
-            ]
           }
         ],
         "selectionEntryGroups": [
@@ -31410,6 +31398,36 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "skipIfPresent": "Sustained Hits",
+                "join": ", "
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "scope": "parent",
+                "affects": "self.entries.group.recursive.profiles.Unit"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "id": "e7cd-468b-37dd-d82f",
@@ -31818,6 +31836,23 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set",
+            "value": "4+",
+            "field": "55a7-5b54-c60d-11dc",
+            "affects": "self.entries.group.recursive.profiles.Unit",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -41508,6 +41543,23 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "699c-55ed-7fee-65ab",
+            "field": "add-info",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ],
+            "affects": "group"
           }
         ],
         "selectionEntryGroups": [
@@ -63103,22 +63155,6 @@
                 "id": "2e4a-29e6-512b-60b2"
               }
             ],
-            "infoLinks": [
-              {
-                "modifiers": [
-                  {
-                    "type": "append",
-                    "value": "9\"",
-                    "field": "name"
-                  }
-                ],
-                "name": "Scouts",
-                "id": "d231-7835-1241-4a7f",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "ada6-bac1-ffe0-d6f7"
-              }
-            ],
             "comment": "Shadow Legion",
             "costs": [
               {
@@ -63212,6 +63248,13 @@
                   }
                 ],
                 "comment": "Character"
+              },
+              {
+                "type": "add",
+                "value": "9ea5-acc2-a2ac-257b",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "constraints": [
@@ -64072,7 +64115,7 @@
                 "value": 1,
                 "field": "e703-ecb6-5ce7-aec1",
                 "scope": "parent",
-                "affects": "self.entries.profiles.Unit"
+                "affects": "self.entries.group.recursive.profiles.Unit"
               }
             ],
             "profiles": [
@@ -66547,9 +66590,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "At the start of the Fight phase, select one enemy unit within 18\" of and visible to this model. Until the end of the phase, each time a friendly ^^**Khorne**^^ unit makes an attack which targets that unit, improve the Strength, Armour Penetraion and Damage characteristics of that attack by 1.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "At the start of the Fight phase, select one enemy unit within 18\" of and visible to this model. Until the end of the phase, each time a friendly ^^**Khorne**^^ unit makes an attack which targets that unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1."
                       }
                     ],
                     "name": "Bloodmarked",
@@ -66771,7 +66814,16 @@
                 "import": true,
                 "name": "Meet Your Quota!",
                 "hidden": false,
-                "id": "2d92-a25f-dc74-e145"
+                "id": "2d92-a25f-dc74-e145",
+                "modifiers": [
+                  {
+                    "type": "increment",
+                    "value": 1,
+                    "field": "bef7-942a-1a23-59f8",
+                    "scope": "parent",
+                    "affects": "self.entries.group.recursive.profiles.Unit"
+                  }
+                ]
               }
             ],
             "name": "Nurgle",
@@ -66862,27 +66914,31 @@
                     "id": "62f4-31f5-6561-bd7d"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "4+",
-                        "field": "name"
-                      }
-                    ],
-                    "name": "Feel No Pain",
-                    "id": "fbdf-c3cb-dac4-dd9c",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
-                  }
-                ],
                 "type": "upgrade",
                 "import": true,
                 "name": "Swallow Energy",
                 "hidden": false,
-                "id": "279c-fdba-9bb8-dd5b"
+                "id": "279c-fdba-9bb8-dd5b",
+                "modifiers": [
+                  {
+                    "type": "add",
+                    "value": "699c-55ed-7fee-65ab",
+                    "field": "add-info",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true,
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "affects": "group",
+                    "scope": "parent"
+                  }
+                ]
               }
             ],
             "name": "Slaanesh",
@@ -70434,14 +70490,14 @@
                 "value": 1,
                 "field": "2229-f494-25db-c5d3",
                 "scope": "parent",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               },
               {
                 "type": "increment",
                 "value": 1,
                 "field": "ab33-d393-96ce-ccba",
                 "scope": "parent",
-                "affects": "self.entries.recursive.profiles.Melee Weapons"
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons"
               }
             ],
             "costs": [
@@ -71223,7 +71279,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "b45c-af22-788a-dfd6",
     "name": "Chaos - Daemons Library",
-    "revision": 12,
+    "revision": 13,
     "battleScribeVersion": 2.03,
     "library": true,
     "gameSystemId": "sys-352e-adc2-7639-d610",
