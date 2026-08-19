@@ -4877,6 +4877,33 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
+          },
+          {
+            "name": "Feel No Pain 4+",
+            "id": "5d59-5e12-bec7-f645",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eed0-ef83-b6cf-dddf",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "dfde-688d-75b8-77bb",
+                    "shared": true,
+                    "childName": "Locus",
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Locus attached unit ability"
           }
         ],
         "profiles": [
@@ -4927,9 +4954,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the HYBRID METAMORPHS keyword, models in that unit have the Feel No Pain 4+ ability instead.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the **HYBRID METAMORPHS** keyword, models in that unit have the Feel No Pain 4+ ability instead."
               }
             ],
             "name": "Nexus of Devotion",
@@ -5533,6 +5560,62 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "add",
+                "value": "5e10-6d62-2624-80a8",
+                "field": "add-info",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "includeChildSelections": false
+                  }
+                ],
+                "affects": "group"
+              },
+              {
+                "type": "add",
+                "value": "eed0-ef83-b6cf-dddf",
+                "field": "add-info",
+                "affects": "group",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "d117-9319-7f52-f4c3",
+                    "shared": true,
+                    "childName": "Hybrid Metamorphs",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false,
+                    "includeChildSelections": false
+                  }
+                ]
+              }
+            ],
+            "comment": "Nexus of Devotion attached unit modifiers",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "type": "model",
@@ -8026,6 +8109,33 @@
             "hidden": false,
             "type": "rule",
             "targetId": "3342-2180-9c5d-925f"
+          },
+          {
+            "name": "Feel No Pain 4+",
+            "id": "6a6a-0624-f032-cdab",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eed0-ef83-b6cf-dddf",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "dfde-688d-75b8-77bb",
+                    "shared": true,
+                    "childName": "Locus",
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Locus attached unit ability"
           }
         ],
         "profiles": [
@@ -8514,15 +8624,17 @@
                 "type": "append",
                 "value": "Twisted Science",
                 "field": "annotation",
-                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
-                "join": ", "
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Twisted Science"
               },
               {
                 "type": "append",
                 "value": "Lethal Hits",
-                "field": "7f1b-8591-2fcf-d01c",
-                "affects": "self.entries.group.recursive.associations.profiles.Melee Weapons",
-                "join": ", "
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits"
               }
             ],
             "conditions": [
@@ -8936,6 +9048,33 @@
             "hidden": false,
             "type": "rule",
             "targetId": "3342-2180-9c5d-925f"
+          },
+          {
+            "name": "Feel No Pain 4+",
+            "id": "274c-a288-3f43-c8ad",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eed0-ef83-b6cf-dddf",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "dfde-688d-75b8-77bb",
+                    "shared": true,
+                    "childName": "Locus",
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Locus attached unit ability"
           }
         ],
         "profiles": [
@@ -12662,16 +12801,27 @@
           {
             "modifiers": [
               {
-                "type": "append",
-                "value": "5+",
-                "field": "name"
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "9777-55d5-ffae-c07",
+                    "shared": true,
+                    "childName": "Acolyte Iconward"
+                  }
+                ]
               }
             ],
-            "name": "Feel No Pain",
+            "name": "Feel No Pain 5+",
             "id": "e6a4-85be-2fa9-5e66",
             "hidden": false,
             "type": "rule",
-            "targetId": "9bf4-280f-bbe2-6fbb"
+            "targetId": "5e10-6d62-2624-80a8"
           }
         ],
         "profiles": [
@@ -14934,7 +15084,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "While this model is leading a unit, models in that unit have the **Fights First** ability"
+                "$text": "While this model is leading a unit, models in that unit have the **Fights First** ability."
               }
             ],
             "name": "Sudden Assault",
@@ -15556,6 +15706,13 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "24-c886-e8ba-5a89",
+            "field": "add-info",
+            "affects": "group",
+            "comment": "Sudden Assault attached ability"
           }
         ],
         "associations": [
@@ -16248,6 +16405,33 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
+          },
+          {
+            "name": "Feel No Pain 4+",
+            "id": "8ab1-7563-f1fe-71bd",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eed0-ef83-b6cf-dddf",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "dfde-688d-75b8-77bb",
+                    "shared": true,
+                    "childName": "Locus",
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Locus attached unit ability"
           }
         ],
         "selectionEntryGroups": [
@@ -19290,9 +19474,9 @@
           {
             "characteristics": [
               {
-                "$text": "At the start of each player’s Command phase, if this model is on the battlefield, you can select one of your Cult Ambush markers that is on the battlefield and has not been moved this turn and move it up to 6\"",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "At the start of each player’s Command phase, if this model is on the battlefield, you can select one of your Cult Ambush markers that is on the battlefield and has not been moved this turn and move it up to 6\"."
               }
             ],
             "name": "Cult Infiltration",
@@ -19359,6 +19543,33 @@
             "hidden": false,
             "type": "rule",
             "targetId": "3342-2180-9c5d-925f"
+          },
+          {
+            "name": "Feel No Pain 4+",
+            "id": "e4bb-6b3f-a4fc-3e5b",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eed0-ef83-b6cf-dddf",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "dfde-688d-75b8-77bb",
+                    "shared": true,
+                    "childName": "Locus",
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Locus attached unit ability"
           }
         ],
         "modifierGroups": [
@@ -20735,6 +20946,33 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
+          },
+          {
+            "name": "Feel No Pain 4+",
+            "id": "4dc4-ee57-a1a0-08ec",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eed0-ef83-b6cf-dddf",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "dfde-688d-75b8-77bb",
+                    "shared": true,
+                    "childName": "Locus",
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Locus attached unit ability"
           }
         ],
         "profiles": [
@@ -25762,6 +26000,33 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
+          },
+          {
+            "name": "Feel No Pain 4+",
+            "id": "02e7-a824-debf-6953",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eed0-ef83-b6cf-dddf",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "dfde-688d-75b8-77bb",
+                    "shared": true,
+                    "childName": "Locus",
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ],
+            "comment": "Locus attached unit ability"
           }
         ],
         "constraints": [
@@ -37471,7 +37736,30 @@
             "import": true,
             "name": "Elusive Raiders",
             "hidden": false,
-            "id": "ae8b-8351-8195-1eb4"
+            "id": "ae8b-8351-8195-1eb4",
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "type": "append",
+                    "value": "Elusive Raiders",
+                    "field": "annotation",
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "join": ", ",
+                    "skipIfPresent": "Elusive Raiders"
+                  },
+                  {
+                    "type": "set",
+                    "value": "5+*",
+                    "field": "55a7-5b54-c60d-11dc",
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Unit"
+                  }
+                ]
+              }
+            ]
           },
           {
             "constraints": [
@@ -44089,20 +44377,36 @@
                 "id": "418c-2890-4e7b-6dd4"
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Anti",
-                "id": "25eb-a400-0a82-4abb",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "4111-82e3-9444-e942"
-              }
-            ],
             "type": "upgrade",
             "import": true,
             "name": "Blessed Venom",
             "hidden": false,
-            "id": "61c7-b6b7-adcf-2e08"
+            "id": "61c7-b6b7-adcf-2e08",
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "type": "append",
+                    "value": "Blessed Venom",
+                    "field": "annotation",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Blessed Venom",
+                    "scope": "root-entry"
+                  },
+                  {
+                    "type": "append",
+                    "value": "Anti-Infantry 3+",
+                    "field": "893f-9000-ccf7-648e",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Anti-Infantry 3+",
+                    "scope": "root-entry"
+                  }
+                ]
+              }
+            ]
           },
           {
             "profiles": [
@@ -44240,7 +44544,43 @@
             "import": true,
             "name": "Twisted Science",
             "hidden": false,
-            "id": "aaed-ee48-2d5c-c382"
+            "id": "aaed-ee48-2d5c-c382",
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "type": "append",
+                    "value": "Twisted Science",
+                    "field": "annotation",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Twisted Science",
+                    "scope": "root-entry"
+                  },
+                  {
+                    "type": "append",
+                    "value": "Lethal Hits",
+                    "field": "893f-9000-ccf7-648e",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Lethal Hits",
+                    "scope": "root-entry"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "root-entry",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "comment": "Twisted Science attached unit modifiers"
+              }
+            ]
           }
         ],
         "constraints": [

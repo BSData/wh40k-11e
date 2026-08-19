@@ -20426,7 +20426,41 @@
                 "import": true,
                 "name": "The Hero Returned",
                 "hidden": false,
-                "id": "42ae-8e75-ce9d-af5b"
+                "id": "42ae-8e75-ce9d-af5b",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "The Hero Returned",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "join": ", ",
+                        "skipIfPresent": "The Hero Returned"
+                      },
+                      {
+                        "type": "decrement",
+                        "value": 1,
+                        "field": "58d2-b879-49c7-43bc",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "join": ", ",
+                        "skipIfPresent": "The Hero Returned"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 1,
+                        "field": "bef7-942a-1a23-59f8",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "join": ", ",
+                        "skipIfPresent": "The Hero Returned"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "modifiers": [
@@ -34614,23 +34648,25 @@
                         "value": "Mark of the Star Children",
                         "field": "annotation",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit",
-                        "join": ", "
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Mark of the Star Children"
                       },
                       {
                         "type": "append",
                         "value": "Mark of the Star Children",
                         "field": "annotation",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons",
-                        "join": ", "
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Mark of the Star Children"
                       },
                       {
                         "type": "increment",
                         "value": 1,
                         "field": "d29d-cf75-fc2d-34a4",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", ",
                         "position": ""
                       },
@@ -34639,7 +34675,7 @@
                         "value": "4+",
                         "field": "450-a17e-9d5e-29da",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", ",
                         "position": ""
                       },
@@ -34648,7 +34684,7 @@
                         "value": 1,
                         "field": "ab33-d393-96ce-ccba",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
                         "join": ", ",
                         "position": ""
                       }
