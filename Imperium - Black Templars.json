@@ -1429,6 +1429,36 @@
             "childName": "unit",
             "action": "group"
           }
+        ],
+        "modifierGroups": [
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "2337-daa1-6682-b110",
+                "affects": "group.recursive.profiles.Melee Weapons"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "ab33-d393-96ce-ccba",
+                "affects": "group.recursive.profiles.Melee Weapons"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
+          }
         ]
       },
       {
@@ -10999,7 +11029,7 @@
           },
           {
             "type": "max",
-            "value": 3,
+            "value": 6,
             "field": "selections",
             "scope": "force",
             "shared": true,
@@ -12897,7 +12927,7 @@
                 "name": "Turret Weapon",
                 "id": "5d17-7232-7f46-d7d1",
                 "hidden": false,
-                "defaultSelectionEntryId": "264c-997d-5a64-c072"
+                "defaultSelectionEntryId": "9458-a89-aae3-d05"
               }
             ],
             "name": "Wargear",
