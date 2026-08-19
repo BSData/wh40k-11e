@@ -8341,8 +8341,8 @@
                         "type": "decrement",
                         "value": 1,
                         "field": "e703-ecb6-5ce7-aec1",
-                        "affects": "self.entries.profiles.Unit",
-                        "scope": "model-or-unit"
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry"
                       },
                       {
                         "conditions": [
@@ -8360,8 +8360,9 @@
                         "value": "Crippling Damage",
                         "field": "annotation",
                         "join": ", ",
-                        "affects": "self.entries.profiles.Unit",
-                        "scope": "model-or-unit"
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "skipIfPresent": "Crippling Damage"
                       },
                       {
                         "conditionGroups": [
@@ -8391,8 +8392,8 @@
                         "type": "floor",
                         "value": 0,
                         "field": "e703-ecb6-5ce7-aec1",
-                        "affects": "self.entries.profiles.Unit",
-                        "scope": "model-or-unit"
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry"
                       }
                     ],
                     "type": "and"
@@ -8584,8 +8585,8 @@
                         "type": "decrement",
                         "value": 1,
                         "field": "bef7-942a-1a23-59f8",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit"
                       },
                       {
                         "conditions": [
@@ -8603,8 +8604,9 @@
                         "value": "Fatigued",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "skipIfPresent": "Fatigued"
                       },
                       {
                         "conditions": [
@@ -8621,8 +8623,8 @@
                         "type": "floor",
                         "value": 0,
                         "field": "bef7-942a-1a23-59f8",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit"
                       }
                     ],
                     "comment": "Battle Scars: Fatigued",
@@ -8858,15 +8860,6 @@
                     "id": "fe00-d1ed-cc9f-af99"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Sustained Hits",
-                    "id": "7729-92d6-11fd-8079",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "1897-c22c-9597-12b1"
-                  }
-                ],
                 "modifierGroups": [
                   {
                     "modifiers": [
@@ -8875,16 +8868,18 @@
                         "value": "Deadly Combatant",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.9cfd-1c32-585f-7d5c.profiles.Melee Weapons",
+                        "skipIfPresent": "Deadly Combatant"
                       },
                       {
                         "type": "append",
                         "value": "Sustained Hits 1",
                         "field": "893f-9000-ccf7-648e",
-                        "scope": "model",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons",
-                        "join": ", "
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.9cfd-1c32-585f-7d5c.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Sustained Hits 1"
                       }
                     ],
                     "type": "and"
@@ -8997,6 +8992,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "9ea5-acc2-a2ac-257b",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "profiles": [
@@ -9013,23 +9015,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "173a-2c06-c7ff-d8fe"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "9\"",
-                        "field": "name",
-                        "join": " "
-                      }
-                    ],
-                    "name": "Scouts",
-                    "id": "a312-8941-6a90-db23",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "ada6-bac1-ffe0-d6f7"
                   }
                 ],
                 "type": "upgrade",
@@ -9139,6 +9124,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "676c-ecb5-d24d-3540",
+                    "field": "add-info",
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.9cfd-1c32-585f-7d5c"
                   }
                 ],
                 "profiles": [
@@ -9155,23 +9147,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "5cea-d2a8-a199-3ada"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "5+",
-                        "field": "name",
-                        "join": " "
-                      }
-                    ],
-                    "name": "Feel No Pain",
-                    "id": "985a-b647-e243-3b3f",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
                   }
                 ],
                 "type": "upgrade",
@@ -9506,6 +9481,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "bec5-4288-34a6-ccfa",
+                    "field": "add-info",
+                    "scope": "root-entry",
+                    "affects": "group"
                   }
                 ],
                 "profiles": [
@@ -9522,15 +9504,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "6494-52de-0f34-f84a"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Stealth",
-                    "id": "5f2c-04a4-18d1-29a2",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
                   }
                 ],
                 "type": "upgrade",
@@ -9777,7 +9750,30 @@
                 "import": true,
                 "name": "Blessed Hull",
                 "hidden": false,
-                "id": "1ff1-67fa-af94-1449"
+                "id": "1ff1-67fa-af94-1449",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "set",
+                        "value": "5+",
+                        "field": "55a7-5b54-c60d-11dc",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Blessed Hull",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "join": ", ",
+                        "skipIfPresent": "Blessed Hull"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -10241,15 +10237,16 @@
                         "value": "Archeotech Power Cell",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "skipIfPresent": "Archeotech Power Cell"
                       },
                       {
                         "type": "increment",
                         "value": 2,
                         "field": "e703-ecb6-5ce7-aec1",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", "
                       }
                     ],
@@ -10453,6 +10450,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "676c-ecb5-d24d-3540",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "profiles": [
@@ -10469,23 +10473,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "2872-cb8d-09c1-83b9"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "6+",
-                        "field": "name",
-                        "join": " "
-                      }
-                    ],
-                    "name": "Feel No Pain",
-                    "id": "ae9d-f329-6a26-2288",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
                   }
                 ],
                 "type": "upgrade",
@@ -10570,6 +10557,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "9ea5-acc2-a2ac-257b",
+                    "field": "add-info",
+                    "scope": "root-entry",
+                    "affects": "group"
                   }
                 ],
                 "profiles": [
@@ -10586,23 +10580,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "bf52-1646-5b05-6b57"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "9\"",
-                        "field": "name",
-                        "join": " "
-                      }
-                    ],
-                    "name": "Scouts",
-                    "id": "51ab-7e2f-8922-7189",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "ada6-bac1-ffe0-d6f7"
                   }
                 ],
                 "type": "upgrade",
@@ -10714,14 +10691,15 @@
                         "field": "annotation",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "skipIfPresent": "Obdurate Obedience"
                       },
                       {
                         "type": "increment",
                         "value": 1,
                         "field": "bef7-942a-1a23-59f8",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", "
                       }
                     ],
@@ -11137,14 +11115,15 @@
                         "field": "annotation",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "skipIfPresent": "Hunter's Celerity"
                       },
                       {
                         "type": "increment",
                         "value": 2,
                         "field": "e703-ecb6-5ce7-aec1",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", "
                       }
                     ],
@@ -11249,15 +11228,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "47e7-f968-b74f-deb3"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Assault",
-                    "id": "778b-0a0b-2f1e-b392",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "fc8a-8c24-bae9-cc1c"
                   }
                 ],
                 "type": "upgrade",
@@ -11874,6 +11844,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "bec5-4288-34a6-ccfa",
+                    "field": "add-info",
+                    "scope": "root-entry",
+                    "affects": "group"
                   }
                 ],
                 "profiles": [
@@ -11890,15 +11867,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "583e-2616-8cf8-969d"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Stealth",
-                    "id": "ce48-cc2a-f75e-658d",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
                   }
                 ],
                 "type": "upgrade",
@@ -12008,6 +11976,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "c05d-f4c3-f091-4938",
+                    "field": "add-info",
+                    "scope": "root-entry",
+                    "affects": "group"
                   }
                 ],
                 "profiles": [
@@ -12024,15 +11999,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "6151-b5a1-a259-9dc5"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Infiltrators",
-                    "id": "55f1-55c1-b3a7-2f99",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "c05d-f4c3-f091-4938"
                   }
                 ],
                 "type": "upgrade",
@@ -12433,15 +12399,6 @@
                     "id": "dac1-5e52-30c4-14d1"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Stealth",
-                    "id": "a276-06fd-afa7-fad0",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
-                  }
-                ],
                 "type": "upgrade",
                 "import": true,
                 "name": "Claim Stalker",
@@ -12812,6 +12769,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "676c-ecb5-d24d-3540",
+                    "field": "add-info",
+                    "scope": "root-entry",
+                    "affects": "group"
                   }
                 ],
                 "profiles": [
@@ -12828,23 +12792,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "be58-26c9-487b-41de"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "6+",
-                        "field": "name",
-                        "join": " "
-                      }
-                    ],
-                    "name": "Feel No Pain",
-                    "id": "f4dc-92c4-3280-8e72",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
                   }
                 ],
                 "type": "upgrade",
@@ -13543,6 +13490,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "676c-ecb5-d24d-3540",
+                    "field": "add-info",
+                    "scope": "root-entry",
+                    "affects": "group"
                   }
                 ],
                 "profiles": [
@@ -13559,23 +13513,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "61e0-a37c-ca60-b36b"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "6+",
-                        "field": "name",
-                        "join": " "
-                      }
-                    ],
-                    "name": "Feel No Pain",
-                    "id": "0398-a57e-e8d9-b0a0",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
                   }
                 ],
                 "type": "upgrade",
@@ -13675,6 +13612,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "c05d-f4c3-f091-4938",
+                    "field": "add-info",
+                    "scope": "root-entry",
+                    "affects": "group"
                   }
                 ],
                 "profiles": [
@@ -13691,15 +13635,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "a261-085b-c6ac-de92"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Infiltrators",
-                    "id": "e6d9-3e84-e61f-22f3",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "c05d-f4c3-f091-4938"
                   }
                 ],
                 "type": "upgrade",
@@ -14029,6 +13964,12 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "5a61-81ac-eb7c-a87e",
+                    "field": "category",
+                    "scope": "root-entry"
                   }
                 ],
                 "profiles": [
@@ -14045,15 +13986,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "9354-4ef9-eda9-04a1"
-                  }
-                ],
-                "categoryLinks": [
-                  {
-                    "name": "Grenades",
-                    "hidden": false,
-                    "id": "f152-e9b6-b627-99ba",
-                    "targetId": "5a61-81ac-eb7c-a87e",
-                    "primary": false
                   }
                 ],
                 "type": "upgrade",
@@ -14294,15 +14226,16 @@
                         "value": "Riders of Ruin",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "skipIfPresent": "Riders of Ruin"
                       },
                       {
                         "type": "increment",
                         "value": 2,
                         "field": "e703-ecb6-5ce7-aec1",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", "
                       }
                     ],
@@ -14652,15 +14585,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "6c9b-3ccc-ef75-6f19"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Sustained Hits",
-                    "id": "86e3-1496-abf2-6f4b",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "1897-c22c-9597-12b1"
                   }
                 ],
                 "type": "upgrade",
@@ -15126,15 +15050,16 @@
                         "value": "Monstrous Momentum",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "skipIfPresent": "Monstrous Momentum"
                       },
                       {
                         "type": "increment",
                         "value": 2,
                         "field": "e703-ecb6-5ce7-aec1",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", "
                       }
                     ],
@@ -15264,15 +15189,16 @@
                         "value": "Behemoth",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "skipIfPresent": "Behemoth"
                       },
                       {
                         "type": "increment",
                         "value": 2,
                         "field": "750a-a2ec-90d3-21fe",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", "
                       }
                     ],
@@ -15722,15 +15648,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "6db2-5b25-f309-17df"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Feel No Pain",
-                    "id": "4a71-e625-47ad-091f",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
                   }
                 ],
                 "type": "upgrade",
@@ -16315,6 +16232,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "08fb-4cb5-36fb-d638",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "profiles": [
@@ -16331,23 +16255,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "30c1-2035-0347-3366"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "6\"",
-                        "field": "name",
-                        "join": " "
-                      }
-                    ],
-                    "name": "Scouts",
-                    "id": "6300-6e6a-5a25-e9d4",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "ada6-bac1-ffe0-d6f7"
                   }
                 ],
                 "type": "upgrade",
@@ -17167,15 +17074,16 @@
                         "value": "Enhanced Endurance",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "skipIfPresent": "Enhanced Endurance"
                       },
                       {
                         "type": "increment",
                         "value": 1,
                         "field": "d29d-cf75-fc2d-34a4",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
                         "join": ", "
                       }
                     ],
@@ -17346,15 +17254,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "85d8-e908-b885-b5b1"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Stealth",
-                    "id": "e478-ecc1-acbb-cef9",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
                   }
                 ],
                 "type": "upgrade",
@@ -17653,6 +17552,11 @@
                         "type": "set",
                         "value": 2,
                         "field": "b03b-c239-15a5-da55"
+                      },
+                      {
+                        "type": "add",
+                        "value": "699c-55ed-7fee-65ab",
+                        "field": "add-info"
                       }
                     ],
                     "costs": [
@@ -17680,15 +17584,6 @@
                         "name": "Military Power",
                         "typeId": "1cbe-d9c9-86a8-2d41",
                         "value": 0
-                      }
-                    ],
-                    "infoLinks": [
-                      {
-                        "name": "Feel No Pain",
-                        "id": "7e23-f156-3254-c948",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "9bf4-280f-bbe2-6fbb"
                       }
                     ],
                     "type": "upgrade",
@@ -17789,6 +17684,13 @@
                         "type": "set",
                         "value": 2,
                         "field": "b03b-c239-15a5-da55"
+                      },
+                      {
+                        "type": "add",
+                        "value": "7cb5-dd6b-dd87-ad3b",
+                        "field": "add-info",
+                        "scope": "root-entry",
+                        "affects": "group"
                       }
                     ],
                     "costs": [
@@ -17816,15 +17718,6 @@
                         "name": "Military Power",
                         "typeId": "1cbe-d9c9-86a8-2d41",
                         "value": 0
-                      }
-                    ],
-                    "infoLinks": [
-                      {
-                        "name": "Deep Strike",
-                        "id": "40e5-6240-f490-7841",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "7cb5-dd6b-dd87-ad3b"
                       }
                     ],
                     "type": "upgrade",
@@ -17925,6 +17818,13 @@
                         "type": "set",
                         "value": 2,
                         "field": "b03b-c239-15a5-da55"
+                      },
+                      {
+                        "type": "add",
+                        "value": "bec5-4288-34a6-ccfa",
+                        "field": "add-info",
+                        "scope": "root-entry",
+                        "affects": "group"
                       }
                     ],
                     "costs": [
@@ -18729,7 +18629,30 @@
                     "import": true,
                     "name": "Veil of Ancients",
                     "hidden": false,
-                    "id": "cd94-4667-d67c-ead3"
+                    "id": "cd94-4667-d67c-ead3",
+                    "modifierGroups": [
+                      {
+                        "type": "and",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "4+",
+                            "field": "55a7-5b54-c60d-11dc",
+                            "scope": "model",
+                            "affects": "profiles.Unit"
+                          },
+                          {
+                            "type": "append",
+                            "value": "Veil of Ancients",
+                            "field": "annotation",
+                            "scope": "model",
+                            "affects": "profiles.Unit",
+                            "join": ", ",
+                            "skipIfPresent": "Veil of Ancients"
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "profiles": [
@@ -18847,9 +18770,9 @@
                       {
                         "characteristics": [
                           {
-                            "$text": "Select one weapon equipped by the bearer (excluding a weapon that has been replaced by an Enhancement or upgraded via the Weapon Modifications table), then select one of the abilities below for that weapon to gain. That weapon is now a Crusade Relic; note this on the bearer's Crusade card and give the weapon a suitable name.\n\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**",
                             "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
+                            "typeId": "9b8f-694b-e5e-b573",
+                            "$text": "Select one weapon equipped by the bearer (excluding a weapon that has been replaced by an Enhancement or upgraded via the Weapon Modifications table), then select one of the abilities below for that weapon to gain. That weapon is now a Crusade Relic; note this on the bearer's Crusade card and give the weapon a suitable name.\n- **[LETHAL HITS]**\n- **[PRECISION]**\n- **[SUSTAINED HITS 1]**"
                           }
                         ],
                         "name": "Treasure of the Technomandrites",
@@ -18970,29 +18893,6 @@
                         "name": "Military Power",
                         "typeId": "1cbe-d9c9-86a8-2d41",
                         "value": 0
-                      }
-                    ],
-                    "infoLinks": [
-                      {
-                        "name": "Lethal Hits",
-                        "id": "f8df-411c-2f49-7716",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "d1d1-611e-5191-1095"
-                      },
-                      {
-                        "name": "Sustained Hits",
-                        "id": "128d-cc2b-de55-f91c",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "1897-c22c-9597-12b1"
-                      },
-                      {
-                        "name": "Precision",
-                        "id": "9925-0721-d889-af63",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "9143-31ae-e0a6-6007"
                       }
                     ],
                     "type": "upgrade",
@@ -21436,7 +21336,8 @@
                             "field": "annotation",
                             "join": ", ",
                             "scope": "model-or-unit",
-                            "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons"
+                            "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                            "skipIfPresent": "Sigil of Psychic Amplification"
                           },
                           {
                             "type": "increment",
@@ -21831,15 +21732,6 @@
                         "value": 0
                       }
                     ],
-                    "infoLinks": [
-                      {
-                        "name": "Deep Strike",
-                        "id": "2112-ff9a-7443-9d68",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "7cb5-dd6b-dd87-ad3b"
-                      }
-                    ],
                     "type": "upgrade",
                     "import": true,
                     "name": "Displacer Field",
@@ -21859,9 +21751,9 @@
                       {
                         "characteristics": [
                           {
-                            "$text": "Select one melee weapon equipped by the bearer (excluding a weapon that has been replaced by an Enhancement or Crusade Relic, or upgraded with any Battle Traits). That weapon is now a Crusade Relic and:\n\n- Each time an attack is made with it, you can re-roll the Wound roll.\n- Once per battle, at the start of the Fight phase, the bearer can unleash the power stored in that weapon. When they do, until the end of the turn, that weapon has the **[DEVASTATING WOUNDS]** ability and its Strength and Attacks characteristics are increased by a number equal to the current battle round number.",
                             "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
+                            "typeId": "9b8f-694b-e5e-b573",
+                            "$text": "Select one melee weapon equipped by the bearer (excluding a weapon that has been replaced by an Enhancement or Crusade Relic, or upgraded with any Battle Traits). That weapon is now a Crusade Relic and:\n- Each time an attack is made with it, you can re-roll the Wound roll.\n- Once per battle, at the start of the Fight phase, the bearer can unleash the power stored in that weapon. When they do, until the end of the turn, that weapon has the **[DEVASTATING WOUNDS]** ability and its Strength and Attacks characteristics are increased by a number equal to the current battle round number."
                           }
                         ],
                         "name": "Fate-forged Weapon",
@@ -22000,15 +21892,6 @@
                         "value": 0
                       }
                     ],
-                    "infoLinks": [
-                      {
-                        "name": "Devastating Wounds",
-                        "id": "eeea-7900-bac9-d131",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "be1e-ac8e-1e2c-3528"
-                      }
-                    ],
                     "type": "upgrade",
                     "import": true,
                     "name": "Fate-forged Weapon",
@@ -22107,6 +21990,13 @@
                         "type": "set",
                         "value": 2,
                         "field": "b03b-c239-15a5-da55"
+                      },
+                      {
+                        "type": "add",
+                        "value": "bec5-4288-34a6-ccfa",
+                        "field": "add-info",
+                        "affects": "group",
+                        "scope": "root-entry"
                       }
                     ],
                     "costs": [
@@ -22138,13 +22028,6 @@
                     ],
                     "infoLinks": [
                       {
-                        "name": "Stealth",
-                        "id": "e867-6ee3-04ca-75c7",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "bec5-4288-34a6-ccfa"
-                      },
-                      {
                         "name": "Lone Operative",
                         "id": "7c9b-b292-0a2b-fea5",
                         "hidden": false,
@@ -22163,9 +22046,9 @@
                       {
                         "characteristics": [
                           {
-                            "$text": "At the end of your opponent's Movement phase, you can select one enemy unit that was set up one the battlefield within 12\" of the bearer's unit during this phase; the bearer's unit can then either:\n\n- Shoot, but when resolving those attacks the bearer's unit can only target that enemy unit (and only if it is an eligible target).\n- Declare a charge against that unit (note that even if this charge is successful, the bearer's unit does not received any Charge bonus this turn).",
                             "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
+                            "typeId": "9b8f-694b-e5e-b573",
+                            "$text": "At the end of your opponent's Movement phase, you can select one enemy unit that was set up one the battlefield within 12\" of the bearer's unit during this phase; the bearer's unit can then either:\n- Shoot, but when resolving those attacks the bearer's unit can only target that enemy unit (and only if it is an eligible target).\n- Declare a charge against that unit (note that even if this charge is successful, the bearer's unit does not received any Charge bonus this turn)."
                           }
                         ],
                         "name": "Lyreth's Mirror",
@@ -22400,19 +22283,11 @@
                     ],
                     "infoLinks": [
                       {
-                        "modifiers": [
-                          {
-                            "type": "append",
-                            "value": "5+",
-                            "field": "name",
-                            "join": " "
-                          }
-                        ],
-                        "name": "Feel No Pain",
+                        "name": "Feel No Pain 5+",
                         "id": "fc3e-81ef-fa4f-b8aa",
                         "hidden": false,
                         "type": "rule",
-                        "targetId": "9bf4-280f-bbe2-6fbb"
+                        "targetId": "5e10-6d62-2624-80a8"
                       }
                     ],
                     "type": "upgrade",
@@ -22641,7 +22516,30 @@
                     "import": true,
                     "name": "Conversion Field",
                     "hidden": false,
-                    "id": "1f9e-4e81-c90e-ddd7"
+                    "id": "1f9e-4e81-c90e-ddd7",
+                    "modifierGroups": [
+                      {
+                        "type": "and",
+                        "modifiers": [
+                          {
+                            "type": "set",
+                            "value": "5+*",
+                            "field": "55a7-5b54-c60d-11dc",
+                            "affects": "self.entries.group.recursive.profiles.Unit",
+                            "scope": "root-entry"
+                          },
+                          {
+                            "type": "append",
+                            "value": "Conversion Field",
+                            "field": "annotation",
+                            "affects": "self.entries.group.recursive.profiles.Unit",
+                            "scope": "root-entry",
+                            "join": ",",
+                            "skipIfPresent": "Conversion Field"
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "profiles": [
@@ -22820,9 +22718,9 @@
                       {
                         "characteristics": [
                           {
-                            "$text": "At the start of your Command phase, if the bearer is within range of an objective marker you control, you can choose one of the following:\n\n- Remove 1 Warp counter that the bearer's unit has. If you do, gain 1CP.\n- Take a Leadership test for this model. If that test is passed, gain 1CP.",
                             "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
+                            "typeId": "9b8f-694b-e5e-b573",
+                            "$text": "At the start of your Command phase, if the bearer is within range of an objective marker you control, you can choose one of the following:\n- Remove 1 Warp counter that the bearer's unit has. If you do, gain 1CP.\n- Take a Leadership test for this model. If that test is passed, gain 1CP."
                           }
                         ],
                         "name": "Sanguiflamme of Armageddon",
@@ -23034,6 +22932,13 @@
                         "type": "set",
                         "value": 2,
                         "field": "b03b-c239-15a5-da55"
+                      },
+                      {
+                        "type": "add",
+                        "value": "7cb5-dd6b-dd87-ad3b",
+                        "field": "add-info",
+                        "scope": "root-entry",
+                        "affects": "group"
                       }
                     ],
                     "costs": [
@@ -23061,15 +22966,6 @@
                         "name": "Military Power",
                         "typeId": "1cbe-d9c9-86a8-2d41",
                         "value": 0
-                      }
-                    ],
-                    "infoLinks": [
-                      {
-                        "name": "Deep Strike",
-                        "id": "db10-cb75-7f59-5720",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "7cb5-dd6b-dd87-ad3b"
                       }
                     ],
                     "type": "upgrade",
@@ -23224,22 +23120,6 @@
                         "value": 0
                       }
                     ],
-                    "infoLinks": [
-                      {
-                        "name": "Devastating Wounds",
-                        "id": "2807-ea1e-dc0a-3d59",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "be1e-ac8e-1e2c-3528"
-                      },
-                      {
-                        "name": "Anti",
-                        "id": "c3ee-c53d-f362-5fe5",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "4111-82e3-9444-e942"
-                      }
-                    ],
                     "type": "upgrade",
                     "import": true,
                     "name": "Weapon of Renown",
@@ -23369,11 +23249,11 @@
                     ],
                     "infoLinks": [
                       {
-                        "name": "Feel No Pain",
+                        "name": "Feel No Pain 5+*",
                         "id": "e42a-7953-1dc6-850a",
                         "hidden": false,
                         "type": "rule",
-                        "targetId": "9bf4-280f-bbe2-6fbb"
+                        "targetId": "faec-8b1b-5a21-0087"
                       }
                     ],
                     "type": "upgrade",
@@ -23773,15 +23653,6 @@
                         "value": 0
                       }
                     ],
-                    "infoLinks": [
-                      {
-                        "name": "Sustained Hits",
-                        "id": "470d-656c-08d7-1df9",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "1897-c22c-9597-12b1"
-                      }
-                    ],
                     "modifierGroups": [
                       {
                         "modifiers": [
@@ -23799,7 +23670,8 @@
                             "field": "7f1b-8591-2fcf-d01c",
                             "scope": "root-entry",
                             "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
-                            "join": ", "
+                            "join": ", ",
+                            "skipIfPresent": "Sustained Hits 2"
                           },
                           {
                             "type": "append",
@@ -23812,10 +23684,11 @@
                           {
                             "type": "append",
                             "value": "Sustained Hits 2",
-                            "field": "7f1b-8591-2fcf-d01c",
+                            "field": "893f-9000-ccf7-648e",
                             "scope": "root-entry",
                             "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
-                            "join": ", "
+                            "join": ", ",
+                            "skipIfPresent": "Sustained Hits 2"
                           }
                         ],
                         "type": "and"
@@ -25118,15 +24991,6 @@
                     "id": "717f-8db9-3efd-b18a"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Anti",
-                    "id": "22a4-0330-7c8c-11ca",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "4111-82e3-9444-e942"
-                  }
-                ],
                 "modifierGroups": [
                   {
                     "modifiers": [
@@ -25135,32 +24999,54 @@
                         "value": "Titan's Bane",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "skipIfPresent": "Titan's Bane"
                       },
                       {
                         "type": "append",
-                        "value": "Anti-Monster 4+, Anti-Vehicle 4+",
+                        "value": "Anti-Monster 4+",
                         "field": "893f-9000-ccf7-648e",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons",
-                        "join": ", "
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Monster 4+"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Anti-Vehicle 4+",
+                        "field": "893f-9000-ccf7-648e",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Vehicle 4+"
                       },
                       {
                         "type": "append",
                         "value": "Titan's Bane",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "skipIfPresent": "Titan's Bane"
                       },
                       {
                         "type": "append",
-                        "value": "Anti-Monster 4+, Anti-Vehicle 4+",
+                        "value": "Anti-Monster 4+",
                         "field": "7f1b-8591-2fcf-d01c",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                        "join": ", "
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Monster 4+"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Anti-Vehicle 4+",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Anti-Vehicle 4+"
                       }
                     ],
                     "type": "and"
@@ -25232,6 +25118,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "faec-8b1b-5a21-0087",
+                    "field": "add-info",
+                    "scope": "root-entry",
+                    "affects": "group"
                   }
                 ],
                 "profiles": [
@@ -25248,15 +25141,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "38ac-2ed6-0bd7-e628"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Feel No Pain",
-                    "id": "37a1-4cee-41c4-34ad",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
                   }
                 ],
                 "type": "upgrade",
@@ -25920,6 +25804,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "24-c886-e8ba-5a89",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "profiles": [
@@ -25936,15 +25827,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "1b98-4934-a009-a454"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Fights First",
-                    "id": "4044-f647-fded-050e",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "24-c886-e8ba-5a89"
                   }
                 ],
                 "type": "upgrade",
@@ -26031,15 +25913,6 @@
                     "id": "6251-f857-24af-2a45"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Sustained Hits",
-                    "id": "5516-19a9-d714-1bd8",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "1897-c22c-9597-12b1"
-                  }
-                ],
                 "modifierGroups": [
                   {
                     "modifiers": [
@@ -26048,16 +25921,18 @@
                         "value": "Gargantuan Rage",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "skipIfPresent": "Gargantuan Rage"
                       },
                       {
                         "type": "append",
                         "value": "Sustained Hits 1",
                         "field": "893f-9000-ccf7-648e",
-                        "scope": "model-or-unit",
-                        "affects": "self.entries.recursive.profiles.Melee Weapons",
-                        "join": ", "
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Sustained Hits 1"
                       }
                     ],
                     "type": "and"
@@ -26421,9 +26296,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "At the start of the battle, if the bearer is your **^^Warlord^^**, until the end of the battle, it gains the ability below that corresponds with the Strategic Footing you selected in the Select Strategic Footing step:\n\n- **Aggressive:** Models in the bearer's unit have the Scouts 6\" ability.\n- **Balanced:** The bearer has the Lone Operative ability.\n- **Defensive:** Models in the bearer's unit have the Stealth ability.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "At the start of the battle, if the bearer is your **^^Warlord^^**, until the end of the battle, it gains the ability below that corresponds with the Strategic Footing you selected in the Select Strategic Footing step:\n- **Aggressive:** Models in the bearer's unit have the Scouts 6\" ability.\n- **Balanced:** The bearer has the Lone Operative ability.\n- **Defensive:** Models in the bearer's unit have the Stealth ability."
                       }
                     ],
                     "name": "Acquisitive Opportunist",
@@ -27659,9 +27534,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "At the Declare Battle Formations step, select one of the following:\n\n- While this model is leading a unit, weapons equipped by models in that unit the **[ANTI-UNBOUND ADVERSARIES 4+]** ability.\n- Select one Armageddon Battle Trait (this must be a Battle Trait they could have if they were not an **^^Epic Hero^^**). Until the end of the battle, this **^^Epic Hero^^** model, and any unit they join, have this Battle Trait.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "At the Declare Battle Formations step, select one of the following:\n- While this model is leading a unit, weapons equipped by models in that unit the **[ANTI-UNBOUND ADVERSARIES 4+]** ability.\n- Select one Armageddon Battle Trait (this must be a Battle Trait they could have if they were not an **^^Epic Hero^^**). Until the end of the battle, this **^^Epic Hero^^** model, and any unit they join, have this Battle Trait."
                       }
                     ],
                     "name": "Front-line Champions",
@@ -27669,15 +27544,6 @@
                     "typeName": "Abilities",
                     "hidden": false,
                     "id": "4773-1d4a-88a5-fced"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Anti",
-                    "id": "5422-edab-3e98-ef3e",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "4111-82e3-9444-e942"
                   }
                 ],
                 "type": "upgrade",
@@ -27943,9 +27809,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "If your Crusade army includes one or more **^^Epic Hero^^** models with this Crusade ability, then at the Select Crusade Blessings step, select one of the following:\n\n- If you are the Underdog, roll one D6: on a 4+, you can select one additional Crusade Blessing.\n- If you are not the Underdog, roll one D6: on a 6 you can select one Crusade Blessing, instead.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "If your Crusade army includes one or more **^^Epic Hero^^** models with this Crusade ability, then at the Select Crusade Blessings step, select one of the following:\n- If you are the Underdog, roll one D6: on a 4+, you can select one additional Crusade Blessing.\n- If you are not the Underdog, roll one D6: on a 6 you can select one Crusade Blessing, instead."
                       }
                     ],
                     "name": "Strategic Champions",
@@ -27998,9 +27864,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "If your Crusade army includes one or more **^^Epic Hero^^** models with this Crusade Ability, select one of the following:\n\n- At the Determine Attacker and Defender step, you can re-roll your dice when determining who will be the Attacker and who will be the Defender.\n- At the end of the Set Warp Events step, roll one D6: on a 4+ you can choose to increase or decrease the intensity of the Warp Events used in that battle by 1 (to a minimum of 1 and a maximum of 3).",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "If your Crusade army includes one or more **^^Epic Hero^^** models with this Crusade Ability, select one of the following:\n- At the Determine Attacker and Defender step, you can re-roll your dice when determining who will be the Attacker and who will be the Defender.\n- At the end of the Set Warp Events step, roll one D6: on a 4+ you can choose to increase or decrease the intensity of the Warp Events used in that battle by 1 (to a minimum of 1 and a maximum of 3)."
                       }
                     ],
                     "name": "Subtle Champions",
@@ -30583,7 +30449,30 @@
             "import": true,
             "name": "Fortune's Favoured",
             "hidden": false,
-            "id": "7864-987f-04b1-abbe"
+            "id": "7864-987f-04b1-abbe",
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "type": "append",
+                    "value": "Fortune's Favoured",
+                    "field": "annotation",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "scope": "root-entry",
+                    "join": ", ",
+                    "skipIfPresent": "Fortune's Favoured"
+                  },
+                  {
+                    "type": "set",
+                    "value": "6+",
+                    "field": "55a7-5b54-c60d-11dc",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "scope": "root-entry"
+                  }
+                ]
+              }
+            ]
           },
           {
             "constraints": [
@@ -30761,6 +30650,13 @@
                 "type": "set",
                 "value": 2,
                 "field": "b03b-c239-15a5-da55"
+              },
+              {
+                "type": "add",
+                "value": "bec5-4288-34a6-ccfa",
+                "field": "add-info",
+                "scope": "root-entry",
+                "affects": "group"
               }
             ],
             "profiles": [
@@ -30777,15 +30673,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "7aa7-8172-3499-0ead"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Stealth",
-                "id": "20b7-ab61-607a-fef0",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "bec5-4288-34a6-ccfa"
               }
             ],
             "type": "upgrade",
@@ -30996,15 +30883,16 @@
                     "value": "Footsloggers",
                     "field": "annotation",
                     "join": ", ",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "skipIfPresent": "Footsloggers"
                   },
                   {
                     "type": "increment",
                     "value": 1,
                     "field": "e703-ecb6-5ce7-aec1",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit",
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
                     "join": ", "
                   }
                 ],
@@ -31208,6 +31096,13 @@
                 "type": "set",
                 "value": 2,
                 "field": "b03b-c239-15a5-da55"
+              },
+              {
+                "type": "add",
+                "value": "9258-3a36-5e40-f185",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "root-entry"
               }
             ],
             "profiles": [
@@ -31224,15 +31119,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "3c30-003c-fc9e-29ce"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Feel No Pain",
-                "id": "ea99-4ed5-7483-c1c2",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "9bf4-280f-bbe2-6fbb"
               }
             ],
             "type": "upgrade",
@@ -31358,28 +31244,21 @@
                     "value": "Advanced Suspensors",
                     "field": "annotation",
                     "join": ", ",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "skipIfPresent": "Advanced Suspensors"
                   },
                   {
                     "type": "append",
                     "value": "Assault",
                     "field": "7f1b-8591-2fcf-d01c",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                    "join": ", "
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Assault"
                   }
                 ],
                 "type": "and"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Assault",
-                "id": "b3e0-7002-cb6a-7a28",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "fc8a-8c24-bae9-cc1c"
               }
             ],
             "type": "upgrade",
@@ -31505,15 +31384,16 @@
                     "value": "Extra Armour",
                     "field": "annotation",
                     "join": ", ",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "skipIfPresent": "Extra Armour"
                   },
                   {
                     "type": "increment",
                     "value": 1,
                     "field": "d29d-cf75-fc2d-34a4",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit",
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
                     "join": ", "
                   }
                 ],
@@ -31947,6 +31827,13 @@
                 "type": "set",
                 "value": 2,
                 "field": "b03b-c239-15a5-da55"
+              },
+              {
+                "type": "add",
+                "value": "08fb-4cb5-36fb-d638",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "root-entry"
               }
             ],
             "profiles": [
@@ -31963,23 +31850,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "d57e-3ffa-56bd-894f"
-              }
-            ],
-            "infoLinks": [
-              {
-                "modifiers": [
-                  {
-                    "type": "append",
-                    "value": "6\"",
-                    "field": "name",
-                    "join": " "
-                  }
-                ],
-                "name": "Scouts",
-                "id": "7b76-b0ae-2894-e709",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "ada6-bac1-ffe0-d6f7"
               }
             ],
             "type": "upgrade",
@@ -32595,15 +32465,6 @@
                 "id": "7c37-65c5-df4f-62c3"
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Infiltrators",
-                "id": "7f8d-1cff-ab1e-8784",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "c05d-f4c3-f091-4938"
-              }
-            ],
             "type": "upgrade",
             "import": true,
             "name": "Ritual of Shrouding (Psychic)",
@@ -32725,15 +32586,16 @@
                     "value": "Warp Focus",
                     "field": "annotation",
                     "join": ", ",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons"
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                    "skipIfPresent": "Warp Focus"
                   },
                   {
                     "type": "increment",
                     "value": 1,
                     "field": "2229-f494-25db-c5d3",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
                     "join": ", "
                   },
                   {
@@ -32741,15 +32603,16 @@
                     "value": "Warp Focus",
                     "field": "annotation",
                     "join": ", ",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons"
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                    "skipIfPresent": "Warp Focus"
                   },
                   {
                     "type": "increment",
                     "value": 1,
                     "field": "ab33-d393-96ce-ccba",
-                    "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons",
                     "join": ", "
                   }
                 ],
