@@ -35966,7 +35966,7 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "conditions": [
@@ -35984,7 +35984,21 @@
                     "value": 0,
                     "field": "bef7-942a-1a23-59f8",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
+                  },
+                  {
+                    "type": "floor",
+                    "value": "0",
+                    "field": "bef7-942a-1a23-59f8",
+                    "scope": "model-or-unit-self",
+                    "affects": "self.entries.group.profiles.Unit"
+                  },
+                  {
+                    "type": "ceil",
+                    "value": "0",
+                    "field": "bef7-942a-1a23-59f8",
+                    "scope": "model-or-unit-self",
+                    "affects": "self.entries.group.profiles.Unit"
                   }
                 ],
                 "type": "and"
@@ -37117,6 +37131,13 @@
                 "type": "set",
                 "value": 2,
                 "field": "b03b-c239-15a5-da55"
+              },
+              {
+                "type": "add",
+                "value": "bec5-4288-34a6-ccfa",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "profiles": [
@@ -37133,15 +37154,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "0008-0a4d-6837-dc09"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Stealth",
-                "id": "1a8e-aaba-cfcd-4e08",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "bec5-4288-34a6-ccfa"
               }
             ],
             "type": "upgrade",
@@ -43824,7 +43836,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "1f19-6509-d906-ca10",
     "name": "Imperium - Adeptus Custodes",
-    "revision": 8,
+    "revision": 9,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
