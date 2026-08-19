@@ -2926,7 +2926,7 @@
             ]
           },
           {
-            "name": "**Baffling Data Screed**",
+            "name": "Baffling Data Screed",
             "id": "faf0-e5a0-4a1c-6f22",
             "hidden": false,
             "type": "profile",
@@ -23891,7 +23891,7 @@
             ]
           },
           {
-            "name": "**Baffling Data Screed**",
+            "name": "Baffling Data Screed",
             "id": "a40f-594b-5b85-879d",
             "hidden": false,
             "type": "profile",
@@ -25147,7 +25147,7 @@
             ]
           },
           {
-            "name": "**Baffling Data Screed**",
+            "name": "Baffling Data Screed",
             "id": "a8b5-f275-ad33-eb8c",
             "hidden": false,
             "type": "profile",
@@ -26028,7 +26028,7 @@
             ]
           },
           {
-            "name": "**Baffling Data Screed**",
+            "name": "Baffling Data Screed",
             "id": "f28f-f6a0-48f7-75ad",
             "hidden": false,
             "type": "profile",
@@ -27037,7 +27037,7 @@
             ]
           },
           {
-            "name": "**Baffling Data Screed**",
+            "name": "Baffling Data Screed",
             "id": "4f5f-27df-69a6-2c0a",
             "hidden": false,
             "type": "profile",
@@ -27889,7 +27889,7 @@
             ]
           },
           {
-            "name": "**Baffling Data Screed**",
+            "name": "Baffling Data Screed",
             "id": "469d-0c7f-f50e-5092",
             "hidden": false,
             "type": "profile",
@@ -33049,6 +33049,12 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "add",
+            "value": "5e10-6d62-2624-80a8",
+            "field": "add-info",
+            "affects": "group.59a9-b5cc-7c11-aaad"
           }
         ],
         "constraints": [
@@ -33084,7 +33090,79 @@
         "import": true,
         "name": "X-101 [Legends]",
         "hidden": false,
-        "id": "a896-3e21-1319-c86"
+        "id": "a896-3e21-1319-c86",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "model-or-unit",
+            "name": "Servitor Bodyguard",
+            "id": "afbb-5d95-e388-a640",
+            "label": "Bodyguard",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "59a9-b5cc-7c11-aaad",
+                    "shared": true,
+                    "childName": "Tech-Priest",
+                    "queryFromSelf": false
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "cf47-a0d7-7207-29dc",
+                    "shared": true,
+                    "childName": "Infantry",
+                    "queryFromSelf": false
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "model-or-unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ],
+        "modifierGroups": [
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "94d-8a98-cf90-183e",
+                "affects": "self.entries.profiles.Ranged Weapons"
+              },
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "95d1-95f-45b4-11d6",
+                "affects": "self.entries.profiles.Melee Weapons"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "childName": "any"
+              }
+            ]
+          }
+        ]
       },
       {
         "constraints": [
@@ -39182,7 +39260,7 @@
             ]
           },
           {
-            "name": "**Baffling Data Screed**",
+            "name": "Baffling Data Screed",
             "id": "22d4-2f1e-45a3-d4ec",
             "hidden": false,
             "type": "profile",
@@ -41549,7 +41627,7 @@
             ]
           },
           {
-            "name": "**Baffling Data Screed**",
+            "name": "Baffling Data Screed",
             "id": "6111-ff4e-0617-324f",
             "hidden": false,
             "type": "profile",
@@ -46342,6 +46420,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "24-c886-e8ba-5a89",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "profiles": [
@@ -47635,6 +47720,13 @@
                     ]
                   }
                 ]
+              },
+              {
+                "type": "add",
+                "value": "c05d-f4c3-f091-4938",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "comment": "Cohort Acquisitus",
@@ -47653,15 +47745,6 @@
                     "$text": "This unit has Infiltrators."
                   }
                 ]
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Infiltrators",
-                "id": "ed8c-d8a4-eea5-897d",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "c05d-f4c3-f091-4938"
               }
             ]
           },
@@ -48055,6 +48138,13 @@
                     ]
                   }
                 ]
+              },
+              {
+                "type": "add",
+                "value": "bec5-4288-34a6-ccfa",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "profiles": [
@@ -48113,15 +48203,6 @@
                 "name": "Enhancements",
                 "typeId": "f759-1bc4-cb3a-f0d2",
                 "value": 1
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Stealth",
-                "id": "6bc7-daae-7a08-6840",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "bec5-4288-34a6-ccfa"
               }
             ],
             "sortIndex": 20
@@ -48504,6 +48585,13 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
+                  },
+                  {
+                    "type": "add",
+                    "value": "2a4e-9018-d675-74f1",
+                    "field": "category",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "costs": [
@@ -49357,6 +49445,13 @@
                 "type": "set",
                 "value": 2,
                 "field": "b03b-c239-15a5-da55"
+              },
+              {
+                "type": "add",
+                "value": "676c-ecb5-d24d-3540",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "profiles": [
@@ -49373,22 +49468,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "2563-c51b-e993-9354"
-              }
-            ],
-            "infoLinks": [
-              {
-                "modifiers": [
-                  {
-                    "type": "append",
-                    "value": "6+",
-                    "field": "name"
-                  }
-                ],
-                "name": "Feel No Pain",
-                "id": "994e-b7e8-3655-6959",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "9bf4-280f-bbe2-6fbb"
               }
             ],
             "type": "upgrade",
@@ -50217,21 +50296,21 @@
                 "value": "4+",
                 "field": "55a7-5b54-c60d-11dc",
                 "scope": "parent",
-                "affects": "self.entries.profiles.Unit"
+                "affects": "self.entries.group.recursive.profiles.Unit"
               },
               {
                 "type": "set",
                 "value": "5+",
                 "field": "55a7-5b54-c60d-11dc",
                 "scope": "parent",
-                "affects": "self.entries.e338-111e-d0c6-b687.profiles.Unit"
+                "affects": "self.entries.group.recursive.e338-111e-d0c6-b687.profiles.Unit"
               },
               {
                 "type": "set",
                 "value": "5+",
                 "field": "55a7-5b54-c60d-11dc",
                 "scope": "parent",
-                "affects": "self.entries.6fdf-6180-8f3c-a07.profiles.Unit"
+                "affects": "self.entries.group.recursive.6fdf-6180-8f3c-a07.profiles.Unit"
               }
             ],
             "profiles": [
@@ -50420,7 +50499,7 @@
                     "value": 1,
                     "field": "ab33-d393-96ce-ccba",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
                     "join": ", "
                   }
                 ],
@@ -50597,7 +50676,7 @@
                     "value": 1,
                     "field": "e703-ecb6-5ce7-aec1",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
                     "join": ", "
                   }
                 ],
@@ -57476,7 +57555,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "77b9-2f66-3f9b-5cf3",
     "name": "Imperium - Adeptus Mechanicus",
-    "revision": 9,
+    "revision": 10,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",

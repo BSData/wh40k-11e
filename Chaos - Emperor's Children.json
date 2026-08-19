@@ -6575,6 +6575,19 @@
             "includeChildSelections": false,
             "childId": "1556-9b56-fba6-4370",
             "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "a851-3810-b7d4-5f4f",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
           }
         ],
         "selectionEntries": [
@@ -8404,6 +8417,19 @@
             "includeChildSelections": false,
             "childId": "1556-9b56-fba6-4370",
             "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "0f76-4649-2a4f-2584",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
           }
         ],
         "costs": [
@@ -8727,6 +8753,19 @@
             "includeChildSelections": false,
             "childId": "1556-9b56-fba6-4370",
             "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "97f4-1c2e-2a77-409b",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
           }
         ],
         "profiles": [
@@ -9062,6 +9101,25 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "24-c886-e8ba-5a89",
+            "field": "add-info",
+            "affects": "group",
+            "scope": "root-entry",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "68d6-d094-a5d3-9bb5",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Spectacle of Slaughter"
+              }
+            ]
           }
         ],
         "infoLinks": [
@@ -9071,32 +9129,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "1674-23e6-eacf-9624"
-          },
-          {
-            "name": "Fights First",
-            "id": "b97e-435c-d680-4bed",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "24-c886-e8ba-5a89",
-            "modifiers": [
-              {
-                "type": "set",
-                "value": true,
-                "field": "hidden",
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "68d6-d094-a5d3-9bb5",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "Spectacle of Slaughter"
-                  }
-                ]
-              }
-            ]
           }
         ],
         "entryLinks": [
@@ -9368,7 +9400,7 @@
                     "value": 2,
                     "field": "e703-ecb6-5ce7-aec1",
                     "scope": "parent",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   }
                 ],
                 "costs": [
@@ -10718,7 +10750,7 @@
                     "value": "Sustained Hits 1",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "parent",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                     "join": ", "
                   },
                   {
@@ -10726,7 +10758,7 @@
                     "value": "Sustained Hits 1",
                     "field": "893f-9000-ccf7-648e",
                     "scope": "parent",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
                     "join": ", "
                   }
                 ],
@@ -10924,6 +10956,19 @@
             "includeChildSelections": false,
             "childId": "1556-9b56-fba6-4370",
             "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "52df-7aef-c32b-cf3f",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
           }
         ],
         "selectionEntries": [
@@ -25304,27 +25349,9 @@
                             "value": 1,
                             "field": "selections",
                             "scope": "self",
-                            "childId": "ff6d-0152-7e0e-7e88",
+                            "childId": "1f5d-db57-16e1-8111",
                             "shared": true,
-                            "childName": "Infractors"
-                          },
-                          {
-                            "type": "instanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "self",
-                            "childId": "b950-835c-0fb7-9b47",
-                            "shared": true,
-                            "childName": "Tormentors"
-                          },
-                          {
-                            "type": "instanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "self",
-                            "childId": "d6e0-f0b0-5df4-71de",
-                            "shared": true,
-                            "childName": "Noise Marines"
+                            "childName": "Flawless Blades"
                           }
                         ]
                       }
@@ -28501,7 +28528,7 @@
                   {
                     "name": "Description",
                     "typeId": "9b8f-694b-e5e-b573",
-                    "$text": "You can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that stratagem this phase. If you do: \n- That use is -1 CP. \n- That use does not prevent any uses of that **stratagem** on other units this phase.'"
+                    "$text": "You can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that stratagem this phase. If you do: \n- That use is -1 CP. \n- That use does not prevent any uses of that **stratagem** on other units this phase."
                   }
                 ],
                 "name": "Faultless Opportunist",
@@ -29912,7 +29939,28 @@
             "name": "Pledge of Dark Glory",
             "hidden": false,
             "id": "96ce-821e-570d-4ed4",
-            "sortIndex": 5
+            "sortIndex": 5,
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "type": "increment",
+                    "value": 1,
+                    "field": "bef7-942a-1a23-59f8",
+                    "scope": "parent",
+                    "affects": "self.entries.group.recursive.profiles.Unit"
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 1,
+                    "field": "58d2-b879-49c7-43bc",
+                    "scope": "parent",
+                    "affects": "self.entries.group.recursive.profiles.Unit"
+                  }
+                ]
+              }
+            ]
           },
           {
             "comment": "Coterie",
@@ -32006,7 +32054,7 @@
                 "value": 1,
                 "field": "9ead-8a10-520-de15",
                 "scope": "parent",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               }
             ],
             "comment": "Frenzied Host",
@@ -32498,7 +32546,7 @@
                     "value": 1,
                     "field": "41a0-1301-112a-e2f2",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons"
                   }
                 ],
                 "type": "and"
@@ -32847,6 +32895,13 @@
                 "type": "set",
                 "value": 2,
                 "field": "b03b-c239-15a5-da55"
+              },
+              {
+                "type": "add",
+                "value": "9bf4-280f-bbe2-6fbb",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "profiles": [
@@ -32863,15 +32918,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "d386-c95d-e969-4f81"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Feel No Pain",
-                "id": "1f8d-d425-38aa-bf3c",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "9bf4-280f-bbe2-6fbb"
               }
             ],
             "type": "upgrade",
@@ -33648,7 +33694,7 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
                   },
                   {
                     "conditions": [
@@ -33666,8 +33712,9 @@
                     "value": "Lethal Hits",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Lethal Hits"
                   }
                 ],
                 "type": "and"
@@ -37639,7 +37686,7 @@
             ],
             "type": "upgrade",
             "import": true,
-            "name": "Unknown",
+            "name": "Perfect Poise",
             "hidden": false,
             "id": "da0c-c8dc-5755-e0cc"
           },
@@ -37834,7 +37881,7 @@
                     "typeId": "9b8f-694b-e5e-b573"
                   }
                 ],
-                "name": "Obsessive Denunciation",
+                "name": "Obsessive Annunciation",
                 "typeId": "9cc3-6d83-4dd3-9b64",
                 "typeName": "Abilities",
                 "hidden": false,
@@ -37843,9 +37890,27 @@
             ],
             "type": "upgrade",
             "import": true,
-            "name": "Obsessive Denunciation",
+            "name": "Obsessive Annunciation",
             "hidden": false,
-            "id": "7f8e-a5d8-c980-88e5"
+            "id": "7f8e-a5d8-c980-88e5",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Sustained Hits 1",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits",
+                "scope": "parent"
+              },
+              {
+                "type": "add",
+                "value": "1897-c22c-9597-12b1",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
+              }
+            ]
           },
           {
             "profiles": [
@@ -37868,7 +37933,34 @@
             "import": true,
             "name": "Perfectionists",
             "hidden": false,
-            "id": "d713-d642-a892-9d6b"
+            "id": "d713-d642-a892-9d6b",
+            "modifiers": [
+              {
+                "type": "add",
+                "value": "d1d1-611e-5191-1095",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits",
+                "scope": "parent"
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits",
+                "scope": "parent"
+              }
+            ]
           },
           {
             "costs": [
@@ -40610,7 +40702,7 @@
     "name": "Chaos - Emperor's Children",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 31,
-    "revision": 5,
+    "revision": 6,
     "authorContact": "Mad_Spy",
     "battleScribeVersion": 2.03,
     "type": "catalogue",

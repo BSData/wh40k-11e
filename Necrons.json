@@ -8094,14 +8094,6 @@
                   {
                     "type": "append",
                     "value": "Lethal Hits",
-                    "field": "7f1b-8591-2fcf-d01c",
-                    "scope": "root-entry",
-                    "affects": "entries.group.recursive.profiles.Ranged Weapons",
-                    "join": ", "
-                  },
-                  {
-                    "type": "append",
-                    "value": "Lethal Hits",
                     "field": "893f-9000-ccf7-648e",
                     "scope": "root-entry",
                     "affects": "entries.group.recursive.profiles.Melee Weapons",
@@ -12757,6 +12749,18 @@
               }
             ]
           }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "10f8-9ba7-054b-a20b",
+            "childId": "0cb1-1b4e-c8f7-101a",
+            "childName": "Canoptek Retinue"
+          }
         ]
       },
       {
@@ -14409,7 +14413,19 @@
         "import": true,
         "name": "Illuminor Szeras",
         "hidden": false,
-        "id": "d977-6a26-bc03-4722"
+        "id": "d977-6a26-bc03-4722",
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "2061-9953-307c-13ba",
+            "childId": "0cb1-1b4e-c8f7-101a",
+            "childName": "Canoptek Retinue"
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -16694,7 +16710,7 @@
             "type": "append",
             "value": "Lethal Hits",
             "field": "893f-9000-ccf7-648e",
-            "affects": "self.entries.group.recursive.group.profiles.Melee Weapons",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
             "conditions": [
               {
                 "type": "atLeast",
@@ -20868,6 +20884,16 @@
             "shared": true,
             "id": "d7bf-31e4-c4aa-394d",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "90cf-584e-0a39-aa53",
+            "childId": "0cb1-1b4e-c8f7-101a",
+            "childName": "Canoptek Retinue"
           }
         ],
         "modifierGroups": [
@@ -21606,6 +21632,16 @@
             "shared": true,
             "id": "d02f-2324-baac-695e",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "3e1c-6f8b-c346-f4cc",
+            "childId": "0cb1-1b4e-c8f7-101a",
+            "childName": "Canoptek Retinue"
           }
         ],
         "modifierGroups": [
@@ -22187,6 +22223,16 @@
             "shared": true,
             "id": "4f6c-43e0-c8c5-a599",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "48cd-f5c0-3363-6f08",
+            "childId": "0cb1-1b4e-c8f7-101a",
+            "childName": "Canoptek Retinue"
           }
         ],
         "selectionEntryGroups": [
@@ -23139,6 +23185,16 @@
             "shared": true,
             "id": "7b29-8332-e015-d8f6",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6c59-192f-9147-336f",
+            "childId": "0cb1-1b4e-c8f7-101a",
+            "childName": "Canoptek Retinue"
           }
         ],
         "modifierGroups": [
@@ -27620,6 +27676,16 @@
             "id": "6cfc-b493-96ba-6cf6",
             "childId": "1556-9b56-fba6-4370",
             "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "86d0-0564-a329-6273",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifierGroups": [
@@ -29133,9 +29199,9 @@
           {
             "characteristics": [
               {
-                "$text": "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a CRYPTEK model (a unit cannot have more than one CRYPTOTHRALLS unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that  Bodyguard unit’s Starting Strength is increased accordingly.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a CRYPTEK model (a unit cannot have more than one CRYPTOTHRALLS unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly."
               }
             ],
             "name": "Cryptek Retinue",
@@ -29357,6 +29423,13 @@
             "id": "1190-ffad-4e37-bc58",
             "primary": false,
             "name": "Cryptothralls"
+          },
+          {
+            "name": "Canoptek Retinue",
+            "hidden": false,
+            "id": "aefe-8176-a257-1790",
+            "targetId": "0cb1-1b4e-c8f7-101a",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -29598,7 +29671,46 @@
         "import": true,
         "name": "Cryptothralls",
         "hidden": false,
-        "id": "ef7a-c413-c779-2d18"
+        "id": "ef7a-c413-c779-2d18",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "model-or-unit",
+            "name": "Cryptek Retinue",
+            "id": "3b1c-dcb1-0f8b-793a",
+            "label": "Retainers",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a98a-4cc0-5f02-e078",
+                    "shared": true,
+                    "childName": "Cryptek"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "model-or-unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "eed0-ef83-b6cf-dddf",
+            "field": "add-info",
+            "affects": "group.a98a-4cc0-5f02-e078"
+          }
+        ]
       },
       {
         "costs": [
@@ -38252,6 +38364,16 @@
             "id": "67bd-7953-cea7-413d",
             "childId": "1556-9b56-fba6-4370",
             "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "f8f8-c03d-6568-806c",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifierGroups": [
@@ -55318,6 +55440,13 @@
             "id": "7753-bc12-0549-476a",
             "targetId": "54e9-0256-cffc-7a5e",
             "primary": false
+          },
+          {
+            "name": "Canoptek Retinue",
+            "hidden": false,
+            "id": "a161-c45e-5aff-8bd8",
+            "targetId": "0cb1-1b4e-c8f7-101a",
+            "primary": false
           }
         ],
         "infoLinks": [
@@ -56175,6 +56304,37 @@
               }
             ]
           }
+        ],
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "model-or-unit",
+            "name": "Canoptek Retinue",
+            "id": "0492-ca20-7a19-a567",
+            "label": "Retainers",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "a98a-4cc0-5f02-e078",
+                    "shared": true,
+                    "childName": "Cryptek"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "model-or-unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
         ]
       },
       {
@@ -56290,6 +56450,16 @@
             "shared": true,
             "id": "881a-1568-9d02-f27e",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "8304-22f3-3767-a28d",
+            "childId": "0cb1-1b4e-c8f7-101a",
+            "childName": "Canoptek Retinue"
           }
         ],
         "entryLinks": [
@@ -59504,7 +59674,7 @@
       {
         "type": "model",
         "import": true,
-        "name": "Tomb Citadel Walls",
+        "name": "Tomb Citadel Walls [Legends]",
         "hidden": false,
         "id": "d3ee-bc80-1eea-6463",
         "costs": [
@@ -60143,6 +60313,26 @@
                     "targetId": "d1d1-611e-5191-1095"
                   }
                 ]
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "lessThan",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "shared": true,
+                "id": "8627-bf89-a415-c860",
+                "includeChildSelections": true,
+                "includeChildForces": true
               }
             ]
           }
@@ -62120,6 +62310,11 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Canoptek Retinue",
+        "id": "0cb1-1b4e-c8f7-101a",
+        "hidden": true
       }
     ],
     "entryLinks": [
@@ -62703,7 +62898,7 @@
       },
       {
         "import": true,
-        "name": "Tomb Citadel Walls",
+        "name": "Tomb Citadel Walls [Legends]",
         "hidden": false,
         "id": "e85f-821f-e245-1bc1",
         "type": "selectionEntry",
@@ -63113,7 +63308,7 @@
     "name": "Xenos - Necrons",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 11,
+    "revision": 14,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }

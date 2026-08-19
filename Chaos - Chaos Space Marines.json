@@ -33597,6 +33597,26 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "08fb-4cb5-36fb-d638",
+            "field": "add-info",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "parent",
+                "childId": "a660-3c2c-2f05-a6a1",
+                "shared": true,
+                "childName": "Warped Foresight",
+                "includeChildForces": false,
+                "traverseAssociationGroup": true,
+                "includeChildSelections": true
+              }
+            ],
+            "affects": "group"
           }
         ],
         "constraints": [
@@ -37991,7 +38011,19 @@
             "field": "associations",
             "scope": "self",
             "shared": true,
-            "id": "254f-4b62-1d7a-6f98"
+            "id": "254f-4b62-1d7a-6f98",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "bbf3-00f0-8732-c674",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "modifierGroups": [
@@ -77373,6 +77405,23 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "faec-8b1b-5a21-0087",
+            "field": "add-info",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ],
+            "affects": "group"
           }
         ],
         "constraints": [
@@ -88630,6 +88679,23 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "699c-55ed-7fee-65ab",
+            "field": "add-info",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ],
+            "affects": "group"
           }
         ],
         "profiles": [
@@ -115333,6 +115399,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "08fb-4cb5-36fb-d638",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "profiles": [
@@ -115407,22 +115480,6 @@
               }
             ],
             "comment": "Raiders",
-            "infoLinks": [
-              {
-                "modifiers": [
-                  {
-                    "type": "append",
-                    "value": "6\"",
-                    "field": "name"
-                  }
-                ],
-                "name": "Scouts",
-                "id": "f8ab-6ce3-d179-47b8",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "ada6-bac1-ffe0-d6f7"
-              }
-            ],
             "type": "upgrade",
             "import": true,
             "name": "Mark of the Hound",
@@ -115712,6 +115769,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "bec5-4288-34a6-ccfa",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "profiles": [
@@ -115728,15 +115792,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "52f2-f4c-5512-94a4"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Stealth",
-                "id": "5f62-b535-55ba-3aed",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "bec5-4288-34a6-ccfa"
               }
             ],
             "costs": [
@@ -117079,22 +117134,6 @@
               }
             ],
             "comment": "Chaos Cult",
-            "infoLinks": [
-              {
-                "modifiers": [
-                  {
-                    "type": "append",
-                    "value": "6\"",
-                    "field": "name"
-                  }
-                ],
-                "name": "Scouts",
-                "id": "f027-d7e4-abab-49a9",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "ada6-bac1-ffe0-d6f7"
-              }
-            ],
             "type": "upgrade",
             "import": true,
             "name": "Warped Foresight",
@@ -118588,6 +118627,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "08fb-4cb5-36fb-d638",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "comment": "Nightmare Hunt",
@@ -118660,15 +118706,6 @@
                 "name": "Enhancements",
                 "typeId": "f759-1bc4-cb3a-f0d2",
                 "value": 1
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Stealth",
-                "id": "2f31-a015-9749-51de",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "bec5-4288-34a6-ccfa"
               }
             ],
             "type": "upgrade",
@@ -118855,6 +118892,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "08fb-4cb5-36fb-d638",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "comment": "Nightmare Hunt",
@@ -118872,22 +118916,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "1e43-c5b8-0f99-cb0f"
-              }
-            ],
-            "infoLinks": [
-              {
-                "modifiers": [
-                  {
-                    "type": "append",
-                    "value": "6\"",
-                    "field": "name"
-                  }
-                ],
-                "name": "Scouts",
-                "id": "ae79-56b5-75d3-e299",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "ada6-bac1-ffe0-d6f7"
               }
             ],
             "constraints": [
