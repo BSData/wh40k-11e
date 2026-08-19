@@ -22522,20 +22522,23 @@
                         "type": "and",
                         "modifiers": [
                           {
-                            "type": "set",
-                            "value": "5+*",
-                            "field": "55a7-5b54-c60d-11dc",
-                            "affects": "self.entries.group.recursive.profiles.Unit",
-                            "scope": "root-entry"
-                          },
-                          {
                             "type": "append",
                             "value": "Conversion Field",
                             "field": "annotation",
                             "affects": "self.entries.group.recursive.profiles.Unit",
                             "scope": "root-entry",
-                            "join": ",",
+                            "join": ", ",
                             "skipIfPresent": "Conversion Field"
+                          },
+                          {
+                            "type": "replace",
+                            "value": "5+*",
+                            "field": "55a7-5b54-c60d-11dc",
+                            "affects": "self.entries.group.recursive.profiles.Unit",
+                            "scope": "root-entry",
+                            "join": "",
+                            "skipIfPresent": "+",
+                            "arg": "-"
                           }
                         ]
                       }
