@@ -77054,9 +77054,9 @@
                   {
                     "characteristics": [
                       {
-                        "$text": "BATTLESUIT model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
                         "name": "Description",
-                        "typeId": "9b8f-694b-e5e-b573"
+                        "typeId": "9b8f-694b-e5e-b573",
+                        "$text": "**BATTLESUIT** model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability."
                       }
                     ],
                     "name": "The Be'gel Hunter's Plate",
@@ -77180,25 +77180,41 @@
                 ],
                 "infoLinks": [
                   {
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "5+",
-                        "field": "name"
-                      }
-                    ],
-                    "name": "Feel No Pain",
+                    "name": "Feel No Pain 5+",
                     "id": "d902-d37a-1caa-a482",
                     "hidden": false,
                     "type": "rule",
-                    "targetId": "9bf4-280f-bbe2-6fbb"
+                    "targetId": "5e10-6d62-2624-80a8"
                   }
                 ],
                 "type": "upgrade",
                 "import": true,
                 "name": "The Be'gel Hunter's Plate",
                 "hidden": false,
-                "id": "df1d-351d-5548-2e60"
+                "id": "df1d-351d-5548-2e60",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "The Be'gel Hunter's Plate",
+                        "field": "annotation",
+                        "scope": "model",
+                        "affects": "profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "The Be'gel Hunter's Plate"
+                      },
+                      {
+                        "type": "set",
+                        "value": "2+",
+                        "field": "450-a17e-9d5e-29da",
+                        "scope": "model",
+                        "affects": "profiles.Unit"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "name": "Antiquity Relics",
