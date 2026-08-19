@@ -145,20 +145,36 @@
             "type": "set",
             "value": false,
             "field": "hidden",
-            "conditions": [
+            "scope": "roster",
+            "conditionGroups": [
               {
-                "type": "instanceOf",
-                "value": 1,
-                "field": "selections",
-                "scope": "self",
-                "childId": "bb9d-299a-ed60-2d8a",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true,
-                "childName": "Army Roster"
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "bb9d-299a-ed60-2d8a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Army Roster"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ff7b-8f73-1756-650a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Crusade Army"
+                  }
+                ]
               }
-            ],
-            "scope": "roster"
+            ]
           }
         ],
         "hidden": true
@@ -2807,6 +2823,72 @@
                 "type": "set",
                 "value": 1,
                 "field": "21dc-d454-3048-5aeb"
+              },
+              {
+                "type": "set",
+                "value": 3,
+                "field": "017d-e82d-5b4d-d32e",
+                "conditionGroups": [
+                  {
+                    "type": "or",
+                    "conditions": [
+                      {
+                        "type": "equalTo",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "force",
+                        "childId": "baf8-997f-e323-a090",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "childName": "2. Strike Force (2000 Point limit)"
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "type": "equalTo",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "force",
+                            "childId": "d62d-db22-4893-4bc0",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "1. Incursion (1000 Point limit)"
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "force",
+                            "childId": "7d80-2de5-816e-9d2b",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "3DP Detachment"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "set",
+                "value": 4,
+                "field": "017d-e82d-5b4d-d32e",
+                "conditions": [
+                  {
+                    "type": "equalTo",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "4204-82d0-908c-a62a",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "3. Onslaught (3000 Point limit)"
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -2837,6 +2919,15 @@
                 "scope": "force",
                 "shared": true,
                 "id": "57b7-ac0e-5d06-9ddb",
+                "includeChildSelections": true
+              },
+              {
+                "type": "max",
+                "value": 2,
+                "field": "82ae-1066-5107-6ae0",
+                "scope": "force",
+                "shared": true,
+                "id": "017d-e82d-5b4d-d32e",
                 "includeChildSelections": true
               }
             ],
