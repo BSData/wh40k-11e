@@ -181,7 +181,7 @@
     "entryLinks": [
       {
         "id": "0ec6-9ba0-eef0-b5b9",
-        "name": "Detachment Choice",
+        "name": "Detachment",
         "hidden": false,
         "collective": false,
         "import": true,
@@ -28853,7 +28853,7 @@
                     "type": "atLeast",
                     "value": 1,
                     "field": "selections",
-                    "scope": "05b6-7622-edbe-7a9a",
+                    "scope": "85f1-9376-99ae-7570",
                     "childId": "83bb-71d4-bf6b-57e7",
                     "shared": true,
                     "includeChildSelections": true
@@ -29981,7 +29981,179 @@
         "import": true,
         "name": "Steeljack Elder [Crucible]",
         "hidden": false,
-        "id": "4eaf-78d5-9195-0e36"
+        "id": "4eaf-78d5-9195-0e36",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "2932-f695-9a4b-e9ad",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "e338-1886-59c6-414c",
+                            "shared": true,
+                            "childName": "Ironkin Steeljacks"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "4eaf-78d5-9195-0e36",
+                        "childId": "83bb-71d4-bf6b-57e7",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Specialisms"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "4eaf-78d5-9195-0e36",
+                        "childId": "05f6-68ba-8b8a-a426",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Cthonian Augmentations"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "e28c-95f8-3f06-0afa",
+                        "shared": true,
+                        "childName": "Beserks"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "4eaf-78d5-9195-0e36",
+                        "childId": "0661-f3b2-fdf9-b19d",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Exoarmour"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5070-c08d-0fa7-0f9d",
+                        "shared": true,
+                        "childName": "Einhyr Hearthguard"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "4eaf-78d5-9195-0e36",
+                        "childId": "724a-f975-95d0-dff2",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Exoframe"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "0b9d-34c5-f0bf-ee60",
+                        "shared": true,
+                        "childName": "Thunderkyn"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "4eaf-78d5-9195-0e36",
+                        "childId": "ba0f-7a20-9c08-baab",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Magna-coil Bike"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "8b60-36d5-35a8-8a69",
+                        "shared": true,
+                        "childName": "Pioneers"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "4eaf-78d5-9195-0e36",
+                        "childId": "0492-45d5-e5f8-5972",
+                        "shared": true,
+                        "queryFromSelf": true,
+                        "childName": "Yaegir"
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5b17-69c0-77f9-d2f4",
+                        "shared": true,
+                        "childName": "Yaegirs"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       },
       {
         "costs": [
@@ -43608,7 +43780,34 @@
             "import": true,
             "name": "Kindred Hero",
             "hidden": false,
-            "id": "558b-d1e0-fee5-ebac"
+            "id": "558b-d1e0-fee5-ebac",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "scope": "parent",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits"
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "scope": "parent",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits"
+              },
+              {
+                "type": "add",
+                "value": "d1d1-611e-5191-1095",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
+              }
+            ]
           },
           {
             "profiles": [
@@ -43631,7 +43830,16 @@
             "import": true,
             "name": "Rampart Crest",
             "hidden": false,
-            "id": "af7e-7466-fec3-2cd1"
+            "id": "af7e-7466-fec3-2cd1",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "scope": "parent",
+                "affects": "self.entries.group.profiles.Unit"
+              }
+            ]
           },
           {
             "modifiers": [
@@ -43650,6 +43858,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "7cb5-dd6b-dd87-ad3b",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "profiles": [
@@ -47512,7 +47727,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "f616-3f08-ee8e-3349",
     "name": "Xenos - Leagues of Votann",
-    "revision": 2,
+    "revision": 3,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
