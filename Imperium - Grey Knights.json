@@ -3301,13 +3301,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
-          },
-          {
-            "name": "Feel No Pain",
-            "id": "73ff-70af-f177-b8ce",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "9bf4-280f-bbe2-6fbb"
           }
         ],
         "selectionEntryGroups": [
@@ -4120,6 +4113,12 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "699c-55ed-7fee-65ab",
+            "field": "add-info",
+            "affects": "group"
           }
         ],
         "associations": [
@@ -7157,17 +7156,7 @@
                 "value": "Champion of the Order of Purifiers",
                 "field": "annotation",
                 "affects": "self.entries.group.recursive.5734-ebde-ab2c-8796.associations.profiles.Ranged Weapons",
-                "join": ", ",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "associations",
-                    "scope": "self",
-                    "childId": "any",
-                    "shared": true
-                  }
-                ]
+                "join": ", "
               },
               {
                 "type": "increment",
@@ -7175,17 +7164,7 @@
                 "field": "3bb-c35f-f54-fb08",
                 "affects": "self.entries.group.recursive.5734-ebde-ab2c-8796.associations.profiles.Ranged Weapons",
                 "join": ", ",
-                "position": -1,
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "associations",
-                    "scope": "self",
-                    "childId": "any",
-                    "shared": true
-                  }
-                ]
+                "position": -1
               },
               {
                 "type": "append",
@@ -7203,7 +7182,17 @@
                 "position": -1
               }
             ],
-            "comment": "Champion of the Order of Purifiers attached unit modifiers"
+            "comment": "Champion of the Order of Purifiers attached unit modifiers",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "type": "model",
@@ -9132,13 +9121,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "6a5e-1316-2d87-93c5"
-          },
-          {
-            "name": "Stealth",
-            "id": "3531-1378-5bec-f02e",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "bec5-4288-34a6-ccfa"
           }
         ],
         "selectionEntries": [
@@ -9556,6 +9538,14 @@
             "includeChildSelections": true,
             "childName": "unit",
             "action": "group"
+          }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "bec5-4288-34a6-ccfa",
+            "field": "add-info",
+            "affects": "group"
           }
         ]
       },
@@ -17926,6 +17916,12 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "add",
+            "value": "699c-55ed-7fee-65ab",
+            "field": "add-info",
+            "affects": "group"
           }
         ],
         "modifierGroups": [
@@ -34470,15 +34466,13 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
-                  }
-                ],
-                "infoLinks": [
+                  },
                   {
-                    "name": "Stealth",
-                    "id": "b529-e9fb-2cd8-62f7",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
+                    "type": "add",
+                    "value": "bec5-4288-34a6-ccfa",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "costs": [
@@ -46566,20 +46560,46 @@
                 "id": "a47d-0470-6504-2738"
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Lethal Hits",
-                "id": "0891-665f-daac-c5a7",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "d1d1-611e-5191-1095"
-              }
-            ],
             "type": "upgrade",
             "import": true,
             "name": "Hammerhand (Psychic)",
             "hidden": false,
-            "id": "cb4d-81aa-04fe-cfe6"
+            "id": "cb4d-81aa-04fe-cfe6",
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "type": "append",
+                    "value": "Hammerhand",
+                    "field": "annotation",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "scope": "root-entry",
+                    "join": ", ",
+                    "skipIfPresent": "Hammerhand"
+                  },
+                  {
+                    "type": "append",
+                    "value": "Lethal Hits",
+                    "field": "893f-9000-ccf7-648e",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "scope": "root-entry",
+                    "join": ", ",
+                    "skipIfPresent": "Lethal Hits"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "root-entry",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ]
+              }
+            ]
           },
           {
             "infoLinks": [
@@ -46614,20 +46634,20 @@
                 "id": "208f-d793-f82d-67e5"
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Feel No Pain",
-                "id": "103d-ff8a-b80d-e848",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "9bf4-280f-bbe2-6fbb"
-              }
-            ],
             "type": "upgrade",
             "import": true,
             "name": "Sanctic Hood",
             "hidden": false,
-            "id": "3102-df9c-1ffd-9fc3"
+            "id": "3102-df9c-1ffd-9fc3",
+            "modifiers": [
+              {
+                "type": "add",
+                "value": "699c-55ed-7fee-65ab",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "root-entry"
+              }
+            ]
           },
           {
             "profiles": [
@@ -46880,15 +46900,16 @@
                         "type": "append",
                         "value": "Boons of Deimos",
                         "field": "annotation",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                         "scope": "root-entry",
-                        "join": ", "
+                        "join": ", ",
+                        "skipIfPresent": "Boons of Deimos"
                       },
                       {
                         "type": "increment",
                         "value": 2,
                         "field": "2229-f494-25db-c5d3",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                         "scope": "root-entry"
                       }
                     ]
