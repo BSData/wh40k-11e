@@ -13069,13 +13069,6 @@
             "targetId": "7cb5-dd6b-dd87-ad3b"
           },
           {
-            "name": "Invulnerable Save",
-            "hidden": false,
-            "type": "profile",
-            "id": "38a8-eafc-5a43-d3e8",
-            "targetId": "db19-dee7-9530-ef0e"
-          },
-          {
             "name": "Oath of Moment",
             "hidden": false,
             "type": "rule",
@@ -13447,39 +13440,39 @@
           {
             "characteristics": [
               {
-                "$text": "5\"",
                 "name": "M",
-                "typeId": "e703-ecb6-5ce7-aec1"
+                "typeId": "e703-ecb6-5ce7-aec1",
+                "$text": "5\""
               },
               {
-                "$text": "5",
                 "name": "T",
-                "typeId": "d29d-cf75-fc2d-34a4"
+                "typeId": "d29d-cf75-fc2d-34a4",
+                "$text": "5"
               },
               {
-                "$text": "2+",
                 "name": "Sv",
-                "typeId": "450-a17e-9d5e-29da"
+                "typeId": "450-a17e-9d5e-29da",
+                "$text": "2+"
               },
               {
-                "$text": "6",
                 "name": "W",
-                "typeId": "750a-a2ec-90d3-21fe"
+                "typeId": "750a-a2ec-90d3-21fe",
+                "$text": "6"
               },
               {
-                "$text": "6+",
                 "name": "LD",
-                "typeId": "58d2-b879-49c7-43bc"
+                "typeId": "58d2-b879-49c7-43bc",
+                "$text": "6+"
               },
               {
-                "$text": "1",
                 "name": "OC",
-                "typeId": "bef7-942a-1a23-59f8"
+                "typeId": "bef7-942a-1a23-59f8",
+                "$text": "1"
               },
               {
                 "name": "InSv",
                 "typeId": "55a7-5b54-c60d-11dc",
-                "$text": ""
+                "$text": "4+"
               }
             ],
             "name": "Captain in Terminator Armour",
@@ -17645,7 +17638,7 @@
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ],
-            "name": "Purge the Foe",
+            "name": "Incendiary Terror",
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
             "hidden": false,
@@ -89979,6 +89972,36 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "type": "model",
@@ -90660,6 +90683,36 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -91439,6 +91492,36 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", "
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", "
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -92116,6 +92199,23 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "4+",
+            "field": "55a7-5b54-c60d-11dc",
+            "affects": "entries.group.recursive.profiles.Unit",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
               }
             ]
           }
@@ -95452,6 +95552,39 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "5+ vs Ranged",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "entries.group.recursive.profiles.Unit"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1242-7b3f-a47e-503a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wrathful Procession"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -97038,6 +97171,39 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "5+ vs Ranged",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "entries.group.recursive.profiles.Unit"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1242-7b3f-a47e-503a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wrathful Procession"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -97899,6 +98065,39 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "5+ vs Ranged",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "entries.group.recursive.profiles.Unit"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1242-7b3f-a47e-503a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wrathful Procession"
+              }
+            ]
           }
         ],
         "type": "model",
@@ -139909,7 +140108,15 @@
                     "import": true,
                     "name": "Macro Plasma Incinerator",
                     "hidden": false,
-                    "id": "e4a4-973a-644c-3d44"
+                    "id": "e4a4-973a-644c-3d44",
+                    "categoryLinks": [
+                      {
+                        "targetId": "cb29-f4bb-ff15-6b11",
+                        "id": "a98a-9962-9e75-fb86",
+                        "primary": false,
+                        "name": "Plasma"
+                      }
+                    ]
                   }
                 ],
                 "name": "Weapon Arm 2",
@@ -160968,6 +161175,13 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
+                  },
+                  {
+                    "type": "decrement",
+                    "value": 1,
+                    "field": "41a0-1301-112a-e2f2",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "scope": "model-or-unit"
                   }
                 ],
                 "profiles": [
@@ -161541,7 +161755,17 @@
                 "import": true,
                 "name": "Consecrating Aura",
                 "hidden": false,
-                "id": "09b9-e095-3c1e-16ab"
+                "id": "09b9-e095-3c1e-16ab",
+                "modifiers": [
+                  {
+                    "type": "set",
+                    "value": "5+",
+                    "field": "55a7-5b54-c60d-11dc",
+                    "scope": "model-or-unit",
+                    "affects": "self.entries.forces.recursive.profiles.Unit",
+                    "join": ", "
+                  }
+                ]
               },
               {
                 "costs": [

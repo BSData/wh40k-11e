@@ -894,6 +894,41 @@
             "childName": "unit",
             "action": "group"
           }
+        ],
+        "modifierGroups": [
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "5+ vs Ranged",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "entries.group.recursive.profiles.Unit"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1242-7b3f-a47e-503a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wrathful Procession"
+              }
+            ]
+          }
         ]
       },
       {
@@ -1438,13 +1473,13 @@
                 "type": "increment",
                 "value": 1,
                 "field": "2337-daa1-6682-b110",
-                "affects": "group.recursive.profiles.Melee Weapons"
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons"
               },
               {
                 "type": "increment",
                 "value": 1,
                 "field": "ab33-d393-96ce-ccba",
-                "affects": "group.recursive.profiles.Melee Weapons"
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons"
               }
             ],
             "conditions": [
@@ -15853,6 +15888,39 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "5+ vs Ranged",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "entries.group.recursive.profiles.Unit"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              },
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "roster",
+                "childId": "1242-7b3f-a47e-503a",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Wrathful Procession"
+              }
+            ]
           }
         ],
         "type": "model",
