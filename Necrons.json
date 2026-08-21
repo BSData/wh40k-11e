@@ -23592,32 +23592,6 @@
             "targetId": "a511-d9ca-17d0-42c5"
           },
           {
-            "name": "Assault",
-            "id": "7933-1295-6ec1-78a9",
-            "hidden": true,
-            "type": "rule",
-            "targetId": "fc8a-8c24-bae9-cc1c",
-            "modifiers": [
-              {
-                "type": "set",
-                "value": false,
-                "field": "hidden",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ec2e-3289-5a4a-d5a6",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "Hand of the Dynasty"
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "name": "Feel No Pain",
             "id": "c301-35bf-c7a0-19fe",
             "hidden": false,
@@ -24030,29 +24004,7 @@
             "hidden": false,
             "id": "ea2d-fc31-6e16-fd70",
             "defaultSelectionEntryId": "2498-87b1-fec5-2973",
-            "sortIndex": 3,
-            "modifiers": [
-              {
-                "type": "append",
-                "value": "Assault",
-                "field": "7f1b-8591-2fcf-d01c",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ec2e-3289-5a4a-d5a6",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "Hand of the Dynasty"
-                  }
-                ],
-                "scope": "parent",
-                "join": ", "
-              }
-            ]
+            "sortIndex": 3
           },
           {
             "name": "Enhancements",
@@ -24261,25 +24213,6 @@
             "type": "set",
             "value": 190,
             "field": "51b2-306e-1021-d207"
-          },
-          {
-            "type": "append",
-            "value": "Assault",
-            "field": "7f1b-8591-2fcf-d01c",
-            "affects": "self.entries.profiles.Ranged Weapons",
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "force",
-                "childId": "ec2e-3289-5a4a-d5a6",
-                "shared": true,
-                "includeChildSelections": true,
-                "childName": "Hand of the Dynasty"
-              }
-            ],
-            "scope": "unit"
           },
           {
             "type": "increment",
@@ -24578,6 +24511,38 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "comment": "Hand of the Dynasty mods",
+            "modifiers": [
+              {
+                "type": "add",
+                "value": "fc8a-8c24-bae9-cc1c",
+                "field": "add-info",
+                "affects": "group"
+              },
+              {
+                "type": "append",
+                "value": "Assault",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Assault"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "ec2e-3289-5a4a-d5a6",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Hand of the Dynasty"
+              }
+            ]
           }
         ],
         "type": "unit",
@@ -24949,27 +24914,7 @@
                             "typeId": "f77d-b953-8fa4-b762",
                             "typeName": "Ranged Weapons",
                             "hidden": false,
-                            "id": "1037-e515-220f-7274",
-                            "modifiers": [
-                              {
-                                "type": "append",
-                                "value": "Assault",
-                                "field": "7f1b-8591-2fcf-d01c",
-                                "join": ", ",
-                                "conditions": [
-                                  {
-                                    "type": "atLeast",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "force",
-                                    "childId": "ec2e-3289-5a4a-d5a6",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "childName": "Hand of the Dynasty"
-                                  }
-                                ]
-                              }
-                            ]
+                            "id": "1037-e515-220f-7274"
                           }
                         ],
                         "infoLinks": [
@@ -24979,32 +24924,6 @@
                             "type": "rule",
                             "id": "b4fc-4018-5fab-9b1a",
                             "targetId": "d1d1-611e-5191-1095"
-                          },
-                          {
-                            "name": "Assault",
-                            "id": "1bfc-10a7-579d-7e9e",
-                            "hidden": false,
-                            "type": "rule",
-                            "targetId": "fc8a-8c24-bae9-cc1c",
-                            "modifiers": [
-                              {
-                                "type": "set",
-                                "value": true,
-                                "field": "hidden",
-                                "conditions": [
-                                  {
-                                    "type": "lessThan",
-                                    "value": 1,
-                                    "field": "selections",
-                                    "scope": "force",
-                                    "childId": "ec2e-3289-5a4a-d5a6",
-                                    "shared": true,
-                                    "includeChildSelections": true,
-                                    "childName": "Hand of the Dynasty"
-                                  }
-                                ]
-                              }
-                            ]
                           }
                         ],
                         "constraints": [
@@ -25771,6 +25690,38 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "comment": "Hand of the Dynasty mods",
+            "modifiers": [
+              {
+                "type": "add",
+                "value": "fc8a-8c24-bae9-cc1c",
+                "field": "add-info",
+                "affects": "group"
+              },
+              {
+                "type": "append",
+                "value": "Assault",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Assault"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "ec2e-3289-5a4a-d5a6",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Hand of the Dynasty"
+              }
+            ]
           }
         ],
         "type": "unit",
