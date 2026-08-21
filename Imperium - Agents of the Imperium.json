@@ -7565,6 +7565,26 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "shared": true,
+                "includeChildSelections": true,
+                "childId": "cfc6-5531-53cb-1964",
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "constraints": [
@@ -8096,6 +8116,26 @@
                 "includeChildSelections": false
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -8568,20 +8608,29 @@
                         "id": "2f11-3bd0-4e01-4ed4"
                       }
                     ],
-                    "infoLinks": [
-                      {
-                        "name": "Ignores Cover",
-                        "hidden": false,
-                        "type": "rule",
-                        "id": "9b6d-42fe-b239-52e5",
-                        "targetId": "4640-43e7-30b-215a"
-                      }
-                    ],
                     "type": "upgrade",
                     "import": true,
                     "name": "Soulguilt scanner",
                     "hidden": false,
-                    "id": "967b-6221-2f2a-74fd"
+                    "id": "967b-6221-2f2a-74fd",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Ignores Cover",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Ignores Cover"
+                      },
+                      {
+                        "type": "add",
+                        "value": "4640-43e7-30b-215a",
+                        "field": "add-info",
+                        "scope": "root-entry",
+                        "affects": "group"
+                      }
+                    ]
                   }
                 ],
                 "type": "model",
@@ -10738,6 +10787,26 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "profiles": [
@@ -11570,6 +11639,26 @@
             "type": "increment",
             "value": 35,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -12243,6 +12332,32 @@
             "type": "increment",
             "value": 20,
             "field": "51b2-306e-1021-d207"
+          },
+          {
+            "type": "set",
+            "value": "6+*",
+            "field": "55a7-5b54-c60d-11dc",
+            "affects": "self.entries.recursive.associations.profiles.Unit"
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -12881,6 +12996,45 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "append",
+            "value": "Anti-PSYKER 4+",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Anti-PSYKER",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -13418,6 +13572,26 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -14433,6 +14607,26 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "constraints": [
@@ -15309,6 +15503,26 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -18834,6 +19048,26 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -22261,6 +22495,47 @@
             "childName": "unit",
             "action": "group"
           }
+        ],
+        "modifiers": [
+          {
+            "type": "append",
+            "value": "Sustained Hits 1",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Sustained Hits",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
+          }
         ]
       },
       {
@@ -23760,6 +24035,26 @@
                 "childName": "Inquisitor"
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "constraints": [
@@ -24280,24 +24575,6 @@
                 "$text": "4+"
               }
             ],
-            "modifiers": [
-              {
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "15c0-9294-7eb8-f3a7",
-                    "childId": "5402-e4ff-823b-1747",
-                    "shared": true,
-                    "includeChildSelections": true
-                  }
-                ],
-                "type": "increment",
-                "value": 1,
-                "field": "bef7-942a-1a23-59f8"
-              }
-            ],
             "name": "Grey Knights Terminator Squad",
             "typeId": "c547-1836-d8a-ff4f",
             "typeName": "Unit",
@@ -24444,7 +24721,8 @@
                     "scope": "parent",
                     "shared": true,
                     "id": "fa86-fc2d-9089-065c",
-                    "includeChildSelections": false
+                    "includeChildSelections": false,
+                    "automatic": true
                   }
                 ],
                 "entryLinks": [
@@ -24474,21 +24752,53 @@
                     "id": "5831-7fe7-608a-2f4a",
                     "type": "selectionEntry",
                     "targetId": "a3a7-20c8-4d26-8d37"
-                  },
-                  {
-                    "import": true,
-                    "name": "Ancient's Banner",
-                    "hidden": false,
-                    "id": "a2c8-0e06-97cd-c79d",
-                    "type": "selectionEntry",
-                    "targetId": "5402-e4ff-823b-1747"
                   }
                 ],
                 "type": "model",
                 "import": true,
                 "name": "Terminator",
                 "hidden": false,
-                "id": "c44d-6380-a431-c369"
+                "id": "c44d-6380-a431-c369",
+                "sortIndex": 1,
+                "modifiers": [
+                  {
+                    "type": "decrement",
+                    "value": 1,
+                    "field": "fa86-fc2d-9089-065c",
+                    "repeats": [
+                      {
+                        "value": 1,
+                        "repeats": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "b2e3-ec37-8c6b-5157",
+                        "shared": true,
+                        "roundUp": false,
+                        "childName": "Terminator w/ Ancient's Banner"
+                      },
+                      {
+                        "value": 1,
+                        "repeats": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "6026-a6c1-6ab5-7744",
+                        "shared": true,
+                        "roundUp": false,
+                        "childName": "Terminator w/ heavy weapon"
+                      },
+                      {
+                        "value": 1,
+                        "repeats": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "childId": "2d90-f418-5954-3241",
+                        "shared": true,
+                        "roundUp": false,
+                        "childName": "Terminator w/ narthecium"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -24814,7 +25124,8 @@
                 "import": true,
                 "name": "Terminator w/ heavy weapon",
                 "hidden": false,
-                "id": "6026-a6c1-6ab5-7744"
+                "id": "6026-a6c1-6ab5-7744",
+                "sortIndex": 3
               },
               {
                 "constraints": [
@@ -24887,7 +25198,84 @@
                 "import": true,
                 "name": "Terminator w/ narthecium",
                 "hidden": false,
-                "id": "2d90-f418-5954-3241"
+                "id": "2d90-f418-5954-3241",
+                "sortIndex": 4
+              },
+              {
+                "type": "model",
+                "import": true,
+                "name": "Terminator w/ Ancient's Banner",
+                "hidden": false,
+                "id": "b2e3-ec37-8c6b-5157",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "cc0f-1192-cabd-417b",
+                    "includeChildSelections": false
+                  }
+                ],
+                "entryLinks": [
+                  {
+                    "import": true,
+                    "name": "Storm bolter",
+                    "hidden": false,
+                    "id": "76f0-888c-af17-d678",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "a64a-e10c-9654-319f",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "type": "selectionEntry",
+                    "targetId": "ac72-81fa-ea32-15fe"
+                  },
+                  {
+                    "import": true,
+                    "name": "Nemesis force weapon",
+                    "hidden": false,
+                    "id": "c714-85ed-5ae1-741e",
+                    "type": "selectionEntry",
+                    "targetId": "a3a7-20c8-4d26-8d37"
+                  },
+                  {
+                    "import": true,
+                    "name": "Ancient's Banner",
+                    "hidden": false,
+                    "id": "1e23-d09c-6aad-f7c7",
+                    "type": "selectionEntry",
+                    "targetId": "5402-e4ff-823b-1747",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "42e2-9252-9dc7-0363-min",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "42e2-9252-9dc7-0363-max",
+                        "includeChildSelections": false
+                      }
+                    ]
+                  }
+                ],
+                "sortIndex": 2
               }
             ],
             "name": "4 Terminators",
@@ -25017,6 +25405,24 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 1,
+            "field": "bef7-942a-1a23-59f8",
+            "affects": "self.entries.group.recursive.profiles.Unit",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "6d21-f616-901f-6546",
+                "childId": "5402-e4ff-823b-1747",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ancient's Banner"
               }
             ]
           }
@@ -25469,26 +25875,6 @@
         "id": "a3a7-20c8-4d26-8d37"
       },
       {
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "parent",
-            "shared": true,
-            "id": "d144-c1e3-6a75-6a02",
-            "includeChildSelections": false
-          },
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "15c0-9294-7eb8-f3a7",
-            "shared": true,
-            "id": "4250-a3d7-f1e6-7236",
-            "includeChildSelections": true
-          }
-        ],
         "profiles": [
           {
             "characteristics": [
@@ -28653,15 +29039,15 @@
                         "value": "Simulacrum Imperialis",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "unit",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit"
                       },
                       {
                         "type": "decrement",
                         "value": 1,
                         "field": "58d2-b879-49c7-43bc",
-                        "scope": "unit",
-                        "affects": "self.entries.recursive.profiles.Unit"
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit"
                       }
                     ],
                     "type": "and"
@@ -30642,6 +31028,26 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "modifierGroups": [
@@ -31717,6 +32123,37 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "multiply",
+                "value": "2",
+                "field": "3bb-c35f-f54-fb08",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+              },
+              {
+                "type": "multiply",
+                "value": "2",
+                "field": "2337-daa1-6682-b110",
+                "affects": "self.entries.recursive.profiles.Melee Weapons"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "673b-fa00-24a6-28ad",
+                "shared": true,
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "traverseAssociationGroup": true,
+                "childName": "Eisenhorn"
+              }
+            ]
           }
         ],
         "type": "unit",
@@ -32022,6 +32459,25 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "append",
+            "value": "Lethal Hits",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Lethal Hits",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
               }
             ]
           }
@@ -48880,7 +49336,16 @@
                         "import": true,
                         "name": "Helix Gauntlet",
                         "hidden": false,
-                        "id": "6ae1-90e1-7929-3fef"
+                        "id": "6ae1-90e1-7929-3fef",
+                        "modifiers": [
+                          {
+                            "type": "add",
+                            "value": "676c-ecb5-d24d-3540",
+                            "field": "add-info",
+                            "scope": "root-entry",
+                            "affects": "group"
+                          }
+                        ]
                       },
                       {
                         "constraints": [
@@ -52032,6 +52497,25 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "append",
+            "value": "Lethal Hits",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Lethal Hits",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -56415,6 +56899,37 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "add",
+            "value": "08fb-4cb5-36fb-d638",
+            "field": "add-info",
+            "affects": "group",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "92d3-447e-a71e-6739",
+                    "shared": true,
+                    "childName": "Inquisitor"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "cc88-9467-86ac-4ca2",
+                    "shared": true,
+                    "childName": "Ministorum Priest"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "constraints": [
@@ -57820,7 +58335,7 @@
             "name": "Inquisitor Ostromandeus",
             "hidden": false,
             "id": "4902-9ea0-c1fc-164c",
-            "sortIndex": 2
+            "sortIndex": 3
           },
           {
             "constraints": [
@@ -57968,7 +58483,7 @@
             "name": "Stentor-I-52",
             "hidden": false,
             "id": "6aa8-6a7e-a94e-acee",
-            "sortIndex": 3
+            "sortIndex": 4
           }
         ],
         "selectionEntryGroups": [
@@ -58121,9 +58636,24 @@
             "field": "hidden"
           },
           {
-            "type": "add",
-            "value": "The point value of this unit is a guess as GW have not released a cost for it. Use at your own risk.",
-            "field": "info"
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "costs": [
@@ -58236,6 +58766,17 @@
             "includeChildSelections": true,
             "childName": "unit",
             "action": "group"
+          }
+        ],
+        "entryLinks": [
+          {
+            "import": true,
+            "name": "Warlord",
+            "hidden": false,
+            "id": "ef73-8946-bd74-64f2",
+            "type": "selectionEntry",
+            "targetId": "bb9a-14e7-b947-793b",
+            "sortIndex": 2
           }
         ]
       },
@@ -63675,6 +64216,26 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "skipIfPresent": "Ignores Cover",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "cfc6-5531-53cb-1964",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Ordo Hereticus, Purgation Force"
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -68442,6 +69003,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "7cb5-dd6b-dd87-ad3b",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "constraints": [
@@ -68478,15 +69046,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "f551-22fb-f124-e3dc"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Deep Strike",
-                "id": "45a6-bf2d-8f06-8712",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "7cb5-dd6b-dd87-ad3b"
               }
             ],
             "costs": [
@@ -76650,6 +77209,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "c05d-f4c3-f091-4938",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "root-entry"
               }
             ],
             "type": "upgrade",
@@ -76672,9 +77238,9 @@
               {
                 "characteristics": [
                   {
-                    "$text": "Melee weapons equipped by models in this unit have the [Sustained Hits 1] ability",
                     "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
+                    "typeId": "9b8f-694b-e5e-b573",
+                    "$text": "Melee weapons equipped by models in this unit have the [Sustained Hits 1] ability."
                   }
                 ],
                 "name": "Holy Hatred",
@@ -76690,8 +77256,9 @@
                 "value": "Sustained Hits 1",
                 "field": "893f-9000-ccf7-648e",
                 "scope": "parent",
-                "affects": "self.entries.recursive.profiles.Melee Weapons",
-                "join": ", "
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Sustained Hits"
               }
             ],
             "type": "upgrade",
@@ -76714,9 +77281,9 @@
               {
                 "characteristics": [
                   {
-                    "$text": "Ranged weapons equipped by models in this unit have the [Lethal Hits] ability",
                     "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
+                    "typeId": "9b8f-694b-e5e-b573",
+                    "$text": "Ranged weapons equipped by models in this unit have the [Lethal Hits] ability."
                   }
                 ],
                 "name": "Nowhere to Hide",
@@ -76730,10 +77297,11 @@
               {
                 "type": "append",
                 "value": "Lethal Hits",
-                "field": "893f-9000-ccf7-648e",
+                "field": "7f1b-8591-2fcf-d01c",
                 "scope": "parent",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                "join": ", "
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits"
               }
             ],
             "type": "upgrade",
