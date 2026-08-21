@@ -132319,6 +132319,13 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
+          },
+          {
+            "name": "Feel No Pain 4+*",
+            "id": "2485-701a-b31a-1b5b",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "699c-55ed-7fee-65ab"
           }
         ],
         "entryLinks": [
@@ -132378,7 +132385,73 @@
         "import": true,
         "name": "Ciaphas Cain [Legends]",
         "hidden": false,
-        "id": "4aa7-5845-84ad-2d7d"
+        "id": "4aa7-5845-84ad-2d7d",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Leading",
+            "id": "6e34-c0cd-57d5-ea65",
+            "label": "Leader",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "1645-3202-7cc-f36b",
+                    "shared": true,
+                    "childName": "Cadian Shock Troops"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "8a6c-34aa-874b-8013",
+                    "shared": true,
+                    "childName": "Catachan Jungle Fighters"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "63d0-faf2-6fc0-8270",
+                    "shared": true,
+                    "childName": "Death Korps of Krieg"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "54e3-5045-251e-8453",
+                    "shared": true,
+                    "childName": "Kasrkin"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "9b26-c4c5-8af0-8ea4",
+                    "shared": true,
+                    "childName": "Tempestus Scions"
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group"
+          }
+        ]
       }
     ],
     "categoryEntries": [
