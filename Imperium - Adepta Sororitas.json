@@ -328,9 +328,9 @@
               {
                 "characteristics": [
                   {
-                    "$text": "While this unit is leading a unit and contains an Aestred Thurga model, weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability",
                     "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
+                    "typeId": "9b8f-694b-e5e-b573",
+                    "$text": "While this unit is leading a unit and contains an Aestred Thurga model, weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
                   }
                 ],
                 "name": "Auto-Tapestry of the Emperor's Judgement",
@@ -870,6 +870,39 @@
             "includeChildSelections": true,
             "childName": "unit",
             "action": "group"
+          }
+        ],
+        "modifierGroups": [
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Devastating Wounds",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Devastating Wounds"
+              },
+              {
+                "type": "append",
+                "value": "Devastating Wounds",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Devastating Wounds"
+              }
+            ]
           }
         ]
       },
@@ -1970,6 +2003,39 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ],
         "constraints": [
@@ -3356,6 +3422,39 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ]
       },
@@ -7305,6 +7404,39 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ],
         "profiles": [
@@ -8124,13 +8256,25 @@
                 "type": "decrement",
                 "value": 1,
                 "field": "94d-8a98-cf90-183e",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
               },
               {
                 "type": "decrement",
                 "value": 1,
                 "field": "95d1-95f-45b4-11d6",
-                "affects": "self.entries.recursive.profiles.Melee Weapons"
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons"
+              },
+              {
+                "type": "floor",
+                "value": "2",
+                "field": "94d-8a98-cf90-183e",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
+              },
+              {
+                "type": "floor",
+                "value": "2",
+                "field": "95d1-95f-45b4-11d6",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons"
               }
             ]
           }
@@ -11502,6 +11646,39 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ]
       },
@@ -17813,38 +17990,13 @@
             "type": "rule",
             "id": "c11-e0a2-56a0-f97d",
             "targetId": "7ef7-dca6-e2ea-ecc8"
-          }
-        ],
-        "infoGroups": [
+          },
           {
-            "infoLinks": [
-              {
-                "name": "Leader",
-                "hidden": false,
-                "type": "rule",
-                "id": "298-9924-7f2-74f4",
-                "targetId": "b4dd-3e1f-41cb-218f"
-              }
-            ],
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "This model can be attached to the following units:\n■ Battle Sisters Squad\n■ Celestian Sacresants\n■ Dominion Squad\n■ Retributor Squad\n■ Sisters Novitiate Squad",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Leader",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "1ea1-b3c-25f8-8533"
-              }
-            ],
             "name": "Leader",
+            "id": "298-9924-7f2-74f4",
             "hidden": false,
-            "id": "9d37-f05d-e655-2cd6"
+            "type": "rule",
+            "targetId": "b4dd-3e1f-41cb-218f"
           }
         ],
         "selectionEntryGroups": [
@@ -18304,6 +18456,20 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "d505-3475-8bdc-a018"
+          },
+          {
+            "name": "Leader",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "1ea1-b3c-25f8-8533",
+            "characteristics": [
+              {
+                "$text": "This model can be attached to the following units:\n■ Battle Sisters Squad\n■ Celestian Sacresants\n■ Dominion Squad\n■ Retributor Squad\n■ Sisters Novitiate Squad",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "constraints": [
@@ -18537,6 +18703,37 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits"
+              },
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "893f-9000-ccf7-648e",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Lethal Hits"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "type": "model",
@@ -20545,6 +20742,39 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ]
       },
@@ -21329,6 +21559,39 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ],
         "profiles": [
@@ -23099,6 +23362,39 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ],
         "constraints": [
@@ -24244,6 +24540,39 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ]
       },
@@ -25782,6 +26111,39 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ],
         "selectionEntryGroups": [
@@ -27581,6 +27943,39 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ]
       },
@@ -29342,6 +29737,39 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ],
         "constraints": [
@@ -32828,6 +33256,73 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "699c-55ed-7fee-65ab",
+            "field": "add-info",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "7dcd-7f61-69a7-0294",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Support"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "1556-9b56-fba6-4370",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Leader"
+                  }
+                ]
+              }
+            ],
+            "scope": "root-entry",
+            "affects": "group"
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ],
         "costs": [
@@ -35702,7 +36197,63 @@
         "import": true,
         "name": "Sanctifiers",
         "hidden": false,
-        "id": "eade-6ec7-7236-bfdb"
+        "id": "eade-6ec7-7236-bfdb",
+        "modifiers": [
+          {
+            "type": "append",
+            "value": "Sustained Hits 1",
+            "field": "893f-9000-ccf7-648e",
+            "scope": "parent",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "join": ", ",
+            "skipIfPresent": "Sustained Hits",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "cc88-9467-86ac-4ca2",
+                "shared": true,
+                "includeChildSelections": false,
+                "childName": "Ministorum Priest"
+              }
+            ]
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
+          }
+        ]
       },
       {
         "infoLinks": [
@@ -36968,6 +37519,73 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "699c-55ed-7fee-65ab",
+            "field": "add-info",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "7dcd-7f61-69a7-0294",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Support"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "1556-9b56-fba6-4370",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Leader"
+                  }
+                ]
+              }
+            ],
+            "scope": "root-entry",
+            "affects": "group"
+          },
+          {
+            "type": "decrement",
+            "value": 1,
+            "field": "58d2-b879-49c7-43bc",
+            "affects": "self.entries.profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "06f3-c7f0-3763-211c",
+                    "shared": true,
+                    "childName": "Sororitas Character"
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "f9b6-3e44-772b-8eb1",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Sanctified Orators"
+                  }
+                ]
+              }
+            ],
+            "comment": "Sanctified Orators Ld bonus"
           }
         ]
       },
