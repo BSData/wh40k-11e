@@ -5758,6 +5758,22 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "5e10-6d62-2624-80a8",
+            "field": "add-info",
+            "affects": "group",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "constraints": [
@@ -5940,13 +5956,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
-          },
-          {
-            "name": "Feel No Pain",
-            "id": "5921-d5-e0ba-b8f",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "9bf4-280f-bbe2-6fbb"
           }
         ],
         "selectionEntryGroups": [
@@ -12200,6 +12209,38 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "type": "unit",
@@ -13609,6 +13650,38 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "type": "unit",
@@ -24152,6 +24225,38 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "type": "unit",
@@ -24859,13 +24964,6 @@
             "type": "rule",
             "id": "17a9-8bb3-3705-91d0",
             "targetId": "eeb6-c42-48f7-cc21"
-          },
-          {
-            "name": "Feel No Pain",
-            "id": "aebe-ad51-3e2c-3405",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "9bf4-280f-bbe2-6fbb"
           }
         ],
         "costs": [
@@ -25009,6 +25107,12 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "699c-55ed-7fee-65ab",
+            "field": "add-info",
+            "affects": "group"
           }
         ],
         "entryLinks": [
@@ -35688,6 +35792,38 @@
             ],
             "comment": "Boarding Actions modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "modifiers": [
@@ -47137,6 +47273,38 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "type": "model",
@@ -48752,6 +48920,38 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "type": "unit",
@@ -54470,9 +54670,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following unit:\n- **^^Kroot Carnivores^^**\n- **^^Kroot Farstalkers^^**",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- **^^Kroot Carnivores^^**\n- **^^Kroot Farstalkers^^**"
               }
             ],
             "name": "Leader",
@@ -55093,7 +55293,7 @@
                     "type": "atLeast",
                     "value": 1,
                     "field": "associations",
-                    "scope": "self",
+                    "scope": "root-entry",
                     "childId": "any",
                     "shared": true,
                     "includeChildForces": false,
@@ -55110,6 +55310,38 @@
                     "includeChildSelections": true
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
               }
             ]
           }
@@ -55286,9 +55518,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following unit:\n- **^^Kroot Carnivores^^**\n- **^^Kroot Farstalkers^^**",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- **^^Kroot Carnivores^^**\n- **^^Kroot Farstalkers^^**"
               }
             ],
             "name": "Leader",
@@ -55936,6 +56168,38 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "type": "model",
@@ -56096,9 +56360,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following unit:\n- **^^Kroot Carnivores^^**\n- **^^Kroot Farstalkers^^**",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- **^^Kroot Carnivores^^**\n- **^^Kroot Farstalkers^^**"
               }
             ],
             "name": "Leader",
@@ -56171,13 +56435,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
-          },
-          {
-            "name": "Feel No Pain",
-            "id": "7b4c-4f1f-d847-7996",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "9bf4-280f-bbe2-6fbb"
           },
           {
             "name": "Sustained Hits",
@@ -56731,6 +56988,38 @@
               }
             ],
             "comment": "Ritual Butchery attached unit modifiers"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "type": "model",
@@ -56753,6 +57042,22 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "676c-ecb5-d24d-3540",
+            "field": "add-info",
+            "affects": "group",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ]
           }
@@ -57581,6 +57886,38 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "modifiers": [
@@ -58341,6 +58678,38 @@
               }
             ],
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "type": "unit",
@@ -64578,6 +64947,38 @@
               }
             ],
             "comment": "Ritual Butchery attached unit modifiers"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "452e-5b5b-cdbc-c94a",
+                "shared": true,
+                "childName": "Kroot Hunting Pack",
+                "includeChildSelections": true
+              }
+            ],
+            "comment": "Kroot Hunting Pack Detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Skirmish Fighters",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Skirmish Fighters"
+              },
+              {
+                "type": "set",
+                "value": "6+* / 5+*",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit"
+              }
+            ]
           }
         ],
         "modifiers": [
@@ -68536,15 +68937,6 @@
                     "field": "hidden"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Assault",
-                    "hidden": false,
-                    "id": "5d58-4000-4495-c85",
-                    "type": "rule",
-                    "targetId": "fc8a-8c24-bae9-cc1c"
-                  }
-                ],
                 "costs": [
                   {
                     "name": "pts",
@@ -68613,7 +69005,60 @@
                 "import": true,
                 "name": "Nomadic Hunter",
                 "hidden": false,
-                "id": "e72b-61f3-5e33-983f"
+                "id": "e72b-61f3-5e33-983f",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Nomadic Hunter",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Nomadic Hunter",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 3,
+                        "field": "e703-ecb6-5ce7-aec1",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Nomadic Hunter",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Nomadic Hunter",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Nomadic Hunter",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Assault",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Assault",
+                        "scope": "root-entry"
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "profiles": [
@@ -69030,15 +69475,6 @@
                     "field": "hidden"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Ignores Cover",
-                    "hidden": false,
-                    "id": "5405-b86f-d6d0-ac7e",
-                    "type": "rule",
-                    "targetId": "4640-43e7-30b-215a"
-                  }
-                ],
                 "costs": [
                   {
                     "name": "pts",
@@ -69107,7 +69543,32 @@
                 "import": true,
                 "name": "Kroothawk Flock",
                 "hidden": false,
-                "id": "56d3-d687-ee98-2b7"
+                "id": "56d3-d687-ee98-2b7",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Kroothawk Flock",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Kroothawk Flock",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Ignores Cover",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Ignores Cover",
+                        "scope": "root-entry"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -72253,7 +72714,42 @@
                 "import": true,
                 "name": "Totemic Infusions - Aeldari",
                 "hidden": false,
-                "id": "a1b8-1e56-1e00-6483"
+                "id": "a1b8-1e56-1e00-6483",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Totemic Infusions - Aeldari",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Totemic Infusions - Aeldari",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 2,
+                        "field": "e703-ecb6-5ce7-aec1",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Totemic Infusions - Aeldari",
+                        "scope": "root-entry"
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "root-entry",
+                        "childId": "any",
+                        "shared": true
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -72331,7 +72827,42 @@
                 "import": true,
                 "name": "Totemic Infusions - Orks",
                 "hidden": false,
-                "id": "e4c5-02da-af2f-866a"
+                "id": "e4c5-02da-af2f-866a",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Totemic Infusions - Orks",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Totemic Infusions - Orks",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 1,
+                        "field": "ab33-d393-96ce-ccba",
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Totemic Infusions - Aeldari",
+                        "scope": "root-entry"
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "root-entry",
+                        "childId": "any",
+                        "shared": true
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -72409,7 +72940,42 @@
                 "import": true,
                 "name": "Totemic Infusions - Leagues of Votann",
                 "hidden": false,
-                "id": "767c-07cb-beb9-aa74"
+                "id": "767c-07cb-beb9-aa74",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Totemic Infusions - Leagues of Votann",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Totemic Infusions - Leagues of Votann",
+                        "scope": "root-entry"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 1,
+                        "field": "d29d-cf75-fc2d-34a4",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Totemic Infusions - Aeldari",
+                        "scope": "root-entry"
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "associations",
+                        "scope": "root-entry",
+                        "childId": "any",
+                        "shared": true
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -73179,15 +73745,6 @@
                 "id": "26c9-87df-bd88-1d5e"
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Lethal Hits",
-                "id": "cbf0-4d84-3bba-6a83",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "d1d1-611e-5191-1095"
-              }
-            ],
             "modifierGroups": [
               {
                 "modifiers": [
@@ -73197,15 +73754,17 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "skipIfPresent": "Merciless Marksmen"
                   },
                   {
                     "type": "append",
                     "value": "Lethal Hits",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Lethal Hits"
                   },
                   {
                     "type": "replace",
@@ -73361,14 +73920,22 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "skipIfPresent": "Practised Aim"
                   },
                   {
                     "type": "decrement",
                     "value": 1,
                     "field": "94d-8a98-cf90-183e",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
+                  },
+                  {
+                    "type": "floor",
+                    "value": "2",
+                    "field": "94d-8a98-cf90-183e",
+                    "scope": "root-entry",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
                   }
                 ],
                 "type": "and"
