@@ -62091,6 +62091,34 @@
             "type": "rule",
             "id": "ac88-54a8-85e0-6230",
             "targetId": "5e02-2ddc-f55-e6dd"
+          },
+          {
+            "name": "Feel No Pain 4+",
+            "id": "db4d-7062-002d-a686",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eed0-ef83-b6cf-dddf",
+            "comment": "Court of the Archon attached unit ability",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "f45d-f14a-3419-e469",
+                    "shared": true,
+                    "childName": "Court of the Archon",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "modifierGroups": [
@@ -64615,9 +64643,9 @@
           {
             "characteristics": [
               {
-                "$text": "This unit can be led by an ^^**Archon**^^. Alternatively, in the Declare Battle Formations step, this unit can join one ^^**Kabalite Warriors**^^ or ^^**Hand of the Archon**^^ unit from your army that is being led by an ^^**Archon**^^ (a unit cannot have more than one ^^**Court of the Archon**^^ unit joined to it). If it does, until the end of the battle, every model in this unit counts as part of that ^^**Kabalite Warriors**^^ or ^^**Hand of the Archon **^^unit, and its Starting Strength is increased accordingly.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This unit can be led by an ^^**Archon**^^. Alternatively, in the Declare Battle Formations step, this unit can join one ^^**Kabalite Warriors**^^ or ^^**Hand of the Archon**^^ unit from your army that is being led by an ^^**Archon**^^ (a unit cannot have more than one ^^**Court of the Archon**^^ unit joined to it). If it does, until the end of the battle, every model in this unit counts as part of that ^^**Kabalite Warriors**^^ or ^^**Hand of the Archon**^^ unit, and its Starting Strength is increased accordingly."
               }
             ],
             "name": "Court of the Archon [Legends]",
@@ -64954,7 +64982,71 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "unit"
+        "type": "unit",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Court of the Archon",
+            "id": "ae31-11c9-46cc-4cf1",
+            "label": "Court of the Archon",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "2c73-fe8b-3b0b-9903",
+                            "shared": true,
+                            "childName": "Kabalite Warriors"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "79e4-b486-7f32-a88b",
+                            "shared": true,
+                            "childName": "Hand of the Archon"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "6c05-f06f-9b9f-890d",
+                        "shared": true,
+                        "childName": "Archon",
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "modifiers": [
@@ -72339,6 +72431,16 @@
             "id": "dc8b-44e9-9522-d161",
             "childId": "7dcd-7f61-69a7-0294",
             "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a877-b379-6440-4b7a",
+            "childId": "f45d-f14a-3419-e469",
+            "childName": "Court of the Archon"
           }
         ],
         "entryLinks": [
@@ -113645,15 +113747,17 @@
                 "type": "append",
                 "value": "Runes of Battle",
                 "field": "annotation",
-                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
-                "join": ", "
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Runes of Battle"
               },
               {
                 "type": "append",
                 "value": "Ignores Cover",
                 "field": "7f1b-8591-2fcf-d01c",
-                "affects": "self.entries.group.recursive.associations.profiles.Ranged Weapons",
-                "join": ", "
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Ignores Cover"
               }
             ],
             "conditions": [
@@ -129923,18 +130027,39 @@
             "targetId": "5e02-2ddc-f55-e6dd"
           },
           {
-            "modifiers": [
-              {
-                "type": "append",
-                "value": "5+",
-                "field": "name"
-              }
-            ],
-            "name": "Feel No Pain",
+            "name": "Feel No Pain 5+",
             "id": "3565-dede-6d53-9641",
             "hidden": false,
-            "targetId": "9bf4-280f-bbe2-6fbb",
+            "targetId": "5e10-6d62-2624-80a8",
             "type": "rule"
+          },
+          {
+            "name": "Feel No Pain 4+",
+            "id": "5ac4-8747-c50e-9329",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eed0-ef83-b6cf-dddf",
+            "comment": "Court of the Archon attached unit ability",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "f45d-f14a-3419-e469",
+                    "shared": true,
+                    "childName": "Court of the Archon",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "costs": [
@@ -132203,18 +132328,11 @@
             "targetId": "5e02-2ddc-f55-e6dd"
           },
           {
-            "modifiers": [
-              {
-                "type": "append",
-                "value": "7\"",
-                "field": "name"
-              }
-            ],
-            "name": "Scouts",
+            "name": "Scouts 7\"",
             "id": "e0bf-1e6b-818d-716b",
             "hidden": false,
             "type": "rule",
-            "targetId": "ada6-bac1-ffe0-d6f7"
+            "targetId": "6a04-6476-b45b-aef8"
           }
         ],
         "costs": [
@@ -132333,6 +132451,16 @@
             "id": "9f3c-8f8e-5775-487b",
             "childId": "7dcd-7f61-69a7-0294",
             "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "a69c-0112-f10d-d1a9",
+            "childId": "f45d-f14a-3419-e469",
+            "childName": "Court of the Archon"
           }
         ],
         "modifiers": [
@@ -132352,6 +132480,12 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "6a04-6476-b45b-aef8",
+            "field": "add-info",
+            "affects": "group"
           }
         ],
         "modifierGroups": [

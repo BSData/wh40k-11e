@@ -9844,6 +9844,16 @@
             "id": "48b8-3fa8-9690-ab59",
             "childId": "4100-95dc-a489-ffbc",
             "childName": "Command Squad"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "c9b1-298f-8803-f58c",
+            "childId": "2429-e1e2-64a3-acb",
+            "childName": "Munitorum Servitors"
           }
         ],
         "selectionEntryGroups": [
@@ -10726,6 +10736,16 @@
             "id": "d4fe-cd0d-f714-5b30",
             "childId": "4100-95dc-a489-ffbc",
             "childName": "Command Squad"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "9f11-862c-4f8d-b15b",
+            "childId": "2429-e1e2-64a3-acb",
+            "childName": "Munitorum Servitors"
           }
         ],
         "infoLinks": [
@@ -14257,6 +14277,16 @@
             "id": "7821-ef80-98e5-7604",
             "childId": "4100-95dc-a489-ffbc",
             "childName": "Command Squad"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "d6bf-ed5a-2ad5-27a5",
+            "childId": "2429-e1e2-64a3-acb",
+            "childName": "Munitorum Servitors"
           }
         ],
         "selectionEntryGroups": [
@@ -25587,6 +25617,16 @@
             "id": "6eaa-da69-2636-de54",
             "childId": "7dcd-7f61-69a7-0294",
             "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "47cd-4423-cf90-9ff6",
+            "childId": "2429-e1e2-64a3-acb",
+            "childName": "Munitorum Servitors"
           }
         ],
         "modifiers": [
@@ -34535,7 +34575,27 @@
                 "import": true,
                 "name": "Munitorum Servitor w/ Servitor's Servo Arm",
                 "hidden": false,
-                "id": "2707-40c9-3b6e-55e6"
+                "id": "2707-40c9-3b6e-55e6",
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 2,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "039a-c752-6ac6-33f8",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 4,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "2b74-c775-4398-f222",
+                    "includeChildSelections": false
+                  }
+                ]
               },
               {
                 "constraints": [
@@ -35187,13 +35247,152 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "comment": "Mindlock attached unit modifiers",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Mindlock",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Mindlock"
+              },
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "94d-8a98-cf90-183e",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Mindlock"
+              },
+              {
+                "type": "append",
+                "value": "Mindlock",
+                "field": "annotation",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Mindlock"
+              },
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "95d1-95f-45b4-11d6",
+                "affects": "self.entries.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Mindlock"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "type": "unit",
         "import": true,
         "name": "Munitorum Servitors [Legends]",
         "hidden": false,
-        "id": "5c5f-8f23-7f13-2af6"
+        "id": "5c5f-8f23-7f13-2af6",
+        "associations": [
+          {
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Servitor Retinue",
+            "id": "2331-f5aa-392e-f32f",
+            "label": "Servitor Retinue",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "1645-3202-7cc-f36b",
+                            "shared": true,
+                            "childName": "Cadian Shock Troops"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "8a6c-34aa-874b-8013",
+                            "shared": true,
+                            "childName": "Catachan Jungle Fighters"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "63d0-faf2-6fc0-8270",
+                            "shared": true,
+                            "childName": "Death Korps of Krieg"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "54e3-5045-251e-8453",
+                            "shared": true,
+                            "childName": "Kasrkin"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "0241-8284-3771-b9fa",
+                            "shared": true,
+                            "childName": "Krieg Combat Engineers"
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "7f64-6aa5-febb-5504",
+                        "shared": true,
+                        "childName": "Tech-Priest Enginseer",
+                        "includeChildSelections": false,
+                        "includeChildForces": false,
+                        "traverseAssociationGroup": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "includeChildSelections": true,
+            "childName": "unit",
+            "action": "group",
+            "defaultSelectionEntryId": "none"
+          }
+        ]
       },
       {
         "costs": [
@@ -115438,6 +115637,16 @@
             "id": "6aa9-be48-eed5-153a",
             "childId": "7dcd-7f61-69a7-0294",
             "childName": "Support"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "efa9-56e2-81a1-b1c3",
+            "childId": "2429-e1e2-64a3-acb",
+            "childName": "Munitorum Servitors"
           }
         ],
         "modifiers": [
