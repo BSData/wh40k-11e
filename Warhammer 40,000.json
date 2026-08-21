@@ -6825,6 +6825,32 @@
         "publicationId": "48fc-15aa-b307-9443",
         "page": 39,
         "hidden": false
+      },
+      {
+        "name": "Scouts 5\"",
+        "id": "b4d7-ba95-ed79-bafe",
+        "hidden": false,
+        "description": "This ability always takes the form **Scouts X\"**. In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in **strategic reserves**, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a **scout move**. \n- If that unit is embarked within a **DEDICATED TRANSPORT** that is wholly within your deployment zone, and if every model embarked within that **DEDICATED TRANSPORT** has the Scouts ability, that **DEDICATED TRANSPORT** can make a **scout move**.",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "instanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "1d6e-2579-8e7f-1ed4",
+                "shared": true,
+                "includeChildSelections": true
+              }
+            ]
+          }
+        ],
+        "publicationId": "48fc-15aa-b307-9443",
+        "page": 39
       }
     ],
     "sharedProfiles": [

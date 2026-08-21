@@ -185,6 +185,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "bec5-4288-34a6-ccfa",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "costs": [
@@ -235,16 +242,7 @@
             "name": "Nether-realm Casket",
             "hidden": false,
             "id": "76a0-7f0a-49e7-992a",
-            "sortIndex": 6,
-            "infoLinks": [
-              {
-                "name": "Stealth",
-                "id": "26cf-3cc6-dd57-0426",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "bec5-4288-34a6-ccfa"
-              }
-            ]
+            "sortIndex": 6
           },
           {
             "profiles": [
@@ -1001,6 +999,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "c05d-f4c3-f091-4938",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "profiles": [
@@ -1028,15 +1033,6 @@
                 "shared": true,
                 "id": "d51e-1b99-356b-8a94",
                 "includeChildSelections": true
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Infiltrators",
-                "hidden": false,
-                "type": "rule",
-                "id": "68dd-26fc-4f03-5d91",
-                "targetId": "c05d-f4c3-f091-4938"
               }
             ],
             "costs": [
@@ -2412,6 +2408,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "7cb5-dd6b-dd87-ad3b",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "costs": [
@@ -2462,16 +2465,7 @@
             "name": "Osteoclave Fulcrum",
             "hidden": false,
             "id": "ebd8-d7a3-52cf-4a4b",
-            "sortIndex": 24,
-            "infoLinks": [
-              {
-                "name": "Deep Strike",
-                "id": "12c7-d037-0a3c-0c60",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "7cb5-dd6b-dd87-ad3b"
-              }
-            ]
+            "sortIndex": 24
           },
           {
             "costs": [
@@ -2695,7 +2689,7 @@
                 "type": "append",
                 "value": "Ignores Cover",
                 "field": "7f1b-8591-2fcf-d01c",
-                "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                 "scope": "parent",
                 "join": ", "
               }
@@ -4763,7 +4757,7 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "conditions": [
@@ -4791,7 +4785,7 @@
                     "value": 2,
                     "field": "e703-ecb6-5ce7-aec1",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   }
                 ],
                 "type": "and"
@@ -5179,7 +5173,7 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
                   },
                   {
                     "conditions": [
@@ -5197,7 +5191,7 @@
                     "value": "Ignores Cover",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                     "join": ", "
                   }
                 ],
@@ -6148,6 +6142,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "bec5-4288-34a6-ccfa",
+                    "field": "add-info",
+                    "scope": "parent",
+                    "affects": "group"
                   }
                 ],
                 "costs": [
@@ -6175,15 +6176,6 @@
                     "name": "Military Power",
                     "typeId": "1cbe-d9c9-86a8-2d41",
                     "value": 0
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Stealth",
-                    "id": "aa33-472c-8565-0dd8",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
                   }
                 ],
                 "type": "upgrade",
@@ -6679,7 +6671,7 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "conditions": [
@@ -6697,7 +6689,7 @@
                     "value": 1,
                     "field": "58d2-b879-49c7-43bc",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "conditions": [
@@ -6715,7 +6707,7 @@
                     "value": 1,
                     "field": "bef7-942a-1a23-59f8",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   }
                 ],
                 "type": "and"
@@ -11195,17 +11187,15 @@
                 "value": "Assault",
                 "field": "7f1b-8591-2fcf-d01c",
                 "scope": "parent",
-                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                 "join": ", "
-              }
-            ],
-            "infoLinks": [
+              },
               {
-                "name": "Assault",
-                "id": "f79d-3727-bd37-3490",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "fc8a-8c24-bae9-cc1c"
+                "type": "add",
+                "value": "fc8a-8c24-bae9-cc1c",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "costs": [
@@ -18426,7 +18416,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "‘(Once per battle, per unit) At the end of any phase, you can use this ability. If you do, this unit resurrects: \n- When a unit resurrects, that unit’s Reanimation Protocols activate, but that unit heals D6 wounds (instead of D3 wounds). You cannot resurrect more than one unit per turn."
+                "$text": "(Once per battle, per unit) At the end of any phase, you can use this ability. If you do, this unit resurrects: \n- When a unit resurrects, that unit’s Reanimation Protocols activate, but that unit heals D6 wounds (instead of D3 wounds). You cannot resurrect more than one unit per turn."
               }
             ],
             "name": "Resurrection orb",
@@ -22690,6 +22680,12 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "bec5-4288-34a6-ccfa",
+            "field": "add-info",
+            "affects": "group"
           }
         ],
         "associations": [
@@ -24116,22 +24112,6 @@
                     ]
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Scouts",
-                    "id": "6d9d-6abe-d283-fb31",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "ada6-bac1-ffe0-d6f7",
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "5\"",
-                        "field": "name"
-                      }
-                    ]
-                  }
-                ],
                 "modifierGroups": [
                   {
                     "type": "and",
@@ -24213,6 +24193,15 @@
                     "name": "Enhancements",
                     "typeId": "f759-1bc4-cb3a-f0d2",
                     "value": 1
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "add",
+                    "value": "b4d7-ba95-ed79-bafe",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "parent"
                   }
                 ]
               }
@@ -35535,7 +35524,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: \n- Place this unit in strategic reserves. \n- This unit must make an ingress move in your next Movement phase (including in your first turn).’"
+                "$text": "At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: \n- Place this unit in strategic reserves. \n- This unit must make an ingress move in your next Movement phase (including in your first turn)."
               }
             ],
             "name": "Tunnelling Horrors",
@@ -58329,19 +58318,6 @@
                 "conditionGroups": [
                   {
                     "type": "and",
-                    "conditions": [
-                      {
-                        "type": "lessThan",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "be60-a5ae-6c7c-df47",
-                        "childId": "9564-ef99-cd4d-f4a1",
-                        "shared": true,
-                        "includeChildSelections": true,
-                        "childName": "Specialisms",
-                        "queryFromSelf": true
-                      }
-                    ],
                     "conditionGroups": [
                       {
                         "type": "or",
@@ -58372,6 +58348,33 @@
                             "childId": "270-5fd8-6b5c-9165",
                             "shared": true,
                             "childName": "Lychguard"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "lessThan",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "be60-a5ae-6c7c-df47",
+                            "childId": "9564-ef99-cd4d-f4a1",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Specialisms",
+                            "queryFromSelf": true
+                          },
+                          {
+                            "type": "atLeast",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "be60-a5ae-6c7c-df47",
+                            "childId": "fdc8-cd80-08d6-b90a",
+                            "shared": true,
+                            "includeChildSelections": true,
+                            "childName": "Superior Living Metal",
+                            "queryFromSelf": true
                           }
                         ]
                       }
@@ -63319,7 +63322,7 @@
     "name": "Xenos - Necrons",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 15,
+    "revision": 16,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }
