@@ -6791,6 +6791,38 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "set",
+            "value": 0,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "c971-72f9-55b2-37d5",
+                    "shared": true,
+                    "childName": "Court of the Young King",
+                    "includeChildSelections": true
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "force",
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Crusade Force"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -6808,7 +6840,47 @@
             "name": "Crusade",
             "id": "eb8a-e77b-be53-925a",
             "hidden": false,
-            "sortIndex": 1
+            "sortIndex": 1,
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Court of the Young King",
+                "hidden": false,
+                "id": "c971-72f9-55b2-37d5",
+                "constraints": [
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "8291-55ef-272a-025e",
+                    "includeChildSelections": false
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "type": "set",
+                    "value": true,
+                    "field": "hidden",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "forces",
+                        "scope": "roster",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childId": "cac3-71d1-ea4b-795d",
+                        "childName": "Crusade Force"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "id": "554c-8b4f-1059-28a7",
