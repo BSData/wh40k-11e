@@ -10821,9 +10821,9 @@
                           {
                             "characteristics": [
                               {
-                                "$text": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
                                 "name": "Description",
-                                "typeId": "9b8f-694b-e5e-b573"
+                                "typeId": "9b8f-694b-e5e-b573",
+                                "$text": "Ranged weapons equipped by models in the bearer’s unit have the **[IGNORES COVER]** ability."
                               }
                             ],
                             "name": "Faolchú",
@@ -10845,7 +10845,32 @@
                         "name": "Faolchú",
                         "hidden": false,
                         "id": "ed4c-39de-48c4-fdc7",
-                        "collective": false
+                        "collective": false,
+                        "modifierGroups": [
+                          {
+                            "type": "and",
+                            "modifiers": [
+                              {
+                                "type": "append",
+                                "value": "Faolchú",
+                                "field": "annotation",
+                                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                                "scope": "root-entry",
+                                "join": ", ",
+                                "skipIfPresent": "Faolchú"
+                              },
+                              {
+                                "type": "append",
+                                "value": "Ignores Cover",
+                                "field": "7f1b-8591-2fcf-d01c",
+                                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                                "scope": "root-entry",
+                                "join": ", ",
+                                "skipIfPresent": "Ignores Cover"
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         "constraints": [
@@ -39414,20 +39439,6 @@
                 "typeName": "Unit",
                 "hidden": false,
                 "id": "daae-16aa-68b5-1291"
-              },
-              {
-                "characteristics": [
-                  {
-                    "$text": "Models in the bearer’s unit have a 5+ invulnerable save.",
-                    "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ],
-                "name": "Serpent Shield",
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "hidden": false,
-                "id": "506d-483f-7ff9-117a"
               }
             ],
             "constraints": [
@@ -39473,7 +39484,96 @@
             "name": "Serpent's Scale Platform",
             "hidden": false,
             "id": "efed-ef67-bd12-2330",
-            "sortIndex": 3
+            "sortIndex": 3,
+            "selectionEntries": [
+              {
+                "type": "upgrade",
+                "import": true,
+                "name": "Serpent Shield",
+                "hidden": false,
+                "id": "101f-7b6e-e38e-92ba",
+                "constraints": [
+                  {
+                    "type": "min",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "cc92-34ed-60d1-53e4",
+                    "includeChildSelections": false
+                  },
+                  {
+                    "type": "max",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "id": "8c50-2713-5b32-3788",
+                    "includeChildSelections": false
+                  }
+                ],
+                "profiles": [
+                  {
+                    "name": "Serpent Shield",
+                    "typeId": "9cc3-6d83-4dd3-9b64",
+                    "typeName": "Abilities",
+                    "hidden": false,
+                    "id": "506d-483f-7ff9-117a",
+                    "characteristics": [
+                      {
+                        "$text": "Models in the bearer’s unit have a 5+ invulnerable save.",
+                        "name": "Description",
+                        "typeId": "9b8f-694b-e5e-b573"
+                      }
+                    ]
+                  }
+                ],
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "replace",
+                        "value": "5+",
+                        "field": "55a7-5b54-c60d-11dc",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "arg": "",
+                        "join": ""
+                      },
+                      {
+                        "type": "append",
+                        "value": "Serpent Shield",
+                        "field": "annotation",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "arg": "-",
+                        "join": ", ",
+                        "skipIfPresent": "Serpent Shield"
+                      },
+                      {
+                        "type": "replace",
+                        "value": "5+",
+                        "field": "55a7-5b54-c60d-11dc",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "arg": "-",
+                        "join": ""
+                      },
+                      {
+                        "type": "replace",
+                        "value": "5+",
+                        "field": "55a7-5b54-c60d-11dc",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "arg": "6+",
+                        "join": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "profiles": [
