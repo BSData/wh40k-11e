@@ -3771,27 +3771,7 @@
                     "name": "Electrostatic gauntlets",
                     "hidden": false,
                     "typeId": "f77d-b953-8fa4-b762",
-                    "typeName": "Ranged Weapons",
-                    "modifiers": [
-                      {
-                        "type": "append",
-                        "value": "Lethal Hits",
-                        "field": "7f1b-8591-2fcf-d01c",
-                        "conditions": [
-                          {
-                            "type": "atLeast",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "force",
-                            "childId": "65e6-9ab1-6a2c-5410",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Luminen Autochoir"
-                          }
-                        ],
-                        "join": ", "
-                      }
-                    ]
+                    "typeName": "Ranged Weapons"
                   },
                   {
                     "characteristics": [
@@ -3852,32 +3832,6 @@
                     "type": "rule",
                     "id": "8f66-3f8c-a542-dd2",
                     "targetId": "1897-c22c-9597-12b1"
-                  },
-                  {
-                    "name": "Lethal Hits",
-                    "id": "183a-431e-0ec3-83bb",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "d1d1-611e-5191-1095",
-                    "modifiers": [
-                      {
-                        "type": "set",
-                        "value": true,
-                        "field": "hidden",
-                        "conditions": [
-                          {
-                            "type": "lessThan",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "force",
-                            "childId": "65e6-9ab1-6a2c-5410",
-                            "shared": true,
-                            "includeChildSelections": true,
-                            "childName": "Luminen Autochoir"
-                          }
-                        ]
-                      }
-                    ]
                   }
                 ],
                 "entryLinks": [
@@ -4200,6 +4154,39 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Lethal Hits",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "scope": "root-entry",
+                "skipIfPresent": "Lethal Hits",
+                "join": ", "
+              },
+              {
+                "type": "add",
+                "value": "d1d1-611e-5191-1095",
+                "field": "add-info",
+                "scope": "root-entry",
+                "affects": "group"
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "65e6-9ab1-6a2c-5410",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Luminen Autochoir"
+              }
+            ]
           }
         ],
         "id": "fd5a-f7a3-833c-85b",
@@ -4895,32 +4882,6 @@
             "type": "rule",
             "id": "fc3e-fe79-b9fe-20b9",
             "targetId": "7a21-a958-e47d-5c0d"
-          },
-          {
-            "name": "Stealth",
-            "id": "bdb2-074a-8615-7757",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "bec5-4288-34a6-ccfa",
-            "modifiers": [
-              {
-                "type": "set",
-                "value": true,
-                "field": "hidden",
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "48bd-eeae-171d-a10a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "Skitarii Hunter Cohort"
-                  }
-                ]
-              }
-            ]
           }
         ],
         "categoryLinks": [
@@ -5845,6 +5806,25 @@
                 "childName": "model"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "bec5-4288-34a6-ccfa",
+            "field": "add-info",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "48bd-eeae-171d-a10a",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Skitarii Hunter Cohort"
+              }
+            ],
+            "affects": "group",
+            "scope": "root-entry"
           }
         ]
       },
@@ -17843,7 +17823,8 @@
             ],
             "includeChildSelections": true,
             "childName": "unit",
-            "action": "group"
+            "action": "group",
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
@@ -17929,32 +17910,6 @@
             "type": "rule",
             "id": "4d4b-44a-be85-c96",
             "targetId": "7a21-a958-e47d-5c0d"
-          },
-          {
-            "name": "Stealth",
-            "id": "aae1-d479-ba9b-4211",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "bec5-4288-34a6-ccfa",
-            "modifiers": [
-              {
-                "type": "set",
-                "value": true,
-                "field": "hidden",
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "48bd-eeae-171d-a10a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "Skitarii Hunter Cohort"
-                  }
-                ]
-              }
-            ]
           },
           {
             "name": "Feel No Pain",
@@ -19167,55 +19122,6 @@
                     "collective": true,
                     "import": true,
                     "type": "upgrade"
-                  },
-                  {
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.",
-                            "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
-                          }
-                        ],
-                        "id": "fd15-1322-c1a8-9568",
-                        "name": "Omnispex",
-                        "hidden": false,
-                        "typeId": "9cc3-6d83-4dd3-9b64",
-                        "typeName": "Abilities"
-                      }
-                    ],
-                    "costs": [
-                      {
-                        "name": "pts",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 0
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "e921-cb10-b592-ade-min"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "e921-cb10-b592-ade-max"
-                      }
-                    ],
-                    "id": "2422-d56e-c8ee-7fa1",
-                    "name": "Omnispex",
-                    "hidden": false,
-                    "collective": false,
-                    "import": true,
-                    "type": "upgrade"
                   }
                 ],
                 "entryLinks": [
@@ -19226,6 +19132,15 @@
                     "type": "selectionEntry",
                     "id": "ec0f-669b-268-f632",
                     "targetId": "2f1a-2fc7-2843-549d"
+                  },
+                  {
+                    "import": true,
+                    "name": "Omnispex",
+                    "hidden": false,
+                    "id": "36cb-19f2-9388-d85d",
+                    "targetId": "b7a3-bfbd-1464-141d",
+                    "type": "selectionEntry",
+                    "collective": false
                   }
                 ],
                 "constraints": [
@@ -19569,6 +19484,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "bec5-4288-34a6-ccfa",
+            "field": "add-info",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "48bd-eeae-171d-a10a",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Skitarii Hunter Cohort"
+              }
+            ],
+            "affects": "group",
+            "scope": "root-entry"
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "scope": "root-entry",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "skipIfPresent": "Ignores Cover",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "b7a3-bfbd-1464-141d",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Omnispex"
               }
             ]
           }
@@ -20759,6 +20714,15 @@
                     "type": "selectionEntry",
                     "id": "1d4b-2913-b878-5eda",
                     "targetId": "2f1a-2fc7-2843-549d"
+                  },
+                  {
+                    "import": true,
+                    "name": "Omnispex",
+                    "hidden": false,
+                    "id": "d0df-184f-0799-c599",
+                    "targetId": "b7a3-bfbd-1464-141d",
+                    "type": "selectionEntry",
+                    "collective": false
                   }
                 ],
                 "selectionEntries": [
@@ -20847,55 +20811,6 @@
                     "name": "Radium carbine",
                     "hidden": false,
                     "collective": true,
-                    "import": true,
-                    "type": "upgrade"
-                  },
-                  {
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.",
-                            "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
-                          }
-                        ],
-                        "id": "d4b-f0ea-a667-6173",
-                        "name": "Omnispex",
-                        "hidden": false,
-                        "typeId": "9cc3-6d83-4dd3-9b64",
-                        "typeName": "Abilities"
-                      }
-                    ],
-                    "costs": [
-                      {
-                        "name": "pts",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 0
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "fbd3-9ae5-c6d8-9b44-min"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "fbd3-9ae5-c6d8-9b44-max"
-                      }
-                    ],
-                    "id": "a5fb-4054-24b5-d29c",
-                    "name": "Omnispex",
-                    "hidden": false,
-                    "collective": false,
                     "import": true,
                     "type": "upgrade"
                   }
@@ -20997,32 +20912,6 @@
             "type": "rule",
             "id": "f4e4-5bc-bcea-6d16",
             "targetId": "7a21-a958-e47d-5c0d"
-          },
-          {
-            "name": "Stealth",
-            "id": "29d0-03ea-5d68-2922",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "bec5-4288-34a6-ccfa",
-            "modifiers": [
-              {
-                "type": "set",
-                "value": true,
-                "field": "hidden",
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "48bd-eeae-171d-a10a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "childName": "Skitarii Hunter Cohort"
-                  }
-                ]
-              }
-            ]
           },
           {
             "name": "Feel No Pain",
@@ -21347,6 +21236,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "bec5-4288-34a6-ccfa",
+            "field": "add-info",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "48bd-eeae-171d-a10a",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Skitarii Hunter Cohort"
+              }
+            ],
+            "affects": "group",
+            "scope": "root-entry"
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "scope": "root-entry",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "skipIfPresent": "Ignores Cover",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "b7a3-bfbd-1464-141d",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Omnispex"
               }
             ]
           }
@@ -27690,7 +27619,8 @@
             ],
             "includeChildSelections": true,
             "childName": "unit",
-            "action": "group"
+            "action": "group",
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
@@ -28479,7 +28409,8 @@
             ],
             "includeChildSelections": true,
             "childName": "unit",
-            "action": "group"
+            "action": "group",
+            "defaultSelectionEntryId": "none"
           }
         ]
       },
@@ -29561,55 +29492,6 @@
                     "collective": false,
                     "import": true,
                     "type": "upgrade"
-                  },
-                  {
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.",
-                            "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
-                          }
-                        ],
-                        "id": "12c3-a683-f4e4-fa51",
-                        "name": "Omnispex",
-                        "hidden": false,
-                        "typeId": "9cc3-6d83-4dd3-9b64",
-                        "typeName": "Abilities"
-                      }
-                    ],
-                    "costs": [
-                      {
-                        "name": "pts",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 0
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "e961-ea3e-ab23-8cc-min"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "e961-ea3e-ab23-8cc-max"
-                      }
-                    ],
-                    "id": "b7a3-bfbd-1464-141d",
-                    "name": "Omnispex",
-                    "hidden": false,
-                    "collective": false,
-                    "import": true,
-                    "type": "upgrade"
                   }
                 ],
                 "id": "a393-2cf0-b5f6-c624",
@@ -29617,7 +29499,17 @@
                 "hidden": false,
                 "collective": false,
                 "import": true,
-                "type": "model"
+                "type": "model",
+                "entryLinks": [
+                  {
+                    "targetId": "b7a3-bfbd-1464-141d",
+                    "id": "1357-b417-0a30-1c04",
+                    "type": "selectionEntry",
+                    "name": "Omnispex",
+                    "hidden": false,
+                    "collective": false
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -29648,7 +29540,30 @@
             "hidden": false,
             "id": "cf89-9b00-1708-2d59",
             "defaultSelectionEntryId": "541f-f70e-97d2-f820",
-            "sortIndex": 3
+            "sortIndex": 3,
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Ignores Cover",
+                "field": "7f1b-8591-2fcf-d01c",
+                "scope": "root-entry",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                "skipIfPresent": "Ignores Cover",
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "b7a3-bfbd-1464-141d",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Omnispex"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "costs": [
@@ -30026,6 +29941,27 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "scope": "root-entry",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "skipIfPresent": "Ignores Cover",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "self",
+                "childId": "b7a3-bfbd-1464-141d",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Omnispex"
               }
             ]
           }
@@ -31194,55 +31130,6 @@
                     "type": "upgrade"
                   },
                   {
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.",
-                            "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
-                          }
-                        ],
-                        "id": "190e-df27-3c64-cc1f",
-                        "name": "Omnispex",
-                        "hidden": false,
-                        "typeId": "9cc3-6d83-4dd3-9b64",
-                        "typeName": "Abilities"
-                      }
-                    ],
-                    "costs": [
-                      {
-                        "name": "pts",
-                        "typeId": "51b2-306e-1021-d207",
-                        "value": 0
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "4457-fbb6-e49f-1135-min"
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "4457-fbb6-e49f-1135-max"
-                      }
-                    ],
-                    "id": "31d2-b3e3-20aa-ca9c",
-                    "name": "Omnispex",
-                    "hidden": false,
-                    "collective": false,
-                    "import": true,
-                    "type": "upgrade"
-                  },
-                  {
                     "constraints": [
                       {
                         "type": "min",
@@ -31318,7 +31205,18 @@
                 "hidden": false,
                 "collective": false,
                 "import": true,
-                "type": "model"
+                "type": "model",
+                "entryLinks": [
+                  {
+                    "import": true,
+                    "name": "Omnispex",
+                    "hidden": false,
+                    "id": "847c-7aed-5c88-f78f",
+                    "targetId": "b7a3-bfbd-1464-141d",
+                    "type": "selectionEntry",
+                    "collective": false
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -44369,6 +44267,55 @@
         "hidden": false,
         "id": "bd70-ac5c-7b91-f46b",
         "collective": false
+      },
+      {
+        "profiles": [
+          {
+            "characteristics": [
+              {
+                "$text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ],
+            "id": "12c3-a683-f4e4-fa51",
+            "name": "Omnispex",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities"
+          }
+        ],
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "51b2-306e-1021-d207",
+            "value": 0
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "e961-ea3e-ab23-8cc-min"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "parent",
+            "shared": true,
+            "id": "e961-ea3e-ab23-8cc-max"
+          }
+        ],
+        "id": "b7a3-bfbd-1464-141d",
+        "name": "Omnispex",
+        "hidden": false,
+        "collective": false,
+        "import": true,
+        "type": "upgrade"
       }
     ],
     "sharedSelectionEntryGroups": [
