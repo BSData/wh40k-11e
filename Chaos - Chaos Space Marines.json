@@ -47763,7 +47763,7 @@
             "type": "append",
             "value": "Heavy",
             "field": "7f1b-8591-2fcf-d01c",
-            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
             "join": ", ",
             "conditions": [
               {
@@ -47861,7 +47861,7 @@
             "type": "append",
             "value": "Heavy",
             "field": "7f1b-8591-2fcf-d01c",
-            "affects": "self.entries.recursive.profiles.Ranged Weapons",
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
             "join": ", ",
             "conditions": [
               {
@@ -99390,7 +99390,9 @@
             "field": "associations",
             "scope": "self",
             "shared": true,
-            "id": "da4f-9b59-a42c-e17e"
+            "id": "da4f-9b59-a42c-e17e",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
           },
           {
             "type": "max",
@@ -99404,6 +99406,16 @@
             "includeChildForces": false,
             "traverseAssociationGroup": true,
             "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "6766-39d4-f1aa-b722",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "selectionEntries": [
@@ -133777,7 +133789,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "c8da-e875-58f7-f6d6",
     "name": "Chaos - Chaos Space Marines",
-    "revision": 9,
+    "revision": 10,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
