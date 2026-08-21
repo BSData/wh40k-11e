@@ -177,9 +177,9 @@
           {
             "characteristics": [
               {
-                "$text": "‘If you include this model in your army, until the end of the battle, non-Character models in Terminator Assault Squad and Terminator Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "If you include this model in your army, until the end of the battle, non-Character models in Terminator Assault Squad and Terminator Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
               }
             ],
             "name": "Inspiring Commander",
@@ -804,6 +804,23 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "append",
+            "value": "Ignores Cover",
+            "field": "7f1b-8591-2fcf-d01c",
+            "affects": "self.entries.profiles.Ranged Weapons",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": true
+              }
+            ]
           }
         ],
         "entryLinks": [
@@ -1428,23 +1445,6 @@
             "action": "group"
           }
         ]
-      }
-    ],
-    "categoryEntries": [
-      {
-        "name": "Darnath Lysander",
-        "hidden": false,
-        "id": "f797-f718-df7d-8545"
-      },
-      {
-        "name": "Tor Garadon",
-        "hidden": false,
-        "id": "3d09-3368-9c3c-9009"
-      },
-      {
-        "name": "Pedro Kantor",
-        "hidden": false,
-        "id": "7709-796b-3022-31fe"
       }
     ],
     "entryLinks": [

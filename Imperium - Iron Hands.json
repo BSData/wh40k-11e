@@ -622,6 +622,25 @@
             "childName": "unit",
             "action": "group"
           }
+        ],
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "5e10-6d62-2624-80a8",
+            "field": "add-info",
+            "affects": "self.entries.group.rules",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": true
+              }
+            ]
+          }
         ]
       },
       {
@@ -1100,18 +1119,6 @@
             "action": "group"
           }
         ]
-      }
-    ],
-    "categoryEntries": [
-      {
-        "name": "Iron Father Ferrios",
-        "hidden": false,
-        "id": "ccae-25d8-84c1-913f"
-      },
-      {
-        "name": "Caanok Var",
-        "id": "bc59-90e6-939a-f5d8",
-        "hidden": false
       }
     ],
     "entryLinks": [
