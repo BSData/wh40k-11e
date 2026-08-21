@@ -1898,17 +1898,29 @@
           {
             "modifiers": [
               {
-                "type": "append",
-                "value": "6+",
-                "field": "name",
-                "join": " "
+                "type": "set",
+                "value": true,
+                "field": "hidden",
+                "join": " ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "d3a3-2d20-bd7e-6778",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Grimnyr"
+                  }
+                ]
               }
             ],
-            "name": "Feel No Pain",
+            "name": "Feel No Pain 6+",
             "id": "807e-1e1a-9f6e-2fd9",
             "hidden": false,
             "type": "rule",
-            "targetId": "9bf4-280f-bbe2-6fbb"
+            "targetId": "676c-ecb5-d24d-3540"
           }
         ],
         "categoryLinks": [
@@ -5163,7 +5175,16 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "upgrade"
+        "type": "upgrade",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "5+",
+            "field": "55a7-5b54-c60d-11dc",
+            "scope": "parent",
+            "affects": "self.entries.recursive.associations.profiles.Unit"
+          }
+        ]
       },
       {
         "constraints": [
@@ -5399,16 +5420,7 @@
                     "id": "ffd1-aac2-01c0-c05a",
                     "collective": false,
                     "targetId": "0a19-2550-9aad-a268",
-                    "type": "selectionEntry",
-                    "infoLinks": [
-                      {
-                        "name": "Deep Strike",
-                        "id": "da6e-8e86-7882-f284",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "7cb5-dd6b-dd87-ad3b"
-                      }
-                    ]
+                    "type": "selectionEntry"
                   }
                 ],
                 "name": "Crest",
@@ -6023,15 +6035,37 @@
             "type": "append",
             "value": "Lethal Hits",
             "field": "7f1b-8591-2fcf-d01c",
-            "affects": "self.entries.recursive.associations.profiles.Ranged Weapons",
-            "join": ", "
+            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "skipIfPresent": "Lethal Hits"
           },
           {
             "type": "append",
             "value": "Lethal Hits",
             "field": "893f-9000-ccf7-648e",
-            "affects": "self.entries.recursive.associations.profiles.Melee Weapons",
-            "join": ", "
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "join": ", ",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ],
+            "skipIfPresent": "Lethal Hits"
           },
           {
             "type": "set",
@@ -6306,7 +6340,16 @@
         "hidden": false,
         "collective": false,
         "import": true,
-        "type": "upgrade"
+        "type": "upgrade",
+        "modifiers": [
+          {
+            "type": "add",
+            "value": "7cb5-dd6b-dd87-ad3b",
+            "field": "add-info",
+            "scope": "root-entry",
+            "affects": "group"
+          }
+        ]
       },
       {
         "constraints": [
@@ -6601,16 +6644,7 @@
                     "id": "9fc0-572e-c94d-dfda",
                     "collective": false,
                     "targetId": "0a19-2550-9aad-a268",
-                    "type": "selectionEntry",
-                    "infoLinks": [
-                      {
-                        "name": "Deep Strike",
-                        "id": "d52d-d99d-0eeb-85c5",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "7cb5-dd6b-dd87-ad3b"
-                      }
-                    ]
+                    "type": "selectionEntry"
                   }
                 ],
                 "selectionEntries": [
@@ -7186,6 +7220,41 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "set",
+            "value": "5+",
+            "field": "55a7-5b54-c60d-11dc",
+            "affects": "profiles.Unit",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "af26-0d4c-e9c1-22ed",
+                    "childId": "b0eb-9aa0-5029-db9d",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Weavefield crest",
+                    "traverseAssociationGroup": true
+                  },
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "af26-0d4c-e9c1-22ed",
+                    "childId": "7133-f7e4-5925-8200",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "childName": "Weavefield crest",
+                    "traverseAssociationGroup": true
+                  }
+                ]
               }
             ]
           }
@@ -8419,6 +8488,23 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "5e10-6d62-2624-80a8",
+            "field": "add-info",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true,
+                "includeChildSelections": false
+              }
+            ],
+            "affects": "group"
           }
         ],
         "associations": [
@@ -8596,9 +8682,9 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following unit:\n- HEARTHKYN WARRIORS\n- BRÔKHYR THUNDERKYN",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n- HEARTHKYN WARRIORS\n- BRÔKHYR THUNDERKYN"
               }
             ],
             "id": "7d15-f4e4-387a-f14d",
@@ -10253,6 +10339,24 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": "5+",
+            "field": "55a7-5b54-c60d-11dc",
+            "affects": "self.entries.profiles.Unit",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "5a53-ae58-e0d9-0616",
+                "shared": true,
+                "includeChildSelections": false,
+                "childName": "Hearthkyn Warriors"
+              }
+            ]
           }
         ],
         "associations": [
@@ -11492,13 +11596,13 @@
                     "name": "Teleport crest",
                     "hidden": false,
                     "id": "fee2-1d3d-f0af-903d",
-                    "infoLinks": [
+                    "modifiers": [
                       {
-                        "name": "Deep Strike",
-                        "id": "10a0-b360-33ce-bfc8",
-                        "hidden": false,
-                        "type": "rule",
-                        "targetId": "7cb5-dd6b-dd87-ad3b"
+                        "type": "add",
+                        "value": "7cb5-dd6b-dd87-ad3b",
+                        "field": "add-info",
+                        "scope": "root-entry",
+                        "affects": "group"
                       }
                     ]
                   }
@@ -12456,6 +12560,24 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "7cb5-dd6b-dd87-ad3b",
+            "field": "add-info",
+            "affects": "group",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "faf5-7477-8cdc-679f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true
+              }
+            ]
           }
         ],
         "constraints": [
@@ -12564,31 +12686,6 @@
             "hidden": false,
             "type": "profile",
             "targetId": "3ec4-7c77-e372-884e"
-          },
-          {
-            "modifiers": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "faf5-7477-8cdc-679f",
-                    "shared": true,
-                    "includeChildSelections": true
-                  }
-                ],
-                "type": "set",
-                "value": true,
-                "field": "hidden"
-              }
-            ],
-            "name": "Deep Strike",
-            "id": "086e-4ab9-2154-a78b",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "7cb5-dd6b-dd87-ad3b"
           }
         ],
         "categoryLinks": [
@@ -32256,18 +32353,16 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "7cb5-dd6b-dd87-ad3b",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "comment": "Hearthfyre Arsenal",
-            "infoLinks": [
-              {
-                "name": "Deep Strike",
-                "id": "d1ed-67d5-ac87-f530",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "7cb5-dd6b-dd87-ad3b"
-              }
-            ],
             "type": "upgrade",
             "import": true,
             "name": "Fârstryder Node",
@@ -32671,6 +32766,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "bef7-942a-1a23-59f8",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "scope": "parent"
               }
             ],
             "comment": "Hearthfyre Arsenal",
@@ -34627,21 +34729,21 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "type": "increment",
                     "value": 1,
                     "field": "bef7-942a-1a23-59f8",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "type": "decrement",
                     "value": 1,
                     "field": "58d2-b879-49c7-43bc",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   }
                 ],
                 "type": "and"
@@ -34743,23 +34845,13 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
-              }
-            ],
-            "infoLinks": [
+              },
               {
-                "modifiers": [
-                  {
-                    "type": "append",
-                    "value": "5+",
-                    "field": "name",
-                    "join": " "
-                  }
-                ],
-                "name": "Feel No Pain",
-                "id": "0e42-12f9-e7b0-ef80",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "9bf4-280f-bbe2-6fbb"
+                "type": "add",
+                "value": "5e10-6d62-2624-80a8",
+                "field": "add-info",
+                "affects": "group",
+                "scope": "parent"
               }
             ],
             "type": "upgrade",
@@ -34983,14 +35075,14 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "type": "increment",
                     "value": 2,
                     "field": "e703-ecb6-5ce7-aec1",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   }
                 ],
                 "type": "and"
@@ -35219,14 +35311,14 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
                   },
                   {
                     "type": "increment",
                     "value": 6,
                     "field": "9896-9419-16a1-92fc",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
                   }
                 ],
                 "type": "and"
@@ -35535,14 +35627,16 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons"
                   },
                   {
                     "type": "append",
                     "value": "Sustained Hits 1",
                     "field": "893f-9000-ccf7-648e",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Sustained Hits"
                   }
                 ],
                 "type": "and"
@@ -36368,6 +36462,13 @@
                     "type": "set",
                     "value": 2,
                     "field": "b03b-c239-15a5-da55"
+                  },
+                  {
+                    "type": "add",
+                    "value": "bec5-4288-34a6-ccfa",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "parent"
                   }
                 ],
                 "costs": [
@@ -36395,15 +36496,6 @@
                     "name": "Military Power",
                     "typeId": "1cbe-d9c9-86a8-2d41",
                     "value": 0
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Stealth",
-                    "id": "1399-58e8-09de-98e5",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
                   }
                 ],
                 "type": "upgrade",
@@ -43837,7 +43929,7 @@
                 "value": "5+",
                 "field": "55a7-5b54-c60d-11dc",
                 "scope": "parent",
-                "affects": "self.entries.group.profiles.Unit"
+                "affects": "self.entries.recursive.associations.profiles.Unit"
               }
             ]
           },
@@ -47727,7 +47819,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "f616-3f08-ee8e-3349",
     "name": "Xenos - Leagues of Votann",
-    "revision": 3,
+    "revision": 4,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
