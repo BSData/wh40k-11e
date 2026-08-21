@@ -13224,14 +13224,16 @@
                 "value": "Dakka! Dakka! Dakka!",
                 "field": "annotation",
                 "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                "join": ", "
+                "join": ", ",
+                "skipIfPresent": "Dakka! Dakka! Dakka!"
               },
               {
                 "type": "append",
                 "value": "Assault",
                 "field": "7f1b-8591-2fcf-d01c",
                 "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                "join": ", "
+                "join": ", ",
+                "skipIfPresent": "Assault"
               }
             ],
             "conditions": [
@@ -13244,6 +13246,140 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "More Dakka!"
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "comment": "Green Tide detachment rule",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Mob Mentality",
+                "field": "annotation",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "Mob Mentality"
+              },
+              {
+                "type": "replace",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "replace",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", ",
+                "arg": "-",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "replace",
+                "value": "5+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", ",
+                "arg": "6+",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "replace",
+                "value": "6+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", ",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "replace",
+                "value": "6+",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.group.recursive.profiles.Unit",
+                "join": ", ",
+                "arg": "-",
+                "conditions": [
+                  {
+                    "type": "lessThan",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              }
+            ],
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "795f-b961-9504-bd08",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Green Tide"
               }
             ]
           }
@@ -28897,18 +29033,11 @@
         ],
         "infoLinks": [
           {
-            "modifiers": [
-              {
-                "type": "append",
-                "value": "5+",
-                "field": "name"
-              }
-            ],
-            "name": "Feel No Pain",
+            "name": "Feel No Pain 5+",
             "hidden": false,
             "type": "rule",
             "id": "4419-4fd8-25a2-48a3",
-            "targetId": "9bf4-280f-bbe2-6fbb"
+            "targetId": "5e10-6d62-2624-80a8"
           },
           {
             "name": "Waaagh!",
@@ -29094,6 +29223,12 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "add",
+            "value": "5e10-6d62-2624-80a8",
+            "field": "add-info",
+            "affects": "group"
           }
         ],
         "selectionEntryGroups": [
@@ -38381,18 +38516,11 @@
         ],
         "infoLinks": [
           {
-            "modifiers": [
-              {
-                "type": "append",
-                "value": "5+",
-                "field": "name"
-              }
-            ],
-            "name": "Feel No Pain",
+            "name": "Feel No Pain 5+",
             "hidden": false,
             "type": "rule",
             "id": "3f11-7d07-4a21-4a97",
-            "targetId": "9bf4-280f-bbe2-6fbb"
+            "targetId": "5e10-6d62-2624-80a8"
           },
           {
             "name": "Waaagh!",
@@ -39147,6 +39275,12 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "add",
+            "value": "5e10-6d62-2624-80a8",
+            "field": "add-info",
+            "affects": "group"
           }
         ],
         "associations": [
@@ -40114,6 +40248,22 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "5e10-6d62-2624-80a8",
+            "field": "add-info",
+            "affects": "group",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ]
           }
@@ -52009,6 +52159,105 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "and",
+            "comment": "Waaagh! Energy modifiers",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Waaagh! Energy",
+                "field": "annotation",
+                "affects": "self.entries.recursive.ee69-ed3e-1164-78e9.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Waaagh! Energy",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 5,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "childName": "model",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "2229-f494-25db-c5d3",
+                "affects": "self.entries.recursive.ee69-ed3e-1164-78e9.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Channellin' da Waaagh!",
+                "position": -1,
+                "repeats": [
+                  {
+                    "value": 5,
+                    "repeats": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "roundUp": false,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "a354-c1c8-a745-f9e3",
+                "affects": "self.entries.recursive.ee69-ed3e-1164-78e9.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Channellin' da Waaagh!",
+                "position": -1,
+                "repeats": [
+                  {
+                    "value": 5,
+                    "repeats": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "roundUp": false,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Hazardous",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.ee69-ed3e-1164-78e9.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Hazardous",
+                "position": -1,
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "childName": "model",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              }
+            ]
           }
         ],
         "type": "model",
@@ -52958,6 +53207,81 @@
                     "shared": true,
                     "includeChildSelections": true,
                     "childName": "Follow Me Ladz"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "comment": "Unstable Oracle modifiers",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Unstable Oracle",
+                "field": "annotation",
+                "affects": "self.entries.recursive.454d-16ff-5aad-c7ad.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Unstable Oracle",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 5,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "childName": "model",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 2,
+                "field": "3bb-c35f-f54-fb08",
+                "affects": "self.entries.recursive.454d-16ff-5aad-c7ad.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Channellin' da Waaagh!",
+                "position": -1,
+                "repeats": [
+                  {
+                    "value": 5,
+                    "repeats": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "roundUp": false,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Hazardous",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.454d-16ff-5aad-c7ad.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Hazardous",
+                "position": -1,
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "childName": "model",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
                   }
                 ]
               }
@@ -63639,13 +63963,6 @@
             "targetId": "37c-6ef9-277-9091"
           },
           {
-            "name": "Feel No Pain",
-            "id": "3239-ddea-427f-c28f",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "9bf4-280f-bbe2-6fbb"
-          },
-          {
             "name": "Leader",
             "id": "726a-ea95-3b25-b669",
             "hidden": false,
@@ -63906,6 +64223,22 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "5e10-6d62-2624-80a8",
+            "field": "add-info",
+            "affects": "group",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
               }
             ]
           }
@@ -75965,30 +76298,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "b4dd-3e1f-41cb-218f"
-          },
-          {
-            "name": "Deep Strike",
-            "id": "c9fa-c5ca-6287-54a7",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "7cb5-dd6b-dd87-ad3b",
-            "modifiers": [
-              {
-                "type": "set",
-                "value": true,
-                "field": "hidden",
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "associations",
-                    "scope": "self",
-                    "childId": "any",
-                    "shared": true
-                  }
-                ]
-              }
-            ]
           }
         ],
         "costs": [
@@ -76299,6 +76608,22 @@
             "type": "set",
             "value": true,
             "field": "hidden"
+          },
+          {
+            "type": "add",
+            "value": "7cb5-dd6b-dd87-ad3b",
+            "field": "add-info",
+            "affects": "group",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "any",
+                "shared": true
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -78943,27 +79268,45 @@
           {
             "conditionGroups": [
               {
-                "conditions": [
+                "type": "or",
+                "conditionGroups": [
                   {
-                    "type": "notInstanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "ancestor",
-                    "childId": "47cc-4071-6fda-688e",
-                    "shared": true
-                  },
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "ancestor",
+                        "childId": "47cc-4071-6fda-688e",
+                        "shared": true
+                      },
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "root-entry",
+                        "childId": "ae9d-f74f-769c-5fc",
+                        "shared": true,
+                        "childName": "Ghazghkull Thraka",
+                        "includeChildSelections": true
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
                   {
                     "type": "lessThan",
                     "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "ae9d-f74f-769c-5fc",
+                    "field": "forces",
+                    "scope": "roster",
                     "shared": true,
-                    "childName": "Ghazghkull Thraka",
-                    "includeChildSelections": true
+                    "includeChildSelections": true,
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "includeChildForces": true,
+                    "childName": "Crusade Force"
                   }
-                ],
-                "type": "and"
+                ]
               }
             ],
             "type": "set",
@@ -84130,7 +84473,7 @@
                 "type": "set",
                 "value": "4+*",
                 "field": "55a7-5b54-c60d-11dc",
-                "affects": "self.entries.group.recursive.group.profiles.Unit",
+                "affects": "self.entries.group.recursive.profiles.Unit",
                 "join": ", "
               }
             ],
@@ -84156,6 +84499,55 @@
                     "shared": true,
                     "includeChildSelections": true,
                     "childName": "Kustom Force Field"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "comment": "More Lads, More Swagger ability modifiers",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "More Lads, More Swagger",
+                "field": "annotation",
+                "affects": "profiles.Unit",
+                "join": ", ",
+                "skipIfPresent": "More Lads, More Swagger",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 5,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "childName": "model",
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "includeChildSelections": true
+                  }
+                ]
+              },
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "58d2-b879-49c7-43bc",
+                "affects": "profiles.Unit",
+                "repeats": [
+                  {
+                    "value": 5,
+                    "repeats": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "roundUp": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "childId": "model"
                   }
                 ]
               }
@@ -85853,6 +86245,129 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "More Dakka!"
+              }
+            ]
+          },
+          {
+            "type": "and",
+            "comment": "Channellin' da Waaagh! modifiers",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Channellin' da Waaagh!",
+                "field": "annotation",
+                "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Channellin' da Waaagh!",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 5,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "childName": "model",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "3bb-c35f-f54-fb08",
+                "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Channellin' da Waaagh!",
+                "position": -1,
+                "repeats": [
+                  {
+                    "value": 5,
+                    "repeats": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "roundUp": false,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "2229-f494-25db-c5d3",
+                "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Channellin' da Waaagh!",
+                "position": -1,
+                "repeats": [
+                  {
+                    "value": 5,
+                    "repeats": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "roundUp": false,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "a354-c1c8-a745-f9e3",
+                "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Channellin' da Waaagh!",
+                "position": -1,
+                "repeats": [
+                  {
+                    "value": 5,
+                    "repeats": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "roundUp": false,
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true,
+                    "childName": "model"
+                  }
+                ]
+              },
+              {
+                "type": "append",
+                "value": "Hazardous",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons",
+                "join": ", ",
+                "skipIfPresent": "Hazardous",
+                "position": -1,
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 10,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "model",
+                    "shared": true,
+                    "childName": "model",
+                    "includeChildSelections": true,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": true
+                  }
+                ]
               }
             ]
           }
@@ -90305,7 +90820,32 @@
                 "import": true,
                 "name": "Follow Me Ladz",
                 "hidden": false,
-                "id": "ed0c-e9cb-399f-a5a2"
+                "id": "ed0c-e9cb-399f-a5a2",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Follow Me Ladz",
+                        "field": "annotation",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Follow Me Ladz"
+                      },
+                      {
+                        "type": "increment",
+                        "value": 2,
+                        "field": "e703-ecb6-5ce7-aec1",
+                        "scope": "root-entry",
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "join": ", ",
+                        "skipIfPresent": "Follow Me Ladz"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -90860,6 +91400,13 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
+                  },
+                  {
+                    "type": "add",
+                    "value": "9ea5-acc2-a2ac-257b",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "constraints": [
@@ -91041,15 +91588,6 @@
                     "id": "523a-2366-a308-9879"
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Ignores Cover",
-                    "id": "c25f-fdc7-69dd-bfa2",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "4640-43e7-30b-215a"
-                  }
-                ],
                 "constraints": [
                   {
                     "type": "max",
@@ -91108,7 +91646,30 @@
                 "import": true,
                 "name": "Gitfinder Gogglez",
                 "hidden": false,
-                "id": "f3f0-a73b-d062-9dc6"
+                "id": "f3f0-a73b-d062-9dc6",
+                "modifierGroups": [
+                  {
+                    "type": "and",
+                    "modifiers": [
+                      {
+                        "type": "append",
+                        "value": "Gitfinder Gogglez",
+                        "field": "annotation",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Gitfinder Gogglez"
+                      },
+                      {
+                        "type": "append",
+                        "value": "Ignores Cover",
+                        "field": "7f1b-8591-2fcf-d01c",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Ignores Cover"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "modifiers": [
@@ -91426,15 +91987,13 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
-                  }
-                ],
-                "infoLinks": [
+                  },
                   {
-                    "name": "Stealth",
-                    "id": "ccf3-a795-61c9-d99c",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "bec5-4288-34a6-ccfa"
+                    "type": "add",
+                    "value": "bec5-4288-34a6-ccfa",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "constraints": [
@@ -92619,15 +93178,13 @@
                     "type": "set",
                     "value": true,
                     "field": "hidden"
-                  }
-                ],
-                "infoLinks": [
+                  },
                   {
-                    "name": "Deep Strike",
-                    "id": "dca1-4256-bfe0-8575",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "7cb5-dd6b-dd87-ad3b"
+                    "type": "add",
+                    "value": "7cb5-dd6b-dd87-ad3b",
+                    "field": "add-info",
+                    "affects": "group",
+                    "scope": "root-entry"
                   }
                 ],
                 "constraints": [
@@ -94033,15 +94590,6 @@
                     "includeChildForces": false
                   }
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Ignores Cover",
-                    "id": "e68b-db76-20ca-1788",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "4640-43e7-30b-215a"
-                  }
-                ],
                 "profiles": [
                   {
                     "characteristics": [
@@ -94067,15 +94615,17 @@
                         "field": "annotation",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "skipIfPresent": "Git-spotter Squig"
                       },
                       {
                         "type": "append",
                         "value": "Ignores Cover",
-                        "field": "893f-9000-ccf7-648e",
+                        "field": "7f1b-8591-2fcf-d01c",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                        "join": ", "
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "join": ", ",
+                        "skipIfPresent": "Ignores Cover"
                       }
                     ],
                     "type": "and"
@@ -97381,22 +97931,6 @@
                 "hidden": false
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Sustained Hits",
-                "id": "3b40-c0fe-dffc-5f2b",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "1897-c22c-9597-12b1"
-              },
-              {
-                "name": "Assault",
-                "id": "d8a9-8b89-5eb0-68a9",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "fc8a-8c24-bae9-cc1c"
-              }
-            ],
             "modifiers": [
               {
                 "conditions": [
@@ -99255,15 +99789,6 @@
                 "value": 0
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Fights First",
-                "id": "3b8b-a5e3-cac5-e03d",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "24-c886-e8ba-5a89"
-              }
-            ],
             "modifierGroups": [
               {
                 "modifiers": [
@@ -99272,14 +99797,22 @@
                     "value": "Rezmekka's Redder Paint",
                     "field": "annotation",
                     "join": ", ",
-                    "affects": "self.entries.profiles.Unit",
-                    "scope": "root-entry"
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "scope": "root-entry",
+                    "skipIfPresent": "Rezmekka's Redder Paint"
                   },
                   {
                     "type": "increment",
                     "value": 2,
                     "field": "e703-ecb6-5ce7-aec1",
-                    "affects": "profiles.Unit",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "scope": "root-entry"
+                  },
+                  {
+                    "type": "add",
+                    "value": "24-c886-e8ba-5a89",
+                    "field": "add-info",
+                    "affects": "group",
                     "scope": "root-entry"
                   }
                 ],
@@ -101062,16 +101595,17 @@
                         "type": "increment",
                         "value": 2,
                         "field": "e703-ecb6-5ce7-aec1",
-                        "affects": "self.entries.profiles.Unit",
-                        "scope": "model-or-unit"
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry"
                       },
                       {
                         "type": "append",
                         "value": "Fungus-fuel Injecta",
                         "field": "annotation",
                         "join": ", ",
-                        "affects": "self.entries.profiles.Unit",
-                        "scope": "model-or-unit"
+                        "affects": "self.entries.group.recursive.profiles.Unit",
+                        "scope": "root-entry",
+                        "skipIfPresent": "Fungus-fuel Injecta"
                       }
                     ],
                     "comment": "Kustom Job: Fungus-fuel Injecta",
@@ -102656,22 +103190,6 @@
                 "id": "8e60-f05f-2e77-285a"
               }
             ],
-            "infoLinks": [
-              {
-                "modifiers": [
-                  {
-                    "type": "append",
-                    "value": "5+",
-                    "field": "name"
-                  }
-                ],
-                "name": "Feel No Pain",
-                "id": "ad6e-4a10-70e5-572a",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "9bf4-280f-bbe2-6fbb"
-              }
-            ],
             "modifiers": [
               {
                 "conditionGroups": [
@@ -102700,6 +103218,23 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "5e10-6d62-2624-80a8",
+                "field": "add-info",
+                "affects": "group",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "root-entry",
+                    "childId": "any",
+                    "shared": true
+                  }
+                ],
+                "scope": "root-entry"
               }
             ],
             "type": "upgrade",
@@ -105493,7 +106028,8 @@
                         "field": "annotation",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                        "skipIfPresent": "Dead Shiny Shootas"
                       },
                       {
                         "type": "append",
@@ -105501,18 +106037,9 @@
                         "field": "7f1b-8591-2fcf-d01c",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                        "arg": "Rapid Fire 1"
-                      },
-                      {
-                        "type": "replace",
-                        "value": "",
-                        "field": "7f1b-8591-2fcf-d01c",
-                        "join": ", ",
-                        "scope": "root-entry",
-                        "affects": "self.entries.recursive.751c-b78a-45fa-cc5f.profiles.Ranged Weapons",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                         "arg": "Rapid Fire 1",
-                        "position": -1
+                        "skipIfPresent": "Rapid Fire"
                       },
                       {
                         "type": "replace",
@@ -105520,7 +106047,7 @@
                         "field": "7f1b-8591-2fcf-d01c",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.751c-b78a-45fa-cc5f.profiles.Ranged Weapons",
+                        "affects": "self.entries.group.recursive.751c-b78a-45fa-cc5f.profiles.Ranged Weapons",
                         "arg": "Rapid Fire 3",
                         "position": 1
                       },
@@ -105530,7 +106057,7 @@
                         "field": "7f1b-8591-2fcf-d01c",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.751c-b78a-45fa-cc5f.profiles.Ranged Weapons",
+                        "affects": "self.entries.group.recursive.751c-b78a-45fa-cc5f.profiles.Ranged Weapons",
                         "arg": "Rapid Fire 2",
                         "position": 1
                       },
@@ -105540,7 +106067,7 @@
                         "field": "7f1b-8591-2fcf-d01c",
                         "join": ", ",
                         "scope": "root-entry",
-                        "affects": "self.entries.recursive.751c-b78a-45fa-cc5f.profiles.Ranged Weapons",
+                        "affects": "self.entries.group.recursive.751c-b78a-45fa-cc5f.profiles.Ranged Weapons",
                         "arg": "Rapid Fire 1",
                         "position": 1
                       }
@@ -105563,15 +106090,6 @@
                         "childName": "Infantry"
                       }
                     ]
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Rapid Fire",
-                    "id": "e394-b307-1739-f6d9",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "c5c8-8b58-b8b6-7786"
                   }
                 ]
               }
