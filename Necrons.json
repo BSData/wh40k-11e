@@ -56747,6 +56747,20 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "97b2-3a6c-79b6-181c"
+          },
+          {
+            "name": "Vanguard Protocols",
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "hidden": false,
+            "id": "0e51-1487-b016-368e",
+            "characteristics": [
+              {
+                "$text": "If this model is attached to a ^^**Canoptek Macrocytes^^** unit during the Declare Battle Formations step, this model has the Scouts 8\" ability.",
+                "name": "Description",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
@@ -56972,6 +56986,25 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "add",
+            "value": "a5f4-4af8-4735-7384",
+            "field": "add-info",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "associations",
+                "scope": "self",
+                "childId": "0878-d523-440d-43e3",
+                "shared": true,
+                "includeChildSelections": false,
+                "childName": "Macrocytes",
+                "includeChildForces": false,
+                "traverseAssociationGroup": true
               }
             ]
           }
@@ -62806,22 +62839,6 @@
         "targetId": "b7ee-a0fa-5736-b58f"
       },
       {
-        "profiles": [
-          {
-            "characteristics": [
-              {
-                "$text": "If this model is attached to a ^^**Canoptek Macrocytes^^** unit during the Declare Battle Formations step, this model has the Scouts 8\" ability.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Vanguard Protocols",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "0e51-1487-b016-368e"
-          }
-        ],
         "import": true,
         "name": "Geomancer",
         "hidden": false,
