@@ -55251,70 +55251,6 @@
           },
           {
             "type": "and",
-            "modifiers": [
-              {
-                "type": "append",
-                "value": "Nomadic Hunter",
-                "field": "annotation",
-                "affects": "self.entries.group.recursive.group.profiles.Unit",
-                "join": ", ",
-                "scope": "root-entry-self"
-              },
-              {
-                "type": "increment",
-                "value": 3,
-                "field": "e703-ecb6-5ce7-aec1",
-                "affects": "self.entries.group.recursive.group.profiles.Unit",
-                "scope": "root-entry-self"
-              },
-              {
-                "type": "append",
-                "value": "Nomadic Hunter",
-                "field": "annotation",
-                "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
-                "join": ", ",
-                "scope": "root-entry-self"
-              },
-              {
-                "type": "append",
-                "value": "Assault",
-                "field": "7f1b-8591-2fcf-d01c",
-                "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
-                "join": ", ",
-                "scope": "root-entry-self"
-              }
-            ],
-            "comment": "Nomadic Hunter Enhancement attached unit modifiers",
-            "conditionGroups": [
-              {
-                "type": "and",
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "associations",
-                    "scope": "root-entry",
-                    "childId": "any",
-                    "shared": true,
-                    "includeChildForces": false,
-                    "traverseAssociationGroup": true
-                  },
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "e72b-61f3-5e33-983f",
-                    "shared": true,
-                    "childName": "Nomadic Hunter",
-                    "includeChildSelections": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "and",
             "conditions": [
               {
                 "type": "atLeast",
@@ -69052,7 +68988,7 @@
                         "type": "atLeast",
                         "value": 1,
                         "field": "associations",
-                        "scope": "self",
+                        "scope": "root-entry",
                         "childId": "any",
                         "shared": true
                       }
