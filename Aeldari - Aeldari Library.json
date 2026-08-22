@@ -171209,59 +171209,30 @@
                     "value": "Spitefire",
                     "field": "annotation",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                    "join": ", "
-                  },
-                  {
-                    "type": "replace",
-                    "field": "7f1b-8591-2fcf-d01c",
-                    "scope": "root-entry",
-                    "affects": "self.entries.recursive.e106-0758-7137-2432.profiles.Ranged Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                     "join": ", ",
-                    "arg": ", Assault"
-                  },
-                  {
-                    "type": "replace",
-                    "field": "7f1b-8591-2fcf-d01c",
-                    "scope": "root-entry",
-                    "affects": "self.entries.recursive.e106-0758-7137-2432.profiles.Ranged Weapons",
-                    "join": ", ",
-                    "arg": "Assault"
+                    "skipIfPresent": "Spitefire"
                   },
                   {
                     "type": "append",
                     "value": "Assault",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Assault"
                   },
                   {
                     "type": "append",
                     "value": "Rapid Fire 1",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "root-entry",
-                    "affects": "self.entries.recursive.e106-0758-7137-2432.profiles.Ranged Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.e106-0758-7137-2432.profiles.Ranged Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Rapid Fire"
                   }
                 ],
                 "type": "and"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Rapid Fire",
-                "id": "a2ae-6440-efcb-b497",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "c5c8-8b58-b8b6-7786"
-              },
-              {
-                "name": "Assault",
-                "id": "0f89-5c8b-2b44-483f",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "fc8a-8c24-bae9-cc1c"
               }
             ],
             "type": "upgrade",
