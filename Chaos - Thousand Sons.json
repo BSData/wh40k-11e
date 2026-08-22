@@ -46610,6 +46610,20 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "2229-f494-25db-c5d3",
+                "scope": "parent",
+                "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Ranged Weapons"
+              },
+              {
+                "type": "increment",
+                "value": 1,
+                "field": "ab33-d393-96ce-ccba",
+                "scope": "parent",
+                "affects": "self.entries.group.recursive.4546-4a0c-b3be-e84c.profiles.Melee Weapons"
               }
             ],
             "profiles": [
@@ -50745,6 +50759,19 @@
                 "type": "set",
                 "value": 2,
                 "field": "b03b-c239-15a5-da55"
+              },
+              {
+                "type": "add",
+                "value": "9258-3a36-5e40-f185",
+                "field": "add-info",
+                "scope": "parent"
+              },
+              {
+                "type": "add",
+                "value": "5e10-6d62-2624-80a8",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group.9cfd-1c32-585f-7d5c"
               }
             ],
             "profiles": [
@@ -50761,15 +50788,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "0e96-c0db-ab00-214f"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Feel No Pain",
-                "id": "3e19-902b-098a-9c82",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "9bf4-280f-bbe2-6fbb"
               }
             ],
             "type": "upgrade",
@@ -51001,7 +51019,7 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
                   },
                   {
                     "conditions": [
@@ -51019,7 +51037,7 @@
                     "value": "Assault",
                     "field": "7f1b-8591-2fcf-d01c",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                     "join": ", "
                   }
                 ],
@@ -51308,6 +51326,13 @@
                 "type": "set",
                 "value": 2,
                 "field": "b03b-c239-15a5-da55"
+              },
+              {
+                "type": "add",
+                "value": "7cb5-dd6b-dd87-ad3b",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group"
               }
             ],
             "profiles": [
@@ -51324,15 +51349,6 @@
                 "typeName": "Abilities",
                 "hidden": false,
                 "id": "6fa2-8457-5a1e-87a5"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Deep Strike",
-                "id": "aee2-1af9-cf17-0552",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "7cb5-dd6b-dd87-ad3b"
               }
             ],
             "type": "upgrade",
@@ -60273,7 +60289,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "1069-10ff-3ba9-873b",
     "name": "Chaos - Thousand Sons",
-    "revision": 9,
+    "revision": 10,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
