@@ -18622,31 +18622,6 @@
             "targetId": "eeb6-c42-48f7-cc21"
           },
           {
-            "modifiers": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "2598-d700-9952-e439",
-                    "childId": "124e-a9a3-efd7-8788",
-                    "shared": true,
-                    "includeChildSelections": true
-                  }
-                ],
-                "type": "set",
-                "value": true,
-                "field": "hidden"
-              }
-            ],
-            "name": "Infiltrators",
-            "hidden": false,
-            "type": "rule",
-            "id": "b4c9-99fe-512c-ffe0",
-            "targetId": "c05d-f4c3-f091-4938"
-          },
-          {
             "name": "Ignores Cover",
             "hidden": false,
             "type": "rule",
@@ -18801,6 +18776,33 @@
                     "id": "15ac-1dc1-02f4-6a2e",
                     "type": "selectionEntry",
                     "targetId": "de0b-0da1-d97e-8d59"
+                  },
+                  {
+                    "import": true,
+                    "name": "Pulse carbine",
+                    "hidden": false,
+                    "id": "abf9-1a63-1bce-f42b",
+                    "targetId": "4e2b-de81-733a-721d",
+                    "type": "selectionEntry",
+                    "collective": true,
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "12cb-a62e-f1be-b740"
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "65ca-76db-a96a-1a2e"
+                      }
+                    ]
                   }
                 ],
                 "modifiers": [
@@ -18824,112 +18826,6 @@
                     "type": "decrement",
                     "value": 1,
                     "field": "850f-6d92-773b-312f"
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "20\"",
-                            "name": "Range",
-                            "typeId": "9896-9419-16a1-92fc"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "A",
-                            "typeId": "3bb-c35f-f54-fb08"
-                          },
-                          {
-                            "$text": "4+",
-                            "name": "BS",
-                            "typeId": "94d-8a98-cf90-183e"
-                          },
-                          {
-                            "$text": "5",
-                            "name": "S",
-                            "typeId": "2229-f494-25db-c5d3"
-                          },
-                          {
-                            "$text": "0",
-                            "name": "AP",
-                            "typeId": "9ead-8a10-520-de15"
-                          },
-                          {
-                            "$text": "1",
-                            "name": "D",
-                            "typeId": "a354-c1c8-a745-f9e3"
-                          },
-                          {
-                            "$text": "",
-                            "name": "Keywords",
-                            "typeId": "7f1b-8591-2fcf-d01c"
-                          }
-                        ],
-                        "modifierGroups": [
-                          {
-                            "comment": "Pulse Accelerator Drone",
-                            "modifiers": [
-                              {
-                                "type": "append",
-                                "value": "Pulse Accelerator Drone",
-                                "field": "annotation",
-                                "join": ", "
-                              },
-                              {
-                                "type": "set",
-                                "value": "26\"",
-                                "field": "9896-9419-16a1-92fc"
-                              }
-                            ],
-                            "conditions": [
-                              {
-                                "type": "greaterThan",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "root-entry",
-                                "childId": "296b-c47c-fbbc-bf11",
-                                "shared": true,
-                                "includeChildSelections": true
-                              }
-                            ],
-                            "type": "and"
-                          }
-                        ],
-                        "name": "Pulse carbine",
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "hidden": false,
-                        "id": "a7f7-7c20-1c7f-8207"
-                      }
-                    ],
-                    "constraints": [
-                      {
-                        "type": "min",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "26e3-72ed-6f87-3382",
-                        "includeChildSelections": false
-                      },
-                      {
-                        "type": "max",
-                        "value": 1,
-                        "field": "selections",
-                        "scope": "parent",
-                        "shared": true,
-                        "id": "f6e9-13ff-3f34-6313",
-                        "includeChildSelections": false
-                      }
-                    ],
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pulse carbine",
-                    "hidden": false,
-                    "id": "541e-ed7b-b4c3-08cb",
-                    "collective": true
                   }
                 ],
                 "profiles": [
@@ -19085,86 +18981,15 @@
                     "id": "2d17-6cc9-64b1-7112",
                     "type": "selectionEntry",
                     "targetId": "de0b-0da1-d97e-8d59"
-                  }
-                ],
-                "selectionEntries": [
+                  },
                   {
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "20\"",
-                            "name": "Range",
-                            "typeId": "9896-9419-16a1-92fc"
-                          },
-                          {
-                            "$text": "2",
-                            "name": "A",
-                            "typeId": "3bb-c35f-f54-fb08"
-                          },
-                          {
-                            "$text": "4+",
-                            "name": "BS",
-                            "typeId": "94d-8a98-cf90-183e"
-                          },
-                          {
-                            "$text": "5",
-                            "name": "S",
-                            "typeId": "2229-f494-25db-c5d3"
-                          },
-                          {
-                            "$text": "0",
-                            "name": "AP",
-                            "typeId": "9ead-8a10-520-de15"
-                          },
-                          {
-                            "$text": "1",
-                            "name": "D",
-                            "typeId": "a354-c1c8-a745-f9e3"
-                          },
-                          {
-                            "$text": "",
-                            "name": "Keywords",
-                            "typeId": "7f1b-8591-2fcf-d01c"
-                          }
-                        ],
-                        "modifierGroups": [
-                          {
-                            "comment": "Pulse Accelerator Drone",
-                            "modifiers": [
-                              {
-                                "type": "append",
-                                "value": "Pulse Accelerator Drone",
-                                "field": "annotation",
-                                "join": ", "
-                              },
-                              {
-                                "type": "set",
-                                "value": "26\"",
-                                "field": "9896-9419-16a1-92fc"
-                              }
-                            ],
-                            "conditions": [
-                              {
-                                "type": "greaterThan",
-                                "value": 0,
-                                "field": "selections",
-                                "scope": "root-entry",
-                                "childId": "296b-c47c-fbbc-bf11",
-                                "shared": true,
-                                "includeChildSelections": true
-                              }
-                            ],
-                            "type": "and"
-                          }
-                        ],
-                        "name": "Pulse carbine",
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "hidden": false,
-                        "id": "8323-cecd-27fd-83b8"
-                      }
-                    ],
+                    "import": true,
+                    "name": "Pulse carbine",
+                    "hidden": false,
+                    "id": "f4b3-260c-551c-4550",
+                    "targetId": "4e2b-de81-733a-721d",
+                    "type": "selectionEntry",
+                    "collective": true,
                     "constraints": [
                       {
                         "type": "min",
@@ -19172,8 +18997,7 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "3ce2-3ba5-c126-35b6",
-                        "includeChildSelections": false
+                        "id": "4889-9f16-9d3d-c3e1"
                       },
                       {
                         "type": "max",
@@ -19181,16 +19005,9 @@
                         "field": "selections",
                         "scope": "parent",
                         "shared": true,
-                        "id": "f3f1-a33b-e36f-403d",
-                        "includeChildSelections": false
+                        "id": "29e5-6c16-536a-195e"
                       }
-                    ],
-                    "type": "upgrade",
-                    "import": true,
-                    "name": "Pulse carbine",
-                    "hidden": false,
-                    "id": "c0a5-db56-0099-a2b1",
-                    "collective": true
+                    ]
                   }
                 ],
                 "profiles": [
@@ -19877,7 +19694,50 @@
                             "import": true,
                             "name": "Pulse accelerator drone",
                             "hidden": false,
-                            "id": "296b-c47c-fbbc-bf11"
+                            "id": "296b-c47c-fbbc-bf11",
+                            "modifierGroups": [
+                              {
+                                "type": "and",
+                                "modifiers": [
+                                  {
+                                    "type": "append",
+                                    "value": "Pulse Accelerator Drone",
+                                    "field": "annotation",
+                                    "affects": "self.entries.group.recursive.4e2b-de81-733a-721d.profiles.Ranged Weapons",
+                                    "join": ", ",
+                                    "skipIfPresent": "Pulse Accelerator Drone",
+                                    "scope": "root-entry"
+                                  },
+                                  {
+                                    "type": "increment",
+                                    "value": 6,
+                                    "field": "9896-9419-16a1-92fc",
+                                    "affects": "self.entries.group.recursive.4e2b-de81-733a-721d.profiles.Ranged Weapons",
+                                    "join": ", ",
+                                    "skipIfPresent": "Pulse Accelerator Drone",
+                                    "scope": "root-entry"
+                                  },
+                                  {
+                                    "type": "append",
+                                    "value": "Pulse Accelerator Drone",
+                                    "field": "annotation",
+                                    "affects": "self.entries.group.recursive.9e02-6828-1052-5cc4.profiles.Ranged Weapons",
+                                    "join": ", ",
+                                    "skipIfPresent": "Pulse Accelerator Drone",
+                                    "scope": "root-entry"
+                                  },
+                                  {
+                                    "type": "increment",
+                                    "value": 6,
+                                    "field": "9896-9419-16a1-92fc",
+                                    "affects": "self.entries.group.recursive.9e02-6828-1052-5cc4.profiles.Ranged Weapons",
+                                    "join": ", ",
+                                    "skipIfPresent": "Pulse Accelerator Drone",
+                                    "scope": "root-entry"
+                                  }
+                                ]
+                              }
+                            ]
                           },
                           {
                             "profiles": [
@@ -19992,7 +19852,16 @@
                             "import": true,
                             "name": "Recon drone",
                             "hidden": false,
-                            "id": "124e-a9a3-efd7-8788"
+                            "id": "124e-a9a3-efd7-8788",
+                            "modifiers": [
+                              {
+                                "type": "add",
+                                "value": "c05d-f4c3-f091-4938",
+                                "field": "add-info",
+                                "affects": "group",
+                                "scope": "root-entry"
+                              }
+                            ]
                           }
                         ],
                         "constraints": [
@@ -20010,82 +19879,22 @@
                         "hidden": false
                       }
                     ],
-                    "selectionEntries": [
+                    "entryLinks": [
                       {
-                        "profiles": [
+                        "targetId": "4e2b-de81-733a-721d",
+                        "id": "152e-91e7-b99b-f5f0",
+                        "type": "selectionEntry",
+                        "name": "Pulse carbine",
+                        "hidden": false,
+                        "collective": true,
+                        "entryLinks": [
                           {
-                            "characteristics": [
-                              {
-                                "$text": "20\"",
-                                "name": "Range",
-                                "typeId": "9896-9419-16a1-92fc"
-                              },
-                              {
-                                "$text": "2",
-                                "name": "A",
-                                "typeId": "3bb-c35f-f54-fb08"
-                              },
-                              {
-                                "$text": "4+",
-                                "name": "BS",
-                                "typeId": "94d-8a98-cf90-183e"
-                              },
-                              {
-                                "$text": "5",
-                                "name": "S",
-                                "typeId": "2229-f494-25db-c5d3"
-                              },
-                              {
-                                "$text": "0",
-                                "name": "AP",
-                                "typeId": "9ead-8a10-520-de15"
-                              },
-                              {
-                                "$text": "1",
-                                "name": "D",
-                                "typeId": "a354-c1c8-a745-f9e3"
-                              },
-                              {
-                                "$text": "",
-                                "name": "Keywords",
-                                "typeId": "7f1b-8591-2fcf-d01c"
-                              }
-                            ],
-                            "modifierGroups": [
-                              {
-                                "comment": "Pulse Accelerator Drone",
-                                "modifiers": [
-                                  {
-                                    "type": "append",
-                                    "value": "Pulse Accelerator Drone",
-                                    "field": "annotation",
-                                    "join": ", "
-                                  },
-                                  {
-                                    "type": "set",
-                                    "value": "26\"",
-                                    "field": "9896-9419-16a1-92fc"
-                                  }
-                                ],
-                                "conditions": [
-                                  {
-                                    "type": "greaterThan",
-                                    "value": 0,
-                                    "field": "selections",
-                                    "scope": "root-entry",
-                                    "childId": "296b-c47c-fbbc-bf11",
-                                    "shared": true,
-                                    "includeChildSelections": true
-                                  }
-                                ],
-                                "type": "and"
-                              }
-                            ],
-                            "name": "Pulse carbine",
-                            "typeId": "f77d-b953-8fa4-b762",
-                            "typeName": "Ranged Weapons",
+                            "import": true,
+                            "name": "Weapon Modifications",
                             "hidden": false,
-                            "id": "9d00-a7fb-afe6-98f9"
+                            "id": "1f7e-cea0-dd37-78c8",
+                            "type": "selectionEntryGroup",
+                            "targetId": "f9da-852a-d7f0-92e9"
                           }
                         ],
                         "constraints": [
@@ -20105,26 +19914,8 @@
                             "shared": true,
                             "id": "fbec-70d9-36ef-616c"
                           }
-                        ],
-                        "entryLinks": [
-                          {
-                            "import": true,
-                            "name": "Weapon Modifications",
-                            "hidden": false,
-                            "id": "1f7e-cea0-dd37-78c8",
-                            "type": "selectionEntryGroup",
-                            "targetId": "f9da-852a-d7f0-92e9"
-                          }
-                        ],
-                        "type": "upgrade",
-                        "import": true,
-                        "name": "Pulse carbine",
-                        "hidden": false,
-                        "id": "4e2b-de81-733a-721d",
-                        "collective": false
-                      }
-                    ],
-                    "entryLinks": [
+                        ]
+                      },
                       {
                         "entryLinks": [
                           {
@@ -34664,43 +34455,81 @@
                     "targetId": "2b7a-8436-43c4-2378"
                   }
                 ],
-                "infoGroups": [
-                  {
-                    "profiles": [
-                      {
-                        "characteristics": [
-                          {
-                            "$text": "Ranged weapons equipped by the bearer’s unit have the [IGNORES COVER] ability.",
-                            "name": "Description",
-                            "typeId": "9b8f-694b-e5e-b573"
-                          }
-                        ],
-                        "name": "Pech'ra",
-                        "typeId": "9cc3-6d83-4dd3-9b64",
-                        "typeName": "Abilities",
-                        "hidden": false,
-                        "id": "567d-867a-3de8-fcab"
-                      }
-                    ],
-                    "infoLinks": [
-                      {
-                        "name": "Ignores Cover",
-                        "hidden": false,
-                        "type": "rule",
-                        "id": "9e52-4271-c9fa-8b8c",
-                        "targetId": "4640-43e7-30b-215a"
-                      }
-                    ],
-                    "name": "Pech'ra",
-                    "hidden": false,
-                    "id": "19d9-3325-c945-8a64"
-                  }
-                ],
                 "type": "model",
                 "import": true,
                 "name": "Kroot Farstalker w/ Farstalker firearm and Pech'ra",
                 "hidden": false,
-                "id": "ca9e-99f0-8f4b-8355"
+                "id": "ca9e-99f0-8f4b-8355",
+                "selectionEntries": [
+                  {
+                    "type": "upgrade",
+                    "import": true,
+                    "name": "Pech'ra",
+                    "hidden": false,
+                    "id": "34d0-32cc-5a0a-197f",
+                    "constraints": [
+                      {
+                        "type": "min",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "676c-c5e7-1dde-9ff8",
+                        "includeChildSelections": false
+                      },
+                      {
+                        "type": "max",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "parent",
+                        "shared": true,
+                        "id": "417e-a69e-3a4e-0d70",
+                        "includeChildSelections": false
+                      }
+                    ],
+                    "profiles": [
+                      {
+                        "name": "Pech'ra",
+                        "typeId": "9cc3-6d83-4dd3-9b64",
+                        "typeName": "Abilities",
+                        "hidden": false,
+                        "id": "567d-867a-3de8-fcab",
+                        "characteristics": [
+                          {
+                            "name": "Description",
+                            "typeId": "9b8f-694b-e5e-b573",
+                            "$text": "Ranged weapons equipped by the bearer’s unit have the **[IGNORES COVER]** ability."
+                          }
+                        ]
+                      }
+                    ],
+                    "modifierGroups": [
+                      {
+                        "type": "and",
+                        "modifiers": [
+                          {
+                            "type": "append",
+                            "value": "Pech'ra",
+                            "field": "annotation",
+                            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                            "join": ", ",
+                            "skipIfPresent": "Pech'ra",
+                            "scope": "root-entry"
+                          },
+                          {
+                            "type": "append",
+                            "value": "Ignores Cover",
+                            "field": "7f1b-8591-2fcf-d01c",
+                            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                            "join": ", ",
+                            "skipIfPresent": "Ignores Cover",
+                            "scope": "root-entry"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -66326,6 +66155,60 @@
         "name": "Homing beacon",
         "hidden": false,
         "id": "733a-d8f9-87a0-4200"
+      },
+      {
+        "profiles": [
+          {
+            "characteristics": [
+              {
+                "$text": "20\"",
+                "name": "Range",
+                "typeId": "9896-9419-16a1-92fc"
+              },
+              {
+                "$text": "2",
+                "name": "A",
+                "typeId": "3bb-c35f-f54-fb08"
+              },
+              {
+                "$text": "4+",
+                "name": "BS",
+                "typeId": "94d-8a98-cf90-183e"
+              },
+              {
+                "$text": "5",
+                "name": "S",
+                "typeId": "2229-f494-25db-c5d3"
+              },
+              {
+                "$text": "0",
+                "name": "AP",
+                "typeId": "9ead-8a10-520-de15"
+              },
+              {
+                "$text": "1",
+                "name": "D",
+                "typeId": "a354-c1c8-a745-f9e3"
+              },
+              {
+                "$text": "",
+                "name": "Keywords",
+                "typeId": "7f1b-8591-2fcf-d01c"
+              }
+            ],
+            "name": "Pulse carbine",
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "hidden": false,
+            "id": "9d00-a7fb-afe6-98f9"
+          }
+        ],
+        "type": "upgrade",
+        "import": true,
+        "name": "Pulse carbine",
+        "hidden": false,
+        "id": "4e2b-de81-733a-721d",
+        "collective": false
       }
     ],
     "entryLinks": [
