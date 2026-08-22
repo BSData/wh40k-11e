@@ -16555,7 +16555,7 @@
                     "value": 1,
                     "field": "bef7-942a-1a23-59f8",
                     "scope": "parent",
-                    "affects": "profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   }
                 ],
                 "modifierGroups": [
@@ -16683,7 +16683,14 @@
                     "value": 1,
                     "field": "95d1-95f-45b4-11d6",
                     "scope": "parent",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons"
+                  },
+                  {
+                    "type": "floor",
+                    "value": "2",
+                    "field": "95d1-95f-45b4-11d6",
+                    "scope": "parent",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons"
                   }
                 ],
                 "modifierGroups": [
@@ -42017,6 +42024,12 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "set",
+            "value": "5+",
+            "field": "55a7-5b54-c60d-11dc",
+            "affects": "self.entries.recursive.associations.profiles.Unit"
           }
         ],
         "type": "model",
@@ -46067,7 +46080,7 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "conditions": [
@@ -46085,7 +46098,7 @@
                     "value": 2,
                     "field": "e703-ecb6-5ce7-aec1",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   }
                 ],
                 "type": "and"
@@ -46800,7 +46813,7 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons"
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons"
                   },
                   {
                     "conditions": [
@@ -46818,8 +46831,9 @@
                     "value": "Precision",
                     "field": "893f-9000-ccf7-648e",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Melee Weapons",
-                    "join": ", "
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "join": ", ",
+                    "skipIfPresent": "Precision"
                   }
                 ],
                 "type": "and"
@@ -48913,15 +48927,6 @@
                 "id": "c2e0-cb89-dffd-dc4c"
               }
             ],
-            "infoLinks": [
-              {
-                "name": "Feel No Pain",
-                "id": "93da-0eff-3c5e-c0ac",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "9bf4-280f-bbe2-6fbb"
-              }
-            ],
             "modifiers": [
               {
                 "conditions": [
@@ -48937,6 +48942,69 @@
                 "type": "set",
                 "value": 2,
                 "field": "b03b-c239-15a5-da55"
+              },
+              {
+                "type": "add",
+                "value": "699c-55ed-7fee-65ab",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "9cfd-1c32-585f-7d5c"
+              },
+              {
+                "type": "add",
+                "value": "faec-8b1b-5a21-0087",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group.802c-f8e1-e339-84b3"
+              },
+              {
+                "type": "add",
+                "value": "faec-8b1b-5a21-0087",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group.aa38-6b43-3c3e-3ed9"
+              },
+              {
+                "type": "add",
+                "value": "faec-8b1b-5a21-0087",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group.b8d9-6a4b-fd6b-e82d"
+              },
+              {
+                "type": "add",
+                "value": "faec-8b1b-5a21-0087",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group.f05b-e25f-cda0-4669"
+              },
+              {
+                "type": "add",
+                "value": "faec-8b1b-5a21-0087",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group.ae66-6f22-4ba5-8ef4"
+              },
+              {
+                "type": "add",
+                "value": "faec-8b1b-5a21-0087",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group.bed2-a2a1-caf3-d9d7"
+              },
+              {
+                "type": "add",
+                "value": "faec-8b1b-5a21-0087",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group.f51c-62f0-adbd-94c3"
+              },
+              {
+                "type": "add",
+                "value": "faec-8b1b-5a21-0087",
+                "field": "add-info",
+                "scope": "parent",
+                "affects": "group.96e9-29f3-c825-9efd"
               }
             ],
             "type": "upgrade",
@@ -49638,7 +49706,7 @@
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit"
+                    "affects": "self.entries.group.recursive.profiles.Unit"
                   },
                   {
                     "conditions": [
@@ -49656,7 +49724,7 @@
                     "value": 1,
                     "field": "e703-ecb6-5ce7-aec1",
                     "scope": "model-or-unit",
-                    "affects": "self.entries.recursive.profiles.Unit",
+                    "affects": "self.entries.group.recursive.profiles.Unit",
                     "join": ", "
                   }
                 ],
@@ -50753,9 +50821,9 @@
               {
                 "characteristics": [
                   {
-                    "$text": "Melee weapons (excluding Devastating Wounds weapons) equipped by models in this unit gain the [^^ANTI-MONSTER^^ 3+] and [^^ANTI-VEHICLE^^ 3+] abilities.",
                     "name": "Description",
-                    "typeId": "9b8f-694b-e5e-b573"
+                    "typeId": "9b8f-694b-e5e-b573",
+                    "$text": "Melee weapons (excluding Devastating Wounds weapons) equipped by models in this unit gain the [^^ANTI-MONSTER^^ 4+] and [^^ANTI-VEHICLE^^ 4+] abilities."
                   }
                 ],
                 "name": "Bellowed Challenge",
@@ -50769,7 +50837,27 @@
             "import": true,
             "name": "Bellowed Challenge",
             "hidden": false,
-            "id": "4b8c-aa12-867a-3a1d"
+            "id": "4b8c-aa12-867a-3a1d",
+            "modifiers": [
+              {
+                "type": "append",
+                "value": "Anti-MONSTER 4+",
+                "field": "893f-9000-ccf7-648e",
+                "scope": "parent",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Devastating Wounds"
+              },
+              {
+                "type": "append",
+                "value": "Anti-VEHICLE 4+",
+                "field": "893f-9000-ccf7-648e",
+                "scope": "parent",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "join": ", ",
+                "skipIfPresent": "Devastating Wounds"
+              }
+            ]
           },
           {
             "profiles": [
@@ -53590,7 +53678,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "df9a-59b2-f464-59ad",
     "name": "Chaos - World Eaters",
-    "revision": 7,
+    "revision": 8,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
