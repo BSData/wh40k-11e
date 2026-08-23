@@ -57948,21 +57948,26 @@
         "name": "Brute shield",
         "hidden": false,
         "id": "5a1c-ba0c-7970-348d",
-        "modifiers": [
+        "modifierGroups": [
           {
-            "type": "append",
-            "value": "Brute shield",
-            "field": "annotation",
-            "scope": "model",
-            "affects": "profiles.Unit",
-            "join": ", "
-          },
-          {
-            "type": "set",
-            "value": "4+",
-            "field": "55a7-5b54-c60d-11dc",
-            "scope": "model",
-            "affects": "profiles.Unit"
+            "type": "and",
+            "modifiers": [
+              {
+                "type": "set",
+                "value": "4+",
+                "field": "55a7-5b54-c60d-11dc",
+                "scope": "model",
+                "affects": "profiles.Unit"
+              },
+              {
+                "type": "append",
+                "value": "Brute shield",
+                "field": "annotation",
+                "scope": "model",
+                "affects": "profiles.Unit",
+                "join": ", "
+              }
+            ]
           }
         ]
       },
@@ -149436,7 +149441,29 @@
             "import": true,
             "name": "Brute Shield",
             "hidden": false,
-            "id": "9476-0af0-b4d3-b0e8"
+            "id": "9476-0af0-b4d3-b0e8",
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [
+                  {
+                    "type": "set",
+                    "value": "4+",
+                    "field": "55a7-5b54-c60d-11dc",
+                    "scope": "model",
+                    "affects": "profiles.Unit"
+                  },
+                  {
+                    "type": "append",
+                    "value": "Brute shield",
+                    "field": "annotation",
+                    "scope": "model",
+                    "affects": "profiles.Unit",
+                    "join": ", "
+                  }
+                ]
+              }
+            ]
           },
           {
             "profiles": [
