@@ -13818,6 +13818,40 @@
                     "shared": true,
                     "childName": "Terminator Squad"
                   }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "b103-51cc-cef2-892b",
+                        "shared": true,
+                        "childName": "Grimnar's Mark",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "4554-88b1-466c-d9f5",
+                            "shared": true,
+                            "childName": "Wolf Guard Terminators"
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 ]
               }
             ],
@@ -15346,7 +15380,29 @@
         "import": true,
         "name": "Hand flamer",
         "hidden": false,
-        "id": "9dc6-6ad8-818e-db2e"
+        "id": "9dc6-6ad8-818e-db2e",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "D6+1",
+            "field": "3bb-c35f-f54-fb08",
+            "affects": "group.profiles.Ranged Weapons",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "93f5-604f-2378-4afe",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Immolator",
+                "traverseAssociationGroup": true
+              }
+            ]
+          }
+        ]
       },
       {
         "profiles": [
@@ -18551,7 +18607,29 @@
         "name": "Pyreblaster",
         "hidden": false,
         "id": "bcf-9f6b-f51e-6332",
-        "collective": true
+        "collective": true,
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "D6+1",
+            "field": "3bb-c35f-f54-fb08",
+            "affects": "group.profiles.Ranged Weapons",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "93f5-604f-2378-4afe",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "childName": "Immolator",
+                "traverseAssociationGroup": true
+              }
+            ]
+          }
+        ]
       },
       {
         "categoryLinks": [
@@ -20294,6 +20372,39 @@
             "shared": true,
             "id": "b6a2-5435-0af0-cbd5",
             "includeChildSelections": true
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "f759-1bc4-cb3a-f0d2",
+            "scope": "root-entry",
+            "shared": true,
+            "id": "829c-f10b-e9cf-0cda",
+            "childId": "any",
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "traverseAssociationGroup": true,
+            "message": "An Attached Unit can only take 1 Enhancement."
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "e8d1-b111-5ad8-ee7a",
+            "childId": "1556-9b56-fba6-4370",
+            "childName": "Leader"
+          },
+          {
+            "type": "max",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "id": "b349-608a-79a6-a8e8",
+            "childId": "7dcd-7f61-69a7-0294",
+            "childName": "Support"
           }
         ],
         "infoLinks": [
@@ -148194,6 +148305,26 @@
                     "shared": true
                   }
                 ]
+              },
+              {
+                "type": "append",
+                "value": "Ignores Cover",
+                "field": "7f1b-8591-2fcf-d01c",
+                "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                "scope": "force",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "ancestor",
+                    "childId": "e9c7-1590-1bda-bf7f",
+                    "shared": true,
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "childName": "Ravenwing"
+                  }
+                ]
               }
             ]
           },
@@ -161226,6 +161357,14 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden"
+              },
+              {
+                "type": "add",
+                "value": "08fb-4cb5-36fb-d638",
+                "field": "add-info",
+                "affects": "self.entries.forces.group.recursive",
+                "join": ", ",
+                "scope": "root-entry"
               }
             ],
             "selectionEntries": [
@@ -162195,7 +162334,17 @@
                 "import": true,
                 "name": "Orb of the Emperor's Aegis",
                 "hidden": false,
-                "id": "308e-46d6-7760-28fd"
+                "id": "308e-46d6-7760-28fd",
+                "modifiers": [
+                  {
+                    "type": "add",
+                    "value": "7cb5-dd6b-dd87-ad3b",
+                    "field": "add-info",
+                    "affects": "self.entries.forces.group.recursive",
+                    "join": ", ",
+                    "scope": "root-entry"
+                  }
+                ]
               }
             ],
             "constraints": [
@@ -164016,7 +164165,8 @@
                     "value": "c05d-f4c3-f091-4938",
                     "field": "add-info",
                     "affects": "self.entries.forces.group.recursive",
-                    "join": ", "
+                    "join": ", ",
+                    "scope": "root-entry"
                   }
                 ]
               },
@@ -202375,8 +202525,8 @@
                 "type": "increment",
                 "value": 6,
                 "field": "9896-9419-16a1-92fc",
-                "scope": "model-or-unit",
-                "affects": "self.entries.forces.recursive.cb29-f4bb-ff15-6b11.profiles.Ranged Weapons",
+                "scope": "model-or-unit-self",
+                "affects": "self.entries.forces.group.recursive.cb29-f4bb-ff15-6b11.profiles.Ranged Weapons",
                 "join": ", "
               }
             ],

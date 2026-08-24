@@ -259,9 +259,9 @@
           {
             "characteristics": [
               {
-                "$text": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP P (this is not cumulative with any other rules that increase the CP cost of that Stratagem)",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "Once per turn, when your opponent targets a unit from their army within 12” of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP."
               }
             ],
             "name": "Guile of the Wolf (Aura)",
@@ -1464,9 +1464,12 @@
                     "value": 1,
                     "field": "selections",
                     "scope": "self",
-                    "childId": "3693-ed60-582f-a663",
+                    "childId": "9b96-72d9-2828-f182",
                     "shared": true,
-                    "childName": "Headtakers"
+                    "childName": "Wolf Guard Headtakers",
+                    "includeChildSelections": false,
+                    "includeChildForces": false,
+                    "traverseAssociationGroup": false
                   }
                 ]
               }
@@ -2985,9 +2988,9 @@
                     "value": 1,
                     "field": "selections",
                     "scope": "self",
-                    "childId": "3693-ed60-582f-a663",
+                    "childId": "9b96-72d9-2828-f182",
                     "shared": true,
-                    "childName": "Headtakers"
+                    "childName": "Wolf Guard Headtakers"
                   }
                 ]
               }
@@ -3391,9 +3394,9 @@
                     "value": 1,
                     "field": "selections",
                     "scope": "self",
-                    "childId": "3693-ed60-582f-a663",
+                    "childId": "9b96-72d9-2828-f182",
                     "shared": true,
-                    "childName": "Headtakers"
+                    "childName": "Wolf Guard Headtakers"
                   }
                 ]
               }
@@ -14714,7 +14717,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 80
+            "value": 95
           },
           {
             "name": "Crusade Points",
@@ -14734,6 +14737,31 @@
           {
             "name": "Crusade: Weapon Modifications",
             "typeId": "716d-91b7-d55a-1022",
+            "value": 0
+          },
+          {
+            "name": "Blackstone Fragments",
+            "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
+            "value": 0
+          },
+          {
+            "name": "Honour Points",
+            "typeId": "8135-9a2f-6627-09e2",
+            "value": 0
+          },
+          {
+            "name": "Relic Fragments",
+            "typeId": "0ece-6541-4662-ece2",
             "value": 0
           }
         ],
@@ -14802,7 +14830,7 @@
               }
             ],
             "type": "set",
-            "value": 160,
+            "value": 190,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -28889,9 +28917,52 @@
                     "value": 1,
                     "field": "selections",
                     "scope": "self",
-                    "childId": "3693-ed60-582f-a663",
+                    "childId": "9b96-72d9-2828-f182",
                     "shared": true,
-                    "childName": "Headtakers"
+                    "childName": "Wolf Guard Headtakers"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "7dab-7280-6618-a658",
+                        "shared": true,
+                        "childName": "Wolf-Touched",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "19ab-c0ae-7b00-dc0c",
+                            "shared": true,
+                            "childName": "Wulfen"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5e41-161b-7d74-8c8e",
+                            "shared": true,
+                            "childName": "Wulfen with Storm Shields"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -32458,7 +32529,16 @@
         "import": true,
         "name": "Blizzard shield",
         "hidden": false,
-        "id": "d837-153d-f6ae-2a87"
+        "id": "d837-153d-f6ae-2a87",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": "4+",
+            "field": "55a7-5b54-c60d-11dc",
+            "scope": "root-entry",
+            "affects": "self.entries.group.profiles.Unit"
+          }
+        ]
       },
       {
         "constraints": [
@@ -33857,39 +33937,39 @@
           {
             "characteristics": [
               {
-                "$text": "7\"",
                 "name": "M",
-                "typeId": "e703-ecb6-5ce7-aec1"
+                "typeId": "e703-ecb6-5ce7-aec1",
+                "$text": "7\""
               },
               {
-                "$text": "4",
                 "name": "T",
-                "typeId": "d29d-cf75-fc2d-34a4"
+                "typeId": "d29d-cf75-fc2d-34a4",
+                "$text": "4"
               },
               {
-                "$text": "3+",
                 "name": "Sv",
-                "typeId": "450-a17e-9d5e-29da"
+                "typeId": "450-a17e-9d5e-29da",
+                "$text": "3+"
               },
               {
-                "$text": "4",
                 "name": "W",
-                "typeId": "750a-a2ec-90d3-21fe"
+                "typeId": "750a-a2ec-90d3-21fe",
+                "$text": "4"
               },
               {
-                "$text": "6+",
                 "name": "LD",
-                "typeId": "58d2-b879-49c7-43bc"
+                "typeId": "58d2-b879-49c7-43bc",
+                "$text": "6+"
               },
               {
-                "$text": "1",
                 "name": "OC",
-                "typeId": "bef7-942a-1a23-59f8"
+                "typeId": "bef7-942a-1a23-59f8",
+                "$text": "1"
               },
               {
                 "name": "InSv",
                 "typeId": "55a7-5b54-c60d-11dc",
-                "$text": ""
+                "$text": "4+"
               }
             ],
             "name": "Wolf Priest",
@@ -33927,13 +34007,6 @@
             "hidden": false,
             "type": "rule",
             "targetId": "3b76-4053-ece9-6e7d"
-          },
-          {
-            "name": "Invulnerable Save",
-            "id": "93f7-7ed7-ea91-1312",
-            "hidden": false,
-            "type": "profile",
-            "targetId": "db19-dee7-9530-ef0e"
           },
           {
             "name": "Litany of Hate",
@@ -34436,9 +34509,52 @@
                     "value": 1,
                     "field": "selections",
                     "scope": "self",
-                    "childId": "3693-ed60-582f-a663",
+                    "childId": "9b96-72d9-2828-f182",
                     "shared": true,
-                    "childName": "Headtakers"
+                    "childName": "Wolf Guard Headtakers"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "7dab-7280-6618-a658",
+                        "shared": true,
+                        "childName": "Wolf-Touched",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "19ab-c0ae-7b00-dc0c",
+                            "shared": true,
+                            "childName": "Wulfen"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5e41-161b-7d74-8c8e",
+                            "shared": true,
+                            "childName": "Wulfen with Storm Shields"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -35751,9 +35867,52 @@
                     "value": 1,
                     "field": "selections",
                     "scope": "self",
-                    "childId": "3693-ed60-582f-a663",
+                    "childId": "9b96-72d9-2828-f182",
                     "shared": true,
-                    "childName": "Headtakers"
+                    "childName": "Wolf Guard Headtakers"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "7dab-7280-6618-a658",
+                        "shared": true,
+                        "childName": "Wolf-Touched",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      }
+                    ],
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "19ab-c0ae-7b00-dc0c",
+                            "shared": true,
+                            "childName": "Wulfen"
+                          },
+                          {
+                            "type": "instanceOf",
+                            "value": 1,
+                            "field": "selections",
+                            "scope": "self",
+                            "childId": "5e41-161b-7d74-8c8e",
+                            "shared": true,
+                            "childName": "Wulfen with Storm Shields"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -35947,6 +36106,12 @@
             "id": "f751-495e-5cb7-9596",
             "primary": false,
             "name": "Faction: Space Wolves"
+          },
+          {
+            "targetId": "9b96-72d9-2828-f182",
+            "id": "2413-45f6-56a4-5509",
+            "primary": false,
+            "name": "Wolf Guard Headtakers"
           }
         ],
         "constraints": [
@@ -41422,6 +41587,11 @@
         "name": "Wulfen with Storm Shields",
         "id": "5e41-161b-7d74-8c8e",
         "hidden": false
+      },
+      {
+        "name": "Wolf Guard Headtakers",
+        "id": "9b96-72d9-2828-f182",
+        "hidden": true
       }
     ],
     "entryLinks": [

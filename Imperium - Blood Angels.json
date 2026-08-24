@@ -13416,12 +13416,12 @@
           {
             "characteristics": [
               {
-                "$text": "This model can be attached to the following units:\n\n■ Assault Squad with Jump Packs\n■ Vanguard Veteran Squad with Jump packs\n■ Assault Intercessors with Jump Packs\n\nYou can attach this model to one of the above units, even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "This model can be attached to the following units:\n\n■ Assault Squad with Jump Packs\n■ Vanguard Veteran Squad with Jump packs\n■ Assault Intercessors with Jump Packs\n"
               }
             ],
-            "name": "Leader",
+            "name": "Support",
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
             "hidden": false,
@@ -13459,11 +13459,11 @@
         ],
         "infoLinks": [
           {
-            "name": "Leader",
+            "name": "Support",
             "hidden": false,
             "type": "rule",
             "id": "86a9-b727-5c1d-276b",
-            "targetId": "b4dd-3e1f-41cb-218f"
+            "targetId": "3342-2180-9c5d-925f"
           },
           {
             "name": "Oath of Moment",
@@ -13916,7 +13916,56 @@
         "import": true,
         "name": "Sanguinary Priest with Jump Pack [Legends]",
         "hidden": false,
-        "id": "fa13-ba8a-8711-87b6"
+        "id": "fa13-ba8a-8711-87b6",
+        "associations": [
+          {
+            "min": 1,
+            "max": 1,
+            "scope": "force",
+            "childId": "unit",
+            "name": "Supporting",
+            "id": "1981-21b7-351c-871f",
+            "includeChildSelections": true,
+            "childName": "unit",
+            "label": "Supported by",
+            "defaultSelectionEntryId": "none",
+            "action": "group",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "6c92-4e9d-b5e5-1287",
+                    "shared": true,
+                    "childName": "Assault Intercessors with Jump Packs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "17c0-599-955a-bdab",
+                    "shared": true,
+                    "childName": "Vanguard Veteran Squad with Jump Packs"
+                  },
+                  {
+                    "type": "instanceOf",
+                    "value": 1,
+                    "field": "selections",
+                    "scope": "self",
+                    "childId": "ebce-cb56-76a4-afe1",
+                    "shared": true,
+                    "childName": "Assault Squad"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "costs": [
