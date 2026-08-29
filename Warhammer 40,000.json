@@ -33101,17 +33101,40 @@
                 "type": "set",
                 "value": true,
                 "field": "hidden",
-                "conditions": [
+                "conditionGroups": [
                   {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "1cc1-f11a-4e8f-1bcc",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "childName": "Take and Hold"
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "lessThan",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "roster",
+                        "childId": "1cc1-f11a-4e8f-1bcc",
+                        "shared": true,
+                        "includeChildSelections": true,
+                        "includeChildForces": true,
+                        "childName": "Take and Hold"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "primary-catalogue",
+                        "childId": "bdc0-c0d-72d7-87e2",
+                        "shared": true,
+                        "childName": "Imperium - Adeptus Titanicus"
+                      },
+                      {
+                        "type": "notInstanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "primary-catalogue",
+                        "childId": "880c-c7e-4a43-a0c1",
+                        "shared": true,
+                        "childName": "Chaos - Titanicus Traitoris"
+                      }
+                    ]
                   }
                 ]
               }
