@@ -232,6 +232,11 @@
         "name": "Sororitas Character",
         "id": "06f3-c7f0-3763-211c",
         "hidden": true
+      },
+      {
+        "name": "Celestian",
+        "id": "6de4-e8d4-1ad9-ce52",
+        "hidden": false
       }
     ],
     "sharedSelectionEntries": [
@@ -1503,7 +1508,7 @@
                     "name": "Holy Quest",
                     "id": "7b9a-baf9-9366-459c",
                     "hidden": false,
-                    "description": "Friendly **CELESTIAN SACRESANTS** units’ attacks have +1 **BS** and **WS**. \n\nThis **detachment** has the **REVEREND** tag and cannot be taken with another **REVEREND detachment**."
+                    "description": "Friendly **CELESTIAN** units’ attacks have +1 **BS** and **WS**. \n\nThis **detachment** has the **REVEREND** tag and cannot be taken with another **REVEREND detachment**."
                   }
                 ],
                 "categoryLinks": [
@@ -7494,6 +7499,13 @@
             "id": "e3b1-ee8b-3f07-b146",
             "primary": false,
             "name": "Faction: Adepta Sororitas"
+          },
+          {
+            "name": "Celestian",
+            "hidden": false,
+            "id": "61d3-1dac-f9e5-69a2",
+            "targetId": "6de4-e8d4-1ad9-ce52",
+            "primary": false
           }
         ],
         "selectionEntries": [
@@ -24954,9 +24966,9 @@
           {
             "characteristics": [
               {
-                "$text": "While this unit contains a Celestine model, in your Command phase, if this unit is below its Starting Strength, either one destroyed Geminae Superia model or up to D3 other Bodyguard models are returned to this unit.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "While this unit contains a Celestine model, in your Command phase, you can return 1 destroyed Geminae Superia model to this unit."
               }
             ],
             "name": "Healing Tears",
@@ -36357,6 +36369,13 @@
             "id": "63bc-f97f-ef04-31a4",
             "targetId": "9fe5-ee8a-b4c8-646a",
             "primary": false
+          },
+          {
+            "name": "Celestian",
+            "hidden": false,
+            "id": "aacd-9782-0995-dcfc",
+            "targetId": "6de4-e8d4-1ad9-ce52",
+            "primary": false
           }
         ],
         "entryLinks": [
@@ -36735,6 +36754,47 @@
             ],
             "comment": "Crusade modifiers",
             "type": "and"
+          },
+          {
+            "type": "and",
+            "conditions": [
+              {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "force",
+                "childId": "0017-3a94-11f8-7fca",
+                "shared": true,
+                "includeChildSelections": true,
+                "childName": "Sacred Champions"
+              }
+            ],
+            "modifiers": [
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "94d-8a98-cf90-183e",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
+              },
+              {
+                "type": "decrement",
+                "value": 1,
+                "field": "95d1-95f-45b4-11d6",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons"
+              },
+              {
+                "type": "floor",
+                "value": "2",
+                "field": "94d-8a98-cf90-183e",
+                "affects": "self.entries.group.recursive.profiles.Ranged Weapons"
+              },
+              {
+                "type": "floor",
+                "value": "2",
+                "field": "95d1-95f-45b4-11d6",
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons"
+              }
+            ]
           }
         ],
         "selectionEntries": [
@@ -41822,7 +41882,7 @@
     ],
     "sharedRules": [
       {
-        "description": "If your Army Faction is ^^**Adepta Sororitas**^^, each unit from your army with this ability can perform one Act of Faith per phase. This is done using Miracle dice.\n\nGAINING MIRACLE DICE\nIf your Army Faction is ^^**Adepta Sororitas**^^, you gain 1 Miracle dice:\n- At the start of each battle round.\n- Each time an ^^**Adepta Sororitas**^^ unit from your army is destroyed.\n\nEach time you gain a Miracle dice, roll one D6. The number you roll is the value of that Miracle dice. This value cannot be changed or re-rolled, unless a rule specifically states otherwise. Keep your Miracle dice to one side – this is your Miracle dice pool.\n\nPERFORMING AN ACT OF FAITH\nBefore making a dice roll for a model or unit from your army with the Acts of Faith ability, if you have one or more dice in your Miracle dice pool, that unit can perform an Act of Faith. If it does, select one of the dice from your Miracle dice pool to substitute that dice roll (if a roll involves more than one dice, e.g. a Charge roll or Battle-shock test, only a single dice can\nbe substituted). The dice that is being substituted is not rolled; instead the value of the selected Miracle dice is used as if it had been rolled (this counts as an unmodified dice roll of that value for all rules purposes). Each Miracle dice can only be selected for substitution once. Once all Miracle dice substitutions have been made, remove the chosen Miracle dice from your Miracle dice pool, and roll all remaining, unsubstituted dice that are a part of the dice roll. You can use Miracle dice when a unit performs an Act of Faith for any of the following types of dice roll:\n■ Advance roll\n■ Battle-shock test\n■ Charge roll\n■ Damage roll\n■ Hit roll\n■ Saving throw\n■ Wound roll",
+        "description": "If your Army Faction is ^^**Adepta Sororitas**^^, each unit from your army with this ability can perform one Act of Faith per phase. This is done using Miracle dice.\n\nGAINING MIRACLE DICE\nIf your Army Faction is ^^**Adepta Sororitas**^^, you gain 1 Miracle dice:\n- At the start of each turn.\n- Each time an ^^**Adepta Sororitas**^^ unit from your army is destroyed.\n\nEach time you gain a Miracle dice, roll one D6. The number you roll is the value of that Miracle dice. This value cannot be changed or re-rolled, unless a rule specifically states otherwise. Keep your Miracle dice to one side – this is your Miracle dice pool.\n\nPERFORMING AN ACT OF FAITH\nBefore making a dice roll for a model or unit from your army with the Acts of Faith ability, if you have one or more dice in your Miracle dice pool, that unit can perform an Act of Faith. If it does, select one of the dice from your Miracle dice pool to substitute that dice roll (if a roll involves more than one dice, e.g. a Charge roll or Battle-shock test, only a single dice can\nbe substituted). The dice that is being substituted is not rolled; instead the value of the selected Miracle dice is used as if it had been rolled (this counts as an unmodified dice roll of that value for all rules purposes). Each Miracle dice can only be selected for substitution once. Once all Miracle dice substitutions have been made, remove the chosen Miracle dice from your Miracle dice pool, and roll all remaining, unsubstituted dice that are a part of the dice roll. You can use Miracle dice when a unit performs an Act of Faith for any of the following types of dice roll:\n■ Advance roll\n■ Battle-shock test\n■ Charge roll\n■ Damage roll\n■ Hit roll\n■ Saving throw\n■ Wound roll",
         "name": "Acts of Faith",
         "hidden": false,
         "id": "7ef7-dca6-e2ea-ecc8"
@@ -41852,7 +41912,7 @@
         "hidden": false
       },
       {
-        "description": "In your Command phase, you can select up to 3 ^^**Adepta Sororitas^^** units from your army (including units that are embarked within ^^**Transports^^**), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\n■ Add 1\" to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by ^^**Battle Sisters Squad^^**, ^^**Celestian Sacresants^^** and ^^**Paragon Warsuits^^** models in that unit by 1.",
+        "description": "In your Command phase, you can select up to 3 ^^**Adepta Sororitas^^** units from your army (including units that are embarked within ^^**Transports^^**), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\n■ Add 1\" to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by ^^**Battle Sisters Squad^^**, ^^**Celestian Insidiants^^**, ^^**Celestian Sacresants^^** and ^^**Paragon Warsuits^^** models in that unit by 1.",
         "name": "Righteous Purpose",
         "id": "cb5e-57b9-c416-c2a5",
         "hidden": false
@@ -56073,7 +56133,7 @@
     "name": "Imperium - Adepta Sororitas",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 16,
+    "revision": 17,
     "battleScribeVersion": 2.03,
     "authorName": "",
     "type": "catalogue",
