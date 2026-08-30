@@ -11021,17 +11021,17 @@
                 ],
                 "categoryLinks": [
                   {
-                    "name": "Disruption",
-                    "hidden": false,
-                    "id": "1861-6588-228b-7a8c",
-                    "targetId": "ecf8-cf72-7d5b-1b5b",
-                    "primary": false
-                  },
-                  {
                     "name": "3DP Detachment",
                     "hidden": false,
                     "id": "17d6-fd07-5d42-8471",
                     "targetId": "7d80-2de5-816e-9d2b",
+                    "primary": false
+                  },
+                  {
+                    "name": "Purge the Foe",
+                    "hidden": false,
+                    "id": "4de1-f13c-ffa8-6244",
+                    "targetId": "6fe0-3dbe-f7e0-10bb",
                     "primary": false
                   }
                 ]
@@ -13583,15 +13583,6 @@
                             "value": 1,
                             "field": "selections",
                             "scope": "self",
-                            "childId": "b8dd-a61e-59db-8ed4",
-                            "shared": true,
-                            "childName": "Masters of the Maelstrom"
-                          },
-                          {
-                            "type": "instanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "self",
                             "childId": "b4f8-68c3-eac1-6a68",
                             "shared": true,
                             "childName": "Legionaries"
@@ -13769,15 +13760,6 @@
                             "childId": "556-c3f3-9aa3-32d8",
                             "shared": true,
                             "childName": "Chaos Terminator Squad"
-                          },
-                          {
-                            "type": "instanceOf",
-                            "value": 1,
-                            "field": "selections",
-                            "scope": "self",
-                            "childId": "b8dd-a61e-59db-8ed4",
-                            "shared": true,
-                            "childName": "Masters of the Maelstrom"
                           },
                           {
                             "type": "instanceOf",
@@ -61777,7 +61759,7 @@
               {
                 "name": "M",
                 "typeId": "e703-ecb6-5ce7-aec1",
-                "$text": "12+"
+                "$text": "12\""
               },
               {
                 "name": "T",
@@ -61802,7 +61784,7 @@
               {
                 "name": "OC",
                 "typeId": "bef7-942a-1a23-59f8",
-                "$text": "-"
+                "$text": "0"
               },
               {
                 "name": "InSv",
@@ -106247,20 +106229,6 @@
             "typeName": "Abilities",
             "hidden": false,
             "id": "16e3-f135-7928-7da5"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly.\n- ^^**Chosen, Legionaries, Red Corsairs Raiders**^^\n\n\nThis unit cannot join an Attached unit, and only ^^**Huron Blackheart**^^ can join a unit this unit has joined.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Masters of the Maelstrom",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "e9ae-9319-b5a5-5e5b"
           }
         ],
         "selectionEntryGroups": [
@@ -110289,19 +110257,33 @@
                                     "childName": "Red Corsairs Raiders"
                                   }
                                 ]
-                              }
-                            ],
-                            "conditions": [
+                              },
                               {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "51cc-e9bc-b09c-3969",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "childName": "Specialisms",
-                                "queryFromSelf": true
+                                "type": "or",
+                                "conditions": [
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "51cc-e9bc-b09c-3969",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Specialisms",
+                                    "queryFromSelf": true
+                                  },
+                                  {
+                                    "type": "atLeast",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "8270-eebb-b9c8-a2c3",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Sigil of Corruption",
+                                    "queryFromSelf": true
+                                  }
+                                ]
                               }
                             ]
                           }
@@ -110604,19 +110586,33 @@
                                     "childName": "Red Corsairs Raiders"
                                   }
                                 ]
-                              }
-                            ],
-                            "conditions": [
+                              },
                               {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "51cc-e9bc-b09c-3969",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "childName": "Specialisms",
-                                "queryFromSelf": true
+                                "type": "or",
+                                "conditions": [
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "51cc-e9bc-b09c-3969",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Specialisms",
+                                    "queryFromSelf": true
+                                  },
+                                  {
+                                    "type": "atLeast",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "8270-eebb-b9c8-a2c3",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Sigil of Corruption",
+                                    "queryFromSelf": true
+                                  }
+                                ]
                               }
                             ]
                           }
@@ -111439,19 +111435,33 @@
                                     "childName": "Red Corsairs Raiders"
                                   }
                                 ]
-                              }
-                            ],
-                            "conditions": [
+                              },
                               {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "51cc-e9bc-b09c-3969",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "childName": "Specialisms",
-                                "queryFromSelf": true
+                                "type": "or",
+                                "conditions": [
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "51cc-e9bc-b09c-3969",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Specialisms",
+                                    "queryFromSelf": true
+                                  },
+                                  {
+                                    "type": "atLeast",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "8270-eebb-b9c8-a2c3",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Sigil of Corruption",
+                                    "queryFromSelf": true
+                                  }
+                                ]
                               }
                             ]
                           }
@@ -111754,19 +111764,33 @@
                                     "childName": "Red Corsairs Raiders"
                                   }
                                 ]
-                              }
-                            ],
-                            "conditions": [
+                              },
                               {
-                                "type": "lessThan",
-                                "value": 1,
-                                "field": "selections",
-                                "scope": "parent",
-                                "childId": "51cc-e9bc-b09c-3969",
-                                "shared": true,
-                                "includeChildSelections": true,
-                                "childName": "Specialisms",
-                                "queryFromSelf": true
+                                "type": "or",
+                                "conditions": [
+                                  {
+                                    "type": "lessThan",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "51cc-e9bc-b09c-3969",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Specialisms",
+                                    "queryFromSelf": true
+                                  },
+                                  {
+                                    "type": "atLeast",
+                                    "value": 1,
+                                    "field": "selections",
+                                    "scope": "parent",
+                                    "childId": "8270-eebb-b9c8-a2c3",
+                                    "shared": true,
+                                    "includeChildSelections": true,
+                                    "childName": "Sigil of Corruption",
+                                    "queryFromSelf": true
+                                  }
+                                ]
                               }
                             ]
                           }
@@ -113907,7 +113931,7 @@
           },
           {
             "type": "increment",
-            "value": 40,
+            "value": 50,
             "field": "51b2-306e-1021-d207",
             "conditionGroups": [
               {
@@ -135720,7 +135744,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "c8da-e875-58f7-f6d6",
     "name": "Chaos - Chaos Space Marines",
-    "revision": 11,
+    "revision": 12,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
