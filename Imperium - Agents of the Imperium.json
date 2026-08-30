@@ -696,7 +696,25 @@
         "import": true,
         "name": "Warlord",
         "hidden": false,
-        "id": "bb9a-14e7-b947-793b"
+        "id": "bb9a-14e7-b947-793b",
+        "modifiers": [
+          {
+            "type": "set",
+            "value": true,
+            "field": "hidden",
+            "conditions": [
+              {
+                "type": "notInstanceOf",
+                "value": 1,
+                "field": "selections",
+                "scope": "primary-catalogue",
+                "childId": "b00-cd86-4b4c-97ba",
+                "shared": true,
+                "childName": "Imperium - Agents of the Imperium"
+              }
+            ]
+          }
+        ]
       },
       {
         "costs": [
@@ -11967,7 +11985,7 @@
               {
                 "name": "Description",
                 "typeId": "9b8f-694b-e5e-b573",
-                "$text": "This model can be attached to the following units: BATTLELIINE IMPERIUM INFANTRY, EXACTION SQUAD, GREY KNIGHTS TERMINATOR SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+                "$text": "This model can be attached to the following units: BATTLELINE IMPERIUM INFANTRY, EXACTION SQUAD, GREY KNIGHTS TERMINATOR SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SUBDUCTOR SQUAD, VIGILANT SQUAD"
               }
             ],
             "name": "Leader",
@@ -22500,8 +22518,8 @@
           {
             "type": "append",
             "value": "Sustained Hits 1",
-            "field": "7f1b-8591-2fcf-d01c",
-            "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+            "field": "893f-9000-ccf7-648e",
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
             "join": ", ",
             "skipIfPresent": "Sustained Hits",
             "conditions": [
@@ -24579,7 +24597,34 @@
             "typeId": "c547-1836-d8a-ff4f",
             "typeName": "Unit",
             "hidden": false,
-            "id": "6a85-b91a-ec79-83d2"
+            "id": "6a85-b91a-ec79-83d2",
+            "modifiers": [
+              {
+                "type": "decrement",
+                "value": 2,
+                "field": "55a7-5b54-c60d-11dc",
+                "conditions": [
+                  {
+                    "type": "atLeast",
+                    "value": 1,
+                    "field": "associations",
+                    "scope": "self",
+                    "childId": "264a-fc24-3a98-31dc",
+                    "shared": true,
+                    "includeChildSelections": false,
+                    "childName": "Inquisitor Coteaz"
+                  }
+                ],
+                "affects": "self.entries.recursive.profiles.Unit"
+              },
+              {
+                "type": "replace",
+                "value": "",
+                "field": "55a7-5b54-c60d-11dc",
+                "affects": "self.entries.recursive.profiles.Unit",
+                "arg": "*"
+              }
+            ]
           },
           {
             "characteristics": [
@@ -81507,7 +81552,7 @@
     "name": "Imperium - Agents of the Imperium",
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 11,
+    "revision": 12,
     "battleScribeVersion": 2.03,
     "type": "catalogue"
   }
