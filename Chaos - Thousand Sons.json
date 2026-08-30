@@ -13788,7 +13788,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 90
+            "value": 95
           },
           {
             "name": "Crusade Points",
@@ -18623,7 +18623,7 @@
               {
                 "name": "OC",
                 "typeId": "bef7-942a-1a23-59f8",
-                "$text": "-"
+                "$text": "0"
               },
               {
                 "name": "InSv",
@@ -19463,7 +19463,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 95
+            "value": 100
           },
           {
             "name": "Crusade Points",
@@ -19488,6 +19488,16 @@
           {
             "name": "Blackstone Fragments",
             "typeId": "ac6b-ced3-9b5e-9a6e",
+            "value": 0
+          },
+          {
+            "name": "Detachment Points",
+            "typeId": "82ae-1066-5107-6ae0",
+            "value": 0
+          },
+          {
+            "name": "Enhancements",
+            "typeId": "f759-1bc4-cb3a-f0d2",
             "value": 0
           }
         ],
@@ -26700,7 +26710,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 85
+            "value": 95
           },
           {
             "name": "Crusade Points",
@@ -27441,7 +27451,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 95
+            "value": 100
           },
           {
             "name": "Crusade Points",
@@ -28283,6 +28293,33 @@
                     "childId": "b1cf-c5-5121-92a4",
                     "shared": true,
                     "childName": "Scarab Occult Terminators"
+                  }
+                ],
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "type": "atLeast",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "c6d1-e73b-9d26-5d8b",
+                        "childId": "c357-dd19-13a4-38cd",
+                        "shared": true,
+                        "childName": "Bray Lord",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5438-1567-83a-d29c",
+                        "shared": true,
+                        "childName": "Tzaangors"
+                      }
+                    ]
                   }
                 ]
               }
@@ -45488,7 +45525,7 @@
           },
           {
             "type": "increment",
-            "value": 40,
+            "value": 50,
             "field": "51b2-306e-1021-d207",
             "conditionGroups": [
               {
@@ -46040,7 +46077,7 @@
               {
                 "name": "pts",
                 "typeId": "51b2-306e-1021-d207",
-                "value": 20
+                "value": 30
               },
               {
                 "name": "Crusade Points",
@@ -60289,7 +60326,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "1069-10ff-3ba9-873b",
     "name": "Chaos - Thousand Sons",
-    "revision": 10,
+    "revision": 11,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
