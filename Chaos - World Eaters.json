@@ -8626,9 +8626,9 @@
           {
             "characteristics": [
               {
-                "$text": "At the end of your Charge phase, if this model is leading a unit and that unit is not within Engagement Range of one or more enemy units, you must take a Leadership test for this model. If that test is failed, one Bodyguard model of your choice in that unit is destroyed.",
                 "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
+                "typeId": "9b8f-694b-e5e-b573",
+                "$text": "At the end of your Charge phase, if this unit is on the battlefield, is **unengaged**, and contains a **bodyguard** model, this unit makes a **leadership roll**: \n- If that **leadership roll** is failed, one **bodyguard** model in this unit is **destroyed**."
               }
             ],
             "id": "f98c-6c6c-2f6b-4626",
@@ -12738,7 +12738,7 @@
             ],
             "type": "set",
             "field": "51b2-306e-1021-d207",
-            "value": 330
+            "value": 320
           },
           {
             "type": "set",
@@ -13493,7 +13493,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 170
+            "value": 160
           },
           {
             "name": "Crusade Points",
@@ -28055,7 +28055,7 @@
               {
                 "name": "OC",
                 "typeId": "bef7-942a-1a23-59f8",
-                "$text": "-"
+                "$text": "0"
               },
               {
                 "name": "InSv",
@@ -28086,13 +28086,6 @@
             "type": "rule"
           },
           {
-            "id": "4b77-fd2a-7c88-1d8e",
-            "name": "Hover",
-            "hidden": false,
-            "targetId": "eec5-5f54-9c03-c305",
-            "type": "rule"
-          },
-          {
             "name": "Damaged: 1-4 wounds remaining",
             "hidden": false,
             "type": "profile",
@@ -28112,6 +28105,13 @@
             "hidden": false,
             "type": "profile",
             "targetId": "f2a2-c16a-bee4-e03d"
+          },
+          {
+            "name": "Hover",
+            "id": "9a36-3e0f-1d5c-6172",
+            "hidden": false,
+            "type": "rule",
+            "targetId": "eec5-5f54-9c03-c305"
           }
         ],
         "categoryLinks": [
@@ -53541,7 +53541,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "df9a-59b2-f464-59ad",
     "name": "Chaos - World Eaters",
-    "revision": 8,
+    "revision": 9,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
