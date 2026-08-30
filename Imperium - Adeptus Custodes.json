@@ -1109,7 +1109,7 @@
             ],
             "type": "set",
             "field": "51b2-306e-1021-d207",
-            "value": 275
+            "value": 280
           },
           {
             "conditions": [
@@ -1126,7 +1126,7 @@
               }
             ],
             "type": "set",
-            "value": 330,
+            "value": 340,
             "field": "51b2-306e-1021-d207"
           },
           {
@@ -1143,6 +1143,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 30,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "5386-42fc-f4d0-7d64",
+                        "shared": true,
+                        "childName": "Allarus Custodians"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -15439,6 +15479,46 @@
                 "childName": "1. Incursion (1000 Point limit)"
               }
             ]
+          },
+          {
+            "type": "increment",
+            "value": 25,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "a3cb-da28-b5f9-d295",
+                        "shared": true,
+                        "childName": "Vertus Praetors"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -29060,7 +29140,7 @@
                   {
                     "name": "Detachment Points",
                     "typeId": "82ae-1066-5107-6ae0",
-                    "value": 2
+                    "value": 3
                   },
                   {
                     "name": "Enhancements",
@@ -29081,17 +29161,24 @@
                 ],
                 "categoryLinks": [
                   {
-                    "name": "Disruption",
-                    "hidden": false,
-                    "id": "da9d-41a0-edc5-c407",
-                    "targetId": "ecf8-cf72-7d5b-1b5b",
-                    "primary": false
-                  },
-                  {
                     "name": "Lions",
                     "hidden": false,
                     "id": "8963-e520-32a2-979a",
                     "targetId": "5441-0847-20fe-4235",
+                    "primary": false
+                  },
+                  {
+                    "name": "3DP Detachment",
+                    "hidden": false,
+                    "id": "372f-2ed6-122d-f9bf",
+                    "targetId": "7d80-2de5-816e-9d2b",
+                    "primary": false
+                  },
+                  {
+                    "name": "Take and Hold",
+                    "hidden": false,
+                    "id": "db87-35cd-d301-d9ae",
+                    "targetId": "1cc1-f11a-4e8f-1bcc",
                     "primary": false
                   }
                 ]
@@ -29344,10 +29431,10 @@
                     "primary": false
                   },
                   {
-                    "name": "Priority Assets",
+                    "name": "Disruption",
                     "hidden": false,
-                    "id": "a40f-19c0-aa30-0faa",
-                    "targetId": "0936-9767-1cc7-52ae",
+                    "id": "61e3-9725-c899-67cd",
+                    "targetId": "ecf8-cf72-7d5b-1b5b",
                     "primary": false
                   }
                 ],
@@ -43853,7 +43940,7 @@
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "id": "1f19-6509-d906-ca10",
     "name": "Imperium - Adeptus Custodes",
-    "revision": 10,
+    "revision": 11,
     "battleScribeVersion": 2.03,
     "library": false,
     "gameSystemId": "sys-352e-adc2-7639-d610",
