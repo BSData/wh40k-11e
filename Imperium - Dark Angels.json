@@ -1876,7 +1876,7 @@
           {
             "name": "pts",
             "typeId": "51b2-306e-1021-d207",
-            "value": 95
+            "value": 105
           },
           {
             "name": "Crusade Points",
@@ -3256,7 +3256,7 @@
               {
                 "name": "Effect",
                 "typeId": "d9a-5fdb-d4de-51a8",
-                "$text": "At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:\n▫ Place this unit in strategic reserves.\n▫ This unit can make an ingress move in your next Movement phase (including in your first turn)"
+                "$text": "In your Command phase, if this unit is unengaged, you can use this ability. If you do:\n▫ Place this unit in strategic reserves.\n▫ This unit can make an ingress move in your next Movement phase (including in your first turn)"
               }
             ],
             "name": "Mist-wreathed Shadow Realms",
@@ -8862,6 +8862,46 @@
                 "shared": true,
                 "includeChildSelections": true,
                 "childName": "1. Incursion (1000 Point limit)"
+              }
+            ]
+          },
+          {
+            "type": "increment",
+            "value": 10,
+            "field": "51b2-306e-1021-d207",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "type": "atLeast",
+                    "value": 2,
+                    "scope": "parent",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "includeChildForces": true,
+                    "repeats": 1,
+                    "conditions": [
+                      {
+                        "type": "before",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "any",
+                        "shared": true
+                      },
+                      {
+                        "type": "instanceOf",
+                        "value": 1,
+                        "field": "selections",
+                        "scope": "self",
+                        "childId": "1d42-6a24-1842-b424",
+                        "shared": true,
+                        "childName": "Ravenwing Black Knights"
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
