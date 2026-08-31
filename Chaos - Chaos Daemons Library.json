@@ -32040,6 +32040,12 @@
                       {
                         "comment": "Disc of Tzeentch",
                         "type": "and",
+                        "conditionGroups": [
+                          {
+                            "type": "or",
+                            "conditions": [{"childId": "2353-e1a0-43bc-35d0", "childName": "Screamers", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
+                          }
+                        ],
                         "conditions": [
                           {
                             "childId": "1776-73f5-0a7f-f36c",
@@ -32051,8 +32057,7 @@
                             "shared": true,
                             "type": "atLeast",
                             "value": 1
-                          },
-                          {"childId": "2353-e1a0-43bc-35d0", "childName": "Screamers", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                          }
                         ]
                       }
                     ]
@@ -37829,6 +37834,7 @@
                 "hidden": false,
                 "import": true,
                 "type": "upgrade",
+                "modifiers": [{"affects": "self.entries.group.recursive.profiles.Unit", "field": "e703-ecb6-5ce7-aec1", "scope": "parent", "type": "increment", "value": 1}],
                 "profiles": [
                   {
                     "name": "Jolly Gutpipes",
@@ -37852,6 +37858,18 @@
                 "hidden": false,
                 "import": true,
                 "type": "upgrade",
+                "modifiers": [
+                  {
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "field": "893f-9000-ccf7-648e",
+                    "join": ", ",
+                    "scope": "parent",
+                    "skipIfPresent": "Sustained Hits",
+                    "type": "append",
+                    "value": "Sustained Hits 1"
+                  },
+                  {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "1897-c22c-9597-12b1"}
+                ],
                 "profiles": [
                   {
                     "name": "Keep Counting!",
@@ -37932,6 +37950,18 @@
                 "hidden": false,
                 "import": true,
                 "type": "upgrade",
+                "modifiers": [
+                  {
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "field": "893f-9000-ccf7-648e",
+                    "join": ", ",
+                    "scope": "parent",
+                    "skipIfPresent": "Sustained Hits",
+                    "type": "append",
+                    "value": "Sustained Hits 1"
+                  },
+                  {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "1897-c22c-9597-12b1"}
+                ],
                 "profiles": [
                   {
                     "name": "Sadistic Savagery",
@@ -37998,6 +38028,18 @@
                 "hidden": false,
                 "import": true,
                 "type": "upgrade",
+                "modifiers": [
+                  {
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "field": "7f1b-8591-2fcf-d01c",
+                    "join": ", ",
+                    "scope": "parent",
+                    "skipIfPresent": "Assault",
+                    "type": "append",
+                    "value": "Assault"
+                  },
+                  {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "fc8a-8c24-bae9-cc1c"}
+                ],
                 "profiles": [
                   {
                     "name": "Blazing Warpfire",
