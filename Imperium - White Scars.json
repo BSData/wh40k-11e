@@ -1,1172 +1,536 @@
 {
   "catalogue": {
+    "name": "Imperium - Adeptus Astartes - White Scars",
+    "id": "67c1-fc13-f9a1-cbbf",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "sys-352e-adc2-7639-d610",
+    "gameSystemRevision": 1,
+    "library": false,
+    "revision": 3,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
+      {"name": "Imperium - Space Marines", "id": "f5b3-d2eb-a7f0-5957", "importRootEntries": true, "targetId": "e0af-67df-9d63-8fb7", "type": "catalogue"},
       {
-        "type": "catalogue",
-        "name": "Imperium - Space Marines",
-        "id": "f5b3-d2eb-a7f0-5957",
-        "targetId": "e0af-67df-9d63-8fb7",
-        "importRootEntries": true
-      },
-      {
-        "type": "catalogue",
         "name": "Imperium - Imperial Knights - Library",
         "id": "fe85-7340-cb74-f699",
+        "importRootEntries": true,
         "targetId": "1b6d-dc06-5db9-c7d1",
-        "importRootEntries": true
+        "type": "catalogue"
       },
-      {
-        "type": "catalogue",
-        "name": "Imperium - Agents of the Imperium",
-        "id": "b693-b382-3b94-e000",
-        "targetId": "b00-cd86-4b4c-97ba",
-        "importRootEntries": true
-      }
+      {"name": "Imperium - Agents of the Imperium", "id": "b693-b382-3b94-e000", "importRootEntries": true, "targetId": "b00-cd86-4b4c-97ba", "type": "catalogue"}
     ],
-    "categoryEntries": [
-      {
-        "name": "Kor'sarro Khan",
-        "hidden": false,
-        "id": "ecaf-d9ca-6ab0-8dcb"
-      },
-      {
-        "name": "Suboden Khan",
-        "id": "b20a-783c-0d41-7238",
-        "hidden": false
-      }
+    "categoryEntries": [{"name": "Kor'sarro Khan", "id": "ecaf-d9ca-6ab0-8dcb", "hidden": false}, {"name": "Suboden Khan", "id": "b20a-783c-0d41-7238", "hidden": false}],
+    "entryLinks": [
+      {"name": "Kor'sarro Khan", "id": "ed84-3c2a-5346-ca97", "hidden": false, "import": true, "targetId": "63f3-6aeb-c9ed-abfc", "type": "selectionEntry"},
+      {"name": "Suboden Khan", "id": "8960-af71-0dcb-747e", "hidden": false, "import": true, "targetId": "d72d-b930-9849-924e", "type": "selectionEntry"}
     ],
     "sharedSelectionEntries": [
       {
-        "constraints": [
+        "name": "Kor'sarro Khan",
+        "id": "63f3-6aeb-c9ed-abfc",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "associations": [
           {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "354c-9a92-ab1f-72a4"
+            "name": "Leading",
+            "id": "e274-c986-48ab-20d0",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "childName": "Assault Intercessor Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "930d-2875-125b-a65e",
+                    "childName": "Bladeguard Veteran Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {"childId": "5956-471c-16ba-af95", "childName": "Company Heroes", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "7b57-816b-44b2-65ec", "childName": "Intercessor Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "childName": "Sternguard Veteran Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {"childId": "2740-ec68-77ee-2830", "childName": "Tactical Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "ebce-cb56-76a4-afe1", "childName": "Assault Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "d81a-37b7-7183-9d4", "childName": "Command Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
-          {
-            "targetId": "4f3a-f0f7-6647-348d",
-            "id": "91c8-2439-6241-59ac",
-            "primary": true,
-            "name": "Epic Hero"
-          },
-          {
-            "targetId": "9cfd-1c32-585f-7d5c",
-            "id": "8698-34e9-3674-bc4d",
-            "primary": false,
-            "name": "Character"
-          },
-          {
-            "targetId": "cf47-a0d7-7207-29dc",
-            "id": "11be-d531-53fd-19f7",
-            "primary": false,
-            "name": "Infantry"
-          },
-          {
-            "targetId": "2d7f-1892-2fd0-e29c",
-            "id": "d4d7-37e4-7b12-e97b",
-            "primary": false,
-            "name": "Captain"
-          },
-          {
-            "targetId": "aff3-d6a3-2a95-9dc",
-            "id": "a915-ad7e-1cf0-f376",
-            "primary": false,
-            "name": "Imperium"
-          },
-          {
-            "targetId": "6e7-40c-58d9-e402",
-            "id": "a433-895b-d6dc-81ff",
-            "primary": false,
-            "name": "Faction: Adeptus Astartes"
-          },
-          {
-            "targetId": "5c0e-2250-dd3a-1df9",
-            "id": "e6ae-9197-b53f-7d67",
-            "primary": false,
-            "name": "Faction: White Scars"
-          },
-          {
-            "targetId": "ecaf-d9ca-6ab0-8dcb",
-            "id": "55f6-c289-506d-455f",
-            "primary": false,
-            "name": "Kor'sarro Khan"
-          },
-          {
-            "targetId": "5179-8ede-45e3-49a2",
-            "id": "2ef1-b613-5bc9-c6ab",
-            "primary": false,
-            "name": "Tacticus"
-          },
-          {
-            "targetId": "1556-9b56-fba6-4370",
-            "id": "7b4d-d3ad-ab7d-bbb0",
-            "primary": false,
-            "name": "Leader"
-          }
+          {"name": "Epic Hero", "id": "91c8-2439-6241-59ac", "primary": true, "targetId": "4f3a-f0f7-6647-348d"},
+          {"name": "Character", "id": "8698-34e9-3674-bc4d", "primary": false, "targetId": "9cfd-1c32-585f-7d5c"},
+          {"name": "Infantry", "id": "11be-d531-53fd-19f7", "primary": false, "targetId": "cf47-a0d7-7207-29dc"},
+          {"name": "Captain", "id": "d4d7-37e4-7b12-e97b", "primary": false, "targetId": "2d7f-1892-2fd0-e29c"},
+          {"name": "Imperium", "id": "a915-ad7e-1cf0-f376", "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
+          {"name": "Faction: Adeptus Astartes", "id": "a433-895b-d6dc-81ff", "primary": false, "targetId": "6e7-40c-58d9-e402"},
+          {"name": "Faction: White Scars", "id": "e6ae-9197-b53f-7d67", "primary": false, "targetId": "5c0e-2250-dd3a-1df9"},
+          {"name": "Kor'sarro Khan", "id": "55f6-c289-506d-455f", "primary": false, "targetId": "ecaf-d9ca-6ab0-8dcb"},
+          {"name": "Tacticus", "id": "2ef1-b613-5bc9-c6ab", "primary": false, "targetId": "5179-8ede-45e3-49a2"},
+          {"name": "Leader", "id": "7b4d-d3ad-ab7d-bbb0", "primary": false, "targetId": "1556-9b56-fba6-4370"}
         ],
-        "infoLinks": [
-          {
-            "name": "Oath of Moment",
-            "hidden": false,
-            "type": "rule",
-            "id": "68a0-61b2-c158-4c4a",
-            "targetId": "3b76-4053-ece9-6e7d"
-          },
-          {
-            "name": "Leader",
-            "hidden": false,
-            "type": "rule",
-            "id": "f512-1f71-1a0-24d0",
-            "targetId": "b4dd-3e1f-41cb-218f"
-          }
+        "constraints": [{"id": "354c-9a92-ab1f-72a4", "field": "selections", "scope": "roster", "shared": true, "type": "max", "value": 1}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 55},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
-            "constraints": [
-              {
-                "type": "min",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "6a09-8ec0-58fe-cb04"
-              },
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "416c-fb13-f588-5118"
-              }
-            ],
-            "import": true,
             "name": "Bolt pistol",
-            "hidden": false,
-            "type": "selectionEntry",
             "id": "3ed4-a23e-f5a2-d32c",
-            "targetId": "b273-b85e-4018-a0cd"
+            "hidden": false,
+            "import": true,
+            "targetId": "b273-b85e-4018-a0cd",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "6a09-8ec0-58fe-cb04", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "416c-fb13-f588-5118", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
           },
           {
-            "constraints": [
-              {
-                "field": "selections",
-                "scope": "parent",
-                "value": 1,
-                "percentValue": false,
-                "shared": true,
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "id": "ad60-fb6-5cf4-f118",
-                "type": "max"
-              }
-            ],
-            "id": "3e75-6a41-b3f8-b8bd",
             "name": "Warlord",
-            "hidden": false,
+            "id": "3e75-6a41-b3f8-b8bd",
             "collective": false,
+            "hidden": false,
             "import": true,
             "targetId": "caa-f869-3cbd-b48e",
-            "type": "selectionEntry"
+            "type": "selectionEntry",
+            "constraints": [
+              {
+                "id": "ad60-fb6-5cf4-f118",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Oath of Moment", "id": "68a0-61b2-c158-4c4a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Leader", "id": "f512-1f71-1a0-24d0", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Kor'sarro Khan",
+            "id": "910d-d973-82c-d2e3",
+            "hidden": false,
+            "typeId": "c547-1836-d8a-ff4f",
+            "typeName": "Unit",
+            "characteristics": [
+              {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
+              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
+              {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
+              {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+              {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
+            ]
+          },
+          {
+            "name": "For the Khan!",
+            "id": "143-1a21-8afb-16c4",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and melee weapons equipped by models in that unit have the [LANCE] ability.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Trophy Taker",
+            "id": "bbb5-617e-a254-8463",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [{"name": "Description", "$text": "Each time this model destroys an enemy Character model, you gain 1CP", "typeId": "9b8f-694b-e5e-b573"}]
+          },
+          {
+            "name": "Leader",
+            "id": "90b4-a746-de9b-2df2",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSOR SQUAD\n■ BLADEGUARD VETERAN SQUAD\n■ COMPANY HEROES\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n■ TACTICAL SQUAD",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Inspiring Commander",
+            "id": "8ecf-92ea-ef03-4b0b",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "If you include this model in your army, until the end of the battle, non-Character models in Outrider Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "selectionEntries": [
           {
+            "name": "Moonfang",
+            "id": "1d9c-e037-5d69-4b67",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
             "constraints": [
-              {
-                "type": "min",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "5af2-4add-6759-488b"
-              },
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "e98-f3f5-23e-f9c6"
-              }
+              {"id": "5af2-4add-6759-488b", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "e98-f3f5-23e-f9c6", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "infoLinks": [
+              {"name": "Devastating Wounds", "id": "7061-e9c1-b5ea-e47c", "hidden": false, "targetId": "be1e-ac8e-1e2c-3528", "type": "rule"},
+              {"name": "Precision", "id": "8c47-7b5-9e41-a078", "hidden": false, "targetId": "9143-31ae-e0a6-6007", "type": "rule"}
             ],
             "profiles": [
               {
-                "characteristics": [
-                  {
-                    "$text": "Melee",
-                    "name": "Range",
-                    "typeId": "914c-b413-91e3-a132"
-                  },
-                  {
-                    "$text": "6",
-                    "name": "A",
-                    "typeId": "2337-daa1-6682-b110"
-                  },
-                  {
-                    "$text": "2+",
-                    "name": "WS",
-                    "typeId": "95d1-95f-45b4-11d6"
-                  },
-                  {
-                    "$text": "5",
-                    "name": "S",
-                    "typeId": "ab33-d393-96ce-ccba"
-                  },
-                  {
-                    "$text": "-2",
-                    "name": "AP",
-                    "typeId": "41a0-1301-112a-e2f2"
-                  },
-                  {
-                    "$text": "2",
-                    "name": "D",
-                    "typeId": "3254-9fe6-d824-513e"
-                  },
-                  {
-                    "$text": "Devastating Wounds, Precision",
-                    "name": "Keywords",
-                    "typeId": "893f-9000-ccf7-648e"
-                  }
-                ],
                 "name": "Moonfang",
+                "id": "51-8dfa-ba16-7fbe",
+                "hidden": false,
                 "typeId": "8a40-4aaa-c780-9046",
                 "typeName": "Melee Weapons",
-                "hidden": false,
-                "id": "51-8dfa-ba16-7fbe"
+                "characteristics": [
+                  {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                  {"name": "A", "$text": "6", "typeId": "2337-daa1-6682-b110"},
+                  {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
+                  {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+                  {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
+                  {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+                  {"name": "Keywords", "$text": "Devastating Wounds, Precision", "typeId": "893f-9000-ccf7-648e"}
+                ]
               }
-            ],
-            "infoLinks": [
-              {
-                "name": "Devastating Wounds",
-                "hidden": false,
-                "type": "rule",
-                "id": "7061-e9c1-b5ea-e47c",
-                "targetId": "be1e-ac8e-1e2c-3528"
-              },
-              {
-                "name": "Precision",
-                "hidden": false,
-                "type": "rule",
-                "id": "8c47-7b5-9e41-a078",
-                "targetId": "9143-31ae-e0a6-6007"
-              }
-            ],
-            "type": "upgrade",
-            "import": true,
-            "name": "Moonfang",
-            "hidden": false,
-            "id": "1d9c-e037-5d69-4b67"
-          }
-        ],
-        "profiles": [
-          {
-            "characteristics": [
-              {
-                "name": "M",
-                "typeId": "e703-ecb6-5ce7-aec1",
-                "$text": "6\""
-              },
-              {
-                "name": "T",
-                "typeId": "d29d-cf75-fc2d-34a4",
-                "$text": "4"
-              },
-              {
-                "name": "Sv",
-                "typeId": "450-a17e-9d5e-29da",
-                "$text": "3+"
-              },
-              {
-                "name": "W",
-                "typeId": "750a-a2ec-90d3-21fe",
-                "$text": "5"
-              },
-              {
-                "name": "LD",
-                "typeId": "58d2-b879-49c7-43bc",
-                "$text": "6+"
-              },
-              {
-                "name": "OC",
-                "typeId": "bef7-942a-1a23-59f8",
-                "$text": "1"
-              },
-              {
-                "name": "InSv",
-                "typeId": "55a7-5b54-c60d-11dc",
-                "$text": "4+"
-              }
-            ],
-            "name": "Kor'sarro Khan",
-            "typeId": "c547-1836-d8a-ff4f",
-            "typeName": "Unit",
-            "hidden": false,
-            "id": "910d-d973-82c-d2e3"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and melee weapons equipped by models in that unit have the [LANCE] ability.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "For the Khan!",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "143-1a21-8afb-16c4"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "Each time this model destroys an enemy Character model, you gain 1CP",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Trophy Taker",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "bbb5-617e-a254-8463"
-          },
-          {
-            "characteristics": [
-              {
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573",
-                "$text": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSOR SQUAD\n■ BLADEGUARD VETERAN SQUAD\n■ COMPANY HEROES\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n■ TACTICAL SQUAD"
-              }
-            ],
-            "name": "Leader",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "90b4-a746-de9b-2df2"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "If you include this model in your army, until the end of the battle, non-Character models in Outrider Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Inspiring Commander",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "8ecf-92ea-ef03-4b0b"
-          }
-        ],
-        "costs": [
-          {
-            "name": "pts",
-            "typeId": "51b2-306e-1021-d207",
-            "value": 55
-          },
-          {
-            "name": "Crusade Points",
-            "typeId": "b03b-c239-15a5-da55",
-            "value": 0
-          },
-          {
-            "name": "Crusade: Battle Honours",
-            "typeId": "75bb-ded1-c86d-bdf0",
-            "value": 0
-          },
-          {
-            "name": "Crusade: Experience",
-            "typeId": "a623-fe74-1d33-cddf",
-            "value": 0
-          },
-          {
-            "name": "Crusade: Weapon Modifications",
-            "typeId": "716d-91b7-d55a-1022",
-            "value": 0
-          },
-          {
-            "name": "Blackstone Fragments",
-            "typeId": "ac6b-ced3-9b5e-9a6e",
-            "value": 0
-          },
-          {
-            "name": "Detachment Points",
-            "typeId": "82ae-1066-5107-6ae0",
-            "value": 0
-          },
-          {
-            "name": "Enhancements",
-            "typeId": "f759-1bc4-cb3a-f0d2",
-            "value": 0
-          },
-          {
-            "name": "Honour Points",
-            "typeId": "8135-9a2f-6627-09e2",
-            "value": 0
-          },
-          {
-            "name": "Relic Fragments",
-            "typeId": "0ece-6541-4662-ece2",
-            "value": 0
+            ]
           }
         ],
         "selectionEntryGroups": [
           {
-            "entryLinks": [
-              {
-                "import": true,
-                "name": "Mighty Champions",
-                "hidden": false,
-                "id": "13fd-712c-1a9a-f4fd",
-                "type": "selectionEntryGroup",
-                "targetId": "f842-6e90-bc5a-80f1"
-              }
-            ],
             "name": "Crusade",
             "id": "0b64-3c44-90c7-e26c",
             "hidden": false,
-            "sortIndex": 1
-          }
-        ],
-        "type": "model",
-        "import": true,
-        "name": "Kor'sarro Khan",
-        "hidden": false,
-        "id": "63f3-6aeb-c9ed-abfc",
-        "associations": [
-          {
-            "min": 0,
-            "max": 1,
-            "scope": "force",
-            "childId": "unit",
-            "name": "Leading",
-            "id": "e274-c986-48ab-20d0",
-            "label": "Led by",
-            "conditionGroups": [
-              {
-                "type": "or",
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "9ba8-7087-dcbd-9fd8",
-                    "shared": true,
-                    "childName": "Assault Intercessor Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "930d-2875-125b-a65e",
-                    "shared": true,
-                    "childName": "Bladeguard Veteran Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "5956-471c-16ba-af95",
-                    "shared": true,
-                    "childName": "Company Heroes"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "7b57-816b-44b2-65ec",
-                    "shared": true,
-                    "childName": "Intercessor Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "e05e-b4e4-6db0-5d42",
-                    "shared": true,
-                    "childName": "Sternguard Veteran Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "2740-ec68-77ee-2830",
-                    "shared": true,
-                    "childName": "Tactical Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "ebce-cb56-76a4-afe1",
-                    "shared": true,
-                    "childName": "Assault Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "d81a-37b7-7183-9d4",
-                    "shared": true,
-                    "childName": "Command Squad"
-                  }
-                ]
-              }
-            ],
-            "includeChildSelections": true,
-            "childName": "unit",
-            "action": "group"
+            "sortIndex": 1,
+            "entryLinks": [{"name": "Mighty Champions", "id": "13fd-712c-1a9a-f4fd", "hidden": false, "import": true, "targetId": "f842-6e90-bc5a-80f1", "type": "selectionEntryGroup"}]
           }
         ]
       },
       {
-        "costs": [
+        "name": "Suboden Khan",
+        "id": "d72d-b930-9849-924e",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "associations": [
           {
-            "name": "pts",
-            "typeId": "51b2-306e-1021-d207",
-            "value": 90
-          },
-          {
-            "name": "Crusade Points",
-            "typeId": "b03b-c239-15a5-da55",
-            "value": 0
-          },
-          {
-            "name": "Crusade: Battle Honours",
-            "typeId": "75bb-ded1-c86d-bdf0",
-            "value": 0
-          },
-          {
-            "name": "Crusade: Experience",
-            "typeId": "a623-fe74-1d33-cddf",
-            "value": 0
-          },
-          {
-            "name": "Crusade: Weapon Modifications",
-            "typeId": "716d-91b7-d55a-1022",
-            "value": 0
-          },
-          {
-            "name": "Blackstone Fragments",
-            "typeId": "ac6b-ced3-9b5e-9a6e",
-            "value": 0
-          },
-          {
-            "name": "Detachment Points",
-            "typeId": "82ae-1066-5107-6ae0",
-            "value": 0
-          },
-          {
-            "name": "Enhancements",
-            "typeId": "f759-1bc4-cb3a-f0d2",
-            "value": 0
-          },
-          {
-            "name": "Honour Points",
-            "typeId": "8135-9a2f-6627-09e2",
-            "value": 0
-          },
-          {
-            "name": "Relic Fragments",
-            "typeId": "0ece-6541-4662-ece2",
-            "value": 0
-          }
-        ],
-        "infoLinks": [
-          {
-            "name": "Oath of Moment",
-            "id": "ae4a-ac42-268f-beb8",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "3b76-4053-ece9-6e7d"
-          },
-          {
-            "name": "Leader",
-            "id": "3ac4-ce48-9c3d-288b",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "b4dd-3e1f-41cb-218f"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "3efb-3875-0585-1de4"
-          }
-        ],
-        "profiles": [
-          {
-            "characteristics": [
+            "name": "Leading",
+            "id": "59eb-3c0c-5f80-5579",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
               {
-                "name": "M",
-                "typeId": "e703-ecb6-5ce7-aec1",
-                "$text": "12\""
-              },
-              {
-                "name": "T",
-                "typeId": "d29d-cf75-fc2d-34a4",
-                "$text": "5"
-              },
-              {
-                "name": "Sv",
-                "typeId": "450-a17e-9d5e-29da",
-                "$text": "3+"
-              },
-              {
-                "name": "W",
-                "typeId": "750a-a2ec-90d3-21fe",
-                "$text": "8"
-              },
-              {
-                "name": "LD",
-                "typeId": "58d2-b879-49c7-43bc",
-                "$text": "6+"
-              },
-              {
-                "name": "OC",
-                "typeId": "bef7-942a-1a23-59f8",
-                "$text": "2"
-              },
-              {
-                "name": "InSv",
-                "typeId": "55a7-5b54-c60d-11dc",
-                "$text": "4+"
+                "type": "or",
+                "conditions": [
+                  {"childId": "eca9-2e2-b6a6-9de6", "childName": "Bike Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "3413-f351-cfb0-d33b",
+                    "childName": "Company Veterans on Bikes [Legends]",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {"childId": "1402-5be-5df3-cd51", "childName": "Outrider Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                ]
               }
-            ],
-            "name": "Suboden Khan",
-            "typeId": "c547-1836-d8a-ff4f",
-            "typeName": "Unit",
-            "hidden": false,
-            "id": "52d8-ea22-6fc6-870a"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back. If that unit is already eligible to shoot and declare a charge in a turn in which it Advanced, add 1 to Advance and Charge rolls made for that unit instead.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Spear of Chogoris",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "1336-8c9c-a513-990d"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "Each time a model in this model’s unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Skilled Riders",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "886d-0aad-f792-2794"
-          },
-          {
-            "characteristics": [
-              {
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573",
-                "$text": "This model can be attached to the following units: \n\n\nOUTRIDER SQUAD"
-              }
-            ],
-            "name": "Leader",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "fe8b-e1ef-ef3c-cced"
+            ]
           }
         ],
         "categoryLinks": [
+          {"name": "Mounted", "id": "6108-3dc7-7dee-6782", "primary": false, "targetId": "14a0-40c9-2748-ae6e"},
+          {"name": "Character", "id": "b121-cbde-fd47-a423", "primary": false, "targetId": "9cfd-1c32-585f-7d5c"},
+          {"name": "Epic Hero", "id": "e2b5-2ce9-3ccc-a9d7", "primary": true, "targetId": "4f3a-f0f7-6647-348d"},
+          {"name": "Imperium", "id": "f132-e8bf-f850-0185", "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
+          {"name": "Grenades", "id": "d591-2567-2e4d-3b1c", "primary": false, "targetId": "5a61-81ac-eb7c-a87e"},
+          {"name": "Captain", "id": "05d8-1f12-2f9c-b1ab", "primary": false, "targetId": "2d7f-1892-2fd0-e29c"},
+          {"name": "Faction: Adeptus Astartes", "id": "3679-afa4-5a9f-945b", "primary": false, "targetId": "6e7-40c-58d9-e402"},
+          {"name": "Faction: White Scars", "id": "00d0-1140-3de4-e545", "primary": false, "targetId": "5c0e-2250-dd3a-1df9"},
+          {"name": "Suboden Khan", "id": "6d62-4480-e164-9558", "primary": false, "targetId": "b20a-783c-0d41-7238"},
+          {"name": "Leader", "id": "4917-1011-5577-0d72", "primary": false, "targetId": "1556-9b56-fba6-4370"}
+        ],
+        "constraints": [{"id": "3efb-3875-0585-1de4", "field": "selections", "scope": "roster", "shared": true, "type": "max", "value": 1}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
+        "entryLinks": [
           {
-            "targetId": "14a0-40c9-2748-ae6e",
-            "id": "6108-3dc7-7dee-6782",
-            "primary": false,
-            "name": "Mounted"
+            "name": "Warlord",
+            "id": "be18-cb7c-10b7-7502",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "targetId": "caa-f869-3cbd-b48e",
+            "type": "selectionEntry",
+            "constraints": [
+              {
+                "id": "b36a-3327-9c97-920c",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Oath of Moment", "id": "ae4a-ac42-268f-beb8", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Leader", "id": "3ac4-ce48-9c3d-288b", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Suboden Khan",
+            "id": "52d8-ea22-6fc6-870a",
+            "hidden": false,
+            "typeId": "c547-1836-d8a-ff4f",
+            "typeName": "Unit",
+            "characteristics": [
+              {"name": "M", "$text": "12\"", "typeId": "e703-ecb6-5ce7-aec1"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
+              {"name": "W", "$text": "8", "typeId": "750a-a2ec-90d3-21fe"},
+              {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+              {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
+            ]
           },
           {
-            "targetId": "9cfd-1c32-585f-7d5c",
-            "id": "b121-cbde-fd47-a423",
-            "primary": false,
-            "name": "Character"
+            "name": "Spear of Chogoris",
+            "id": "1336-8c9c-a513-990d",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back. If that unit is already eligible to shoot and declare a charge in a turn in which it Advanced, add 1 to Advance and Charge rolls made for that unit instead.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           },
           {
-            "targetId": "4f3a-f0f7-6647-348d",
-            "id": "e2b5-2ce9-3ccc-a9d7",
-            "primary": true,
-            "name": "Epic Hero"
+            "name": "Skilled Riders",
+            "id": "886d-0aad-f792-2794",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "Each time a model in this model’s unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           },
           {
-            "targetId": "aff3-d6a3-2a95-9dc",
-            "id": "f132-e8bf-f850-0185",
-            "primary": false,
-            "name": "Imperium"
-          },
-          {
-            "targetId": "5a61-81ac-eb7c-a87e",
-            "id": "d591-2567-2e4d-3b1c",
-            "primary": false,
-            "name": "Grenades"
-          },
-          {
-            "targetId": "2d7f-1892-2fd0-e29c",
-            "id": "05d8-1f12-2f9c-b1ab",
-            "primary": false,
-            "name": "Captain"
-          },
-          {
-            "targetId": "6e7-40c-58d9-e402",
-            "id": "3679-afa4-5a9f-945b",
-            "primary": false,
-            "name": "Faction: Adeptus Astartes"
-          },
-          {
-            "targetId": "5c0e-2250-dd3a-1df9",
-            "id": "00d0-1140-3de4-e545",
-            "primary": false,
-            "name": "Faction: White Scars"
-          },
-          {
-            "targetId": "b20a-783c-0d41-7238",
-            "id": "6d62-4480-e164-9558",
-            "primary": false,
-            "name": "Suboden Khan"
-          },
-          {
-            "targetId": "1556-9b56-fba6-4370",
-            "id": "4917-1011-5577-0d72",
-            "primary": false,
-            "name": "Leader"
+            "name": "Leader",
+            "id": "fe8b-e1ef-ef3c-cced",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [{"name": "Description", "$text": "This model can be attached to the following units: \n\n\nOUTRIDER SQUAD", "typeId": "9b8f-694b-e5e-b573"}]
           }
         ],
         "selectionEntryGroups": [
           {
-            "entryLinks": [
-              {
-                "import": true,
-                "name": "Mighty Champions",
-                "hidden": false,
-                "id": "50ca-4ef9-ddbf-7b0d",
-                "type": "selectionEntryGroup",
-                "targetId": "f842-6e90-bc5a-80f1"
-              }
-            ],
             "name": "Crusade",
             "id": "cfb3-ab5b-5f0c-1393",
             "hidden": false,
-            "sortIndex": 1
+            "sortIndex": 1,
+            "entryLinks": [{"name": "Mighty Champions", "id": "50ca-4ef9-ddbf-7b0d", "hidden": false, "import": true, "targetId": "f842-6e90-bc5a-80f1", "type": "selectionEntryGroup"}]
           },
           {
+            "name": "Wargear",
+            "id": "ae9b-6aa9-aa56-f220",
+            "hidden": false,
             "entryLinks": [
               {
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "2dd4-b404-0b98-5f47-min",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "2dd4-b404-0b98-5f47-max",
-                    "includeChildSelections": false
-                  }
-                ],
-                "import": true,
                 "name": "Heavy Bolt Pistol",
-                "hidden": false,
                 "id": "4679-fcd5-ead9-7a4b",
+                "hidden": false,
+                "import": true,
+                "targetId": "eca4-d5d2-18a1-01a8",
                 "type": "selectionEntry",
-                "targetId": "eca4-d5d2-18a1-01a8"
+                "constraints": [
+                  {"id": "2dd4-b404-0b98-5f47-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "2dd4-b404-0b98-5f47-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
               }
             ],
             "selectionEntries": [
               {
+                "name": "Onslaught Gatling Cannon",
+                "id": "7faa-50ab-98d4-2fc7",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
                 "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "c6c8-23dd-93b5-632c-min",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "c6c8-23dd-93b5-632c-max",
-                    "includeChildSelections": false
-                  }
+                  {"id": "c6c8-23dd-93b5-632c-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "c6c8-23dd-93b5-632c-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
                 ],
+                "infoLinks": [{"name": "Devastating Wounds", "id": "5efc-12ac-ba98-a3ad", "hidden": false, "targetId": "be1e-ac8e-1e2c-3528", "type": "rule"}],
                 "profiles": [
                   {
-                    "characteristics": [
-                      {
-                        "$text": "24\"",
-                        "name": "Range",
-                        "typeId": "9896-9419-16a1-92fc"
-                      },
-                      {
-                        "$text": "8",
-                        "name": "A",
-                        "typeId": "3bb-c35f-f54-fb08"
-                      },
-                      {
-                        "$text": "2+",
-                        "name": "BS",
-                        "typeId": "94d-8a98-cf90-183e"
-                      },
-                      {
-                        "$text": "5",
-                        "name": "S",
-                        "typeId": "2229-f494-25db-c5d3"
-                      },
-                      {
-                        "$text": "0",
-                        "name": "AP",
-                        "typeId": "9ead-8a10-520-de15"
-                      },
-                      {
-                        "$text": "1",
-                        "name": "D",
-                        "typeId": "a354-c1c8-a745-f9e3"
-                      },
-                      {
-                        "$text": "Devastating Wounds",
-                        "name": "Keywords",
-                        "typeId": "7f1b-8591-2fcf-d01c"
-                      }
-                    ],
                     "name": "Onslaught Gatling Cannon",
+                    "id": "9c08-2084-dcaf-e1bb",
+                    "hidden": false,
                     "typeId": "f77d-b953-8fa4-b762",
                     "typeName": "Ranged Weapons",
-                    "hidden": false,
-                    "id": "9c08-2084-dcaf-e1bb"
+                    "characteristics": [
+                      {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+                      {"name": "A", "$text": "8", "typeId": "3bb-c35f-f54-fb08"},
+                      {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
+                      {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                      {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                      {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                      {"name": "Keywords", "$text": "Devastating Wounds", "typeId": "7f1b-8591-2fcf-d01c"}
+                    ]
                   }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Devastating Wounds",
-                    "id": "5efc-12ac-ba98-a3ad",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "be1e-ac8e-1e2c-3528"
-                  }
-                ],
-                "type": "upgrade",
-                "import": true,
-                "name": "Onslaught Gatling Cannon",
-                "hidden": false,
-                "id": "7faa-50ab-98d4-2fc7"
+                ]
               },
               {
-                "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1af3-4259-5f40-5287-min",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "1af3-4259-5f40-5287-max",
-                    "includeChildSelections": false
-                  }
-                ],
-                "profiles": [
-                  {
-                    "characteristics": [
-                      {
-                        "$text": "Melee",
-                        "name": "Range",
-                        "typeId": "914c-b413-91e3-a132"
-                      },
-                      {
-                        "$text": "6",
-                        "name": "A",
-                        "typeId": "2337-daa1-6682-b110"
-                      },
-                      {
-                        "$text": "2+",
-                        "name": "WS",
-                        "typeId": "95d1-95f-45b4-11d6"
-                      },
-                      {
-                        "$text": "6",
-                        "name": "S",
-                        "typeId": "ab33-d393-96ce-ccba"
-                      },
-                      {
-                        "$text": "-2",
-                        "name": "AP",
-                        "typeId": "41a0-1301-112a-e2f2"
-                      },
-                      {
-                        "$text": "2",
-                        "name": "D",
-                        "typeId": "3254-9fe6-d824-513e"
-                      },
-                      {
-                        "$text": "Lance, Anti-monster 4+, Anti-vehicle 4+",
-                        "name": "Keywords",
-                        "typeId": "893f-9000-ccf7-648e"
-                      }
-                    ],
-                    "name": "Stormtooth",
-                    "typeId": "8a40-4aaa-c780-9046",
-                    "typeName": "Melee Weapons",
-                    "hidden": false,
-                    "id": "b145-0fd3-a52a-85d6"
-                  }
-                ],
-                "infoLinks": [
-                  {
-                    "name": "Lance",
-                    "id": "91dc-fec9-e853-e3ff",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "2ebc-abdf-8129-6c57"
-                  },
-                  {
-                    "name": "Anti",
-                    "id": "1fe0-fb7a-0047-ec53",
-                    "hidden": false,
-                    "type": "rule",
-                    "targetId": "4111-82e3-9444-e942"
-                  }
-                ],
-                "type": "upgrade",
-                "import": true,
                 "name": "Stormtooth",
+                "id": "ceb9-e596-79c1-8b34",
                 "hidden": false,
-                "id": "ceb9-e596-79c1-8b34"
-              },
-              {
+                "import": true,
+                "type": "upgrade",
                 "constraints": [
-                  {
-                    "type": "min",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5ce5-c23e-460d-9ca5-min",
-                    "includeChildSelections": false
-                  },
-                  {
-                    "type": "max",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "parent",
-                    "shared": true,
-                    "id": "5ce5-c23e-460d-9ca5-max",
-                    "includeChildSelections": false
-                  }
+                  {"id": "1af3-4259-5f40-5287-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "1af3-4259-5f40-5287-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "infoLinks": [
+                  {"name": "Lance", "id": "91dc-fec9-e853-e3ff", "hidden": false, "targetId": "2ebc-abdf-8129-6c57", "type": "rule"},
+                  {"name": "Anti", "id": "1fe0-fb7a-0047-ec53", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}
                 ],
                 "profiles": [
                   {
-                    "characteristics": [
-                      {
-                        "$text": "Melee",
-                        "name": "Range",
-                        "typeId": "914c-b413-91e3-a132"
-                      },
-                      {
-                        "$text": "8",
-                        "name": "A",
-                        "typeId": "2337-daa1-6682-b110"
-                      },
-                      {
-                        "$text": "2+",
-                        "name": "WS",
-                        "typeId": "95d1-95f-45b4-11d6"
-                      },
-                      {
-                        "$text": "5",
-                        "name": "S",
-                        "typeId": "ab33-d393-96ce-ccba"
-                      },
-                      {
-                        "$text": "-2",
-                        "name": "AP",
-                        "typeId": "41a0-1301-112a-e2f2"
-                      },
-                      {
-                        "$text": "1",
-                        "name": "D",
-                        "typeId": "3254-9fe6-d824-513e"
-                      },
-                      {
-                        "name": "Keywords",
-                        "typeId": "893f-9000-ccf7-648e"
-                      }
-                    ],
-                    "name": "Power Sword",
+                    "name": "Stormtooth",
+                    "id": "b145-0fd3-a52a-85d6",
+                    "hidden": false,
                     "typeId": "8a40-4aaa-c780-9046",
                     "typeName": "Melee Weapons",
-                    "hidden": false,
-                    "id": "c98a-50b1-63f7-0ea1"
+                    "characteristics": [
+                      {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                      {"name": "A", "$text": "6", "typeId": "2337-daa1-6682-b110"},
+                      {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
+                      {"name": "S", "$text": "6", "typeId": "ab33-d393-96ce-ccba"},
+                      {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
+                      {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+                      {"name": "Keywords", "$text": "Lance, Anti-monster 4+, Anti-vehicle 4+", "typeId": "893f-9000-ccf7-648e"}
+                    ]
                   }
-                ],
-                "type": "upgrade",
-                "import": true,
+                ]
+              },
+              {
                 "name": "Power Sword",
+                "id": "37d7-b142-21b0-63c5",
                 "hidden": false,
-                "id": "37d7-b142-21b0-63c5"
-              }
-            ],
-            "name": "Wargear",
-            "id": "ae9b-6aa9-aa56-f220",
-            "hidden": false
-          }
-        ],
-        "entryLinks": [
-          {
-            "constraints": [
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "b36a-3327-9c97-920c",
-                "percentValue": false,
-                "includeChildSelections": false,
-                "includeChildForces": false
-              }
-            ],
-            "import": true,
-            "name": "Warlord",
-            "hidden": false,
-            "id": "be18-cb7c-10b7-7502",
-            "collective": false,
-            "targetId": "caa-f869-3cbd-b48e",
-            "type": "selectionEntry"
-          }
-        ],
-        "type": "model",
-        "import": true,
-        "name": "Suboden Khan",
-        "hidden": false,
-        "id": "d72d-b930-9849-924e",
-        "associations": [
-          {
-            "min": 0,
-            "max": 1,
-            "scope": "force",
-            "childId": "unit",
-            "name": "Leading",
-            "id": "59eb-3c0c-5f80-5579",
-            "label": "Led by",
-            "conditionGroups": [
-              {
-                "type": "or",
-                "conditions": [
+                "import": true,
+                "type": "upgrade",
+                "constraints": [
+                  {"id": "5ce5-c23e-460d-9ca5-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "5ce5-c23e-460d-9ca5-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "profiles": [
                   {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "eca9-2e2-b6a6-9de6",
-                    "shared": true,
-                    "childName": "Bike Squad"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "3413-f351-cfb0-d33b",
-                    "shared": true,
-                    "childName": "Company Veterans on Bikes [Legends]"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
-                    "childId": "1402-5be-5df3-cd51",
-                    "shared": true,
-                    "childName": "Outrider Squad"
+                    "name": "Power Sword",
+                    "id": "c98a-50b1-63f7-0ea1",
+                    "hidden": false,
+                    "typeId": "8a40-4aaa-c780-9046",
+                    "typeName": "Melee Weapons",
+                    "characteristics": [
+                      {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                      {"name": "A", "$text": "8", "typeId": "2337-daa1-6682-b110"},
+                      {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
+                      {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+                      {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
+                      {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+                      {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
+                    ]
                   }
                 ]
               }
-            ],
-            "includeChildSelections": true,
-            "childName": "unit",
-            "action": "group"
+            ]
           }
         ]
       }
-    ],
-    "entryLinks": [
-      {
-        "import": true,
-        "name": "Kor'sarro Khan",
-        "hidden": false,
-        "type": "selectionEntry",
-        "id": "ed84-3c2a-5346-ca97",
-        "targetId": "63f3-6aeb-c9ed-abfc"
-      },
-      {
-        "import": true,
-        "name": "Suboden Khan",
-        "hidden": false,
-        "id": "8960-af71-0dcb-747e",
-        "type": "selectionEntry",
-        "targetId": "d72d-b930-9849-924e"
-      }
-    ],
-    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
-    "library": false,
-    "id": "67c1-fc13-f9a1-cbbf",
-    "name": "Imperium - Adeptus Astartes - White Scars",
-    "gameSystemId": "sys-352e-adc2-7639-d610",
-    "gameSystemRevision": 1,
-    "revision": 2,
-    "battleScribeVersion": 2.03,
-    "type": "catalogue"
+    ]
   }
 }

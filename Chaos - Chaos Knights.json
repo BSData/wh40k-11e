@@ -1,1665 +1,1227 @@
 {
   "catalogue": {
+    "name": "Chaos - Chaos Knights",
+    "id": "46d8-abc8-ef3a-9f85",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "sys-352e-adc2-7639-d610",
+    "gameSystemRevision": 1,
+    "library": false,
+    "revision": 2,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
-      {
-        "id": "bbb1-4f45-fafb-fc09",
-        "name": "Chaos - Chaos Knights Library",
-        "targetId": "8106-aad2-918a-9ac",
-        "type": "catalogue",
-        "importRootEntries": true
-      },
-      {
-        "type": "catalogue",
-        "name": "Chaos - Daemons Library",
-        "id": "4386-7333-134-9a18",
-        "targetId": "b45c-af22-788a-dfd6",
-        "importRootEntries": true
-      },
-      {
-        "type": "catalogue",
-        "name": "Library - Titans",
-        "id": "9edd-ef10-2070-22d6",
-        "targetId": "7481-280e-b55e-7867",
-        "importRootEntries": true
-      },
-      {
-        "type": "catalogue",
-        "name": "Chaos - Chaos Space Marines",
-        "id": "a2ac-e47e-3564-2776",
-        "targetId": "c8da-e875-58f7-f6d6"
-      }
-    ],
-    "entryLinks": [
-      {
-        "import": true,
-        "name": "Detachment",
-        "hidden": false,
-        "type": "selectionEntry",
-        "id": "c62d-6a62-3548-b76e",
-        "targetId": "a435-b94a-eb7b-7c0c"
-      },
-      {
-        "entryLinks": [
-          {
-            "import": true,
-            "name": "Show Khorne Daemons",
-            "hidden": false,
-            "type": "selectionEntry",
-            "id": "ed4f-b26b-dd4a-3340",
-            "targetId": "f5f9-1339-84bb-ae85"
-          },
-          {
-            "import": true,
-            "name": "Show Nurgle Daemons",
-            "hidden": false,
-            "type": "selectionEntry",
-            "id": "153d-2ba9-ff5a-18f5",
-            "targetId": "f486-5e38-994c-15ec"
-          },
-          {
-            "import": true,
-            "name": "Show Slaanesh Daemons",
-            "hidden": false,
-            "type": "selectionEntry",
-            "id": "6494-c7c1-669b-69a0",
-            "targetId": "d3ff-16f0-dad2-c03c"
-          },
-          {
-            "import": true,
-            "name": "Show Tzeentch Daemons",
-            "hidden": false,
-            "type": "selectionEntry",
-            "id": "6521-e858-36dd-8949",
-            "targetId": "1248-8642-b42f-1dca"
-          },
-          {
-            "import": true,
-            "name": "Show Titans",
-            "hidden": false,
-            "type": "selectionEntry",
-            "id": "b5a-4957-a734-d027",
-            "targetId": "f26b-79db-80e0-3a3b"
-          }
-        ],
-        "import": true,
-        "name": "Show/Hide Options",
-        "hidden": false,
-        "type": "selectionEntry",
-        "id": "d6b9-36a1-6ef5-a028",
-        "targetId": "e8ef-836a-a9d1-901d"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "f987-05c5-56e7-166c",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Dark Commune",
-        "hidden": false,
-        "id": "b981-a2ac-86d0-1cbe",
-        "type": "selectionEntry",
-        "targetId": "1780-25b8-ce0b-898d"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "fe72-180c-3180-734a",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Traitor Enforcer",
-        "hidden": false,
-        "id": "1a9d-4e67-9d1f-cb91",
-        "type": "selectionEntry",
-        "targetId": "f69d-2171-5f95-9c88"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "69fd-2b4d-1d11-3b22",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Traitor Guardsmen Squad",
-        "hidden": false,
-        "id": "5e6c-178c-92b1-2de6",
-        "type": "selectionEntry",
-        "targetId": "8dc5-4dcb-d77f-7d23"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "51da-3208-c328-9ee9",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Gellerpox Infected [Legends]",
-        "hidden": false,
-        "id": "e8d2-106a-e195-ae23",
-        "type": "selectionEntry",
-        "targetId": "e1c2-8417-403a-68"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "7851-57b8-93ec-9aeb",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Fellgor Beastmen",
-        "hidden": false,
-        "id": "46d0-40d6-adfb-db29",
-        "type": "selectionEntry",
-        "targetId": "6bf7-888c-7aa6-6831"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "9661-fde9-6511-aae4",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Cultist Firebrand",
-        "hidden": false,
-        "id": "8c6e-1ee5-2c50-d61d",
-        "type": "selectionEntry",
-        "targetId": "cb66-af7-2cca-1c85"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "c78f-92c0-21de-7999",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Cultist Mob",
-        "hidden": false,
-        "id": "affe-d1e3-0377-f6f5",
-        "type": "selectionEntry",
-        "targetId": "1267-78f1-7774-859"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "2459-bfae-2d94-e00c",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Cultist Mob with Firearms [Legends]",
-        "hidden": false,
-        "id": "7613-f941-5829-876a",
-        "type": "selectionEntry",
-        "targetId": "478-9d24-e5c8-c6f7"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "477f-4600-0ee9-2a04",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Mutoid Vermin [Legends]",
-        "hidden": false,
-        "id": "f018-ea7f-b4a1-cf2f",
-        "type": "selectionEntry",
-        "targetId": "afed-8173-a1e0-cbae"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "d60e-14c5-2421-ff5d",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Negavolt Cultists [Legends]",
-        "hidden": false,
-        "id": "998c-ff18-9548-783b",
-        "type": "selectionEntry",
-        "targetId": "9238-473a-54ee-6b0e"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "e8c3-81e6-af27-efcd",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Renegade Enforcer [Legends]",
-        "hidden": false,
-        "id": "f200-6a81-b355-eeff",
-        "type": "selectionEntry",
-        "targetId": "5b66-39e6-aeb5-8011"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "fb6f-3b3f-b878-24a1",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Renegade Heavy Weapons Squad [Legends]",
-        "hidden": false,
-        "id": "847f-5171-f508-4397",
-        "type": "selectionEntry",
-        "targetId": "9df-7c70-84d2-e095"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "6705-cc46-5374-a5e0",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Renegade Ogryn Beast Handler [Legends]",
-        "hidden": false,
-        "id": "c47c-1579-9a09-1eda",
-        "type": "selectionEntry",
-        "targetId": "658e-a63f-bac7-6201"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "1a6a-a4ad-5b0d-f0ae",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Accursed Cultists",
-        "hidden": false,
-        "id": "072c-80c6-b7a3-f0e7",
-        "type": "selectionEntry",
-        "targetId": "23aa-b45a-6d5d-e92b"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "c03b-a616-fe0d-7e73",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Renegade Ogryn Brutes [Legends]",
-        "hidden": false,
-        "id": "05d7-76a6-c285-af97",
-        "type": "selectionEntry",
-        "targetId": "24c4-fa24-67ff-eef"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "6721-7ce3-a162-8a27",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Renegade Plague Ogryns [Legends]",
-        "hidden": false,
-        "id": "d8f6-58e4-bac7-6a12",
-        "type": "selectionEntry",
-        "targetId": "a7bb-ec24-40e6-5b8c"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "roster",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          },
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "ff7b-8f73-1756-650a",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "force",
-                    "childId": "7fe8-de91-8976-e705",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "add",
-            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
-            "field": "error"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Wretched Thralls",
-            "hidden": false,
-            "id": "c53a-b90c-8a5f-638b",
-            "targetId": "ac7d-42cc-342b-c911",
-            "primary": false
-          }
-        ],
-        "import": true,
-        "name": "Rogue Psyker [Legends]",
-        "hidden": false,
-        "id": "7df5-0ddc-5a83-0252",
-        "type": "selectionEntry",
-        "targetId": "c0f9-d16c-6caf-5b95"
-      },
-      {
-        "entryLinks": [
-          {
-            "import": true,
-            "name": "Amassing Power",
-            "hidden": false,
-            "id": "e158-bcd3-6391-6e6f",
-            "type": "selectionEntryGroup",
-            "targetId": "411f-c9c9-0b1b-b7df"
-          }
-        ],
-        "import": true,
-        "name": "Order of Battle",
-        "hidden": false,
-        "id": "4359-e886-5b7e-952b",
-        "type": "selectionEntry",
-        "targetId": "eda7-8b4b-3719-af36"
-      }
+      {"name": "Chaos - Chaos Knights Library", "id": "bbb1-4f45-fafb-fc09", "importRootEntries": true, "targetId": "8106-aad2-918a-9ac", "type": "catalogue"},
+      {"name": "Chaos - Daemons Library", "id": "4386-7333-134-9a18", "importRootEntries": true, "targetId": "b45c-af22-788a-dfd6", "type": "catalogue"},
+      {"name": "Library - Titans", "id": "9edd-ef10-2070-22d6", "importRootEntries": true, "targetId": "7481-280e-b55e-7867", "type": "catalogue"},
+      {"name": "Chaos - Chaos Space Marines", "id": "a2ac-e47e-3564-2776", "targetId": "c8da-e875-58f7-f6d6", "type": "catalogue"}
     ],
     "categoryEntries": [
       {
-        "constraints": [
-          {
-            "type": "max",
-            "value": 500,
-            "field": "51b2-306e-1021-d207",
-            "scope": "roster",
-            "shared": true,
-            "id": "3c2a-5857-e8bc-522e",
-            "includeChildSelections": true
-          }
-        ],
         "name": "Wretched Thralls",
         "id": "ac7d-42cc-342b-c911",
-        "hidden": true
+        "hidden": true,
+        "constraints": [{"id": "3c2a-5857-e8bc-522e", "field": "51b2-306e-1021-d207", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "max", "value": 500}]
+      }
+    ],
+    "entryLinks": [
+      {"name": "Detachment", "id": "c62d-6a62-3548-b76e", "hidden": false, "import": true, "targetId": "a435-b94a-eb7b-7c0c", "type": "selectionEntry"},
+      {
+        "name": "Show/Hide Options",
+        "id": "d6b9-36a1-6ef5-a028",
+        "hidden": false,
+        "import": true,
+        "targetId": "e8ef-836a-a9d1-901d",
+        "type": "selectionEntry",
+        "entryLinks": [
+          {"name": "Show Khorne Daemons", "id": "ed4f-b26b-dd4a-3340", "hidden": false, "import": true, "targetId": "f5f9-1339-84bb-ae85", "type": "selectionEntry"},
+          {"name": "Show Nurgle Daemons", "id": "153d-2ba9-ff5a-18f5", "hidden": false, "import": true, "targetId": "f486-5e38-994c-15ec", "type": "selectionEntry"},
+          {"name": "Show Slaanesh Daemons", "id": "6494-c7c1-669b-69a0", "hidden": false, "import": true, "targetId": "d3ff-16f0-dad2-c03c", "type": "selectionEntry"},
+          {"name": "Show Tzeentch Daemons", "id": "6521-e858-36dd-8949", "hidden": false, "import": true, "targetId": "1248-8642-b42f-1dca", "type": "selectionEntry"},
+          {"name": "Show Titans", "id": "b5a-4957-a734-d027", "hidden": false, "import": true, "targetId": "f26b-79db-80e0-3a3b", "type": "selectionEntry"}
+        ]
+      },
+      {
+        "name": "Dark Commune",
+        "id": "b981-a2ac-86d0-1cbe",
+        "hidden": false,
+        "import": true,
+        "targetId": "1780-25b8-ce0b-898d",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "f987-05c5-56e7-166c", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Traitor Enforcer",
+        "id": "1a9d-4e67-9d1f-cb91",
+        "hidden": false,
+        "import": true,
+        "targetId": "f69d-2171-5f95-9c88",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "fe72-180c-3180-734a", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Traitor Guardsmen Squad",
+        "id": "5e6c-178c-92b1-2de6",
+        "hidden": false,
+        "import": true,
+        "targetId": "8dc5-4dcb-d77f-7d23",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "69fd-2b4d-1d11-3b22", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gellerpox Infected [Legends]",
+        "id": "e8d2-106a-e195-ae23",
+        "hidden": false,
+        "import": true,
+        "targetId": "e1c2-8417-403a-68",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "51da-3208-c328-9ee9", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Fellgor Beastmen",
+        "id": "46d0-40d6-adfb-db29",
+        "hidden": false,
+        "import": true,
+        "targetId": "6bf7-888c-7aa6-6831",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "7851-57b8-93ec-9aeb", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cultist Firebrand",
+        "id": "8c6e-1ee5-2c50-d61d",
+        "hidden": false,
+        "import": true,
+        "targetId": "cb66-af7-2cca-1c85",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "9661-fde9-6511-aae4", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cultist Mob",
+        "id": "affe-d1e3-0377-f6f5",
+        "hidden": false,
+        "import": true,
+        "targetId": "1267-78f1-7774-859",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "c78f-92c0-21de-7999", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cultist Mob with Firearms [Legends]",
+        "id": "7613-f941-5829-876a",
+        "hidden": false,
+        "import": true,
+        "targetId": "478-9d24-e5c8-c6f7",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "2459-bfae-2d94-e00c", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mutoid Vermin [Legends]",
+        "id": "f018-ea7f-b4a1-cf2f",
+        "hidden": false,
+        "import": true,
+        "targetId": "afed-8173-a1e0-cbae",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "477f-4600-0ee9-2a04", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Negavolt Cultists [Legends]",
+        "id": "998c-ff18-9548-783b",
+        "hidden": false,
+        "import": true,
+        "targetId": "9238-473a-54ee-6b0e",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "d60e-14c5-2421-ff5d", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Renegade Enforcer [Legends]",
+        "id": "f200-6a81-b355-eeff",
+        "hidden": false,
+        "import": true,
+        "targetId": "5b66-39e6-aeb5-8011",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "e8c3-81e6-af27-efcd", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Renegade Heavy Weapons Squad [Legends]",
+        "id": "847f-5171-f508-4397",
+        "hidden": false,
+        "import": true,
+        "targetId": "9df-7c70-84d2-e095",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "fb6f-3b3f-b878-24a1", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Renegade Ogryn Beast Handler [Legends]",
+        "id": "c47c-1579-9a09-1eda",
+        "hidden": false,
+        "import": true,
+        "targetId": "658e-a63f-bac7-6201",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "6705-cc46-5374-a5e0", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Accursed Cultists",
+        "id": "072c-80c6-b7a3-f0e7",
+        "hidden": false,
+        "import": true,
+        "targetId": "23aa-b45a-6d5d-e92b",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "1a6a-a4ad-5b0d-f0ae", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Renegade Ogryn Brutes [Legends]",
+        "id": "05d7-76a6-c285-af97",
+        "hidden": false,
+        "import": true,
+        "targetId": "24c4-fa24-67ff-eef",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "c03b-a616-fe0d-7e73", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Renegade Plague Ogryns [Legends]",
+        "id": "d8f6-58e4-bac7-6a12",
+        "hidden": false,
+        "import": true,
+        "targetId": "a7bb-ec24-40e6-5b8c",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "6721-7ce3-a162-8a27", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rogue Psyker [Legends]",
+        "id": "7df5-0ddc-5a83-0252",
+        "hidden": false,
+        "import": true,
+        "targetId": "c0f9-d16c-6caf-5b95",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Wretched Thralls", "id": "c53a-b90c-8a5f-638b", "hidden": false, "primary": false, "targetId": "ac7d-42cc-342b-c911"}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "7fe8-de91-8976-e705", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "lessThan", "value": 1},
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "This unit can only be included in an Iconoclast Fiefdom Detachment",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "ff7b-8f73-1756-650a",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "7fe8-de91-8976-e705",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Order of Battle",
+        "id": "4359-e886-5b7e-952b",
+        "hidden": false,
+        "import": true,
+        "targetId": "eda7-8b4b-3719-af36",
+        "type": "selectionEntry",
+        "entryLinks": [{"name": "Amassing Power", "id": "e158-bcd3-6391-6e6f", "hidden": false, "import": true, "targetId": "411f-c9c9-0b1b-b7df", "type": "selectionEntryGroup"}]
       }
     ],
     "sharedProfiles": [
       {
-        "characteristics": [
-          {
-            "$text": "Melee",
-            "name": "Range",
-            "typeId": "914c-b413-91e3-a132"
-          },
-          {
-            "$text": "2",
-            "name": "A",
-            "typeId": "2337-daa1-6682-b110"
-          },
-          {
-            "$text": "4+",
-            "name": "WS",
-            "typeId": "95d1-95f-45b4-11d6"
-          },
-          {
-            "$text": "3",
-            "name": "S",
-            "typeId": "ab33-d393-96ce-ccba"
-          },
-          {
-            "$text": "0",
-            "name": "AP",
-            "typeId": "41a0-1301-112a-e2f2"
-          },
-          {
-            "$text": "1",
-            "name": "D",
-            "typeId": "3254-9fe6-d824-513e"
-          },
-          {
-            "name": "Keywords",
-            "typeId": "893f-9000-ccf7-648e"
-          }
-        ],
         "name": "Brutal assault weapon",
+        "id": "e9f3-32df-29b0-65f9",
+        "hidden": false,
         "typeId": "8a40-4aaa-c780-9046",
         "typeName": "Melee Weapons",
-        "hidden": false,
-        "id": "e9f3-32df-29b0-65f9"
+        "characteristics": [
+          {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+          {"name": "A", "$text": "2", "typeId": "2337-daa1-6682-b110"},
+          {"name": "WS", "$text": "4+", "typeId": "95d1-95f-45b4-11d6"},
+          {"name": "S", "$text": "3", "typeId": "ab33-d393-96ce-ccba"},
+          {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
+          {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+          {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
+        ]
       },
       {
-        "characteristics": [
-          {
-            "$text": "Melee",
-            "name": "Range",
-            "typeId": "914c-b413-91e3-a132"
-          },
-          {
-            "$text": "1",
-            "name": "A",
-            "typeId": "2337-daa1-6682-b110"
-          },
-          {
-            "$text": "4+",
-            "name": "WS",
-            "typeId": "95d1-95f-45b4-11d6"
-          },
-          {
-            "$text": "3",
-            "name": "S",
-            "typeId": "ab33-d393-96ce-ccba"
-          },
-          {
-            "$text": "0",
-            "name": "AP",
-            "typeId": "41a0-1301-112a-e2f2"
-          },
-          {
-            "$text": "1",
-            "name": "D",
-            "typeId": "3254-9fe6-d824-513e"
-          },
-          {
-            "name": "Keywords",
-            "typeId": "893f-9000-ccf7-648e"
-          }
-        ],
-        "comment": "For Cultists",
         "name": "Close combat weapon",
+        "id": "45ad-1ebf-4b69-61ea",
+        "comment": "For Cultists",
+        "hidden": false,
         "typeId": "8a40-4aaa-c780-9046",
         "typeName": "Melee Weapons",
-        "hidden": false,
-        "id": "45ad-1ebf-4b69-61ea"
+        "characteristics": [
+          {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+          {"name": "A", "$text": "1", "typeId": "2337-daa1-6682-b110"},
+          {"name": "WS", "$text": "4+", "typeId": "95d1-95f-45b4-11d6"},
+          {"name": "S", "$text": "3", "typeId": "ab33-d393-96ce-ccba"},
+          {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
+          {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+          {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
+        ]
       },
       {
-        "characteristics": [
-          {
-            "$text": "24\"",
-            "name": "Range",
-            "typeId": "9896-9419-16a1-92fc"
-          },
-          {
-            "$text": "1",
-            "name": "A",
-            "typeId": "3bb-c35f-f54-fb08"
-          },
-          {
-            "$text": "4+",
-            "name": "BS",
-            "typeId": "94d-8a98-cf90-183e"
-          },
-          {
-            "$text": "3",
-            "name": "S",
-            "typeId": "2229-f494-25db-c5d3"
-          },
-          {
-            "$text": "0",
-            "name": "AP",
-            "typeId": "9ead-8a10-520-de15"
-          },
-          {
-            "$text": "1",
-            "name": "D",
-            "typeId": "a354-c1c8-a745-f9e3"
-          },
-          {
-            "$text": "Rapid Fire 1",
-            "name": "Keywords",
-            "typeId": "7f1b-8591-2fcf-d01c"
-          }
-        ],
         "name": "Autogun",
+        "id": "9034-2462-6822-f020",
+        "hidden": false,
         "typeId": "f77d-b953-8fa4-b762",
         "typeName": "Ranged Weapons",
-        "hidden": false,
-        "id": "9034-2462-6822-f020"
+        "characteristics": [
+          {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+          {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
+          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+          {"name": "S", "$text": "3", "typeId": "2229-f494-25db-c5d3"},
+          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+          {"name": "Keywords", "$text": "Rapid Fire 1", "typeId": "7f1b-8591-2fcf-d01c"}
+        ]
       }
-    ],
-    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
-    "id": "46d8-abc8-ef3a-9f85",
-    "name": "Chaos - Chaos Knights",
-    "revision": 1,
-    "battleScribeVersion": 2.03,
-    "library": false,
-    "gameSystemId": "sys-352e-adc2-7639-d610",
-    "gameSystemRevision": 1,
-    "type": "catalogue"
+    ]
   }
 }

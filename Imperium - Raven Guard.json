@@ -1,1007 +1,479 @@
 {
   "catalogue": {
+    "name": "Imperium - Adeptus Astartes - Raven Guard",
+    "id": "6e59-e1ee-47ad-6ce5",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "sys-352e-adc2-7639-d610",
+    "gameSystemRevision": 1,
+    "library": false,
+    "revision": 3,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
+      {"name": "Imperium - Space Marines", "id": "4142-7347-ddc2-705a", "importRootEntries": true, "targetId": "e0af-67df-9d63-8fb7", "type": "catalogue"},
       {
-        "type": "catalogue",
-        "name": "Imperium - Space Marines",
-        "id": "4142-7347-ddc2-705a",
-        "targetId": "e0af-67df-9d63-8fb7",
-        "importRootEntries": true
-      },
-      {
-        "type": "catalogue",
         "name": "Imperium - Imperial Knights - Library",
         "id": "9a99-a0ad-519f-4619",
+        "importRootEntries": true,
         "targetId": "1b6d-dc06-5db9-c7d1",
-        "importRootEntries": true
+        "type": "catalogue"
       },
-      {
-        "type": "catalogue",
-        "name": "Imperium - Agents of the Imperium",
-        "id": "d580-ac13-6238-5511",
-        "targetId": "b00-cd86-4b4c-97ba",
-        "importRootEntries": true
-      }
+      {"name": "Imperium - Agents of the Imperium", "id": "d580-ac13-6238-5511", "importRootEntries": true, "targetId": "b00-cd86-4b4c-97ba", "type": "catalogue"}
     ],
+    "entryLinks": [
+      {"name": "Kayvaan Shrike", "id": "8ec7-1c8b-5540-5f14", "hidden": false, "import": true, "targetId": "339f-9776-243d-69a6", "type": "selectionEntry"},
+      {"name": "Aethon Shaan", "id": "5519-9de6-e650-d2c7", "hidden": false, "import": true, "targetId": "cbb9-15e9-16ae-6597", "type": "selectionEntry"}
+    ],
+    "infoLinks": [{"name": "Lone Operative", "id": "cf46-1303-160c-bc8d", "hidden": false, "targetId": "a8a0-8fe7-898-e0f3", "type": "rule"}],
     "sharedSelectionEntries": [
       {
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "efd3-3d1a-f561-bdbf"
-          }
-        ],
-        "costs": [
-          {
-            "name": "pts",
-            "typeId": "51b2-306e-1021-d207",
-            "value": 100
-          }
-        ],
-        "categoryLinks": [
-          {
-            "targetId": "4f3a-f0f7-6647-348d",
-            "id": "5f4a-196b-1bdb-f032",
-            "primary": true,
-            "name": "Epic Hero"
-          },
-          {
-            "targetId": "9cfd-1c32-585f-7d5c",
-            "id": "dc2-6e09-ecae-705c",
-            "primary": false,
-            "name": "Character"
-          },
-          {
-            "targetId": "cf47-a0d7-7207-29dc",
-            "id": "e710-c28-8925-9d1b",
-            "primary": false,
-            "name": "Infantry"
-          },
-          {
-            "targetId": "aff3-d6a3-2a95-9dc",
-            "id": "82d1-b78-bef6-5dcd",
-            "primary": false,
-            "name": "Imperium"
-          },
-          {
-            "targetId": "c619-2086-bbcf-69c9",
-            "id": "829a-2262-2b34-ee42",
-            "primary": false,
-            "name": "Fly"
-          },
-          {
-            "targetId": "dda2-bb0a-215e-ad9c",
-            "id": "835c-c945-97-23ac",
-            "primary": false,
-            "name": "Jump Pack"
-          },
-          {
-            "targetId": "6e7-40c-58d9-e402",
-            "id": "4eb3-bb5-f7a8-3be0",
-            "primary": false,
-            "name": "Faction: Adeptus Astartes"
-          },
-          {
-            "targetId": "84b7-7194-3b84-1b0c",
-            "id": "204b-8967-eb6b-e23f",
-            "primary": false,
-            "name": "Faction: Raven Guard"
-          },
-          {
-            "targetId": "5bd8-882d-302b-48f3",
-            "id": "2933-41fe-e2fa-f739",
-            "primary": false,
-            "name": "Chapter Master"
-          },
-          {
-            "targetId": "a4c3-fdb-4d12-e303",
-            "id": "70ef-4e91-488-c67f",
-            "primary": false,
-            "name": "Kayvaan Shrike"
-          },
-          {
-            "targetId": "7295-ed65-8ff4-7a5f",
-            "id": "87fd-51c6-d46e-53c6",
-            "primary": false,
-            "name": "Phobos"
-          }
-        ],
-        "infoLinks": [
-          {
-            "name": "Leader",
-            "hidden": false,
-            "type": "rule",
-            "id": "df41-a640-25b9-fa28",
-            "targetId": "b4dd-3e1f-41cb-218f"
-          },
-          {
-            "name": "Oath of Moment",
-            "hidden": false,
-            "type": "rule",
-            "id": "8269-c8d-6c08-b8e4",
-            "targetId": "3b76-4053-ece9-6e7d"
-          },
-          {
-            "modifiers": [
-              {
-                "conditions": [
-                  {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "cbb9-15e9-16ae-6597",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "set",
-                "value": true,
-                "field": "hidden"
-              }
-            ],
-            "name": "Lone Operative",
-            "hidden": false,
-            "type": "rule",
-            "id": "7588-d43a-da8e-84ee",
-            "targetId": "a8a0-8fe7-898-e0f3"
-          },
-          {
-            "name": "Deep Strike",
-            "hidden": false,
-            "type": "rule",
-            "id": "7c9-77f1-dd05-3fc1",
-            "targetId": "7cb5-dd6b-dd87-ad3b"
-          },
-          {
-            "name": "Stealth",
-            "hidden": false,
-            "type": "rule",
-            "id": "f773-9042-cdb0-5c49",
-            "targetId": "bec5-4288-34a6-ccfa"
-          }
-        ],
-        "profiles": [
-          {
-            "characteristics": [
-              {
-                "name": "M",
-                "typeId": "e703-ecb6-5ce7-aec1",
-                "$text": "12\""
-              },
-              {
-                "name": "T",
-                "typeId": "d29d-cf75-fc2d-34a4",
-                "$text": "4"
-              },
-              {
-                "name": "Sv",
-                "typeId": "450-a17e-9d5e-29da",
-                "$text": "3+"
-              },
-              {
-                "name": "W",
-                "typeId": "750a-a2ec-90d3-21fe",
-                "$text": "5"
-              },
-              {
-                "name": "LD",
-                "typeId": "58d2-b879-49c7-43bc",
-                "$text": "6+"
-              },
-              {
-                "name": "OC",
-                "typeId": "bef7-942a-1a23-59f8",
-                "$text": "1"
-              },
-              {
-                "name": "InSv",
-                "typeId": "55a7-5b54-c60d-11dc",
-                "$text": "4+"
-              }
-            ],
-            "name": "Kayvaan Shrike",
-            "typeId": "c547-1836-d8a-ff4f",
-            "typeName": "Unit",
-            "hidden": false,
-            "id": "8753-86b1-ba10-487a"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "While this model is leading a unit, models  in this unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Trifold Path of Shadow",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "f688-b597-c9de-b5ac"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of any enemy models, you can remove it from the battlefield and place it into Strategic Reserves.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Echo of the Ravenspire",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "b769-af88-7e44-e386"
-          },
-          {
-            "characteristics": [
-              {
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573",
-                "$text": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSORS WITH JUMP PACKS\n■ VANGUARD VETERAN SQUAD WITH JUMP PACKS"
-              }
-            ],
-            "name": "Leader",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "babb-fe84-e1d4-1012"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "If you include this model in your army, until the end of the battle, non-Character models in Assault\nIntercessors with Jump Packs units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Inspiring Commander",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "ed25-707a-ee0b-6b2f"
-          }
-        ],
-        "selectionEntries": [
-          {
-            "constraints": [
-              {
-                "type": "min",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "e1f6-cabd-f5a4-c1f9"
-              },
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "5406-4a6d-7f19-9e96"
-              }
-            ],
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "18\"",
-                    "name": "Range",
-                    "typeId": "9896-9419-16a1-92fc"
-                  },
-                  {
-                    "$text": "2",
-                    "name": "A",
-                    "typeId": "3bb-c35f-f54-fb08"
-                  },
-                  {
-                    "$text": "2+",
-                    "name": "BS",
-                    "typeId": "94d-8a98-cf90-183e"
-                  },
-                  {
-                    "$text": "5",
-                    "name": "S",
-                    "typeId": "2229-f494-25db-c5d3"
-                  },
-                  {
-                    "$text": "-1",
-                    "name": "AP",
-                    "typeId": "9ead-8a10-520-de15"
-                  },
-                  {
-                    "$text": "2",
-                    "name": "D",
-                    "typeId": "a354-c1c8-a745-f9e3"
-                  },
-                  {
-                    "$text": "Pistol, Precision",
-                    "name": "Keywords",
-                    "typeId": "7f1b-8591-2fcf-d01c"
-                  }
-                ],
-                "name": "Blackout",
-                "typeId": "f77d-b953-8fa4-b762",
-                "typeName": "Ranged Weapons",
-                "hidden": false,
-                "id": "6521-4333-c221-6c5b"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Pistol",
-                "hidden": false,
-                "type": "rule",
-                "id": "7e20-fedc-d0e7-93d7",
-                "targetId": "8bf7-8812-923d-29e4"
-              },
-              {
-                "name": "Precision",
-                "hidden": false,
-                "type": "rule",
-                "id": "9416-5183-f8bb-d1ea",
-                "targetId": "9143-31ae-e0a6-6007"
-              }
-            ],
-            "type": "upgrade",
-            "import": true,
-            "name": "Blackout",
-            "hidden": false,
-            "id": "b2d0-b85d-3880-3efe"
-          },
-          {
-            "constraints": [
-              {
-                "type": "min",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "85e2-58ed-992b-9901"
-              },
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "ded4-cfd8-9dfa-462"
-              }
-            ],
-            "infoLinks": [
-              {
-                "name": "Twin-linked",
-                "hidden": false,
-                "type": "rule",
-                "id": "7775-f720-bd7d-71ea",
-                "targetId": "cf93-ad4d-2f08-a79d"
-              },
-              {
-                "name": "Precision",
-                "hidden": false,
-                "type": "rule",
-                "id": "3fa7-4d8e-f4e5-be21",
-                "targetId": "9143-31ae-e0a6-6007"
-              }
-            ],
-            "profiles": [
-              {
-                "characteristics": [
-                  {
-                    "$text": "Melee",
-                    "name": "Range",
-                    "typeId": "914c-b413-91e3-a132"
-                  },
-                  {
-                    "$text": "7",
-                    "name": "A",
-                    "typeId": "2337-daa1-6682-b110"
-                  },
-                  {
-                    "$text": "2+",
-                    "name": "WS",
-                    "typeId": "95d1-95f-45b4-11d6"
-                  },
-                  {
-                    "$text": "5",
-                    "name": "S",
-                    "typeId": "ab33-d393-96ce-ccba"
-                  },
-                  {
-                    "$text": "-2",
-                    "name": "AP",
-                    "typeId": "41a0-1301-112a-e2f2"
-                  },
-                  {
-                    "$text": "2",
-                    "name": "D",
-                    "typeId": "3254-9fe6-d824-513e"
-                  },
-                  {
-                    "$text": "Precision, Twin-linked",
-                    "name": "Keywords",
-                    "typeId": "893f-9000-ccf7-648e"
-                  }
-                ],
-                "name": "The Raven's Talons",
-                "typeId": "8a40-4aaa-c780-9046",
-                "typeName": "Melee Weapons",
-                "hidden": false,
-                "id": "2ebd-2e8d-801c-45a6"
-              }
-            ],
-            "type": "upgrade",
-            "import": true,
-            "name": "The Raven's Talons",
-            "hidden": false,
-            "id": "e4fe-9ddc-4e91-c960"
-          }
-        ],
-        "entryLinks": [
-          {
-            "import": true,
-            "name": "Warlord",
-            "hidden": false,
-            "type": "selectionEntry",
-            "id": "1ca1-abf3-563f-725f",
-            "targetId": "caa-f869-3cbd-b48e",
-            "sortIndex": 2
-          }
-        ],
-        "selectionEntryGroups": [
-          {
-            "entryLinks": [
-              {
-                "import": true,
-                "name": "Mighty Champions",
-                "hidden": false,
-                "id": "4efd-4719-5cbe-e6ba",
-                "type": "selectionEntryGroup",
-                "targetId": "f842-6e90-bc5a-80f1"
-              }
-            ],
-            "name": "Crusade",
-            "id": "f071-4d39-b573-d8b2",
-            "hidden": false,
-            "sortIndex": 1
-          }
-        ],
-        "modifiers": [
-          {
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "cbb9-15e9-16ae-6597",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true
-              }
-            ],
-            "type": "remove",
-            "value": "5bd8-882d-302b-48f3",
-            "field": "category"
-          },
-          {
-            "conditions": [
-              {
-                "type": "atLeast",
-                "value": 1,
-                "field": "selections",
-                "scope": "roster",
-                "childId": "cbb9-15e9-16ae-6597",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": true
-              }
-            ],
-            "type": "add",
-            "value": "2d7f-1892-2fd0-e29c",
-            "field": "category"
-          }
-        ],
-        "type": "model",
-        "import": true,
         "name": "Kayvaan Shrike",
-        "hidden": false,
         "id": "339f-9776-243d-69a6",
+        "hidden": false,
+        "import": true,
+        "type": "model",
         "associations": [
           {
-            "min": 0,
-            "max": 1,
-            "scope": "force",
-            "childId": "unit",
             "name": "Leading",
             "id": "ea9f-2d81-2bfe-9a93",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
             "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
             "conditionGroups": [
               {
                 "type": "or",
                 "conditions": [
                   {
-                    "type": "instanceOf",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "self",
                     "childId": "6c92-4e9d-b5e5-1287",
-                    "shared": true,
-                    "childName": "Assault Intercessors with Jump Packs"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
+                    "childName": "Assault Intercessors with Jump Packs",
                     "field": "selections",
                     "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
                     "childId": "21e8-92f1-9d9a-8c49",
-                    "shared": true,
-                    "childName": "Assault Squad with Jump Packs"
-                  },
-                  {
-                    "type": "instanceOf",
-                    "value": 1,
+                    "childName": "Assault Squad with Jump Packs",
                     "field": "selections",
                     "scope": "self",
-                    "childId": "17c0-599-955a-bdab",
                     "shared": true,
-                    "childName": "Vanguard Veteran Squad with Jump Packs"
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "17c0-599-955a-bdab",
+                    "childName": "Vanguard Veteran Squad with Jump Packs",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
                   }
                 ]
               }
-            ],
-            "includeChildSelections": true,
-            "childName": "unit",
-            "action": "group"
-          }
-        ]
-      },
-      {
-        "profiles": [
-          {
-            "characteristics": [
-              {
-                "name": "M",
-                "typeId": "e703-ecb6-5ce7-aec1",
-                "$text": "14\""
-              },
-              {
-                "name": "T",
-                "typeId": "d29d-cf75-fc2d-34a4",
-                "$text": "4"
-              },
-              {
-                "name": "Sv",
-                "typeId": "450-a17e-9d5e-29da",
-                "$text": "3+"
-              },
-              {
-                "name": "W",
-                "typeId": "750a-a2ec-90d3-21fe",
-                "$text": "5"
-              },
-              {
-                "name": "LD",
-                "typeId": "58d2-b879-49c7-43bc",
-                "$text": "6+"
-              },
-              {
-                "name": "OC",
-                "typeId": "bef7-942a-1a23-59f8",
-                "$text": "1"
-              },
-              {
-                "name": "InSv",
-                "typeId": "55a7-5b54-c60d-11dc",
-                "$text": "4+"
-              }
-            ],
-            "name": "Aethon Shaan",
-            "typeId": "c547-1836-d8a-ff4f",
-            "typeName": "Unit",
-            "hidden": false,
-            "id": "8df6-281c-884c-7c5c"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "At the start of the Declare Battle Formations step, if your army includes Aethon Shaan and Kayvaan\nShrike, until the end of the battle, your Kayvaan Shrike unit loses its Lone Operative ability and it\nreplaces its Chapter Master keyword with Captain.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Chapter Master of the Raven Guard",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "f9e2-1180-e33c-e82c"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "In your Command phase, you can select one unit from your opponent’s army. Until the start of your next Command phase, each time an Adeptus Astartes unit from your army declares a charge while it is within 12\" of that enemy unit, you can re-roll the Charge roll, but it must declare that enemy unit as a target of that charge (if possible).",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Master of Shadows",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "5dbe-abfc-6ac6-2061"
-          },
-          {
-            "characteristics": [
-              {
-                "$text": "You can target this model’s unit with the Rapid Ingress and Heroic Intervention Stratagems for 0CP,\neven if you have already used that Stratagem on a different unit this phase.",
-                "name": "Description",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ],
-            "name": "Blackwing Mantle",
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "hidden": false,
-            "id": "1384-de6c-2c62-4f26"
+            ]
           }
         ],
+        "categoryLinks": [
+          {"name": "Epic Hero", "id": "5f4a-196b-1bdb-f032", "primary": true, "targetId": "4f3a-f0f7-6647-348d"},
+          {"name": "Character", "id": "dc2-6e09-ecae-705c", "primary": false, "targetId": "9cfd-1c32-585f-7d5c"},
+          {"name": "Infantry", "id": "e710-c28-8925-9d1b", "primary": false, "targetId": "cf47-a0d7-7207-29dc"},
+          {"name": "Imperium", "id": "82d1-b78-bef6-5dcd", "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
+          {"name": "Fly", "id": "829a-2262-2b34-ee42", "primary": false, "targetId": "c619-2086-bbcf-69c9"},
+          {"name": "Jump Pack", "id": "835c-c945-97-23ac", "primary": false, "targetId": "dda2-bb0a-215e-ad9c"},
+          {"name": "Faction: Adeptus Astartes", "id": "4eb3-bb5-f7a8-3be0", "primary": false, "targetId": "6e7-40c-58d9-e402"},
+          {"name": "Faction: Raven Guard", "id": "204b-8967-eb6b-e23f", "primary": false, "targetId": "84b7-7194-3b84-1b0c"},
+          {"name": "Chapter Master", "id": "2933-41fe-e2fa-f739", "primary": false, "targetId": "5bd8-882d-302b-48f3"},
+          {"name": "Kayvaan Shrike", "id": "70ef-4e91-488-c67f", "primary": false, "targetId": "a4c3-fdb-4d12-e303"},
+          {"name": "Phobos", "id": "87fd-51c6-d46e-53c6", "primary": false, "targetId": "7295-ed65-8ff4-7a5f"}
+        ],
+        "constraints": [{"id": "efd3-3d1a-f561-bdbf", "field": "selections", "scope": "roster", "shared": true, "type": "max", "value": 1}],
+        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100}],
+        "entryLinks": [{"name": "Warlord", "id": "1ca1-abf3-563f-725f", "hidden": false, "import": true, "sortIndex": 2, "targetId": "caa-f869-3cbd-b48e", "type": "selectionEntry"}],
         "infoLinks": [
-          {
-            "name": "Deep Strike",
-            "id": "b628-a463-3a3a-822c",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "7cb5-dd6b-dd87-ad3b"
-          },
-          {
-            "name": "Oath of Moment",
-            "id": "0665-b752-c071-f547",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "3b76-4053-ece9-6e7d"
-          },
-          {
-            "name": "Stealth",
-            "id": "f6cc-d9d4-a37a-0a0e",
-            "hidden": false,
-            "type": "rule",
-            "targetId": "bec5-4288-34a6-ccfa"
-          },
+          {"name": "Leader", "id": "df41-a640-25b9-fa28", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
+          {"name": "Oath of Moment", "id": "8269-c8d-6c08-b8e4", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {
             "name": "Lone Operative",
-            "id": "403c-1123-9dbc-c0ff",
+            "id": "7588-d43a-da8e-84ee",
             "hidden": false,
+            "targetId": "a8a0-8fe7-898-e0f3",
             "type": "rule",
-            "targetId": "a8a0-8fe7-898-e0f3"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "max",
-            "value": 1,
-            "field": "selections",
-            "scope": "roster",
-            "shared": true,
-            "id": "8a9f-725f-268e-0d5e"
-          }
-        ],
-        "entryLinks": [
-          {
-            "constraints": [
+            "modifiers": [
               {
-                "type": "min",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "422e-8efb-d3e5-d931-min",
-                "includeChildSelections": false
-              },
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "422e-8efb-d3e5-d931-max",
-                "includeChildSelections": false
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "cbb9-15e9-16ae-6597",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
               }
-            ],
-            "import": true,
-            "name": "Heavy Bolt Pistol",
-            "hidden": false,
-            "id": "2326-3d93-b612-6235",
-            "type": "selectionEntry",
-            "targetId": "eca4-d5d2-18a1-01a8"
+            ]
+          },
+          {"name": "Deep Strike", "id": "7c9-77f1-dd05-3fc1", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
+          {"name": "Stealth", "id": "f773-9042-cdb0-5c49", "hidden": false, "targetId": "bec5-4288-34a6-ccfa", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "category",
+            "type": "remove",
+            "value": "5bd8-882d-302b-48f3",
+            "conditions": [
+              {
+                "childId": "cbb9-15e9-16ae-6597",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
           },
           {
-            "import": true,
-            "name": "Warlord",
+            "field": "category",
+            "type": "add",
+            "value": "2d7f-1892-2fd0-e29c",
+            "conditions": [
+              {
+                "childId": "cbb9-15e9-16ae-6597",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Kayvaan Shrike",
+            "id": "8753-86b1-ba10-487a",
             "hidden": false,
-            "id": "2050-4b6a-c632-c1de",
-            "type": "selectionEntry",
-            "targetId": "caa-f869-3cbd-b48e",
-            "sortIndex": 2
+            "typeId": "c547-1836-d8a-ff4f",
+            "typeName": "Unit",
+            "characteristics": [
+              {"name": "M", "$text": "12\"", "typeId": "e703-ecb6-5ce7-aec1"},
+              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
+              {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
+              {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+              {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
+            ]
+          },
+          {
+            "name": "Trifold Path of Shadow",
+            "id": "f688-b597-c9de-b5ac",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "While this model is leading a unit, models  in this unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Echo of the Ravenspire",
+            "id": "b769-af88-7e44-e386",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of any enemy models, you can remove it from the battlefield and place it into Strategic Reserves.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Leader",
+            "id": "babb-fe84-e1d4-1012",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSORS WITH JUMP PACKS\n■ VANGUARD VETERAN SQUAD WITH JUMP PACKS",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Inspiring Commander",
+            "id": "ed25-707a-ee0b-6b2f",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "If you include this model in your army, until the end of the battle, non-Character models in Assault\nIntercessors with Jump Packs units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "selectionEntries": [
           {
+            "name": "Blackout",
+            "id": "b2d0-b85d-3880-3efe",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
             "constraints": [
-              {
-                "type": "min",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "67c9-75e2-4632-2059-min",
-                "includeChildSelections": false
-              },
-              {
-                "type": "max",
-                "value": 1,
-                "field": "selections",
-                "scope": "parent",
-                "shared": true,
-                "id": "67c9-75e2-4632-2059-max",
-                "includeChildSelections": false
-              }
+              {"id": "e1f6-cabd-f5a4-c1f9", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "5406-4a6d-7f19-9e96", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "infoLinks": [
+              {"name": "Pistol", "id": "7e20-fedc-d0e7-93d7", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"},
+              {"name": "Precision", "id": "9416-5183-f8bb-d1ea", "hidden": false, "targetId": "9143-31ae-e0a6-6007", "type": "rule"}
             ],
             "profiles": [
               {
-                "characteristics": [
-                  {
-                    "$text": "Melee",
-                    "name": "Range",
-                    "typeId": "914c-b413-91e3-a132"
-                  },
-                  {
-                    "$text": "7",
-                    "name": "A",
-                    "typeId": "2337-daa1-6682-b110"
-                  },
-                  {
-                    "$text": "2+",
-                    "name": "WS",
-                    "typeId": "95d1-95f-45b4-11d6"
-                  },
-                  {
-                    "$text": "5",
-                    "name": "S",
-                    "typeId": "ab33-d393-96ce-ccba"
-                  },
-                  {
-                    "$text": "-2",
-                    "name": "AP",
-                    "typeId": "41a0-1301-112a-e2f2"
-                  },
-                  {
-                    "$text": "2",
-                    "name": "D",
-                    "typeId": "3254-9fe6-d824-513e"
-                  },
-                  {
-                    "$text": "Sustained Hits 2, Twin-linked",
-                    "name": "Keywords",
-                    "typeId": "893f-9000-ccf7-648e"
-                  }
-                ],
-                "name": "Claws of Severax",
-                "typeId": "8a40-4aaa-c780-9046",
-                "typeName": "Melee Weapons",
+                "name": "Blackout",
+                "id": "6521-4333-c221-6c5b",
                 "hidden": false,
-                "id": "ab3f-9aac-cca1-cbe6"
+                "typeId": "f77d-b953-8fa4-b762",
+                "typeName": "Ranged Weapons",
+                "characteristics": [
+                  {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
+                  {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+                  {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
+                  {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                  {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+                  {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
+                  {"name": "Keywords", "$text": "Pistol, Precision", "typeId": "7f1b-8591-2fcf-d01c"}
+                ]
               }
+            ]
+          },
+          {
+            "name": "The Raven's Talons",
+            "id": "e4fe-9ddc-4e91-c960",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [
+              {"id": "85e2-58ed-992b-9901", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "ded4-cfd8-9dfa-462", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
             ],
             "infoLinks": [
-              {
-                "name": "Sustained Hits",
-                "id": "78fc-f0be-3cbf-283d",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "1897-c22c-9597-12b1"
-              },
-              {
-                "name": "Twin-linked",
-                "id": "5ea5-a021-befb-5958",
-                "hidden": false,
-                "type": "rule",
-                "targetId": "cf93-ad4d-2f08-a79d"
-              }
+              {"name": "Twin-linked", "id": "7775-f720-bd7d-71ea", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"},
+              {"name": "Precision", "id": "3fa7-4d8e-f4e5-be21", "hidden": false, "targetId": "9143-31ae-e0a6-6007", "type": "rule"}
             ],
-            "type": "upgrade",
-            "import": true,
-            "name": "Claws of Severax",
-            "hidden": false,
-            "id": "13de-b9ab-2901-38e2"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "targetId": "9cfd-1c32-585f-7d5c",
-            "id": "8786-fb4d-3f45-01d4",
-            "primary": false,
-            "name": "Character"
-          },
-          {
-            "targetId": "4f3a-f0f7-6647-348d",
-            "id": "283d-4785-e1e7-1003",
-            "primary": true,
-            "name": "Epic Hero"
-          },
-          {
-            "targetId": "cf47-a0d7-7207-29dc",
-            "id": "f5f8-5ed2-fc47-d023",
-            "primary": false,
-            "name": "Infantry"
-          },
-          {
-            "targetId": "c619-2086-bbcf-69c9",
-            "id": "5a19-2125-bd8e-9e39",
-            "primary": false,
-            "name": "Fly"
-          },
-          {
-            "targetId": "dda2-bb0a-215e-ad9c",
-            "id": "86da-61c9-3a04-a65f",
-            "primary": false,
-            "name": "Jump Pack"
-          },
-          {
-            "targetId": "aff3-d6a3-2a95-9dc",
-            "id": "8422-edda-9aab-5ba9",
-            "primary": false,
-            "name": "Imperium"
-          },
-          {
-            "targetId": "6e7-40c-58d9-e402",
-            "id": "5712-84fe-f31e-f520",
-            "primary": false,
-            "name": "Faction: Adeptus Astartes"
-          },
-          {
-            "targetId": "84b7-7194-3b84-1b0c",
-            "id": "10b4-bdf4-c9c6-0461",
-            "primary": false,
-            "name": "Faction: Raven Guard"
-          },
-          {
-            "targetId": "5179-8ede-45e3-49a2",
-            "id": "39d5-d24f-dc94-6c95",
-            "primary": false,
-            "name": "Tacticus"
-          },
-          {
-            "targetId": "5bd8-882d-302b-48f3",
-            "id": "decf-5df1-41d6-f7fd",
-            "primary": false,
-            "name": "Chapter Master"
-          },
-          {
-            "targetId": "137d-c790-9826-095d",
-            "id": "99b0-46a3-a073-5b8c",
-            "primary": false,
-            "name": "Aethon Shaan"
-          }
-        ],
-        "costs": [
-          {
-            "name": "pts",
-            "typeId": "51b2-306e-1021-d207",
-            "value": 100
-          },
-          {
-            "name": "Crusade Points",
-            "typeId": "b03b-c239-15a5-da55",
-            "value": 0
-          },
-          {
-            "name": "Crusade: Battle Honours",
-            "typeId": "75bb-ded1-c86d-bdf0",
-            "value": 0
-          },
-          {
-            "name": "Crusade: Experience",
-            "typeId": "a623-fe74-1d33-cddf",
-            "value": 0
-          },
-          {
-            "name": "Crusade: Weapon Modifications",
-            "typeId": "716d-91b7-d55a-1022",
-            "value": 0
-          },
-          {
-            "name": "Blackstone Fragments",
-            "typeId": "ac6b-ced3-9b5e-9a6e",
-            "value": 0
-          },
-          {
-            "name": "Detachment Points",
-            "typeId": "82ae-1066-5107-6ae0",
-            "value": 0
-          },
-          {
-            "name": "Enhancements",
-            "typeId": "f759-1bc4-cb3a-f0d2",
-            "value": 0
-          },
-          {
-            "name": "Honour Points",
-            "typeId": "8135-9a2f-6627-09e2",
-            "value": 0
-          },
-          {
-            "name": "Relic Fragments",
-            "typeId": "0ece-6541-4662-ece2",
-            "value": 0
+            "profiles": [
+              {
+                "name": "The Raven's Talons",
+                "id": "2ebd-2e8d-801c-45a6",
+                "hidden": false,
+                "typeId": "8a40-4aaa-c780-9046",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                  {"name": "A", "$text": "7", "typeId": "2337-daa1-6682-b110"},
+                  {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
+                  {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+                  {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
+                  {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+                  {"name": "Keywords", "$text": "Precision, Twin-linked", "typeId": "893f-9000-ccf7-648e"}
+                ]
+              }
+            ]
           }
         ],
         "selectionEntryGroups": [
           {
-            "entryLinks": [
+            "name": "Crusade",
+            "id": "f071-4d39-b573-d8b2",
+            "hidden": false,
+            "sortIndex": 1,
+            "entryLinks": [{"name": "Mighty Champions", "id": "4efd-4719-5cbe-e6ba", "hidden": false, "import": true, "targetId": "f842-6e90-bc5a-80f1", "type": "selectionEntryGroup"}]
+          }
+        ]
+      },
+      {
+        "name": "Aethon Shaan",
+        "id": "cbb9-15e9-16ae-6597",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Character", "id": "8786-fb4d-3f45-01d4", "primary": false, "targetId": "9cfd-1c32-585f-7d5c"},
+          {"name": "Epic Hero", "id": "283d-4785-e1e7-1003", "primary": true, "targetId": "4f3a-f0f7-6647-348d"},
+          {"name": "Infantry", "id": "f5f8-5ed2-fc47-d023", "primary": false, "targetId": "cf47-a0d7-7207-29dc"},
+          {"name": "Fly", "id": "5a19-2125-bd8e-9e39", "primary": false, "targetId": "c619-2086-bbcf-69c9"},
+          {"name": "Jump Pack", "id": "86da-61c9-3a04-a65f", "primary": false, "targetId": "dda2-bb0a-215e-ad9c"},
+          {"name": "Imperium", "id": "8422-edda-9aab-5ba9", "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
+          {"name": "Faction: Adeptus Astartes", "id": "5712-84fe-f31e-f520", "primary": false, "targetId": "6e7-40c-58d9-e402"},
+          {"name": "Faction: Raven Guard", "id": "10b4-bdf4-c9c6-0461", "primary": false, "targetId": "84b7-7194-3b84-1b0c"},
+          {"name": "Tacticus", "id": "39d5-d24f-dc94-6c95", "primary": false, "targetId": "5179-8ede-45e3-49a2"},
+          {"name": "Chapter Master", "id": "decf-5df1-41d6-f7fd", "primary": false, "targetId": "5bd8-882d-302b-48f3"},
+          {"name": "Aethon Shaan", "id": "99b0-46a3-a073-5b8c", "primary": false, "targetId": "137d-c790-9826-095d"}
+        ],
+        "constraints": [{"id": "8a9f-725f-268e-0d5e", "field": "selections", "scope": "roster", "shared": true, "type": "max", "value": 1}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
+        "entryLinks": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "id": "2326-3d93-b612-6235",
+            "hidden": false,
+            "import": true,
+            "targetId": "eca4-d5d2-18a1-01a8",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "422e-8efb-d3e5-d931-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "422e-8efb-d3e5-d931-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {"name": "Warlord", "id": "2050-4b6a-c632-c1de", "hidden": false, "import": true, "sortIndex": 2, "targetId": "caa-f869-3cbd-b48e", "type": "selectionEntry"}
+        ],
+        "infoLinks": [
+          {"name": "Deep Strike", "id": "b628-a463-3a3a-822c", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
+          {"name": "Oath of Moment", "id": "0665-b752-c071-f547", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Stealth", "id": "f6cc-d9d4-a37a-0a0e", "hidden": false, "targetId": "bec5-4288-34a6-ccfa", "type": "rule"},
+          {"name": "Lone Operative", "id": "403c-1123-9dbc-c0ff", "hidden": false, "targetId": "a8a0-8fe7-898-e0f3", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Aethon Shaan",
+            "id": "8df6-281c-884c-7c5c",
+            "hidden": false,
+            "typeId": "c547-1836-d8a-ff4f",
+            "typeName": "Unit",
+            "characteristics": [
+              {"name": "M", "$text": "14\"", "typeId": "e703-ecb6-5ce7-aec1"},
+              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
+              {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
+              {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+              {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
+            ]
+          },
+          {
+            "name": "Chapter Master of the Raven Guard",
+            "id": "f9e2-1180-e33c-e82c",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
               {
-                "import": true,
-                "name": "Mighty Champions",
-                "hidden": false,
-                "id": "7694-ae85-bdb5-1ec5",
-                "type": "selectionEntryGroup",
-                "targetId": "f842-6e90-bc5a-80f1"
+                "name": "Description",
+                "$text": "At the start of the Declare Battle Formations step, if your army includes Aethon Shaan and Kayvaan\nShrike, until the end of the battle, your Kayvaan Shrike unit loses its Lone Operative ability and it\nreplaces its Chapter Master keyword with Captain.",
+                "typeId": "9b8f-694b-e5e-b573"
               }
+            ]
+          },
+          {
+            "name": "Master of Shadows",
+            "id": "5dbe-abfc-6ac6-2061",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "In your Command phase, you can select one unit from your opponent’s army. Until the start of your next Command phase, each time an Adeptus Astartes unit from your army declares a charge while it is within 12\" of that enemy unit, you can re-roll the Charge roll, but it must declare that enemy unit as a target of that charge (if possible).",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Blackwing Mantle",
+            "id": "1384-de6c-2c62-4f26",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "You can target this model’s unit with the Rapid Ingress and Heroic Intervention Stratagems for 0CP,\neven if you have already used that Stratagem on a different unit this phase.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Claws of Severax",
+            "id": "13de-b9ab-2901-38e2",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [
+              {"id": "67c9-75e2-4632-2059-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "67c9-75e2-4632-2059-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
             ],
+            "infoLinks": [
+              {"name": "Sustained Hits", "id": "78fc-f0be-3cbf-283d", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"},
+              {"name": "Twin-linked", "id": "5ea5-a021-befb-5958", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"}
+            ],
+            "profiles": [
+              {
+                "name": "Claws of Severax",
+                "id": "ab3f-9aac-cca1-cbe6",
+                "hidden": false,
+                "typeId": "8a40-4aaa-c780-9046",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                  {"name": "A", "$text": "7", "typeId": "2337-daa1-6682-b110"},
+                  {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
+                  {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+                  {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
+                  {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+                  {"name": "Keywords", "$text": "Sustained Hits 2, Twin-linked", "typeId": "893f-9000-ccf7-648e"}
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
             "name": "Crusade",
             "id": "7365-e3e1-d249-bd4f",
             "hidden": false,
-            "sortIndex": 1
+            "sortIndex": 1,
+            "entryLinks": [{"name": "Mighty Champions", "id": "7694-ae85-bdb5-1ec5", "hidden": false, "import": true, "targetId": "f842-6e90-bc5a-80f1", "type": "selectionEntryGroup"}]
           }
-        ],
-        "type": "model",
-        "import": true,
-        "name": "Aethon Shaan",
-        "hidden": false,
-        "id": "cbb9-15e9-16ae-6597"
+        ]
       }
-    ],
-    "entryLinks": [
-      {
-        "import": true,
-        "name": "Kayvaan Shrike",
-        "hidden": false,
-        "type": "selectionEntry",
-        "id": "8ec7-1c8b-5540-5f14",
-        "targetId": "339f-9776-243d-69a6"
-      },
-      {
-        "import": true,
-        "name": "Aethon Shaan",
-        "hidden": false,
-        "id": "5519-9de6-e650-d2c7",
-        "type": "selectionEntry",
-        "targetId": "cbb9-15e9-16ae-6597"
-      }
-    ],
-    "infoLinks": [
-      {
-        "name": "Lone Operative",
-        "id": "cf46-1303-160c-bc8d",
-        "hidden": false,
-        "type": "rule",
-        "targetId": "a8a0-8fe7-898-e0f3"
-      }
-    ],
-    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
-    "library": false,
-    "id": "6e59-e1ee-47ad-6ce5",
-    "name": "Imperium - Adeptus Astartes - Raven Guard",
-    "gameSystemId": "sys-352e-adc2-7639-d610",
-    "gameSystemRevision": 1,
-    "revision": 2,
-    "battleScribeVersion": 2.03,
-    "type": "catalogue"
+    ]
   }
 }

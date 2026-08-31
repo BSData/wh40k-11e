@@ -1,329 +1,264 @@
 {
   "catalogue": {
-    "catalogueLinks": [
-      {
-        "type": "catalogue",
-        "name": "Imperium - Imperial Knights - Library",
-        "id": "9b69-6acf-ce6e-7d56",
-        "targetId": "1b6d-dc06-5db9-c7d1",
-        "importRootEntries": true
-      },
-      {
-        "type": "catalogue",
-        "name": "Imperium - Agents of the Imperium",
-        "id": "a9de-79c6-ff31-ace3",
-        "targetId": "b00-cd86-4b4c-97ba",
-        "importRootEntries": true
-      },
-      {
-        "type": "catalogue",
-        "name": "Library - Titans",
-        "id": "993e-4de7-67f6-59d2",
-        "targetId": "7481-280e-b55e-7867",
-        "importRootEntries": true
-      },
-      {
-        "type": "catalogue",
-        "name": "Imperium - Adeptus Mechanicus",
-        "id": "d4a9-0d7e-4b3f-4d7c",
-        "targetId": "77b9-2f66-3f9b-5cf3"
-      },
-      {
-        "type": "catalogue",
-        "name": "Unaligned Forces",
-        "id": "9718-cb2e-cc4a-29a7",
-        "targetId": "581a-46b9-5b86-44b7"
-      }
-    ],
-    "entryLinks": [
-      {
-        "import": true,
-        "name": "Detachment",
-        "hidden": false,
-        "type": "selectionEntry",
-        "id": "b9ee-35d4-2177-b643",
-        "targetId": "5a84-ea91-b707-1656"
-      },
-      {
-        "entryLinks": [
-          {
-            "import": true,
-            "name": "Show Imperial Agents",
-            "hidden": false,
-            "type": "selectionEntry",
-            "id": "e203-a8c0-7f2a-a08f",
-            "targetId": "e08b-2448-5606-fefb"
-          },
-          {
-            "import": true,
-            "name": "Show Titans",
-            "hidden": false,
-            "type": "selectionEntry",
-            "id": "80fd-aecc-dbf3-d20f",
-            "targetId": "f26b-79db-80e0-3a3b"
-          }
-        ],
-        "categoryLinks": [
-          {
-            "name": "Configuration",
-            "hidden": false,
-            "id": "ed42-e197-e4ce-e51d",
-            "targetId": "4ac9-fd30-1e3d-b249",
-            "primary": true
-          }
-        ],
-        "import": true,
-        "name": "Show/Hide Options",
-        "hidden": false,
-        "type": "selectionEntry",
-        "id": "6997-af61-9230-8827",
-        "targetId": "e8ef-836a-a9d1-901d"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "notInstanceOf",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "force",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "9a4a-a4c8-a16a-c969",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          }
-        ],
-        "import": true,
-        "name": "Tech-Priest Manipulus",
-        "hidden": false,
-        "id": "5292-3dad-c3d9-75e5",
-        "type": "selectionEntry",
-        "targetId": "2d9b-610a-dc4d-15ae"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "notInstanceOf",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "force",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "9a4a-a4c8-a16a-c969",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          }
-        ],
-        "import": true,
-        "name": "Skitarii Marshal",
-        "hidden": false,
-        "id": "c877-cf82-26d2-cfd8",
-        "type": "selectionEntry",
-        "targetId": "b897-e4c6-fcb6-6538"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "notInstanceOf",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "force",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "9a4a-a4c8-a16a-c969",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          }
-        ],
-        "import": true,
-        "name": "Skitarii Rangers",
-        "hidden": false,
-        "id": "ec2c-94ac-9338-ce57",
-        "type": "selectionEntry",
-        "targetId": "de59-f65c-181a-8509"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "notInstanceOf",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "force",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "9a4a-a4c8-a16a-c969",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          }
-        ],
-        "import": true,
-        "name": "Skitarii Vanguard",
-        "hidden": false,
-        "id": "71f9-d22e-3dad-08f0",
-        "type": "selectionEntry",
-        "targetId": "ba33-c21-bddc-ab0"
-      },
-      {
-        "modifiers": [
-          {
-            "conditionGroups": [
-              {
-                "conditions": [
-                  {
-                    "type": "notInstanceOf",
-                    "value": 1,
-                    "field": "forces",
-                    "scope": "force",
-                    "childId": "cac3-71d1-ea4b-795d",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  },
-                  {
-                    "type": "lessThan",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "roster",
-                    "childId": "9a4a-a4c8-a16a-c969",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true
-                  }
-                ],
-                "type": "and"
-              }
-            ],
-            "type": "set",
-            "value": true,
-            "field": "hidden"
-          }
-        ],
-        "import": true,
-        "name": "Tech-Priest Dominus",
-        "hidden": false,
-        "id": "fbfe-7348-5b36-ac1e",
-        "type": "selectionEntry",
-        "targetId": "6424-ed86-9e15-3e14"
-      },
-      {
-        "entryLinks": [
-          {
-            "import": true,
-            "name": "Shadow Operations",
-            "hidden": false,
-            "id": "6907-7fd7-5458-facd",
-            "type": "selectionEntryGroup",
-            "targetId": "68a2-ada5-3cd4-c5a3"
-          },
-          {
-            "import": true,
-            "name": "Chivalric Quests",
-            "hidden": false,
-            "id": "c20c-43d8-5888-d919",
-            "type": "selectionEntryGroup",
-            "targetId": "12f3-7f5b-747e-41ca"
-          }
-        ],
-        "import": true,
-        "name": "Order of Battle",
-        "hidden": false,
-        "id": "5f76-92d5-26fe-d023",
-        "type": "selectionEntry",
-        "targetId": "eda7-8b4b-3719-af36"
-      }
-    ],
-    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
-    "library": false,
-    "id": "25dd-7aa0-6bf4-f2d5",
     "name": "Imperium - Imperial Knights",
+    "id": "25dd-7aa0-6bf4-f2d5",
+    "battleScribeVersion": 2.03,
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
-    "revision": 1,
-    "battleScribeVersion": 2.03,
-    "type": "catalogue"
+    "library": false,
+    "revision": 2,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "catalogueLinks": [
+      {
+        "name": "Imperium - Imperial Knights - Library",
+        "id": "9b69-6acf-ce6e-7d56",
+        "importRootEntries": true,
+        "targetId": "1b6d-dc06-5db9-c7d1",
+        "type": "catalogue"
+      },
+      {"name": "Imperium - Agents of the Imperium", "id": "a9de-79c6-ff31-ace3", "importRootEntries": true, "targetId": "b00-cd86-4b4c-97ba", "type": "catalogue"},
+      {"name": "Library - Titans", "id": "993e-4de7-67f6-59d2", "importRootEntries": true, "targetId": "7481-280e-b55e-7867", "type": "catalogue"},
+      {"name": "Imperium - Adeptus Mechanicus", "id": "d4a9-0d7e-4b3f-4d7c", "targetId": "77b9-2f66-3f9b-5cf3", "type": "catalogue"},
+      {"name": "Unaligned Forces", "id": "9718-cb2e-cc4a-29a7", "targetId": "581a-46b9-5b86-44b7", "type": "catalogue"}
+    ],
+    "entryLinks": [
+      {"name": "Detachment", "id": "b9ee-35d4-2177-b643", "hidden": false, "import": true, "targetId": "5a84-ea91-b707-1656", "type": "selectionEntry"},
+      {
+        "name": "Show/Hide Options",
+        "id": "6997-af61-9230-8827",
+        "hidden": false,
+        "import": true,
+        "targetId": "e8ef-836a-a9d1-901d",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Configuration", "id": "ed42-e197-e4ce-e51d", "hidden": false, "primary": true, "targetId": "4ac9-fd30-1e3d-b249"}],
+        "entryLinks": [
+          {"name": "Show Imperial Agents", "id": "e203-a8c0-7f2a-a08f", "hidden": false, "import": true, "targetId": "e08b-2448-5606-fefb", "type": "selectionEntry"},
+          {"name": "Show Titans", "id": "80fd-aecc-dbf3-d20f", "hidden": false, "import": true, "targetId": "f26b-79db-80e0-3a3b", "type": "selectionEntry"}
+        ]
+      },
+      {
+        "name": "Tech-Priest Manipulus",
+        "id": "5292-3dad-c3d9-75e5",
+        "hidden": false,
+        "import": true,
+        "targetId": "2d9b-610a-dc4d-15ae",
+        "type": "selectionEntry",
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "notInstanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "9a4a-a4c8-a16a-c969",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Skitarii Marshal",
+        "id": "c877-cf82-26d2-cfd8",
+        "hidden": false,
+        "import": true,
+        "targetId": "b897-e4c6-fcb6-6538",
+        "type": "selectionEntry",
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "notInstanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "9a4a-a4c8-a16a-c969",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Skitarii Rangers",
+        "id": "ec2c-94ac-9338-ce57",
+        "hidden": false,
+        "import": true,
+        "targetId": "de59-f65c-181a-8509",
+        "type": "selectionEntry",
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "notInstanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "9a4a-a4c8-a16a-c969",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Skitarii Vanguard",
+        "id": "71f9-d22e-3dad-08f0",
+        "hidden": false,
+        "import": true,
+        "targetId": "ba33-c21-bddc-ab0",
+        "type": "selectionEntry",
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "notInstanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "9a4a-a4c8-a16a-c969",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tech-Priest Dominus",
+        "id": "fbfe-7348-5b36-ac1e",
+        "hidden": false,
+        "import": true,
+        "targetId": "6424-ed86-9e15-3e14",
+        "type": "selectionEntry",
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {
+                    "childId": "cac3-71d1-ea4b-795d",
+                    "field": "forces",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "notInstanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "9a4a-a4c8-a16a-c969",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "scope": "roster",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Order of Battle",
+        "id": "5f76-92d5-26fe-d023",
+        "hidden": false,
+        "import": true,
+        "targetId": "eda7-8b4b-3719-af36",
+        "type": "selectionEntry",
+        "entryLinks": [
+          {"name": "Shadow Operations", "id": "6907-7fd7-5458-facd", "hidden": false, "import": true, "targetId": "68a2-ada5-3cd4-c5a3", "type": "selectionEntryGroup"},
+          {"name": "Chivalric Quests", "id": "c20c-43d8-5888-d919", "hidden": false, "import": true, "targetId": "12f3-7f5b-747e-41ca", "type": "selectionEntryGroup"}
+        ]
+      }
+    ]
   }
 }
