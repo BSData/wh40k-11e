@@ -4,7 +4,7 @@
     "id": "sys-352e-adc2-7639-d610",
     "battleScribeVersion": 2.03,
     "readme": "",
-    "revision": 12,
+    "revision": 13,
     "type": "gameSystem",
     "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
     "categoryEntries": [
@@ -1793,28 +1793,10 @@
                 "type": "max",
                 "value": 1
               },
-              {"id": "57b7-ac0e-5d06-9ddb", "field": "51b2-306e-1021-d207", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 0},
-              {"id": "017d-e82d-5b4d-d32e", "field": "82ae-1066-5107-6ae0", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 2}
+              {"id": "017d-e82d-5b4d-d32e", "field": "82ae-1066-5107-6ae0", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 2},
+              {"id": "5776-fdfe-889b-d9cd", "field": "51b2-306e-1021-d207", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 0}
             ],
             "modifiers": [
-              {
-                "field": "57b7-ac0e-5d06-9ddb",
-                "type": "set",
-                "value": 1000,
-                "conditions": [{"childId": "d62d-db22-4893-4bc0", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "atLeast", "value": 1}]
-              },
-              {
-                "field": "57b7-ac0e-5d06-9ddb",
-                "type": "set",
-                "value": 2000,
-                "conditions": [{"childId": "baf8-997f-e323-a090", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "atLeast", "value": 1}]
-              },
-              {
-                "field": "57b7-ac0e-5d06-9ddb",
-                "type": "set",
-                "value": 3000,
-                "conditions": [{"childId": "4204-82d0-908c-a62a", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "atLeast", "value": 1}]
-              },
               {
                 "field": "21dc-d454-3048-5aeb",
                 "type": "set",
@@ -1894,6 +1876,121 @@
                     "scope": "force",
                     "shared": true,
                     "type": "equalTo",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "5776-fdfe-889b-d9cd",
+                "type": "set",
+                "value": 2000,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "baf8-997f-e323-a090",
+                        "childName": "2. Strike Force (2000 Point limit)",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "force",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      },
+                      {
+                        "childId": "c6ea-562c-984f-6c25",
+                        "childName": "Override points limit?",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "force",
+                        "shared": true,
+                        "type": "equalTo",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "5776-fdfe-889b-d9cd",
+                "type": "set",
+                "value": 3000,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "c6ea-562c-984f-6c25",
+                        "childName": "Override points limit?",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "force",
+                        "shared": true,
+                        "type": "equalTo",
+                        "value": 0
+                      },
+                      {
+                        "childId": "4204-82d0-908c-a62a",
+                        "childName": "3. Onslaught (3000 Point limit)",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "force",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "5776-fdfe-889b-d9cd",
+                "type": "set",
+                "value": 1000,
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "d62d-db22-4893-4bc0",
+                        "childName": "1. Incursion (1000 Point limit)",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "force",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      },
+                      {
+                        "childId": "c6ea-562c-984f-6c25",
+                        "childName": "Override points limit?",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "force",
+                        "shared": true,
+                        "type": "equalTo",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "5776-fdfe-889b-d9cd",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "83ac-f5e5-d3da-5441",
+                    "childName": "Points limit",
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "roster",
+                    "shared": true,
                     "value": 1
                   }
                 ]
