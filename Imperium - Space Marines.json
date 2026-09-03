@@ -5970,7 +5970,7 @@
         "type": "selectionEntry"
       },
       {
-        "name": "Judiciar Xacharus",
+        "name": "Judiciar Xacharus [Legends]",
         "id": "293f-42d1-5fce-3720",
         "exportable": false,
         "hidden": false,
@@ -5978,7 +5978,14 @@
         "targetId": "be42-655d-472b-d89e",
         "type": "selectionEntry"
       },
-      {"name": "Chaplain Kastiel", "id": "ef51-8c81-8a60-a930", "hidden": false, "import": false, "targetId": "c550-de70-074f-9210", "type": "selectionEntry"}
+      {
+        "name": "Chaplain Kastiel [Legends]",
+        "id": "ef51-8c81-8a60-a930",
+        "hidden": false,
+        "import": false,
+        "targetId": "c550-de70-074f-9210",
+        "type": "selectionEntry"
+      }
     ],
     "infoLinks": [
       {"name": "Oath of Moment", "id": "001d-723a-56e2-f202", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
@@ -53495,7 +53502,16 @@
                   },
                   {"childId": "2740-ec68-77ee-2830", "childName": "Tactical Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
                   {"childId": "1193-4f69-5b9f-6fbc", "childName": "Deathwatch Veterans", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
-                  {"childId": "20a9-0897-2b65-89a7", "childName": "Decimus Kill Team", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                  {"childId": "20a9-0897-2b65-89a7", "childName": "Decimus Kill Team", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "930d-2875-125b-a65e",
+                    "childName": "Bladeguard Veteran Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
                 ]
               }
             ]
@@ -56620,6 +56636,55 @@
                 ]
               }
             ]
+          },
+          {
+            "name": "Supporting",
+            "id": "f818-bda8-6a0c-665f",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "defaultSelectionEntryId": "none",
+            "includeChildSelections": true,
+            "label": "Supported by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "childName": "Assault Intercessor Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {"childId": "5fe6-20de-df8d-8e92", "childName": "Infernus Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "7b57-816b-44b2-65ec", "childName": "Intercessor Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "childName": "Sternguard Veteran Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "930d-2875-125b-a65e",
+                    "childName": "Bladeguard Veteran Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
           }
         ],
         "categoryLinks": [
@@ -56628,14 +56693,24 @@
           {"name": "Imperium", "id": "d4cf-7ff6-ac2a-30d5", "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
           {"name": "Tacticus", "id": "e256-79fc-2aee-92c1", "primary": false, "targetId": "5179-8ede-45e3-49a2"},
           {"name": "Judiciar", "id": "3cc-4333-6f41-d6b5", "primary": false, "targetId": "258c-ef74-d5f1-3a61"},
-          {"name": "Faction: Adeptus Astartes", "id": "7bf7-5c4c-805d-fa34", "primary": false, "targetId": "6e7-40c-58d9-e402"},
-          {"name": "Leader", "id": "f651-fa17-d57f-917c", "primary": false, "targetId": "1556-9b56-fba6-4370"}
+          {"name": "Faction: Adeptus Astartes", "id": "7bf7-5c4c-805d-fa34", "primary": false, "targetId": "6e7-40c-58d9-e402"}
         ],
         "constraints": [
           {"id": "3013-96aa-d646-a1f1", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 6},
           {"id": "7f61-c167-6be5-af42", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "max", "value": 0},
           {"id": "13c2-87c9-1ac2-49f0", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
-          {"id": "d7c0-df12-65e2-5f8d", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
+          {"id": "d7c0-df12-65e2-5f8d", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3},
+          {"id": "e32a-2cbf-65b6-f6a2", "field": "associations", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 1},
+          {
+            "id": "5885-628f-7289-73cc",
+            "field": "associations",
+            "includeChildSelections": false,
+            "message": "{this} must be attached to a Bodyguard unit.",
+            "scope": "self",
+            "shared": true,
+            "type": "min",
+            "value": 1
+          }
         ],
         "costs": [
           {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 55},
@@ -56833,6 +56908,47 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "field": "category",
+            "type": "add",
+            "value": "7dcd-7f61-69a7-0294",
+            "conditions": [
+              {
+                "childId": "f818-bda8-6a0c-665f",
+                "childName": "Supporting",
+                "field": "associations",
+                "includeChildSelections": false,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "category",
+            "type": "add",
+            "value": "1556-9b56-fba6-4370",
+            "conditions": [
+              {
+                "childId": "8e64-f76c-60f9-6a49",
+                "childName": "Leading",
+                "field": "associations",
+                "includeChildSelections": false,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "affects": "group",
+            "field": "add-info",
+            "type": "add",
+            "value": "24-c886-e8ba-5a89",
+            "conditions": [{"childId": "any", "field": "associations", "includeChildSelections": false, "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
           }
         ],
         "profiles": [
@@ -83462,8 +83578,7 @@
                     ]
                   }
                 ]
-              },
-              {"affects": "self.entries.forces.group.recursive", "field": "add-info", "join": ", ", "scope": "root-entry", "type": "add", "value": "08fb-4cb5-36fb-d638"}
+              }
             ],
             "selectionEntries": [
               {
@@ -83670,6 +83785,7 @@
                   {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
                   {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
                 ],
+                "modifiers": [{"affects": "group", "field": "add-info", "join": ", ", "scope": "parent", "type": "add", "value": "08fb-4cb5-36fb-d638"}],
                 "profiles": [
                   {
                     "name": "Zealous Vanguard",
