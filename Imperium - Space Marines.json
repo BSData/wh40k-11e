@@ -7,7 +7,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 10,
+    "revision": 11,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -27988,6 +27988,24 @@
                     "value": 4
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "affects": "self.entries.recursive.profiles.Unit",
+            "field": "bef7-942a-1a23-59f8",
+            "type": "increment",
+            "value": 1,
+            "conditions": [
+              {
+                "childId": "63f3-6aeb-c9ed-abfc",
+                "childName": "Kor'sarro Khan",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
               }
             ]
           }
@@ -71703,6 +71721,70 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "6807-0177-8142-09b3",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "childName": "Assault Intercessor Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "930d-2875-125b-a65e",
+                    "childName": "Bladeguard Veteran Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {"childId": "5956-471c-16ba-af95", "childName": "Company Heroes", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "34d3-f5b3-ca63-4597", "childName": "Hellblaster Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "5fe6-20de-df8d-8e92", "childName": "Infernus Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "7b57-816b-44b2-65ec", "childName": "Intercessor Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "childName": "Sternguard Veteran Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {"childId": "2740-ec68-77ee-2830", "childName": "Tactical Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "ebce-cb56-76a4-afe1", "childName": "Assault Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "d81a-37b7-7183-9d4", "childName": "Command Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "c7d2-a98d-4ad2-c426",
+                    "childName": "Vanguard Veteran Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Character", "id": "5795-d2cd-f333-e487", "hidden": false, "primary": false, "targetId": "9cfd-1c32-585f-7d5c"},
           {"name": "Epic Hero", "id": "7505-8fa9-d34b-7bba", "hidden": false, "primary": true, "targetId": "4f3a-f0f7-6647-348d"},
@@ -71763,8 +71845,7 @@
         ],
         "infoLinks": [
           {"name": "Oath of Moment", "id": "71b1-102e-3350-b16c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Leader", "id": "e212-d77a-b880-3231", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Invulnerable Save", "id": "96e6-8158-c8f0-f49e", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"}
+          {"name": "Leader", "id": "e212-d77a-b880-3231", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
         ],
         "modifiers": [
           {
@@ -71796,7 +71877,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Company Heroes\n■ Hellblaster Squad\n■ Infernus Squad\n■ Intercessor Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad",
+                "$text": "This model can be attached to the following units:\n\n■ Assault Intercessor Squad\n■ Assault Squad\n■ Bladeguard Veteran Squad\n■ Command Squad\n■ Company Heroes\n■ Hellblaster Squad\n■ Infernus Squad\n■ Intercessor Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad\n■ Vanguard Veteran Squad",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -71814,7 +71895,7 @@
               {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
             ]
           },
           {
@@ -71840,7 +71921,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or all modifiers to\nthe Hit roll.",
+                "$text": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or all modifiers to the Hit roll.",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -85602,6 +85683,28 @@
                   {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
                   {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
                 ],
+                "modifiers": [
+                  {
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "field": "7f1b-8591-2fcf-d01c",
+                    "join": ", ",
+                    "scope": "parent",
+                    "skipIfPresent": "Ignores Cover",
+                    "type": "append",
+                    "value": "Ignores Cover"
+                  },
+                  {
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "field": "7f1b-8591-2fcf-d01c",
+                    "join": ", ",
+                    "scope": "parent",
+                    "skipIfPresent": "Sustained Hits",
+                    "type": "append",
+                    "value": "Sustained Hits 1"
+                  },
+                  {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "4640-43e7-30b-215a"},
+                  {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "1897-c22c-9597-12b1"}
+                ],
                 "profiles": [
                   {
                     "name": "Hunter's Eye",
@@ -85612,7 +85715,7 @@
                     "characteristics": [
                       {
                         "name": "Description",
-                        "$text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the\n[SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
+                        "$text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
                         "typeId": "9b8f-694b-e5e-b573"
                       }
                     ]
@@ -85988,6 +86091,18 @@
                   {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
                   {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
                 ],
+                "modifiers": [
+                  {
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
+                    "field": "7f1b-8591-2fcf-d01c",
+                    "join": ", ",
+                    "scope": "parent",
+                    "skipIfPresent": "Sustained Hits",
+                    "type": "append",
+                    "value": "Sustained Hits 1"
+                  },
+                  {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "1897-c22c-9597-12b1"}
+                ],
                 "profiles": [
                   {
                     "name": "Veteran of Behemoth",
@@ -85998,7 +86113,7 @@
                     "characteristics": [
                       {
                         "name": "Description",
-                        "$text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, , you can reroll Advance rolls made for that unit.",
+                        "$text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
                         "typeId": "9b8f-694b-e5e-b573"
                       }
                     ]
