@@ -7,7 +7,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 2,
+    "revision": 3,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -4023,7 +4023,7 @@
                   {
                     "name": "Melee Weapon",
                     "id": "9068-ef9c-8583-ceb2",
-                    "defaultSelectionEntryId": "05ea-4b2e-bcbb-7c9b",
+                    "defaultSelectionEntryId": "0dfe-06f1-349f-8d28",
                     "hidden": false,
                     "constraints": [
                       {"id": "7797-e7ba-081e-a610", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1},
@@ -10103,6 +10103,7 @@
                 "import": true,
                 "type": "model",
                 "constraints": [{"id": "3536-7f35-9308-1da4", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "entryLinks": [{"name": "Replace Pistol", "id": "c16d-7661-c934-6a12", "hidden": false, "targetId": "8b60-76dc-a440-ae23", "type": "selectionEntryGroup"}],
                 "modifiers": [
                   {
                     "field": "error",
@@ -10139,76 +10140,9 @@
                 ],
                 "selectionEntryGroups": [
                   {
-                    "name": "Replace Pistol",
-                    "id": "8b60-76dc-a440-ae23",
-                    "defaultSelectionEntryId": "a3b1-a4d1-6857-384c",
-                    "hidden": false,
-                    "constraints": [
-                      {"id": "c664-21c1-db6b-5cbf-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "c664-21c1-db6b-5cbf-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "entryLinks": [
-                      {
-                        "name": "Hand flamer",
-                        "id": "8520-b102-fa69-aefb",
-                        "hidden": false,
-                        "import": true,
-                        "targetId": "9dc6-6ad8-818e-db2e",
-                        "type": "selectionEntry",
-                        "categoryLinks": [{"name": "Pistol replacement", "id": "1194-ee45-4c41-dc10", "hidden": false, "primary": false, "targetId": "f06c-dfec-c720-57f1"}]
-                      },
-                      {
-                        "name": "Inferno Pistol",
-                        "id": "2ba5-9580-1492-bdde",
-                        "hidden": false,
-                        "import": true,
-                        "targetId": "d8bf-e17f-d6fa-b7e8",
-                        "type": "selectionEntry",
-                        "categoryLinks": [{"name": "Pistol replacement", "id": "471d-b32a-3937-40b7", "hidden": false, "primary": false, "targetId": "f06c-dfec-c720-57f1"}]
-                      },
-                      {
-                        "name": "Plasma pistol",
-                        "id": "11cb-48d5-14ac-1916",
-                        "hidden": false,
-                        "import": true,
-                        "targetId": "25c2-104f-fa0c-809e",
-                        "type": "selectionEntry",
-                        "categoryLinks": [{"name": "Pistol replacement", "id": "4dca-64f5-dc6a-9fb4", "hidden": false, "primary": false, "targetId": "f06c-dfec-c720-57f1"}]
-                      }
-                    ],
-                    "selectionEntries": [
-                      {
-                        "name": "Heavy Bolt Pistol",
-                        "id": "a3b1-a4d1-6857-384c",
-                        "hidden": false,
-                        "import": true,
-                        "type": "upgrade",
-                        "infoLinks": [{"name": "Pistol", "id": "84bb-668e-21e4-d52d", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}],
-                        "profiles": [
-                          {
-                            "name": "Heavy Bolt Pistol",
-                            "id": "953a-4af0-c692-02ca",
-                            "hidden": false,
-                            "typeId": "f77d-b953-8fa4-b762",
-                            "typeName": "Ranged Weapons",
-                            "characteristics": [
-                              {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
-                              {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
-                              {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
-                              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                              {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
                     "name": "Replace Chainsword",
                     "id": "fff9-ea18-368c-d4a1",
-                    "defaultSelectionEntryId": "c7a8-c7ee-1248-ef35",
+                    "defaultSelectionEntryId": "8b85-90a0-8aca-7fbe",
                     "hidden": false,
                     "constraints": [
                       {"id": "4761-c7fa-10ea-e343", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -11084,6 +11018,75 @@
                       }
                     ]
                   }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedSelectionEntryGroups": [
+      {
+        "name": "Replace Pistol",
+        "id": "8b60-76dc-a440-ae23",
+        "defaultSelectionEntryId": "a3b1-a4d1-6857-384c",
+        "hidden": false,
+        "constraints": [
+          {"id": "c664-21c1-db6b-5cbf-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+          {"id": "c664-21c1-db6b-5cbf-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+        ],
+        "entryLinks": [
+          {
+            "name": "Hand flamer",
+            "id": "8520-b102-fa69-aefb",
+            "hidden": false,
+            "import": true,
+            "targetId": "9dc6-6ad8-818e-db2e",
+            "type": "selectionEntry",
+            "categoryLinks": [{"name": "Pistol replacement", "id": "1194-ee45-4c41-dc10", "hidden": false, "primary": false, "targetId": "f06c-dfec-c720-57f1"}]
+          },
+          {
+            "name": "Inferno Pistol",
+            "id": "2ba5-9580-1492-bdde",
+            "hidden": false,
+            "import": true,
+            "targetId": "d8bf-e17f-d6fa-b7e8",
+            "type": "selectionEntry",
+            "categoryLinks": [{"name": "Pistol replacement", "id": "471d-b32a-3937-40b7", "hidden": false, "primary": false, "targetId": "f06c-dfec-c720-57f1"}]
+          },
+          {
+            "name": "Plasma pistol",
+            "id": "11cb-48d5-14ac-1916",
+            "hidden": false,
+            "import": true,
+            "targetId": "25c2-104f-fa0c-809e",
+            "type": "selectionEntry",
+            "categoryLinks": [{"name": "Pistol replacement", "id": "4dca-64f5-dc6a-9fb4", "hidden": false, "primary": false, "targetId": "f06c-dfec-c720-57f1"}]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Heavy Bolt Pistol",
+            "id": "a3b1-a4d1-6857-384c",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "infoLinks": [{"name": "Pistol", "id": "84bb-668e-21e4-d52d", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}],
+            "profiles": [
+              {
+                "name": "Heavy Bolt Pistol",
+                "id": "953a-4af0-c692-02ca",
+                "hidden": false,
+                "typeId": "f77d-b953-8fa4-b762",
+                "typeName": "Ranged Weapons",
+                "characteristics": [
+                  {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
+                  {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
+                  {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+                  {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                  {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+                  {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                  {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
                 ]
               }
             ]
