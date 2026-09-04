@@ -9494,37 +9494,77 @@
             "value": "Max 1 {this} per 5 models",
             "conditionGroups": [
               {
-                "type": "and",
-                "conditions": [
+                "type": "or",
+                "conditionGroups": [
                   {
-                    "childId": "8a7f-b578-d274-9769",
-                    "childName": "Vanguard Veterans with Jump Packs",
-                    "field": "selections",
-                    "scope": "unit",
-                    "shared": true,
-                    "type": "lessThan",
-                    "value": 10
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "8a7f-b578-d274-9769",
+                        "childName": "Vanguard Veterans with Jump Packs",
+                        "field": "selections",
+                        "scope": "unit",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 10
+                      },
+                      {
+                        "childId": "25c2-104f-fa0c-809e",
+                        "childName": "Plasma pistol",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "9e9c-bf4d-2d40-be82",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 1
+                      },
+                      {
+                        "childId": "d466-dd6c-f7bd-6fea",
+                        "childName": "Vanguard Veteran Weapon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "scope": "9e9c-bf4d-2d40-be82",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1
+                      }
+                    ]
                   },
                   {
-                    "childId": "25c2-104f-fa0c-809e",
-                    "childName": "Plasma pistol",
-                    "field": "selections",
-                    "includeChildSelections": true,
-                    "scope": "9e9c-bf4d-2d40-be82",
-                    "shared": true,
-                    "type": "greaterThan",
-                    "value": 1
-                  },
-                  {
-                    "childId": "d466-dd6c-f7bd-6fea",
-                    "childName": "Vanguard Veteran Weapon",
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "scope": "9e9c-bf4d-2d40-be82",
-                    "shared": true,
-                    "type": "lessThan",
-                    "value": 1
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "8a7f-b578-d274-9769",
+                        "childName": "Vanguard Veterans with Jump Packs",
+                        "field": "selections",
+                        "scope": "unit",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 10
+                      },
+                      {
+                        "childId": "25c2-104f-fa0c-809e",
+                        "childName": "Plasma pistol",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "9e9c-bf4d-2d40-be82",
+                        "shared": true,
+                        "type": "greaterThan",
+                        "value": 2
+                      },
+                      {
+                        "childId": "d466-dd6c-f7bd-6fea",
+                        "childName": "Vanguard Veteran Weapon",
+                        "field": "selections",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "scope": "9e9c-bf4d-2d40-be82",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1
+                      }
+                    ]
                   }
                 ]
               }
