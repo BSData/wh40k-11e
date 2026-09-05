@@ -2,7 +2,7 @@
   "catalogue": {
     "name": "Xenos - Orks",
     "id": "a55f-b7b3-6c65-a05f",
-    "authorContact": "Dunamis55 & AbonShell",
+    "authorContact": "Dunamis55",
     "authorName": "BSData Developers",
     "battleScribeVersion": 2.03,
     "gameSystemId": "sys-352e-adc2-7639-d610",
@@ -16983,6 +16983,23 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "set",
+            "value": 160,
+            "conditions": [
+              {
+                "childId": "model",
+                "childName": "model",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 2
+              }
+            ]
           }
         ],
         "profiles": [
@@ -17025,7 +17042,6 @@
                   {"id": "66c3-3dcd-00f8-049f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}
                 ],
                 "costs": [
-                  {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
                   {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
                   {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
                   {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -32907,7 +32923,16 @@
           {"name": "Leader", "id": "3541-a805-0663-dfe4", "hidden": false, "primary": false, "targetId": "1556-9b56-fba6-4370"}
         ],
         "constraints": [{"id": "b1ce-1d9c-c80d-839a", "field": "selections", "scope": "roster", "shared": true, "type": "max", "value": 1}],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 235}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 175},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
+        ],
         "entryLinks": [{"name": "Warlord", "id": "27b0-2a11-e02a-c945", "hidden": false, "import": true, "sortIndex": 2, "targetId": "8b5-898c-f79b-5a9c", "type": "selectionEntry"}],
         "infoLinks": [
           {"name": "Waaagh!", "id": "2336-cae6-7e1e-0afa", "hidden": false, "targetId": "37c-6ef9-277-9091", "type": "rule"},
