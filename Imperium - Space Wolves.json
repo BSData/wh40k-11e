@@ -7,7 +7,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 6,
+    "revision": 7,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -933,6 +933,28 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "a384-ec74-0b44-c77d",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {"childId": "c6da-5578-9ad5-94ef", "childName": "Thunderwolf Cavalry", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "a80-1af0-aff5-9961", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "803a-429e-8729-f86d", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -971,7 +993,6 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
           {"name": "Logan", "id": "baa5-9535-9731-de9c", "hidden": false, "targetId": "976-2d16-9324-f92", "type": "infoGroup"},
-          {"name": "Invulnerable Save", "id": "a624-71e3-7023-b8d1", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
           {"name": "Oath of Moment", "id": "2a27-97ca-7146-7330", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifiers": [
@@ -1008,7 +1029,7 @@
               {"name": "W", "$text": "12", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "4", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
             ]
           },
           {
@@ -2186,6 +2207,30 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "cb5b-eaec-b695-fc5b",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {"childId": "5624-6cb8-fa73-779e", "childName": "Blood Claws", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "447f-4fc0-7630-a9f7", "childName": "Grey Hunters", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "180b-bab2-a59f-44bc", "childName": "Wolf Guard", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "6dd5-b29-af2c-ff3a", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "b522-63f4-c4c-6d67", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -2214,7 +2259,6 @@
           }
         ],
         "infoLinks": [
-          {"name": "Invulnerable Save", "id": "3a8b-d97f-ec0f-7b1b", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
           {"name": "Leader", "id": "649e-3a31-c1b6-c75", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Oath of Moment", "id": "1aba-c197-2f89-9a52", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
@@ -2266,7 +2310,7 @@
               {"name": "W", "$text": "4", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
             ]
           },
           {
@@ -2346,6 +2390,28 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "48b2-fd81-7482-11be",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {"childId": "c6da-5578-9ad5-94ef", "childName": "Thunderwolf Cavalry", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "bb17-faa7-5126-f7c", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "91a1-5d79-3b88-e1b7", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -2375,7 +2441,6 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "ede8-b694-dd7d-9a57", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Invulnerable Save", "id": "dc02-1316-f8fd-7898", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
           {"name": "Oath of Moment", "id": "ebf0-20fd-ca6-7605", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifiers": [
@@ -2420,7 +2485,7 @@
               {"name": "W", "$text": "7", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
             ]
           },
           {
@@ -2565,6 +2630,29 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "da3e-5b5a-9d8b-f78b",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {"childId": "e6ab-86d6-b11f-b2ec", "childName": "Fenrisian Wolves", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "c6da-5578-9ad5-94ef", "childName": "Thunderwolf Cavalry", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "5312-759f-430a-353d", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "3c97-78d4-2602-6c4c", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -2741,6 +2829,46 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "073e-71c4-3e63-2ad8",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "4e0-4cf8-e8b5-726",
+                    "childName": "Terminator Assault Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {"childId": "6179-3533-ba6-9593", "childName": "Terminator Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "4554-88b1-466c-d9f5",
+                    "childName": "Wolf Guard Terminators",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "1b1f-71e3-64f-55e7", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "5260-8a25-d27f-6db1", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -2778,7 +2906,6 @@
           }
         ],
         "infoLinks": [
-          {"name": "Invulnerable Save", "id": "94ee-b960-632-b973", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
           {"name": "Leader", "id": "43c5-f155-8b44-e1ac", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Deep Strike", "id": "8671-9213-b95b-a71", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Tactical Precision", "id": "50dd-9e07-1085-a334", "hidden": false, "targetId": "b07f-3052-e85f-d6d3", "type": "profile"},
@@ -2937,7 +3064,7 @@
               {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
             ],
             "modifiers": [
               {
@@ -3497,6 +3624,28 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "e9f4-6085-ce30-d952",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {"childId": "c6da-5578-9ad5-94ef", "childName": "Thunderwolf Cavalry", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "51ba-9768-8cb3-e0f4", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "2f9e-4c1f-4005-394f", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -3536,7 +3685,6 @@
           }
         ],
         "infoLinks": [
-          {"name": "Invulnerable Save", "id": "f409-ecc4-1a49-66a7", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
           {"name": "Leader", "id": "c13c-15e6-94e9-7a2e", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Rites of Battle", "id": "5382-dadc-b950-b9da", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
           {"name": "Oath of Moment", "id": "ef8e-70b8-71f3-d2c0", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
@@ -3702,7 +3850,7 @@
               {"name": "W", "$text": "6", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
             ],
             "modifiers": [
               {
@@ -4279,6 +4427,28 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "d2f5-6a83-fbff-eded",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {"childId": "c6da-5578-9ad5-94ef", "childName": "Thunderwolf Cavalry", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "fa9-8388-8cfd-1e92", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "ca8c-c6d7-ba2-3c1c", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -4466,13 +4636,7 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "This model can be attached to the following unit:\n\n■ Thunderwolf Cavalry\n\nYou can attach this model to the above unit even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
+            "characteristics": [{"name": "Description", "$text": "This model can be attached to the following unit:\n\n■ Thunderwolf Cavalry\n", "typeId": "9b8f-694b-e5e-b573"}]
           },
           {
             "name": "Wolf Guard Battle Leader on Thunderwolf",
@@ -4694,6 +4858,7 @@
                     "hidden": false,
                     "import": true,
                     "type": "upgrade",
+                    "modifiers": [{"affects": "profiles.Unit", "field": "55a7-5b54-c60d-11dc", "scope": "parent", "type": "set", "value": "4+"}],
                     "profiles": [
                       {
                         "name": "Storm Shield",
@@ -6907,6 +7072,26 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "8589-9c56-03dd-935f",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [{"childId": "5624-6cb8-fa73-779e", "childName": "Blood Claws", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "ee41-a317-d062-c645", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "eef8-8a22-b069-1a0d", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -8432,7 +8617,7 @@
                       {"name": "W", "$text": "2", "typeId": "750a-a2ec-90d3-21fe"},
                       {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
                       {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-                      {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+                      {"name": "InSv", "$text": "6+*", "typeId": "55a7-5b54-c60d-11dc"}
                     ]
                   }
                 ],
@@ -13029,6 +13214,73 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Supporting",
+            "id": "669f-90c3-9926-bd40",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Supported by",
+            "max": 1,
+            "min": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {"childId": "19ab-c0ae-7b00-dc0c", "childName": "Wulfen", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                          {
+                            "childId": "5e41-161b-7d74-8c8e",
+                            "childName": "Wulfen with Storm Shields",
+                            "field": "selections",
+                            "scope": "self",
+                            "shared": true,
+                            "type": "instanceOf",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "childId": "7dab-7280-6618-a658",
+                        "childName": "Wolf-Touched",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "scope": "self",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {"childId": "5624-6cb8-fa73-779e", "childName": "Blood Claws", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "447f-4fc0-7630-a9f7", "childName": "Grey Hunters", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "9b96-72d9-2828-f182",
+                    "childName": "Wolf Guard Headtakers",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "10c9-c793-b82d-a99b", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "73f-61e4-3b2c-2ca4", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -13058,7 +13310,8 @@
         ],
         "infoLinks": [
           {"name": "Pack Leader", "id": "9e0f-7502-c584-4540", "hidden": false, "targetId": "8b86-90f0-b9f3-a8c3", "type": "infoGroup"},
-          {"name": "Oath of Moment", "id": "e07f-e4b9-1496-a128", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Oath of Moment", "id": "e07f-e4b9-1496-a128", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Support", "id": "8f31-cd39-522b-13e5", "hidden": false, "targetId": "3342-2180-9c5d-925f", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -13217,7 +13470,7 @@
             ]
           },
           {
-            "name": "Leader",
+            "name": "Support",
             "id": "f624-39e9-4072-ebaf",
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
@@ -13225,7 +13478,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n\n■ Blood Claws\n■ Grey Hunters\n■ Long Fangs\n\nYou must attach this model to one of the above units, and can do so even if one or more Character units have already been attached to that unit, but a unit can never include more than one Pack Leader model. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed.",
+                "$text": "This model can be attached to the following units:\n\n■ Blood Claws\n■ Grey Hunters\n■ Long Fangs\n",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -13325,6 +13578,7 @@
                     "import": true,
                     "type": "upgrade",
                     "constraints": [{"id": "b7e1-32d0-8d3e-a172", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "modifiers": [{"affects": "profiles.Unit", "field": "55a7-5b54-c60d-11dc", "scope": "parent", "type": "set", "value": "4+"}],
                     "profiles": [
                       {
                         "name": "Storm Shield",
@@ -13668,6 +13922,61 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Supporting",
+            "id": "df13-2c42-fbab-3709",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Supported by",
+            "max": 1,
+            "min": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {"childId": "19ab-c0ae-7b00-dc0c", "childName": "Wulfen", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                          {
+                            "childId": "5e41-161b-7d74-8c8e",
+                            "childName": "Wulfen with Storm Shields",
+                            "field": "selections",
+                            "scope": "self",
+                            "shared": true,
+                            "type": "instanceOf",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "childId": "7dab-7280-6618-a658",
+                        "childName": "Wolf-Touched",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "scope": "self",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [{"childId": "136d-4905-129b-ff78", "childName": "Skyclaws", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "a5c-355b-1027-b427", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "f36a-9b73-f2b7-ce79", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -13699,7 +14008,8 @@
         ],
         "infoLinks": [
           {"name": "Pack Leader", "id": "cf15-64ad-d3a5-a9f3", "hidden": false, "targetId": "8b86-90f0-b9f3-a8c3", "type": "infoGroup"},
-          {"name": "Oath of Moment", "id": "1c49-2470-d285-87d5", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Oath of Moment", "id": "1c49-2470-d285-87d5", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Support", "id": "cd1a-4507-2be7-83c9", "hidden": false, "targetId": "3342-2180-9c5d-925f", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -13858,18 +14168,12 @@
             ]
           },
           {
-            "name": "Leader",
+            "name": "Support",
             "id": "e86c-2118-cc7e-4b23",
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "This model can be attached to the following unit:\n\n■ Skyclaws\n\nYou must attach this model to the above unit, and can do so even if one or more Character units have already been attached to that unit, but a unit can never include more than one Pack Leader model. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed.",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
+            "characteristics": [{"name": "Description", "$text": "This model can be attached to the following unit: Skyclaws\n\n\n", "typeId": "9b8f-694b-e5e-b573"}]
           }
         ],
         "selectionEntryGroups": [
@@ -13966,6 +14270,7 @@
                     "import": true,
                     "type": "upgrade",
                     "constraints": [{"id": "46d6-cfec-3a8a-62f0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                    "modifiers": [{"affects": "profiles.Unit", "field": "55a7-5b54-c60d-11dc", "scope": "parent", "type": "set", "value": "4+"}],
                     "profiles": [
                       {
                         "name": "Storm Shield",
@@ -14338,6 +14643,73 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Supporting",
+            "id": "b500-d5cc-7a9a-169b",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Supported by",
+            "max": 1,
+            "min": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {"childId": "19ab-c0ae-7b00-dc0c", "childName": "Wulfen", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                          {
+                            "childId": "5e41-161b-7d74-8c8e",
+                            "childName": "Wulfen with Storm Shields",
+                            "field": "selections",
+                            "scope": "self",
+                            "shared": true,
+                            "type": "instanceOf",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ],
+                    "conditions": [
+                      {
+                        "childId": "7dab-7280-6618-a658",
+                        "childName": "Wolf-Touched",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "queryFromSelf": true,
+                        "scope": "self",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {"childId": "5624-6cb8-fa73-779e", "childName": "Blood Claws", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "447f-4fc0-7630-a9f7", "childName": "Grey Hunters", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "9b96-72d9-2828-f182",
+                    "childName": "Wolf Guard Headtakers",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "2b67-4b7a-c7fe-82c7", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "d905-1276-6fed-8fa2", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -14369,7 +14741,8 @@
         "infoLinks": [
           {"name": "Pack Leader", "id": "5a22-5bfd-4170-8950", "hidden": false, "targetId": "8b86-90f0-b9f3-a8c3", "type": "infoGroup"},
           {"name": "Invulnerable Save", "id": "2c6a-1090-35b8-4819", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
-          {"name": "Oath of Moment", "id": "6a18-f83f-600d-6f5f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Oath of Moment", "id": "6a18-f83f-600d-6f5f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Support", "id": "9d10-8e16-92a9-6be4", "hidden": false, "targetId": "3342-2180-9c5d-925f", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -14512,7 +14885,7 @@
         ],
         "profiles": [
           {
-            "name": "Leader",
+            "name": "Support",
             "id": "d37e-8711-9ba1-97a",
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
@@ -14520,7 +14893,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n\n■ Blood Claws\n■ Grey Hunters\n■ Long Fangs\n\nYou must attach this model to one of the above units, and can do so even if one or more Character units have already been attached to that unit, but a unit can never include more than one Pack Leader model. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed.",
+                "$text": "This model can be attached to the following units:\n\n■ Blood Claws\n■ Grey Hunters\n■ Long Fangs\n",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -15666,6 +16039,26 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Supporting",
+            "id": "e0d1-ef68-20a1-beae",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Supported by",
+            "max": 1,
+            "min": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [{"childId": "e6ab-86d6-b11f-b2ec", "childName": "Fenrisian Wolves", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Faction: Adeptus Astartes", "id": "b7a6-10fe-a0e8-6531", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Faction: Space Wolves", "id": "fc0e-cd18-233f-109f", "primary": false, "targetId": "a0d9-c115-2a-8330"},
@@ -15691,7 +16084,10 @@
             "type": "selectionEntryGroup"
           }
         ],
-        "infoLinks": [{"name": "Oath of Moment", "id": "5366-4362-8e8-cdec", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}],
+        "infoLinks": [
+          {"name": "Oath of Moment", "id": "5366-4362-8e8-cdec", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Support", "id": "2428-34df-e923-6710", "hidden": false, "targetId": "3342-2180-9c5d-925f", "type": "rule"}
+        ],
         "modifierGroups": [
           {
             "comment": "Crusade modifiers",
@@ -15845,7 +16241,7 @@
               {"name": "W", "$text": "2", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "7+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "0", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "6+", "typeId": "55a7-5b54-c60d-11dc"}
             ]
           },
           {
@@ -15871,26 +16267,12 @@
             ]
           },
           {
-            "name": "Invulnerable Save",
-            "id": "fd08-ccf2-9d2c-2db2",
-            "hidden": false,
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "characteristics": [{"name": "Description", "$text": "6+", "typeId": "9b8f-694b-e5e-b573"}]
-          },
-          {
-            "name": "Leader",
+            "name": "Support",
             "id": "2e64-5e5d-4a-dc3d",
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "This model can be attached to the following unit:\n\n■ Fenrisian Wolves\n\nYou must attach this model to the above unit, even if Canis Wolfborn has been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed.",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
+            "characteristics": [{"name": "Description", "$text": "This model can be attached to the following unit:\n\n■ Fenrisian Wolves\n\n", "typeId": "9b8f-694b-e5e-b573"}]
           },
           {
             "name": "Wolfkin",
