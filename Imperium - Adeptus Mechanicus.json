@@ -6,7 +6,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 13,
+    "revision": 14,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -10078,41 +10078,120 @@
                 ]
               }
             ]
-          }
-        ],
-        "selectionEntryGroups": [
+          },
           {
-            "name": "9 Skitarii Rangers",
-            "id": "24a0-5541-79b2-b1ff",
+            "name": "Skitarii Ranger w/ galvanic rifle",
+            "id": "b27c-7f37-083e-9234",
             "collective": false,
-            "defaultSelectionEntryId": "b27c-7f37-083e-9234",
             "hidden": false,
             "import": true,
-            "sortIndex": 3,
+            "type": "model",
             "constraints": [
               {
-                "id": "0748-8852-2e32-1a8f",
+                "id": "c842-b582-d452-71a8-min",
+                "automatic": true,
                 "field": "selections",
-                "includeChildForces": false,
                 "includeChildSelections": false,
-                "percentValue": false,
                 "scope": "parent",
                 "shared": true,
                 "type": "min",
                 "value": 9
               },
               {
-                "id": "b4db-c782-1afb-be64",
+                "id": "c842-b582-d452-71a8-max",
+                "automatic": true,
                 "field": "selections",
-                "includeChildForces": false,
                 "includeChildSelections": false,
-                "percentValue": false,
                 "scope": "parent",
                 "shared": true,
                 "type": "max",
                 "value": 9
               }
             ],
+            "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+            "entryLinks": [{"name": "Close combat weapon", "id": "7d33-efbb-ded7-184f", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"}],
+            "modifiers": [
+              {
+                "field": "c842-b582-d452-71a8-min",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "24a0-5541-79b2-b1ff",
+                    "childName": "Skitarii Rangers Options",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "de59-f65c-181a-8509",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "c842-b582-d452-71a8-max",
+                "type": "decrement",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "24a0-5541-79b2-b1ff",
+                    "childName": "Skitarii Rangers Options",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "de59-f65c-181a-8509",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Galvanic rifle",
+                "id": "6483-eb5-46a4-ff63",
+                "collective": true,
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "constraints": [
+                  {"id": "75dd-2e43-ba2a-1ef8-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "75dd-2e43-ba2a-1ef8-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+                "profiles": [
+                  {
+                    "name": "Galvanic rifle",
+                    "id": "db1c-cc92-e358-9c80",
+                    "hidden": false,
+                    "typeId": "f77d-b953-8fa4-b762",
+                    "typeName": "Ranged Weapons",
+                    "characteristics": [
+                      {"name": "Range", "$text": "30\"", "typeId": "9896-9419-16a1-92fc"},
+                      {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+                      {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+                      {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                      {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                      {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                      {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Skitarii Rangers Options",
+            "id": "24a0-5541-79b2-b1ff",
+            "collective": false,
+            "defaultSelectionEntryId": "b27c-7f37-083e-9234",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 3,
             "selectionEntries": [
               {
                 "name": "Skitarii Ranger w/ transuranic arquebus",
@@ -10120,6 +10199,7 @@
                 "collective": false,
                 "hidden": false,
                 "import": true,
+                "sortIndex": 3,
                 "type": "model",
                 "constraints": [{"id": "91fa-3010-bb3b-e400", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
@@ -10167,6 +10247,7 @@
                 "collective": false,
                 "hidden": false,
                 "import": true,
+                "sortIndex": 1,
                 "type": "model",
                 "constraints": [{"id": "6f2a-bd08-7a0b-a523", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
@@ -10216,6 +10297,7 @@
                 "collective": false,
                 "hidden": false,
                 "import": true,
+                "sortIndex": 2,
                 "type": "model",
                 "constraints": [{"id": "a4ff-7bfa-4167-65bd", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
@@ -10268,222 +10350,140 @@
                     ]
                   }
                 ]
-              },
+              }
+            ],
+            "selectionEntryGroups": [
               {
-                "name": "Skitarii Ranger w/ galvanic rifle",
-                "id": "b27c-7f37-083e-9234",
-                "collective": false,
+                "name": "Either",
+                "id": "373c-07f8-ac3f-6de9",
                 "hidden": false,
-                "import": true,
-                "type": "model",
-                "constraints": [
-                  {
-                    "id": "95d1-401a-8092-fb51",
-                    "field": "selections",
-                    "includeChildForces": false,
-                    "includeChildSelections": false,
-                    "percentValue": false,
-                    "scope": "parent",
-                    "shared": true,
-                    "type": "max",
-                    "value": 9
-                  },
-                  {"id": "8923-2149-3c01-3f88", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 5}
-                ],
-                "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                "entryLinks": [{"name": "Close combat weapon", "id": "7d33-efbb-ded7-184f", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"}],
+                "sortIndex": 4,
+                "constraints": [{"id": "6dab-7bfd-2776-7cfe", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "selectionEntries": [
                   {
-                    "name": "Galvanic rifle",
-                    "id": "6483-eb5-46a4-ff63",
-                    "collective": true,
-                    "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "75dd-2e43-ba2a-1ef8-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "75dd-2e43-ba2a-1ef8-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                    "profiles": [
-                      {
-                        "name": "Galvanic rifle",
-                        "id": "db1c-cc92-e358-9c80",
-                        "hidden": false,
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "30\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
-                          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Skitarii Ranger w/ data-tether",
-                "id": "f525-f4d5-1ea1-ecaf",
-                "collective": false,
-                "hidden": false,
-                "import": true,
-                "type": "model",
-                "constraints": [{"id": "269e-6a58-e086-a29a", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-                "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                "entryLinks": [{"name": "Close combat weapon", "id": "3af4-da3-68e5-9c48", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"}],
-                "modifiers": [
-                  {
-                    "field": "hidden",
-                    "type": "set",
-                    "value": true,
-                    "conditions": [
-                      {
-                        "childId": "626e-72e0-7869-82c1",
-                        "field": "selections",
-                        "includeChildSelections": true,
-                        "scope": "de59-f65c-181a-8509",
-                        "shared": true,
-                        "type": "atLeast",
-                        "value": 1
-                      }
-                    ]
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "name": "Galvanic rifle",
-                    "id": "5e3b-1117-fcdd-b4d5",
-                    "collective": true,
-                    "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "82a0-2612-9114-5485-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "82a0-2612-9114-5485-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                    "profiles": [
-                      {
-                        "name": "Galvanic rifle",
-                        "id": "9767-45d6-3176-32d0",
-                        "hidden": false,
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "30\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
-                          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Enhanced data-tether",
-                    "id": "709c-78a0-c807-bf70",
+                    "name": "Skitarii Ranger w/ data-tether",
+                    "id": "f525-f4d5-1ea1-ecaf",
                     "collective": false,
                     "hidden": false,
                     "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "6c41-3d40-92c3-2b08-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "6c41-3d40-92c3-2b08-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
+                    "type": "model",
+                    "constraints": [{"id": "269e-6a58-e086-a29a", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                     "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                    "profiles": [
+                    "entryLinks": [{"name": "Close combat weapon", "id": "3af4-da3-68e5-9c48", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"}],
+                    "selectionEntries": [
+                      {
+                        "name": "Galvanic rifle",
+                        "id": "5e3b-1117-fcdd-b4d5",
+                        "collective": true,
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [
+                          {"id": "82a0-2612-9114-5485-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "82a0-2612-9114-5485-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
+                        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+                        "profiles": [
+                          {
+                            "name": "Galvanic rifle",
+                            "id": "9767-45d6-3176-32d0",
+                            "hidden": false,
+                            "typeId": "f77d-b953-8fa4-b762",
+                            "typeName": "Ranged Weapons",
+                            "characteristics": [
+                              {"name": "Range", "$text": "30\"", "typeId": "9896-9419-16a1-92fc"},
+                              {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+                              {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+                              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                              {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+                            ]
+                          }
+                        ]
+                      },
                       {
                         "name": "Enhanced data-tether",
-                        "id": "3c76-db6d-2b-29bd",
+                        "id": "709c-78a0-c807-bf70",
+                        "collective": false,
                         "hidden": false,
-                        "typeId": "9cc3-6d83-4dd3-9b64",
-                        "typeName": "Abilities",
-                        "characteristics": [
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [
+                          {"id": "6c41-3d40-92c3-2b08-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "6c41-3d40-92c3-2b08-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
+                        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+                        "profiles": [
                           {
-                            "name": "Description",
-                            "$text": "Each time you select the bearer’s unit\nas the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-                            "typeId": "9b8f-694b-e5e-b573"
+                            "name": "Enhanced data-tether",
+                            "id": "3c76-db6d-2b-29bd",
+                            "hidden": false,
+                            "typeId": "9cc3-6d83-4dd3-9b64",
+                            "typeName": "Abilities",
+                            "characteristics": [
+                              {
+                                "name": "Description",
+                                "$text": "Each time you select the bearer’s unit\nas the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+                                "typeId": "9b8f-694b-e5e-b573"
+                              }
+                            ]
                           }
                         ]
                       }
                     ]
-                  }
-                ]
-              },
-              {
-                "name": "Skitarii Ranger w/ omnispex",
-                "id": "626e-72e0-7869-82c1",
-                "collective": false,
-                "hidden": false,
-                "import": true,
-                "type": "model",
-                "constraints": [{"id": "61be-5e03-d068-cf38", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-                "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                "entryLinks": [
-                  {"name": "Close combat weapon", "id": "ec0f-669b-268-f632", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"},
+                  },
                   {
-                    "name": "Omnispex",
-                    "id": "36cb-19f2-9388-d85d",
+                    "name": "Skitarii Ranger w/ omnispex",
+                    "id": "626e-72e0-7869-82c1",
                     "collective": false,
                     "hidden": false,
                     "import": true,
-                    "targetId": "b7a3-bfbd-1464-141d",
-                    "type": "selectionEntry"
-                  }
-                ],
-                "modifiers": [
-                  {
-                    "field": "hidden",
-                    "type": "set",
-                    "value": true,
-                    "conditions": [
-                      {
-                        "childId": "f525-f4d5-1ea1-ecaf",
-                        "field": "selections",
-                        "includeChildSelections": true,
-                        "scope": "de59-f65c-181a-8509",
-                        "shared": true,
-                        "type": "atLeast",
-                        "value": 1
-                      }
-                    ]
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "name": "Galvanic rifle",
-                    "id": "3d89-dec1-eaa9-47f3",
-                    "collective": true,
-                    "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "dffd-f173-1e5d-8d79-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "dffd-f173-1e5d-8d79-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
+                    "type": "model",
+                    "constraints": [{"id": "61be-5e03-d068-cf38", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                     "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                    "profiles": [
+                    "entryLinks": [
+                      {"name": "Close combat weapon", "id": "ec0f-669b-268-f632", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"},
+                      {
+                        "name": "Omnispex",
+                        "id": "36cb-19f2-9388-d85d",
+                        "collective": false,
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "b7a3-bfbd-1464-141d",
+                        "type": "selectionEntry"
+                      }
+                    ],
+                    "selectionEntries": [
                       {
                         "name": "Galvanic rifle",
-                        "id": "9d76-a181-3b5c-bb05",
+                        "id": "3d89-dec1-eaa9-47f3",
+                        "collective": true,
                         "hidden": false,
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "30\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
-                          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [
+                          {"id": "dffd-f173-1e5d-8d79-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "dffd-f173-1e5d-8d79-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
+                        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+                        "profiles": [
+                          {
+                            "name": "Galvanic rifle",
+                            "id": "9d76-a181-3b5c-bb05",
+                            "hidden": false,
+                            "typeId": "f77d-b953-8fa4-b762",
+                            "typeName": "Ranged Weapons",
+                            "characteristics": [
+                              {"name": "Range", "$text": "30\"", "typeId": "9896-9419-16a1-92fc"},
+                              {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+                              {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+                              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                              {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+                            ]
+                          }
                         ]
                       }
                     ]
@@ -10962,31 +10962,18 @@
                 ]
               }
             ]
-          }
-        ],
-        "selectionEntryGroups": [
+          },
           {
-            "name": "Skitarii Vanguard",
-            "id": "c00c-540d-818e-9f44",
+            "name": "Skitarii Vanguard w/ radium carbine",
+            "id": "e643-b59e-8ca3-2f8c",
             "collective": false,
-            "defaultSelectionEntryId": "e643-b59e-8ca3-2f8c",
             "hidden": false,
             "import": true,
-            "sortIndex": 3,
+            "type": "model",
             "constraints": [
               {
-                "id": "9839-3b18-4e5d-56d2",
-                "field": "selections",
-                "includeChildForces": false,
-                "includeChildSelections": false,
-                "percentValue": false,
-                "scope": "parent",
-                "shared": true,
-                "type": "min",
-                "value": 9
-              },
-              {
-                "id": "a46f-a256-0443-0be5",
+                "id": "a867-1cc7-dcdb-d286",
+                "automatic": true,
                 "field": "selections",
                 "includeChildForces": false,
                 "includeChildSelections": false,
@@ -10995,8 +10982,84 @@
                 "shared": true,
                 "type": "max",
                 "value": 9
+              },
+              {
+                "id": "761f-0fcb-325e-d45f",
+                "automatic": true,
+                "field": "selections",
+                "includeChildSelections": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 9
               }
             ],
+            "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+            "entryLinks": [{"name": "Close combat weapon", "id": "afa-cc0a-cbed-ac4a", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"}],
+            "modifierGroups": [
+              {
+                "type": "and",
+                "modifiers": [{"field": "a867-1cc7-dcdb-d286", "type": "decrement", "value": 1}, {"field": "761f-0fcb-325e-d45f", "type": "decrement", "value": 1}],
+                "repeats": [
+                  {
+                    "childId": "c00c-540d-818e-9f44",
+                    "childName": "Skitarii Vanguard Options",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "ba33-c21-bddc-ab0",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "Radium carbine",
+                "id": "23df-6574-ca00-efc8",
+                "collective": true,
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "constraints": [
+                  {"id": "4f41-8329-6071-f6d4-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "4f41-8329-6071-f6d4-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+                "infoLinks": [{"name": "Anti", "id": "2ea2-c174-6fc4-c399", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}],
+                "profiles": [
+                  {
+                    "name": "Radium carbine",
+                    "id": "b4c5-eb75-b38d-7ce9",
+                    "hidden": false,
+                    "typeId": "f77d-b953-8fa4-b762",
+                    "typeName": "Ranged Weapons",
+                    "characteristics": [
+                      {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
+                      {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+                      {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+                      {"name": "S", "$text": "3", "typeId": "2229-f494-25db-c5d3"},
+                      {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                      {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                      {"name": "Keywords", "$text": "Anti-Infantry 4+", "typeId": "7f1b-8591-2fcf-d01c"}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Skitarii Vanguard Options",
+            "id": "c00c-540d-818e-9f44",
+            "collective": false,
+            "defaultSelectionEntryId": "e643-b59e-8ca3-2f8c",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 3,
             "selectionEntries": [
               {
                 "name": "Skitarii Vanguard w/ transuranic arquebus",
@@ -11004,6 +11067,7 @@
                 "collective": false,
                 "hidden": false,
                 "import": true,
+                "sortIndex": 3,
                 "type": "model",
                 "constraints": [{"id": "463a-6c49-48ef-b5a8", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
@@ -11051,6 +11115,7 @@
                 "collective": false,
                 "hidden": false,
                 "import": true,
+                "sortIndex": 1,
                 "type": "model",
                 "constraints": [{"id": "8e50-fc4-fd25-d283", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
@@ -11100,6 +11165,7 @@
                 "collective": false,
                 "hidden": false,
                 "import": true,
+                "sortIndex": 2,
                 "type": "model",
                 "constraints": [{"id": "68d5-fac5-602-6602", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
@@ -11152,248 +11218,169 @@
                     ]
                   }
                 ]
-              },
+              }
+            ],
+            "selectionEntryGroups": [
               {
-                "name": "Skitarii Vanguard w/ radium carbine",
-                "id": "e643-b59e-8ca3-2f8c",
-                "collective": false,
+                "name": "Either:",
+                "id": "9e65-29a8-cc19-5808",
+                "defaultSelectionEntryId": "none",
                 "hidden": false,
-                "import": true,
-                "type": "model",
-                "constraints": [
-                  {
-                    "id": "a867-1cc7-dcdb-d286",
-                    "field": "selections",
-                    "includeChildForces": false,
-                    "includeChildSelections": false,
-                    "percentValue": false,
-                    "scope": "parent",
-                    "shared": true,
-                    "type": "max",
-                    "value": 9
-                  }
-                ],
-                "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                "entryLinks": [{"name": "Close combat weapon", "id": "afa-cc0a-cbed-ac4a", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"}],
+                "sortIndex": 4,
+                "constraints": [{"id": "0c8e-b46d-8659-3bab", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "selectionEntries": [
                   {
-                    "name": "Radium carbine",
-                    "id": "23df-6574-ca00-efc8",
-                    "collective": true,
+                    "name": "Skitarii Vanguard w/ omnispex",
+                    "id": "d3d5-8552-186c-8436",
+                    "collective": false,
                     "hidden": false,
                     "import": true,
-                    "type": "upgrade",
+                    "sortIndex": 2,
+                    "type": "model",
                     "constraints": [
-                      {"id": "4f41-8329-6071-f6d4-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "4f41-8329-6071-f6d4-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                    "infoLinks": [{"name": "Anti", "id": "2ea2-c174-6fc4-c399", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}],
-                    "profiles": [
                       {
-                        "name": "Radium carbine",
-                        "id": "b4c5-eb75-b38d-7ce9",
-                        "hidden": false,
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
-                          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "3", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Anti-Infantry 4+", "typeId": "7f1b-8591-2fcf-d01c"}
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Skitarii Vanguard w/ data-tether",
-                "id": "ef06-ef9-2ff7-f92d",
-                "collective": false,
-                "hidden": false,
-                "import": true,
-                "type": "model",
-                "constraints": [
-                  {
-                    "id": "1a5-a821-7db7-cb4a",
-                    "field": "selections",
-                    "includeChildForces": false,
-                    "includeChildSelections": false,
-                    "percentValue": false,
-                    "scope": "parent",
-                    "shared": true,
-                    "type": "max",
-                    "value": 1
-                  }
-                ],
-                "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                "entryLinks": [{"name": "Close combat weapon", "id": "a92c-79e2-95f3-450", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"}],
-                "modifiers": [
-                  {
-                    "field": "hidden",
-                    "type": "set",
-                    "value": true,
-                    "conditions": [
-                      {
-                        "childId": "d3d5-8552-186c-8436",
+                        "id": "cdd7-87ab-96f0-4645",
                         "field": "selections",
-                        "includeChildSelections": true,
-                        "scope": "ba33-c21-bddc-ab0",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
                         "shared": true,
-                        "type": "atLeast",
+                        "type": "max",
                         "value": 1
                       }
-                    ]
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "name": "Radium carbine",
-                    "id": "502d-7261-2f99-a3ac",
-                    "collective": true,
-                    "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "17-330-e39d-c11c-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "17-330-e39d-c11c-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                     ],
                     "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                    "infoLinks": [{"name": "Anti", "id": "cd9e-b15b-8634-a4b6", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}],
-                    "profiles": [
+                    "entryLinks": [
+                      {"name": "Close combat weapon", "id": "1d4b-2913-b878-5eda", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"},
+                      {
+                        "name": "Omnispex",
+                        "id": "d0df-184f-0799-c599",
+                        "collective": false,
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "b7a3-bfbd-1464-141d",
+                        "type": "selectionEntry"
+                      }
+                    ],
+                    "selectionEntries": [
                       {
                         "name": "Radium carbine",
-                        "id": "9d-da76-cbb9-dba3",
+                        "id": "fda9-2b2d-93a0-9363",
+                        "collective": true,
                         "hidden": false,
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
-                          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "3", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Anti-Infantry 4+", "typeId": "7f1b-8591-2fcf-d01c"}
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [
+                          {"id": "e824-c429-4ff9-79b5-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "e824-c429-4ff9-79b5-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
+                        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+                        "infoLinks": [{"name": "Anti", "id": "5f06-5aed-f824-e93e", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}],
+                        "profiles": [
+                          {
+                            "name": "Radium carbine",
+                            "id": "da29-dd4a-8556-a7ec",
+                            "hidden": false,
+                            "typeId": "f77d-b953-8fa4-b762",
+                            "typeName": "Ranged Weapons",
+                            "characteristics": [
+                              {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
+                              {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+                              {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+                              {"name": "S", "$text": "3", "typeId": "2229-f494-25db-c5d3"},
+                              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                              {"name": "Keywords", "$text": "Anti-Infantry 4+", "typeId": "7f1b-8591-2fcf-d01c"}
+                            ]
+                          }
                         ]
                       }
                     ]
                   },
                   {
-                    "name": "Enhanced data-tether",
-                    "id": "d2c9-5e7c-286e-56da",
+                    "name": "Skitarii Vanguard w/ data-tether",
+                    "id": "ef06-ef9-2ff7-f92d",
                     "collective": false,
                     "hidden": false,
                     "import": true,
-                    "type": "upgrade",
+                    "sortIndex": 1,
+                    "type": "model",
                     "constraints": [
-                      {"id": "be49-b420-9f9f-8639-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "be49-b420-9f9f-8639-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                    "profiles": [
                       {
-                        "name": "Enhanced data-tether",
-                        "id": "fbee-3c20-ed1f-9fda",
-                        "hidden": false,
-                        "typeId": "9cc3-6d83-4dd3-9b64",
-                        "typeName": "Abilities",
-                        "characteristics": [
-                          {
-                            "name": "Description",
-                            "$text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-                            "typeId": "9b8f-694b-e5e-b573"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Skitarii Vanguard w/ omnispex",
-                "id": "d3d5-8552-186c-8436",
-                "collective": false,
-                "hidden": false,
-                "import": true,
-                "type": "model",
-                "constraints": [
-                  {
-                    "id": "cdd7-87ab-96f0-4645",
-                    "field": "selections",
-                    "includeChildForces": false,
-                    "includeChildSelections": false,
-                    "percentValue": false,
-                    "scope": "parent",
-                    "shared": true,
-                    "type": "max",
-                    "value": 1
-                  }
-                ],
-                "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                "entryLinks": [
-                  {"name": "Close combat weapon", "id": "1d4b-2913-b878-5eda", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"},
-                  {
-                    "name": "Omnispex",
-                    "id": "d0df-184f-0799-c599",
-                    "collective": false,
-                    "hidden": false,
-                    "import": true,
-                    "targetId": "b7a3-bfbd-1464-141d",
-                    "type": "selectionEntry"
-                  }
-                ],
-                "modifiers": [
-                  {
-                    "field": "hidden",
-                    "type": "set",
-                    "value": true,
-                    "conditions": [
-                      {
-                        "childId": "ef06-ef9-2ff7-f92d",
+                        "id": "1a5-a821-7db7-cb4a",
                         "field": "selections",
-                        "includeChildSelections": true,
-                        "scope": "ba33-c21-bddc-ab0",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
                         "shared": true,
-                        "type": "atLeast",
+                        "type": "max",
                         "value": 1
                       }
-                    ]
-                  }
-                ],
-                "selectionEntries": [
-                  {
-                    "name": "Radium carbine",
-                    "id": "fda9-2b2d-93a0-9363",
-                    "collective": true,
-                    "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "e824-c429-4ff9-79b5-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "e824-c429-4ff9-79b5-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                     ],
                     "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                    "infoLinks": [{"name": "Anti", "id": "5f06-5aed-f824-e93e", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}],
-                    "profiles": [
+                    "entryLinks": [{"name": "Close combat weapon", "id": "a92c-79e2-95f3-450", "hidden": false, "import": true, "targetId": "2f1a-2fc7-2843-549d", "type": "selectionEntry"}],
+                    "selectionEntries": [
                       {
                         "name": "Radium carbine",
-                        "id": "da29-dd4a-8556-a7ec",
+                        "id": "502d-7261-2f99-a3ac",
+                        "collective": true,
                         "hidden": false,
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
-                          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "3", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Anti-Infantry 4+", "typeId": "7f1b-8591-2fcf-d01c"}
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [
+                          {"id": "17-330-e39d-c11c-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "17-330-e39d-c11c-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
+                        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+                        "infoLinks": [{"name": "Anti", "id": "cd9e-b15b-8634-a4b6", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}],
+                        "profiles": [
+                          {
+                            "name": "Radium carbine",
+                            "id": "9d-da76-cbb9-dba3",
+                            "hidden": false,
+                            "typeId": "f77d-b953-8fa4-b762",
+                            "typeName": "Ranged Weapons",
+                            "characteristics": [
+                              {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
+                              {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+                              {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+                              {"name": "S", "$text": "3", "typeId": "2229-f494-25db-c5d3"},
+                              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                              {"name": "Keywords", "$text": "Anti-Infantry 4+", "typeId": "7f1b-8591-2fcf-d01c"}
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Enhanced data-tether",
+                        "id": "d2c9-5e7c-286e-56da",
+                        "collective": false,
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [
+                          {"id": "be49-b420-9f9f-8639-min", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "be49-b420-9f9f-8639-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
+                        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+                        "profiles": [
+                          {
+                            "name": "Enhanced data-tether",
+                            "id": "fbee-3c20-ed1f-9fda",
+                            "hidden": false,
+                            "typeId": "9cc3-6d83-4dd3-9b64",
+                            "typeName": "Abilities",
+                            "characteristics": [
+                              {
+                                "name": "Description",
+                                "$text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+                                "typeId": "9b8f-694b-e5e-b573"
+                              }
+                            ]
+                          }
                         ]
                       }
                     ]
