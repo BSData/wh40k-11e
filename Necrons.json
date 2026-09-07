@@ -6,7 +6,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 19,
+    "revision": 20,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [{"name": "Unaligned Forces", "id": "2660-21-2feb-f1c5", "importRootEntries": true, "targetId": "581a-46b9-5b86-44b7", "type": "catalogue"}],
@@ -461,31 +461,6 @@
       {
         "name": "Skorpekh Destroyers",
         "id": "97f2-7658-2cd-8f4b",
-        "hidden": false,
-        "constraints": [{"id": "4363-bd37-61aa-e46c", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}],
-        "modifiers": [
-          {
-            "field": "4363-bd37-61aa-e46c",
-            "type": "set",
-            "value": 2,
-            "conditions": [
-              {
-                "childId": "d62d-db22-4893-4bc0",
-                "childName": "1. Incursion (1000 Point limit)",
-                "field": "selections",
-                "includeChildSelections": true,
-                "scope": "force",
-                "shared": true,
-                "type": "atLeast",
-                "value": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Triarch Stalker",
-        "id": "1124-c60-ce6-631",
         "hidden": false,
         "constraints": [{"id": "4363-bd37-61aa-e46c", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}],
         "modifiers": [
@@ -11652,13 +11627,15 @@
           {"name": "Faction: Necrons", "id": "5ad6-3bf4-64e7-84e1", "primary": false, "targetId": "ee0-cf31-4fb5-6b26"},
           {"name": "Vehicle", "id": "1f00-db54-34f2-c8ec", "primary": true, "targetId": "dbd4-63-af05-998"},
           {"name": "Walker", "id": "91e-5735-c8eb-d421", "primary": false, "targetId": "6dda-e157-334d-e93a"},
-          {"name": "Triarch Stalker", "id": "60a6-fad1-1eaa-af6e", "primary": false, "targetId": "1124-c60-ce6-631"},
-          {"name": "Frame", "id": "d737-1335-03ca-c7e2", "hidden": false, "primary": false, "targetId": "b927-8eeb-7cc3-8dec"}
+          {"name": "Frame", "id": "d737-1335-03ca-c7e2", "hidden": false, "primary": false, "targetId": "b927-8eeb-7cc3-8dec"},
+          {"name": "Stalker", "id": "eabc-ecbf-92ff-ae8f", "hidden": false, "primary": false, "targetId": "bf46-75ca-d761-cbf3"},
+          {"name": "Triarch", "id": "4d43-6e85-4bee-fe49", "hidden": false, "primary": false, "targetId": "8ddf-88ca-8b98-89b7"}
         ],
         "constraints": [
           {"id": "5b52-79ca-2f5e-95c3", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 3},
           {"id": "9652-fbd4-ab39-a784", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "max", "value": 0},
-          {"id": "6fa0-a43f-a7a5-e006", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0}
+          {"id": "6fa0-a43f-a7a5-e006", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
+          {"id": "7dce-3d35-13a2-c07e", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
           {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 110},
@@ -11840,6 +11817,23 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "field": "7dce-3d35-13a2-c07e",
+            "type": "set",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "d62d-db22-4893-4bc0",
+                "childName": "1. Incursion (1000 Point limit)",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
               }
             ]
           }
