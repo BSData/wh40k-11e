@@ -715,7 +715,17 @@
         "import": true,
         "type": "upgrade",
         "categoryLinks": [{"name": "Warlord", "id": "60d3-fcd7-dc2a-b9a1", "primary": false, "targetId": "5c0e-4c31-d51b-e470"}],
-        "constraints": [{"id": "7ca5-48b6-5801-c3ef", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+        "constraints": [{"id": "7ca5-48b6-5801-c3ef", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {"childId": "9cfd-1c32-585f-7d5c", "childName": "Character", "field": "selections", "scope": "root-entry", "shared": true, "type": "notInstanceOf", "value": 1}
+            ]
+          }
+        ]
       },
       {
         "name": "Battlewagon",
@@ -3899,10 +3909,11 @@
             "id": "ee76-cc02-941b-62ec",
             "hidden": false,
             "import": true,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "targetId": "ebea-74c4-f3db-183d",
             "type": "selectionEntryGroup"
-          }
+          },
+          {"name": "Warlord", "id": "cd63-259b-cfe4-83b9", "hidden": false, "import": true, "sortIndex": 2, "targetId": "8b5-898c-f79b-5a9c", "type": "selectionEntry"}
         ],
         "infoLinks": [
           {"name": "Waaagh!", "id": "d9b2-dc6c-1d3e-1987", "hidden": false, "targetId": "37c-6ef9-277-9091", "type": "rule"},
@@ -4110,7 +4121,7 @@
             "name": "Wargear",
             "id": "c03f-1692-bf00-f64d",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 4,
             "entryLinks": [
               {
                 "name": "Armoured Impact",
@@ -6158,10 +6169,11 @@
             "id": "8ae8-199f-dcab-8352",
             "hidden": false,
             "import": true,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "targetId": "ebea-74c4-f3db-183d",
             "type": "selectionEntryGroup"
-          }
+          },
+          {"name": "Warlord", "id": "6496-7ca0-28e3-38ae", "hidden": false, "import": true, "sortIndex": 2, "targetId": "8b5-898c-f79b-5a9c", "type": "selectionEntry"}
         ],
         "infoLinks": [
           {
@@ -6369,7 +6381,7 @@
             "name": "Wargear",
             "id": "57c4-8244-5eab-33c3",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 4,
             "entryLinks": [
               {
                 "name": "Dual Big Shoota",
@@ -6515,10 +6527,11 @@
             "id": "5439-46b5-0c96-c52b",
             "hidden": false,
             "import": true,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "targetId": "ebea-74c4-f3db-183d",
             "type": "selectionEntryGroup"
-          }
+          },
+          {"name": "Warlord", "id": "26b7-c52d-cfc8-5e31", "hidden": false, "import": true, "sortIndex": 2, "targetId": "8b5-898c-f79b-5a9c", "type": "selectionEntry"}
         ],
         "infoLinks": [
           {
@@ -6726,7 +6739,7 @@
             "name": "Wargear",
             "id": "08c5-054c-3f84-8f68",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 4,
             "entryLinks": [
               {
                 "name": "Armoured Impact",
@@ -21369,10 +21382,11 @@
             "id": "fc9d-f5ad-7ff1-960f",
             "hidden": false,
             "import": true,
-            "sortIndex": 2,
+            "sortIndex": 3,
             "targetId": "ebea-74c4-f3db-183d",
             "type": "selectionEntryGroup"
-          }
+          },
+          {"name": "Warlord", "id": "8d4a-9148-eb80-1127", "hidden": false, "import": true, "sortIndex": 2, "targetId": "8b5-898c-f79b-5a9c", "type": "selectionEntry"}
         ],
         "infoLinks": [
           {
@@ -21605,7 +21619,7 @@
             "name": "Wargear",
             "id": "2bdc-ca87-75f3-65df",
             "hidden": false,
-            "sortIndex": 3,
+            "sortIndex": 4,
             "entryLinks": [
               {
                 "name": "Armoured Impact",
