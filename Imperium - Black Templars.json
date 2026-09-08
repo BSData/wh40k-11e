@@ -7,7 +7,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 3,
+    "revision": 4,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [{"name": "Imperium - Space Marines", "id": "2137-605d-109a-d3b2", "importRootEntries": true, "targetId": "e0af-67df-9d63-8fb7", "type": "catalogue"}],
@@ -10192,6 +10192,56 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "8e68-0936-abf3-017d",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "9ba8-7087-dcbd-9fd8",
+                    "childName": "Assault Intercessor Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {"childId": "9e2c-48af-8c2b-ea68", "childName": "Crusader Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "7b57-816b-44b2-65ec", "childName": "Intercessor Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "f790-2929-6951-c241",
+                    "childName": "Sword Brethren Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "e05e-b4e4-6db0-5d42",
+                    "childName": "Sternguard Veteran Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Character", "id": "ca8d-6a2c-e17a-7a56", "primary": true, "targetId": "9cfd-1c32-585f-7d5c"},
           {"name": "Infantry", "id": "c4a4-bedf-a801-59d1", "primary": false, "targetId": "cf47-a0d7-7207-29dc"},
@@ -10200,7 +10250,8 @@
           {"name": "Tacticus", "id": "40c6-5442-3ba6-6886", "primary": false, "targetId": "5179-8ede-45e3-49a2"},
           {"name": "Faction: Adeptus Astartes", "id": "4cd1-ecae-beda-6f54", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Emperor's Champion", "id": "13ec-1b36-e33a-0990", "primary": false, "targetId": "1ba5-20a1-4dd6-9a4f"},
-          {"name": "Faction: Black Templars", "id": "72c1-2194-7ab2-b9d7", "primary": false, "targetId": "9249-acae-2882-d95"}
+          {"name": "Faction: Black Templars", "id": "72c1-2194-7ab2-b9d7", "primary": false, "targetId": "9249-acae-2882-d95"},
+          {"name": "Leader", "id": "723c-44cd-c4c4-d01c", "hidden": false, "primary": false, "targetId": "1556-9b56-fba6-4370"}
         ],
         "constraints": [
           {"id": "6e68-bed5-81f6-fdb5", "field": "selections", "scope": "roster", "shared": true, "type": "max", "value": 1},

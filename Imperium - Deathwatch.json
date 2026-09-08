@@ -6,7 +6,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 6,
+    "revision": 7,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [{"name": "Imperium - Space Marines", "id": "0e90-a51e-f59d-892a", "importRootEntries": true, "targetId": "e0af-67df-9d63-8fb7", "type": "catalogue"}],
@@ -16,7 +16,6 @@
       {"name": "Corvus Blackstar", "id": "b9d0-ad1e-b2c9-c2b9", "hidden": false, "page": 19, "publicationId": "4115-3627-e608-39f6"},
       {"name": "Kill Team Cassius", "id": "73ac-907a-3014-e457", "hidden": false},
       {"name": "Veteran Bike Squad", "id": "bea7-7dc2-73b-b964", "hidden": false},
-      {"name": "Deathwatch Terminator Squad", "id": "8311-8645-4ce3-8b3", "hidden": false},
       {"name": "Deathwatch Veterans", "id": "88ab-39b-e7ba-770e", "hidden": false},
       {"name": "Proteus Kill Team", "id": "ae46-3df5-4feb-8e53", "hidden": false},
       {"name": "Fortis Kill Team", "id": "a2bb-b582-9f57-27f5", "hidden": false},
@@ -8610,7 +8609,7 @@
                 "type": "model",
                 "constraints": [
                   {"id": "e5c5-5368-2f42-011e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 9},
-                  {"id": "729a-ab8d-51d3-543b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 4}
+                  {"id": "729a-ab8d-51d3-543b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2}
                 ],
                 "entryLinks": [
                   {
@@ -8638,14 +8637,6 @@
                     ]
                   }
                 ],
-                "modifiers": [
-                  {
-                    "field": "729a-ab8d-51d3-543b",
-                    "type": "decrement",
-                    "value": 1,
-                    "repeats": [{"childId": "cd78-e267-5f72-a2a2", "field": "selections", "repeats": 1, "roundUp": false, "scope": "c679-f252-32b1-ebcc", "shared": true, "value": 1}]
-                  }
-                ],
                 "profiles": [
                   {
                     "name": "Kill Team Intercessor w/ Jump Pack",
@@ -8666,62 +8657,151 @@
                 ]
               },
               {
-                "name": "Heavy Intercessor w/ Jump Pack",
-                "id": "d773-5ee0-d647-efaa",
+                "name": "Intercessor w/ plasma pistol and Jump Pack",
+                "id": "cd78-e267-5f72-a2a2",
                 "hidden": false,
                 "import": true,
                 "type": "model",
-                "constraints": [{"id": "ded5-f13d-cda6-ef2f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 5}],
+                "constraints": [{"id": "86ba-22d7-eaa6-d046", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
                 "entryLinks": [
                   {
-                    "name": "Close combat weapon",
-                    "id": "855c-c9e5-17f8-865b",
+                    "name": "Astartes Chainsword",
+                    "id": "a87d-c8fc-af6f-a21f",
                     "hidden": false,
                     "import": true,
-                    "targetId": "6c7d-af5b-482-6fbe",
+                    "targetId": "efcd-180-d07-b4d6",
                     "type": "selectionEntry",
                     "constraints": [
-                      {"id": "b19e-a0cd-e4d7-6d90-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "b19e-a0cd-e4d7-6d90-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                      {"id": "f42c-c415-c98a-88bc", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "50e9-bb04-100b-543b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ]
+                  },
+                  {
+                    "name": "Plasma pistol",
+                    "id": "ac7d-0b1f-2179-2998",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "2902-b665-48b6-bb09",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "ae76-d8e6-7290-6fdb", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "08f4-53ba-74b6-e7b2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ]
+                  }
+                ],
+                "modifiers": [
+                  {
+                    "field": "error",
+                    "type": "add",
+                    "value": "Max 1 per 5 models",
+                    "conditionGroups": [
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "childId": "2902-b665-48b6-bb09",
+                            "childName": "Plasma pistol",
+                            "field": "selections",
+                            "includeChildSelections": true,
+                            "scope": "c679-f252-32b1-ebcc",
+                            "shared": true,
+                            "type": "greaterThan",
+                            "value": 1
+                          },
+                          {
+                            "childId": "model",
+                            "childName": "model",
+                            "field": "selections",
+                            "includeChildSelections": true,
+                            "scope": "c679-f252-32b1-ebcc",
+                            "shared": true,
+                            "type": "lessThan",
+                            "value": 10
+                          }
+                        ]
+                      }
                     ]
                   }
                 ],
                 "profiles": [
                   {
-                    "name": "Kill Team Heavy Intercessor w/ Jump Pack",
-                    "id": "32f2-fdf1-ee27-8c68",
+                    "name": "Kill Team Intercessor w/ Jump Pack",
+                    "id": "fd99-3eb6-0aa2-3864",
                     "hidden": false,
                     "typeId": "c547-1836-d8a-ff4f",
                     "typeName": "Unit",
                     "characteristics": [
-                      {"name": "M", "$text": "10\"", "typeId": "e703-ecb6-5ce7-aec1"},
-                      {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
+                      {"name": "M", "$text": "12\"", "typeId": "e703-ecb6-5ce7-aec1"},
+                      {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
                       {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
-                      {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
+                      {"name": "W", "$text": "2", "typeId": "750a-a2ec-90d3-21fe"},
                       {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
                       {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
                       {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
                     ]
                   }
-                ],
-                "selectionEntryGroups": [
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "0-5 Heavy Intercessors w/ Jump Pack",
+                "id": "4a9a-c715-b0a6-c7b4",
+                "hidden": false,
+                "constraints": [{"id": "1da3-08b4-cd25-ccf7", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 5}],
+                "selectionEntries": [
                   {
-                    "name": "Weapons",
-                    "id": "8f98-cd7a-d86a-f163",
-                    "defaultSelectionEntryId": "8d1c-e6d8-5d46-6a3a",
+                    "name": "Heavy Intercessor w/ assault bolter",
+                    "id": "d773-5ee0-d647-efaa",
                     "hidden": false,
-                    "constraints": [
-                      {"id": "72e4-0b27-490f-4ea5-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "72e4-0b27-490f-4ea5-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    "import": true,
+                    "type": "model",
+                    "constraints": [{"id": "fdc3-0b74-e35a-3972", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 5}],
+                    "entryLinks": [
+                      {
+                        "name": "Close combat weapon",
+                        "id": "855c-c9e5-17f8-865b",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "6c7d-af5b-482-6fbe",
+                        "type": "selectionEntry",
+                        "constraints": [
+                          {"id": "b19e-a0cd-e4d7-6d90-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "b19e-a0cd-e4d7-6d90-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ]
+                      }
+                    ],
+                    "profiles": [
+                      {
+                        "name": "Kill Team Heavy Intercessor w/ Jump Pack",
+                        "id": "32f2-fdf1-ee27-8c68",
+                        "hidden": false,
+                        "typeId": "c547-1836-d8a-ff4f",
+                        "typeName": "Unit",
+                        "characteristics": [
+                          {"name": "M", "$text": "10\"", "typeId": "e703-ecb6-5ce7-aec1"},
+                          {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
+                          {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
+                          {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
+                          {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+                          {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
+                          {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+                        ]
+                      }
                     ],
                     "selectionEntries": [
                       {
                         "name": "Assault bolters",
                         "id": "8d1c-e6d8-5d46-6a3a",
-                        "collective": false,
+                        "collapsible": true,
+                        "collective": true,
                         "hidden": false,
                         "import": true,
                         "type": "upgrade",
+                        "constraints": [
+                          {"id": "21b1-b637-5100-8c9f-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "21b1-b637-5100-8c9f-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
                         "infoLinks": [
                           {"name": "Assault", "id": "c79d-1449-275a-7598", "hidden": false, "targetId": "fc8a-8c24-bae9-cc1c", "type": "rule"},
                           {"name": "Twin-linked", "id": "fcd1-0c77-3e78-78c4", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"},
@@ -8746,14 +8826,60 @@
                             ]
                           }
                         ]
-                      },
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Heavy Intercessor w/ plasma exterminators",
+                    "id": "5d95-06fe-8f10-5dd9",
+                    "hidden": false,
+                    "import": true,
+                    "type": "model",
+                    "constraints": [{"id": "adc3-86df-7260-61d9", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 5}],
+                    "entryLinks": [
+                      {
+                        "name": "Close combat weapon",
+                        "id": "9aa1-a880-380d-253d",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "6c7d-af5b-482-6fbe",
+                        "type": "selectionEntry",
+                        "constraints": [
+                          {"id": "ef3a-c5f6-fb7b-e7f4", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "688b-f927-54d8-8a49", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ]
+                      }
+                    ],
+                    "profiles": [
+                      {
+                        "name": "Kill Team Heavy Intercessor w/ Jump Pack",
+                        "id": "fae1-c25e-e642-6724",
+                        "hidden": false,
+                        "typeId": "c547-1836-d8a-ff4f",
+                        "typeName": "Unit",
+                        "characteristics": [
+                          {"name": "M", "$text": "10\"", "typeId": "e703-ecb6-5ce7-aec1"},
+                          {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
+                          {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
+                          {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
+                          {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+                          {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
+                          {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+                        ]
+                      }
+                    ],
+                    "selectionEntries": [
                       {
                         "name": "Plasma exterminators",
                         "id": "af8e-9b8b-a106-2f1b",
-                        "collective": false,
+                        "collective": true,
                         "hidden": false,
                         "import": true,
                         "type": "upgrade",
+                        "constraints": [
+                          {"id": "3c43-fd42-59e2-db50-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "3c43-fd42-59e2-db50-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
                         "infoLinks": [
                           {"name": "Assault", "id": "493e-7e57-6847-2ac6", "hidden": false, "targetId": "fc8a-8c24-bae9-cc1c", "type": "rule"},
                           {"name": "Pistol", "id": "6586-88ec-b752-f9fd", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"},
@@ -8795,66 +8921,6 @@
                           }
                         ]
                       }
-                    ]
-                  }
-                ]
-              },
-              {
-                "name": "Intercessor w/ plasma pistol and Jump Pack",
-                "id": "cd78-e267-5f72-a2a2",
-                "hidden": false,
-                "import": true,
-                "type": "model",
-                "constraints": [{"id": "86ba-22d7-eaa6-d046", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
-                "entryLinks": [
-                  {
-                    "name": "Astartes Chainsword",
-                    "id": "a87d-c8fc-af6f-a21f",
-                    "hidden": false,
-                    "import": true,
-                    "targetId": "efcd-180-d07-b4d6",
-                    "type": "selectionEntry",
-                    "constraints": [
-                      {"id": "f42c-c415-c98a-88bc", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "50e9-bb04-100b-543b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ]
-                  },
-                  {
-                    "name": "Plasma pistol",
-                    "id": "ac7d-0b1f-2179-2998",
-                    "hidden": false,
-                    "import": true,
-                    "targetId": "2902-b665-48b6-bb09",
-                    "type": "selectionEntry",
-                    "constraints": [
-                      {"id": "ae76-d8e6-7290-6fdb", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "08f4-53ba-74b6-e7b2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ]
-                  }
-                ],
-                "modifiers": [
-                  {
-                    "field": "86ba-22d7-eaa6-d046",
-                    "type": "increment",
-                    "value": 1,
-                    "conditions": [{"childId": "model", "field": "selections", "scope": "c679-f252-32b1-ebcc", "shared": true, "type": "atLeast", "value": 10}]
-                  }
-                ],
-                "profiles": [
-                  {
-                    "name": "Kill Team Intercessor w/ Jump Pack",
-                    "id": "fd99-3eb6-0aa2-3864",
-                    "hidden": false,
-                    "typeId": "c547-1836-d8a-ff4f",
-                    "typeName": "Unit",
-                    "characteristics": [
-                      {"name": "M", "$text": "12\"", "typeId": "e703-ecb6-5ce7-aec1"},
-                      {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
-                      {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
-                      {"name": "W", "$text": "2", "typeId": "750a-a2ec-90d3-21fe"},
-                      {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
-                      {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-                      {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
                     ]
                   }
                 ]
