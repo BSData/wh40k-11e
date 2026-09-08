@@ -9,7 +9,7 @@
     "gameSystemRevision": 1,
     "library": false,
     "readme": "",
-    "revision": 18,
+    "revision": 19,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -650,31 +650,10 @@
           {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
         ],
         "entryLinks": [{"name": "Warlord", "id": "e231-fce8-28bf-5568", "hidden": false, "import": true, "targetId": "66c6-be4b-a1dc-10d0", "type": "selectionEntry"}],
-        "infoGroups": [
-          {
-            "name": "Leader",
-            "id": "70c0-1501-e16b-301",
-            "hidden": false,
-            "infoLinks": [{"name": "Leader", "id": "b0ff-fbd9-f8a8-4180", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Leader",
-                "id": "f272-c4ba-f40f-2de8",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [
-                  {
-                    "name": "Description",
-                    "$text": "This unit can be attached to the following units: \n- Battle Sisters Squad\n- Celestian Sacresants\n- Dominion Squad\n- Retributor Squad\n- Sisters Novitiate Squad",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ]
-              }
-            ]
-          }
+        "infoLinks": [
+          {"name": "Acts of Faith", "id": "b552-c0e9-245a-22ee", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"},
+          {"name": "Leader", "id": "b0ff-fbd9-f8a8-4180", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
         ],
-        "infoLinks": [{"name": "Acts of Faith", "id": "b552-c0e9-245a-22ee", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"}],
         "modifierGroups": [
           {
             "type": "and",
@@ -695,6 +674,22 @@
                 "skipIfPresent": "Devastating Wounds",
                 "type": "append",
                 "value": "Devastating Wounds"
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Leader",
+            "id": "f272-c4ba-f40f-2de8",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This unit can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD, SISTERS NOVITIATE SQUAD",
+                "typeId": "9b8f-694b-e5e-b573"
               }
             ]
           }
@@ -2603,33 +2598,10 @@
             "type": "selectionEntryGroup"
           }
         ],
-        "infoGroups": [
-          {
-            "name": "Leader",
-            "id": "f2bc-3676-4e45-bd10",
-            "hidden": false,
-            "infoLinks": [{"name": "Leader", "id": "cbee-955d-9cb3-177b", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Leader",
-                "id": "aba-82be-3c51-e90d",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [
-                  {
-                    "name": "Description",
-                    "$text": "This unit can be attached to the following units: \n- Battle Sisters Squad\n- Celestian Sacresants\n- Dominion Squad\n- Retributor Squad\n- Sisters Novitiate Squad",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
         "infoLinks": [
           {"name": "Acts of Faith", "id": "21ed-31a3-958c-23f4", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"},
-          {"name": "Sacred Command", "id": "664e-dc7d-430c-b8e7", "hidden": false, "targetId": "e8c6-0df9-48c0-7c29", "type": "profile"}
+          {"name": "Sacred Command", "id": "664e-dc7d-430c-b8e7", "hidden": false, "targetId": "e8c6-0df9-48c0-7c29", "type": "profile"},
+          {"name": "Leader", "id": "cbee-955d-9cb3-177b", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -2799,6 +2771,41 @@
                 "name": "Description",
                 "$text": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save.",
                 "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Leader",
+            "id": "aba-82be-3c51-e90d",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This unit can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD, SISTERS NOVITIATE SQUAD",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ],
+            "modifiers": [
+              {
+                "arg": "DOMINION SQUAD",
+                "field": "9b8f-694b-e5e-b573",
+                "type": "replace",
+                "value": "DOMINION SQUAD, REPENTIA SQUAD",
+                "conditions": [
+                  {
+                    "childId": "ad43-4753-3b84-776a",
+                    "childName": "Catechism of Divine Penitence",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "queryFromSelf": true,
+                    "scope": "49b7-74d4-7e28-33ee",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
@@ -5460,7 +5467,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n■ Battle Sisters Squad\n■ Celestian Sacresants\n■ Dominion Squad\n■ Retributor Squad\n■ Sisters Novitiate Squad\nThis model can be attached to a Battle Sisters Squad, even if one Canoness, Palatine, Junith Eruita, or Aestred Thurga unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+                "$text": "This model can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD, SISTERS NOVITIATE SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -5882,7 +5889,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n■ Battle Sisters Squad\n■ Celestian Sacresants\n■ Dominion Squad\n■ Retributor Squad\nThis model can be attached to a Battle Sisters Squad, even if one Canoness, Palatine, Junith Eruita, or Aestred Thurga unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+                "$text": "This model can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -7509,7 +7516,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n■ Battle Sisters Squad\n■ Celestian Sacresants\n■ Dominion Squad\n■ Retributor Squad\n■ Sisters Novitiate Squad\nThis model can be attached to a Battle Sisters Squad, even if one Canoness, Palatine, Junith Eruita, or Aestred Thurga unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+                "$text": "This model can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD, SISTERS NOVITIATE SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -7940,7 +7947,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n■ Battle Sisters Squad\n■ Celestian Sacresants\n■ Dominion Squad\n■ Retributor Squad\nThis model can be attached to a Battle Sisters Squad, even if one Canoness, Palatine, Junith Eruita, or Aestred Thurga unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+                "$text": "This model can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -8641,30 +8648,6 @@
           {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
         ],
         "entryLinks": [{"name": "Warlord", "id": "4ebb-868d-bc85-48e9", "hidden": false, "import": true, "targetId": "66c6-be4b-a1dc-10d0", "type": "selectionEntry"}],
-        "infoGroups": [
-          {
-            "name": "Leader",
-            "id": "87a0-4a7d-12dd-9a40",
-            "hidden": false,
-            "infoLinks": [{"name": "Leader", "id": "b69e-b3fd-82ea-3fec", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Leader",
-                "id": "d642-3373-8e19-9571",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [
-                  {
-                    "name": "Description",
-                    "$text": "This model can be attached to the following units:\n■ Battle Sisters Squad\n■ Celestian Sacresants\n■ Dominion Squad\n■ Retributor Squad\n■ Sisters Novitiate Squad",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
         "infoLinks": [
           {"name": "Acts of Faith", "id": "6f61-daf2-fa9f-193b", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"},
           {
@@ -8675,7 +8658,8 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
-          {"name": "Stealth", "id": "5e0a-9249-9930-c986", "hidden": false, "targetId": "bec5-4288-34a6-ccfa", "type": "rule"}
+          {"name": "Stealth", "id": "5e0a-9249-9930-c986", "hidden": false, "targetId": "bec5-4288-34a6-ccfa", "type": "rule"},
+          {"name": "Leader", "id": "b69e-b3fd-82ea-3fec", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
         ],
         "modifiers": [
           {
@@ -8722,6 +8706,20 @@
               {
                 "name": "Description",
                 "$text": "If this model is on the battlefield at the start\nof your Command phase, you can choose one of the following:\n■ Discard 1 Miracle dice and gain 1CP.\n■ Take a Leadership test for this model, if that test is passed, gain 1CP.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Leader",
+            "id": "d642-3373-8e19-9571",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This model can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD, SISTERS NOVITIATE SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -9782,7 +9780,6 @@
                     "type": "instanceOf",
                     "value": 1
                   },
-                  {"childId": "7623-c20e-f284-39d9", "childName": "Crusaders", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
                   {"childId": "3024-3404-5bd0-713", "childName": "Dominion Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
                   {"childId": "cf6-ceb9-5c73-2bb3", "childName": "Retributor Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
                   {
@@ -9793,7 +9790,8 @@
                     "shared": true,
                     "type": "instanceOf",
                     "value": 1
-                  }
+                  },
+                  {"childId": "7623-c20e-f284-39d9", "childName": "Crusaders", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
                 ]
               }
             ]
@@ -10057,8 +10055,29 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n■ Battle Sisters Squad\n■ Celestian Sacresants\n■ Dominion Squad\n■ Retributor Squad\n■ Sisters Novitiate Squad",
+                "$text": "This model can be attached to the following units: BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CELESTIAN SACRESANTS, CRUSADERS, DOMINION SQUAD, RETRIBUTOR SQUAD, SISTERS NOVITIATE SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
+              }
+            ],
+            "modifiers": [
+              {
+                "arg": "DOMINION SQUAD",
+                "field": "9b8f-694b-e5e-b573",
+                "type": "replace",
+                "value": "DOMINION SQUAD, REPENTIA SQUAD",
+                "conditions": [
+                  {
+                    "childId": "ad43-4753-3b84-776a",
+                    "childName": "Catechism of Divine Penitence",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "queryFromSelf": true,
+                    "scope": "94f8-bd2f-ec61-610d",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
@@ -11698,31 +11717,10 @@
             "type": "selectionEntryGroup"
           }
         ],
-        "infoGroups": [
-          {
-            "name": "Leader",
-            "id": "c7c8-191c-3477-776b",
-            "hidden": false,
-            "infoLinks": [{"name": "Leader", "id": "d396-bda1-5af9-12ca", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Leader",
-                "id": "e631-ecf1-5c39-50da",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [
-                  {
-                    "name": "Description",
-                    "$text": "This model can be attached to the following units:\n■ Arco-flagellants\n■ Battle Sisters Squad\n■ Dominion Squad\n■ Sisters Novitiate Squad",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ]
-              }
-            ]
-          }
+        "infoLinks": [
+          {"name": "Acts of Faith", "id": "c458-eab7-3156-9889", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"},
+          {"name": "Leader", "id": "d396-bda1-5af9-12ca", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
         ],
-        "infoLinks": [{"name": "Acts of Faith", "id": "c458-eab7-3156-9889", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"}],
         "modifierGroups": [
           {
             "comment": "Crusade modifiers",
@@ -11921,6 +11919,41 @@
                 "name": "Description",
                 "$text": "If this model is attached to a Dominion Squad during the Declare Battle Formations step, it gains the Scouts 6\" ability. If this model is attached to a Sisters Novitiate Squad during the Declare Battle Formations step, it gains the Infiltrators ability.",
                 "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Leader",
+            "id": "e631-ecf1-5c39-50da",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This model can be attached to the following units: ARCO-FLAGELLANTS, BATTLE SISTERS SQUAD, CELESTIAN INSIDIANTS, CRUSADERS, DOMINION SQUAD, SANCTIFIERS, SISTERS NOVITIATE SQUAD",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ],
+            "modifiers": [
+              {
+                "arg": "DOMINION SQUAD",
+                "field": "9b8f-694b-e5e-b573",
+                "type": "replace",
+                "value": "DOMINION SQUAD, REPENTIA SQUAD",
+                "conditions": [
+                  {
+                    "childId": "ad43-4753-3b84-776a",
+                    "childName": "Catechism of Divine Penitence",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "queryFromSelf": true,
+                    "scope": "bb3e-c770-b77f-a8a1",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
@@ -13112,27 +13145,10 @@
           },
           {"name": "Warlord", "id": "e487-ef4e-d481-f37a", "hidden": false, "import": true, "targetId": "66c6-be4b-a1dc-10d0", "type": "selectionEntry"}
         ],
-        "infoGroups": [
-          {
-            "name": "Leader",
-            "id": "cb03-66bb-aae8-a5d2",
-            "hidden": false,
-            "infoLinks": [{"name": "Leader", "id": "33b0-6c70-7bfd-4fb4", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Leader",
-                "id": "e7e5-76df-af3c-f545",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [{"name": "Description", "$text": "This unit can be attached to the following units:\n■ Seraphim Squad\n■ Zephyrim Squad", "typeId": "9b8f-694b-e5e-b573"}]
-              }
-            ]
-          }
-        ],
         "infoLinks": [
           {"name": "Acts of Faith", "id": "8a42-880d-706a-6a1f", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"},
-          {"name": "Deep Strike", "id": "fce6-afb0-165b-2e11", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"}
+          {"name": "Deep Strike", "id": "fce6-afb0-165b-2e11", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
+          {"name": "Leader", "id": "33b0-6c70-7bfd-4fb4", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
         ],
         "profiles": [
           {
@@ -13176,6 +13192,14 @@
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
+          },
+          {
+            "name": "Leader",
+            "id": "e7e5-76df-af3c-f545",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [{"name": "Description", "$text": "This unit can be attached to the following units: SERAPHIM SQUAD, ZEPHYRIM SQUAD", "typeId": "9b8f-694b-e5e-b573"}]
           }
         ],
         "selectionEntries": [
@@ -15094,25 +15118,10 @@
           {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
         ],
         "entryLinks": [{"name": "Warlord", "id": "62d9-b7ef-8abe-2a78", "hidden": false, "import": true, "targetId": "66c6-be4b-a1dc-10d0", "type": "selectionEntry"}],
-        "infoGroups": [
-          {
-            "name": "Leader",
-            "id": "ab49-b26-ba8-c898",
-            "hidden": false,
-            "infoLinks": [{"name": "Leader", "id": "8f98-5e48-fd65-b7a7", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Leader",
-                "id": "1c6e-8ff9-af2e-ffb9",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [{"name": "Description", "$text": "This model can be attached to the following unit:\n■ Battle Sisters Squad", "typeId": "9b8f-694b-e5e-b573"}]
-              }
-            ]
-          }
+        "infoLinks": [
+          {"name": "Acts of Faith", "id": "3a83-cd2e-52cd-dba", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"},
+          {"name": "Leader", "id": "8f98-5e48-fd65-b7a7", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
         ],
-        "infoLinks": [{"name": "Acts of Faith", "id": "3a83-cd2e-52cd-dba", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"}],
         "profiles": [
           {
             "name": "Triumph of Saint Katherine",
@@ -15255,6 +15264,14 @@
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
+          },
+          {
+            "name": "Leader",
+            "id": "1c6e-8ff9-af2e-ffb9",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [{"name": "Description", "$text": "This model can be attached to the following unit: BATTLE SISTERS SQUAD, CRUSADERS", "typeId": "9b8f-694b-e5e-b573"}]
           }
         ],
         "selectionEntries": [
@@ -16564,29 +16581,12 @@
             "type": "selectionEntryGroup"
           }
         ],
-        "infoGroups": [
-          {
-            "name": "Leader",
-            "id": "8fb2-83d2-fc3d-7f51",
-            "hidden": false,
-            "infoLinks": [{"name": "Leader", "id": "9d0c-235c-dc41-c696", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Leader",
-                "id": "fbef-a9a2-d744-6ce0",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [{"name": "Description", "$text": "This unit can be attached to the following units: \n- Seraphim Squad\n- Zephyrim Squad", "typeId": "9b8f-694b-e5e-b573"}]
-              }
-            ]
-          }
-        ],
         "infoLinks": [
           {"name": "Acts of Faith", "id": "fee8-4d6e-860e-0c42", "hidden": false, "targetId": "7ef7-dca6-e2ea-ecc8", "type": "rule"},
           {"name": "Deep Strike", "id": "c0cc-38c1-6f8c-a17e", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Sacred Command", "id": "6180-19b4-15bc-d4fa", "hidden": false, "targetId": "e8c6-0df9-48c0-7c29", "type": "profile"},
-          {"name": "Condemnatory Psalms", "id": "90af-7fe6-5c73-7189", "hidden": false, "targetId": "fae1-d802-ca71-8a55", "type": "profile"}
+          {"name": "Condemnatory Psalms", "id": "90af-7fe6-5c73-7189", "hidden": false, "targetId": "fae1-d802-ca71-8a55", "type": "profile"},
+          {"name": "Leader", "id": "9d0c-235c-dc41-c696", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -16758,6 +16758,14 @@
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
+          },
+          {
+            "name": "Leader",
+            "id": "fbef-a9a2-d744-6ce0",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [{"name": "Description", "$text": "This unit can be attached to the following units: SERAPHIM SQUAD, ZEPHYRIM SQUAD", "typeId": "9b8f-694b-e5e-b573"}]
           }
         ],
         "selectionEntryGroups": [
