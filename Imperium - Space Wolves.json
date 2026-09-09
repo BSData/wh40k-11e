@@ -7,7 +7,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 9,
+    "revision": 10,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -20491,6 +20491,7 @@
         "comment": "Crusade variant",
         "hidden": false,
         "import": true,
+        "subType": "unit-group",
         "type": "unit",
         "categoryLinks": [
           {"name": "Infantry", "id": "b8f1-229a-d7a0-323a", "primary": true, "targetId": "cf47-a0d7-7207-29dc"},
@@ -20528,7 +20529,8 @@
                 "type": "and",
                 "conditions": [
                   {
-                    "childId": "c135-aa4c-6d86-2e05",
+                    "childId": "4cfb-ae14-1ab1-fa7d",
+                    "childName": "3-6 Wolf Guard Headtakers",
                     "field": "selections",
                     "includeChildSelections": true,
                     "scope": "0f93-6850-8f14-a351",
@@ -20552,13 +20554,14 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 220,
+            "value": 230,
             "conditionGroups": [
               {
                 "type": "and",
                 "conditions": [
                   {
-                    "childId": "c135-aa4c-6d86-2e05",
+                    "childId": "4cfb-ae14-1ab1-fa7d",
+                    "childName": "3-6 Wolf Guard Headtakers",
                     "field": "selections",
                     "includeChildSelections": true,
                     "scope": "0f93-6850-8f14-a351",
@@ -20582,13 +20585,14 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 110,
+            "value": 115,
             "conditionGroups": [
               {
                 "type": "and",
                 "conditions": [
                   {
-                    "childId": "c135-aa4c-6d86-2e05",
+                    "childId": "4cfb-ae14-1ab1-fa7d",
+                    "childName": "3-6 Wolf Guard Headtakers",
                     "field": "selections",
                     "includeChildSelections": true,
                     "scope": "0f93-6850-8f14-a351",
@@ -20612,7 +20616,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 220,
+            "value": 230,
             "conditions": [
               {
                 "childId": "2097-c650-2684-5972",
@@ -20861,12 +20865,51 @@
                 ]
               }
             ],
+            "modifiers": [
+              {
+                "field": "error",
+                "type": "add",
+                "value": "All models must have the same wargear",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {
+                        "childId": "5377-e9e5-b324-dd08",
+                        "childName": "Master-crafted Power Weapon and Storm Shield",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "0f93-6850-8f14-a351",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      },
+                      {
+                        "childId": "376e-1a09-0707-621a",
+                        "childName": "Paired Master-crafted Power Weapons",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "0f93-6850-8f14-a351",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
             "selectionEntryGroups": [
               {
-                "name": "Wolf Guard Headtakers",
+                "name": "3-6 Wolf Guard Headtakers",
                 "id": "4cfb-ae14-1ab1-fa7d",
+                "defaultSelectionEntryId": "fef4-300a-bd40-49fc",
                 "hidden": false,
                 "sortIndex": 2,
+                "constraints": [
+                  {"id": "b4b7-8876-ab39-d293", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 3},
+                  {"id": "a20b-e0a4-b082-479f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 6}
+                ],
                 "entryLinks": [
                   {
                     "name": "Wolf Guard Headtaker w/ Storm Shield",
@@ -20875,10 +20918,16 @@
                     "import": true,
                     "targetId": "c135-aa4c-6d86-2e05",
                     "type": "selectionEntry",
-                    "constraints": [
-                      {"id": "d6b3-3c43-c5c2-9095", "field": "selections", "includeChildSelections": false, "scope": "4cfb-ae14-1ab1-fa7d", "shared": true, "type": "min", "value": 3},
-                      {"id": "1830-691a-58b1-d6bd", "field": "selections", "includeChildSelections": false, "scope": "4cfb-ae14-1ab1-fa7d", "shared": true, "type": "max", "value": 6}
-                    ]
+                    "constraints": [{"id": "ba5d-a051-6c45-1e2f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 6}]
+                  },
+                  {
+                    "name": "Wolf Guard Headtaker w/ paired weapons",
+                    "id": "c2ee-4f57-2ba8-e6b5",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "da7c-dd1e-c52f-76c9",
+                    "type": "selectionEntry",
+                    "constraints": [{"id": "bd7f-9374-5c78-5879", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 6}]
                   }
                 ]
               }
