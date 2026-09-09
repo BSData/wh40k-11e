@@ -2491,6 +2491,42 @@
                       {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
                       {"name": "D", "$text": "D6", "typeId": "3254-9fe6-d824-513e"},
                       {"name": "Keywords", "$text": "\n", "typeId": "893f-9000-ccf7-648e"}
+                    ],
+                    "modifiers": [
+                      {
+                        "field": "3254-9fe6-d824-513e",
+                        "join": "",
+                        "skipIfPresent": "+",
+                        "type": "append",
+                        "value": "+0",
+                        "conditionGroups": [
+                          {
+                            "type": "or",
+                            "conditions": [
+                              {
+                                "childId": "584b-5fa7-a3c3-942e",
+                                "childName": "Master-worked (D+1)",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "root-entry",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {
+                                "childId": "1a5d-7811-73df-2724",
+                                "childName": "Brutal But Kunnin'",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "root-entry",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     ]
                   },
                   {
