@@ -3004,15 +3004,6 @@
                     "entryLinks": [{"name": "Weapon Upgrades", "id": "4919-42bf-d5c9-929a", "hidden": false, "import": true, "targetId": "0197-b272-85e4-92bc", "type": "selectionEntryGroup"}]
                   },
                   {
-                    "name": "Kombi-weapon",
-                    "id": "f87b-896f-3aad-d4d2",
-                    "hidden": false,
-                    "import": true,
-                    "targetId": "ce61-585b-aea7-18fc",
-                    "type": "selectionEntry",
-                    "entryLinks": [{"name": "Weapon Upgrades", "id": "629b-765c-af99-4037", "hidden": false, "import": true, "targetId": "0197-b272-85e4-92bc", "type": "selectionEntryGroup"}]
-                  },
-                  {
                     "name": "Killsaw",
                     "id": "064a-bdc4-5d3a-ab24",
                     "hidden": false,
@@ -3086,6 +3077,89 @@
                               }
                             ]
                           }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Kombi-weapon",
+                    "id": "233b-c4d9-3be9-06da",
+                    "collective": false,
+                    "comment": "BS4+ variant",
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "categoryLinks": [
+                      {"name": "Ranged Weapon", "id": "0fbd-5679-01fe-91c6", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"},
+                      {"name": "Rapid Fire Weapon", "id": "f464-af98-0f01-f536", "hidden": false, "primary": false, "targetId": "751c-b78a-45fa-cc5f"}
+                    ],
+                    "entryLinks": [{"name": "Weapon Upgrades", "id": "629b-765c-af99-4037", "hidden": false, "import": true, "targetId": "0197-b272-85e4-92bc", "type": "selectionEntryGroup"}],
+                    "profiles": [
+                      {
+                        "name": "➤ Kombi-weapon - Point Blank",
+                        "id": "065c-1cd2-9a18-43c6",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "-", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "BLAST 1, TORRENT", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ],
+                        "modifiers": [
+                          {
+                            "field": "9896-9419-16a1-92fc",
+                            "type": "decrement",
+                            "value": 3,
+                            "conditions": [
+                              {
+                                "childId": "8128-b57a-74a5-c36b",
+                                "childName": "Targetin' Squigs",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "root-entry",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "➤ Kombi-weapon - Kill Shot",
+                        "id": "318d-028c-cece-7689",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "10", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "\n", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      },
+                      {
+                        "name": "➤ Kombi-weapon - Shoota",
+                        "id": "538a-9edc-8442-57e5",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
                     ]
@@ -5586,36 +5660,6 @@
               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
               {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
               {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Kombi-weapon",
-        "id": "ac6f-9310-e9ac-678",
-        "collective": false,
-        "hidden": false,
-        "import": true,
-        "type": "upgrade",
-        "categoryLinks": [
-          {"name": "Ranged Weapon", "id": "1aee-c126-c1ca-5f25", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"},
-          {"name": "Rapid Fire Weapon", "id": "159e-ded4-898a-76fb", "hidden": false, "primary": false, "targetId": "751c-b78a-45fa-cc5f"}
-        ],
-        "profiles": [
-          {
-            "name": "Kombi-weapon",
-            "id": "1451-6820-fd91-1dec",
-            "hidden": false,
-            "typeId": "f77d-b953-8fa4-b762",
-            "typeName": "Ranged Weapons",
-            "characteristics": [
-              {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
-              {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
-              {"name": "BS", "$text": "5+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
-              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -33633,7 +33677,7 @@
         "name": "Kombi-weapon",
         "id": "ce61-585b-aea7-18fc",
         "collective": false,
-        "comment": "Multi-profile",
+        "comment": "BS5+",
         "hidden": false,
         "import": true,
         "type": "upgrade",
@@ -33686,7 +33730,7 @@
             "characteristics": [
               {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
-              {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "BS", "$text": "5+", "typeId": "94d-8a98-cf90-183e"},
               {"name": "S", "$text": "10", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
@@ -33702,7 +33746,7 @@
             "characteristics": [
               {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
-              {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "BS", "$text": "5+", "typeId": "94d-8a98-cf90-183e"},
               {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
@@ -35495,6 +35539,88 @@
               {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
               {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
               {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kombi-weapon",
+        "id": "969e-8830-7c92-c9db",
+        "collective": false,
+        "comment": "Multi-profile",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [
+          {"name": "Ranged Weapon", "id": "5b9e-f05e-34dc-8fd9", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"},
+          {"name": "Rapid Fire Weapon", "id": "abc2-eb62-0ed1-3a79", "hidden": false, "primary": false, "targetId": "751c-b78a-45fa-cc5f"}
+        ],
+        "profiles": [
+          {
+            "name": "➤ Kombi-weapon - Point Blank",
+            "id": "fe67-0eca-94e9-bf3b",
+            "hidden": false,
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
+              {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "-", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "BLAST 1, TORRENT", "typeId": "7f1b-8591-2fcf-d01c"}
+            ],
+            "modifiers": [
+              {
+                "field": "9896-9419-16a1-92fc",
+                "type": "decrement",
+                "value": 3,
+                "conditions": [
+                  {
+                    "childId": "8128-b57a-74a5-c36b",
+                    "childName": "Targetin' Squigs",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "root-entry",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "➤ Kombi-weapon - Kill Shot",
+            "id": "e035-0fc2-7b23-84da",
+            "hidden": false,
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+              {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "10", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
+              {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "\n", "typeId": "7f1b-8591-2fcf-d01c"}
+            ]
+          },
+          {
+            "name": "➤ Kombi-weapon - Shoota",
+            "id": "8c13-b293-2f40-d792",
+            "hidden": false,
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
+              {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -42310,16 +42436,6 @@
                 ]
               },
               {
-                "name": "Kombi-weapon",
-                "id": "afb8-2412-ba68-7d9d",
-                "hidden": false,
-                "import": true,
-                "targetId": "ac6f-9310-e9ac-678",
-                "type": "selectionEntry",
-                "constraints": [{"id": "1b40-637b-0960-b136", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
-                "entryLinks": [{"name": "Weapon Upgrades", "id": "1c9a-fb29-0ca2-39a1", "hidden": false, "import": true, "targetId": "0197-b272-85e4-92bc", "type": "selectionEntryGroup"}]
-              },
-              {
                 "name": "Kustom mega-blasta",
                 "id": "842f-7c10-6705-4bc6",
                 "hidden": false,
@@ -42531,6 +42647,38 @@
                       {"name": "AP", "id": "7d3d-af05-b893-4846", "$text": "0", "hidden": false, "typeId": "9ead-8a10-520-de15"},
                       {"name": "D", "id": "f737-75b3-514b-40a0", "$text": "1", "hidden": false, "typeId": "a354-c1c8-a745-f9e3"},
                       {"name": "Keywords", "id": "fa4c-87ec-437f-ba40", "$text": "Assault", "hidden": false, "typeId": "7f1b-8591-2fcf-d01c"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Kombi-weapon",
+                "id": "ac6f-9310-e9ac-678",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "categoryLinks": [
+                  {"name": "Ranged Weapon", "id": "1aee-c126-c1ca-5f25", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"},
+                  {"name": "Rapid Fire Weapon", "id": "159e-ded4-898a-76fb", "hidden": false, "primary": false, "targetId": "751c-b78a-45fa-cc5f"}
+                ],
+                "constraints": [{"id": "1b40-637b-0960-b136", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "entryLinks": [{"name": "Weapon Upgrades", "id": "1c9a-fb29-0ca2-39a1", "hidden": false, "import": true, "targetId": "0197-b272-85e4-92bc", "type": "selectionEntryGroup"}],
+                "profiles": [
+                  {
+                    "name": "Kombi-weapon",
+                    "id": "1451-6820-fd91-1dec",
+                    "hidden": false,
+                    "typeId": "f77d-b953-8fa4-b762",
+                    "typeName": "Ranged Weapons",
+                    "characteristics": [
+                      {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+                      {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
+                      {"name": "BS", "$text": "5+", "typeId": "94d-8a98-cf90-183e"},
+                      {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                      {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                      {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                      {"name": "Keywords", "$text": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1", "typeId": "7f1b-8591-2fcf-d01c"}
                     ]
                   }
                 ]
