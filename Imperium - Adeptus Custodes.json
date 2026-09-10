@@ -6,7 +6,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 15,
+    "revision": 16,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -2188,7 +2188,7 @@
                     "childName": "Panoptispex",
                     "field": "selections",
                     "includeChildSelections": true,
-                    "scope": "parent",
+                    "scope": "self",
                     "shared": true,
                     "type": "atLeast",
                     "value": 1
@@ -5873,6 +5873,31 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
+            "field": "7f1b-8591-2fcf-d01c",
+            "join": ", ",
+            "type": "append",
+            "value": "Ignores Cover",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "any", "field": "associations", "includeChildSelections": false, "scope": "self", "shared": true, "type": "atLeast", "value": 1},
+                  {
+                    "childId": "58ef-390c-f552-7b8e",
+                    "childName": "Panoptispex",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
           }
         ],
         "profiles": [
@@ -6378,6 +6403,31 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
+            "field": "7f1b-8591-2fcf-d01c",
+            "join": ", ",
+            "type": "append",
+            "value": "Ignores Cover",
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditions": [
+                  {"childId": "any", "field": "associations", "includeChildSelections": false, "scope": "self", "shared": true, "type": "atLeast", "value": 1},
+                  {
+                    "childId": "58ef-390c-f552-7b8e",
+                    "childName": "Panoptispex",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
