@@ -25385,6 +25385,40 @@
                     "constraints": [{"id": "6549-c1e8-cfb3-a0ae", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
                     "entryLinks": [
                       {"name": "Weapon Modifications", "id": "59a2-3dfc-aa98-8cac", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                    ],
+                    "modifiers": [
+                      {
+                        "field": "6549-c1e8-cfb3-a0ae",
+                        "type": "set",
+                        "value": 4,
+                        "conditionGroups": [
+                          {
+                            "type": "or",
+                            "conditions": [
+                              {
+                                "childId": "5113-76ee-1ef7-8ade",
+                                "childName": "2 Rokkit Launchas",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "root-entry",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              },
+                              {
+                                "childId": "18dc-d4b9-d4a8-ddd0",
+                                "childName": "2 Skorchas",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "root-entry",
+                                "shared": true,
+                                "type": "atLeast",
+                                "value": 1
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     ]
                   }
                 ]
