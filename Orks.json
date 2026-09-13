@@ -37779,7 +37779,7 @@
                             "shared": true,
                             "traverseAssociationGroup": true,
                             "type": "atLeast",
-                            "value": 11
+                            "value": 10
                           }
                         ]
                       }
@@ -37836,7 +37836,7 @@
                     "characteristics": [
                       {
                         "name": "Description",
-                        "$text": "**ORKS INFANTRY** model only. This model's melee attacks have:\n- +1 **A**.\n- <ins>Or:</ins> If this unit has 11+, +2 **A**.",
+                        "$text": "**ORKS INFANTRY** model only. This model's melee attacks have:\n- +1 **A**.\n- <ins>Or:</ins> If this unit has 11+ models, +2 **A**.",
                         "typeId": "9b8f-694b-e5e-b573"
                       }
                     ]
@@ -38305,7 +38305,7 @@
                     "characteristics": [
                       {
                         "name": "Description",
-                        "$text": "**BIG MEK/WARBOSS INFANTRY* model only. While this unit is part of an attached unit, this model has:\n- **Infiltrators**.\n- **Stealth**.",
+                        "$text": "**BIG MEK/WARBOSS INFANTRY** model only. While this unit is part of an attached unit, this model has:\n- **Infiltrators**.\n- **Stealth**.",
                         "typeId": "9b8f-694b-e5e-b573"
                       }
                     ]
@@ -38922,28 +38922,28 @@
                     "type": "and",
                     "modifiers": [
                       {
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                         "field": "annotation",
                         "join": ", ",
-                        "scope": "model",
+                        "scope": "root-entry",
                         "skipIfPresent": "Targetin' Squigs",
                         "type": "append",
                         "value": "Targetin' Squigs"
                       },
                       {
-                        "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                        "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                         "field": "9896-9419-16a1-92fc",
                         "join": ", ",
-                        "scope": "model",
+                        "scope": "root-entry",
                         "skipIfPresent": "ANTI-INFANTRY",
                         "type": "increment",
                         "value": 3
                       },
                       {
-                        "affects": "self.entries.recursive.064a-0470-60eb-e3ef.profiles.Ranged Weapons",
+                        "affects": "self.entries.group.recursive.064a-0470-60eb-e3ef.profiles.Ranged Weapons",
                         "field": "9896-9419-16a1-92fc",
                         "join": ", ",
-                        "scope": "model",
+                        "scope": "root-entry",
                         "skipIfPresent": "ANTI-INFANTRY",
                         "type": "decrement",
                         "value": 3
