@@ -3080,114 +3080,6 @@
             ]
           },
           {
-            "comment": "Boarding Actions modifiers",
-            "type": "and",
-            "modifiers": [
-              {
-                "field": "hidden",
-                "type": "set",
-                "value": true,
-                "conditionGroups": [
-                  {
-                    "type": "and",
-                    "conditions": [
-                      {
-                        "childId": "1d6e-2579-8e7f-1ed4",
-                        "field": "selections",
-                        "includeChildForces": false,
-                        "includeChildSelections": true,
-                        "scope": "force",
-                        "shared": true,
-                        "type": "instanceOf",
-                        "value": 1
-                      },
-                      {
-                        "childId": "227e-45aa-4d8b-4171",
-                        "field": "selections",
-                        "includeChildForces": false,
-                        "includeChildSelections": true,
-                        "scope": "force",
-                        "shared": true,
-                        "type": "lessThan",
-                        "value": 1
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "affects": "profiles.Unit",
-                "field": "e703-ecb6-5ce7-aec1",
-                "type": "set",
-                "value": "-",
-                "conditions": [
-                  {
-                    "childId": "227e-45aa-4d8b-4171",
-                    "field": "selections",
-                    "includeChildForces": false,
-                    "includeChildSelections": true,
-                    "scope": "force",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "category",
-                "type": "add",
-                "value": "bdc8-7127-287c-a267",
-                "conditions": [
-                  {
-                    "childId": "227e-45aa-4d8b-4171",
-                    "field": "selections",
-                    "includeChildForces": false,
-                    "includeChildSelections": true,
-                    "scope": "force",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "0a28-e023-fc31-dc3e",
-                "type": "set",
-                "value": 1,
-                "conditions": [
-                  {
-                    "childId": "227e-45aa-4d8b-4171",
-                    "field": "selections",
-                    "includeChildForces": false,
-                    "includeChildSelections": true,
-                    "scope": "force",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "field": "annotation",
-                "join": " ",
-                "type": "append",
-                "value": "Docked Vehicle",
-                "conditions": [
-                  {
-                    "childId": "227e-45aa-4d8b-4171",
-                    "field": "selections",
-                    "includeChildForces": false,
-                    "includeChildSelections": true,
-                    "scope": "force",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "comment": "Experimental Prototype Cadre detachment",
             "type": "and",
             "conditions": [
@@ -3219,10 +3111,31 @@
             "type": "and",
             "conditions": [{"childId": "any", "field": "associations", "scope": "self", "shared": true, "type": "atLeast", "value": 1}],
             "modifiers": [
-              {"affects": "self.entries.group.recursive.group.profiles.Ranged Weapons", "field": "annotation", "join": ", ", "type": "append", "value": "Coldstar Commander"},
+              {
+                "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
+                "field": "annotation",
+                "join": ", ",
+                "skipIfPresent": "Coldstar Commander",
+                "type": "append",
+                "value": "Coldstar Commander"
+              },
               {"affects": "self.entries.group.recursive.group.profiles.Unit", "field": "e703-ecb6-5ce7-aec1", "join": ", ", "type": "set", "value": "12\""},
-              {"affects": "self.entries.group.recursive.group.profiles.Ranged Weapons", "field": "7f1b-8591-2fcf-d01c", "join": ", ", "type": "append", "value": "Assault"},
-              {"affects": "self.entries.group.recursive.associations.profiles.Unit", "field": "annotation", "join": ", ", "type": "append", "value": "Coldstar Commander"}
+              {
+                "affects": "self.entries.group.recursive.group.profiles.Ranged Weapons",
+                "field": "7f1b-8591-2fcf-d01c",
+                "join": ", ",
+                "skipIfPresent": "Assault",
+                "type": "append",
+                "value": "Assault"
+              },
+              {
+                "affects": "self.entries.group.recursive.associations.profiles.Unit",
+                "field": "annotation",
+                "join": ", ",
+                "skipIfPresent": "Coldstar Commander",
+                "type": "append",
+                "value": "Coldstar Commander"
+              }
             ]
           }
         ],
