@@ -669,6 +669,34 @@
             "typeId": "9b8f-694b-e5e-b573"
           }
         ]
+      },
+      {
+        "name": "Visions of Violence (psychic level 1)",
+        "id": "7103-d369-9d7b-f219",
+        "hidden": false,
+        "typeId": "7e03-38c2-7fea-e955",
+        "typeName": "Psychic Abilities",
+        "characteristics": [
+          {
+            "name": "Descriptions",
+            "$text": "At the start of the Fight phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- This unit has **Fights First**.",
+            "typeId": "1917-301f-5d49-2f76"
+          }
+        ]
+      },
+      {
+        "name": "Roar of Mork (psychic level 1)",
+        "id": "3cf0-d5d8-a76c-d910",
+        "hidden": false,
+        "typeId": "7e03-38c2-7fea-e955",
+        "typeName": "Psychic Abilities",
+        "characteristics": [
+          {
+            "name": "Descriptions",
+            "$text": "In your Movement phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- One a 1, this unit is **battle-shocked**.\n- Select one enemy unit (excluding **MONSTER/VEHICLE** units) within 12\" of this unit. That enemy unit makes a **battle-shock roll**, with -1 from that **battle-shock roll** for every 10 models in this unit.",
+            "typeId": "1917-301f-5d49-2f76"
+          }
+        ]
       }
     ],
     "sharedRules": [
@@ -10860,6 +10888,58 @@
             "targetId": "b68a-5ded-65ac-98c",
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
+          },
+          {
+            "name": "Roar of Mork (psychic level 1)",
+            "id": "0ad7-3087-90b8-937d",
+            "hidden": false,
+            "targetId": "3cf0-d5d8-a76c-d910",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "1b34-af6b-8900-61b5",
+                    "childName": "Wurrband",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Visions of Violence (psychic level 1)",
+            "id": "3709-2ec2-94bd-74a3",
+            "hidden": false,
+            "targetId": "7103-d369-9d7b-f219",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "1b34-af6b-8900-61b5",
+                    "childName": "Wurrband",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
           }
         ],
         "modifierGroups": [
@@ -22603,7 +22683,59 @@
           },
           {"name": "Unstable Energies", "id": "13c6-1439-12d9-be0c", "hidden": false, "targetId": "c9f4-4f72-11e9-1fa4", "type": "rule"},
           {"name": "Support", "id": "318-934a-7bd6-ec8e", "hidden": false, "targetId": "3342-2180-9c5d-925f", "type": "rule"},
-          {"name": "Waaagh!", "id": "02be-6e00-2a6f-c0a4", "hidden": false, "targetId": "37c-6ef9-277-9091", "type": "rule"}
+          {"name": "Waaagh!", "id": "02be-6e00-2a6f-c0a4", "hidden": false, "targetId": "37c-6ef9-277-9091", "type": "rule"},
+          {
+            "name": "Roar of Mork (psychic level 1)",
+            "id": "a67e-2c55-9b5c-3b72",
+            "hidden": false,
+            "targetId": "3cf0-d5d8-a76c-d910",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "1b34-af6b-8900-61b5",
+                    "childName": "Wurrband",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Visions of Violence (psychic level 1)",
+            "id": "19e7-123f-b7ce-547f",
+            "hidden": false,
+            "targetId": "7103-d369-9d7b-f219",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "1b34-af6b-8900-61b5",
+                    "childName": "Wurrband",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
         ],
         "modifierGroups": [
           {
@@ -22888,14 +23020,6 @@
                 "$text": "In your Movement phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike**.",
                 "typeId": "1917-301f-5d49-2f76"
               }
-            ],
-            "modifiers": [
-              {
-                "field": "hidden",
-                "type": "set",
-                "value": true,
-                "conditions": [{"childId": "1d6e-2579-8e7f-1ed4", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "instanceOf", "value": 1}]
-              }
             ]
           },
           {
@@ -22904,15 +23028,7 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [{"name": "Description", "$text": "This model has the **psychic abilities** listed in the Psychic Abilities section.", "typeId": "9b8f-694b-e5e-b573"}],
-            "modifiers": [
-              {
-                "field": "hidden",
-                "type": "set",
-                "value": true,
-                "conditions": [{"childId": "1d6e-2579-8e7f-1ed4", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "instanceOf", "value": 1}]
-              }
-            ]
+            "characteristics": [{"name": "Description", "$text": "This model has the **psychic abilities** listed in the Psychic Abilities section.", "typeId": "9b8f-694b-e5e-b573"}]
           },
           {
             "name": "Support",
@@ -32047,7 +32163,59 @@
           },
           {"name": "Hazardous", "id": "cec5-eb6f-1d26-2041", "hidden": false, "targetId": "8367-374c-f87-c627", "type": "rule"},
           {"name": "Leader", "id": "9e9c-4216-5cb6-a3bf", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Crucible", "id": "646c-8508-318e-8777", "hidden": false, "targetId": "5ce6-a3cf-e871-f081", "type": "rule"}
+          {"name": "Crucible", "id": "646c-8508-318e-8777", "hidden": false, "targetId": "5ce6-a3cf-e871-f081", "type": "rule"},
+          {
+            "name": "Roar of Mork (psychic level 1)",
+            "id": "ffbd-d396-b602-e743",
+            "hidden": false,
+            "targetId": "3cf0-d5d8-a76c-d910",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "1b34-af6b-8900-61b5",
+                    "childName": "Wurrband",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Visions of Violence (psychic level 1)",
+            "id": "3946-68c5-e7fb-1f7c",
+            "hidden": false,
+            "targetId": "7103-d369-9d7b-f219",
+            "type": "profile",
+            "modifiers": [
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "1b34-af6b-8900-61b5",
+                    "childName": "Wurrband",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "force",
+                    "shared": true,
+                    "type": "lessThan",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
         ],
         "modifierGroups": [
           {
@@ -40715,42 +40883,16 @@
               {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 1},
               {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
             ],
+            "infoLinks": [
+              {"name": "Roar of Mork (psychic level 1)", "id": "1236-cb25-93f7-7f3d", "hidden": false, "targetId": "3cf0-d5d8-a76c-d910", "type": "profile"},
+              {"name": "Visions of Violence (psychic level 1)", "id": "cbab-5a3e-093e-dceb", "hidden": false, "targetId": "7103-d369-9d7b-f219", "type": "profile"}
+            ],
             "modifiers": [
               {
                 "field": "hidden",
                 "type": "set",
                 "value": true,
                 "conditions": [{"childId": "1d6e-2579-8e7f-1ed4", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "instanceOf", "value": 1}]
-              }
-            ],
-            "profiles": [
-              {
-                "name": "Visions of Violence (psychic level 1)",
-                "id": "7103-d369-9d7b-f219",
-                "hidden": false,
-                "typeId": "7e03-38c2-7fea-e955",
-                "typeName": "Psychic Abilities",
-                "characteristics": [
-                  {
-                    "name": "Descriptions",
-                    "$text": "At the start of the Fight phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- This unit has **Fights First**.",
-                    "typeId": "1917-301f-5d49-2f76"
-                  }
-                ]
-              },
-              {
-                "name": "Roar of Mork (psychic level 1)",
-                "id": "3cf0-d5d8-a76c-d910",
-                "hidden": false,
-                "typeId": "7e03-38c2-7fea-e955",
-                "typeName": "Psychic Abilities",
-                "characteristics": [
-                  {
-                    "name": "Descriptions",
-                    "$text": "In your Movement phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- One a 1, this unit is **battle-shocked**.\n- Select one enemy unit (excluding **MONSTER/VEHICLE** units) within 12\" of this unit. That enemy unit makes a **battle-shock roll**, with -1 from that **battle-shock roll** for every 10 models in this unit.",
-                    "typeId": "1917-301f-5d49-2f76"
-                  }
-                ]
               }
             ],
             "rules": [
