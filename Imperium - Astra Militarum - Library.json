@@ -76,7 +76,6 @@
       {"name": "Loyal Protector", "id": "16ea-4f5b-d2d1-4d7d", "hidden": false},
       {"name": "Regiment", "id": "c8a1-fef-5569-61c9", "hidden": false},
       {"name": "Death Riders", "id": "4a58-462c-a1ac-238b", "hidden": false},
-      {"name": "Death Rider Squadron Commander", "id": "47c3-78e8-a0d-e376", "hidden": false},
       {"name": "Carnodon", "id": "a134-7ec3-8324-eb06", "hidden": false},
       {"name": "Cyclops Demolition Vehicle", "id": "f783-bc74-48f0-7645", "hidden": false},
       {"name": "Malcador", "id": "fe6d-46db-c226-e998", "hidden": false},
@@ -30522,6 +30521,58 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "4f83-8601-214c-6404",
+            "type": "increment",
+            "value": 1,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditionGroups": [
+                  {
+                    "type": "or",
+                    "conditions": [
+                      {
+                        "childId": "88b5-d7eb-4d3f-019f",
+                        "childName": "Lord Marshal Dreir",
+                        "field": "associations",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "scope": "self",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      },
+                      {
+                        "childId": "f62-183e-d4f7-4d98",
+                        "childName": "Lord Solar Leontus",
+                        "field": "associations",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "scope": "self",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "childId": "c9e9-9c67-6420-6ecc",
+                    "childName": "Death Rider Commissar",
+                    "field": "associations",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
