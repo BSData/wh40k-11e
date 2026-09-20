@@ -105,6 +105,16 @@
       {"name": "Captain Titus", "id": "69f6-bff7-d28a-e0c3", "hidden": false, "import": true, "targetId": "596f-dbdc-41e7-088a", "type": "selectionEntry"},
       {"name": "Wardens of Ultramar", "id": "67b4-7b11-a48e-1791", "hidden": false, "import": true, "targetId": "b793-b77e-9e49-d397", "type": "selectionEntry"}
     ],
+    "sharedProfiles": [
+      {
+        "name": "Codex Adept",
+        "id": "2c5c-5447-a813-d887",
+        "hidden": false,
+        "typeId": "9cc3-6d83-4dd3-9b64",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "The Assault Doctrine, Devastator Doctrine, and Tactical Doctrine are active for this unit", "typeId": "9b8f-694b-e5e-b573"}]
+      }
+    ],
     "sharedSelectionEntries": [
       {
         "name": "Captain Sicarius",
@@ -1050,7 +1060,12 @@
             "constraints": [{"id": "3888-567-a5e5-9457", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1}]
           }
         ],
-        "infoLinks": [{"name": "Oath of Moment", "id": "2dfe-84f1-109b-8bf0", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}],
+        "infoLinks": [
+          {"name": "Oath of Moment", "id": "2dfe-84f1-109b-8bf0", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Feel No Pain 5+", "id": "d89b-248a-2b4e-62c6", "hidden": false, "targetId": "5e10-6d62-2624-80a8", "type": "rule"},
+          {"name": "Transhuman Strategist", "id": "6663-ec0c-7df1-e930", "hidden": false, "targetId": "c6cc-c38c-dfe6-dbb8", "type": "rule"},
+          {"name": "Codex Adept", "id": "e689-b630-ab19-658c", "hidden": false, "targetId": "2c5c-5447-a813-d887", "type": "profile"}
+        ],
         "profiles": [
           {
             "name": "Roboute Guilliman",
@@ -1060,9 +1075,9 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "8\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "9", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "10", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
-              {"name": "W", "$text": "10", "typeId": "750a-a2ec-90d3-21fe"},
+              {"name": "W", "$text": "16", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "5+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "4", "typeId": "bef7-942a-1a23-59f8"},
               {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
@@ -1077,13 +1092,13 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "At the Start of your Command phase, select two Author of the Codex abilities (see left). Until the start of your next Command phase, this model has those abilities.’\n\nPrimarch of the XIII (Aura): While a friendly Adeptus Astartes unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and you can re-roll Battle-shock and Leadership tests taken for that unit.\n\nMaster of Battle: After you have selected an enemy unit using the Oath of Moment ability, select a second enemy unit. Until the start of your next Command phase, if your Oath of Moment target is destroyed, that second enemy unit becomes your Oath of Moment target until you select a new one.\n\nSupreme Strategist: Once per battle round, you can target one friendly ADEPTUS ASTARTES unit within 12\" of this model with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+                "$text": "In your Movement phase, you can select one visible friendly ADEPTUS ASTARTES unit within 12\" of this model, and select one Combat Doctrine. That Combat Doctrine is active for that unit in addition to any other Combat Doctrines that are active for that unit until the start of your next Command phase. ",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
           },
           {
-            "name": "Ultramarines Bodyguard",
+            "name": "Leader of Astartes",
             "id": "7a88-482-fa96-f382",
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
@@ -1091,21 +1106,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
-          },
-          {
-            "name": "Armour of Fate",
-            "id": "72ce-755f-7843-e428",
-            "hidden": false,
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "The first time this model is destroyed, roll one D6 at the end of the phase: on a 3+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy models, with 6 wounds remaining.",
+                "$text": "While this unit is within 3\" of a friendly Adeptus Astartes Infantry unit, this unit has Lone Operative",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -1117,6 +1118,20 @@
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
             "characteristics": [{"name": "Description", "$text": "If this model is in your army, it must be your Warlord.", "typeId": "9b8f-694b-e5e-b573"}]
+          },
+          {
+            "name": "Primarch of the XIII (Aura)",
+            "id": "7874-c52e-0cfb-3506",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "While a Friendly ADEPTUS ASTARTES unit is within 6\" of this unit, that unit's attacks can: \n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
           }
         ],
         "selectionEntries": [
@@ -1132,7 +1147,8 @@
             ],
             "infoLinks": [
               {"name": "Lethal Hits", "id": "5b08-fb66-844-5202", "hidden": false, "targetId": "d1d1-611e-5191-1095", "type": "rule"},
-              {"name": "Rapid Fire", "id": "6800-fd75-5aa-67a5", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}
+              {"name": "Rapid Fire", "id": "6800-fd75-5aa-67a5", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"},
+              {"name": "Sustained Hits", "id": "94b2-518d-aa9c-88da", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}
             ],
             "profiles": [
               {
@@ -1142,13 +1158,13 @@
                 "typeId": "f77d-b953-8fa4-b762",
                 "typeName": "Ranged Weapons",
                 "characteristics": [
-                  {"name": "Range", "$text": "30\"", "typeId": "9896-9419-16a1-92fc"},
-                  {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+                  {"name": "Range", "$text": "36\"", "typeId": "9896-9419-16a1-92fc"},
+                  {"name": "A", "$text": "4", "typeId": "3bb-c35f-f54-fb08"},
                   {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
                   {"name": "S", "$text": "6", "typeId": "2229-f494-25db-c5d3"},
                   {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
                   {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
-                  {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
+                  {"name": "Keywords", "$text": "Rapid Fire 2, Sustained Hits 1", "typeId": "7f1b-8591-2fcf-d01c"}
                 ]
               },
               {
@@ -1179,7 +1195,10 @@
               {"id": "e40a-a785-634a-6d0a", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
               {"id": "89c0-b175-b338-7733", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
             ],
-            "infoLinks": [{"name": "Devastating Wounds", "id": "a166-16b7-1e71-bb7a", "hidden": false, "targetId": "be1e-ac8e-1e2c-3528", "type": "rule"}],
+            "infoLinks": [
+              {"name": "Devastating Wounds", "id": "a166-16b7-1e71-bb7a", "hidden": false, "targetId": "be1e-ac8e-1e2c-3528", "type": "rule"},
+              {"name": "Cleave", "id": "6dc9-9a3e-e5a4-bbfb", "hidden": false, "targetId": "bf16-5d16-4725-f912", "type": "rule"}
+            ],
             "profiles": [
               {
                 "name": "The Emperor's Sword",
@@ -1194,7 +1213,7 @@
                   {"name": "S", "$text": "8", "typeId": "ab33-d393-96ce-ccba"},
                   {"name": "AP", "$text": "-3", "typeId": "41a0-1301-112a-e2f2"},
                   {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
-                  {"name": "Keywords", "$text": "Devastating Wounds", "typeId": "893f-9000-ccf7-648e"}
+                  {"name": "Keywords", "$text": "Devastating Wounds, Cleave 2", "typeId": "893f-9000-ccf7-648e"}
                 ]
               }
             ]
@@ -2986,7 +3005,7 @@
         ]
       },
       {
-        "name": "Marneus Calgar in Armour of Antilochus",
+        "name": "Marneus Calgar",
         "id": "a136-76f7-34d1-8035",
         "hidden": false,
         "import": true,
@@ -3122,11 +3141,12 @@
         "infoLinks": [
           {"name": "Deep Strike", "id": "4132-5ad0-e2f9-3056", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Oath of Moment", "id": "5353-34eb-3bbb-576e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Leader", "id": "ab6d-138a-cbe2-7cac", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
+          {"name": "Leader", "id": "ab6d-138a-cbe2-7cac", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
+          {"name": "Codex Adept", "id": "2554-f06c-a516-830b", "hidden": false, "targetId": "2c5c-5447-a813-d887", "type": "profile"}
         ],
         "profiles": [
           {
-            "name": "Marneus Calgar in Armour of Antilochus",
+            "name": "Marneus Calgar",
             "id": "ec73-f97f-82e3-8259",
             "hidden": false,
             "typeId": "c547-1836-d8a-ff4f",
@@ -3139,20 +3159,6 @@
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
               {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
-            ]
-          },
-          {
-            "name": "Inspiring Leader",
-            "id": "7da9-2cda-4939-2957",
-            "hidden": false,
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
             ]
           },
           {
