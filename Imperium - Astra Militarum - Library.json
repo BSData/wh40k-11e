@@ -4825,6 +4825,16 @@
             "shared": true,
             "type": "max",
             "value": 1
+          },
+          {
+            "id": "9d5e-709a-263f-59fd",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
           }
         ],
         "costs": [
@@ -17238,6 +17248,16 @@
             "shared": true,
             "type": "max",
             "value": 1
+          },
+          {
+            "id": "31fa-c6e2-7f31-7ef3",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
           }
         ],
         "costs": [
@@ -20356,6 +20376,27 @@
         "hidden": false,
         "import": true,
         "type": "unit",
+        "associations": [
+          {
+            "name": "Attached",
+            "id": "361b-aa80-387d-c1e2",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "defaultSelectionEntryId": "none",
+            "includeChildSelections": true,
+            "label": "Supported by",
+            "max": 1,
+            "min": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [{"childId": "4100-95dc-a489-ffbc", "childName": "Command Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Regimental Attachés", "id": "d698-e594-2770-151d", "primary": false, "targetId": "851a-3b34-594-a715"},
           {"name": "Faction: Astra Militarum", "id": "2839-a93f-10fc-83e3", "primary": false, "targetId": "fa45-57e-930e-602b"},
@@ -20378,30 +20419,6 @@
             "sortIndex": 1,
             "targetId": "56e1-e9a8-6946-0518",
             "type": "selectionEntryGroup"
-          }
-        ],
-        "infoGroups": [
-          {
-            "name": "Artillery Commander",
-            "id": "10d4-d1eb-5d9a-f0d1",
-            "hidden": false,
-            "infoLinks": [{"name": "Sustained Hits", "id": "c873-c694-778e-43f0", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Artillery Commander",
-                "id": "f676-2509-3424-99fd",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [
-                  {
-                    "name": "Description",
-                    "$text": "At the start of your Shooting phase, select one enemy unit within 30\" of and visible to this unit’s Master of Ordnance model that has not already been selected for this ability this phase. Until the end of the phase, Blast weapons equipped by friendly **^^Astra Militarum Artillery^^** models have the **[SUSTAINED HITS 1]** ability when targeting that unit",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ]
-              }
-            ]
           }
         ],
         "modifierGroups": [
@@ -20610,7 +20627,21 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "At the start of the Declare Battle Formations step, this unit must join one **^^Command Squad^^** unit from your army (a **^^Command Squad^^** unit cannot have more than one **^^Regimental Attaché^^** unit joined to it). For the rest of the battle, every model in this unit counts as part of that **^^Command Squad^^** unit, and its Starting Strength is increased accordingly. If it is not possible to join a **^^Regimental Attaché^^** unit to a **^^Command Squad^^** in this way, it does not take part in the battle and counts as having been destroyed.\n\n\nWhile this unit is joined to a unit, it can embark within any **^^Transport^^** that unit can embark within.",
+                "$text": "At the start of the Declare Battle Formations step, this unit must join one **^^Command Squad^^** unit from your army (a **^^Command Squad^^** unit cannot have more than one **^^Regimental Attaché^^** unit joined to it). For the rest of the battle, every model in this unit counts as part of that **^^Command Squad^^** unit, and its Starting Strength is increased accordingly. If it is not possible to join a **^^Regimental Attaché^^** unit to a **^^Command Squad^^** in this way, it does not take part in the battle and counts as having been destroyed.\n\nWhile this unit is joined to a unit, it can embark within any **^^Transport^^** that unit can embark within.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Artillery Commander",
+            "id": "f676-2509-3424-99fd",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "At the start of your Shooting phase, select one enemy unit within 30\" of and visible to this unit’s Master of Ordnance model that has not already been selected for this ability this phase. Until the end of the phase, Blast weapons equipped by friendly **^^Astra Militarum Artillery^^** models have the **[SUSTAINED HITS 1]** ability when targeting that unit",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -55608,6 +55639,16 @@
             "shared": true,
             "type": "max",
             "value": 1
+          },
+          {
+            "id": "65e9-248d-0562-d2eb",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
           }
         ],
         "costs": [
@@ -56808,6 +56849,16 @@
             "id": "cee9-1b4c-63cc-9399",
             "childId": "16ea-4f5b-d2d1-4d7d",
             "childName": "Loyal Protector",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "c138-1a05-0363-94d8",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
             "field": "associations",
             "scope": "self",
             "shared": true,
@@ -61829,6 +61880,16 @@
             "id": "4d6b-d5e2-b82d-d7dc",
             "childId": "16ea-4f5b-d2d1-4d7d",
             "childName": "Loyal Protector",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "d0d2-0171-1069-1861",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
             "field": "associations",
             "scope": "self",
             "shared": true,
