@@ -6039,10 +6039,11 @@
         "import": false,
         "targetId": "c550-de70-074f-9210",
         "type": "selectionEntry"
-      }
+      },
+      {"name": "Captain on Bike", "id": "a388-53ee-bb25-8639", "hidden": false, "import": true, "targetId": "83d3-9dad-4b14-9969", "type": "selectionEntry"}
     ],
     "infoLinks": [
-      {"name": "Oath of Moment", "id": "001d-723a-56e2-f202", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+      {"name": "Combat Doctrines", "id": "001d-723a-56e2-f202", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
       {"name": "Templar Vows", "id": "19ab-a61f-9a09-a0f0", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
     ],
     "profileTypes": [
@@ -6068,7 +6069,7 @@
     ],
     "sharedProfiles": [
       {
-        "name": "Rites of Battle",
+        "name": "Strategic Acumen",
         "id": "90c7-c55c-21e2-2232",
         "hidden": false,
         "typeId": "9cc3-6d83-4dd3-9b64",
@@ -6076,7 +6077,7 @@
         "characteristics": [
           {
             "name": "Description",
-            "$text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "$text": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase.",
             "typeId": "9b8f-694b-e5e-b573"
           }
         ]
@@ -6090,7 +6091,7 @@
         "characteristics": [
           {
             "name": "Description",
-            "$text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.",
+            "$text": "(Once per battle, per unit): In the Fight phase, when this unit is selected to fight, you can use this ability. If you do, this model's melee attacks have: \n▪ +3 A \n▪ [DEVASTATING WOUNDS].",
             "typeId": "9b8f-694b-e5e-b573"
           }
         ]
@@ -6211,6 +6212,14 @@
             "typeId": "9b8f-694b-e5e-b573"
           }
         ]
+      },
+      {
+        "name": "▪ ",
+        "id": "19a6-12b5-60bf-2b96",
+        "hidden": false,
+        "typeId": "9cc3-6d83-4dd3-9b64",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "▪ ", "typeId": "9b8f-694b-e5e-b573"}]
       }
     ],
     "sharedSelectionEntries": [
@@ -6300,11 +6309,11 @@
           {"name": "Character", "id": "8825-3d6-ae9e-6a0b", "hidden": false, "primary": true, "targetId": "9cfd-1c32-585f-7d5c"},
           {"name": "Infantry", "id": "c078-3ff3-8861-96a", "hidden": false, "primary": false, "targetId": "cf47-a0d7-7207-29dc"},
           {"name": "Captain", "id": "409d-bbc8-fd22-84f7", "hidden": false, "primary": false, "targetId": "2d7f-1892-2fd0-e29c"},
-          {"name": "Grenades", "id": "d191-da1c-43fb-423", "hidden": false, "primary": false, "targetId": "5a61-81ac-eb7c-a87e"},
           {"name": "Imperium", "id": "ea8f-f9e6-8dc2-c4be", "hidden": false, "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
           {"name": "Faction: Adeptus Astartes", "id": "4732-9a4d-9c82-7193", "hidden": false, "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Gravis", "id": "62ed-7196-80c4-1ecb", "hidden": false, "primary": false, "targetId": "81f0-f40e-c36c-5a30"},
-          {"name": "Leader", "id": "c23c-2ec1-4acf-c6c7", "primary": false, "targetId": "1556-9b56-fba6-4370"}
+          {"name": "Leader", "id": "c23c-2ec1-4acf-c6c7", "primary": false, "targetId": "1556-9b56-fba6-4370"},
+          {"name": "Explosives", "id": "cfe8-8c8b-d07b-b214", "hidden": false, "primary": false, "targetId": "e33d-891d-33aa-e9bf"}
         ],
         "constraints": [
           {"id": "4564-7e73-16e1-ee6d", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 6},
@@ -6346,8 +6355,9 @@
         "infoLinks": [
           {"name": "Rites of Battle", "id": "45a1-2057-438c-ad00", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
           {"name": "Leader", "id": "7634-f82d-e64a-cf28", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "e8ac-7683-4980-c4d9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Templar Vows", "id": "76b6-97bd-0a9d-134a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "e8ac-7683-4980-c4d9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Templar Vows", "id": "76b6-97bd-0a9d-134a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"},
+          {"name": "Transhuman Strategist", "id": "1c4d-7fda-beaf-14a1", "hidden": false, "targetId": "c6cc-c38c-dfe6-dbb8", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -6510,13 +6520,7 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "Each time an attack is allocated to this model, halve the Damage characteristic of that attack.",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
+            "characteristics": [{"name": "Description", "$text": "Attacks allocated to this model have -1D", "typeId": "9b8f-694b-e5e-b573"}]
           },
           {
             "name": "Leader",
@@ -6633,7 +6637,8 @@
                     "entryLinks": [{"name": "Weapon Upgrades", "id": "2835-e1ef-7a61-82bd", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}],
                     "infoLinks": [
                       {"name": "Heavy", "id": "48b2-501d-05ae-aa80", "hidden": false, "targetId": "1202-10a8-78e9-4c67", "type": "rule"},
-                      {"name": "Assault", "id": "81da-0a17-eddd-e80b", "hidden": false, "targetId": "fc8a-8c24-bae9-cc1c", "type": "rule"}
+                      {"name": "Assault", "id": "81da-0a17-eddd-e80b", "hidden": false, "targetId": "fc8a-8c24-bae9-cc1c", "type": "rule"},
+                      {"name": "Rapid Fire", "id": "568a-e144-c8cf-0453", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}
                     ],
                     "profiles": [
                       {
@@ -6646,10 +6651,10 @@
                           {"name": "Range", "$text": "30\"", "typeId": "9896-9419-16a1-92fc"},
                           {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
                           {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "S", "$text": "6", "typeId": "2229-f494-25db-c5d3"},
                           {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Assault, Heavy", "typeId": "7f1b-8591-2fcf-d01c"}
+                          {"name": "Keywords", "$text": "Assault, Heavy, Rapid Fire 1", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
                     ]
@@ -6677,31 +6682,6 @@
                   }
                 ],
                 "costs": [{"name": "pl", "typeId": "c5fb-5b9b-89f6-86c", "value": 0}, {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-                "entryLinks": [
-                  {
-                    "name": "Boltstorm gauntlet",
-                    "id": "0390-c334-b175-4ba5",
-                    "targetId": "3b0-59b8-806b-654",
-                    "type": "selectionEntry",
-                    "constraints": [
-                      {"id": "e5db-73e6-fa57-1a00", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "daaa-4ce3-c954-93f5", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "entryLinks": [{"name": "Weapon Upgrades", "id": "2fd3-5acb-b9f5-1e18", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
-                  },
-                  {
-                    "name": "Power fist",
-                    "id": "6c32-fa6a-498-8042",
-                    "import": true,
-                    "targetId": "99de-5985-8cb8-f571",
-                    "type": "selectionEntry",
-                    "constraints": [
-                      {"id": "80c8-47b2-3c54-9fee", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "3fb6-ed3c-89ef-827b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "entryLinks": [{"name": "Weapon Upgrades", "id": "0f1e-f87d-f181-4383", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
-                  }
-                ],
                 "modifiers": [
                   {
                     "arg": "weapon",
@@ -6779,6 +6759,55 @@
                     ]
                   }
                 ],
+                "selectionEntries": [
+                  {
+                    "name": "Boltstorm Gauntlet",
+                    "id": "402c-f0c9-b2ba-df3b",
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "constraints": [
+                      {"id": "5f9e-a850-7766-f24a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "22c3-50a6-5acf-493b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [{"name": "Weapon Upgrades", "id": "b3ea-bff1-455e-614a", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}],
+                    "infoLinks": [{"name": "Close-quarters", "id": "01aa-6916-ac0f-543f", "hidden": false, "targetId": "5238-5ad4-52f7-6eb4", "type": "rule"}],
+                    "profiles": [
+                      {
+                        "name": "Boltstorm Gauntlet",
+                        "id": "62b4-6432-2145-826d",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Close-quarters", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      },
+                      {
+                        "name": "Boltstorm Gauntlet",
+                        "id": "01b1-345c-8d75-4a0e",
+                        "hidden": false,
+                        "typeId": "8a40-4aaa-c780-9046",
+                        "typeName": "Melee Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                          {"name": "A", "$text": "5", "typeId": "2337-daa1-6682-b110"},
+                          {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
+                          {"name": "S", "$text": "8", "typeId": "ab33-d393-96ce-ccba"},
+                          {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
+                          {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+                          {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
+                        ]
+                      }
+                    ]
+                  }
+                ],
                 "selectionEntryGroups": [
                   {
                     "name": "Relic Weapon Selection",
@@ -6837,7 +6866,7 @@
                               {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
                               {"name": "A", "$text": "3", "typeId": "2337-daa1-6682-b110"},
                               {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
-                              {"name": "S", "$text": "4", "typeId": "ab33-d393-96ce-ccba"},
+                              {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
                               {"name": "AP", "$text": "-1", "typeId": "41a0-1301-112a-e2f2"},
                               {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
                               {"name": "Keywords", "$text": "Extra Attacks", "typeId": "893f-9000-ccf7-648e"}
@@ -6870,7 +6899,7 @@
                               {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
                               {"name": "A", "$text": "2", "typeId": "2337-daa1-6682-b110"},
                               {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
-                              {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+                              {"name": "S", "$text": "6", "typeId": "ab33-d393-96ce-ccba"},
                               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
                               {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
                               {"name": "Keywords", "$text": "Extra Attacks", "typeId": "893f-9000-ccf7-648e"}
@@ -6879,7 +6908,7 @@
                         ]
                       },
                       {
-                        "name": "Relic Fist",
+                        "name": "Relic Power Fist",
                         "id": "4f19-4c2c-ec70-e4f0",
                         "collective": false,
                         "hidden": false,
@@ -6950,7 +6979,7 @@
           {"name": "Bolt Weapon", "id": "3984-6eef-5e08-d61b", "hidden": false, "primary": false, "targetId": "1c08-e7e4-55b9-8e30"},
           {"name": "Pistol Weapon", "id": "a1d9-bc11-6b4e-db0a", "hidden": false, "primary": false, "targetId": "1db0-c6b5-19db-8d0c"}
         ],
-        "infoLinks": [{"name": "Pistol", "id": "db36-d909-e0fe-bd8d", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}],
+        "infoLinks": [{"name": "Close-quarters", "id": "db36-d909-e0fe-bd8d", "hidden": false, "targetId": "5238-5ad4-52f7-6eb4", "type": "rule"}],
         "profiles": [
           {
             "name": "Bolt pistol",
@@ -6962,10 +6991,10 @@
               {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Close-quarters", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -7071,6 +7100,10 @@
           {"name": "Ranged Weapon", "id": "035c-21e7-ce7a-c21a", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"},
           {"name": "Bolt Weapon", "id": "816c-1a8e-d593-4fa7", "hidden": false, "primary": false, "targetId": "1c08-e7e4-55b9-8e30"}
         ],
+        "infoLinks": [
+          {"name": "Assault", "id": "b6f5-7aed-3d31-c140", "hidden": false, "targetId": "fc8a-8c24-bae9-cc1c", "type": "rule"},
+          {"name": "Rapid Fire", "id": "46d7-aba9-91fc-229a", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}
+        ],
         "profiles": [
           {
             "name": "Master-crafted bolter",
@@ -7082,10 +7115,10 @@
               {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Assault, Rapid Fire 1", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -7144,12 +7177,12 @@
         "categoryLinks": [
           {"name": "Character", "id": "6529-9892-96a5-1685", "primary": true, "targetId": "9cfd-1c32-585f-7d5c"},
           {"name": "Infantry", "id": "23fd-88fc-6735-6d9", "primary": false, "targetId": "cf47-a0d7-7207-29dc"},
-          {"name": "Grenades", "id": "ecf4-5e83-c1c1-e480", "primary": false, "targetId": "5a61-81ac-eb7c-a87e"},
           {"name": "Imperium", "id": "c54c-e72f-bb4f-719d", "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
           {"name": "Captain", "id": "75a6-3470-9fc0-3719", "primary": false, "targetId": "2d7f-1892-2fd0-e29c"},
           {"name": "Phobos", "id": "9e30-322d-8810-1465", "primary": false, "targetId": "7295-ed65-8ff4-7a5f"},
           {"name": "Faction: Adeptus Astartes", "id": "f2d8-eafb-32ae-326c", "primary": false, "targetId": "6e7-40c-58d9-e402"},
-          {"name": "Leader", "id": "6280-5f8a-453f-938e", "primary": false, "targetId": "1556-9b56-fba6-4370"}
+          {"name": "Leader", "id": "6280-5f8a-453f-938e", "primary": false, "targetId": "1556-9b56-fba6-4370"},
+          {"name": "Explosives", "id": "c777-9ddc-1e20-0bfb", "hidden": false, "primary": false, "targetId": "e33d-891d-33aa-e9bf"}
         ],
         "constraints": [
           {"id": "e59a-391f-00c3-f05d", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 6},
@@ -7199,8 +7232,11 @@
           {"name": "Infiltrators", "id": "f32f-4050-a074-34cd", "targetId": "c05d-f4c3-f091-4938", "type": "rule"},
           {"name": "Stealth", "id": "13a7-5b78-857c-3d17", "targetId": "bec5-4288-34a6-ccfa", "type": "rule"},
           {"name": "Rites of Battle", "id": "e954-1860-6b59-71f9", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
-          {"name": "Oath of Moment", "id": "dcc7-19fc-185d-54c9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Templar Vows", "id": "5c35-189f-263f-78d0", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "dcc7-19fc-185d-54c9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Templar Vows", "id": "5c35-189f-263f-78d0", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"},
+          {"name": "Transhuman Strategist", "id": "0236-54c8-a627-6081", "hidden": false, "targetId": "c6cc-c38c-dfe6-dbb8", "type": "rule"},
+          {"name": "Deep Strike", "id": "b198-f7d0-caa0-5c94", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
+          {"name": "Scouts 6\"", "id": "d314-d94b-1a01-a7e2", "hidden": false, "targetId": "08fb-4cb5-36fb-d638", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -7342,7 +7378,7 @@
         ],
         "profiles": [
           {
-            "name": "Master of Deceit",
+            "name": "Tactical Fluidity",
             "id": "2d39-4b7-eecd-9111",
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
@@ -7350,7 +7386,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "After both players have deployed their armies, if your army includes one or more models with this ability, you can select up to three friendly ADEPTUS ASTARTES INFANTRY units and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+                "$text": "(Once per battle round, per unit): \n▪ In your Shooting phase, when this unit has shot, if this unit is unengaged, this unit can make a normal move of up to D6\". \n▪ Or: At the end of your opponent's Fight phase if this unit is engaged, this unit can make a fall-back move of up to 6\".",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -7376,8 +7412,8 @@
             "typeId": "c547-1836-d8a-ff4f",
             "typeName": "Unit",
             "characteristics": [
-              {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "M", "$text": "8\"", "typeId": "e703-ecb6-5ce7-aec1"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -7420,6 +7456,11 @@
                   {"id": "a69-bf94-3afc-71d1", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                 ],
                 "entryLinks": [{"name": "Weapon Upgrades", "id": "83dd-9cfd-f13e-6e39", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}],
+                "infoLinks": [
+                  {"name": "Assault", "id": "225f-29a9-a3f7-29ac", "hidden": false, "targetId": "fc8a-8c24-bae9-cc1c", "type": "rule"},
+                  {"name": "Precision", "id": "6339-5de4-a1d0-afae", "hidden": false, "targetId": "9143-31ae-e0a6-6007", "type": "rule"},
+                  {"name": "Rapid Fire", "id": "3946-04bb-6445-dd52", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}
+                ],
                 "profiles": [
                   {
                     "name": "Instigator Bolt Carbine",
@@ -7429,12 +7470,12 @@
                     "typeName": "Ranged Weapons",
                     "characteristics": [
                       {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
-                      {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
+                      {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
                       {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
-                      {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                      {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
                       {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
                       {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
-                      {"name": "Keywords", "$text": "Precision", "typeId": "7f1b-8591-2fcf-d01c"}
+                      {"name": "Keywords", "$text": "Assault, Precision, Rapid Fire 1", "typeId": "7f1b-8591-2fcf-d01c"}
                     ]
                   }
                 ]
@@ -7451,6 +7492,10 @@
                   {"id": "1bd5-5515-fcfc-a20a", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                 ],
                 "entryLinks": [{"name": "Weapon Upgrades", "id": "635b-9b6d-2725-4815", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}],
+                "infoLinks": [
+                  {"name": "Precision", "id": "3c98-4685-baec-a9ae", "hidden": false, "targetId": "9143-31ae-e0a6-6007", "type": "rule"},
+                  {"name": "Sustained Hits", "id": "7d0f-4f74-5c8a-70d4", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}
+                ],
                 "profiles": [
                   {
                     "name": "Combat Knife",
@@ -7462,10 +7507,10 @@
                       {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
                       {"name": "A", "$text": "6", "typeId": "2337-daa1-6682-b110"},
                       {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
-                      {"name": "S", "$text": "4", "typeId": "ab33-d393-96ce-ccba"},
+                      {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
                       {"name": "AP", "$text": "-1", "typeId": "41a0-1301-112a-e2f2"},
                       {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
-                      {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
+                      {"name": "Keywords", "$text": "Precision, Sustained Hits 1", "typeId": "893f-9000-ccf7-648e"}
                     ]
                   }
                 ]
@@ -7644,8 +7689,9 @@
           {"name": "Rites of Battle", "id": "c640-c9f1-37b7-4716", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
           {"name": "Leader", "id": "dbb1-d60b-d414-d2d3", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Deep Strike", "id": "4c57-e079-9193-7aa", "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "e5fc-4add-24cc-fc23", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Templar Vows", "id": "e9be-ed8e-b392-2c3c", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "e5fc-4add-24cc-fc23", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Templar Vows", "id": "e9be-ed8e-b392-2c3c", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"},
+          {"name": "Transhuman Strategist", "id": "b3ad-fefe-0a5e-7dbc", "hidden": false, "targetId": "c6cc-c38c-dfe6-dbb8", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -7811,7 +7857,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "5\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "6", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -7839,7 +7885,7 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [{"name": "Description", "$text": "You can re-roll Charge rolls made for this model’s unit.", "typeId": "9b8f-694b-e5e-b573"}]
+            "characteristics": [{"name": "Description", "$text": "You can re-roll Charge rolls made for this unit.", "typeId": "9b8f-694b-e5e-b573"}]
           }
         ],
         "selectionEntryGroups": [
@@ -7864,18 +7910,73 @@
                     "id": "bee5-946-b680-1efe",
                     "hidden": false,
                     "import": true,
-                    "targetId": "eb61-5cd0-5242-74cc",
+                    "targetId": "9f00-4659-692a-9dc1",
                     "type": "selectionEntry",
                     "entryLinks": [{"name": "Weapon Upgrades", "id": "a834-8dec-668d-bd81", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
-                  },
+                  }
+                ],
+                "selectionEntries": [
                   {
                     "name": "Combi-weapon",
-                    "id": "2cd3-ce60-ce39-8932",
+                    "id": "3071-2f68-947c-293a",
                     "hidden": false,
                     "import": true,
-                    "targetId": "2c13-8cdd-f66b-bcae",
-                    "type": "selectionEntry",
-                    "entryLinks": [{"name": "Weapon Upgrades", "id": "9705-f30a-ff52-dde1", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
+                    "type": "upgrade",
+                    "infoLinks": [
+                      {"name": "Blast", "id": "1dac-4d6b-44ad-88bb", "hidden": false, "targetId": "6c1f-1cf7-ff25-c99e", "type": "rule"},
+                      {"name": "Torrent", "id": "39b3-297e-032d-ae86", "hidden": false, "targetId": "5edf-d619-23e0-9b56", "type": "rule"},
+                      {"name": "Melta", "id": "9b6d-4823-0851-a2ae", "hidden": false, "targetId": "7cdb-fb99-44a9-8849", "type": "rule"}
+                    ],
+                    "profiles": [
+                      {
+                        "name": "➤ Combi-weapon - Infernus",
+                        "id": "236c-924a-6bf0-111b",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "12", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "-", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Blast 1, Torrent", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      },
+                      {
+                        "name": "➤ Combi-weapon - Purgatus",
+                        "id": "c277-5a7d-5442-ae11",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "7", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      },
+                      {
+                        "name": "➤ Combi-weapon - Damnatus",
+                        "id": "f3fe-2234-e9d2-9c78",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "9", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "D3+2", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Melta 2", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      }
+                    ]
                   }
                 ]
               },
@@ -7894,7 +7995,7 @@
                     "id": "ce3e-263-7208-680a",
                     "hidden": false,
                     "import": true,
-                    "targetId": "5baf-8a8a-b5ba-1223",
+                    "targetId": "8ff2-2f03-1308-dbaf",
                     "type": "selectionEntry",
                     "entryLinks": [{"name": "Weapon Upgrades", "id": "0407-29e3-14b1-3ff7", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
                   }
@@ -8004,29 +8105,10 @@
               {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
-            ],
-            "modifiers": [
-              {
-                "field": "94d-8a98-cf90-183e",
-                "type": "set",
-                "value": "2+",
-                "conditionGroups": [
-                  {
-                    "type": "or",
-                    "conditions": [
-                      {"childId": "2d7f-1892-2fd0-e29c", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1},
-                      {"childId": "9c1a-42ff-a418-11d1", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1},
-                      {"childId": "b95-bdb8-c3e1-456b", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1},
-                      {"childId": "b957-d9cd-ee81-560", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1},
-                      {"childId": "5bd8-882d-302b-48f3", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}
-                    ]
-                  }
-                ]
-              }
             ]
           }
         ]
@@ -8052,7 +8134,7 @@
               {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
               {"name": "S", "$text": "8", "typeId": "ab33-d393-96ce-ccba"},
               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
-              {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+              {"name": "D", "$text": "3", "typeId": "3254-9fe6-d824-513e"},
               {"name": "Keywords", "$text": "Devastating Wounds", "typeId": "893f-9000-ccf7-648e"}
             ]
           }
@@ -8078,7 +8160,7 @@
               {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
               {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
-              {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
+              {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
             ]
           }
         ]
@@ -8149,14 +8231,14 @@
         "categoryLinks": [
           {"name": "Character", "id": "7e9b-7612-c0ac-2b83", "primary": true, "targetId": "9cfd-1c32-585f-7d5c"},
           {"name": "Infantry", "id": "c405-753f-3fc2-869b", "primary": false, "targetId": "cf47-a0d7-7207-29dc"},
-          {"name": "Grenades", "id": "7864-258f-61e8-dd72", "primary": false, "targetId": "5a61-81ac-eb7c-a87e"},
           {"name": "Captain", "id": "5470-50ff-1d18-2eb8", "primary": false, "targetId": "2d7f-1892-2fd0-e29c"},
           {"name": "Imperium", "id": "a02a-262f-a9a0-98b8", "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
           {"name": "Faction: Adeptus Astartes", "id": "cee9-e769-adf8-69bc", "primary": false, "targetId": "6e7-40c-58d9-e402"},
           {"name": "Fly", "id": "71c2-4920-9f07-fbe8", "primary": false, "targetId": "c619-2086-bbcf-69c9"},
           {"name": "Jump Pack", "id": "a44b-f294-dbf9-6acb", "primary": false, "targetId": "dda2-bb0a-215e-ad9c"},
           {"name": "Tacticus", "id": "22f8-f9c9-e1cc-9e21", "primary": false, "targetId": "5179-8ede-45e3-49a2"},
-          {"name": "Leader", "id": "4eff-8017-c1b0-2ddc", "primary": false, "targetId": "1556-9b56-fba6-4370"}
+          {"name": "Leader", "id": "4eff-8017-c1b0-2ddc", "primary": false, "targetId": "1556-9b56-fba6-4370"},
+          {"name": "Explosives", "id": "da39-572f-b21b-3de6", "hidden": false, "primary": false, "targetId": "e33d-891d-33aa-e9bf"}
         ],
         "constraints": [
           {"id": "17c9-8e03-3d56-24c6", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 6},
@@ -8206,8 +8288,9 @@
           {"name": "Deep Strike", "id": "33bd-c265-dcdb-3482", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Rites of Battle", "id": "115d-a6ca-495-b9b6", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
           {"name": "Leader", "id": "df51-3385-640a-3767", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "b627-2d2f-1341-cac7", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Templar Vows", "id": "6d89-6588-975f-1ea2", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "b627-2d2f-1341-cac7", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Templar Vows", "id": "6d89-6588-975f-1ea2", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"},
+          {"name": "Transhuman Strategist", "id": "3ebe-025c-d9af-640b", "hidden": false, "targetId": "c6cc-c38c-dfe6-dbb8", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -8373,7 +8456,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "12\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -8407,13 +8490,7 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, add 1 to the Strength characteristic of melee  weapons equipped by models in that unit.",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
+            "characteristics": [{"name": "Description", "$text": "This unit has +1 to Advance and Charge rolls", "typeId": "9b8f-694b-e5e-b573"}]
           },
           {
             "name": "Leader",
@@ -8503,7 +8580,7 @@
                         "id": "6448-d8cb-9698-9b45",
                         "hidden": false,
                         "import": true,
-                        "targetId": "ad25-473b-bb10-6863",
+                        "targetId": "42ef-fbe2-37dd-2d2d",
                         "type": "selectionEntry",
                         "entryLinks": [{"name": "Weapon Upgrades", "id": "8c24-3746-ab57-0e2b", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
                       },
@@ -8521,7 +8598,7 @@
                         "id": "230a-19d9-13ff-27e4",
                         "hidden": false,
                         "import": true,
-                        "targetId": "5baf-8a8a-b5ba-1223",
+                        "targetId": "8ff2-2f03-1308-dbaf",
                         "type": "selectionEntry",
                         "entryLinks": [{"name": "Weapon Upgrades", "id": "b866-2728-4a54-8738", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
                       }
@@ -8587,7 +8664,7 @@
                     "id": "0d7d-e42c-39f9-572a",
                     "hidden": false,
                     "import": true,
-                    "targetId": "ad25-473b-bb10-6863",
+                    "targetId": "42ef-fbe2-37dd-2d2d",
                     "type": "selectionEntry",
                     "constraints": [
                       {"id": "3cda-1588-71cc-7f88-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -8656,31 +8733,8 @@
           {"name": "Attacks Dx Weapon", "id": "c4f9-c2e2-6e3b-0506", "hidden": false, "primary": false, "targetId": "e993-e086-6de1-12af"}
         ],
         "infoLinks": [
-          {"name": "Pistol", "id": "3852-5446-e10a-a9a7", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"},
-          {"name": "Ignores Cover", "id": "e5b7-eef6-30f7-e3c4", "hidden": false, "targetId": "4640-43e7-30b-215a", "type": "rule"},
+          {"name": "Close-quarters", "id": "3852-5446-e10a-a9a7", "hidden": false, "targetId": "5238-5ad4-52f7-6eb4", "type": "rule"},
           {"name": "Torrent", "id": "d812-2a33-a3c8-4aa7", "hidden": false, "targetId": "5edf-d619-23e0-9b56", "type": "rule"}
-        ],
-        "modifiers": [
-          {
-            "affects": "group.profiles.Ranged Weapons",
-            "field": "3bb-c35f-f54-fb08",
-            "type": "set",
-            "value": "D6+1",
-            "conditions": [
-              {
-                "childId": "93f5-604f-2378-4afe",
-                "childName": "Immolator",
-                "field": "selections",
-                "includeChildForces": true,
-                "includeChildSelections": true,
-                "scope": "root-entry",
-                "shared": true,
-                "traverseAssociationGroup": true,
-                "type": "atLeast",
-                "value": 1
-              }
-            ]
-          }
         ],
         "profiles": [
           {
@@ -8690,13 +8744,13 @@
             "typeId": "f77d-b953-8fa4-b762",
             "typeName": "Ranged Weapons",
             "characteristics": [
-              {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
-              {"name": "A", "$text": "D6", "typeId": "3bb-c35f-f54-fb08"},
-              {"name": "BS", "$text": "N/A", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "3", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "Range", "$text": "9\"", "typeId": "9896-9419-16a1-92fc"},
+              {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "-", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Ignores Cover, Pistol, Torrent", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Close-quarters, Torrent", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -8777,7 +8831,7 @@
       {
         "name": "Astartes Chainsword",
         "id": "ad25-473b-bb10-6863",
-        "comment": "A7 WS 2+",
+        "comment": "A7 WS 2+ Legends",
         "hidden": false,
         "import": true,
         "type": "upgrade",
@@ -8876,7 +8930,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "302c-3b21-8448-92f9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "302c-3b21-8448-92f9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "80ea-c214-fb5d-3c44", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -9553,8 +9607,8 @@
               {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Close-Quarters", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
@@ -9845,7 +9899,7 @@
               {"name": "WS", "$text": "4+", "typeId": "95d1-95f-45b4-11d6"},
               {"name": "S", "$text": "8", "typeId": "ab33-d393-96ce-ccba"},
               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
-              {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+              {"name": "D", "$text": "3", "typeId": "3254-9fe6-d824-513e"},
               {"name": "Keywords", "$text": "Devastating Wounds", "typeId": "893f-9000-ccf7-648e"}
             ]
           }
@@ -9956,7 +10010,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "494d-f50c-1c28-bf5b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "494d-f50c-1c28-bf5b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "3cae-e6e1-8b17-0767", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -10443,7 +10497,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "b66f-c2d-bb43-26ac", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "b66f-c2d-bb43-26ac", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "bf7e-0d2d-7714-88ae", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -10870,7 +10924,7 @@
         "import": true,
         "type": "upgrade",
         "categoryLinks": [{"name": "Ranged Weapon", "id": "1db6-8dfc-cb2d-facb", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"}],
-        "infoLinks": [{"name": "Pistol", "id": "5ad3-aa2e-bd46-f90e", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}],
+        "infoLinks": [{"name": "Close-quarters", "id": "5ad3-aa2e-bd46-f90e", "hidden": false, "targetId": "5238-5ad4-52f7-6eb4", "type": "rule"}],
         "profiles": [
           {
             "name": "Heavy Bolt Pistol",
@@ -10882,10 +10936,10 @@
               {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Close-quarters", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -10964,7 +11018,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "d75b-2949-d37b-b2d6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "d75b-2949-d37b-b2d6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "6e89-7a89-a452-b5ad", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -11557,8 +11611,8 @@
         ],
         "infoLinks": [
           {"name": "Infiltrators", "id": "90bd-5bb5-aa42-2260", "hidden": false, "targetId": "c05d-f4c3-f091-4938", "type": "rule"},
-          {"name": "Oath of Moment", "id": "1770-832a-dfda-5c8", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Oath of Moment", "id": "8e07-cbde-82f5-7c42", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "1770-832a-dfda-5c8", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "8e07-cbde-82f5-7c42", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "e41e-c3c2-d1b4-6549", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -12103,7 +12157,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "6\""}]
           },
-          {"name": "Oath of Moment", "id": "efaf-693c-db8d-ae37", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "efaf-693c-db8d-ae37", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "f4fd-330f-85f2-7bf6", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -12648,7 +12702,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "4e4c-6205-d42a-8ee7", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "4e4c-6205-d42a-8ee7", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "e02b-1cb0-6827-a011", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -13961,7 +14015,7 @@
               {"name": "WS", "$text": "4+", "typeId": "95d1-95f-45b4-11d6"},
               {"name": "S", "$text": "8", "typeId": "ab33-d393-96ce-ccba"},
               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
-              {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+              {"name": "D", "$text": "3", "typeId": "3254-9fe6-d824-513e"},
               {"name": "Keywords", "$text": "Devastating Wounds", "typeId": "893f-9000-ccf7-648e"}
             ]
           }
@@ -14109,7 +14163,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "6\""}]
           },
           {"name": "Infiltrators", "id": "51ae-7fe-c009-c184", "hidden": false, "targetId": "c05d-f4c3-f091-4938", "type": "rule"},
-          {"name": "Oath of Moment", "id": "95c7-9729-7ff8-8e66", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "95c7-9729-7ff8-8e66", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "1930-3005-70c9-e9a2", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -14996,7 +15050,7 @@
         "infoLinks": [
           {"name": "Infiltrators", "id": "1d88-5fc7-efe6-3c9d", "hidden": false, "targetId": "c05d-f4c3-f091-4938", "type": "rule"},
           {"name": "Stealth", "id": "9924-69cd-6d71-4042", "hidden": false, "targetId": "bec5-4288-34a6-ccfa", "type": "rule"},
-          {"name": "Oath of Moment", "id": "67d2-a9e9-8030-b9c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "67d2-a9e9-8030-b9c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "71e5-172f-aa17-2b59", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -15536,7 +15590,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "372-1c4b-e69f-3a4d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "372-1c4b-e69f-3a4d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "a29b-fbfd-bde6-1595", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -16088,7 +16142,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "1b66-81fc-29a2-4dd5", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "1b66-81fc-29a2-4dd5", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Deep Strike", "id": "9747-439b-dcbf-4732", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Templar Vows", "id": "418f-922d-d48d-392c", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
@@ -16949,7 +17003,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "f37-ca71-61f2-b6d0", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "f37-ca71-61f2-b6d0", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "665f-bf98-daf4-d099", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -17490,7 +17544,7 @@
             "type": "selectionEntryGroup"
           }
         ],
-        "infoLinks": [{"name": "Oath of Moment", "id": "74c7-f74d-8db1-e800", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}],
+        "infoLinks": [{"name": "Combat Doctrines", "id": "74c7-f74d-8db1-e800", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}],
         "modifierGroups": [
           {
             "comment": "Crusade modifiers",
@@ -18113,7 +18167,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "6\""}]
           },
-          {"name": "Oath of Moment", "id": "73ba-b18e-531e-94ca", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "73ba-b18e-531e-94ca", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "3d5a-a756-bb75-7790", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -18720,7 +18774,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "39a2-c61b-ed41-a396", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "39a2-c61b-ed41-a396", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "f1d0-a83f-026f-a26f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -19422,7 +19476,7 @@
         ],
         "infoLinks": [
           {"name": "Deep Strike", "id": "65a3-8163-ad61-f5d7", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "39c6-5553-2871-6ef", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "39c6-5553-2871-6ef", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "4bef-f1b5-c6a9-964f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -20102,7 +20156,7 @@
         ],
         "infoLinks": [
           {"name": "Deep Strike", "id": "2014-9419-e969-ecb8", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "1349-3ab5-4889-4d10", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "1349-3ab5-4889-4d10", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -20737,7 +20791,7 @@
         "infoLinks": [
           {"name": "Deep Strike", "id": "4dd6-16dd-ca37-62fb", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Invulnerable Save", "id": "5ea-b34a-666c-38e1", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
-          {"name": "Oath of Moment", "id": "349b-26bf-ced1-d1ff", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "349b-26bf-ced1-d1ff", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "46c8-c0ee-6afb-056f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -21618,7 +21672,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "f172-d1b6-cdf6-aa28", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "f172-d1b6-cdf6-aa28", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "9550-0466-b9d1-1c43", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -22085,7 +22139,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "ec88-70b1-c4ad-d49a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "ec88-70b1-c4ad-d49a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "6e04-8f39-26e0-fb2f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -22805,7 +22859,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
           {"name": "Damaged: 1-4 Wounds Remaining", "id": "aa87-ceda-f59a-891a", "hidden": false, "targetId": "ee64-aaaf-75df-8da9", "type": "profile"},
-          {"name": "Oath of Moment", "id": "150b-6671-1711-a565", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "150b-6671-1711-a565", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "651e-29ac-168f-a084", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -23192,7 +23246,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
-          {"name": "Oath of Moment", "id": "b0ae-e1c3-d875-3efd", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "b0ae-e1c3-d875-3efd", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "3dad-e0d3-8e83-8ab7", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -23785,7 +23839,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
-          {"name": "Oath of Moment", "id": "f1f3-9c5a-1c0f-f964", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "f1f3-9c5a-1c0f-f964", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "7e84-e11a-284a-1798", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -24371,7 +24425,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
           {"name": "Damaged: 1-4 Wounds Remaining", "id": "c106-2d9d-db39-b42b", "hidden": false, "targetId": "ee64-aaaf-75df-8da9", "type": "profile"},
-          {"name": "Oath of Moment", "id": "4e7b-49a5-5eed-dacc", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "4e7b-49a5-5eed-dacc", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "67af-ed5b-bbdb-06c6", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -24975,7 +25029,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "c726-923b-68c0-7456", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "c726-923b-68c0-7456", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "ea5c-3499-db05-9a4a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -25410,7 +25464,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
           {"name": "Damaged: 1-4 Wounds Remaining", "id": "c597-f117-dcff-91c6", "hidden": false, "targetId": "ee64-aaaf-75df-8da9", "type": "profile"},
-          {"name": "Oath of Moment", "id": "eb6f-5591-4a7e-fd5f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "eb6f-5591-4a7e-fd5f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "5b3b-9d18-9f41-813b", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -25928,7 +25982,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "eb4c-6ab9-8c06-8051", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "eb4c-6ab9-8c06-8051", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "37dd-d860-9db9-500a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -26707,7 +26761,7 @@
         ],
         "infoLinks": [
           {"name": "Deep Strike", "id": "8b4a-fe5d-7858-f8f8", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "ed30-a79a-4bb5-e51a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "ed30-a79a-4bb5-e51a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "ca47-583c-9e38-ba33", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -27462,7 +27516,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "5648-7494-2d09-6629", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "5648-7494-2d09-6629", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "6222-922f-ce94-d68f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -27771,7 +27825,11 @@
         "import": true,
         "type": "upgrade",
         "categoryLinks": [{"name": "Ranged Weapon", "id": "1471-b69d-5b1b-4f12", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"}],
-        "infoLinks": [{"name": "Twin-linked", "id": "4296-c228-bfdc-4ef2", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"}],
+        "infoLinks": [
+          {"name": "Rapid Fire", "id": "4296-c228-bfdc-4ef2", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"},
+          {"name": "Assault", "id": "4a2c-4c17-8536-a7f5", "hidden": false, "targetId": "fc8a-8c24-bae9-cc1c", "type": "rule"},
+          {"name": "Twin-linked", "id": "0541-3e67-828f-efb3", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"}
+        ],
         "profiles": [
           {
             "name": "Twin bolt rifle",
@@ -27782,11 +27840,11 @@
             "characteristics": [
               {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
-              {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Assault, Rapid Fire 2, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -27867,7 +27925,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "5b6f-f96b-b610-ec84", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "5b6f-f96b-b610-ec84", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "ed79-b41b-1af8-b93a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -28478,7 +28536,7 @@
             "type": "selectionEntryGroup"
           }
         ],
-        "infoLinks": [{"name": "Oath of Moment", "id": "3159-d217-c62e-2496", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}],
+        "infoLinks": [{"name": "Combat Doctrines", "id": "3159-d217-c62e-2496", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}],
         "modifierGroups": [
           {
             "comment": "Crusade modifiers",
@@ -28880,7 +28938,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "eee2-8d14-26a3-47c9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "eee2-8d14-26a3-47c9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "d4ea-19da-34fd-5625", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -29653,7 +29711,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "9\""}]
           },
-          {"name": "Oath of Moment", "id": "5d5e-6244-b2c-8100", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "5d5e-6244-b2c-8100", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "3684-e928-6449-d965", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -30294,7 +30352,7 @@
         ],
         "infoLinks": [
           {"name": "Deep Strike", "id": "6018-6d3e-99e4-778f", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "ccd2-3665-6c88-52af", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "ccd2-3665-6c88-52af", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "0944-5d24-aed8-9d46", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -30718,7 +30776,7 @@
         ],
         "infoLinks": [
           {"name": "Deep Strike", "id": "52fa-a07-76c3-2d65", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "3c29-b17a-6d0-b5e1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "3c29-b17a-6d0-b5e1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "0b65-aeb0-bc74-8267", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -31325,7 +31383,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "c9dd-a36-6957-527c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "c9dd-a36-6957-527c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "d632-2463-6ed8-3e31", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -31704,7 +31762,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
           {"name": "Deep Strike", "id": "e5a5-890e-6661-fddf", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "e096-170-ab33-c901", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "e096-170-ab33-c901", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "f139-8e91-0483-dadb", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -32143,7 +32201,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "dedd-9c21-238b-b27b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "dedd-9c21-238b-b27b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "3a32-44a3-a3a0-e7ad", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -32560,8 +32618,8 @@
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
           {"name": "Deep Strike", "id": "8ea5-3138-a382-1b28", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "36be-20fb-942d-bb66", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Oath of Moment", "id": "7d3c-856b-14c9-38e4", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "36be-20fb-942d-bb66", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "7d3c-856b-14c9-38e4", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "b7b9-8577-9f0d-dafe", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -32895,7 +32953,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
           {"name": "Deep Strike", "id": "db7b-4be7-82a5-c6e7", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "21b0-41e-83f3-6a21", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "21b0-41e-83f3-6a21", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "63f2-7d5d-7a67-5d8a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -33418,7 +33476,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "d589-833c-9a86-5681", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "d589-833c-9a86-5681", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "5e91-5b7a-7205-528f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -33896,7 +33954,7 @@
         "infoLinks": [
           {"name": "Infiltrators", "id": "1112-52de-569e-9825", "hidden": false, "targetId": "c05d-f4c3-f091-4938", "type": "rule"},
           {"name": "Stealth", "id": "e4e6-2668-c4a0-b7cb", "hidden": false, "targetId": "bec5-4288-34a6-ccfa", "type": "rule"},
-          {"name": "Oath of Moment", "id": "54b2-b5b6-2772-6642", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "54b2-b5b6-2772-6642", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "129d-812b-338d-602f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -34409,7 +34467,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "74d6-c0de-a85f-4256", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "74d6-c0de-a85f-4256", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "dad3-87ce-058a-3df7", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -34928,7 +34986,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "9b8c-37eb-2a47-7f8c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "9b8c-37eb-2a47-7f8c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "1485-c61c-4823-881a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -35590,7 +35648,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "a27f-2f-fa7b-68a2", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "a27f-2f-fa7b-68a2", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "5c51-017c-7326-6e6a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -36192,7 +36250,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "f0d4-aedb-4311-967", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "f0d4-aedb-4311-967", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "d86e-00a4-c8ec-9722", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -36725,7 +36783,7 @@
           },
           {"name": "Tank Ace Character", "id": "57e2-0d04-cdb6-d79f", "hidden": false, "import": true, "targetId": "8810-ebe3-94f2-8eab", "type": "selectionEntry"}
         ],
-        "infoLinks": [{"name": "Oath of Moment", "id": "3e0d-e496-5702-69ae", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}],
+        "infoLinks": [{"name": "Combat Doctrines", "id": "3e0d-e496-5702-69ae", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}],
         "modifierGroups": [
           {
             "comment": "Crusade modifiers",
@@ -37114,7 +37172,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
           {"name": "Damaged: 1-4 Wounds Remaining", "id": "7612-e02b-eab7-68e0", "hidden": false, "targetId": "ee64-aaaf-75df-8da9", "type": "profile"},
-          {"name": "Oath of Moment", "id": "4585-ff70-c5e4-c09d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "4585-ff70-c5e4-c09d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "b753-53c4-4ade-6972", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -37506,7 +37564,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "65f6-264-8075-1edc", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "65f6-264-8075-1edc", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "a791-7a72-7db1-7204", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -37878,7 +37936,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "1e5a-1b1a-5425-e2f6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "1e5a-1b1a-5425-e2f6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "be1d-ed82-be4b-5873", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -38256,7 +38314,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "8681-ea3-6bbe-44e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "8681-ea3-6bbe-44e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "55e0-9958-4e2a-993a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -38689,7 +38747,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "2310-f079-5d46-9734", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "2310-f079-5d46-9734", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "ec3f-50f7-6666-6481", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -39132,7 +39190,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "c2dc-3bfd-7075-c711", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "c2dc-3bfd-7075-c711", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -39595,7 +39653,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "3388-c464-b02a-891d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "3388-c464-b02a-891d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -40015,7 +40073,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "46ca-8260-73f7-b135", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "46ca-8260-73f7-b135", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -40411,7 +40469,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "ffe7-27f9-b924-27e1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "ffe7-27f9-b924-27e1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "a4f3-9d54-5e60-610a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -40791,7 +40849,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
           {"name": "Damaged: 1-5 Wounds Remaining", "id": "92e4-6764-7832-c85a", "hidden": false, "targetId": "1aac-b083-4318-f750", "type": "profile"},
-          {"name": "Oath of Moment", "id": "4da8-4e44-613b-ad50", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "4da8-4e44-613b-ad50", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "90aa-544b-be71-7512", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -41239,7 +41297,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
           {"name": "Damaged: 1-5 Wounds Remaining", "id": "492a-2eca-630-24ac", "hidden": false, "targetId": "1aac-b083-4318-f750", "type": "profile"},
-          {"name": "Oath of Moment", "id": "165c-2cae-ee40-1e97", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "165c-2cae-ee40-1e97", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -41692,7 +41750,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
           {"name": "Damaged: 1-5 Wounds Remaining", "id": "4d73-3226-746e-a1aa", "hidden": false, "targetId": "1aac-b083-4318-f750", "type": "profile"},
-          {"name": "Oath of Moment", "id": "6b31-e149-4592-65aa", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "6b31-e149-4592-65aa", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "0261-e47f-b144-d656", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -42190,7 +42248,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
-          {"name": "Oath of Moment", "id": "5d6d-c031-9ec5-62bc", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "5d6d-c031-9ec5-62bc", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -42701,7 +42759,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
-          {"name": "Oath of Moment", "id": "f9bb-2100-506e-1a15", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "f9bb-2100-506e-1a15", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -43322,7 +43380,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "da4-7033-863-f1fa", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "da4-7033-863-f1fa", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "9156-ca51-0fc2-552b", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -43679,7 +43737,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "df01-e4e-863-9fcc", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "df01-e4e-863-9fcc", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "ff0d-d8d9-9588-bdde", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -44081,7 +44139,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": 6}]
           },
-          {"name": "Oath of Moment", "id": "3a60-ff11-dd7d-948c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "3a60-ff11-dd7d-948c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -44607,7 +44665,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
           {"name": "Deep Strike", "id": "1085-f66-5482-24be", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "3a59-a51e-2b13-81dd", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "3a59-a51e-2b13-81dd", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "295c-15a0-4c95-a9f5", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -44897,7 +44955,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
-          {"name": "Oath of Moment", "id": "3dd1-9501-ee52-475a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "3dd1-9501-ee52-475a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {
             "name": "Firing Deck",
             "id": "6a39-2109-2706-cf4c",
@@ -45248,7 +45306,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "b787-f39e-9fa6-1e73", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "b787-f39e-9fa6-1e73", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "3329-3007-6d7f-b026", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -45657,7 +45715,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "ce5a-a5c4-66c7-3fe", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "ce5a-a5c4-66c7-3fe", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "d0bd-15ae-7744-818c", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -46021,7 +46079,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
           {"name": "Damaged: 1-5 Wounds Remaining", "id": "15bd-b1ce-a4ad-a151", "hidden": false, "targetId": "1aac-b083-4318-f750", "type": "profile"},
-          {"name": "Oath of Moment", "id": "b72a-7083-c777-621a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "b72a-7083-c777-621a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "2374-acf1-1716-96d0", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -46497,7 +46555,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
           {"name": "Damaged: 1-4 Wounds Remaining", "id": "1d13-9d57-7b02-a92c", "hidden": false, "targetId": "ee64-aaaf-75df-8da9", "type": "profile"},
-          {"name": "Oath of Moment", "id": "ea5f-ec72-6615-9925", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "ea5f-ec72-6615-9925", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "e13d-e47a-cf8b-97f9", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifiers": [
@@ -46819,7 +46877,7 @@
         "infoLinks": [
           {"name": "Leader", "id": "e4c3-b2f5-3caf-4f46", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Rites of Battle", "id": "ed39-7f0e-f008-b39f", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
-          {"name": "Oath of Moment", "id": "7171-d377-ac3-5056", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "7171-d377-ac3-5056", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "6420-2e4c-6500-b36e", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -47604,7 +47662,7 @@
           {"name": "Support", "id": "a044-bd4a-8c06-5183", "targetId": "3342-2180-9c5d-925f", "type": "rule"},
           {"name": "Target Priority", "id": "1a05-7f9e-4831-47a1", "hidden": false, "targetId": "623-5a90-2d25-679", "type": "profile"},
           {"name": "Tactical Precision", "id": "496-c03c-6378-df5b", "hidden": false, "targetId": "b07f-3052-e85f-d6d3", "type": "profile"},
-          {"name": "Oath of Moment", "id": "a330-8af8-3a52-841f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "a330-8af8-3a52-841f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "a415-3975-38af-97f5", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -48122,7 +48180,7 @@
           },
           {"name": "Support", "id": "4f0e-28bb-fb44-32ad", "targetId": "3342-2180-9c5d-925f", "type": "rule"},
           {"name": "Tactical Precision", "id": "17ae-5b42-11d1-75a4", "hidden": false, "targetId": "b07f-3052-e85f-d6d3", "type": "profile"},
-          {"name": "Oath of Moment", "id": "a49d-7a03-b646-6ec9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "a49d-7a03-b646-6ec9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "0124-da78-652d-e868", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -48523,7 +48581,7 @@
           {"name": "Deep Strike", "id": "d1c7-339e-d90-5f92", "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Leader", "id": "c95e-280d-22a9-3588", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Tactical Precision", "id": "f05a-f428-fdf-7c8", "hidden": false, "targetId": "b07f-3052-e85f-d6d3", "type": "profile"},
-          {"name": "Oath of Moment", "id": "95ed-8f97-d65f-9c21", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "95ed-8f97-d65f-9c21", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "2024-1728-6fda-613c", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -49061,7 +49119,7 @@
         "infoLinks": [
           {"name": "Leader", "id": "e885-d127-435a-d3d8", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Psychic Hood", "id": "8134-b601-41d5-9290", "hidden": false, "targetId": "116b-b23c-4ea4-30ed", "type": "profile"},
-          {"name": "Oath of Moment", "id": "5bf4-574d-d3b5-11d4", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "5bf4-574d-d3b5-11d4", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -49636,7 +49694,7 @@
           {"name": "Leader", "id": "5784-d4e2-4beb-7574", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Psychic Hood", "id": "7dc2-9baf-bc62-3c62", "hidden": false, "targetId": "116b-b23c-4ea4-30ed", "type": "profile"},
           {"name": "Infiltrators", "id": "6238-bce4-d0e9-1b2b", "hidden": false, "targetId": "c05d-f4c3-f091-4938", "type": "rule"},
-          {"name": "Oath of Moment", "id": "180b-c410-f75e-9df1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "180b-c410-f75e-9df1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -50028,7 +50086,7 @@
         "infoLinks": [
           {"name": "Leader", "id": "3150-6238-f23-3f8f", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Psychic Hood", "id": "25e0-2f68-ee70-dd93", "hidden": false, "targetId": "116b-b23c-4ea4-30ed", "type": "profile"},
-          {"name": "Oath of Moment", "id": "bdd1-39b3-e2f-11e5", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "bdd1-39b3-e2f-11e5", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Deep Strike", "id": "e327-58f-6e3b-6547", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"}
         ],
         "modifierGroups": [
@@ -50415,7 +50473,7 @@
         "infoLinks": [
           {"name": "Leader", "id": "43cf-2fc3-6ee6-38ca", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Psychic Hood", "id": "ad6f-6910-c38f-bf67", "hidden": false, "targetId": "116b-b23c-4ea4-30ed", "type": "profile"},
-          {"name": "Oath of Moment", "id": "493f-6fcf-a4c8-ac78", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "493f-6fcf-a4c8-ac78", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -51021,7 +51079,7 @@
           {"name": "Litany of Hate", "id": "8bce-176-74bb-1130", "hidden": false, "targetId": "3b72-1499-de01-95bb", "type": "profile"},
           {"name": "Leader", "id": "4625-9185-7b4f-2691", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Spiritual Leader", "id": "a2a5-33f3-5ad2-9aff", "hidden": false, "targetId": "ec61-1b3-59a9-9ff7", "type": "profile"},
-          {"name": "Oath of Moment", "id": "acd6-34f7-276c-e6ff", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "acd6-34f7-276c-e6ff", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "3036-4ef9-8a4e-d4f4", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -51445,7 +51503,7 @@
           {"name": "Deep Strike", "id": "1a8f-f1d0-d9cc-eb7c", "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Litany of Hate", "id": "d652-c395-e20a-b916", "hidden": false, "targetId": "3b72-1499-de01-95bb", "type": "profile"},
           {"name": "Leader", "id": "9029-da69-5efc-b824", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "40d7-6125-e8d1-1d6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "40d7-6125-e8d1-1d6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "8e81-5ce4-c96b-811f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -51837,7 +51895,7 @@
         "infoLinks": [
           {"name": "Litany of Hate", "id": "81c-d37-1c69-3204", "hidden": false, "targetId": "3b72-1499-de01-95bb", "type": "profile"},
           {"name": "Leader", "id": "8b37-597c-a707-ee02", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "a3a4-d4ea-9da5-efd3", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "a3a4-d4ea-9da5-efd3", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "9168-0d36-5f6d-6ffd", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -52245,7 +52303,7 @@
           {"name": "Deep Strike", "id": "2f6f-f2b-c6ca-8022", "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Litany of Hate", "id": "c91-2653-9520-5955", "hidden": false, "targetId": "3b72-1499-de01-95bb", "type": "profile"},
           {"name": "Leader", "id": "22e6-5ef8-10d7-d389", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "e608-911e-860a-df41", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "e608-911e-860a-df41", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "b669-3a69-21e8-88d1", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -52806,8 +52864,8 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "9682-a1cb-ce1d-f480", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "7439-d961-4465-387", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Oath of Moment", "id": "250e-976-84b5-d83f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "7439-d961-4465-387", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "250e-976-84b5-d83f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "140c-8600-7c34-099a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -53200,7 +53258,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "a352-5488-6ebd-234b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "a352-5488-6ebd-234b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "2c6c-cf08-53ff-9886", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -53658,7 +53716,7 @@
           {"name": "Infiltrators", "id": "cde0-7b90-c3ee-bef4", "targetId": "c05d-f4c3-f091-4938", "type": "rule"},
           {"name": "Lone Operative", "id": "dccc-29cf-43dc-71a3", "targetId": "a8a0-8fe7-898-e0f3", "type": "rule"},
           {"name": "Stealth", "id": "bc84-613b-f61c-2060", "targetId": "bec5-4288-34a6-ccfa", "type": "rule"},
-          {"name": "Oath of Moment", "id": "bef8-2bc7-31c2-3611", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "bef8-2bc7-31c2-3611", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "16e5-5f56-881a-3a00", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -54072,7 +54130,7 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "6f14-3413-904e-797b", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "f213-7e5e-7e31-c67c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "f213-7e5e-7e31-c67c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "eede-1b00-9d66-8aa0", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -54636,7 +54694,7 @@
         ],
         "infoLinks": [
           {"name": "Support", "id": "bdb5-c15-f33e-ebb6", "targetId": "3342-2180-9c5d-925f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "366c-ed2b-2e99-b23b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "366c-ed2b-2e99-b23b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "537d-6f09-1156-ed56", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -55021,7 +55079,7 @@
         ],
         "infoLinks": [
           {"name": "Support", "id": "3452-4340-9abf-53af", "hidden": false, "targetId": "3342-2180-9c5d-925f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "3fed-e19f-d789-ccf5", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "3fed-e19f-d789-ccf5", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "5fdd-00be-10f7-9b65", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -55537,7 +55595,7 @@
         "infoLinks": [
           {"name": "Support", "id": "fbce-2cd6-5a2e-ad36", "targetId": "3342-2180-9c5d-925f", "type": "rule"},
           {"name": "Astartes Banner", "id": "2518-a891-3e93-cf7e", "hidden": false, "targetId": "4873-996f-a8a2-bcb1", "type": "profile"},
-          {"name": "Oath of Moment", "id": "cc6e-fb7-411d-1491", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "cc6e-fb7-411d-1491", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "4666-a96d-daf7-8f2c", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -55913,7 +55971,7 @@
         "infoLinks": [
           {"name": "Astartes Banner", "id": "7abc-605f-235c-2982", "hidden": false, "targetId": "4873-996f-a8a2-bcb1", "type": "profile"},
           {"name": "Support", "id": "b80e-7107-a966-cab1", "hidden": false, "targetId": "3342-2180-9c5d-925f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "9c7d-5218-2cc8-6733", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "9c7d-5218-2cc8-6733", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "3e6c-1e6c-eef2-4c87", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -56299,7 +56357,7 @@
           {"name": "Support", "id": "7e13-9c83-8a1a-1b7e", "hidden": false, "targetId": "3342-2180-9c5d-925f", "type": "rule"},
           {"name": "Astartes Banner", "id": "ed23-a3ba-f7fc-5f6f", "hidden": false, "targetId": "4873-996f-a8a2-bcb1", "type": "profile"},
           {"name": "Deep Strike", "id": "3adf-d05d-c59a-14cb", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "717c-3bfc-616-2c3c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "717c-3bfc-616-2c3c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "8691-7664-cf96-800d", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -56721,7 +56779,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "d9fb-9096-ed39-7be6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "d9fb-9096-ed39-7be6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "e8cc-8a54-ef3d-b708", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -58102,7 +58160,7 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "ce13-3e00-844b-87b8", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "b091-e43c-45ac-ea46", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "b091-e43c-45ac-ea46", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "8466-f564-4918-e9d9", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -58675,11 +58733,11 @@
           {"name": "Character", "id": "2216-f594-1ac3-85eb", "primary": true, "targetId": "9cfd-1c32-585f-7d5c"},
           {"name": "Infantry", "id": "d6a8-a50e-babc-5270", "primary": false, "targetId": "cf47-a0d7-7207-29dc"},
           {"name": "Captain", "id": "29b9-1b48-3a9e-616b", "primary": false, "targetId": "2d7f-1892-2fd0-e29c"},
-          {"name": "Grenades", "id": "9ce8-b8f6-88ff-2fc9", "primary": false, "targetId": "5a61-81ac-eb7c-a87e"},
           {"name": "Imperium", "id": "f16b-de9-d417-4a88", "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
           {"name": "Tacticus", "id": "2071-c3fe-9f63-9292", "primary": false, "targetId": "5179-8ede-45e3-49a2"},
           {"name": "Faction: Adeptus Astartes", "id": "57cf-55ec-47da-1d02", "primary": false, "targetId": "6e7-40c-58d9-e402"},
-          {"name": "Leader", "id": "8b67-d021-d704-3ebe", "primary": false, "targetId": "1556-9b56-fba6-4370"}
+          {"name": "Leader", "id": "8b67-d021-d704-3ebe", "primary": false, "targetId": "1556-9b56-fba6-4370"},
+          {"name": "Explosives", "id": "0db8-b8a1-c992-a05d", "hidden": false, "primary": false, "targetId": "e33d-891d-33aa-e9bf"}
         ],
         "constraints": [
           {"id": "2c9d-1117-01bc-2bf1", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 6},
@@ -58735,8 +58793,9 @@
           {"name": "Finest Hour", "id": "891a-e8c7-6549-4399", "targetId": "fdf1-64a5-906c-3474", "type": "profile"},
           {"name": "Leader", "id": "2814-e93f-5a97-a2c6", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Rites of Battle", "id": "8a13-952a-4a5-70e5", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
-          {"name": "Oath of Moment", "id": "23b9-915-c3d6-3d21", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Templar Vows", "id": "cd01-df1f-c140-302e", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "23b9-915-c3d6-3d21", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Templar Vows", "id": "cd01-df1f-c140-302e", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"},
+          {"name": "Transhuman Strategist", "id": "e284-bc09-8ef9-bfe2", "hidden": false, "targetId": "c6cc-c38c-dfe6-dbb8", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -58885,7 +58944,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -58963,7 +59022,7 @@
             ],
             "selectionEntries": [
               {
-                "name": "Bolt Pistol, Master-crafted Bolter, Melee Weapon",
+                "name": "Heavy Bolt Pistol, Master-crafted Bolter, Melee Weapon",
                 "id": "c6aa-b3a5-4ff3-e0d3",
                 "collective": false,
                 "hidden": false,
@@ -58972,12 +59031,12 @@
                 "costs": [{"name": "pl", "typeId": "c5fb-5b9b-89f6-86c", "value": 0}, {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
                 "entryLinks": [
                   {
-                    "name": "Bolt pistol",
+                    "name": "Heavy Bolt Pistol",
                     "id": "87a5-6849-3981-d57e",
                     "collective": false,
                     "hidden": false,
                     "import": true,
-                    "targetId": "b273-b85e-4018-a0cd",
+                    "targetId": "eca4-d5d2-18a1-01a8",
                     "type": "selectionEntry",
                     "constraints": [
                       {
@@ -59073,16 +59132,6 @@
                       }
                     ],
                     "entryLinks": [
-                      {
-                        "name": "Close combat weapon",
-                        "id": "74b1-e680-e6f1-2845",
-                        "collective": false,
-                        "hidden": false,
-                        "import": true,
-                        "targetId": "6e7b-4796-0ba3-a2d0",
-                        "type": "selectionEntry",
-                        "entryLinks": [{"name": "Weapon Upgrades", "id": "02cb-6733-eca9-6ca2", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
-                      },
                       {
                         "name": "Power fist",
                         "id": "667f-2fe-d8c8-c6f7",
@@ -59210,18 +59259,9 @@
                         "collective": false,
                         "hidden": false,
                         "import": true,
-                        "targetId": "25c2-104f-fa0c-809e",
+                        "targetId": "72c9-4b92-5aed-2fbe",
                         "type": "selectionEntry",
                         "entryLinks": [{"name": "Weapon Upgrades", "id": "a3cd-2eb8-bf42-9a09", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
-                      },
-                      {
-                        "name": "Heavy Bolt Pistol",
-                        "id": "aed0-90b3-66b2-006d",
-                        "hidden": false,
-                        "import": true,
-                        "targetId": "eca4-d5d2-18a1-01a8",
-                        "type": "selectionEntry",
-                        "entryLinks": [{"name": "Weapon Upgrades", "id": "2dba-bf8f-f2f3-58e5", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
                       }
                     ],
                     "selectionEntries": [
@@ -59234,7 +59274,7 @@
                         "categoryLinks": [{"name": "Ranged Weapon", "id": "6636-a5b8-edba-3c86", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"}],
                         "entryLinks": [{"name": "Weapon Upgrades", "id": "4379-3a0d-5457-4ce5", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}],
                         "infoLinks": [
-                          {"name": "Pistol", "id": "d58e-17e4-4d94-af05", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"},
+                          {"name": "Close-quarters", "id": "d58e-17e4-4d94-af05", "hidden": false, "targetId": "5238-5ad4-52f7-6eb4", "type": "rule"},
                           {"name": "Devastating Wounds", "id": "86ce-8a81-aae0-bb33", "hidden": false, "targetId": "be1e-ac8e-1e2c-3528", "type": "rule"}
                         ],
                         "profiles": [
@@ -59251,7 +59291,7 @@
                               {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
                               {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
                               {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
-                              {"name": "Keywords", "$text": "Devastating Wounds, Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
+                              {"name": "Keywords", "$text": "Devastating Wounds, Close Quarters", "typeId": "7f1b-8591-2fcf-d01c"}
                             ]
                           }
                         ]
@@ -59382,7 +59422,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D6+2"}]
           },
           {"name": "Damaged: 1-8 wounds remaining", "id": "241f-f84f-4d2f-95a7", "hidden": false, "targetId": "4362-2036-1522-de2e", "type": "profile"},
-          {"name": "Oath of Moment", "id": "fc0-2f3f-d6a0-e29a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "fc0-2f3f-d6a0-e29a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "3460-8817-94c0-af9e", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -59907,7 +59947,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D6+2"}]
           },
           {"name": "Hover", "id": "91e7-d559-b600-8ac2", "hidden": false, "targetId": "eec5-5f54-9c03-c305", "type": "rule"},
-          {"name": "Oath of Moment", "id": "ef38-4da4-c74b-5dc1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "ef38-4da4-c74b-5dc1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "0472-1f8f-c453-99a9", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -60326,7 +60366,7 @@
           {"name": "Bolt Weapon", "id": "e032-085e-adf4-ebaf", "hidden": false, "primary": false, "targetId": "1c08-e7e4-55b9-8e30"},
           {"name": "Pistol Weapon", "id": "85b5-1bd6-c7af-8a3d", "hidden": false, "primary": false, "targetId": "1db0-c6b5-19db-8d0c"}
         ],
-        "infoLinks": [{"name": "Pistol", "id": "315b-7099-7d3b-18bf", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}],
+        "infoLinks": [{"name": "Close-quarters", "id": "315b-7099-7d3b-18bf", "hidden": false, "targetId": "5238-5ad4-52f7-6eb4", "type": "rule"}],
         "profiles": [
           {
             "name": "Heavy Bolt Pistol",
@@ -60338,30 +60378,10 @@
               {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
-            ],
-            "modifiers": [
-              {
-                "field": "94d-8a98-cf90-183e",
-                "type": "set",
-                "value": "2+",
-                "conditions": [
-                  {
-                    "id": "1ec4-fbba-29cb-3e2e",
-                    "childId": "2d7f-1892-2fd0-e29c",
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "scope": "ancestor",
-                    "shared": true,
-                    "type": "instanceOf",
-                    "value": 1
-                  }
-                ]
-              }
+              {"name": "Keywords", "$text": "Close-quarters", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -60476,7 +60496,7 @@
               {"name": "WS", "$text": "4+", "typeId": "95d1-95f-45b4-11d6"},
               {"name": "S", "$text": "8", "typeId": "ab33-d393-96ce-ccba"},
               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
-              {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+              {"name": "D", "$text": "3", "typeId": "3254-9fe6-d824-513e"},
               {"name": "Keywords", "$text": "Devastating Wounds", "typeId": "893f-9000-ccf7-648e"}
             ]
           }
@@ -60533,7 +60553,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
-          {"name": "Oath of Moment", "id": "6535-340e-77e4-8528", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "6535-340e-77e4-8528", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "b493-1fd7-e2c3-5095", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -60964,7 +60984,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "432a-e156-5802-b53d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "432a-e156-5802-b53d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {
             "name": "Deadly Demise",
             "id": "52f7-5650-c311-11d3",
@@ -61535,7 +61555,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "9ac1-26e0-515d-aef0", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "9ac1-26e0-515d-aef0", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Damaged: 1-4 Wounds Remaining", "id": "9c9d-b951-6504-16d0", "hidden": false, "targetId": "ee64-aaaf-75df-8da9", "type": "profile"},
           {"name": "Templar Vows", "id": "3415-3ce2-00b5-8ee0", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
@@ -62102,7 +62122,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
-          {"name": "Oath of Moment", "id": "ef2e-6fb4-56ab-7f74", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "ef2e-6fb4-56ab-7f74", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "00ed-7dcc-4f99-6c7d", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -62639,7 +62659,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
           {"name": "Deep Strike", "id": "284c-5b70-f487-d546", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Oath of Moment", "id": "6110-e658-5992-d9b4", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "6110-e658-5992-d9b4", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "a93b-0dbb-eab7-33c5", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -63061,7 +63081,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "744e-834a-517f-ee8", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "744e-834a-517f-ee8", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Rites of Battle", "id": "3d60-f083-a7bd-a61a", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
           {"name": "Damaged: 1-4 wounds remaining", "id": "4452-e5da-c766-52a1", "hidden": false, "targetId": "d44e-2f5-cadf-9eb", "type": "profile"}
         ],
@@ -63210,7 +63230,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
           {"name": "Hover", "id": "6cd-17d3-d095-4f64", "hidden": false, "targetId": "eec5-5f54-9c03-c305", "type": "rule"},
-          {"name": "Oath of Moment", "id": "7f7d-30c6-1a23-a39f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "7f7d-30c6-1a23-a39f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "c6e3-d983-5cf2-40e3", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -63610,7 +63630,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
-          {"name": "Oath of Moment", "id": "caef-6880-79a2-101e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "caef-6880-79a2-101e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "b469-ca79-ac44-2e6b", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -64029,7 +64049,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": 1}]
           },
-          {"name": "Oath of Moment", "id": "b634-e7a9-32c2-13b9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "b634-e7a9-32c2-13b9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "1e5d-dc00-1982-429b", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -64585,7 +64605,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "4dba-3ccf-d4d6-4fc1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "4dba-3ccf-d4d6-4fc1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "d3dc-5e2c-987e-eef3", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -64996,7 +65016,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
-          {"name": "Oath of Moment", "id": "db23-ce4e-57f7-253c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "db23-ce4e-57f7-253c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Rites of Battle", "id": "2bc1-512f-8e4d-cfd6", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
           {"name": "Templar Vows", "id": "62e0-c577-34f1-ecad", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
@@ -65512,7 +65532,7 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "df37-2d80-1c27-190b", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "f7-7976-b575-6cca", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "f7-7976-b575-6cca", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "4e6a-da32-db67-88e0", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -65880,7 +65900,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
-          {"name": "Oath of Moment", "id": "81c9-f883-dd3f-477a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "81c9-f883-dd3f-477a", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "1870-c3c9-26ba-c06a", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -66288,7 +66308,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
           },
-          {"name": "Oath of Moment", "id": "59e2-ac16-d718-ad3e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "59e2-ac16-d718-ad3e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "5901-59ad-f051-da2e", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -66676,7 +66696,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "c8dd-3c8d-bd0a-6724", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "c8dd-3c8d-bd0a-6724", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "7385-909f-eeec-fbc3", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -67332,7 +67352,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "d780-228-1215-24c6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "d780-228-1215-24c6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Leader", "id": "788-de0-b038-b346", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Invulnerable Save", "id": "a28c-4e40-ddb3-936c", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
           {"name": "Templar Vows", "id": "04ec-eb5e-ce3a-dd27", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
@@ -67747,7 +67767,7 @@
         "infoLinks": [
           {"name": "Astartes Banner", "id": "87a1-433e-f406-a38e", "hidden": false, "targetId": "4873-996f-a8a2-bcb1", "type": "profile"},
           {"name": "Leader", "id": "96f9-a705-d5c9-bbea", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "3c89-a6bc-dd8d-2c80", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "3c89-a6bc-dd8d-2c80", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "354b-313f-3382-31d1", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -68205,7 +68225,7 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "d0a1-ed81-f612-ad79", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "6121-4cd2-c87f-b328", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "6121-4cd2-c87f-b328", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "8cdb-fc2b-740a-4dfd", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -68603,7 +68623,7 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "75b6-5a94-f526-8060", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "94d0-ca34-5d42-400b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "94d0-ca34-5d42-400b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "8b28-a722-2a3d-0703", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -69294,7 +69314,7 @@
         "infoLinks": [
           {"name": "Psychic Hood", "id": "5527-3fd1-72d-bacf", "hidden": false, "targetId": "116b-b23c-4ea4-30ed", "type": "profile"},
           {"name": "Leader", "id": "c974-94ef-4ad3-d11", "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "cfd-7de0-998e-c737", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "cfd-7de0-998e-c737", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -69665,7 +69685,7 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6+2"}]
           },
-          {"name": "Oath of Moment", "id": "afe1-a874-4251-8111", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "afe1-a874-4251-8111", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "1607-bc92-c599-4e05", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -70454,7 +70474,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "bb81-2d2d-7c2e-afef", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "bb81-2d2d-7c2e-afef", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Deep Strike", "id": "eee7-1284-e966-2e5", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
           {"name": "Templar Vows", "id": "52b5-6d46-c429-9d4c", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
@@ -71120,7 +71140,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "fb75-80ba-871f-155d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "fb75-80ba-871f-155d", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "645d-da72-da41-40a9", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -72346,7 +72366,7 @@
         "import": true,
         "type": "upgrade",
         "categoryLinks": [{"name": "Ranged Weapon", "id": "ad94-6ae9-8a79-1c68", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"}],
-        "infoLinks": [{"name": "Pistol", "id": "42a2-d5a3-c0e7-b951", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}],
+        "infoLinks": [{"name": "Close-quarters", "id": "42a2-d5a3-c0e7-b951", "hidden": false, "targetId": "5238-5ad4-52f7-6eb4", "type": "rule"}],
         "profiles": [
           {
             "name": "Heavy Bolt Pistol",
@@ -72358,10 +72378,10 @@
               {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Close-quarters", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -72985,7 +73005,7 @@
         ],
         "infoLinks": [
           {"name": "Hazardous", "id": "4235-6cbb-c79a-f745", "hidden": false, "targetId": "8367-374c-f87-c627", "type": "rule"},
-          {"name": "Pistol", "id": "9229-786a-f607-1cc2", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}
+          {"name": "Close-quarters", "id": "9229-786a-f607-1cc2", "hidden": false, "targetId": "5238-5ad4-52f7-6eb4", "type": "rule"}
         ],
         "profiles": [
           {
@@ -73001,7 +73021,7 @@
               {"name": "S", "$text": "8", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Hazardous, Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Hazardous, Close-quarters", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           },
           {
@@ -73017,7 +73037,7 @@
               {"name": "S", "$text": "7", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Close-quarters", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -73077,8 +73097,8 @@
               {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
@@ -73673,7 +73693,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "71b1-102e-3350-b16c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "71b1-102e-3350-b16c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Leader", "id": "e212-d77a-b880-3231", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"}
         ],
         "modifiers": [
@@ -74382,7 +74402,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "ebd0-fe1d-9605-72c9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "ebd0-fe1d-9605-72c9", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "0f04-66d4-8d68-54ae", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"},
           {"name": "Leader", "id": "b872-cf63-dc32-3491", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Crucible", "id": "00a4-83bc-52ef-9c68", "hidden": false, "targetId": "5ce6-a3cf-e871-f081", "type": "rule"}
@@ -75396,7 +75416,7 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "c9ff-976f-d0a3-2fd7", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "cfbb-a85e-e61f-968b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "cfbb-a85e-e61f-968b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Crucible", "id": "bd0a-37d7-2669-818d", "hidden": false, "targetId": "5ce6-a3cf-e871-f081", "type": "rule"}
         ],
         "modifierGroups": [
@@ -75795,7 +75815,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "2b99-538f-641b-5e48", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "2b99-538f-641b-5e48", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "f27e-fb55-61c6-2c6d", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"},
           {
             "name": "Deadly Demise",
@@ -76828,10 +76848,10 @@
               {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
               {"name": "A", "$text": "6", "typeId": "2337-daa1-6682-b110"},
               {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
-              {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+              {"name": "S", "$text": "6", "typeId": "ab33-d393-96ce-ccba"},
               {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
               {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
-              {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
+              {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
             ]
           }
         ]
@@ -77333,7 +77353,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Oath of Moment", "id": "35f6-c8e0-7507-0742", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "35f6-c8e0-7507-0742", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "2f16-6e22-a9db-36dd", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"},
           {"name": "Deep Strike", "id": "2964-6345-a09d-c665", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"}
         ],
@@ -77782,7 +77802,7 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "4883-d68a-b802-c1a9", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "a48d-19ea-5299-7049", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "a48d-19ea-5299-7049", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "7701-9eb4-c195-ec5b", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -78189,7 +78209,7 @@
         "infoLinks": [
           {"name": "Litany of Hate", "id": "22f5-bd9f-dd39-f81e", "hidden": false, "targetId": "3b72-1499-de01-95bb", "type": "profile"},
           {"name": "Leader", "id": "e0f4-1014-ba32-0d7a", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Oath of Moment", "id": "2391-d836-6044-bbac", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "2391-d836-6044-bbac", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {"name": "Templar Vows", "id": "d81c-0e13-02a4-a695", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
         ],
         "modifierGroups": [
@@ -78438,6 +78458,463 @@
                   {"id": "0b68-0651-9383-44cf", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                 ],
                 "entryLinks": [{"name": "Weapon Upgrades", "id": "e66c-1912-5bd6-3491", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Astartes Chainsword",
+        "id": "42ef-fbe2-37dd-2d2d",
+        "comment": "A8 WS 2+ SusHit 1",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Melee Weapon", "id": "f7c1-f7b6-026b-9b95", "hidden": false, "primary": false, "targetId": "ccdd-3987-11ed-90cd"}],
+        "infoLinks": [{"name": "Sustained Hits", "id": "0e88-210a-d403-b3a8", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Astartes Chainsword",
+            "id": "e6ea-f4d7-ac69-0368",
+            "hidden": false,
+            "typeId": "8a40-4aaa-c780-9046",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+              {"name": "A", "$text": "8", "typeId": "2337-daa1-6682-b110"},
+              {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
+              {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+              {"name": "AP", "$text": "-1", "typeId": "41a0-1301-112a-e2f2"},
+              {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+              {"name": "Keywords", "$text": "Sustained Hits", "typeId": "893f-9000-ccf7-648e"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Relic Weapon",
+        "id": "8ff2-2f03-1308-dbaf",
+        "comment": "S6",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Melee Weapon", "id": "ca4c-7d9c-03fa-cd16", "hidden": false, "primary": false, "targetId": "ccdd-3987-11ed-90cd"}],
+        "profiles": [
+          {
+            "name": "Relic Weapon",
+            "id": "b96e-2792-7958-b572",
+            "hidden": false,
+            "typeId": "8a40-4aaa-c780-9046",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+              {"name": "A", "$text": "6", "typeId": "2337-daa1-6682-b110"},
+              {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
+              {"name": "S", "$text": "6", "typeId": "ab33-d393-96ce-ccba"},
+              {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
+              {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
+              {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Captain on Bike",
+        "id": "83d3-9dad-4b14-9969",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "associations": [
+          {
+            "name": "Leading",
+            "id": "889b-0b9b-0086-0438",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "includeChildSelections": true,
+            "label": "Led by",
+            "max": 1,
+            "min": 0,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "1402-5be-5df3-cd51",
+                    "childName": "Outrider Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "sortIndex": 3,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "eca9-2e2-b6a6-9de6",
+                    "childName": "Bike Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "sortIndex": 1,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "a40-ff3f-c1ea-fea7",
+                    "childName": "Company Veterans on Bikes [Legends]",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "sortIndex": 2,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "categoryLinks": [
+          {"name": "Character", "id": "e461-c6ba-0791-fea1", "hidden": false, "primary": true, "targetId": "9cfd-1c32-585f-7d5c"},
+          {"name": "Captain", "id": "b4a7-56b6-8264-c483", "hidden": false, "primary": false, "targetId": "2d7f-1892-2fd0-e29c"},
+          {"name": "Imperium", "id": "f721-09e6-d2e6-f6bc", "hidden": false, "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
+          {"name": "Faction: Adeptus Astartes", "id": "bdfe-8f43-f826-6896", "hidden": false, "primary": false, "targetId": "6e7-40c-58d9-e402"},
+          {"name": "Mounted", "id": "1eb3-4326-297b-0c07", "hidden": false, "primary": false, "targetId": "14a0-40c9-2748-ae6e"},
+          {"name": "Explosives", "id": "aa2a-2ddd-ba53-8be7", "hidden": false, "primary": false, "targetId": "e33d-891d-33aa-e9bf"}
+        ],
+        "constraints": [
+          {"id": "cef2-ad05-5c52-ad83", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 6},
+          {"id": "fd79-6f36-8942-4aa5", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "max", "value": 0},
+          {"id": "328f-f702-994a-5721", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
+          {"id": "ac54-a8d4-8122-3fcb", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
+        ],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
+        "entryLinks": [
+          {
+            "name": "Enhancements",
+            "id": "37d1-270a-db3c-fcaf",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 3,
+            "targetId": "9e5d-de4c-c5d1-1d3e",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Warlord",
+            "id": "40bf-ae01-30d2-ab31",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "caa-f869-3cbd-b48e",
+            "type": "selectionEntry"
+          },
+          {
+            "name": "Crusade",
+            "id": "c9fe-db2b-8b20-4736",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "9a99-f13c-a667-e698",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Leader", "id": "f44e-798b-5eb1-ffd1", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
+          {"name": "Strategic Acumen", "id": "fc6a-97aa-3fc8-c4d2", "hidden": false, "targetId": "90c7-c55c-21e2-2232", "type": "profile"},
+          {"name": "Combat Doctrines", "id": "62b4-1eec-c956-9f9b", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {"name": "Templar Vows", "id": "aec8-d2ff-9ed8-36c6", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"},
+          {"name": "Transhuman Strategist", "id": "086c-1cd6-f197-2e65", "hidden": false, "targetId": "c6cc-c38c-dfe6-dbb8", "type": "rule"}
+        ],
+        "modifierGroups": [
+          {
+            "comment": "Crusade modifiers",
+            "type": "and",
+            "modifiers": [
+              {
+                "field": "fd79-6f36-8942-4aa5",
+                "type": "increment",
+                "value": 2,
+                "repeats": [
+                  {
+                    "childId": "d1a5-4297-168b-11cd",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "328f-f702-994a-5721",
+                "type": "increment",
+                "value": 2,
+                "repeats": [
+                  {
+                    "childId": "d1a5-4297-168b-11cd",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "name",
+                "type": "append",
+                "value": "(Battle-ready)",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {"childId": "2dbf-4d49-5d74-85c9", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "atMost", "value": 5},
+                      {
+                        "childId": "cac3-71d1-ea4b-795d",
+                        "field": "forces",
+                        "includeChildForces": true,
+                        "includeChildSelections": true,
+                        "scope": "roster",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "name",
+                "type": "append",
+                "value": "(Blooded)",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {"childId": "2dbf-4d49-5d74-85c9", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "greaterThan", "value": 5},
+                      {"childId": "2dbf-4d49-5d74-85c9", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "atMost", "value": 15}
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "name",
+                "type": "append",
+                "value": "(Battle-hardened)",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {"childId": "2dbf-4d49-5d74-85c9", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "greaterThan", "value": 15},
+                      {"childId": "2dbf-4d49-5d74-85c9", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "atMost", "value": 30}
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "name",
+                "type": "append",
+                "value": "(Heroic)",
+                "conditionGroups": [
+                  {
+                    "type": "and",
+                    "conditions": [
+                      {"childId": "2dbf-4d49-5d74-85c9", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "greaterThan", "value": 30},
+                      {"childId": "2dbf-4d49-5d74-85c9", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "atMost", "value": 50}
+                    ]
+                  }
+                ]
+              },
+              {
+                "field": "name",
+                "type": "append",
+                "value": "(Legendary)",
+                "conditions": [{"childId": "2dbf-4d49-5d74-85c9", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "greaterThan", "value": 50}]
+              },
+              {
+                "field": "cef2-ad05-5c52-ad83",
+                "type": "increment",
+                "value": 1,
+                "conditions": [{"childId": "8dbe-9f09-d44d-07d6", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "d054-655b-73c1-f57a",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "category",
+            "type": "add",
+            "value": "e9c7-1590-1bda-bf7f",
+            "conditions": [
+              {
+                "childId": "470a-6daa-9014-12df",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "scope": "primary-catalogue",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "field": "ac54-a8d4-8122-3fcb",
+            "type": "set",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "d62d-db22-4893-4bc0",
+                "childName": "1. Incursion (1000 Point limit)",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Captain on Bike",
+            "id": "59fe-687e-4a74-ad8a",
+            "hidden": false,
+            "typeId": "c547-1836-d8a-ff4f",
+            "typeName": "Unit",
+            "characteristics": [
+              {"name": "M", "$text": "12\"", "typeId": "e703-ecb6-5ce7-aec1"},
+              {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
+              {"name": "W", "$text": "6", "typeId": "750a-a2ec-90d3-21fe"},
+              {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+              {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
+            ]
+          },
+          {
+            "name": "Into the Fray",
+            "id": "e846-ad59-7cc9-ae07",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [{"name": "Description", "$text": "If this unit made a Charge move this turn, this unit's melee attacks have [Cleave 1]", "typeId": "9b8f-694b-e5e-b573"}]
+          },
+          {
+            "name": "Leader",
+            "id": "3b54-1fdf-f4fd-ab11",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This model can be attached to the following units: BIKE SQUAD, COMPANY VETERANS ON BIKES, OUTRIDER SQUAD",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Wargear",
+            "id": "12c1-59de-bc36-deef",
+            "hidden": false,
+            "sortIndex": 4,
+            "entryLinks": [
+              {
+                "name": "Twin bolt rifle",
+                "id": "d3ad-9e84-dd49-4b4b",
+                "hidden": false,
+                "import": true,
+                "targetId": "3451-a59-ad9d-cc65",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "ce14-ea39-d063-5660", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "d591-513d-a0b3-0d48", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [{"name": "Weapon Upgrades", "id": "7679-b7a6-1647-d122", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Pistol",
+                "id": "1ab4-813b-f03d-87d4",
+                "defaultSelectionEntryId": "b042-b5c2-ee70-768c",
+                "hidden": false,
+                "constraints": [
+                  {"id": "e31d-5243-8fe6-dec8", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "63e5-6d82-d6b5-c577", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {
+                    "name": "Plasma pistol",
+                    "id": "b27b-2810-1c0f-cded",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "72c9-4b92-5aed-2fbe",
+                    "type": "selectionEntry",
+                    "entryLinks": [{"name": "Weapon Upgrades", "id": "fb99-d672-e835-f0a4", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
+                  },
+                  {"name": "Heavy Bolt Pistol", "id": "b042-b5c2-ee70-768c", "hidden": false, "import": true, "targetId": "eca4-d5d2-18a1-01a8", "type": "selectionEntry"}
+                ]
+              },
+              {
+                "name": "Melee",
+                "id": "ae06-b125-4d9f-830e",
+                "defaultSelectionEntryId": "a866-8142-258e-b702",
+                "hidden": false,
+                "constraints": [
+                  {"id": "0b87-62fa-5ac0-6b9f", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "12ac-53c8-2ff1-5a80", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "Thunder Hammer", "id": "5eb4-3d02-70af-a916", "hidden": false, "import": true, "targetId": "62ad-da0b-24f7-fe33", "type": "selectionEntry"},
+                  {
+                    "name": "Master-crafted power weapon",
+                    "id": "a866-8142-258e-b702",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "3728-095b-3418-111b",
+                    "type": "selectionEntry"
+                  }
+                ]
               }
             ]
           }
@@ -107745,17 +108222,6 @@
                 "type": "selectionEntry",
                 "constraints": [{"id": "a9a7-243f-86b0-f56b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "entryLinks": [{"name": "Weapon Upgrades", "id": "6665-0d65-79e3-ec17", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
-              },
-              {
-                "name": "Master-crafted power weapon",
-                "id": "c64b-1038-b702-98c4",
-                "collective": false,
-                "hidden": false,
-                "import": true,
-                "targetId": "3728-095b-3418-111b",
-                "type": "selectionEntry",
-                "constraints": [{"id": "a609-f0cc-e42e-1d8e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
-                "entryLinks": [{"name": "Weapon Upgrades", "id": "49cf-9278-2e65-b99b", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}]
               }
             ],
             "selectionEntries": [
@@ -108171,6 +108637,33 @@
                       {"name": "S", "$text": "6", "typeId": "ab33-d393-96ce-ccba"},
                       {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
                       {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+                      {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Master-crafted Power Weapon",
+                "id": "cb74-e340-c8b1-271b",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "constraints": [{"id": "66b1-c42c-4d2c-53a8", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "entryLinks": [{"name": "Weapon Upgrades", "id": "c9ee-050f-21df-f81e", "hidden": false, "import": true, "targetId": "8cf2-a48c-58d2-cb4e", "type": "selectionEntryGroup"}],
+                "profiles": [
+                  {
+                    "name": "Master-crafted power weapon",
+                    "id": "57de-4d8e-ab01-b662",
+                    "hidden": false,
+                    "typeId": "8a40-4aaa-c780-9046",
+                    "typeName": "Melee Weapons",
+                    "characteristics": [
+                      {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                      {"name": "A", "$text": "6", "typeId": "2337-daa1-6682-b110"},
+                      {"name": "WS", "$text": "2+", "typeId": "95d1-95f-45b4-11d6"},
+                      {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+                      {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
+                      {"name": "D", "$text": "2", "typeId": "3254-9fe6-d824-513e"},
                       {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
                     ]
                   }
