@@ -8,7 +8,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": true,
-    "revision": 3,
+    "revision": 5,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "categoryEntries": [
@@ -76,7 +76,6 @@
       {"name": "Loyal Protector", "id": "16ea-4f5b-d2d1-4d7d", "hidden": false},
       {"name": "Regiment", "id": "c8a1-fef-5569-61c9", "hidden": false},
       {"name": "Death Riders", "id": "4a58-462c-a1ac-238b", "hidden": false},
-      {"name": "Death Rider Squadron Commander", "id": "47c3-78e8-a0d-e376", "hidden": false},
       {"name": "Carnodon", "id": "a134-7ec3-8324-eb06", "hidden": false},
       {"name": "Cyclops Demolition Vehicle", "id": "f783-bc74-48f0-7645", "hidden": false},
       {"name": "Malcador", "id": "fe6d-46db-c226-e998", "hidden": false},
@@ -3578,7 +3577,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 20,
+            "value": 30,
             "conditionGroups": [
               {
                 "type": "and",
@@ -3590,7 +3589,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {"childId": "bf53-4ab3-ff75-9aa0", "childName": "Basilisk", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
@@ -4028,7 +4027,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 15,
+            "value": 30,
             "conditionGroups": [
               {
                 "type": "and",
@@ -4040,7 +4039,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {"childId": "37ad-63e5-1786-87cf", "childName": "Bullgryn Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
@@ -4821,6 +4820,16 @@
             "id": "c9e1-29ec-15de-d21f",
             "childId": "16ea-4f5b-d2d1-4d7d",
             "childName": "Loyal Protector",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "9d5e-709a-263f-59fd",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
             "field": "associations",
             "scope": "self",
             "shared": true,
@@ -9696,7 +9705,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 10,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -9708,7 +9717,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {"childId": "e19f-b9b8-75d5-8520", "childName": "Deathstrike", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
@@ -10613,7 +10622,7 @@
                 "type": "model",
                 "constraints": [{"id": "2ac4-3fc4-08ca-c7e4", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
                 "costs": [
-                  {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 10},
+                  {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0},
                   {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
                   {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
                   {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -10684,6 +10693,18 @@
                     "constraints": [
                       {"id": "efd2-c6ef-cd98-dc34", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
                       {"id": "66d5-029e-858c-4a34", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "costs": [
+                      {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 10},
+                      {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+                      {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+                      {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+                      {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+                      {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+                      {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+                      {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+                      {"name": "Logistics Points", "typeId": "04b1-67f7-48cb-4f1f", "value": 0},
+                      {"name": "Commendation Points", "typeId": "e969-59de-fdb7-7c4e", "value": 0}
                     ],
                     "entryLinks": [
                       {"name": "Weapon Modifications", "id": "2ee0-3a31-3739-f57c", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
@@ -12386,11 +12407,16 @@
           {"id": "3469-a8f0-6bb6-d7db", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 125},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 115},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0}
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Logistics Points", "typeId": "04b1-67f7-48cb-4f1f", "value": 0},
+          {"name": "Commendation Points", "typeId": "e969-59de-fdb7-7c4e", "value": 0}
         ],
         "entryLinks": [
           {
@@ -16649,12 +16675,14 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 130},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 120},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
           {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
           {"name": "Logistics Points", "typeId": "04b1-67f7-48cb-4f1f", "value": 0},
           {"name": "Commendation Points", "typeId": "e969-59de-fdb7-7c4e", "value": 0}
         ],
@@ -17050,7 +17078,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 20,
+            "value": 30,
             "conditionGroups": [
               {
                 "type": "and",
@@ -17062,7 +17090,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {"childId": "41be-48c9-5476-f47a", "childName": "Manticore", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
@@ -17234,6 +17262,16 @@
             "id": "3e8d-cce7-40d3-84d0",
             "childId": "16ea-4f5b-d2d1-4d7d",
             "childName": "Loyal Protector",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "31fa-c6e2-7f31-7ef3",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
             "field": "associations",
             "scope": "self",
             "shared": true,
@@ -20357,6 +20395,27 @@
         "hidden": false,
         "import": true,
         "type": "unit",
+        "associations": [
+          {
+            "name": "Attached",
+            "id": "361b-aa80-387d-c1e2",
+            "action": "group",
+            "childId": "unit",
+            "childName": "unit",
+            "defaultSelectionEntryId": "none",
+            "includeChildSelections": true,
+            "label": "Supported by",
+            "max": 1,
+            "min": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [{"childId": "4100-95dc-a489-ffbc", "childName": "Command Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}]
+              }
+            ]
+          }
+        ],
         "categoryLinks": [
           {"name": "Regimental Attachés", "id": "d698-e594-2770-151d", "primary": false, "targetId": "851a-3b34-594-a715"},
           {"name": "Faction: Astra Militarum", "id": "2839-a93f-10fc-83e3", "primary": false, "targetId": "fa45-57e-930e-602b"},
@@ -20379,30 +20438,6 @@
             "sortIndex": 1,
             "targetId": "56e1-e9a8-6946-0518",
             "type": "selectionEntryGroup"
-          }
-        ],
-        "infoGroups": [
-          {
-            "name": "Artillery Commander",
-            "id": "10d4-d1eb-5d9a-f0d1",
-            "hidden": false,
-            "infoLinks": [{"name": "Sustained Hits", "id": "c873-c694-778e-43f0", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Artillery Commander",
-                "id": "f676-2509-3424-99fd",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [
-                  {
-                    "name": "Description",
-                    "$text": "At the start of your Shooting phase, select one enemy unit within 30\" of and visible to this unit’s Master of Ordnance model that has not already been selected for this ability this phase. Until the end of the phase, Blast weapons equipped by friendly **^^Astra Militarum Artillery^^** models have the **[SUSTAINED HITS 1]** ability when targeting that unit",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ]
-              }
-            ]
           }
         ],
         "modifierGroups": [
@@ -20611,7 +20646,21 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "At the start of the Declare Battle Formations step, this unit must join one **^^Command Squad^^** unit from your army (a **^^Command Squad^^** unit cannot have more than one **^^Regimental Attaché^^** unit joined to it). For the rest of the battle, every model in this unit counts as part of that **^^Command Squad^^** unit, and its Starting Strength is increased accordingly. If it is not possible to join a **^^Regimental Attaché^^** unit to a **^^Command Squad^^** in this way, it does not take part in the battle and counts as having been destroyed.\n\n\nWhile this unit is joined to a unit, it can embark within any **^^Transport^^** that unit can embark within.",
+                "$text": "At the start of the Declare Battle Formations step, this unit must join one **^^Command Squad^^** unit from your army (a **^^Command Squad^^** unit cannot have more than one **^^Regimental Attaché^^** unit joined to it). For the rest of the battle, every model in this unit counts as part of that **^^Command Squad^^** unit, and its Starting Strength is increased accordingly. If it is not possible to join a **^^Regimental Attaché^^** unit to a **^^Command Squad^^** in this way, it does not take part in the battle and counts as having been destroyed.\n\nWhile this unit is joined to a unit, it can embark within any **^^Transport^^** that unit can embark within.",
+                "typeId": "9b8f-694b-e5e-b573"
+              }
+            ]
+          },
+          {
+            "name": "Artillery Commander",
+            "id": "f676-2509-3424-99fd",
+            "hidden": false,
+            "typeId": "9cc3-6d83-4dd3-9b64",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "At the start of your Shooting phase, select one enemy unit within 30\" of and visible to this unit’s Master of Ordnance model that has not already been selected for this ability this phase. Until the end of the phase, Blast weapons equipped by friendly **^^Astra Militarum Artillery^^** models have the **[SUSTAINED HITS 1]** ability when targeting that unit",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -27725,7 +27774,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 20,
+            "value": 30,
             "conditionGroups": [
               {
                 "type": "and",
@@ -27737,7 +27786,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {"childId": "d11b-c49d-41bf-1f36", "childName": "Wyvern", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
@@ -30522,6 +30571,58 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "4f83-8601-214c-6404",
+            "type": "increment",
+            "value": 1,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "conditionGroups": [
+                  {
+                    "type": "or",
+                    "conditions": [
+                      {
+                        "childId": "88b5-d7eb-4d3f-019f",
+                        "childName": "Lord Marshal Dreir",
+                        "field": "associations",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "scope": "self",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      },
+                      {
+                        "childId": "f62-183e-d4f7-4d98",
+                        "childName": "Lord Solar Leontus",
+                        "field": "associations",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "scope": "self",
+                        "shared": true,
+                        "type": "atLeast",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "conditions": [
+                  {
+                    "childId": "c9e9-9c67-6420-6ecc",
+                    "childName": "Death Rider Commissar",
+                    "field": "associations",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
@@ -49229,8 +49330,7 @@
           {"name": "Squadron", "id": "f4b5-1a94-f019-18c1", "primary": false, "targetId": "4780-be29-8c52-1d20"},
           {"name": "Smoke", "id": "65fb-9af4-8bda-c04b", "primary": false, "targetId": "6df-937-16bc-8c1a"},
           {"name": "Sentinel Powerlifter", "id": "ae4-8d1d-5303-676b", "primary": false, "targetId": "e78-7bc6-3dc5-8e37"},
-          {"name": "Faction: Astra Militarum", "id": "7313-e41-6110-37a9", "primary": false, "targetId": "fa45-57e-930e-602b"},
-          {"name": "Frame", "id": "d380-b196-6b23-9430", "hidden": false, "primary": false, "targetId": "b927-8eeb-7cc3-8dec"}
+          {"name": "Faction: Astra Militarum", "id": "7313-e41-6110-37a9", "primary": false, "targetId": "fa45-57e-930e-602b"}
         ],
         "constraints": [
           {"id": "fba8-d23e-ba1a-6bee", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 3},
@@ -55557,6 +55657,16 @@
             "shared": true,
             "type": "max",
             "value": 1
+          },
+          {
+            "id": "65e9-248d-0562-d2eb",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
           }
         ],
         "costs": [
@@ -56505,7 +56615,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -56757,6 +56867,16 @@
             "id": "cee9-1b4c-63cc-9399",
             "childId": "16ea-4f5b-d2d1-4d7d",
             "childName": "Loyal Protector",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "c138-1a05-0363-94d8",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
             "field": "associations",
             "scope": "self",
             "shared": true,
@@ -60606,7 +60726,7 @@
                 "type": "model",
                 "constraints": [{"id": "1e8a-ff7a-8904-ddfc", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 3}],
                 "costs": [
-                  {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 5},
+                  {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0},
                   {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
                   {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
                   {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -60656,6 +60776,18 @@
                     "constraints": [
                       {"id": "8bcd-93a1-66a5-b352", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
                       {"id": "df2c-6bde-a407-a41b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "costs": [
+                      {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 5},
+                      {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+                      {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+                      {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+                      {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+                      {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+                      {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+                      {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+                      {"name": "Logistics Points", "typeId": "04b1-67f7-48cb-4f1f", "value": 0},
+                      {"name": "Commendation Points", "typeId": "e969-59de-fdb7-7c4e", "value": 0}
                     ],
                     "infoLinks": [
                       {"name": "Ignores Cover", "id": "36f9-9c11-138e-2b44", "hidden": false, "targetId": "4640-43e7-30b-215a", "type": "rule"},
@@ -61778,6 +61910,16 @@
             "id": "4d6b-d5e2-b82d-d7dc",
             "childId": "16ea-4f5b-d2d1-4d7d",
             "childName": "Loyal Protector",
+            "field": "associations",
+            "scope": "self",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "d0d2-0171-1069-1861",
+            "childId": "851a-3b34-594-a715",
+            "childName": "Regimental Attachés",
             "field": "associations",
             "scope": "self",
             "shared": true,
@@ -64186,7 +64328,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 120},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 110},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -64514,7 +64656,8 @@
           {"name": "Vehicle", "id": "7356-b561-0546-625b", "hidden": false, "primary": false, "targetId": "dbd4-63-af05-998"},
           {"name": "Squadron", "id": "5268-628a-8b7b-5f21", "hidden": false, "primary": false, "targetId": "4780-be29-8c52-1d20"},
           {"name": "Commissar Graves", "id": "9540-aec9-b62d-059f", "hidden": false, "primary": false, "targetId": "b207-2651-7723-66ef"},
-          {"name": "Character", "id": "2503-8bf3-68f4-4dcc", "hidden": false, "primary": false, "targetId": "9cfd-1c32-585f-7d5c"}
+          {"name": "Character", "id": "2503-8bf3-68f4-4dcc", "hidden": false, "primary": false, "targetId": "9cfd-1c32-585f-7d5c"},
+          {"name": "Frame", "id": "0a07-6e7c-b83e-881d", "hidden": false, "primary": false, "targetId": "b927-8eeb-7cc3-8dec"}
         ],
         "constraints": [
           {
@@ -64907,7 +65050,8 @@
           {"name": "Commissar Graves", "id": "5d14-facc-b022-dcfe", "hidden": false, "primary": false, "targetId": "b207-2651-7723-66ef"},
           {"name": "Character", "id": "7471-b8ef-dd84-6421", "hidden": false, "primary": false, "targetId": "9cfd-1c32-585f-7d5c"},
           {"name": "Infantry", "id": "3872-6880-372b-1cd0", "hidden": false, "primary": false, "targetId": "cf47-a0d7-7207-29dc"},
-          {"name": "Leader", "id": "70fa-94c1-79c1-e1ef", "hidden": false, "primary": false, "targetId": "1556-9b56-fba6-4370"}
+          {"name": "Leader", "id": "70fa-94c1-79c1-e1ef", "hidden": false, "primary": false, "targetId": "1556-9b56-fba6-4370"},
+          {"name": "Officer", "id": "0c60-09b5-8b42-2c89", "hidden": false, "primary": false, "targetId": "e4d8-c6a1-7c23-ae25"}
         ],
         "constraints": [
           {
@@ -65167,7 +65311,8 @@
           {"name": "Vehicle", "id": "b7ef-7720-2cfa-03b9", "primary": true, "targetId": "dbd4-63-af05-998"},
           {"name": "Squadron", "id": "d277-ea7e-cb69-3e12", "primary": false, "targetId": "4780-be29-8c52-1d20"},
           {"name": "Smoke", "id": "3dd1-1397-a3f1-279c", "hidden": false, "primary": false, "targetId": "6df-937-16bc-8c1a"},
-          {"name": "Hippogriff AFV", "id": "0b66-6f0c-2a22-a111", "hidden": false, "primary": false, "targetId": "c849-8bc8-df52-bb5c"}
+          {"name": "Hippogriff AFV", "id": "0b66-6f0c-2a22-a111", "hidden": false, "primary": false, "targetId": "c849-8bc8-df52-bb5c"},
+          {"name": "Frame", "id": "1fa7-d5b5-1106-655b", "hidden": false, "primary": false, "targetId": "b927-8eeb-7cc3-8dec"}
         ],
         "constraints": [
           {"id": "e65f-af9a-3a6f-c37a", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 3},
@@ -65718,7 +65863,8 @@
           {"name": "Vehicle", "id": "877f-592f-6e59-6547", "primary": false, "targetId": "dbd4-63-af05-998"},
           {"name": "Centaur RSV", "id": "6999-e231-ced7-98f8", "hidden": false, "primary": false, "targetId": "182e-9752-56ae-cd7d"},
           {"name": "Dedicated Transport", "id": "63d9-f733-0ff3-fafc", "hidden": false, "primary": true, "targetId": "ba07-411c-2832-1f79"},
-          {"name": "Transport", "id": "e237-c203-f845-c1f6", "hidden": false, "primary": false, "targetId": "75e8-57c4-40e3-1817"}
+          {"name": "Transport", "id": "e237-c203-f845-c1f6", "hidden": false, "primary": false, "targetId": "75e8-57c4-40e3-1817"},
+          {"name": "Frame", "id": "8421-5049-dcb3-aa56", "hidden": false, "primary": false, "targetId": "b927-8eeb-7cc3-8dec"}
         ],
         "constraints": [
           {"id": "2496-29b2-80b7-6a84", "field": "75bb-ded1-c86d-bdf0", "includeChildSelections": false, "scope": "self", "shared": true, "type": "max", "value": 3},
@@ -67650,7 +67796,8 @@
             "categoryLinks": [
               {"name": "Abhuman", "id": "bc58-b9f3-783b-3c22", "hidden": false, "primary": false, "targetId": "7873-27c9-fb42-f020"},
               {"name": "Priority Assets", "id": "d729-3786-9b50-ac0e", "hidden": false, "primary": false, "targetId": "0936-9767-1cc7-52ae"},
-              {"name": "3DP Detachment", "id": "9250-7f0e-30d0-ff4e", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"}
+              {"name": "3DP Detachment", "id": "9250-7f0e-30d0-ff4e", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"},
+              {"name": "Purge the Foe", "id": "02bf-b418-2f71-34ab", "hidden": false, "primary": false, "targetId": "6fe0-3dbe-f7e0-10bb"}
             ],
             "constraints": [{"id": "2a32-32ab-6104-6d56", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "costs": [

@@ -8,7 +8,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": true,
-    "revision": 3,
+    "revision": 5,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "categoryEntries": [
@@ -310,7 +310,7 @@
                 "characteristics": [
                   {
                     "name": "Description",
-                    "$text": "Once per turn, you can target this model with a Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem in the same phase.",
+                    "$text": "Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.",
                     "typeId": "9b8f-694b-e5e-b573"
                   }
                 ]
@@ -2947,12 +2947,14 @@
           {"id": "5ef6-ab39-76e3-8e5b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 375},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 365},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
-          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0}
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
         ],
         "entryLinks": [
           {"name": "Warlord", "id": "c837-d47d-916-f209", "import": true, "sortIndex": 2, "targetId": "ad65-d3cb-c677-7cb3", "type": "selectionEntry"},
@@ -3766,7 +3768,7 @@
                     "import": true,
                     "type": "upgrade",
                     "costs": [
-                      {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 15},
+                      {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0},
                       {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
                       {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
                       {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -3818,6 +3820,7 @@
                           {"id": "3aeb-ac3e-f688-af6c", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
                           {"id": "179-7318-9a76-548b", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                         ],
+                        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 15}],
                         "selectionEntryGroups": [
                           {
                             "name": "Weapon Upgrades",
@@ -4881,7 +4884,7 @@
           {"id": "fd9a-73b5-1bba-d62f", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 400},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 390},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -8234,11 +8237,14 @@
           {"id": "564d-a989-de18-8505", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 405},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 420},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0}
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
         ],
         "entryLinks": [
           {"name": "Warlord", "id": "ddee-b14f-2f5f-b710", "hidden": false, "import": true, "sortIndex": 2, "targetId": "ad65-d3cb-c677-7cb3", "type": "selectionEntry"},
@@ -10884,7 +10890,7 @@
           {"id": "1462-a692-2849-bb09", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 400},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 385},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -14476,7 +14482,8 @@
             "type": "upgrade",
             "categoryLinks": [
               {"name": "Take and Hold", "id": "6221-8ed1-073d-aecd", "hidden": false, "primary": false, "targetId": "1cc1-f11a-4e8f-1bcc"},
-              {"name": "3DP Detachment", "id": "b89e-f2f8-0728-6bcd", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"}
+              {"name": "3DP Detachment", "id": "b89e-f2f8-0728-6bcd", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"},
+              {"name": "Reconnaissance", "id": "58e0-fc1f-8b83-727d", "hidden": false, "primary": false, "targetId": "b4a7-5083-fe94-4d24"}
             ],
             "constraints": [{"id": "60bd-ad2c-4941-430b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "costs": [
@@ -14541,7 +14548,8 @@
             "type": "upgrade",
             "categoryLinks": [
               {"name": "Priority Assets", "id": "2666-1c59-e778-55e5", "hidden": false, "primary": false, "targetId": "0936-9767-1cc7-52ae"},
-              {"name": "3DP Detachment", "id": "6bae-5df3-706b-eed3", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"}
+              {"name": "3DP Detachment", "id": "6bae-5df3-706b-eed3", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"},
+              {"name": "Purge the Foe", "id": "2af6-8f9b-2867-b3d0", "hidden": false, "primary": false, "targetId": "6fe0-3dbe-f7e0-10bb"}
             ],
             "constraints": [{"id": "53a2-b41c-fc7b-6d5a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "costs": [
