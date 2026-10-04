@@ -260,7 +260,32 @@
       {"name": "Deathwatch Terminator Squad", "id": "8311-8645-4ce3-8b3", "hidden": false},
       {"name": "Spectrus Kill Team", "id": "2de5-9b49-eb99-3e9f", "comment": "Deathwatch", "hidden": false},
       {"name": "Fortis Kill Team", "id": "a2bb-b582-9f57-27f5", "hidden": false},
-      {"name": "Champion", "id": "fb41-1527-1bfb-f1ab", "hidden": false}
+      {"name": "Champion", "id": "fb41-1527-1bfb-f1ab", "hidden": false},
+      {
+        "name": "Wolf Scouts",
+        "id": "be72-390b-33b7-d52d",
+        "hidden": false,
+        "constraints": [{"id": "4a6d-83bb-649d-b6a4", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}],
+        "modifiers": [
+          {
+            "field": "4a6d-83bb-649d-b6a4",
+            "type": "set",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "d62d-db22-4893-4bc0",
+                "childName": "1. Incursion (1000 Point limit)",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
     ],
     "costTypes": [
       {
@@ -6329,6 +6354,15 @@
                     "shared": true,
                     "type": "instanceOf",
                     "value": 1
+                  },
+                  {
+                    "childId": "7827-d81d-4360-441d",
+                    "childName": "Eradicator Squad with Heavy Bolters",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
                   }
                 ]
               }
@@ -6351,7 +6385,19 @@
           {"id": "8a40-5762-d5cf-f3c3", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
           {"id": "8a75-0857-da11-3773", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 80}, {"name": "pl", "typeId": "c5fb-5b9b-89f6-86c", "value": 0}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0},
+          {"name": "pl", "typeId": "c5fb-5b9b-89f6-86c", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Warlord",
@@ -6561,7 +6607,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n\n■ AGGRESSOR SQUAD\n■ ERADICATOR SQUAD\n■ HEAVY INTERCESSOR SQUAD\n■ INDOMITOR KILL TEAM",
+                "$text": "This model can be attached to the following units:\nAGGRESSOR SQUAD, ERADICATOR SQUAD WITH HEAVY BOLTERS, ERADICATOR SQUAD WITH MELTA RIFLES, HEAVY INTERCESSOR SQUAD, INDOMITOR KILL TEAM",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -7198,7 +7244,8 @@
                     "shared": true,
                     "type": "instanceOf",
                     "value": 1
-                  }
+                  },
+                  {"childId": "be72-390b-33b7-d52d", "childName": "Wolf Scouts", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
                 ]
               }
             ]
@@ -7221,11 +7268,16 @@
           {"id": "b05d-979f-603d-a839", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0}
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -7430,7 +7482,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n\n■ ELIMINATOR SQUAD\n■ INCURSOR SQUAD\n■ INFILTRATOR SQUAD\n■ REIVER SQUAD\n■ SCOUT SQUAD\n■ SPECTRUS KILL TEAM",
+                "$text": "This model can be attached to the following units:\nELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SCOUT SQUAD, SPECTRUS KILL TEAM, WOLF SCOUTS",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -7569,40 +7621,6 @@
             "conditionGroups": [
               {
                 "type": "or",
-                "conditionGroups": [
-                  {
-                    "type": "and",
-                    "conditionGroups": [
-                      {
-                        "type": "or",
-                        "conditions": [
-                          {
-                            "childId": "4554-88b1-466c-d9f5",
-                            "childName": "Wolf Guard Terminators",
-                            "field": "selections",
-                            "scope": "self",
-                            "shared": true,
-                            "type": "instanceOf",
-                            "value": 1
-                          }
-                        ]
-                      }
-                    ],
-                    "conditions": [
-                      {
-                        "childId": "b103-51cc-cef2-892b",
-                        "childName": "Grimnar's Mark",
-                        "field": "selections",
-                        "includeChildSelections": true,
-                        "queryFromSelf": true,
-                        "scope": "self",
-                        "shared": true,
-                        "type": "atLeast",
-                        "value": 1
-                      }
-                    ]
-                  }
-                ],
                 "conditions": [
                   {
                     "childId": "8382-2911-b97f-d6d2",
@@ -7652,6 +7670,16 @@
                     "shared": true,
                     "type": "instanceOf",
                     "value": 1
+                  },
+                  {
+                    "childId": "4554-88b1-466c-d9f5",
+                    "childName": "Wolf Guard Terminators",
+                    "comment": "Agents",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
                   }
                 ]
               }
@@ -7674,7 +7702,7 @@
           {"id": "c9f0-9aac-eed6-c7c4", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -8277,12 +8305,16 @@
           {"id": "bf0c-beee-b445-9064", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
-          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0}
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -8939,7 +8971,18 @@
             "value": 1
           }
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 80}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Crusade",
@@ -9086,7 +9129,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 150,
+            "value": 170,
             "conditions": [
               {
                 "id": "9ff8-b14b-f8b3-c6ac",
@@ -9843,7 +9886,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 95},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -9992,7 +10035,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 180,
+            "value": 190,
             "conditions": [
               {
                 "id": "1f3f-9e14-ef04-f38a",
@@ -10038,6 +10081,31 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 10,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {"childId": "5fe6-20de-df8d-8e92", "childName": "Infernus Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -10332,7 +10400,18 @@
             "value": 1
           }
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Crusade",
@@ -10479,7 +10558,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 150,
+            "value": 170,
             "conditions": [
               {
                 "id": "7fb-b246-7f73-7065",
@@ -10849,12 +10928,16 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 115},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
-          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0}
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -10994,7 +11077,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 200,
+            "value": 230,
             "conditions": [
               {
                 "id": "5fc9-3f06-98f9-94b5",
@@ -11435,7 +11518,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 110},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -11585,7 +11668,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 180,
+            "value": 150,
             "conditions": [
               {
                 "id": "e37f-8941-74f4-583b",
@@ -11596,31 +11679,6 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 6
-              }
-            ]
-          },
-          {
-            "field": "51b2-306e-1021-d207",
-            "type": "increment",
-            "value": 10,
-            "conditionGroups": [
-              {
-                "type": "and",
-                "localConditionGroups": [
-                  {
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "scope": "parent",
-                    "type": "atLeast",
-                    "value": 2,
-                    "conditions": [
-                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
-                      {"childId": "70dc-ed18-2788-b35a", "childName": "Infiltrator Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
-                    ]
-                  }
-                ]
               }
             ]
           },
@@ -11957,7 +12015,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -12107,7 +12165,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 150,
+            "value": 151700,
             "conditions": [
               {
                 "id": "e229-7de0-1622-b2ee",
@@ -12451,7 +12509,7 @@
       {
         "name": "Tactical Squad",
         "id": "c09a-6504-d25f-477",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "unit",
         "categoryLinks": [
@@ -14125,31 +14183,6 @@
             "conditions": [{"childId": "f89b-84e0-6e3b-f1e2", "field": "selections", "scope": "primary-catalogue", "shared": true, "type": "instanceOf", "value": 1}]
           },
           {
-            "field": "51b2-306e-1021-d207",
-            "type": "increment",
-            "value": 10,
-            "conditionGroups": [
-              {
-                "type": "and",
-                "localConditionGroups": [
-                  {
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "scope": "parent",
-                    "type": "atLeast",
-                    "value": 2,
-                    "conditions": [
-                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
-                      {"childId": "1117-cda-7f74-196b", "childName": "Scout Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "field": "aaee-f950-e45c-6a50",
             "type": "set",
             "value": 2,
@@ -15230,12 +15263,16 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 80},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
-          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0}
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -15383,7 +15420,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 160,
+            "value": 180,
             "conditions": [
               {
                 "id": "392e-6b9-8a3c-cc35",
@@ -15416,7 +15453,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 10,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -15779,7 +15816,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 105},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 110},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -15937,7 +15974,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 210,
+            "value": 220,
             "conditions": [
               {
                 "id": "c465-ba04-3a7-cc0a",
@@ -15970,7 +16007,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 10,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -17055,11 +17092,16 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 105},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0}
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -17196,7 +17238,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 200,
+            "value": 210,
             "conditions": [
               {
                 "id": "7bc5-7263-a6d7-3bca",
@@ -17266,6 +17308,39 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 15,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {
+                        "childId": "e05e-b4e4-6db0-5d42",
+                        "childName": "Sternguard Veteran Squad",
+                        "field": "selections",
+                        "scope": "self",
+                        "shared": true,
+                        "type": "instanceOf",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -17594,7 +17669,7 @@
           {"id": "0bc9-dede-119a-feee", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -17744,7 +17819,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 150,
+            "value": 165,
             "conditions": [
               {
                 "id": "cb80-e47c-cc3-7976",
@@ -18120,7 +18195,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 80},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -18269,7 +18344,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 165,
+            "value": 180,
             "conditions": [
               {
                 "id": "c997-19f1-338e-a1ad",
@@ -18279,31 +18354,6 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 4
-              }
-            ]
-          },
-          {
-            "field": "51b2-306e-1021-d207",
-            "type": "increment",
-            "value": 10,
-            "conditionGroups": [
-              {
-                "type": "and",
-                "localConditionGroups": [
-                  {
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "scope": "parent",
-                    "type": "atLeast",
-                    "value": 2,
-                    "conditions": [
-                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
-                      {"childId": "129d-2da5-66f3-f4ec", "childName": "Aggressor Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
-                    ]
-                  }
-                ]
               }
             ]
           },
@@ -18797,7 +18847,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 155},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 170},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -18956,7 +19006,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 310,
+            "value": 340,
             "conditions": [
               {
                 "id": "94ce-62b2-5a-8904",
@@ -19025,6 +19075,39 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 40,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {
+                        "childId": "4e0-4cf8-e8b5-726",
+                        "childName": "Terminator Assault Squad",
+                        "field": "selections",
+                        "scope": "self",
+                        "shared": true,
+                        "type": "instanceOf",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -19106,6 +19189,18 @@
                       {"id": "e06a-b514-b26e-16c8", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
                       {"id": "a999-9249-9872-3fe5", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                     ],
+                    "costs": [
+                      {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 5},
+                      {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+                      {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+                      {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+                      {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+                      {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+                      {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+                      {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+                      {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+                      {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+                    ],
                     "profiles": [
                       {
                         "name": "Storm Shield",
@@ -19129,7 +19224,7 @@
                       {"id": "68f8-2221-a11e-8a77-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
                     ],
                     "costs": [
-                      {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 5},
+                      {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0},
                       {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
                       {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
                       {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -19464,7 +19559,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 160},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 190},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -19622,7 +19717,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 320,
+            "value": 380,
             "conditions": [
               {
                 "id": "20bd-62ed-123-c8f9",
@@ -19698,6 +19793,31 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 40,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {"childId": "6179-3533-ba6-9593", "childName": "Terminator Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -20962,7 +21082,7 @@
         ]
       },
       {
-        "name": "Centurion Assault Squad",
+        "name": "Centurion Assault Squad [Legends]",
         "id": "2a8a-522d-51e4-3abc",
         "hidden": false,
         "import": true,
@@ -21145,6 +21265,24 @@
                 "scope": "force",
                 "shared": true,
                 "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "c8b8-8869-00e2-07b6",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
                 "value": 1
               }
             ]
@@ -21420,7 +21558,7 @@
         ]
       },
       {
-        "name": "Centurion Devastator Squad",
+        "name": "Centurion Devastator Squad [Legends]",
         "id": "6ba0-cede-e278-f86b",
         "hidden": false,
         "import": true,
@@ -21721,6 +21859,24 @@
                     "value": 4
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "9a83-f88d-75b4-1bf7",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
               }
             ]
           }
@@ -22146,11 +22302,16 @@
           {"id": "b079-b683-e6bc-eda7", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 125},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 135},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0}
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -22318,6 +22479,39 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 10,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {
+                        "childId": "258e-8a8c-d871-6eac",
+                        "childName": "Invictor Tactical Warsuit",
+                        "field": "selections",
+                        "scope": "self",
+                        "shared": true,
+                        "type": "instanceOf",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -22535,7 +22729,7 @@
         ]
       },
       {
-        "name": "Dreadnought",
+        "name": "Dreadnought [Legends]",
         "id": "d204-13c6-dab1-ecdc",
         "hidden": false,
         "import": true,
@@ -22736,6 +22930,24 @@
                 "scope": "force",
                 "shared": true,
                 "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "387d-37c6-eef7-c9a2",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
                 "value": 1
               }
             ]
@@ -23722,7 +23934,7 @@
           {"id": "afca-6976-8a32-3357", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 195},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 170},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -23905,7 +24117,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 15,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -24469,7 +24681,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 10,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -24729,7 +24941,7 @@
           {"id": "2374-e159-9b0a-00d5", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 150},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 160},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -24904,7 +25116,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 10,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -26867,7 +27079,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 80},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -27016,7 +27228,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 140,
+            "value": 160,
             "conditions": [
               {
                 "id": "eff2-ccdd-9f4d-9f41",
@@ -29360,7 +29572,7 @@
       {
         "name": "Suppressor Squad",
         "id": "97f6-b1f8-c72d-e826",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "unit",
         "categoryLinks": [
@@ -29795,7 +30007,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 125},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 130},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -29954,7 +30166,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 250,
+            "value": 260,
             "conditions": [
               {
                 "id": "3e03-3145-a06d-998f",
@@ -29970,7 +30182,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 15,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -30402,7 +30614,7 @@
           {"id": "8c3c-34ad-70e9-1a79", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 105},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 110},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -30591,39 +30803,6 @@
             ]
           },
           {
-            "field": "51b2-306e-1021-d207",
-            "type": "increment",
-            "value": 10,
-            "conditionGroups": [
-              {
-                "type": "and",
-                "localConditionGroups": [
-                  {
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "scope": "parent",
-                    "type": "atLeast",
-                    "value": 2,
-                    "conditions": [
-                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
-                      {
-                        "childId": "9cb9-9ab5-727f-80e5",
-                        "childName": "Storm Speeder Hailstrike",
-                        "field": "selections",
-                        "scope": "self",
-                        "shared": true,
-                        "type": "instanceOf",
-                        "value": 1
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "field": "8c3c-34ad-70e9-1a79",
             "type": "set",
             "value": 2,
@@ -30634,24 +30813,6 @@
                 "field": "selections",
                 "includeChildSelections": true,
                 "scope": "force",
-                "shared": true,
-                "type": "atLeast",
-                "value": 1
-              }
-            ]
-          },
-          {
-            "field": "category",
-            "type": "add",
-            "value": "966c-5300-a13d-f524",
-            "conditions": [
-              {
-                "childId": "0888-6943-a4db-4826",
-                "childName": "Fulguris Task Force",
-                "field": "selections",
-                "includeChildForces": true,
-                "includeChildSelections": true,
-                "scope": "roster",
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
@@ -30802,12 +30963,14 @@
           {"id": "d2ab-7a17-5a55-fff7", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 135},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 140},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
           {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
           {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
           {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
@@ -30989,39 +31152,6 @@
             ]
           },
           {
-            "field": "51b2-306e-1021-d207",
-            "type": "increment",
-            "value": 10,
-            "conditionGroups": [
-              {
-                "type": "and",
-                "localConditionGroups": [
-                  {
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "scope": "parent",
-                    "type": "atLeast",
-                    "value": 2,
-                    "conditions": [
-                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
-                      {
-                        "childId": "993a-9cbc-8052-e40",
-                        "childName": "Storm Speeder Thunderstrike",
-                        "field": "selections",
-                        "scope": "self",
-                        "shared": true,
-                        "type": "instanceOf",
-                        "value": 1
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "field": "d2ab-7a17-5a55-fff7",
             "type": "set",
             "value": 2,
@@ -31032,24 +31162,6 @@
                 "field": "selections",
                 "includeChildSelections": true,
                 "scope": "force",
-                "shared": true,
-                "type": "atLeast",
-                "value": 1
-              }
-            ]
-          },
-          {
-            "field": "category",
-            "type": "add",
-            "value": "966c-5300-a13d-f524",
-            "conditions": [
-              {
-                "childId": "0888-6943-a4db-4826",
-                "childName": "Fulguris Task Force",
-                "field": "selections",
-                "includeChildForces": true,
-                "includeChildSelections": true,
-                "scope": "roster",
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
@@ -31434,39 +31546,6 @@
             ]
           },
           {
-            "field": "51b2-306e-1021-d207",
-            "type": "increment",
-            "value": 10,
-            "conditionGroups": [
-              {
-                "type": "and",
-                "localConditionGroups": [
-                  {
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "repeats": 1,
-                    "scope": "parent",
-                    "type": "atLeast",
-                    "value": 2,
-                    "conditions": [
-                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
-                      {
-                        "childId": "9489-445c-f950-7292",
-                        "childName": "Storm Speeder Hammerstrike",
-                        "field": "selections",
-                        "scope": "self",
-                        "shared": true,
-                        "type": "instanceOf",
-                        "value": 1
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "field": "6dc8-d053-88ad-3d7c",
             "type": "set",
             "value": 2,
@@ -31477,24 +31556,6 @@
                 "field": "selections",
                 "includeChildSelections": true,
                 "scope": "force",
-                "shared": true,
-                "type": "atLeast",
-                "value": 1
-              }
-            ]
-          },
-          {
-            "field": "category",
-            "type": "add",
-            "value": "966c-5300-a13d-f524",
-            "conditions": [
-              {
-                "childId": "0888-6943-a4db-4826",
-                "childName": "Fulguris Task Force",
-                "field": "selections",
-                "includeChildForces": true,
-                "includeChildSelections": true,
-                "scope": "roster",
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
@@ -32463,12 +32524,16 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 110},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 115},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
-          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0}
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -32694,7 +32759,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 220,
+            "value": 230,
             "conditions": [
               {
                 "id": "2a0a-7fab-4f4-a4a5",
@@ -32722,6 +32787,31 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 15,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {"childId": "34d3-f5b3-ca63-4597", "childName": "Hellblaster Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -33018,7 +33108,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -33533,12 +33623,14 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
           {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
           {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
           {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
@@ -33680,7 +33772,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 180,
+            "value": 200,
             "conditions": [
               {
                 "id": "50cb-11a-d6a5-47d1",
@@ -33697,7 +33789,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 10,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -34033,7 +34125,7 @@
       {
         "name": "Devastator Squad",
         "id": "3f4c-1e67-66dc-ffa5",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "unit",
         "categoryLinks": [
@@ -34742,7 +34834,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 180},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 140},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -34891,7 +34983,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 30,
+            "value": 10,
             "conditionGroups": [
               {
                 "type": "and",
@@ -34903,7 +34995,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 1,
+                    "value": 2,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {"childId": "a3ea-7a0d-fef8-23bf", "childName": "Desolation Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
@@ -35195,6 +35287,7 @@
                         "import": true,
                         "targetId": "7d58-3576-d40e-b858",
                         "type": "selectionEntry",
+                        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 5}],
                         "entryLinks": [
                           {"name": "Weapon Modifications", "id": "bcd2-0cc5-7bef-eb00", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
                         ]
@@ -36101,7 +36194,18 @@
                   {"id": "568f-df75-441c-3f5e", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
                   {"id": "9df-f664-f1c0-431e", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}
                 ],
-                "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75}],
+                "costs": [
+                  {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 80},
+                  {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+                  {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+                  {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+                  {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+                  {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+                  {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+                  {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+                  {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+                  {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+                ],
                 "entryLinks": [
                   {
                     "name": "Totemic Presence upgrade",
@@ -37007,7 +37111,7 @@
         ]
       },
       {
-        "name": "Whirlwind",
+        "name": "Whirlwind [Legends]",
         "id": "ae85-3e33-217d-7413",
         "hidden": false,
         "import": true,
@@ -37266,6 +37370,24 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "da67-c464-f40e-c552",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
           }
         ],
         "profiles": [
@@ -37389,7 +37511,7 @@
         ]
       },
       {
-        "name": "Predator Destructor",
+        "name": "Predator Destructor [Legends]",
         "id": "d4c8-dd6a-cd7a-ccc3",
         "hidden": false,
         "import": true,
@@ -37644,6 +37766,24 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "6eeb-ec18-05e6-8f72",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
           }
         ],
         "profiles": [
@@ -37822,7 +37962,7 @@
         ]
       },
       {
-        "name": "Predator Annihilator",
+        "name": "Predator Annihilator [Legends]",
         "id": "31a-6c3e-5843-4023",
         "hidden": false,
         "import": true,
@@ -38074,6 +38214,24 @@
                 "scope": "force",
                 "shared": true,
                 "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "eeeb-53e4-4a61-0014",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
                 "value": 1
               }
             ]
@@ -38487,7 +38645,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 10,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -38679,7 +38837,18 @@
           {"id": "bd75-1da0-3ebf-9287", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
           {"id": "62fc-f1d7-7580-7995", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 160}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 165},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Crusade",
@@ -38876,7 +39045,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 10,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -39064,12 +39233,14 @@
           {"id": "9b88-7dac-44b8-47aa", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 150},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 165},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
           {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
           {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
           {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
@@ -39269,7 +39440,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 10,
+            "value": 20,
             "conditionGroups": [
               {
                 "type": "and",
@@ -39425,7 +39596,7 @@
         ]
       },
       {
-        "name": "Vindicator",
+        "name": "Vindicator [Legends]",
         "id": "cb6d-201f-4888-3027",
         "hidden": false,
         "import": true,
@@ -39680,6 +39851,24 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "db6a-96aa-d490-3ba6",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
           }
         ],
         "profiles": [
@@ -39822,12 +40011,14 @@
           {"id": "c661-a742-415d-5d83", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 220},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 245},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
           {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
           {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
           {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
@@ -40071,7 +40262,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 2,
+                    "value": 1,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {"childId": "8cca-9318-3bec-d360", "childName": "Land Raider", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
@@ -40273,7 +40464,18 @@
           {"id": "164a-7811-366d-efc5", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
           {"id": "3bf8-e13f-aa70-e10f", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 220}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 230},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Crusade",
@@ -40519,7 +40721,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 2,
+                    "value": 1,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {
@@ -40734,7 +40936,7 @@
           {"id": "193a-78ee-5d4d-dd09", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 260},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 245},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -40985,7 +41187,7 @@
                     "repeats": 1,
                     "scope": "parent",
                     "type": "atLeast",
-                    "value": 2,
+                    "value": 1,
                     "conditions": [
                       {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
                       {
@@ -41219,7 +41421,7 @@
           {"id": "8100-9eaa-2e38-3de5", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 170},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 190},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -41587,7 +41789,7 @@
                 ]
               },
               {
-                "name": "Repulsor Defensive Array",
+                "name": "Defensive Array",
                 "id": "e929-cfc5-fa12-482e",
                 "hidden": false,
                 "import": true,
@@ -41739,7 +41941,7 @@
           {"id": "af18-23a4-2b0b-3ef2", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 255},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 260},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -42299,7 +42501,7 @@
           {"id": "39c3-82ac-b5ce-3a83", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 6}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 65},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -42648,7 +42850,7 @@
         ]
       },
       {
-        "name": "Razorback",
+        "name": "Razorback [Legends]",
         "id": "ed11-25b9-a0eb-89f4",
         "hidden": false,
         "import": true,
@@ -42907,6 +43109,24 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "622b-bb4b-3f6d-8a7d",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
               }
             ]
           }
@@ -43446,6 +43666,18 @@
                     "hidden": false,
                     "import": true,
                     "type": "upgrade",
+                    "costs": [
+                      {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 10},
+                      {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+                      {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+                      {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+                      {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+                      {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+                      {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+                      {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+                      {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+                      {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+                    ],
                     "infoLinks": [{"name": "Scouts 6\"", "id": "dcda-e0f3-0c47-815c", "hidden": false, "targetId": "08fb-4cb5-36fb-d638", "type": "rule"}],
                     "profiles": [
                       {
@@ -44188,7 +44420,7 @@
         ]
       },
       {
-        "name": "Stormhawk Interceptor",
+        "name": "Stormhawk Interceptor [Legends]",
         "id": "3d99-47aa-8cf3-883f",
         "hidden": false,
         "import": true,
@@ -44390,6 +44622,24 @@
                 "scope": "force",
                 "shared": true,
                 "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "cb56-37e5-7403-8086",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
                 "value": 1
               }
             ]
@@ -44598,7 +44848,7 @@
         ]
       },
       {
-        "name": "Stormtalon Gunship",
+        "name": "Stormtalon Gunship [Legends]",
         "id": "1bb6-878e-7af1-5bdb",
         "hidden": false,
         "import": true,
@@ -44802,6 +45052,24 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "295b-1f8e-36fe-8e11",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
+                "value": 1
+              }
+            ]
           }
         ],
         "profiles": [
@@ -44960,7 +45228,7 @@
         ]
       },
       {
-        "name": "Stormraven Gunship",
+        "name": "Stormraven Gunship [Legends]",
         "id": "469b-3370-30f3-473a",
         "hidden": false,
         "import": true,
@@ -45188,6 +45456,24 @@
                 "scope": "force",
                 "shared": true,
                 "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "7ffd-1994-805d-41ea",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
                 "value": 1
               }
             ]
@@ -45462,7 +45748,7 @@
         ]
       },
       {
-        "name": "Hammerfall Bunker",
+        "name": "Hammerfall Bunker [Legends]",
         "id": "5882-9143-e7c5-ac11",
         "hidden": false,
         "import": true,
@@ -45503,6 +45789,24 @@
                 "scope": "force",
                 "shared": true,
                 "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "id": "bb7b-f191-01a6-8886",
+                "childId": "9ed-cbf4-bfe5-90bf",
+                "field": "selections",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "scope": "roster",
+                "shared": true,
+                "type": "lessThan",
                 "value": 1
               }
             ]
@@ -46512,7 +46816,8 @@
                     "sortIndex": 10,
                     "type": "instanceOf",
                     "value": 1
-                  }
+                  },
+                  {"childId": "f014-c078-e513-cc1b", "childName": "Desolation Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
                 ]
               }
             ]
@@ -46535,7 +46840,7 @@
           {"id": "a077-2640-858e-4f3d", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 45},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 50},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -46788,7 +47093,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, COMMAND SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD\n",
+                "$text": "This model can be attached to the following units: \n\nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, VANGUARD VETERAN SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -47462,7 +47767,9 @@
                     "shared": true,
                     "type": "instanceOf",
                     "value": 1
-                  }
+                  },
+                  {"childId": "ad98-e844-f9ec-7551", "childName": "Eliminator Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "be72-390b-33b7-d52d", "childName": "Wolf Scouts", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
                 ]
               }
             ]
@@ -47486,7 +47793,7 @@
           {"id": "23c8-4c1f-d7ac-8d6f", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 45},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 40},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -47722,7 +48029,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n\n■ INCURSOR SQUAD\n■ INFILTRATOR SQUAD\n■ REIVER SQUAD\n■ SPECTRUS KILL TEAM\n\n",
+                "$text": "This model can be attached to the following units:\nELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SPECTRUS KILL TEAM, WOLF SCOUTS",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -48045,7 +48352,7 @@
           {"id": "6bdc-1a55-3eb7-783f", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -48301,7 +48608,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD",
+                "$text": "This model can be attached to the following units: \nASSAULT INTERCESSOR SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -48621,7 +48928,8 @@
                     "shared": true,
                     "type": "instanceOf",
                     "value": 1
-                  }
+                  },
+                  {"childId": "be72-390b-33b7-d52d", "childName": "Wolf Scouts", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
                 ]
               }
             ]
@@ -48644,7 +48952,18 @@
           {"id": "611b-e036-2a84-ac91", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
           {"id": "c6af-c9f4-97c0-3812", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Warlord",
@@ -48869,7 +49188,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n\n■ ELIMINATOR SQUAD\n■ INCURSOR SQUAD\n■ INFILTRATOR SQUAD\n■ REIVER SQUAD\n■ SPECTRUS KILL TEAM",
+                "$text": "This model can be attached to the following units:\nELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SCOUT SQUAD, SPECTRUS KILL TEAM, WOLF SCOUTS",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -49023,6 +49342,16 @@
                     "shared": true,
                     "type": "instanceOf",
                     "value": 1
+                  },
+                  {
+                    "childId": "4554-88b1-466c-d9f5",
+                    "childName": "Wolf Guard Terminators",
+                    "comment": "Deathwatch",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
                   }
                 ]
               }
@@ -49046,7 +49375,7 @@
           {"id": "3149-ee55-dc3d-c8f5", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 80},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -49294,7 +49623,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, RELIC TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD",
+                "$text": "This model can be attached to the following units: \nDEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, RELIC TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, WOLF GUARD TERMINATORS",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -49888,16 +50217,6 @@
                     "value": 1
                   },
                   {
-                    "childId": "3055-9a0b-b062-5f31",
-                    "childName": "Death Company Marines with Bolt Rifles",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 6,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
                     "childId": "1193-4f69-5b9f-6fbc",
                     "childName": "Deathwatch Veterans",
                     "field": "selections",
@@ -49985,16 +50304,6 @@
                     "scope": "self",
                     "shared": true,
                     "sortIndex": 16,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
-                    "childId": "2740-ec68-77ee-2830",
-                    "childName": "Tactical Squad",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 17,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -50283,7 +50592,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATH COMPANY MARINES, DEATH COMPANY MARINES WITH BOLT RIFLES, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD",
+                "$text": "This model can be attached to the following units: \nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATH COMPANY MARINES, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, VANGUARD VETERAN SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -50449,6 +50758,16 @@
                     "childId": "8311-8645-4ce3-8b3",
                     "childName": "Deathwatch Terminator Squad",
                     "comment": "Deathwatch",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  },
+                  {
+                    "childId": "4554-88b1-466c-d9f5",
+                    "childName": "Wolf Guard Terminators",
+                    "comment": "Agents",
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
@@ -50735,7 +51054,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, RELIC TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD",
+                "$text": "This model can be attached to the following units: \nDEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, WOLF GUARD TERMINATORS",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -50852,7 +51171,7 @@
           {"id": "ea26-d291-7cb9-7a11", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -51723,16 +52042,6 @@
                     "value": 1
                   },
                   {
-                    "childId": "c7d2-a98d-4ad2-c426",
-                    "childName": "Vanguard Veteran Squad",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 12,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
                     "childId": "a2bb-b582-9f57-27f5",
                     "childName": "Fortis Kill Team",
                     "comment": "Deathwatch",
@@ -52005,7 +52314,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, CRUSADER SQUAD, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, INTERCESSOR SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD",
+                "$text": "This model can be attached to the following units: \nASSAULT INTERCESSOR SQUAD, CRUSADER SQUAD, DECIMUS KILL TEAM, DESOLATION SQUAD, FORTIS KILL TEAM, INTERCESSOR SQUAD, SWORD BRETHREN SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -52609,7 +52918,7 @@
           {"id": "d9c6-2ee6-e3f6-36aa", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 95},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -53420,16 +53729,6 @@
                     "value": 1
                   },
                   {
-                    "childId": "802a-a287-ac94-38a0",
-                    "childName": "Devastator Squad",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 8,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
                     "childId": "a2bb-b582-9f57-27f5",
                     "childName": "Fortis Kill Team",
                     "comment": "Deathwatch",
@@ -53501,16 +53800,6 @@
                     "value": 1
                   },
                   {
-                    "childId": "2740-ec68-77ee-2830",
-                    "childName": "Tactical Squad",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 17,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
                     "childId": "1193-4f69-5b9f-6fbc",
                     "childName": "Deathwatch Veterans",
                     "field": "selections",
@@ -53551,16 +53840,6 @@
                     "value": 1
                   },
                   {
-                    "childId": "c7d2-a98d-4ad2-c426",
-                    "childName": "Vanguard Veteran Squad",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 18,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
                     "childId": "94a4-4c41-84a4-d038",
                     "childName": "Fortis Kill Team",
                     "comment": "Agents",
@@ -53570,7 +53849,8 @@
                     "sortIndex": 9,
                     "type": "instanceOf",
                     "value": 1
-                  }
+                  },
+                  {"childId": "5956-471c-16ba-af95", "childName": "Company Heroes", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
                 ]
               }
             ]
@@ -53592,7 +53872,7 @@
           {"id": "c4b1-e0a8-b7eb-351b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 40},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 45},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -53829,7 +54109,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD\n",
+                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD\n",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -53958,6 +54238,15 @@
                     "shared": true,
                     "type": "instanceOf",
                     "value": 1
+                  },
+                  {
+                    "childId": "7827-d81d-4360-441d",
+                    "childName": "Eradicator Squad with Heavy Bolters",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
                   }
                 ]
               }
@@ -53980,11 +54269,16 @@
           {"id": "31bf-4f15-4df7-ae0a", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 60},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0}
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -54219,7 +54513,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units:\n\n■ AGGRESSOR SQUAD\n■ ERADICATOR SQUAD\n■ HEAVY INTERCESSOR SQUAD\n■ INDOMITOR KILL TEAM\n\n",
+                "$text": "This model can be attached to the following units:\nAGGRESSOR SQUAD, ERADICATOR SQUAD WITH HEAVY BOLTERS, ERADICATOR SQUAD WITH MELTA RIFLES, HEAVY INTERCESSOR SQUAD, INDOMITOR KILL TEAM",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -54290,7 +54584,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 3,
+                    "sortIndex": 2,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54310,17 +54604,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 6,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
-                    "childId": "802a-a287-ac94-38a0",
-                    "childName": "Devastator Squad",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 7,
+                    "sortIndex": 5,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54331,7 +54615,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 8,
+                    "sortIndex": 6,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54341,7 +54625,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 10,
+                    "sortIndex": 8,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54351,7 +54635,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 11,
+                    "sortIndex": 9,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54361,7 +54645,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 12,
+                    "sortIndex": 10,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54371,7 +54655,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 13,
+                    "sortIndex": 11,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54381,7 +54665,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 14,
+                    "sortIndex": 12,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54391,17 +54675,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 15,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
-                    "childId": "2740-ec68-77ee-2830",
-                    "childName": "Tactical Squad",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 16,
+                    "sortIndex": 13,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54411,7 +54685,7 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 4,
+                    "sortIndex": 3,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54421,17 +54695,17 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 5,
+                    "sortIndex": 4,
                     "type": "instanceOf",
                     "value": 1
                   },
                   {
-                    "childId": "ebce-cb56-76a4-afe1",
-                    "childName": "Assault Squad",
+                    "childId": "c7d2-a98d-4ad2-c426",
+                    "childName": "Vanguard Veteran Squad",
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 2,
+                    "sortIndex": 14,
                     "type": "instanceOf",
                     "value": 1
                   },
@@ -54442,10 +54716,11 @@
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
-                    "sortIndex": 9,
+                    "sortIndex": 7,
                     "type": "instanceOf",
                     "value": 1
-                  }
+                  },
+                  {"childId": "ebce-cb56-76a4-afe1", "childName": "Assault Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
                 ]
               }
             ]
@@ -54707,7 +54982,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD\n",
+                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, VANGUARD VETERAN SQUAD\n",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -54840,7 +55115,7 @@
           {"id": "5321-2bf9-64ea-8829", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 40},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -55209,6 +55484,16 @@
                     "shared": true,
                     "type": "instanceOf",
                     "value": 1
+                  },
+                  {
+                    "childId": "4554-88b1-466c-d9f5",
+                    "childName": "Wolf Guard Terminators",
+                    "comment": "Deathwatch",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
                   }
                 ]
               }
@@ -55231,7 +55516,7 @@
           {"id": "fa36-ba2c-cc44-6173", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 65},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -55481,7 +55766,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, RELIC TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD",
+                "$text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, WOLF GUARD TERMINATORS",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -56700,6 +56985,19 @@
                     "sortIndex": 6,
                     "type": "instanceOf",
                     "value": 1
+                  },
+                  {"childId": "9e2c-48af-8c2b-ea68", "childName": "Crusader Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "1193-4f69-5b9f-6fbc", "childName": "Deathwatch Veterans", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "a2bb-b582-9f57-27f5", "childName": "Fortis Kill Team", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "94a4-4c41-84a4-d038", "childName": "Fortis Kill Team", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1},
+                  {
+                    "childId": "f790-2929-6951-c241",
+                    "childName": "Sword Brethren Squad",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
                   }
                 ]
               }
@@ -56733,7 +57031,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 55},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 50},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -56980,7 +57278,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD",
+                "$text": "This model can be attached to the following units: \nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, VANGUARD VETERAN SQUAD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -57249,16 +57547,6 @@
                     "value": 1
                   },
                   {
-                    "childId": "2740-ec68-77ee-2830",
-                    "childName": "Tactical Squad",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 17,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
                     "childId": "22cb-9e28-8b9f-bbdf",
                     "childName": "Victrix Honour Guard",
                     "field": "selections",
@@ -57330,7 +57618,18 @@
           {"id": "95ae-60cc-9649-6975", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
           {"id": "f77a-c9bc-c277-0579", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 80}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Enhancements",
@@ -57566,7 +57865,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, COMMAND SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD\n",
+                "$text": "This model can be attached to the following units: \n\nASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, VANGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -57959,7 +58258,18 @@
           {"id": "4933-c601-64eb-144f", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
           {"id": "2373-f998-fe8c-2840", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 525}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 550},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Crusade",
@@ -58159,7 +58469,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 50,
+            "value": 75,
             "conditionGroups": [
               {
                 "type": "and",
@@ -58501,7 +58811,18 @@
           {"id": "d848-f675-97b7-6646", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0},
           {"id": "1a39-e0b9-42cf-4fd1", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 840}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 850},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Crusade",
@@ -58677,6 +58998,31 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 100,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {"childId": "517c-5225-1cc6-a94a", "childName": "Thunderhawk Gunship", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -69019,7 +69365,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 85},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 95},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -69177,7 +69523,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 160,
+            "value": 190,
             "conditions": [
               {
                 "id": "e634-3709-1823-c93",
@@ -69697,12 +70043,16 @@
           {"id": "55d4-3355-4a5b-4f5b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 105},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 125},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
-          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0}
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+          {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+          {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -69854,6 +70204,31 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 20,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {"childId": "2f2e-d99b-b235-163a", "childName": "Company Heroes", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -75629,7 +76004,7 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 80},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -75655,6 +76030,57 @@
                 "shared": true,
                 "type": "atLeast",
                 "value": 1
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "set",
+            "value": 215,
+            "conditions": [
+              {
+                "id": "fdd8-3229-956d-e751",
+                "childId": "f336-f693-4f96-2e73",
+                "childName": "Eradicators",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "3bc7-8328-a080-3958",
+                "shared": true,
+                "type": "atLeast",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 30,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {
+                        "childId": "7827-d81d-4360-441d",
+                        "childName": "Eradicator Squad with Heavy Bolters",
+                        "field": "selections",
+                        "scope": "self",
+                        "shared": true,
+                        "type": "instanceOf",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -77104,18 +77530,8 @@
                     "value": 1
                   },
                   {
-                    "childId": "eca9-2e2-b6a6-9de6",
-                    "childName": "Bike Squad",
-                    "field": "selections",
-                    "scope": "self",
-                    "shared": true,
-                    "sortIndex": 1,
-                    "type": "instanceOf",
-                    "value": 1
-                  },
-                  {
-                    "childId": "a40-ff3f-c1ea-fea7",
-                    "childName": "Company Veterans on Bikes [Legends]",
+                    "childId": "1d42-6a24-1842-b424",
+                    "childName": "Ravenwing Black Knights",
                     "field": "selections",
                     "scope": "self",
                     "shared": true,
@@ -77143,7 +77559,7 @@
           {"id": "ac54-a8d4-8122-3fcb", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 110},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -77395,13 +77811,7 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "This model can be attached to the following units: BIKE SQUAD, COMPANY VETERANS ON BIKES, OUTRIDER SQUAD",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
+            "characteristics": [{"name": "Description", "$text": "This model can be attached to the following units: OUTRIDER SQUAD, RAVENWING BLACK KNIGHTS", "typeId": "9b8f-694b-e5e-b573"}]
           }
         ],
         "selectionEntryGroups": [
@@ -78161,208 +78571,250 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "field": "51b2-306e-1021-d207",
+            "type": "increment",
+            "value": 10,
+            "conditionGroups": [
+              {
+                "type": "and",
+                "localConditionGroups": [
+                  {
+                    "field": "selections",
+                    "includeChildForces": true,
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "scope": "parent",
+                    "type": "atLeast",
+                    "value": 2,
+                    "conditions": [
+                      {"childId": "any", "field": "selections", "scope": "self", "shared": true, "type": "before", "value": 1},
+                      {"childId": "4039-5a6c-522b-8faf", "childName": "Invader ATV", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
-        "selectionEntries": [
+        "selectionEntryGroups": [
           {
-            "name": "Invader ATV",
-            "id": "8d7b-3dfe-7b91-2490",
+            "name": "Invader ATVs",
+            "id": "266c-3f4c-4aed-9472",
             "hidden": false,
-            "import": true,
-            "type": "model",
-            "constraints": [{"id": "d0eb-0328-4656-7ce5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
-            "costs": [
-              {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 60},
-              {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
-              {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
-              {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-              {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0}
+            "constraints": [
+              {"id": "b75b-f111-762d-6bca", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2},
+              {"id": "a8bc-2bec-5c6b-e368", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1}
             ],
-            "entryLinks": [
-              {
-                "name": "Crusade",
-                "id": "5a6d-c109-3e44-2ac7",
-                "hidden": false,
-                "import": true,
-                "sortIndex": 1,
-                "targetId": "9a99-f13c-a667-e698",
-                "type": "selectionEntryGroup"
-              }
-            ],
-            "infoLinks": [
-              {"name": "Combat Doctrines", "id": "5648-7494-2d09-6629", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-              {"name": "Templar Vows", "id": "6222-922f-ce94-d68f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
-            ],
-            "modifiers": [
-              {
-                "field": "category",
-                "type": "add",
-                "value": "e9c7-1590-1bda-bf7f",
-                "conditions": [
-                  {
-                    "childId": "470a-6daa-9014-12df",
-                    "field": "selections",
-                    "includeChildForces": false,
-                    "includeChildSelections": false,
-                    "scope": "primary-catalogue",
-                    "shared": true,
-                    "type": "instanceOf",
-                    "value": 0
-                  }
-                ]
-              }
-            ],
-            "profiles": [
+            "selectionEntries": [
               {
                 "name": "Invader ATV",
-                "id": "9db4-ab00-11a5-2f71",
+                "id": "8d7b-3dfe-7b91-2490",
                 "hidden": false,
-                "typeId": "c547-1836-d8a-ff4f",
-                "typeName": "Unit",
-                "characteristics": [
-                  {"name": "M", "$text": "10\"", "typeId": "e703-ecb6-5ce7-aec1"},
-                  {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
-                  {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
-                  {"name": "W", "$text": "8", "typeId": "750a-a2ec-90d3-21fe"},
-                  {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
-                  {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
-                  {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
-                ]
-              },
-              {
-                "name": "Aggressive Reconnaissance",
-                "id": "8fb3-08fd-fcc6-fee1",
-                "hidden": false,
-                "typeId": "9cc3-6d83-4dd3-9b64",
-                "typeName": "Abilities",
-                "characteristics": [
-                  {
-                    "name": "Description",
-                    "$text": "In your Shooting phase, this unit's ranged attacks that target an enemy unit that is not within 6\" of any other enemy units have +1 to wound rolls.",
-                    "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ]
-              }
-            ],
-            "selectionEntryGroups": [
-              {
-                "name": "Wargear",
-                "id": "692c-f7be-75d4-ba2d",
-                "hidden": false,
-                "sortIndex": 2,
+                "import": true,
+                "type": "model",
+                "constraints": [{"id": "d0eb-0328-4656-7ce5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [
+                  {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 65},
+                  {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+                  {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+                  {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+                  {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+                  {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+                  {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+                  {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
+                  {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
+                  {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
+                ],
                 "entryLinks": [
                   {
-                    "name": "Bolt pistol",
-                    "id": "8b02-bd1a-1c87-d2d3",
+                    "name": "Crusade",
+                    "id": "5a6d-c109-3e44-2ac7",
                     "hidden": false,
                     "import": true,
-                    "targetId": "18b0-8c2-173f-5",
-                    "type": "selectionEntry",
-                    "constraints": [
-                      {"id": "8c97-ee2d-a137-da7d", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "114d-9969-ef33-3f1c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "entryLinks": [
-                      {"name": "Weapon Modifications", "id": "0c59-53ce-fa1d-8dd8", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                    "sortIndex": 1,
+                    "targetId": "9a99-f13c-a667-e698",
+                    "type": "selectionEntryGroup"
+                  }
+                ],
+                "infoLinks": [
+                  {"name": "Combat Doctrines", "id": "5648-7494-2d09-6629", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+                  {"name": "Templar Vows", "id": "6222-922f-ce94-d68f", "hidden": false, "targetId": "f26c-4b28-aaea-40cf", "type": "rule"}
+                ],
+                "modifiers": [
+                  {
+                    "field": "category",
+                    "type": "add",
+                    "value": "e9c7-1590-1bda-bf7f",
+                    "conditions": [
+                      {
+                        "childId": "470a-6daa-9014-12df",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "scope": "primary-catalogue",
+                        "shared": true,
+                        "type": "instanceOf",
+                        "value": 0
+                      }
                     ]
                   }
                 ],
-                "selectionEntries": [
+                "profiles": [
                   {
-                    "name": "Armoured Impact",
-                    "id": "51c1-4ee1-b600-4d80",
+                    "name": "Invader ATV",
+                    "id": "9db4-ab00-11a5-2f71",
                     "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "9455-5360-396b-1778", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1},
-                      {"id": "3fa5-4ffd-cfbe-3ac5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1}
-                    ],
-                    "profiles": [
-                      {
-                        "name": "Armoured Impact",
-                        "id": "4723-a214-926e-d3ac",
-                        "hidden": false,
-                        "typeId": "8a40-4aaa-c780-9046",
-                        "typeName": "Melee Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
-                          {"name": "A", "$text": "4", "typeId": "2337-daa1-6682-b110"},
-                          {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
-                          {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
-                          {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
-                          {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
-                          {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
-                        ]
-                      }
+                    "typeId": "c547-1836-d8a-ff4f",
+                    "typeName": "Unit",
+                    "characteristics": [
+                      {"name": "M", "$text": "10\"", "typeId": "e703-ecb6-5ce7-aec1"},
+                      {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
+                      {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
+                      {"name": "W", "$text": "8", "typeId": "750a-a2ec-90d3-21fe"},
+                      {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
+                      {"name": "OC", "$text": "2", "typeId": "bef7-942a-1a23-59f8"},
+                      {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
                     ]
                   },
                   {
-                    "name": "Twin Bolt Rifle",
-                    "id": "56d1-7ad4-aded-cfa2",
+                    "name": "Aggressive Reconnaissance",
+                    "id": "8fb3-08fd-fcc6-fee1",
                     "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "373e-9664-22a4-ce36", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1},
-                      {"id": "ebd5-50ff-2596-0d32", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1}
-                    ],
-                    "infoLinks": [
-                      {"name": "Assault", "id": "e7f7-4701-ea59-f1bc", "hidden": false, "targetId": "fc8a-8c24-bae9-cc1c", "type": "rule"},
-                      {"name": "Rapid Fire", "id": "3b9c-6f88-a02f-0410", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"},
-                      {"name": "Twin-linked", "id": "2ff3-eede-1cc8-21db", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"}
-                    ],
-                    "profiles": [
+                    "typeId": "9cc3-6d83-4dd3-9b64",
+                    "typeName": "Abilities",
+                    "characteristics": [
                       {
-                        "name": "Twin Bolt Rifle",
-                        "id": "409d-5562-fb7a-a473",
-                        "hidden": false,
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
-                          {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Assault, Rapid Fire 2, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
-                        ]
+                        "name": "Description",
+                        "$text": "In your Shooting phase, this unit's ranged attacks that target an enemy unit that is not within 6\" of any other enemy units have +1 to wound rolls.",
+                        "typeId": "9b8f-694b-e5e-b573"
                       }
                     ]
                   }
                 ],
                 "selectionEntryGroups": [
                   {
-                    "name": "Weapon Option",
-                    "id": "f1f6-718e-222f-9ed5",
-                    "defaultSelectionEntryId": "4eea-127b-7896-5141",
+                    "name": "Wargear",
+                    "id": "692c-f7be-75d4-ba2d",
                     "hidden": false,
-                    "constraints": [
-                      {"id": "32ef-818e-8873-e142", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "d77e-c17f-c338-93c0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
+                    "sortIndex": 2,
                     "entryLinks": [
                       {
-                        "name": "Onslaught gatling cannon",
-                        "id": "4eea-127b-7896-5141",
+                        "name": "Bolt pistol",
+                        "id": "8b02-bd1a-1c87-d2d3",
                         "hidden": false,
                         "import": true,
-                        "targetId": "fd4b-f2e0-dee3-ba0c",
+                        "targetId": "18b0-8c2-173f-5",
                         "type": "selectionEntry",
+                        "constraints": [
+                          {"id": "8c97-ee2d-a137-da7d", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "114d-9969-ef33-3f1c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
                         "entryLinks": [
-                          {"name": "Weapon Modifications", "id": "229d-348d-4bc8-68ff", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                          {"name": "Weapon Modifications", "id": "0c59-53ce-fa1d-8dd8", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                        ]
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "Armoured Impact",
+                        "id": "51c1-4ee1-b600-4d80",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [
+                          {"id": "9455-5360-396b-1778", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1},
+                          {"id": "3fa5-4ffd-cfbe-3ac5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1}
+                        ],
+                        "profiles": [
+                          {
+                            "name": "Armoured Impact",
+                            "id": "4723-a214-926e-d3ac",
+                            "hidden": false,
+                            "typeId": "8a40-4aaa-c780-9046",
+                            "typeName": "Melee Weapons",
+                            "characteristics": [
+                              {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                              {"name": "A", "$text": "4", "typeId": "2337-daa1-6682-b110"},
+                              {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
+                              {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+                              {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
+                              {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+                              {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
+                            ]
+                          }
                         ]
                       },
                       {
-                        "name": "Multi-melta",
-                        "id": "b440-75d0-9e95-486a",
+                        "name": "Twin Bolt Rifle",
+                        "id": "56d1-7ad4-aded-cfa2",
                         "hidden": false,
                         "import": true,
-                        "targetId": "da38-da4f-dc42-7758",
-                        "type": "selectionEntry",
+                        "type": "upgrade",
+                        "constraints": [
+                          {"id": "373e-9664-22a4-ce36", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1},
+                          {"id": "ebd5-50ff-2596-0d32", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1}
+                        ],
+                        "infoLinks": [
+                          {"name": "Assault", "id": "e7f7-4701-ea59-f1bc", "hidden": false, "targetId": "fc8a-8c24-bae9-cc1c", "type": "rule"},
+                          {"name": "Rapid Fire", "id": "3b9c-6f88-a02f-0410", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"},
+                          {"name": "Twin-linked", "id": "2ff3-eede-1cc8-21db", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"}
+                        ],
+                        "profiles": [
+                          {
+                            "name": "Twin Bolt Rifle",
+                            "id": "409d-5562-fb7a-a473",
+                            "hidden": false,
+                            "typeId": "f77d-b953-8fa4-b762",
+                            "typeName": "Ranged Weapons",
+                            "characteristics": [
+                              {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+                              {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+                              {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+                              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+                              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                              {"name": "Keywords", "$text": "Assault, Rapid Fire 2, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "selectionEntryGroups": [
+                      {
+                        "name": "Weapon Option",
+                        "id": "f1f6-718e-222f-9ed5",
+                        "defaultSelectionEntryId": "4eea-127b-7896-5141",
+                        "hidden": false,
+                        "constraints": [
+                          {"id": "32ef-818e-8873-e142", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                          {"id": "d77e-c17f-c338-93c0", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+                        ],
                         "entryLinks": [
-                          {"name": "Weapon Modifications", "id": "5d76-0411-4827-642f", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                          {
+                            "name": "Onslaught gatling cannon",
+                            "id": "4eea-127b-7896-5141",
+                            "hidden": false,
+                            "import": true,
+                            "targetId": "fd4b-f2e0-dee3-ba0c",
+                            "type": "selectionEntry",
+                            "entryLinks": [
+                              {"name": "Weapon Modifications", "id": "229d-348d-4bc8-68ff", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                            ]
+                          },
+                          {
+                            "name": "Multi-melta",
+                            "id": "b440-75d0-9e95-486a",
+                            "hidden": false,
+                            "import": true,
+                            "targetId": "da38-da4f-dc42-7758",
+                            "type": "selectionEntry",
+                            "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 5}],
+                            "entryLinks": [
+                              {"name": "Weapon Modifications", "id": "5d76-0411-4827-642f", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                            ]
+                          }
                         ]
                       }
                     ]
