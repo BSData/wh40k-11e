@@ -4,7 +4,7 @@
     "id": "sys-352e-adc2-7639-d610",
     "battleScribeVersion": 2.03,
     "readme": "",
-    "revision": 14,
+    "revision": 16,
     "type": "gameSystem",
     "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
     "categoryEntries": [
@@ -893,13 +893,51 @@
         "name": "Ministorum Priest",
         "id": "cc88-9467-86ac-4ca2",
         "hidden": false,
-        "constraints": [{"id": "9ad1-8aef-0d46-3b1b", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "max", "value": 3}]
+        "constraints": [{"id": "9ad1-8aef-0d46-3b1b", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "max", "value": 3}],
+        "modifiers": [
+          {
+            "field": "9ad1-8aef-0d46-3b1b",
+            "type": "set",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "d62d-db22-4893-4bc0",
+                "childName": "1. Incursion (1000 Point limit)",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Sanctifiers",
         "id": "9d4f-4beb-107d-3175",
         "hidden": false,
-        "constraints": [{"id": "3b97-07bb-1241-9cc6", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "max", "value": 3}]
+        "constraints": [{"id": "3b97-07bb-1241-9cc6", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "max", "value": 3}],
+        "modifiers": [
+          {
+            "field": "3b97-07bb-1241-9cc6",
+            "type": "set",
+            "value": 2,
+            "conditions": [
+              {
+                "childId": "d62d-db22-4893-4bc0",
+                "childName": "1. Incursion (1000 Point limit)",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Pilot",
@@ -1354,7 +1392,7 @@
         "name": "Army Roster",
         "id": "bb9d-299a-ed60-2d8a",
         "hidden": false,
-        "readme": "Please report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n\nIssues with Yellowscribe/TTS should first be reported as New Recruit issues, not data issues.\n\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n",
+        "readme": "# MFM and Faction Pack updates are now done for all Factions _except_ Adeptus Astartes variants.\n\n#Those Factions will be updated when the data is updated for the release of the Space Marines Codex some time _after_ Saturday 3rd.\n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n\nIssues with Yellowscribe/TTS should first be reported as New Recruit issues, not data issues.\n\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n",
         "categoryLinks": [
           {"name": "Configuration", "id": "d5de-ee57-ad4b-e4b7", "hidden": false, "primary": false, "targetId": "4ac9-fd30-1e3d-b249"},
           {"name": "Epic Hero", "id": "16fc-8e39-ee82-cf96", "hidden": false, "primary": false, "targetId": "4f3a-f0f7-6647-348d"},
@@ -2020,7 +2058,7 @@
           {
             "field": "readme",
             "type": "set",
-            "value": "Please report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game.**",
+            "value": "# MFM and Faction Pack updates are now done for all Factions _except_ Adeptus Astartes variants.\n\n#Those Factions will be updated when the data is updated for the release of the Space Marines Codex some time _after_ Saturday 3rd.\n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game.**",
             "conditions": [
               {
                 "childId": "ff7b-8f73-1756-650a",
@@ -2037,7 +2075,7 @@
           {
             "field": "readme",
             "type": "set",
-            "value": "Please report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game. You can add the Crusade Army for your faction from the *Forces* unit section or the *Add Force* menu option.**",
+            "value": "# MFM and Faction Pack updates are now done for all Factions _except_ Adeptus Astartes variants.\n\n#Those Factions will be updated when the data is updated for the release of the Space Marines Codex some time _after_ Saturday 3rd.\n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n\n**Reminder: Your Crusade Force is every model available to your faction in Crusade Mode. Your Crusade Army is the list of units you intend to use in a game. You can add the Crusade Army for your faction from the *Forces* unit section or the *Add Force* menu option.**",
             "conditions": [
               {
                 "childId": "ff7b-8f73-1756-650a",

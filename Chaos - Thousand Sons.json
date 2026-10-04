@@ -6,7 +6,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 13,
+    "revision": 16,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -4042,7 +4042,7 @@
         "typeName": "Unit",
         "characteristics": [
           {"name": "M", "$text": "5\"", "typeId": "e703-ecb6-5ce7-aec1"},
-          {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
+          {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
           {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
           {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
           {"name": "LD", "$text": "7+", "typeId": "58d2-b879-49c7-43bc"},
@@ -4157,7 +4157,8 @@
                 "type": "upgrade",
                 "categoryLinks": [
                   {"name": "Take and Hold", "id": "9465-5a53-1c9b-3bc6", "hidden": false, "primary": false, "targetId": "1cc1-f11a-4e8f-1bcc"},
-                  {"name": "3DP Detachment", "id": "a827-7b4b-8a30-8fd8", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"}
+                  {"name": "3DP Detachment", "id": "a827-7b4b-8a30-8fd8", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"},
+                  {"name": "Reconnaissance", "id": "e6bd-1823-19b9-3028", "hidden": false, "primary": false, "targetId": "b4a7-5083-fe94-4d24"}
                 ],
                 "constraints": [{"id": "32a5-4c01-3f60-7679", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [
@@ -4187,7 +4188,8 @@
                 "type": "upgrade",
                 "categoryLinks": [
                   {"name": "Priority Assets", "id": "86a7-d853-7282-08ee", "hidden": false, "primary": false, "targetId": "0936-9767-1cc7-52ae"},
-                  {"name": "3DP Detachment", "id": "6a82-a861-6772-1376", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"}
+                  {"name": "3DP Detachment", "id": "6a82-a861-6772-1376", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"},
+                  {"name": "Disruption", "id": "51c8-db20-b767-c4d5", "hidden": false, "primary": false, "targetId": "ecf8-cf72-7d5b-1b5b"}
                 ],
                 "constraints": [{"id": "5f19-9bb1-4856-0f01", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [
@@ -4229,7 +4231,7 @@
                   {
                     "name": "Infernal Pacts",
                     "id": "9cef-5b49-7f6c-e17c",
-                    "description": "^^**Scintillating Legions^^** units from your army have the following ability:\n\n\n**Daemonic Illusions (Aura)**: While a friendly ^^**Thousand Sons Psyker^^** unit is within 6\" of and visible to this unit, models in that unit have a 4+ invulnerable save against ranged attacks.\n\n\n^^**Thousand Sons^^** units from your army have the following ability:\n\n\n**Mortal Sorcery (Aura)**: While a friendly ^^**Scintillating Legions Psyker^^** unit from your army is within 6\" of and visible to this unit, that ^^**Scintillating Legions^^** unit has the Cabal of Sorcerers ability.",
+                    "description": "^^**Scintillating Legions^^** units from your army have the following ability:\n\n**Daemonic Illusions (Aura)**: While a friendly ^^**Thousand Sons Psyker^^** unit is within 6\" of and visible to this unit, models in that unit have a 4+ invulnerable save against ranged attacks.\n\n^^**Thousand Sons^^** units from your army have the following ability:\n\n**Mortal Sorcery (Aura)**: While a friendly ^^**Scintillating Legions Psyker^^** unit from your army is within 6\" of and visible to this unit, that ^^**Scintillating Legions^^** unit has the Cabal of Sorcerers ability.",
                     "hidden": false
                   }
                 ]
@@ -4271,7 +4273,8 @@
                 "type": "upgrade",
                 "categoryLinks": [
                   {"name": "Take and Hold", "id": "a2fa-ad56-d283-2db7", "hidden": false, "primary": false, "targetId": "1cc1-f11a-4e8f-1bcc"},
-                  {"name": "3DP Detachment", "id": "f6de-cbbf-0f78-dacf", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"}
+                  {"name": "3DP Detachment", "id": "f6de-cbbf-0f78-dacf", "hidden": false, "primary": false, "targetId": "7d80-2de5-816e-9d2b"},
+                  {"name": "Priority Assets", "id": "f243-8da6-7303-46be", "hidden": false, "primary": false, "targetId": "0936-9767-1cc7-52ae"}
                 ],
                 "constraints": [{"id": "a82e-c9c3-1947-db60", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
                 "costs": [
@@ -4500,11 +4503,14 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 105},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0}
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -4543,7 +4549,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "10\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "6", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -5260,7 +5266,7 @@
               {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
@@ -5293,7 +5299,7 @@
               {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1", "typeId": "7f1b-8591-2fcf-d01c"}
@@ -7700,7 +7706,7 @@
           {"id": "8616-a73b-c6ca-3365", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 95},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -7893,7 +7899,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -8167,8 +8173,8 @@
               {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "2+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
             ],
@@ -8319,7 +8325,7 @@
           {"id": "88aa-c2b4-f90c-c88a", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 90},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 95},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -8505,7 +8511,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "10\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "6", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -10787,7 +10793,7 @@
           {"id": "f0fa-3fc7-9e09-d255", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 105},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -10987,7 +10993,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "4", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -12675,12 +12681,14 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 115},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
-          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0}
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -12817,7 +12825,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 190,
+            "value": 210,
             "conditions": [{"childId": "model", "field": "selections", "includeChildSelections": true, "scope": "5d3d-e13b-8b76-dad3", "shared": true, "type": "greaterThan", "value": 5}]
           },
           {
@@ -12886,7 +12894,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "2", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "7+", "typeId": "58d2-b879-49c7-43bc"},
@@ -12919,7 +12927,7 @@
                 "typeName": "Unit",
                 "characteristics": [
                   {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
-                  {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+                  {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
                   {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
                   {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
                   {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -13174,8 +13182,8 @@
                           {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
                           {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
                           {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
                           {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
                         ],
@@ -13286,6 +13294,7 @@
                 "type": "model",
                 "categoryLinks": [{"name": "Rubric", "id": "6801-4646-380c-b75c", "hidden": false, "primary": false, "targetId": "5c83-cd0d-62d3-5d15"}],
                 "constraints": [{"id": "cf37-1e57-b2e1-8d33", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 9}],
+                "entryLinks": [{"name": "Close combat weapon", "id": "fb4c-66bb-4a26-4b52", "hidden": false, "import": true, "targetId": "82ba-6095-1f1f-202d", "type": "selectionEntry"}],
                 "selectionEntries": [
                   {
                     "name": "Inferno boltgun",
@@ -13339,7 +13348,7 @@
                           {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
                           {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
                           {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
                           {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
                           {"name": "Keywords", "$text": "", "typeId": "7f1b-8591-2fcf-d01c"}
@@ -13365,36 +13374,6 @@
                         ]
                       }
                     ]
-                  },
-                  {
-                    "name": "Close combat weapon",
-                    "id": "913d-622a-47e9-4e42",
-                    "collective": true,
-                    "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "1f83-45f0-7518-f62b", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "3f6d-723d-b3ec-7eee", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "profiles": [
-                      {
-                        "name": "Close combat weapon",
-                        "id": "a222-ffc4-cc58-895b",
-                        "hidden": false,
-                        "typeId": "8a40-4aaa-c780-9046",
-                        "typeName": "Melee Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
-                          {"name": "A", "$text": "2", "typeId": "2337-daa1-6682-b110"},
-                          {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
-                          {"name": "S", "$text": "4", "typeId": "ab33-d393-96ce-ccba"},
-                          {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
-                          {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
-                          {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
-                        ]
-                      }
-                    ]
                   }
                 ]
               },
@@ -13405,6 +13384,7 @@
                 "import": true,
                 "type": "model",
                 "constraints": [{"id": "cf37-1e57-b2e1-8d33", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 9}],
+                "entryLinks": [{"name": "Close combat weapon", "id": "381d-f270-95db-2924", "hidden": false, "import": true, "targetId": "82ba-6095-1f1f-202d", "type": "selectionEntry"}],
                 "selectionEntries": [
                   {
                     "name": "Warpflamer",
@@ -13443,36 +13423,6 @@
                         ]
                       }
                     ]
-                  },
-                  {
-                    "name": "Close combat weapon",
-                    "id": "c9d8-d87b-e74e-26f4",
-                    "collective": true,
-                    "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "1f83-45f0-7518-f62b", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "3f6d-723d-b3ec-7eee", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "profiles": [
-                      {
-                        "name": "Close combat weapon",
-                        "id": "97f6-9c3f-2c1-698e",
-                        "hidden": false,
-                        "typeId": "8a40-4aaa-c780-9046",
-                        "typeName": "Melee Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
-                          {"name": "A", "$text": "2", "typeId": "2337-daa1-6682-b110"},
-                          {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
-                          {"name": "S", "$text": "4", "typeId": "ab33-d393-96ce-ccba"},
-                          {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
-                          {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
-                          {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
-                        ]
-                      }
-                    ]
                   }
                 ]
               },
@@ -13484,37 +13434,8 @@
                 "type": "model",
                 "categoryLinks": [{"name": "Rubric", "id": "fde5-e406-7a01-da64", "hidden": false, "primary": false, "targetId": "5c83-cd0d-62d3-5d15"}],
                 "constraints": [{"id": "ccd2-96ab-651-4c3c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "entryLinks": [{"name": "Close combat weapon", "id": "c274-6176-0471-f515", "hidden": false, "import": true, "targetId": "82ba-6095-1f1f-202d", "type": "selectionEntry"}],
                 "selectionEntries": [
-                  {
-                    "name": "Close combat weapon",
-                    "id": "82ba-6095-1f1f-202d",
-                    "collective": true,
-                    "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "constraints": [
-                      {"id": "1f83-45f0-7518-f62b", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "3f6d-723d-b3ec-7eee", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "profiles": [
-                      {
-                        "name": "Close combat weapon",
-                        "id": "e5f0-f460-c67c-e266",
-                        "hidden": false,
-                        "typeId": "8a40-4aaa-c780-9046",
-                        "typeName": "Melee Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
-                          {"name": "A", "$text": "2", "typeId": "2337-daa1-6682-b110"},
-                          {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
-                          {"name": "S", "$text": "4", "typeId": "ab33-d393-96ce-ccba"},
-                          {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
-                          {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
-                          {"name": "Keywords", "typeId": "893f-9000-ccf7-648e"}
-                        ]
-                      }
-                    ]
-                  },
                   {
                     "name": "Soulreaper cannon",
                     "id": "9ec7-baa9-ba0c-6a7",
@@ -13634,11 +13555,14 @@
           {"id": "a37f-6ae4-30d9-33a1", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 180},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 200},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0}
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -13778,7 +13702,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 385,
+            "value": 425,
             "conditions": [{"childId": "model", "field": "selections", "includeChildSelections": true, "scope": "b1cf-c5-5121-92a4", "shared": true, "type": "greaterThan", "value": 5}]
           },
           {
@@ -13801,7 +13725,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "increment",
-            "value": 15,
+            "value": 40,
             "conditionGroups": [
               {
                 "type": "and",
@@ -13872,7 +13796,7 @@
                 "typeName": "Unit",
                 "characteristics": [
                   {"name": "M", "$text": "5\"", "typeId": "e703-ecb6-5ce7-aec1"},
-                  {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
+                  {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
                   {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
                   {"name": "W", "$text": "4", "typeId": "750a-a2ec-90d3-21fe"},
                   {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -14282,7 +14206,7 @@
                           {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
                           {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
                           {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
                           {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
                           {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
@@ -14570,7 +14494,7 @@
           {"id": "6f4f-8d6f-0b1b-e76f", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 95},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -14838,7 +14762,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "6\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "4", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "3+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "4", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -15103,7 +15027,7 @@
           {"id": "a149-dad7-5405-6cbb", "field": "716d-91b7-d55a-1022", "includeChildSelections": true, "scope": "self", "shared": true, "type": "min", "value": 0}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 110},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -15380,7 +15304,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "5\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "5", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -23629,7 +23553,8 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
-          {"name": "Damaged: 1-6 wounds remaining", "id": "d803-145f-727b-3cd1", "hidden": false, "targetId": "8edb-b088-4c26-2fef", "type": "profile"}
+          {"name": "Damaged: 1-6 wounds remaining", "id": "d803-145f-727b-3cd1", "hidden": false, "targetId": "8edb-b088-4c26-2fef", "type": "profile"},
+          {"name": "Mortal Sorcery (Aura)", "id": "c491-44e3-04d4-e32f", "hidden": false, "targetId": "a4ad-ef25-1ec4-4b1f", "type": "profile"}
         ],
         "modifierGroups": [
           {
@@ -24384,6 +24309,37 @@
               {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Devastating Wounds, Sustained Hits 1", "typeId": "7f1b-8591-2fcf-d01c"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Close combat weapon",
+        "id": "82ba-6095-1f1f-202d",
+        "collective": true,
+        "comment": "Rubrics",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [
+          {"id": "1f83-45f0-7518-f62b", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+          {"id": "3f6d-723d-b3ec-7eee", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
+        ],
+        "profiles": [
+          {
+            "name": "Close combat weapon",
+            "id": "e5f0-f460-c67c-e266",
+            "hidden": false,
+            "typeId": "8a40-4aaa-c780-9046",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+              {"name": "A", "$text": "2", "typeId": "2337-daa1-6682-b110"},
+              {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
+              {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+              {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
+              {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+              {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
             ]
           }
         ]

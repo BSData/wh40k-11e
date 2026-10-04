@@ -6,7 +6,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 15,
+    "revision": 17,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -2270,7 +2270,7 @@
             ]
           },
           {
-            "name": "Micromelta Round",
+            "name": "Micromelta Rounds",
             "id": "bcba-352d-f7f2-84ba",
             "hidden": true,
             "import": true,
@@ -2298,7 +2298,7 @@
             ],
             "profiles": [
               {
-                "name": "Micromelta Round",
+                "name": "Micromelta Rounds",
                 "id": "2992-78d6-3deb-f5b7",
                 "hidden": false,
                 "typeId": "9cc3-6d83-4dd3-9b64",
@@ -2818,7 +2818,7 @@
                 "characteristics": [
                   {
                     "name": "Description",
-                    "$text": "Once per battle round, you can target this model with the Heroic Intervention or Counter‑offensive Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.",
+                    "$text": "You can target this unit with the **Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do: \n- That use is -1 CP. \n- That use does not prevent any uses of that stratagem on other units this phase.",
                     "typeId": "9b8f-694b-e5e-b573"
                   }
                 ]
@@ -14204,7 +14204,7 @@
             "typeName": "Unit",
             "characteristics": [
               {"name": "M", "$text": "5\"", "typeId": "e703-ecb6-5ce7-aec1"},
-              {"name": "T", "$text": "5", "typeId": "d29d-cf75-fc2d-34a4"},
+              {"name": "T", "$text": "6", "typeId": "d29d-cf75-fc2d-34a4"},
               {"name": "Sv", "$text": "2+", "typeId": "450-a17e-9d5e-29da"},
               {"name": "W", "$text": "3", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
@@ -14583,6 +14583,7 @@
       {
         "name": "Storm bolter",
         "id": "ac72-81fa-ea32-15fe",
+        "comment": "S5",
         "hidden": false,
         "import": true,
         "type": "upgrade",
@@ -14599,8 +14600,8 @@
               {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
@@ -15642,8 +15643,8 @@
                       {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
                       {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
                       {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                      {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                      {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                      {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                      {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
                       {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
                       {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
                     ]
@@ -18905,7 +18906,16 @@
             "value": 1
           }
         ],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 115},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
+        ],
         "entryLinks": [
           {
             "name": "Crusade",
@@ -19040,7 +19050,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 190,
+            "value": 220,
             "conditions": [{"childId": "model", "field": "selections", "includeChildSelections": true, "scope": "0744-61ce-619d-ffe1", "shared": true, "type": "greaterThan", "value": 5}]
           },
           {
@@ -20233,7 +20243,7 @@
                         "id": "b658-8b2e-9804-04c8",
                         "hidden": false,
                         "import": true,
-                        "targetId": "ac72-81fa-ea32-15fe",
+                        "targetId": "3769-e91f-7da3-a8f0",
                         "type": "selectionEntry",
                         "constraints": [
                           {"id": "57ad-602c-4aba-f0af", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -20270,7 +20280,7 @@
                         "id": "b6eb-8984-7f9b-b492",
                         "hidden": false,
                         "import": true,
-                        "targetId": "ac72-81fa-ea32-15fe",
+                        "targetId": "3769-e91f-7da3-a8f0",
                         "type": "selectionEntry",
                         "constraints": [
                           {"id": "1605-b03c-ae90-6f4a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -20402,7 +20412,7 @@
                         "id": "7d48-01bd-7a38-97b0",
                         "hidden": false,
                         "import": true,
-                        "targetId": "ac72-81fa-ea32-15fe",
+                        "targetId": "3769-e91f-7da3-a8f0",
                         "type": "selectionEntry",
                         "constraints": [
                           {"id": "9ce3-92dc-cc8a-a790", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -24459,7 +24469,7 @@
                                 "id": "2a67-cc80-60f8-6458",
                                 "hidden": false,
                                 "import": true,
-                                "targetId": "ac72-81fa-ea32-15fe",
+                                "targetId": "3769-e91f-7da3-a8f0",
                                 "type": "selectionEntry",
                                 "constraints": [
                                   {"id": "e347-3fce-efbb-da30", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -24496,7 +24506,7 @@
                                 "id": "b158-359d-5c72-2cdb",
                                 "hidden": false,
                                 "import": true,
-                                "targetId": "ac72-81fa-ea32-15fe",
+                                "targetId": "3769-e91f-7da3-a8f0",
                                 "type": "selectionEntry",
                                 "constraints": [
                                   {"id": "a691-1a08-fa31-7f25", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -24628,7 +24638,7 @@
                                 "id": "9fbf-33aa-e858-cfc7",
                                 "hidden": false,
                                 "import": true,
-                                "targetId": "ac72-81fa-ea32-15fe",
+                                "targetId": "3769-e91f-7da3-a8f0",
                                 "type": "selectionEntry",
                                 "constraints": [
                                   {"id": "5c6f-26de-eb71-de70", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -24841,7 +24851,7 @@
                                 "id": "8513-89f9-d450-df70",
                                 "hidden": false,
                                 "import": true,
-                                "targetId": "ac72-81fa-ea32-15fe",
+                                "targetId": "3769-e91f-7da3-a8f0",
                                 "type": "selectionEntry",
                                 "constraints": [
                                   {"id": "6b82-6809-bcb2-1899", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -25133,7 +25143,7 @@
                                 "id": "f680-e865-a166-b52f",
                                 "hidden": false,
                                 "import": true,
-                                "targetId": "ac72-81fa-ea32-15fe",
+                                "targetId": "3769-e91f-7da3-a8f0",
                                 "type": "selectionEntry",
                                 "constraints": [
                                   {"id": "ce72-c1aa-e98a-f315", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -25184,7 +25194,7 @@
                                 "id": "ccc3-d377-b6fb-0c5d",
                                 "hidden": false,
                                 "import": true,
-                                "targetId": "ac72-81fa-ea32-15fe",
+                                "targetId": "3769-e91f-7da3-a8f0",
                                 "type": "selectionEntry",
                                 "constraints": [
                                   {"id": "64c8-71fa-3d4d-5297", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -27404,7 +27414,16 @@
           {"name": "Leader", "id": "f026-53a8-52fe-63a8", "hidden": false, "primary": false, "targetId": "1556-9b56-fba6-4370"}
         ],
         "constraints": [{"id": "84f4-787d-91a7-2404", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "max", "value": 1}],
-        "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 65}],
+        "costs": [
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
+          {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+          {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+          {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+          {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
+        ],
         "infoLinks": [
           {"name": "Leader", "id": "fd46-c438-bc82-f757", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {
@@ -27667,12 +27686,14 @@
           {"id": "22ac-a124-b2e6-63ca", "field": "selections", "includeChildSelections": true, "scope": "roster", "shared": true, "type": "max", "value": 3}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 95},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 105},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
-          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0}
+          {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
         ],
         "entryLinks": [
           {
@@ -31319,12 +31340,14 @@
           }
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 100},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 110},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
           {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
           {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+          {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+          {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0},
           {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 0},
           {"name": "Relic Fragments", "typeId": "0ece-6541-4662-ece2", "value": 0}
         ],
@@ -31452,7 +31475,7 @@
           {
             "field": "51b2-306e-1021-d207",
             "type": "set",
-            "value": 200,
+            "value": 210,
             "conditions": [
               {
                 "childId": "3f37-595a-56ef-4143",
@@ -33419,6 +33442,34 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Storm bolter",
+        "id": "3769-e91f-7da3-a8f0",
+        "comment": "S4",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [{"id": "32a3-b661-043d-d7ce", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "infoLinks": [{"name": "Rapid Fire", "id": "6222-f498-2490-aa2a", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Storm bolter",
+            "id": "9be4-c71a-1c56-2c9a",
+            "hidden": false,
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+              {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
+            ]
+          }
+        ]
       }
     ],
     "sharedSelectionEntryGroups": [
@@ -34637,7 +34688,7 @@
                 "id": "4af6-d927-2ccc-d6eb",
                 "hidden": false,
                 "import": true,
-                "targetId": "ac72-81fa-ea32-15fe",
+                "targetId": "3769-e91f-7da3-a8f0",
                 "type": "selectionEntry",
                 "constraints": [
                   {"id": "dfe5-a8d1-9b2e-8084-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -34842,7 +34893,7 @@
                 "id": "c142-cd00-2e55-e6ad",
                 "hidden": false,
                 "import": true,
-                "targetId": "ac72-81fa-ea32-15fe",
+                "targetId": "3769-e91f-7da3-a8f0",
                 "type": "selectionEntry",
                 "constraints": [
                   {"id": "9e4f-2fa1-6205-2d38-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -34877,7 +34928,7 @@
                 "id": "4274-b36b-2db7-3d6a",
                 "hidden": false,
                 "import": true,
-                "targetId": "ac72-81fa-ea32-15fe",
+                "targetId": "3769-e91f-7da3-a8f0",
                 "type": "selectionEntry",
                 "constraints": [
                   {"id": "9592-1987-151a-04c2-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -34925,7 +34976,7 @@
                 "id": "8c78-ad82-b339-73dc",
                 "hidden": false,
                 "import": true,
-                "targetId": "ac72-81fa-ea32-15fe",
+                "targetId": "3769-e91f-7da3-a8f0",
                 "type": "selectionEntry",
                 "constraints": [
                   {"id": "a034-8214-6669-4f52-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -34949,7 +35000,7 @@
                 "id": "f29b-8bb3-550c-1296",
                 "hidden": false,
                 "import": true,
-                "targetId": "ac72-81fa-ea32-15fe",
+                "targetId": "3769-e91f-7da3-a8f0",
                 "type": "selectionEntry",
                 "constraints": [
                   {"id": "3295-d4ea-7cd7-92bb-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -35062,7 +35113,7 @@
                 "id": "3c38-83c4-edd1-97b9",
                 "hidden": false,
                 "import": true,
-                "targetId": "ac72-81fa-ea32-15fe",
+                "targetId": "3769-e91f-7da3-a8f0",
                 "type": "selectionEntry",
                 "constraints": [
                   {"id": "7be2-7ddd-0cb7-be4b-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
