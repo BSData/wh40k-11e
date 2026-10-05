@@ -4000,7 +4000,7 @@
           {"id": "ddfe-4240-b638-eb55", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 6}
         ],
         "costs": [
-          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 75},
+          {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 70},
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
           {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
           {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
@@ -4037,8 +4037,9 @@
             "hidden": false,
             "targetId": "13b2-6518-dab3-7ea1",
             "type": "rule",
-            "modifiers": [{"field": "name", "type": "append", "value": 6}]
-          }
+            "modifiers": [{"field": "name", "type": "append", "value": "7"}]
+          },
+          {"name": "Combat Doctrines", "id": "e1e2-1581-bf5f-8951", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifierGroups": [
           {
@@ -4205,7 +4206,7 @@
         ],
         "profiles": [
           {
-            "name": "Black Templars Impulsor",
+            "name": "Impulsor",
             "id": "14d9-b559-444b-245",
             "hidden": false,
             "typeId": "c547-1836-d8a-ff4f",
@@ -4221,21 +4222,21 @@
             ]
           },
           {
-            "name": "Transport",
+            "name": "Impulsor",
             "id": "81d0-6092-93e0-d602",
             "hidden": false,
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
+            "typeId": "74f8-5443-9d6d-1f1e",
+            "typeName": "Transport",
             "characteristics": [
               {
-                "name": "Description",
-                "$text": "This model has a transport capacity of 7 TACTICUS or PHOBOS INFANTRY models. It cannot transport JUMP PACK models.",
-                "typeId": "9b8f-694b-e5e-b573"
+                "name": "Capacity",
+                "$text": "This model has a transport capacity of 7 Adeptus Astartes Infantry models. It cannot transport Terminator or Jump Pack models. Each Gravis model takes up the space of 2 models.",
+                "typeId": "30f2-be70-861d-1b84"
               }
             ]
           },
           {
-            "name": "Assault Vehicle",
+            "name": "Rapid Disembarkation",
             "id": "5acc-d822-413-23b4",
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
@@ -4243,7 +4244,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "Units can disembark from this Transport after it has Advanced. Units that do so count as having made a Normal move, and cannot declare a charge that turn.",
+                "$text": "In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark move.",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -4275,7 +4276,7 @@
             ],
             "selectionEntryGroups": [
               {
-                "name": "Option",
+                "name": "Wargear Option",
                 "id": "3ab0-ac18-e44d-42c1",
                 "hidden": false,
                 "constraints": [{"id": "ee7-6e40-6540-4d7e", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
@@ -4299,6 +4300,7 @@
                     "hidden": false,
                     "import": true,
                     "type": "upgrade",
+                    "infoLinks": [{"name": "Scouts 6\"", "id": "2dd4-fdf3-9ac0-a1a1", "hidden": false, "targetId": "08fb-4cb5-36fb-d638", "type": "rule"}],
                     "profiles": [
                       {
                         "name": "Orbital Comms Array [Aura]",
@@ -4306,13 +4308,7 @@
                         "hidden": false,
                         "typeId": "9cc3-6d83-4dd3-9b64",
                         "typeName": "Abilities",
-                        "characteristics": [
-                          {
-                            "name": "Description",
-                            "$text": "While a friendly Adeptus Astartes unit is within 6\" of the bearer, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP",
-                            "typeId": "9b8f-694b-e5e-b573"
-                          }
-                        ]
+                        "characteristics": [{"name": "Description", "$text": "This unit has Scouts 6\".", "typeId": "9b8f-694b-e5e-b573"}]
                       }
                     ]
                   },
@@ -4322,6 +4318,7 @@
                     "hidden": false,
                     "import": true,
                     "type": "upgrade",
+                    "modifiers": [{"affects": "profiles.Unit", "field": "55a7-5b54-c60d-11dc", "scope": "parent", "type": "set", "value": "5+"}],
                     "profiles": [
                       {
                         "name": "Shield Dome",
@@ -4329,39 +4326,7 @@
                         "hidden": false,
                         "typeId": "9cc3-6d83-4dd3-9b64",
                         "typeName": "Abilities",
-                        "characteristics": [{"name": "Description", "$text": "The bearer has a 5+ invulnerable save.", "typeId": "9b8f-694b-e5e-b573"}]
-                      }
-                    ]
-                  },
-                  {
-                    "name": "Ironhail Skytalon Array",
-                    "id": "18f4-1a36-c674-ad37",
-                    "hidden": false,
-                    "import": true,
-                    "type": "upgrade",
-                    "entryLinks": [
-                      {"name": "Weapon Modifications", "id": "3d5a-d5c9-d02c-f8a8", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
-                    ],
-                    "infoLinks": [
-                      {"name": "Sustained Hits", "id": "cbda-4f73-63ef-a351", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"},
-                      {"name": "Anti", "id": "14e4-5a98-3bf4-caba", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}
-                    ],
-                    "profiles": [
-                      {
-                        "name": "Ironhail Skytalon Array",
-                        "id": "3601-616b-f5af-7d29",
-                        "hidden": false,
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "characteristics": [
-                          {"name": "Range", "$text": "36\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "8", "typeId": "3bb-c35f-f54-fb08"},
-                          {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Anti-Fly 4+, Sustained Hits 1", "typeId": "7f1b-8591-2fcf-d01c"}
-                        ]
+                        "characteristics": [{"name": "Description", "$text": "This unit has 5+ InSv.", "typeId": "9b8f-694b-e5e-b573"}]
                       }
                     ]
                   }
@@ -4391,6 +4356,7 @@
                     "import": true,
                     "targetId": "395-4b75-b9b2-7a5c",
                     "type": "selectionEntry",
+                    "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 10}],
                     "entryLinks": [
                       {"name": "Weapon Modifications", "id": "88b6-828e-e7bd-97d4", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
                     ]
@@ -4408,49 +4374,59 @@
                 ],
                 "selectionEntries": [
                   {
-                    "name": "2 Fragstorm Grenade Launchers",
+                    "name": "Fragstorm Grenade Launchers",
                     "id": "54f5-c4a7-8eea-a435",
                     "hidden": false,
                     "import": true,
                     "type": "upgrade",
                     "entryLinks": [
+                      {"name": "Weapon Modifications", "id": "aab5-50a0-a7b2-f6b2", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                    ],
+                    "infoLinks": [{"name": "Blast", "id": "154d-594a-fa90-f0c4", "hidden": false, "targetId": "6c1f-1cf7-ff25-c99e", "type": "rule"}],
+                    "profiles": [
                       {
-                        "name": "Fragstorm grenade launcher",
-                        "id": "2375-7de9-e5d1-f8d2",
+                        "name": "Fragstorm Grenade Launchers",
+                        "id": "edf6-2573-0feb-986a",
                         "hidden": false,
-                        "import": true,
-                        "targetId": "2557-ebbd-6ea5-3785",
-                        "type": "selectionEntry",
-                        "constraints": [
-                          {"id": "614d-65ce-dc42-d434-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2},
-                          {"id": "614d-65ce-dc42-d434-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}
-                        ],
-                        "entryLinks": [
-                          {"name": "Weapon Modifications", "id": "b349-883d-ee6f-3e89", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "6", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Blast 2", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
                     ]
                   },
                   {
-                    "name": "2 Storm Bolters",
+                    "name": "Storm Bolters",
                     "id": "9242-224b-28ad-c3e2",
                     "hidden": false,
                     "import": true,
                     "type": "upgrade",
                     "entryLinks": [
+                      {"name": "Weapon Modifications", "id": "c428-dd69-8707-1c24", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                    ],
+                    "infoLinks": [{"name": "Rapid Fire", "id": "bd2a-6593-006b-5ff5", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}],
+                    "profiles": [
                       {
-                        "name": "Storm bolter",
-                        "id": "087d-0210-10cd-2471",
+                        "name": "Storm Bolters",
+                        "id": "0a75-facc-9d17-e8a7",
                         "hidden": false,
-                        "import": true,
-                        "targetId": "eb61-5cd0-5242-74cc",
-                        "type": "selectionEntry",
-                        "constraints": [
-                          {"id": "6226-52b1-5aec-06dd-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2},
-                          {"id": "6226-52b1-5aec-06dd-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}
-                        ],
-                        "entryLinks": [
-                          {"name": "Weapon Modifications", "id": "83a8-ed29-d4e3-692d", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "4", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Rapid Fire 4", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
                     ]
