@@ -121,7 +121,7 @@
         "type": "selectionEntry"
       },
       {
-        "name": "Death Company Marines with Bolt Rifles",
+        "name": "Death Company Marines with Bolt Rifles [Legends]",
         "id": "15ed-2cca-b373-a0a9",
         "hidden": false,
         "import": true,
@@ -178,6 +178,21 @@
           {
             "name": "Description",
             "$text": "In the Fight phase, when an enemy unit has fought, if this model was destroyed by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was engaged with an enemy warlord unit:\n\n- On a 2-3, that enemy unit suffers D3 mortal wounds.\n- On a 4-5, that enemy unit suffers 3 mortal wounds.\n- On a 6+, that enemy unit suffers D3+3 mortal wounds.",
+            "typeId": "9b8f-694b-e5e-b573"
+          }
+        ]
+      },
+      {
+        "name": "Black Rage",
+        "id": "f0a7-d2d9-34a1-8194",
+        "comment": "Legends",
+        "hidden": false,
+        "typeId": "9cc3-6d83-4dd3-9b64",
+        "typeName": "Abilities",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": " Each time a model in this unit makes an attack, you can re-roll the Hit roll. While this unit is not within 12\" of one or more friendly ^^**Chaplain**^^ models, it cannot be selected to Fall Back and the Objective Control characteristic of models in this unit is 0. \n\n",
             "typeId": "9b8f-694b-e5e-b573"
           }
         ]
@@ -299,7 +314,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to that roll if that model was engaged with an enemy unit with a T greater than or equal to this unit's T:\n\n\n- On a 4+, do not remove that model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
+                "$text": "In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to that roll if that model was engaged with an enemy unit with a T greater than or equal to this unit's T:\n\n- On a 4+, do not remove that model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -985,6 +1000,16 @@
           {"name": "Leader", "id": "545c-6a39-c9e6-fc83", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Combat Doctrines", "id": "4af0-d164-ba80-441c", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
+        "modifierGroups": [
+          {
+            "type": "and",
+            "conditions": [{"childId": "any", "field": "associations", "scope": "self", "shared": true, "type": "atLeast", "value": 1}],
+            "modifiers": [
+              {"affects": "group", "field": "add-info", "type": "add", "value": "5e10-6d62-2624-80a8"},
+              {"affects": "self.entries.group.recursive.profiles.Melee Weapons", "field": "2337-daa1-6682-b110", "scope": "parent", "type": "increment", "value": 1}
+            ]
+          }
+        ],
         "modifiers": [
           {
             "field": "hidden",
@@ -1285,7 +1310,6 @@
           {"name": "Warlord", "id": "802a-7b54-40b5-2354", "hidden": false, "import": true, "targetId": "caa-f869-3cbd-b48e", "type": "selectionEntry"}
         ],
         "infoLinks": [
-          {"name": "Invulnerable Save", "id": "3584-40d2-db5b-c34f", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
           {"name": "Leader", "id": "8b7c-ae2-3db9-bed5", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Combat Doctrines", "id": "d97c-d299-8ab6-351e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
@@ -1359,7 +1383,7 @@
               {"name": "W", "$text": "4", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
             ]
           },
           {
@@ -1555,10 +1579,9 @@
           {"name": "Warlord", "id": "6fd2-e3e3-ab6e-434", "hidden": false, "import": true, "targetId": "caa-f869-3cbd-b48e", "type": "selectionEntry"}
         ],
         "infoLinks": [
-          {"name": "Invulnerable Save", "id": "1966-207a-a44-16ce", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"},
           {"name": "Leader", "id": "57c2-782a-6f70-5625", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
           {"name": "Combat Doctrines", "id": "3fd2-62af-449d-b38f", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Black Rage", "id": "14bd-78ae-f114-f933", "hidden": false, "targetId": "3e0a-31f-8be-e293", "type": "profile"}
+          {"name": "Black Rage", "id": "14bd-78ae-f114-f933", "hidden": false, "targetId": "f0a7-d2d9-34a1-8194", "type": "profile"}
         ],
         "modifiers": [
           {
@@ -1630,7 +1653,7 @@
               {"name": "W", "$text": "4", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
             ]
           },
           {
@@ -2224,7 +2247,7 @@
           }
         ],
         "infoLinks": [
-          {"name": "Black Rage", "id": "acba-458-7f70-b92c", "hidden": false, "targetId": "3e0a-31f-8be-e293", "type": "profile"},
+          {"name": "Black Rage", "id": "acba-458-7f70-b92c", "hidden": false, "targetId": "f0a7-d2d9-34a1-8194", "type": "profile"},
           {
             "name": "Feel No Pain",
             "id": "9e27-2f91-455e-4f15",
@@ -4964,8 +4987,7 @@
         ],
         "infoLinks": [
           {"name": "Leader", "id": "c666-368d-37ab-2510", "hidden": false, "targetId": "b4dd-3e1f-41cb-218f", "type": "rule"},
-          {"name": "Combat Doctrines", "id": "3b9e-5118-488f-c7d1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Invulnerable Save", "id": "a660-a094-883b-fbc", "hidden": false, "targetId": "db19-dee7-9530-ef0e", "type": "profile"}
+          {"name": "Combat Doctrines", "id": "3b9e-5118-488f-c7d1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
         "modifiers": [
           {
@@ -5020,7 +5042,7 @@
               {"name": "W", "$text": "6", "typeId": "750a-a2ec-90d3-21fe"},
               {"name": "LD", "$text": "6+", "typeId": "58d2-b879-49c7-43bc"},
               {"name": "OC", "$text": "1", "typeId": "bef7-942a-1a23-59f8"},
-              {"name": "InSv", "$text": "", "typeId": "55a7-5b54-c60d-11dc"}
+              {"name": "InSv", "$text": "4+", "typeId": "55a7-5b54-c60d-11dc"}
             ]
           },
           {
@@ -7111,6 +7133,14 @@
                 "conditions": [{"childId": "2dbf-4d49-5d74-85c9", "field": "selections", "includeChildSelections": true, "scope": "self", "shared": true, "type": "greaterThan", "value": 50}]
               }
             ]
+          },
+          {
+            "type": "and",
+            "conditions": [{"childId": "any", "field": "associations", "scope": "self", "shared": true, "type": "atLeast", "value": 1}],
+            "modifiers": [
+              {"affects": "group", "field": "add-info", "type": "add", "value": "5e10-6d62-2624-80a8"},
+              {"affects": "self.entries.group.recursive.profiles.Melee Weapons", "field": "41a0-1301-112a-e2f2", "scope": "parent", "type": "decrement", "value": 1}
+            ]
           }
         ],
         "modifiers": [
@@ -8543,7 +8573,6 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "6+"}]
           },
-          {"name": "Scouts 6\"", "id": "88f2-8100-1c5a-0665", "hidden": false, "targetId": "08fb-4cb5-36fb-d638", "type": "rule"},
           {"name": "Death Vision of Sanguinius", "id": "30ab-05df-9efc-ab01", "hidden": false, "targetId": "b276-0bcd-8baf-3c14", "type": "profile"},
           {"name": "Combat Doctrines", "id": "4ea8-4592-c505-d040", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
         ],
@@ -8677,7 +8706,8 @@
                 "value": 1
               }
             ]
-          }
+          },
+          {"affects": "group", "field": "add-info", "type": "add", "value": "08fb-4cb5-36fb-d638"}
         ],
         "profiles": [
           {
@@ -11235,7 +11265,7 @@
             "modifiers": [{"field": "name", "type": "append", "value": "6+"}]
           },
           {"name": "Combat Doctrines", "id": "aa72-c68a-39d7-d0e6", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
-          {"name": "Black Rage", "id": "4f37-522d-e206-9b8e", "hidden": false, "targetId": "3e0a-31f-8be-e293", "type": "profile"},
+          {"name": "Black Rage", "id": "4f37-522d-e206-9b8e", "hidden": false, "targetId": "f0a7-d2d9-34a1-8194", "type": "profile"},
           {"name": "Deep Strike", "id": "3d2e-7602-e87f-1f73", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"}
         ],
         "modifierGroups": [
