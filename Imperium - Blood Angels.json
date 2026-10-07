@@ -10405,7 +10405,7 @@
                 "id": "b62d-bfee-e5d1-fcaf",
                 "hidden": false,
                 "import": true,
-                "sortIndex": 3,
+                "sortIndex": 4,
                 "type": "model",
                 "constraints": [{"id": "d7f2-8219-f995-0bf4", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
                 "entryLinks": [
@@ -10519,7 +10519,7 @@
                 "id": "ac37-ff8c-03e1-afe1",
                 "hidden": false,
                 "import": true,
-                "sortIndex": 4,
+                "sortIndex": 5,
                 "type": "model",
                 "constraints": [{"id": "3536-7f35-9308-1da4", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}],
                 "entryLinks": [{"name": "Replace Pistol", "id": "c16d-7661-c934-6a12", "hidden": false, "targetId": "8b60-76dc-a440-ae23", "type": "selectionEntryGroup"}],
@@ -10707,6 +10707,121 @@
                       {
                         "name": "Combat blade",
                         "id": "97b6-458f-297c-b13a",
+                        "hidden": false,
+                        "typeId": "8a40-4aaa-c780-9046",
+                        "typeName": "Melee Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                          {"name": "A", "$text": "3", "typeId": "2337-daa1-6682-b110"},
+                          {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
+                          {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+                          {"name": "AP", "$text": "0", "typeId": "41a0-1301-112a-e2f2"},
+                          {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+                          {"name": "Keywords", "$text": "", "typeId": "893f-9000-ccf7-648e"}
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Death Company Marine w/ Bolt Rifle and Grenade Launcher",
+                "id": "7866-1e19-381c-9c5e",
+                "hidden": false,
+                "import": true,
+                "sortIndex": 3,
+                "type": "model",
+                "constraints": [{"id": "fc87-df45-8c12-49d3", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "entryLinks": [
+                  {
+                    "name": "Bolt Rifle",
+                    "id": "d1dd-e1ea-ff6e-4b07",
+                    "collective": true,
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "6155-c404-a228-cb72",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "0cd0-7e44-d4d3-c08f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "a4e6-f8ba-b550-dbf5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ]
+                  },
+                  {
+                    "name": "Heavy Bolt Pistol",
+                    "id": "a987-1175-a97c-677c",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "83a1-feb8-d495-aa28",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "db05-6981-f5ff-4441", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "cef1-9912-6a86-c4c7", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ]
+                  },
+                  {
+                    "name": "Grenade Launcher",
+                    "id": "1432-09d1-3a7f-7484",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "ef0a-b1da-8926-b298",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "b6a5-4b41-3240-392e-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "b6a5-4b41-3240-392e-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "modifiers": [
+                      {
+                        "field": "error",
+                        "type": "add",
+                        "value": "Max 1 {this} per 5 models",
+                        "conditionGroups": [
+                          {
+                            "type": "and",
+                            "conditions": [
+                              {
+                                "id": "aeb1-5e06-81d4-2ed7",
+                                "childId": "edee-48a2-1e8a-2539",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "3825-ac3a-75ec-fa0d",
+                                "shared": true,
+                                "type": "lessThan",
+                                "value": 10
+                              },
+                              {
+                                "id": "e99c-e62e-4f2d-beb1",
+                                "childId": "ef0a-b1da-8926-b298",
+                                "childName": "Grenade Launcher",
+                                "field": "selections",
+                                "includeChildSelections": true,
+                                "scope": "3825-ac3a-75ec-fa0d",
+                                "shared": true,
+                                "type": "greaterThan",
+                                "value": 1
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "selectionEntries": [
+                  {
+                    "name": "Combat blade",
+                    "id": "626b-c218-27dd-afb0",
+                    "collective": true,
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "constraints": [
+                      {"id": "f5f6-6d66-395c-8da2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "6a68-5cdb-1e8f-5817", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "profiles": [
+                      {
+                        "name": "Combat blade",
+                        "id": "b841-6b1b-7b35-2fd1",
                         "hidden": false,
                         "typeId": "8a40-4aaa-c780-9046",
                         "typeName": "Melee Weapons",
@@ -11624,7 +11739,7 @@
       {
         "name": "Replace Pistol",
         "id": "8b60-76dc-a440-ae23",
-        "defaultSelectionEntryId": "a3b1-a4d1-6857-384c",
+        "defaultSelectionEntryId": "7054-eb96-3614-542a",
         "hidden": false,
         "constraints": [
           {"id": "c664-21c1-db6b-5cbf-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -11657,35 +11772,8 @@
             "targetId": "25c2-104f-fa0c-809e",
             "type": "selectionEntry",
             "categoryLinks": [{"name": "Pistol replacement", "id": "4dca-64f5-dc6a-9fb4", "hidden": false, "primary": false, "targetId": "f06c-dfec-c720-57f1"}]
-          }
-        ],
-        "selectionEntries": [
-          {
-            "name": "Heavy Bolt Pistol",
-            "id": "a3b1-a4d1-6857-384c",
-            "hidden": false,
-            "import": true,
-            "type": "upgrade",
-            "infoLinks": [{"name": "Pistol", "id": "84bb-668e-21e4-d52d", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}],
-            "profiles": [
-              {
-                "name": "Heavy Bolt Pistol",
-                "id": "953a-4af0-c692-02ca",
-                "hidden": false,
-                "typeId": "f77d-b953-8fa4-b762",
-                "typeName": "Ranged Weapons",
-                "characteristics": [
-                  {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
-                  {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
-                  {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                  {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                  {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
-                  {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                  {"name": "Keywords", "$text": "Pistol", "typeId": "7f1b-8591-2fcf-d01c"}
-                ]
-              }
-            ]
-          }
+          },
+          {"name": "Heavy Bolt Pistol", "id": "7054-eb96-3614-542a", "hidden": false, "import": true, "targetId": "83a1-feb8-d495-aa28", "type": "selectionEntry"}
         ]
       }
     ]
