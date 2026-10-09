@@ -68921,58 +68921,6 @@
         "type": "upgrade",
         "categoryLinks": [{"name": "Ranged Weapon", "id": "2416-956b-970b-40b2", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"}],
         "infoLinks": [{"name": "Blast", "id": "40f7-9b14-e3f8-1a75", "hidden": false, "targetId": "6c1f-1cf7-ff25-c99e", "type": "rule"}],
-        "modifiers": [
-          {
-            "field": "error",
-            "type": "add",
-            "value": "Max 1 {this} per 3 models",
-            "conditionGroups": [
-              {
-                "type": "or",
-                "conditionGroups": [
-                  {
-                    "type": "and",
-                    "conditions": [
-                      {
-                        "childId": "ca2b-3d9a-e739-cb21",
-                        "field": "selections",
-                        "includeChildForces": true,
-                        "includeChildSelections": true,
-                        "scope": "212d-f302-aaaf-5c12",
-                        "shared": true,
-                        "type": "greaterThan",
-                        "value": 1
-                      },
-                      {
-                        "childId": "any",
-                        "field": "selections",
-                        "includeChildForces": true,
-                        "includeChildSelections": true,
-                        "scope": "212d-f302-aaaf-5c12",
-                        "shared": true,
-                        "type": "lessThan",
-                        "value": 6
-                      }
-                    ]
-                  }
-                ],
-                "conditions": [
-                  {
-                    "childId": "ca2b-3d9a-e739-cb21",
-                    "childName": "Astartes grenade launcher",
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "scope": "212d-f302-aaaf-5c12",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 3
-                  }
-                ]
-              }
-            ]
-          }
-        ],
         "profiles": [
           {
             "name": "➤ Astartes grenade launcher - krak",
@@ -76137,6 +76085,7 @@
       {
         "name": "Knives and Fists",
         "id": "b552-e2fb-4634-b098",
+        "collective": true,
         "hidden": false,
         "import": true,
         "type": "upgrade",
@@ -76519,7 +76468,7 @@
         "id": "9c0c-18cf-0037-d2a2",
         "hidden": false,
         "import": true,
-        "type": "upgrade",
+        "type": "unit",
         "categoryLinks": [
           {"name": "Mounted", "id": "4a47-5a17-0e89-f1f3", "hidden": false, "primary": true, "targetId": "14a0-40c9-2748-ae6e"},
           {"name": "Vehicle", "id": "e8fc-6985-f33d-eebe", "hidden": false, "primary": false, "targetId": "dbd4-63-af05-998"},
@@ -76700,6 +76649,7 @@
           {
             "name": "Invader ATVs",
             "id": "266c-3f4c-4aed-9472",
+            "defaultSelectionEntryId": "8d7b-3dfe-7b91-2490",
             "hidden": false,
             "constraints": [
               {"id": "b75b-f111-762d-6bca", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2},
