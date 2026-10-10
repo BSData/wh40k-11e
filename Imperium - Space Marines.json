@@ -68948,58 +68948,6 @@
         "type": "upgrade",
         "categoryLinks": [{"name": "Ranged Weapon", "id": "2416-956b-970b-40b2", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"}],
         "infoLinks": [{"name": "Blast", "id": "40f7-9b14-e3f8-1a75", "hidden": false, "targetId": "6c1f-1cf7-ff25-c99e", "type": "rule"}],
-        "modifiers": [
-          {
-            "field": "error",
-            "type": "add",
-            "value": "Max 1 {this} per 3 models",
-            "conditionGroups": [
-              {
-                "type": "or",
-                "conditionGroups": [
-                  {
-                    "type": "and",
-                    "conditions": [
-                      {
-                        "childId": "ca2b-3d9a-e739-cb21",
-                        "field": "selections",
-                        "includeChildForces": true,
-                        "includeChildSelections": true,
-                        "scope": "212d-f302-aaaf-5c12",
-                        "shared": true,
-                        "type": "greaterThan",
-                        "value": 1
-                      },
-                      {
-                        "childId": "any",
-                        "field": "selections",
-                        "includeChildForces": true,
-                        "includeChildSelections": true,
-                        "scope": "212d-f302-aaaf-5c12",
-                        "shared": true,
-                        "type": "lessThan",
-                        "value": 6
-                      }
-                    ]
-                  }
-                ],
-                "conditions": [
-                  {
-                    "childId": "ca2b-3d9a-e739-cb21",
-                    "childName": "Astartes grenade launcher",
-                    "field": "selections",
-                    "includeChildForces": true,
-                    "includeChildSelections": true,
-                    "scope": "212d-f302-aaaf-5c12",
-                    "shared": true,
-                    "type": "atLeast",
-                    "value": 3
-                  }
-                ]
-              }
-            ]
-          }
-        ],
         "profiles": [
           {
             "name": "➤ Astartes grenade launcher - krak",
@@ -76164,6 +76112,7 @@
       {
         "name": "Knives and Fists",
         "id": "b552-e2fb-4634-b098",
+        "collective": true,
         "hidden": false,
         "import": true,
         "type": "upgrade",
@@ -76546,7 +76495,7 @@
         "id": "9c0c-18cf-0037-d2a2",
         "hidden": false,
         "import": true,
-        "type": "upgrade",
+        "type": "unit",
         "categoryLinks": [
           {"name": "Mounted", "id": "4a47-5a17-0e89-f1f3", "hidden": false, "primary": true, "targetId": "14a0-40c9-2748-ae6e"},
           {"name": "Vehicle", "id": "e8fc-6985-f33d-eebe", "hidden": false, "primary": false, "targetId": "dbd4-63-af05-998"},
@@ -76727,6 +76676,7 @@
           {
             "name": "Invader ATVs",
             "id": "266c-3f4c-4aed-9472",
+            "defaultSelectionEntryId": "8d7b-3dfe-7b91-2490",
             "hidden": false,
             "constraints": [
               {"id": "b75b-f111-762d-6bca", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2},
@@ -76986,7 +76936,7 @@
         "type": "upgrade",
         "infoLinks": [
           {"name": "Twin-linked", "id": "b436-f117-3f38-c89a", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"},
-          {"name": "Devastating Wounds", "id": "1075-602b-e9ef-3963", "hidden": false, "targetId": "be1e-ac8e-1e2c-3528", "type": "rule"}
+          {"name": "Sustained Hits", "id": "1075-602b-e9ef-3963", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}
         ],
         "profiles": [
           {
@@ -77000,7 +76950,7 @@
               {"name": "A", "$text": "6", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
               {"name": "S", "$text": "6", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+              {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Sustained Hits 1, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
@@ -77182,6 +77132,96 @@
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Rapid Fire 2, Sustained Hits 1", "typeId": "7f1b-8591-2fcf-d01c"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Twin lascannon",
+        "id": "2d53-dff4-e01f-bef4",
+        "comment": "Damage D3+3",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Twin-linked", "id": "fbd2-e942-26cb-7b2a", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Twin lascannon",
+            "id": "99ec-a2b1-66de-543e",
+            "hidden": false,
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "9896-9419-16a1-92fc"},
+              {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "12", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
+              {"name": "D", "$text": "D3+3", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Combi-weapon",
+        "id": "d8dd-6b2d-8cee-0db0",
+        "comment": "New profile",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Blast", "id": "8489-819d-ce63-144f", "hidden": false, "targetId": "6c1f-1cf7-ff25-c99e", "type": "rule"},
+          {"name": "Torrent", "id": "af88-19d5-145d-da6d", "hidden": false, "targetId": "5edf-d619-23e0-9b56", "type": "rule"},
+          {"name": "Melta", "id": "02ac-07e8-8d2e-8d1e", "hidden": false, "targetId": "7cdb-fb99-44a9-8849", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "➤ Combi-weapon (Damnatus)",
+            "id": "f605-f2a3-d7ce-f0f8",
+            "hidden": false,
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
+              {"name": "A", "$text": "1", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "9", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
+              {"name": "D", "$text": "D3+2", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "\n", "typeId": "7f1b-8591-2fcf-d01c"}
+            ]
+          },
+          {
+            "name": "➤ Combi-weapon (Infernus)",
+            "id": "c34b-6ae6-3878-a5f8",
+            "hidden": false,
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
+              {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "-", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "Blast 1, Torrent", "typeId": "7f1b-8591-2fcf-d01c"}
+            ]
+          },
+          {
+            "name": "➤ Combi-weapon (Purgatus)",
+            "id": "23a8-d042-28ae-e312",
+            "hidden": false,
+            "typeId": "f77d-b953-8fa4-b762",
+            "typeName": "Ranged Weapons",
+            "characteristics": [
+              {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
+              {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "S", "$text": "7", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
+              {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "Melta 2", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
