@@ -43851,20 +43851,6 @@
                       {"id": "0214-d2fb-d000-0774-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
                       {"id": "0214-d2fb-d000-0774-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
                     ],
-                    "modifiers": [
-                      {
-                        "field": "0214-d2fb-d000-0774-min",
-                        "type": "set",
-                        "value": 2,
-                        "conditions": [{"childId": "3b28-a84a-639d-8be5", "field": "selections", "scope": "parent", "shared": true, "type": "lessThan", "value": 1}]
-                      },
-                      {
-                        "field": "0214-d2fb-d000-0774-max",
-                        "type": "set",
-                        "value": 2,
-                        "conditions": [{"childId": "3b28-a84a-639d-8be5", "field": "selections", "scope": "parent", "shared": true, "type": "lessThan", "value": 1}]
-                      }
-                    ],
                     "selectionEntries": [
                       {
                         "name": "Twin torturer's tools",
@@ -43877,121 +43863,133 @@
                         "entryLinks": [
                           {"name": "Weapon Modifications", "id": "752b-9f6c-4258-11f9", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
                         ],
-                        "infoLinks": [
-                          {"name": "Anti", "id": "3f14-4ff8-559a-f243", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"},
-                          {"name": "Twin Torturer's Tools", "id": "91f4-b-f1c0-aa4", "hidden": false, "targetId": "efd8-d45e-b5e-6fe9", "type": "profile"}
-                        ]
-                      }
-                    ],
-                    "selectionEntryGroups": [
-                      {
-                        "name": "Ranged Weapon",
-                        "id": "933e-eac4-95a9-d4d9",
-                        "hidden": false,
-                        "constraints": [{"id": "26c8-e5e1-2297-5625", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
-                        "entryLinks": [
-                          {
-                            "name": "Torturer's tool",
-                            "id": "aa43-7dde-bd80-a2f7",
-                            "hidden": false,
-                            "import": true,
-                            "targetId": "fa8c-adcd-1029-934d",
-                            "type": "selectionEntry",
-                            "entryLinks": [
-                              {"name": "Weapon Modifications", "id": "1944-8672-41cd-e7df", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
-                            ]
-                          },
-                          {
-                            "name": "Hexrifle",
-                            "id": "bebb-a94f-5c28-9384",
-                            "hidden": false,
-                            "import": true,
-                            "targetId": "9cde-e06a-76fd-4ed7",
-                            "type": "selectionEntry",
-                            "entryLinks": [
-                              {"name": "Weapon Modifications", "id": "05a2-b9f5-8f5b-a0df", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
-                            ]
-                          },
-                          {
-                            "name": "Liquifier gun",
-                            "id": "538c-7a06-2bfd-ac92",
-                            "hidden": false,
-                            "import": true,
-                            "targetId": "a2a7-dca6-1aed-539d",
-                            "type": "selectionEntry",
-                            "entryLinks": [
-                              {"name": "Weapon Modifications", "id": "a392-1c05-07b6-6d07", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
-                            ]
-                          },
-                          {
-                            "name": "Ossefactor",
-                            "id": "6306-67b2-e496-90b7",
-                            "hidden": false,
-                            "import": true,
-                            "targetId": "8956-e04d-22be-a262",
-                            "type": "selectionEntry",
-                            "entryLinks": [
-                              {"name": "Weapon Modifications", "id": "dae8-591f-173f-533b", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
-                            ]
-                          },
-                          {
-                            "name": "Stinger pistol",
-                            "id": "6fd7-f37d-62c4-4912",
-                            "hidden": false,
-                            "import": true,
-                            "targetId": "21bc-7a5c-2890-9c5e",
-                            "type": "selectionEntry",
-                            "entryLinks": [
-                              {"name": "Weapon Modifications", "id": "9b00-1a0c-d88e-ee86", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
-                            ]
-                          }
-                        ]
+                        "infoLinks": [{"name": "Twin Torturer's Tools", "id": "91f4-b-f1c0-aa4", "hidden": false, "targetId": "efd8-d45e-b5e-6fe9", "type": "profile"}]
                       },
                       {
-                        "name": "Melee Weapon",
-                        "id": "785c-b40c-8fda-d182",
+                        "name": "Alternative weapon options",
+                        "id": "ba08-6388-37ae-9adb",
                         "hidden": false,
-                        "constraints": [{"id": "770c-2d85-3e41-3852", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
-                        "entryLinks": [
+                        "import": true,
+                        "type": "upgrade",
+                        "constraints": [{"id": "88f4-662d-fc21-364f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                        "selectionEntryGroups": [
                           {
-                            "name": "Torturer's tool",
-                            "id": "279f-0b29-8de1-ac3c",
+                            "name": "Melee Weapon",
+                            "id": "785c-b40c-8fda-d182",
+                            "defaultSelectionEntryId": "none",
                             "hidden": false,
-                            "import": true,
-                            "targetId": "fa8c-adcd-1029-934d",
-                            "type": "selectionEntry",
-                            "entryLinks": [
-                              {"name": "Weapon Modifications", "id": "f7a1-93bd-4154-d748", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
-                            ]
-                          }
-                        ],
-                        "selectionEntries": [
-                          {
-                            "name": "Power weapon",
-                            "id": "6603-7cfe-6fa3-165a",
-                            "hidden": false,
-                            "import": true,
-                            "type": "upgrade",
-                            "constraints": [{"id": "51be-f982-fd03-ad06-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
-                            "entryLinks": [
-                              {"name": "Weapon Modifications", "id": "3821-5db5-661b-1853", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                            "constraints": [
+                              {"id": "677c-e0f9-e1c3-7055", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                              {"id": "770c-2d85-3e41-3852", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
                             ],
-                            "infoLinks": [{"name": "Anti", "id": "9010-4207-521e-e16e", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}],
-                            "profiles": [
+                            "entryLinks": [
+                              {
+                                "name": "Torturer's tool",
+                                "id": "279f-0b29-8de1-ac3c",
+                                "hidden": false,
+                                "import": true,
+                                "targetId": "fa8c-adcd-1029-934d",
+                                "type": "selectionEntry",
+                                "entryLinks": [
+                                  {"name": "Weapon Modifications", "id": "f7a1-93bd-4154-d748", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                                ]
+                              }
+                            ],
+                            "selectionEntries": [
                               {
                                 "name": "Power weapon",
-                                "id": "5693-e0ef-685c-27da",
+                                "id": "6603-7cfe-6fa3-165a",
                                 "hidden": false,
-                                "typeId": "8a40-4aaa-c780-9046",
-                                "typeName": "Melee Weapons",
-                                "characteristics": [
-                                  {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
-                                  {"name": "A", "$text": "3", "typeId": "2337-daa1-6682-b110"},
-                                  {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
-                                  {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
-                                  {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
-                                  {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
-                                  {"name": "Keywords", "$text": "Anti-Infantry 3+", "typeId": "893f-9000-ccf7-648e"}
+                                "import": true,
+                                "type": "upgrade",
+                                "constraints": [{"id": "51be-f982-fd03-ad06-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                                "entryLinks": [
+                                  {"name": "Weapon Modifications", "id": "3821-5db5-661b-1853", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                                ],
+                                "profiles": [
+                                  {
+                                    "name": "Power weapon",
+                                    "id": "5693-e0ef-685c-27da",
+                                    "hidden": false,
+                                    "typeId": "8a40-4aaa-c780-9046",
+                                    "typeName": "Melee Weapons",
+                                    "characteristics": [
+                                      {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
+                                      {"name": "A", "$text": "3", "typeId": "2337-daa1-6682-b110"},
+                                      {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
+                                      {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
+                                      {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
+                                      {"name": "D", "$text": "1", "typeId": "3254-9fe6-d824-513e"},
+                                      {"name": "Keywords", "$text": "Anti-Infantry 3+", "typeId": "893f-9000-ccf7-648e"}
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Ranged Weapon",
+                            "id": "933e-eac4-95a9-d4d9",
+                            "defaultSelectionEntryId": "none",
+                            "hidden": false,
+                            "constraints": [
+                              {"id": "dc2d-9417-d786-bc78", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                              {"id": "26c8-e5e1-2297-5625", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                            ],
+                            "entryLinks": [
+                              {
+                                "name": "Torturer's tool",
+                                "id": "aa43-7dde-bd80-a2f7",
+                                "hidden": false,
+                                "import": true,
+                                "targetId": "fa8c-adcd-1029-934d",
+                                "type": "selectionEntry",
+                                "entryLinks": [
+                                  {"name": "Weapon Modifications", "id": "1944-8672-41cd-e7df", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                                ]
+                              },
+                              {
+                                "name": "Hexrifle",
+                                "id": "bebb-a94f-5c28-9384",
+                                "hidden": false,
+                                "import": true,
+                                "targetId": "9cde-e06a-76fd-4ed7",
+                                "type": "selectionEntry",
+                                "entryLinks": [
+                                  {"name": "Weapon Modifications", "id": "05a2-b9f5-8f5b-a0df", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                                ]
+                              },
+                              {
+                                "name": "Liquifier gun",
+                                "id": "538c-7a06-2bfd-ac92",
+                                "hidden": false,
+                                "import": true,
+                                "targetId": "a2a7-dca6-1aed-539d",
+                                "type": "selectionEntry",
+                                "entryLinks": [
+                                  {"name": "Weapon Modifications", "id": "a392-1c05-07b6-6d07", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                                ]
+                              },
+                              {
+                                "name": "Ossefactor",
+                                "id": "6306-67b2-e496-90b7",
+                                "hidden": false,
+                                "import": true,
+                                "targetId": "8956-e04d-22be-a262",
+                                "type": "selectionEntry",
+                                "entryLinks": [
+                                  {"name": "Weapon Modifications", "id": "dae8-591f-173f-533b", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
+                                ]
+                              },
+                              {
+                                "name": "Stinger pistol",
+                                "id": "6fd7-f37d-62c4-4912",
+                                "hidden": false,
+                                "import": true,
+                                "targetId": "21bc-7a5c-2890-9c5e",
+                                "type": "selectionEntry",
+                                "entryLinks": [
+                                  {"name": "Weapon Modifications", "id": "9b00-1a0c-d88e-ee86", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
                                 ]
                               }
                             ]
@@ -66955,7 +66953,6 @@
         "constraints": [
           {"id": "b453-8e13-1240-7bc3", "field": "selections", "includeChildSelections": true, "scope": "19dd-6790-5ec9-7d3c", "shared": true, "type": "max", "value": 1}
         ],
-        "infoLinks": [{"name": "Anti", "id": "4c49-dca9-6100-514e", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}],
         "profiles": [
           {
             "name": "Torturer's tool",
@@ -67825,10 +67822,6 @@
         "import": true,
         "type": "upgrade",
         "constraints": [{"id": "7075-192c-b444-3a1d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-        "infoLinks": [
-          {"name": "Heavy", "id": "b9ae-9421-2d72-8cad", "hidden": false, "targetId": "1202-10a8-78e9-4c67", "type": "rule"},
-          {"name": "Precision", "id": "a0e7-e8c5-1be2-df93", "hidden": false, "targetId": "9143-31ae-e0a6-6007", "type": "rule"}
-        ],
         "modifiers": [
           {
             "field": "error",
@@ -67897,10 +67890,6 @@
         "type": "upgrade",
         "categoryLinks": [{"name": "Attacks Dx Weapon", "id": "23e0-59aa-5c7f-7ebe", "hidden": false, "primary": false, "targetId": "e993-e086-6de1-12af"}],
         "constraints": [{"id": "f1e4-840c-68c7-5528-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-        "infoLinks": [
-          {"name": "Torrent", "id": "181f-b001-d86a-f863", "hidden": false, "targetId": "5edf-d619-23e0-9b56", "type": "rule"},
-          {"name": "Anti", "id": "74d5-0615-fff1-0d9d", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}
-        ],
         "modifiers": [
           {
             "field": "error",
@@ -67968,10 +67957,6 @@
         "import": true,
         "type": "upgrade",
         "constraints": [{"id": "cd95-0fb4-61ab-7bd2", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-        "infoLinks": [
-          {"name": "Anti", "id": "6cde-1df1-f5d4-0684", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"},
-          {"name": "Devastating Wounds", "id": "da98-f77f-0560-33d4", "hidden": false, "targetId": "be1e-ac8e-1e2c-3528", "type": "rule"}
-        ],
         "modifiers": [
           {
             "field": "error",
@@ -68039,10 +68024,6 @@
         "import": true,
         "type": "upgrade",
         "constraints": [{"id": "d3e1-e951-14a4-bc37-max", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}],
-        "infoLinks": [
-          {"name": "Anti", "id": "1462-4dbb-3453-b44a", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"},
-          {"name": "Pistol", "id": "1f75-e0e7-70e3-4b29", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}
-        ],
         "modifiers": [
           {
             "field": "error",
