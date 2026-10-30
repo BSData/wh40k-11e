@@ -74122,8 +74122,14 @@
             "field": "fae1-ac00-6e4f-7ee5",
             "type": "set",
             "value": 2,
-            "conditions": [
-              {"childId": "e4d8-c6a1-7c23-ae25", "field": "selections", "includeChildSelections": true, "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {"childId": "e4d8-c6a1-7c23-ae25", "field": "selections", "includeChildSelections": true, "scope": "parent", "shared": true, "type": "instanceOf", "value": 1},
+                  {"childId": "e4d8-c6a1-7c23-ae25", "field": "selections", "includeChildSelections": true, "scope": "parent", "shared": true, "type": "atLeast", "value": 1}
+                ]
+              }
             ]
           }
         ],
