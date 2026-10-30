@@ -59840,7 +59840,7 @@
                 ]
               },
               {
-                "name": "Godhammer Lascannons",
+                "name": "Godhammer Lascannon",
                 "id": "7582-e76e-f684-c917",
                 "hidden": false,
                 "import": true,
@@ -64163,7 +64163,7 @@
                 ]
               },
               {
-                "name": "Godhammer Lascannons",
+                "name": "Godhammer Lascannon",
                 "id": "405c-e8ef-3a09-6f0c",
                 "hidden": false,
                 "import": true,
@@ -103766,7 +103766,7 @@
               {"name": "Diplomatic Power", "typeId": "4d7c-04b6-8a79-837f", "value": 0},
               {"name": "Military Power", "typeId": "1cbe-d9c9-86a8-2d41", "value": 0}
             ],
-            "infoLinks": [{"name": "Feel No Pain", "id": "2864-f22f-f5a9-adc2", "hidden": false, "targetId": "9bf4-280f-bbe2-6fbb", "type": "rule"}],
+            "infoLinks": [{"name": "Feel No Pain 4+*", "id": "2864-f22f-f5a9-adc2", "hidden": false, "targetId": "699c-55ed-7fee-65ab", "type": "rule"}],
             "modifiers": [
               {
                 "field": "hidden",
@@ -103790,7 +103790,8 @@
                 "type": "set",
                 "value": 2,
                 "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-              }
+              },
+              {"affects": "associations.entries", "field": "add-info", "scope": "root-entry", "type": "add", "value": "9258-3a36-5e40-f185"}
             ],
             "profiles": [
               {
@@ -103886,18 +103887,19 @@
                 "type": "and",
                 "modifiers": [
                   {
-                    "affects": "self.entries.recursive.profiles.Melee Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
                     "field": "ab33-d393-96ce-ccba",
                     "join": ", ",
-                    "scope": "model-or-unit",
+                    "scope": "root-entry-self",
                     "type": "increment",
                     "value": 2
                   },
                   {
-                    "affects": "self.entries.recursive.profiles.Melee Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
                     "field": "annotation",
                     "join": ", ",
-                    "scope": "model-or-unit",
+                    "scope": "root-entry-self",
+                    "skipIfPresent": "Deadly Predators",
                     "type": "append",
                     "value": "Deadly Predators"
                   }
@@ -104553,7 +104555,6 @@
                   {"name": "Diplomatic Power", "typeId": "4d7c-04b6-8a79-837f", "value": 0},
                   {"name": "Military Power", "typeId": "1cbe-d9c9-86a8-2d41", "value": 0}
                 ],
-                "infoLinks": [{"name": "Sustained Hits", "id": "4d4a-2e8d-18af-b2f9", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}],
                 "modifierGroups": [
                   {
                     "type": "and",
@@ -104593,7 +104594,39 @@
                         "value": 2
                       },
                       {"affects": "self.entries.recursive.profiles.Melee Weapons", "arg": "+0", "field": "2337-daa1-6682-b110", "scope": "model", "type": "replace"},
-                      {"affects": "self.entries.recursive.e993-e086-6de1-12af", "arg": "+0", "field": "category", "scope": "model", "type": "add", "value": "6337-b83b-0d1e-5770"}
+                      {"affects": "self.entries.recursive.e993-e086-6de1-12af", "arg": "+0", "field": "category", "scope": "model", "type": "add", "value": "6337-b83b-0d1e-5770"},
+                      {
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "field": "893f-9000-ccf7-648e",
+                        "join": ", ",
+                        "scope": "root-entry-self",
+                        "skipIfPresent": "Sustained Hits",
+                        "type": "append",
+                        "value": "Sustained Hits 1",
+                        "conditions": [{"childId": "1a25-641b-9ff9-de91", "childName": "Battle Leader", "field": "selections", "scope": "model", "shared": true, "type": "notInstanceOf", "value": 1}]
+                      },
+                      {
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "field": "893f-9000-ccf7-648e",
+                        "join": ", ",
+                        "scope": "root-entry-self",
+                        "skipIfPresent": "Sustained Hits",
+                        "type": "append",
+                        "value": "Sustained Hits 2",
+                        "conditions": [{"childId": "1a25-641b-9ff9-de91", "childName": "Battle Leader", "field": "selections", "scope": "model", "shared": true, "type": "instanceOf", "value": 1}]
+                      },
+                      {
+                        "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                        "arg": "Sustained Hits 1",
+                        "field": "893f-9000-ccf7-648e",
+                        "join": ", ",
+                        "position": 1,
+                        "scope": "root-entry-self",
+                        "skipIfPresent": "Sustained Hits",
+                        "type": "replace",
+                        "value": "Sustained Hits 2",
+                        "conditions": [{"childId": "1a25-641b-9ff9-de91", "childName": "Battle Leader", "field": "selections", "scope": "model", "shared": true, "type": "instanceOf", "value": 1}]
+                      }
                     ]
                   }
                 ],
