@@ -17726,11 +17726,11 @@
                         ]
                       },
                       {
-                        "name": "Astartes Chainsword",
+                        "name": "Chainsword",
                         "id": "464b-51e7-0c71-6895",
                         "hidden": false,
                         "import": true,
-                        "targetId": "f241-f2ab-c2bd-cf0e",
+                        "targetId": "da18-5b5d-832e-5ebc",
                         "type": "selectionEntry",
                         "entryLinks": [
                           {"name": "Weapon Modifications", "id": "9e17-6839-2e91-876a", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
@@ -40482,6 +40482,10 @@
                 "import": true,
                 "targetId": "3fd3-6ae-e4fe-c09b",
                 "type": "selectionEntry",
+                "constraints": [
+                  {"id": "14e8-d9e2-891f-ae62", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2},
+                  {"id": "9a8e-47ee-aa51-c11c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2}
+                ],
                 "entryLinks": [
                   {"name": "Weapon Modifications", "id": "6e3a-568e-5603-6df7", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
                 ]
@@ -52612,7 +52616,7 @@
       {
         "name": "Astartes Servitors [Legends]",
         "id": "74c4-82d0-4c98-2fa8",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "unit",
         "categoryLinks": [
@@ -54335,7 +54339,7 @@
                     "typeId": "8a40-4aaa-c780-9046",
                     "typeName": "Melee Weapons",
                     "characteristics": [
-                      {"name": "Range", "$text": "3\"", "typeId": "914c-b413-91e3-a132"},
+                      {"name": "Range", "$text": "Melee", "typeId": "914c-b413-91e3-a132"},
                       {"name": "A", "$text": "1", "typeId": "2337-daa1-6682-b110"},
                       {"name": "WS", "$text": "3+", "typeId": "95d1-95f-45b4-11d6"},
                       {"name": "S", "$text": "5", "typeId": "ab33-d393-96ce-ccba"},
@@ -57735,7 +57739,8 @@
                     "sortIndex": 18,
                     "type": "instanceOf",
                     "value": 1
-                  }
+                  },
+                  {"childId": "f014-c078-e513-cc1b", "childName": "Desolation Squad", "field": "selections", "scope": "self", "shared": true, "type": "instanceOf", "value": 1}
                 ]
               }
             ]
@@ -58707,7 +58712,10 @@
                 "import": true,
                 "targetId": "eb61-5cd0-5242-74cc",
                 "type": "selectionEntry",
-                "constraints": [{"id": "d963-f4c5-7513-6bab", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1}],
+                "constraints": [
+                  {"id": "d963-f4c5-7513-6bab", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "77ff-634f-dbf2-3556", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
                 "entryLinks": [
                   {"name": "Weapon Modifications", "id": "0b9a-02e1-ebac-966f", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"}
                 ]
@@ -92467,6 +92475,14 @@
                         "value": 1
                       }
                     ]
+                  },
+                  {
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                    "field": "893f-9000-ccf7-648e",
+                    "join": ", ",
+                    "scope": "parent",
+                    "type": "append",
+                    "value": "Lance"
                   }
                 ],
                 "profiles": [
