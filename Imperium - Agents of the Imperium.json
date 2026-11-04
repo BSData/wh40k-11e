@@ -6,7 +6,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 23,
+    "revision": 24,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -1712,30 +1712,6 @@
         "hidden": false,
         "sortIndex": 22,
         "characteristicTypes": [{"name": "Influence Goal", "id": "5f9e-e1a4-ec1f-3b60"}, {"name": "Intrigue Goal", "id": "c014-629e-ddcc-34a1"}]
-      }
-    ],
-    "selectionEntries": [
-      {
-        "name": "NOTICE - This catalogue is no longer fully supported in Battlescribe. Please use https://newrecruit.eu for full compatibility.",
-        "id": "f6bb-3928-c6a3-b6d3",
-        "hidden": false,
-        "import": true,
-        "type": "upgrade",
-        "categoryLinks": [{"name": "Configuration", "id": "0fc8-0ab9-8f9e-90b1", "hidden": false, "primary": true, "targetId": "4ac9-fd30-1e3d-b249"}],
-        "constraints": [
-          {"id": "9887-1eb5-2384-056e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
-          {"id": "9e72-8451-65bb-fc2e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
-        ],
-        "modifiers": [
-          {"field": "9887-1eb5-2384-056e", "type": "set", "value": 0},
-          {"field": "9e72-8451-65bb-fc2e", "type": "set", "value": 0},
-          {
-            "field": "hidden",
-            "type": "set",
-            "value": true,
-            "conditions": [{"childId": "any", "comment": "app: NewRecruit", "field": "selections", "scope": "parent", "shared": true, "type": "atLeast", "value": 1}]
-          }
-        ]
       }
     ],
     "sharedInfoGroups": [
@@ -27414,6 +27390,14 @@
           {
             "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
             "field": "7f1b-8591-2fcf-d01c",
+            "join": ", ",
+            "skipIfPresent": "Sustained Hits",
+            "type": "append",
+            "value": "Sustained Hits 1"
+          },
+          {
+            "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+            "field": "893f-9000-ccf7-648e",
             "join": ", ",
             "skipIfPresent": "Sustained Hits",
             "type": "append",
