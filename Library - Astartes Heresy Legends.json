@@ -6,7 +6,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": true,
-    "revision": 4,
+    "revision": 5,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "categoryEntries": [
@@ -1447,7 +1447,6 @@
           {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0}
         ],
         "infoLinks": [
-          {"name": "Damaged: 1-6 wounds remaining", "id": "1f4e-974a-976c-4513", "hidden": false, "targetId": "8edb-b088-4c26-2fef", "type": "profile"},
           {
             "name": "Deadly Demise",
             "id": "b34d-ac40-ede0-9c50",
@@ -1456,7 +1455,15 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
-          {"name": "Combat Doctrines", "id": "8c1a-6e36-247b-1b12", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "8c1a-6e36-247b-1b12", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {
+            "name": "Damaged",
+            "id": "a7a1-9763-d75a-4b0a",
+            "hidden": false,
+            "targetId": "c68c-a968-354f-bb99",
+            "type": "rule",
+            "modifiers": [{"field": "name", "type": "append", "value": "6"}]
+          }
         ],
         "modifiers": [
           {
@@ -1505,7 +1512,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "When making ranged attacks, this model can target enemy units within Engagement Range of it with Blast weapons (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.",
+                "$text": "In your Shooting phase, when this unit is selected to shoot using close-quarters shooting:\n- This unit's attacks that target a unit engaged with this unit can ignore modifiers to:\n- BS.\n- Hit rolls.\n- For each of this unit's [Blast] weapons, you can choose for that weapon to not have [Blast]:\n- If you do, that weapon can only target an enemy unit that is not engaged with another friendly unit.",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -1904,7 +1911,7 @@
                     ],
                     "profiles": [
                       {
-                        "name": "➤ Kratos battlecannon - AP",
+                        "name": "➤ Kratos battlecannon (Piercing)",
                         "id": "38f2-9551-ebc2-b909",
                         "hidden": false,
                         "typeId": "f77d-b953-8fa4-b762",
@@ -1915,24 +1922,24 @@
                           {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                           {"name": "S", "$text": "18", "typeId": "2229-f494-25db-c5d3"},
                           {"name": "AP", "$text": "-4", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "D6+3", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "D", "$text": "D3+6", "typeId": "a354-c1c8-a745-f9e3"},
                           {"name": "Keywords", "$text": "Heavy", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       },
                       {
-                        "name": "➤ Kratos battlecannon - HE",
+                        "name": "➤ Kratos battlecannon (Blast)",
                         "id": "ca88-d1e6-d089-3ea2",
                         "hidden": false,
                         "typeId": "f77d-b953-8fa4-b762",
                         "typeName": "Ranged Weapons",
                         "characteristics": [
                           {"name": "Range", "$text": "36\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "D6+3", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "A", "$text": "D3+3", "typeId": "3bb-c35f-f54-fb08"},
                           {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                           {"name": "S", "$text": "10", "typeId": "2229-f494-25db-c5d3"},
                           {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Blast", "typeId": "7f1b-8591-2fcf-d01c"}
+                          {"name": "Keywords", "$text": "Blast 2", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
                     ]
@@ -1971,8 +1978,8 @@
                           {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                           {"name": "S", "$text": "12", "typeId": "2229-f494-25db-c5d3"},
                           {"name": "AP", "$text": "-4", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "D6", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Melta 2", "typeId": "7f1b-8591-2fcf-d01c"}
+                          {"name": "D", "$text": "D3+2", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Melta 3", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
                     ]
@@ -2097,8 +2104,8 @@
                           {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
                           {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
                           {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
                           {"name": "Keywords", "$text": "Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
@@ -2419,7 +2426,10 @@
         "import": true,
         "type": "upgrade",
         "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
-        "infoLinks": [{"name": "Sustained Hits", "id": "465f-d9c7-bd66-48dc", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}],
+        "infoLinks": [
+          {"name": "Sustained Hits", "id": "465f-d9c7-bd66-48dc", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"},
+          {"name": "Rapid Fire", "id": "c9ea-23c9-2bae-75e0", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}
+        ],
         "profiles": [
           {
             "name": "Heavy bolter",
@@ -2434,7 +2444,7 @@
               {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Sustained Hits 1", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Rapid Fire 2, Sustained Hits 1", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -2460,8 +2470,8 @@
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
               {"name": "S", "$text": "12", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
-              {"name": "D", "$text": "D6+1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "D", "$text": "D3+3", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -2508,7 +2518,7 @@
         "categoryLinks": [{"name": "Attacks Dx Weapon", "id": "4311-3cab-8556-3e3e", "hidden": false, "primary": false, "targetId": "e993-e086-6de1-12af"}],
         "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
         "infoLinks": [
-          {"name": "Ignores Cover", "id": "1637-e231-77fc-2f72", "hidden": false, "targetId": "4640-43e7-30b-215a", "type": "rule"},
+          {"name": "Blast", "id": "1637-e231-77fc-2f72", "hidden": false, "targetId": "6c1f-1cf7-ff25-c99e", "type": "rule"},
           {"name": "Torrent", "id": "c28-8c74-8925-956f", "hidden": false, "targetId": "5edf-d619-23e0-9b56", "type": "rule"}
         ],
         "profiles": [
@@ -2520,12 +2530,12 @@
             "typeName": "Ranged Weapons",
             "characteristics": [
               {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
-              {"name": "A", "$text": "D6", "typeId": "3bb-c35f-f54-fb08"},
-              {"name": "BS", "$text": "N/A", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "-", "typeId": "94d-8a98-cf90-183e"},
               {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Ignores Cover, Torrent", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Blast 1, Torrent", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -2551,10 +2561,10 @@
               {"name": "Range", "$text": "18\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "9", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "S", "$text": "10", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-4", "typeId": "9ead-8a10-520-de15"},
-              {"name": "D", "$text": "D6", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Melta 2", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "D", "$text": "D3+2", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "Keywords", "$text": "Melta 3", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -2597,7 +2607,8 @@
         "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
         "infoLinks": [
           {"name": "Sustained Hits", "id": "2c26-8118-4b80-1722", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"},
-          {"name": "Twin-linked", "id": "f18a-ae1b-fe6a-8b92", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"}
+          {"name": "Twin-linked", "id": "f18a-ae1b-fe6a-8b92", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"},
+          {"name": "Rapid Fire", "id": "a082-a133-e272-3f2f", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}
         ],
         "profiles": [
           {
@@ -2613,7 +2624,7 @@
               {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Sustained Hits 1, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Rapid Fire 2, Sustained Hits 1, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -2628,7 +2639,7 @@
         "categoryLinks": [{"name": "Attacks Dx Weapon", "id": "a223-d841-cd7a-3a9d", "hidden": false, "primary": false, "targetId": "e993-e086-6de1-12af"}],
         "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
         "infoLinks": [
-          {"name": "Ignores Cover", "id": "220d-1c8d-15ff-ad45", "hidden": false, "targetId": "4640-43e7-30b-215a", "type": "rule"},
+          {"name": "Blast", "id": "220d-1c8d-15ff-ad45", "hidden": false, "targetId": "6c1f-1cf7-ff25-c99e", "type": "rule"},
           {"name": "Torrent", "id": "3829-a000-b307-ada9", "hidden": false, "targetId": "5edf-d619-23e0-9b56", "type": "rule"},
           {"name": "Twin-linked", "id": "65c1-fe6b-936c-9f81", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"}
         ],
@@ -2641,12 +2652,12 @@
             "typeName": "Ranged Weapons",
             "characteristics": [
               {"name": "Range", "$text": "12\"", "typeId": "9896-9419-16a1-92fc"},
-              {"name": "A", "$text": "D6", "typeId": "3bb-c35f-f54-fb08"},
-              {"name": "BS", "$text": "N/A", "typeId": "94d-8a98-cf90-183e"},
+              {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "BS", "$text": "-", "typeId": "94d-8a98-cf90-183e"},
               {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Ignores Cover, Torrent, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Blast 1, Torrent, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -2673,7 +2684,7 @@
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
               {"name": "S", "$text": "12", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
-              {"name": "D", "$text": "D6+1", "typeId": "a354-c1c8-a745-f9e3"},
+              {"name": "D", "$text": "D3+3", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
@@ -2683,7 +2694,7 @@
         "name": "Deredeo Dreadnought [Legends]",
         "id": "d38d-c3a2-f753-efea",
         "collective": false,
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -3232,7 +3243,7 @@
         "name": "Relic Contemptor Dreadnought [Legends]",
         "id": "783a-1c02-b377-b169",
         "collective": false,
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -4223,7 +4234,7 @@
         "name": "Leviathan Dreadnought [Legends]",
         "id": "14d4-8062-f090-6719",
         "collective": false,
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -5033,7 +5044,7 @@
         "name": "Javelin Attack Speeder [Legends]",
         "id": "1f26-fce8-bb2d-2c44",
         "collective": false,
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -5670,7 +5681,7 @@
         "name": "Land Raider Proteus [Legends]",
         "id": "34c8-1025-33f7-baaf",
         "collective": false,
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -6110,7 +6121,7 @@
       {
         "name": "Land Raider Achilles [Legends]",
         "id": "3006-ffe-2b0c-6b1b",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -6591,8 +6602,8 @@
               {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
               {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-              {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
               {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
@@ -6631,7 +6642,7 @@
         ]
       },
       {
-        "name": "Sicaran Battle Tank [Legends]",
+        "name": "Sicaran [Legends]",
         "id": "b2f1-197b-fb3b-687f",
         "hidden": false,
         "import": true,
@@ -6804,49 +6815,6 @@
                 ]
               }
             ],
-            "selectionEntries": [
-              {
-                "name": "Herakles-pattern autocannon",
-                "id": "6c5b-521e-2870-42de",
-                "hidden": false,
-                "import": true,
-                "type": "upgrade",
-                "constraints": [
-                  {"id": "9e54-caa6-8532-df19", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                  {"id": "e255-6321-8f60-b63e", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                ],
-                "entryLinks": [
-                  {
-                    "name": "Weapon Modifications",
-                    "id": "d1dc-d130-2b76-f38a",
-                    "flatten": false,
-                    "hidden": false,
-                    "import": true,
-                    "targetId": "f9da-852a-d7f0-92e9",
-                    "type": "selectionEntryGroup"
-                  }
-                ],
-                "infoLinks": [{"name": "Rapid Fire", "id": "ce30-84c1-dc6-a0d1", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}],
-                "profiles": [
-                  {
-                    "name": "Herakles-pattern autocannon",
-                    "id": "a932-b660-70c9-cd89",
-                    "hidden": false,
-                    "typeId": "f77d-b953-8fa4-b762",
-                    "typeName": "Ranged Weapons",
-                    "characteristics": [
-                      {"name": "Range", "$text": "48\"", "typeId": "9896-9419-16a1-92fc"},
-                      {"name": "A", "$text": "6", "typeId": "3bb-c35f-f54-fb08"},
-                      {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                      {"name": "S", "$text": "9", "typeId": "2229-f494-25db-c5d3"},
-                      {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
-                      {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
-                      {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
-                    ]
-                  }
-                ]
-              }
-            ],
             "selectionEntryGroups": [
               {
                 "name": "Sponsons",
@@ -6980,6 +6948,221 @@
                     ]
                   }
                 ]
+              },
+              {
+                "name": "Main weapon",
+                "id": "b18e-33a0-d430-6562",
+                "defaultSelectionEntryId": "6c5b-521e-2870-42de",
+                "hidden": false,
+                "constraints": [
+                  {"id": "e817-cc32-a7d3-9d7d-min", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "e817-cc32-a7d3-9d7d-max", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "selectionEntries": [
+                  {
+                    "name": "Herakles-pattern autocannon",
+                    "id": "6c5b-521e-2870-42de",
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "entryLinks": [
+                      {
+                        "name": "Weapon Modifications",
+                        "id": "d1dc-d130-2b76-f38a",
+                        "flatten": false,
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "f9da-852a-d7f0-92e9",
+                        "type": "selectionEntryGroup"
+                      }
+                    ],
+                    "infoLinks": [{"name": "Rapid Fire", "id": "ce30-84c1-dc6-a0d1", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}],
+                    "profiles": [
+                      {
+                        "name": "Herakles-pattern autocannon",
+                        "id": "a932-b660-70c9-cd89",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "48\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "6", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "9", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Arcus multi-launcher",
+                    "id": "5caa-9bd0-133a-0012",
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "categoryLinks": [{"name": "Attacks Dx Weapon", "id": "9b22-8657-b8e1-60ab", "hidden": false, "primary": false, "targetId": "e993-e086-6de1-12af"}],
+                    "entryLinks": [
+                      {
+                        "name": "Weapon Modifications",
+                        "id": "3561-d36b-62d9-2c51",
+                        "flatten": false,
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "f9da-852a-d7f0-92e9",
+                        "type": "selectionEntryGroup"
+                      }
+                    ],
+                    "infoLinks": [{"name": "Indirect Fire", "id": "387a-0e09-c9c5-8cc2", "hidden": false, "targetId": "4ddd-4e29-acdd-5e6d", "type": "rule"}],
+                    "profiles": [
+                      {
+                        "name": "Arcus multi-launcher",
+                        "id": "9e8b-592c-abcc-8334",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "48\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "7", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "6", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Indirect Fire", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Omega plasma array",
+                    "id": "a0fc-71c1-27b4-9580",
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "categoryLinks": [{"name": "Plasma", "id": "6c35-83a8-0f7e-fe44", "hidden": false, "primary": false, "targetId": "cb29-f4bb-ff15-6b11"}],
+                    "entryLinks": [
+                      {
+                        "name": "Weapon Modifications",
+                        "id": "38fe-8468-05ee-f0b2",
+                        "flatten": false,
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "f9da-852a-d7f0-92e9",
+                        "type": "selectionEntryGroup"
+                      }
+                    ],
+                    "infoLinks": [{"name": "Hazardous", "id": "e32a-30fd-300c-8103", "hidden": false, "targetId": "8367-374c-f87-c627", "type": "rule"}],
+                    "profiles": [
+                      {
+                        "name": "➤ Omega plasma array (Standard)",
+                        "id": "9b2f-8dba-195a-03ab",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "36\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "6", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "9", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      },
+                      {
+                        "name": "➤ Omega plasma array (Supercharge)",
+                        "id": "52bd-50d0-0be4-5a05",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "36\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "6", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "10", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Hazardous", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Punisher rotary cannon",
+                    "id": "6cea-473d-af71-2372",
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "entryLinks": [
+                      {
+                        "name": "Weapon Modifications",
+                        "id": "e32f-c61e-bd91-0d69",
+                        "flatten": false,
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "f9da-852a-d7f0-92e9",
+                        "type": "selectionEntryGroup"
+                      }
+                    ],
+                    "infoLinks": [{"name": "Devastating Wounds", "id": "a954-486d-736a-be2b", "hidden": false, "targetId": "be1e-ac8e-1e2c-3528", "type": "rule"}],
+                    "profiles": [
+                      {
+                        "name": "Punisher rotary cannon",
+                        "id": "a607-b481-9234-1405",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "36\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "18", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "4+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "6", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Devastating Wounds", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Venator neutron laser",
+                    "id": "993e-29d4-1aa0-5ace",
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "entryLinks": [
+                      {
+                        "name": "Weapon Modifications",
+                        "id": "289f-7dcd-a413-1f48",
+                        "flatten": false,
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "f9da-852a-d7f0-92e9",
+                        "type": "selectionEntryGroup"
+                      }
+                    ],
+                    "infoLinks": [{"name": "Heavy", "id": "a643-6582-58df-a1ce", "hidden": false, "targetId": "1202-10a8-78e9-4c67", "type": "rule"}],
+                    "profiles": [
+                      {
+                        "name": "Venator neutron laser",
+                        "id": "ede8-1d77-0cec-a361",
+                        "hidden": false,
+                        "typeId": "f77d-b953-8fa4-b762",
+                        "typeName": "Ranged Weapons",
+                        "characteristics": [
+                          {"name": "Range", "$text": "48\"", "typeId": "9896-9419-16a1-92fc"},
+                          {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
+                          {"name": "S", "$text": "16", "typeId": "2229-f494-25db-c5d3"},
+                          {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "D3+3", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "Keywords", "$text": "Heavy", "typeId": "7f1b-8591-2fcf-d01c"}
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -6988,7 +7171,7 @@
       {
         "name": "Sicaran Arcus [Legends]",
         "id": "ca2a-69ca-dd3c-47",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -7344,7 +7527,7 @@
       {
         "name": "Sicaran Venator [Legends]",
         "id": "e63e-2aa6-f840-b54e",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -7697,7 +7880,7 @@
       {
         "name": "Sicaran Punisher [Legends]",
         "id": "68aa-28bf-bd73-3355",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -8050,7 +8233,7 @@
       {
         "name": "Sicaran Omega [Legends]",
         "id": "8b64-6aba-150d-27e4",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -8486,7 +8669,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "Each time this model shoots in your Shooting phase, provided it Remained Stationary this turn, all [HEAVY] weapons equipped by models in this unit have the [LETHAL HITS] ability.",
+                "$text": "In a turn this unit remained stationary, ranged attacks that have [HEAVY] also have [LETHAL HITS].",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -8530,16 +8713,16 @@
                       {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
                       {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
                       {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                      {"name": "S", "$text": "4", "typeId": "2229-f494-25db-c5d3"},
-                      {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+                      {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
+                      {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
                       {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                      {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+                      {"name": "Keywords", "$text": "", "typeId": "7f1b-8591-2fcf-d01c"}
                     ]
                   }
                 ]
               },
               {
-                "name": "Close combat weapon",
+                "name": "Armoured Hull",
                 "id": "b87b-8c71-97f6-11c8",
                 "hidden": false,
                 "import": true,
@@ -8561,7 +8744,7 @@
                 ],
                 "profiles": [
                   {
-                    "name": "Close combat weapon",
+                    "name": "Armoured Hull",
                     "id": "5c17-85c7-9350-32e5",
                     "hidden": false,
                     "typeId": "8a40-4aaa-c780-9046",
@@ -8627,7 +8810,7 @@
                           {"name": "S", "$text": "6", "typeId": "2229-f494-25db-c5d3"},
                           {"name": "AP", "$text": "-2", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Anti-Vehicle 2+, Blast, Heavy", "typeId": "7f1b-8591-2fcf-d01c"}
+                          {"name": "Keywords", "$text": "Anti-Vehicle 2+, Blast 2, Heavy", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
                     ]
@@ -8659,11 +8842,11 @@
                         "typeName": "Ranged Weapons",
                         "characteristics": [
                           {"name": "Range", "$text": "36\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
                           {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                           {"name": "S", "$text": "14", "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "$text": "-4", "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "$text": "D6+1", "typeId": "a354-c1c8-a745-f9e3"},
+                          {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
+                          {"name": "D", "$text": "D6+3", "typeId": "a354-c1c8-a745-f9e3"},
                           {"name": "Keywords", "$text": "Heavy", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
@@ -8689,7 +8872,8 @@
                     "infoLinks": [
                       {"name": "Heavy", "id": "757b-af0a-ead2-b8ae", "hidden": false, "targetId": "1202-10a8-78e9-4c67", "type": "rule"},
                       {"name": "Twin-linked", "id": "20d1-855-59b9-eb7c", "hidden": false, "targetId": "cf93-ad4d-2f08-a79d", "type": "rule"},
-                      {"name": "Sustained Hits", "id": "c505-f99e-2d4d-d30e", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}
+                      {"name": "Sustained Hits", "id": "c505-f99e-2d4d-d30e", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"},
+                      {"name": "Rapid Fire", "id": "96cf-16af-1555-e5fd", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}
                     ],
                     "profiles": [
                       {
@@ -8705,7 +8889,7 @@
                           {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
                           {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "2", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Heavy, Twin-linked, Sustained Hits 1", "typeId": "7f1b-8591-2fcf-d01c"}
+                          {"name": "Keywords", "$text": "Heavy, Rapid Fire 2, Sustained Hits 1, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
                     ]
@@ -8735,7 +8919,7 @@
                     ],
                     "profiles": [
                       {
-                        "name": "➤ Quad launcher - shatter shells",
+                        "name": "➤ Quad launcher (Shatter shells)",
                         "id": "39f6-28e3-3f9a-6690",
                         "hidden": false,
                         "typeId": "f77d-b953-8fa4-b762",
@@ -8751,19 +8935,19 @@
                         ]
                       },
                       {
-                        "name": "➤ Quad launcher - thunderfire shells",
+                        "name": "➤ Quad launcher (Thunderfire shells)",
                         "id": "dde5-5868-c652-9a44",
                         "hidden": false,
                         "typeId": "f77d-b953-8fa4-b762",
                         "typeName": "Ranged Weapons",
                         "characteristics": [
                           {"name": "Range", "$text": "60\"", "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "$text": "D6+4", "typeId": "3bb-c35f-f54-fb08"},
+                          {"name": "A", "$text": "D3+6", "typeId": "3bb-c35f-f54-fb08"},
                           {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                           {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
                           {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
                           {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "$text": "Blast, Heavy, Indirect Fire", "typeId": "7f1b-8591-2fcf-d01c"}
+                          {"name": "Keywords", "$text": "Blast 1, Heavy, Indirect Fire", "typeId": "7f1b-8591-2fcf-d01c"}
                         ]
                       }
                     ]
@@ -8777,7 +8961,7 @@
       {
         "name": "Whirlwind Scorpius [Legends]",
         "id": "97dc-f0c8-1354-88fb",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -9020,7 +9204,7 @@
       {
         "name": "Vindicator Laser Destroyer [Legends]",
         "id": "128d-5011-8e6-45a6",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -9226,7 +9410,7 @@
       {
         "name": "Dreadnought Drop Pod [Legends]",
         "id": "7fd0-d95d-d076-3472",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -9325,17 +9509,24 @@
         ],
         "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 200}],
         "infoLinks": [
-          {"name": "Damaged: 1-5 wounds remaining", "id": "9ea6-7b83-bf87-dd75", "hidden": false, "targetId": "3106-d752-30b8-b24d", "type": "profile"},
+          {
+            "name": "Damaged",
+            "id": "a79-521-4ab7-54af",
+            "hidden": false,
+            "targetId": "c68c-a968-354f-bb99",
+            "type": "rule",
+            "modifiers": [{"field": "name", "type": "append", "value": "5"}]
+          },
+          {"name": "Deep Strike", "id": "c64-9d84-5fa6-fc4", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
+          {"name": "Combat Doctrines", "id": "e1a8-867f-c665-df87", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
           {
             "name": "Deadly Demise",
-            "id": "a79-521-4ab7-54af",
+            "id": "d3d3-010a-21f2-48ec",
             "hidden": false,
             "targetId": "b68a-5ded-65ac-98c",
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D3"}]
-          },
-          {"name": "Deep Strike", "id": "c64-9d84-5fa6-fc4", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"},
-          {"name": "Combat Doctrines", "id": "e1a8-867f-c665-df87", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          }
         ],
         "modifiers": [
           {
@@ -9384,7 +9575,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models.",
+                "$text": "- This unit must start the battle in strategic reserves.\n- In your first Movement phase, this unit can make an ingress move.\n- When this unit is set up, all units embarked within this unit must make a disembark/assault disembark move, and those units must be set up more than 8\" away from all enemy units.",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -9398,7 +9589,7 @@
             "characteristics": [
               {
                 "name": "Capacity",
-                "$text": "This model has a transport capacity of 12 <FACTION> INFANTRY models. It cannot transport JUMP PACK, WULFEN, PHOBOS, GRAVIS, CENTURION, TERMINATOR, OBLITERATOR, POSSESSED or TACTICUS models (excluding TACTICUS CHARACTER models that began the battle attached to a non-TACTICUS unit).",
+                "$text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Gravis, Jump Pack, Terminator or Centurion models.",
                 "typeId": "30f2-be70-861d-1b84"
               }
             ]
@@ -9431,7 +9622,6 @@
                     "type": "selectionEntryGroup"
                   }
                 ],
-                "infoLinks": [{"name": "Anti", "id": "3ecd-f112-f052-5c8a", "hidden": false, "targetId": "4111-82e3-9444-e942", "type": "rule"}],
                 "profiles": [
                   {
                     "name": "Termite drill",
@@ -9446,7 +9636,7 @@
                       {"name": "S", "$text": "14", "typeId": "ab33-d393-96ce-ccba"},
                       {"name": "AP", "$text": "-2", "typeId": "41a0-1301-112a-e2f2"},
                       {"name": "D", "$text": "D3+3", "typeId": "3254-9fe6-d824-513e"},
-                      {"name": "Keywords", "$text": "Anti-VEHICLE 3+", "typeId": "893f-9000-ccf7-648e"}
+                      {"name": "Keywords", "$text": "\n", "typeId": "893f-9000-ccf7-648e"}
                     ]
                   }
                 ]
@@ -9486,8 +9676,8 @@
                       {"name": "A", "$text": "5", "typeId": "3bb-c35f-f54-fb08"},
                       {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                       {"name": "S", "$text": "9", "typeId": "2229-f494-25db-c5d3"},
-                      {"name": "AP", "$text": "-4", "typeId": "9ead-8a10-520-de15"},
-                      {"name": "D", "$text": "D6", "typeId": "a354-c1c8-a745-f9e3"},
+                      {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
+                      {"name": "D", "$text": "D3+2", "typeId": "a354-c1c8-a745-f9e3"},
                       {"name": "Keywords", "$text": "Melta 2", "typeId": "7f1b-8591-2fcf-d01c"}
                     ]
                   }
@@ -9629,7 +9819,7 @@
       {
         "name": "Xiphon Interceptor [Legends]",
         "id": "1aa5-d081-2442-4c37",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -9840,7 +10030,7 @@
       {
         "name": "Storm Eagle Gunship [Legends]",
         "id": "3b7d-b14e-603-e1ad",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -10344,7 +10534,7 @@
       {
         "name": "Fire Raptor Gunship [Legends]",
         "id": "1fc7-7880-e4d4-acbf",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -11016,7 +11206,6 @@
           {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0}
         ],
         "infoLinks": [
-          {"name": "Damaged: 1-6 wounds remaining", "id": "b37e-d97a-31b1-4392", "hidden": false, "targetId": "8edb-b088-4c26-2fef", "type": "profile"},
           {
             "name": "Deadly Demise",
             "id": "a5b0-3bd9-dfdf-9455",
@@ -11025,7 +11214,15 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6"}]
           },
-          {"name": "Combat Doctrines", "id": "6554-e4fb-7227-5558", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "6554-e4fb-7227-5558", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {
+            "name": "Damaged",
+            "id": "88c3-d794-0438-338f",
+            "hidden": false,
+            "targetId": "c68c-a968-354f-bb99",
+            "type": "rule",
+            "modifiers": [{"field": "name", "type": "append", "value": "6"}]
+          }
         ],
         "modifiers": [
           {
@@ -11074,7 +11271,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "Each time this unit shoots its Cerberus neutron pulse array in your Shooting phase, provided it Remained Stationary this turn, that weapon has the [LETHAL HITS] ability.",
+                "$text": "In a turn this unit remained stationary, this unit's Cerberus Neutron Pulse Array ranged attacks have [LETHAL HITS].",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -11143,7 +11340,7 @@
                       {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                       {"name": "S", "$text": "16", "typeId": "2229-f494-25db-c5d3"},
                       {"name": "AP", "$text": "-4", "typeId": "9ead-8a10-520-de15"},
-                      {"name": "D", "$text": "D6+3", "typeId": "a354-c1c8-a745-f9e3"},
+                      {"name": "D", "$text": "D3+6", "typeId": "a354-c1c8-a745-f9e3"},
                       {"name": "Keywords", "$text": "Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
                     ]
                   }
@@ -11314,7 +11511,7 @@
       {
         "name": "Spartan [Legends]",
         "id": "7b3a-9a63-6200-ec7",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -12255,8 +12452,15 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "D6+2"}]
           },
-          {"name": "Damaged: 1-8 wounds remaining", "id": "e3d9-5c39-4f7b-a48f", "hidden": false, "targetId": "4362-2036-1522-de2e", "type": "profile"},
-          {"name": "Combat Doctrines", "id": "31b7-fe2a-c08d-1b3e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "31b7-fe2a-c08d-1b3e", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {
+            "name": "Damaged",
+            "id": "c5d5-fef2-fb43-a485",
+            "hidden": false,
+            "targetId": "c68c-a968-354f-bb99",
+            "type": "rule",
+            "modifiers": [{"field": "name", "type": "append", "value": "8"}]
+          }
         ],
         "modifiers": [
           {
@@ -12305,7 +12509,7 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "Each time this model makes a ranged attack with its twin Falchion volcano cannon that targets a MONSTER or VEHICLE unit, that attack has the [DEVASTATING WOUNDS] ability.",
+                "$text": "This unit's Twin Falchion Volcano Cannon ranged attacks that target a **^^Monster/Vehicle^^** unit have [DEVASTATING WOUNDS].",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
@@ -12376,9 +12580,9 @@
                       {"name": "A", "$text": "D3+1", "typeId": "3bb-c35f-f54-fb08"},
                       {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                       {"name": "S", "$text": "24", "typeId": "2229-f494-25db-c5d3"},
-                      {"name": "AP", "$text": "-5", "typeId": "9ead-8a10-520-de15"},
+                      {"name": "AP", "$text": "-4", "typeId": "9ead-8a10-520-de15"},
                       {"name": "D", "$text": "12", "typeId": "a354-c1c8-a745-f9e3"},
-                      {"name": "Keywords", "$text": "Blast, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
+                      {"name": "Keywords", "$text": "Blast 1, Twin-linked", "typeId": "7f1b-8591-2fcf-d01c"}
                     ]
                   }
                 ]
@@ -12570,8 +12774,8 @@
                               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                               {"name": "S", "$text": "12", "typeId": "2229-f494-25db-c5d3"},
                               {"name": "AP", "$text": "-3", "typeId": "9ead-8a10-520-de15"},
-                              {"name": "D", "$text": "D6+1", "typeId": "a354-c1c8-a745-f9e3"},
-                              {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+                              {"name": "D", "$text": "D3+3", "typeId": "a354-c1c8-a745-f9e3"},
+                              {"name": "Keywords", "$text": "", "typeId": "7f1b-8591-2fcf-d01c"}
                             ]
                           }
                         ]
@@ -12616,11 +12820,11 @@
                             "typeName": "Ranged Weapons",
                             "characteristics": [
                               {"name": "Range", "$text": "36\"", "typeId": "9896-9419-16a1-92fc"},
-                              {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
+                              {"name": "A", "$text": "2", "typeId": "3bb-c35f-f54-fb08"},
                               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
                               {"name": "S", "$text": "14", "typeId": "2229-f494-25db-c5d3"},
                               {"name": "AP", "$text": "-4", "typeId": "9ead-8a10-520-de15"},
-                              {"name": "D", "$text": "D6+1", "typeId": "a354-c1c8-a745-f9e3"},
+                              {"name": "D", "$text": "D6+3", "typeId": "a354-c1c8-a745-f9e3"},
                               {"name": "Keywords", "$text": "Heavy", "typeId": "7f1b-8591-2fcf-d01c"}
                             ]
                           }
@@ -12645,7 +12849,8 @@
           {"name": "Titanic", "id": "7f2c-babe-9f6d-9eb5", "primary": false, "targetId": "5929-ad51-d006-e008"},
           {"name": "Transport", "id": "c79c-a937-f35f-4eba", "primary": false, "targetId": "75e8-57c4-40e3-1817"},
           {"name": "Smoke", "id": "3322-4048-b92-1565", "primary": false, "targetId": "6df-937-16bc-8c1a"},
-          {"name": "Mastodon", "id": "fc69-7956-4d75-c1da", "primary": false, "targetId": "61a4-aefb-ed56-cd15"}
+          {"name": "Mastodon", "id": "fc69-7956-4d75-c1da", "primary": false, "targetId": "61a4-aefb-ed56-cd15"},
+          {"name": "Frame", "id": "3b4e-b251-ebd9-bcf2", "hidden": false, "primary": false, "targetId": "b927-8eeb-7cc3-8dec"}
         ],
         "costs": [
           {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 540},
@@ -12664,7 +12869,15 @@
             "type": "rule",
             "modifiers": [{"field": "name", "type": "append", "value": "2D6"}]
           },
-          {"name": "Combat Doctrines", "id": "9335-2f91-161e-6aa1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"}
+          {"name": "Combat Doctrines", "id": "9335-2f91-161e-6aa1", "hidden": false, "targetId": "3b76-4053-ece9-6e7d", "type": "rule"},
+          {
+            "name": "Damaged",
+            "id": "9379-2a3c-c650-762f",
+            "hidden": false,
+            "targetId": "c68c-a968-354f-bb99",
+            "type": "rule",
+            "modifiers": [{"field": "name", "type": "append", "value": "10"}]
+          }
         ],
         "modifiers": [
           {
@@ -12707,20 +12920,6 @@
         ],
         "profiles": [
           {
-            "name": "Damaged: 1-10 wounds remaining",
-            "id": "6a33-178-237b-66f2",
-            "hidden": false,
-            "typeId": "9cc3-6d83-4dd3-9b64",
-            "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
-          },
-          {
             "name": "Mastodon",
             "id": "8535-102e-42ec-ee10",
             "hidden": false,
@@ -12743,13 +12942,7 @@
             "hidden": false,
             "typeId": "9cc3-6d83-4dd3-9b64",
             "typeName": "Abilities",
-            "characteristics": [
-              {
-                "name": "Description",
-                "$text": "Once per battle round, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.",
-                "typeId": "9b8f-694b-e5e-b573"
-              }
-            ]
+            "characteristics": [{"name": "Description", "$text": "Attacks allocated to this unit have -1 D.", "typeId": "9b8f-694b-e5e-b573"}]
           },
           {
             "name": "Mastodon",
@@ -12760,7 +12953,7 @@
             "characteristics": [
               {
                 "name": "Capacity",
-                "$text": "This model has a transport capacity of 45 <FACTION> INFANTRY models. Each JUMP PACK, WULFEN, GRAVIS, POSSESSED or TERMINATOR model takes up the space of 2 models and each CENTURION or OBLITERATOR model takes up the space of 3 models. This model can also transport up to 2 DREADNOUGHT or HELBRUTE models (these models take up the space of a number of models equal to their Wounds characteristic e.g. A DREADNOUGHT with a Wounds characteristic of 8 would take up the space of 8  models).",
+                "$text": "This model has a transport capacity of 45 Adeptus Astartes Infantry models. And 2 Dreadnought models. Each Jump Pack, Gravis, Terminator model takes up the space of 2 models. Each Centurion model takes up the space of 3 models. Each Dreadnought model take up the space of a number of models equal to their W characteristic.",
                 "typeId": "30f2-be70-861d-1b84"
               }
             ]
@@ -12827,10 +13020,10 @@
                       {"name": "Range", "$text": "24\"", "typeId": "9896-9419-16a1-92fc"},
                       {"name": "A", "$text": "6", "typeId": "3bb-c35f-f54-fb08"},
                       {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
-                      {"name": "S", "$text": "9", "typeId": "2229-f494-25db-c5d3"},
+                      {"name": "S", "$text": "10", "typeId": "2229-f494-25db-c5d3"},
                       {"name": "AP", "$text": "-4", "typeId": "9ead-8a10-520-de15"},
-                      {"name": "D", "$text": "D6", "typeId": "a354-c1c8-a745-f9e3"},
-                      {"name": "Keywords", "$text": "Melta 2", "typeId": "7f1b-8591-2fcf-d01c"}
+                      {"name": "D", "$text": "D3+2", "typeId": "a354-c1c8-a745-f9e3"},
+                      {"name": "Keywords", "$text": "Melta 3", "typeId": "7f1b-8591-2fcf-d01c"}
                     ]
                   }
                 ]
@@ -13121,7 +13314,7 @@
       {
         "name": "Sokar-pattern Stormbird [Legends]",
         "id": "a80f-8343-85f3-716a",
-        "hidden": false,
+        "hidden": true,
         "import": true,
         "type": "model",
         "categoryLinks": [
@@ -13419,7 +13612,8 @@
           {"name": "Vehicle", "id": "2d4b-c3ff-2f18-115", "primary": true, "targetId": "dbd4-63-af05-998"},
           {"name": "Artillery", "id": "955a-b890-be78-9374", "primary": false, "targetId": "8cab-448d-37b7-32bc"},
           {"name": "Imperium", "id": "b3ed-2af4-da00-a95c", "primary": false, "targetId": "aff3-d6a3-2a95-9dc"},
-          {"name": "Tarantula Sentry Battery", "id": "9f36-391b-17bb-e7e1", "primary": false, "targetId": "54d-a72c-de79-525d"}
+          {"name": "Tarantula Sentry Battery", "id": "9f36-391b-17bb-e7e1", "primary": false, "targetId": "54d-a72c-de79-525d"},
+          {"name": "Frame", "id": "6098-4ad9-697e-e167", "hidden": false, "primary": false, "targetId": "b927-8eeb-7cc3-8dec"}
         ],
         "costs": [
           {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
@@ -13478,83 +13672,79 @@
             "characteristics": [
               {
                 "name": "Description",
-                "$text": "Each time you select this unit for the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 4+ when resolving that Stratagem.",
+                "$text": "(Once per phase, per unit)\nWhen you target this unit with the Fire Overwatch stratagem, this unit's snap shooting attacks hit on unmodified hit rolls of 4+ until that stratagem is resolved.",
                 "typeId": "9b8f-694b-e5e-b573"
               }
             ]
           }
         ],
-        "selectionEntryGroups": [
+        "selectionEntries": [
           {
             "name": "Tarantula Sentry Battery",
-            "id": "e3ae-2a2d-ae71-fac4",
+            "id": "e303-c5be-19e1-1ee4",
             "hidden": false,
-            "selectionEntries": [
+            "import": true,
+            "type": "model",
+            "constraints": [
+              {"id": "d0cc-07bb-7458-e967", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 3},
+              {"id": "7076-94c2-6b1d-af39", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1}
+            ],
+            "costs": [
+              {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 30},
+              {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
+              {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
+              {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
+              {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
+              {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
+              {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
+              {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
+            ],
+            "selectionEntryGroups": [
               {
-                "name": "Tarantula Sentry Battery",
-                "id": "e303-c5be-19e1-1ee4",
+                "name": "Wargear",
+                "id": "d901-b201-cb70-3197",
+                "defaultSelectionEntryId": "8106-4848-82fb-ac14",
                 "hidden": false,
-                "import": true,
-                "type": "model",
-                "constraints": [{"id": "d0cc-07bb-7458-e967", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 3}],
-                "costs": [
-                  {"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 30},
-                  {"name": "Crusade Points", "typeId": "b03b-c239-15a5-da55", "value": 0},
-                  {"name": "Crusade: Battle Honours", "typeId": "75bb-ded1-c86d-bdf0", "value": 0},
-                  {"name": "Crusade: Experience", "typeId": "a623-fe74-1d33-cddf", "value": 0},
-                  {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
-                  {"name": "Blackstone Fragments", "typeId": "ac6b-ced3-9b5e-9a6e", "value": 0},
-                  {"name": "Detachment Points", "typeId": "82ae-1066-5107-6ae0", "value": 0},
-                  {"name": "Enhancements", "typeId": "f759-1bc4-cb3a-f0d2", "value": 0}
+                "constraints": [
+                  {"id": "80c2-c2b4-e6f7-8e45", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "bf8b-5549-cf2a-23f5", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
                 ],
-                "selectionEntryGroups": [
+                "entryLinks": [
                   {
-                    "name": "Wargear",
-                    "id": "d901-b201-cb70-3197",
-                    "defaultSelectionEntryId": "8106-4848-82fb-ac14",
+                    "name": "Twin heavy bolter",
+                    "id": "8106-4848-82fb-ac14",
                     "hidden": false,
-                    "constraints": [
-                      {"id": "80c2-c2b4-e6f7-8e45", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "bf8b-5549-cf2a-23f5", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
+                    "import": true,
+                    "targetId": "f1a6-b394-5bc5-a3cb",
+                    "type": "selectionEntry",
                     "entryLinks": [
                       {
-                        "name": "Twin heavy bolter",
-                        "id": "8106-4848-82fb-ac14",
+                        "name": "Weapon Modifications",
+                        "id": "c30a-d2ac-ce40-1b81",
+                        "flatten": false,
                         "hidden": false,
                         "import": true,
-                        "targetId": "f1a6-b394-5bc5-a3cb",
-                        "type": "selectionEntry",
-                        "entryLinks": [
-                          {
-                            "name": "Weapon Modifications",
-                            "id": "c30a-d2ac-ce40-1b81",
-                            "flatten": false,
-                            "hidden": false,
-                            "import": true,
-                            "targetId": "f9da-852a-d7f0-92e9",
-                            "type": "selectionEntryGroup"
-                          }
-                        ]
-                      },
+                        "targetId": "f9da-852a-d7f0-92e9",
+                        "type": "selectionEntryGroup"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Twin lascannon",
+                    "id": "4e39-d17d-8a5b-f86a",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "c36c-6247-f673-fe00",
+                    "type": "selectionEntry",
+                    "entryLinks": [
                       {
-                        "name": "Twin lascannon",
-                        "id": "4e39-d17d-8a5b-f86a",
+                        "name": "Weapon Modifications",
+                        "id": "743f-47b7-03c2-441b",
+                        "flatten": false,
                         "hidden": false,
                         "import": true,
-                        "targetId": "c36c-6247-f673-fe00",
-                        "type": "selectionEntry",
-                        "entryLinks": [
-                          {
-                            "name": "Weapon Modifications",
-                            "id": "743f-47b7-03c2-441b",
-                            "flatten": false,
-                            "hidden": false,
-                            "import": true,
-                            "targetId": "f9da-852a-d7f0-92e9",
-                            "type": "selectionEntryGroup"
-                          }
-                        ]
+                        "targetId": "f9da-852a-d7f0-92e9",
+                        "type": "selectionEntryGroup"
                       }
                     ]
                   }
@@ -15740,6 +15930,7 @@
         "import": true,
         "type": "upgrade",
         "costs": [{"name": "pts", "typeId": "51b2-306e-1021-d207", "value": 0}],
+        "infoLinks": [{"name": "Rapid Fire", "id": "24c9-8230-bbec-8e54", "hidden": false, "targetId": "c5c8-8b58-b8b6-7786", "type": "rule"}],
         "profiles": [
           {
             "name": "Autocannon",
@@ -15754,7 +15945,7 @@
               {"name": "S", "$text": "9", "typeId": "2229-f494-25db-c5d3"},
               {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "3", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Rapid Fire 2", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
@@ -15805,12 +15996,12 @@
             "typeName": "Ranged Weapons",
             "characteristics": [
               {"name": "Range", "$text": "48\"", "typeId": "9896-9419-16a1-92fc"},
-              {"name": "A", "$text": "D6", "typeId": "3bb-c35f-f54-fb08"},
+              {"name": "A", "$text": "3", "typeId": "3bb-c35f-f54-fb08"},
               {"name": "BS", "$text": "3+", "typeId": "94d-8a98-cf90-183e"},
               {"name": "S", "$text": "5", "typeId": "2229-f494-25db-c5d3"},
-              {"name": "AP", "$text": "0", "typeId": "9ead-8a10-520-de15"},
+              {"name": "AP", "$text": "-1", "typeId": "9ead-8a10-520-de15"},
               {"name": "D", "$text": "1", "typeId": "a354-c1c8-a745-f9e3"},
-              {"name": "Keywords", "$text": "Blast", "typeId": "7f1b-8591-2fcf-d01c"}
+              {"name": "Keywords", "$text": "Blast 1", "typeId": "7f1b-8591-2fcf-d01c"}
             ]
           }
         ]
