@@ -7,7 +7,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 24,
+    "revision": 25,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -795,7 +795,7 @@
         ]
       },
       {
-        "name": "Sicaran Battle Tank [Legends]",
+        "name": "Sicaran [Legends]",
         "id": "d2e9-d222-dc23-1b6e",
         "hidden": false,
         "import": true,
@@ -19827,7 +19827,7 @@
                     "type": "upgrade",
                     "entryLinks": [
                       {
-                        "name": "Dreadnought Combat Weapon",
+                        "name": "Dreadnought Fist",
                         "id": "8be0-42db-7ab7-4e90",
                         "hidden": false,
                         "import": true,
@@ -19867,7 +19867,7 @@
                     "type": "upgrade",
                     "entryLinks": [
                       {
-                        "name": "Dreadnought Combat Weapon",
+                        "name": "Dreadnought Fist",
                         "id": "4e00-1100-ecb8-733c",
                         "hidden": false,
                         "import": true,
@@ -19922,7 +19922,7 @@
                         ]
                       },
                       {
-                        "name": "Close combat weapon",
+                        "name": "Crushing Feet",
                         "id": "0680-94bd-d39a-9458",
                         "hidden": false,
                         "import": true,
@@ -20475,7 +20475,7 @@
                     "type": "upgrade",
                     "entryLinks": [
                       {
-                        "name": "Dreadnought Combat Weapon",
+                        "name": "Dreadnought Fist",
                         "id": "400-e50f-513a-e0e0",
                         "hidden": false,
                         "import": true,
@@ -20514,7 +20514,7 @@
                     "type": "upgrade",
                     "entryLinks": [
                       {
-                        "name": "Dreadnought Combat Weapon",
+                        "name": "Dreadnought Fist",
                         "id": "79a1-5e48-7fd7-c0b9",
                         "hidden": false,
                         "import": true,
@@ -57993,7 +57993,7 @@
                     "type": "upgrade",
                     "entryLinks": [
                       {
-                        "name": "Dreadnought Combat Weapon",
+                        "name": "Dreadnought Fist",
                         "id": "ff03-8abe-9917-5e1b",
                         "hidden": false,
                         "import": true,
@@ -58078,7 +58078,7 @@
                     "type": "upgrade",
                     "entryLinks": [
                       {
-                        "name": "Dreadnought Combat Weapon",
+                        "name": "Dreadnought Fist",
                         "id": "f442-6f55-c4e1-fd21",
                         "hidden": false,
                         "import": true,
@@ -58118,7 +58118,7 @@
                     "type": "upgrade",
                     "entryLinks": [
                       {
-                        "name": "Dreadnought Combat Weapon",
+                        "name": "Dreadnought Fist",
                         "id": "b795-b4ea-fa1d-ce5f",
                         "hidden": false,
                         "import": true,
@@ -59882,7 +59882,7 @@
                     "type": "upgrade",
                     "entryLinks": [
                       {
-                        "name": "Dreadnought Combat Weapon",
+                        "name": "Dreadnought Fist",
                         "id": "b210-e025-6ac2-c09f",
                         "hidden": false,
                         "import": true,
@@ -59922,7 +59922,7 @@
                     "type": "upgrade",
                     "entryLinks": [
                       {
-                        "name": "Dreadnought Combat Weapon",
+                        "name": "Dreadnought Fist",
                         "id": "2939-48ed-5325-7689",
                         "hidden": false,
                         "import": true,
@@ -93492,7 +93492,7 @@
                 "type": "and",
                 "modifiers": [
                   {
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                     "field": "94d-8a98-cf90-183e",
                     "scope": "model-or-unit",
                     "type": "decrement",
@@ -93510,7 +93510,7 @@
                     ]
                   },
                   {
-                    "affects": "self.entries.recursive.profiles.Ranged Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Ranged Weapons",
                     "field": "annotation",
                     "join": ", ",
                     "scope": "model-or-unit",
@@ -93620,7 +93620,6 @@
               {"name": "Diplomatic Power", "typeId": "4d7c-04b6-8a79-837f", "value": 0},
               {"name": "Military Power", "typeId": "1cbe-d9c9-86a8-2d41", "value": 0}
             ],
-            "infoLinks": [{"name": "Feel No Pain", "id": "c578-bb7c-3e70-583e", "hidden": false, "targetId": "9bf4-280f-bbe2-6fbb", "type": "rule"}],
             "modifiers": [
               {
                 "field": "hidden",
@@ -93676,7 +93675,8 @@
                 "type": "set",
                 "value": 2,
                 "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-              }
+              },
+              {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "faec-8b1b-5a21-0087"}
             ],
             "profiles": [
               {
@@ -93708,9 +93708,9 @@
               {
                 "type": "and",
                 "modifiers": [
-                  {"affects": "self.entries.recursive.profiles.Melee Weapons", "field": "95d1-95f-45b4-11d6", "scope": "root-entry", "type": "decrement", "value": 1},
+                  {"affects": "self.entries.group.recursive.profiles.Melee Weapons", "field": "95d1-95f-45b4-11d6", "scope": "root-entry", "type": "decrement", "value": 1},
                   {
-                    "affects": "self.entries.recursive.profiles.Melee Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
@@ -95361,7 +95361,8 @@
                     "type": "set",
                     "value": 2,
                     "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-                  }
+                  },
+                  {"affects": "self.entries.group.recursive.profiles.Melee Weapons", "field": "ab33-d393-96ce-ccba", "scope": "parent", "type": "increment", "value": 1}
                 ],
                 "profiles": [
                   {
@@ -95631,7 +95632,6 @@
                   {"name": "Diplomatic Power", "typeId": "4d7c-04b6-8a79-837f", "value": 0},
                   {"name": "Military Power", "typeId": "1cbe-d9c9-86a8-2d41", "value": 0}
                 ],
-                "infoLinks": [{"name": "Deep Strike", "id": "06f1-7604-8601-26cb", "hidden": false, "targetId": "7cb5-dd6b-dd87-ad3b", "type": "rule"}],
                 "modifiers": [
                   {
                     "field": "hidden",
@@ -95670,6 +95670,22 @@
                     "type": "set",
                     "value": 2,
                     "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+                  },
+                  {
+                    "affects": "group",
+                    "field": "add-info",
+                    "scope": "parent",
+                    "type": "add",
+                    "value": "7cb5-dd6b-dd87-ad3b",
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {"childId": "1556-9b56-fba6-4370", "childName": "Leader", "field": "associations", "scope": "self", "shared": true, "type": "atLeast", "value": 1},
+                          {"childId": "7dcd-7f61-69a7-0294", "childName": "Support", "field": "associations", "scope": "self", "shared": true, "type": "atLeast", "value": 1}
+                        ]
+                      }
+                    ]
                   }
                 ],
                 "profiles": [
@@ -95682,7 +95698,7 @@
                     "characteristics": [
                       {
                         "name": "Description",
-                        "$text": "During the Declare Battle Formations step, if this model is attached a unit, until the end of the battle, that unit has the Deep Strike ability.",
+                        "$text": "During the Declare Battle Formations step, if this model is attached to a unit, until the end of the battle, that unit has the Deep Strike ability.",
                         "typeId": "9b8f-694b-e5e-b573"
                       }
                     ]
@@ -96732,7 +96748,6 @@
                   {"name": "Crusade: Weapon Modifications", "typeId": "716d-91b7-d55a-1022", "value": 0},
                   {"name": "Honour Points", "typeId": "8135-9a2f-6627-09e2", "value": 10}
                 ],
-                "infoLinks": [{"name": "Feel No Pain", "id": "a09e-90f4-34aa-23b2", "hidden": false, "targetId": "9bf4-280f-bbe2-6fbb", "type": "rule"}],
                 "modifiers": [
                   {
                     "field": "hidden",
@@ -96745,7 +96760,8 @@
                     "type": "set",
                     "value": 2,
                     "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-                  }
+                  },
+                  {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "5e10-6d62-2624-80a8"}
                 ],
                 "profiles": [
                   {
@@ -97036,6 +97052,22 @@
                     "type": "set",
                     "value": 2,
                     "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+                  },
+                  {
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "field": "d29d-cf75-fc2d-34a4",
+                    "scope": "parent",
+                    "type": "increment",
+                    "value": 1,
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {"childId": "1556-9b56-fba6-4370", "childName": "Leader", "field": "associations", "scope": "self", "shared": true, "type": "atLeast", "value": 1},
+                          {"childId": "7dcd-7f61-69a7-0294", "childName": "Support", "field": "associations", "scope": "self", "shared": true, "type": "atLeast", "value": 1}
+                        ]
+                      }
+                    ]
                   }
                 ],
                 "profiles": [
@@ -98957,7 +98989,6 @@
               {"name": "Diplomatic Power", "typeId": "4d7c-04b6-8a79-837f", "value": 0},
               {"name": "Military Power", "typeId": "1cbe-d9c9-86a8-2d41", "value": 0}
             ],
-            "infoLinks": [{"name": "Feel No Pain", "id": "a55b-ed75-a6c9-03d2", "hidden": false, "targetId": "9bf4-280f-bbe2-6fbb", "type": "rule"}],
             "modifiers": [
               {
                 "field": "hidden",
@@ -98981,7 +99012,8 @@
                 "type": "set",
                 "value": 2,
                 "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-              }
+              },
+              {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "676c-ecb5-d24d-3540"}
             ],
             "profiles": [
               {
@@ -99081,8 +99113,15 @@
               {
                 "type": "and",
                 "modifiers": [
-                  {"affects": "self.entries.recursive.profiles.Unit", "field": "e703-ecb6-5ce7-aec1", "scope": "root-entry", "type": "increment", "value": 1},
-                  {"affects": "self.entries.recursive.profiles.Unit", "field": "annotation", "join": ", ", "scope": "root-entry", "type": "append", "value": "Skies of Fury"}
+                  {"affects": "self.entries.group.recursive.profiles.Unit", "field": "e703-ecb6-5ce7-aec1", "scope": "root-entry", "type": "increment", "value": 1},
+                  {
+                    "affects": "self.entries.group.recursive.profiles.Unit",
+                    "field": "annotation",
+                    "join": ", ",
+                    "scope": "root-entry",
+                    "type": "append",
+                    "value": "Skies of Fury"
+                  }
                 ]
               }
             ],
@@ -102738,7 +102777,8 @@
                 "type": "set",
                 "value": 2,
                 "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-              }
+              },
+              {"affects": "self.entries.group.recursive.profiles.Unit", "field": "55a7-5b54-c60d-11dc", "scope": "parent", "type": "set", "value": "5+"}
             ],
             "profiles": [
               {
@@ -103495,7 +103535,6 @@
               {"name": "Diplomatic Power", "typeId": "4d7c-04b6-8a79-837f", "value": 0},
               {"name": "Military Power", "typeId": "1cbe-d9c9-86a8-2d41", "value": 0}
             ],
-            "infoLinks": [{"name": "Feel No Pain", "id": "12c0-803c-2ab0-7173", "hidden": false, "targetId": "9bf4-280f-bbe2-6fbb", "type": "rule"}],
             "modifiers": [
               {
                 "field": "hidden",
@@ -103519,7 +103558,8 @@
                 "type": "set",
                 "value": 2,
                 "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-              }
+              },
+              {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "faec-8b1b-5a21-0087"}
             ],
             "profiles": [
               {
@@ -103553,7 +103593,6 @@
               {"name": "Diplomatic Power", "typeId": "4d7c-04b6-8a79-837f", "value": 0},
               {"name": "Military Power", "typeId": "1cbe-d9c9-86a8-2d41", "value": 0}
             ],
-            "infoLinks": [{"name": "Sustained Hits", "id": "b113-40ed-80ce-17d8", "hidden": false, "targetId": "1897-c22c-9597-12b1", "type": "rule"}],
             "modifiers": [
               {
                 "field": "hidden",
@@ -103577,7 +103616,17 @@
                 "type": "set",
                 "value": 2,
                 "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-              }
+              },
+              {
+                "affects": "self.entries.group.recursive.profiles.Melee Weapons",
+                "field": "893f-9000-ccf7-648e",
+                "join": ", ",
+                "scope": "parent",
+                "skipIfPresent": "Sustained Hits",
+                "type": "append",
+                "value": "Sustained Hits 1"
+              },
+              {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "1897-c22c-9597-12b1"}
             ],
             "profiles": [
               {
@@ -103730,14 +103779,14 @@
                 "type": "and",
                 "modifiers": [
                   {
-                    "affects": "self.entries.recursive.profiles.Melee Weapons",
+                    "affects": "self.entries.group.recursive.profiles.Melee Weapons",
                     "field": "annotation",
                     "join": ", ",
                     "scope": "root-entry",
                     "type": "append",
                     "value": "Strength From Conviction"
                   },
-                  {"affects": "self.entries.recursive.profiles.Melee Weapons", "field": "ab33-d393-96ce-ccba", "scope": "root-entry", "type": "increment", "value": 1}
+                  {"affects": "self.entries.group.recursive.profiles.Melee Weapons", "field": "ab33-d393-96ce-ccba", "scope": "root-entry", "type": "increment", "value": 1}
                 ]
               }
             ],
@@ -104252,16 +104301,6 @@
                   {"name": "Diplomatic Power", "typeId": "4d7c-04b6-8a79-837f", "value": 0},
                   {"name": "Military Power", "typeId": "1cbe-d9c9-86a8-2d41", "value": 0}
                 ],
-                "infoLinks": [
-                  {
-                    "name": "Scouts",
-                    "id": "b145-7e13-994d-c17d",
-                    "hidden": false,
-                    "targetId": "ada6-bac1-ffe0-d6f7",
-                    "type": "rule",
-                    "modifiers": [{"field": "name", "join": " ", "type": "append", "value": "6\""}]
-                  }
-                ],
                 "modifiers": [
                   {
                     "field": "hidden",
@@ -104306,7 +104345,8 @@
                     "type": "set",
                     "value": 2,
                     "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-                  }
+                  },
+                  {"field": "add-info", "scope": "parent", "type": "add", "value": "08fb-4cb5-36fb-d638"}
                 ],
                 "profiles": [
                   {
@@ -104458,7 +104498,6 @@
                   {"name": "Diplomatic Power", "typeId": "4d7c-04b6-8a79-837f", "value": 0},
                   {"name": "Military Power", "typeId": "1cbe-d9c9-86a8-2d41", "value": 0}
                 ],
-                "infoLinks": [{"name": "Stealth", "id": "f0e0-0cb6-2a09-604d", "hidden": false, "targetId": "bec5-4288-34a6-ccfa", "type": "rule"}],
                 "modifiers": [
                   {
                     "field": "hidden",
@@ -104497,7 +104536,8 @@
                     "type": "set",
                     "value": 2,
                     "conditions": [{"childId": "5929-ad51-d006-e008", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
-                  }
+                  },
+                  {"affects": "group", "field": "add-info", "scope": "parent", "type": "add", "value": "bec5-4288-34a6-ccfa"}
                 ],
                 "profiles": [
                   {
@@ -105433,7 +105473,7 @@
             "import": true,
             "type": "upgrade",
             "constraints": [{"id": "92f9-af18-66e6-e507", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
-            "infoLinks": [{"name": "Feel No Pain", "id": "964b-8ab3-85f2-d9e5", "hidden": false, "targetId": "9bf4-280f-bbe2-6fbb", "type": "rule"}],
+            "modifiers": [{"field": "add-info", "scope": "parent", "type": "add", "value": "5e10-6d62-2624-80a8"}],
             "profiles": [
               {
                 "name": "Inured To Agony",
