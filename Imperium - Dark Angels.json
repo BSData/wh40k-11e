@@ -7,7 +7,7 @@
     "gameSystemId": "sys-352e-adc2-7639-d610",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 11,
+    "revision": 12,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -4577,7 +4577,19 @@
             ],
             "entryLinks": [
               {"name": "Bike weapon", "id": "c396-2094-f726-0d5f", "hidden": false, "targetId": "3771-6c3c-4035-70fa", "type": "selectionEntryGroup"},
-              {"name": "Corvus Hammers", "id": "e544-84b6-5e04-0a4d", "hidden": false, "import": true, "targetId": "bbf2-86fe-2cc4-7d97", "type": "selectionEntry"}
+              {"name": "Corvus Hammers", "id": "e544-84b6-5e04-0a4d", "hidden": false, "import": true, "targetId": "bbf2-86fe-2cc4-7d97", "type": "selectionEntry"},
+              {
+                "name": "Bolt pistol",
+                "id": "d7cb-7a34-bbf4-850a",
+                "hidden": false,
+                "import": true,
+                "targetId": "18b0-8c2-173f-5",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "e259-1a1a-7b21-6bb5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "67db-45e3-7d57-ef13", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              }
             ],
             "profiles": [
               {
@@ -4612,41 +4624,6 @@
                     "name": "Description",
                     "$text": "While this unit contains a ^^**Ravenwing Apothecary**^^, in your Command phase, this unit heals D3+1 wounds.",
                     "typeId": "9b8f-694b-e5e-b573"
-                  }
-                ]
-              }
-            ],
-            "selectionEntries": [
-              {
-                "name": "Bolt Pistol",
-                "id": "3977-665d-ed2-21c9",
-                "collective": true,
-                "hidden": false,
-                "import": true,
-                "page": 31,
-                "type": "upgrade",
-                "constraints": [
-                  {"id": "2069-89ac-9d3c-8869", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                  {"id": "7721-16ee-d707-df76", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                ],
-                "infoLinks": [{"name": "Pistol", "id": "8701-f526-d10f-860a", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}],
-                "profiles": [
-                  {
-                    "name": "Bolt Pistol",
-                    "id": "556f-5a12-7e74-2dbd",
-                    "hidden": false,
-                    "page": 31,
-                    "typeId": "f77d-b953-8fa4-b762",
-                    "typeName": "Ranged Weapons",
-                    "characteristics": [
-                      {"name": "Range", "id": "cab3-7f6-c458-63", "$text": "12\"", "hidden": false, "typeId": "9896-9419-16a1-92fc"},
-                      {"name": "A", "id": "3343-7e14-eff2-8c53", "$text": "1", "hidden": false, "typeId": "3bb-c35f-f54-fb08"},
-                      {"name": "BS", "id": "bd73-add1-43cc-9069", "$text": "3+", "hidden": false, "typeId": "94d-8a98-cf90-183e"},
-                      {"name": "S", "id": "4711-f8f-b95e-9bee", "$text": "4", "hidden": false, "typeId": "2229-f494-25db-c5d3"},
-                      {"name": "AP", "id": "85fb-5320-ac24-a1c4", "$text": "0", "hidden": false, "typeId": "9ead-8a10-520-de15"},
-                      {"name": "D", "id": "1db-65cc-9b6b-6439", "$text": "1", "hidden": false, "typeId": "a354-c1c8-a745-f9e3"},
-                      {"name": "Keywords", "id": "bf32-5e45-5675-d7ea", "$text": "Pistol", "hidden": false, "typeId": "7f1b-8591-2fcf-d01c"}
-                    ]
                   }
                 ]
               }
@@ -4725,71 +4702,22 @@
                 "id": "ef39-2ca8-0396-efc9",
                 "hidden": false,
                 "sortIndex": 3,
-                "entryLinks": [{"name": "Bike weapon", "id": "2cce-fb22-6473-56de", "hidden": false, "import": true, "targetId": "3771-6c3c-4035-70fa", "type": "selectionEntryGroup"}],
-                "selectionEntries": [
+                "entryLinks": [
+                  {"name": "Bike weapon", "id": "2cce-fb22-6473-56de", "hidden": false, "import": true, "targetId": "3771-6c3c-4035-70fa", "type": "selectionEntryGroup"},
                   {
-                    "name": "Bolt Pistol",
-                    "id": "fec0-bee1-3d8a-53c6",
-                    "collective": true,
+                    "name": "Bolt pistol",
+                    "id": "c0df-cebd-bc87-e2c5",
                     "hidden": false,
                     "import": true,
-                    "page": 31,
-                    "type": "upgrade",
-                    "categoryLinks": [{"name": "Ranged Weapon", "id": "537f-7826-811e-1f9d", "hidden": false, "primary": false, "targetId": "eeda-8544-a2f3-3fab"}],
+                    "targetId": "18b0-8c2-173f-5",
+                    "type": "selectionEntry",
                     "constraints": [
-                      {"id": "5f4e-8f73-2766-5a7c", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 1},
-                      {"id": "dfa7-d0d7-981a-a9d4", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "entryLinks": [
-                      {
-                        "name": "Archeotech Armament upgrade",
-                        "id": "437b-00e0-6f26-434f",
-                        "hidden": false,
-                        "import": true,
-                        "targetId": "4485-e8e3-43a0-6c02",
-                        "type": "selectionEntry"
-                      }
-                    ],
-                    "infoLinks": [{"name": "Pistol", "id": "a87b-9a7c-bc95-b73c", "hidden": false, "targetId": "8bf7-8812-923d-29e4", "type": "rule"}],
-                    "profiles": [
-                      {
-                        "name": "Bolt Pistol",
-                        "id": "d4dd-3b18-adba-7fbc",
-                        "hidden": false,
-                        "page": 31,
-                        "typeId": "f77d-b953-8fa4-b762",
-                        "typeName": "Ranged Weapons",
-                        "characteristics": [
-                          {"name": "Range", "id": "22e0-8e12-efa7-d1e", "$text": "12\"", "hidden": false, "typeId": "9896-9419-16a1-92fc"},
-                          {"name": "A", "id": "2329-420d-2be2-3b41", "$text": "1", "hidden": false, "typeId": "3bb-c35f-f54-fb08"},
-                          {"name": "BS", "id": "16d0-91a1-56d3-2186", "$text": "3+", "hidden": false, "typeId": "94d-8a98-cf90-183e"},
-                          {"name": "S", "id": "2f47-1bd9-4baa-c887", "$text": "4", "hidden": false, "typeId": "2229-f494-25db-c5d3"},
-                          {"name": "AP", "id": "6af7-8389-61e-348d", "$text": "0", "hidden": false, "typeId": "9ead-8a10-520-de15"},
-                          {"name": "D", "id": "b30-803d-f483-9e0f", "$text": "1", "hidden": false, "typeId": "a354-c1c8-a745-f9e3"},
-                          {"name": "Keywords", "id": "1a15-f97f-7c3e-3864", "$text": "Pistol", "hidden": false, "typeId": "7f1b-8591-2fcf-d01c"}
-                        ]
-                      }
-                    ],
-                    "selectionEntryGroups": [
-                      {
-                        "name": "Weapon Upgrades",
-                        "id": "63ab-eec4-f55c-1cbf",
-                        "flatten": true,
-                        "hidden": false,
-                        "entryLinks": [
-                          {"name": "Weapon Modifications", "id": "285d-ff6e-2d81-5ca6", "hidden": false, "import": true, "targetId": "f9da-852a-d7f0-92e9", "type": "selectionEntryGroup"},
-                          {
-                            "name": "Crusade Relic Upgrades",
-                            "id": "9316-f608-1228-91c4",
-                            "hidden": false,
-                            "import": true,
-                            "targetId": "b678-4a99-210e-931f",
-                            "type": "selectionEntryGroup"
-                          }
-                        ]
-                      }
+                      {"id": "869f-4a0a-a78e-5b6e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "9b50-9e80-700a-ba2e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
                     ]
-                  },
+                  }
+                ],
+                "selectionEntries": [
                   {
                     "name": "Master-crafted power weapon",
                     "id": "1206-2cfc-cfae-7c9e",
